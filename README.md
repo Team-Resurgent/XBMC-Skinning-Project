@@ -141,7 +141,7 @@ Many of these skins influenced:
 
 This collection represents work from **20+ talented developers and designers** who contributed to the XBMC community. 
 
-See [`authors.txt`](authors.txt) for the complete list of contributors from the original SourceForge repository.
+See [`AUTHORS.md`](AUTHORS.md) for the complete list of contributors from the original SourceForge repository.
 
 Notable contributors include: blackbolt, blittan, ceomr, jezz_x, jmarshallnz, spiff_, teamblackbolt, and many more!
 
