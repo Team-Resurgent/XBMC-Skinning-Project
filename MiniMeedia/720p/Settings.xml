@@ -1,0 +1,112 @@
+<window id="4">
+  <defaultcontrol>300</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+    <include>DateAndTime</include>
+
+    <control type="group">
+      <description>Main Menu</description>
+      <posx>HomeSubMenuBGOffset</posx>
+      <include>HomeMainMenuPos</include>
+
+      <animation effect="slide" time="300" tween="circle" easing="out" start="-600,0" end="0,0" reversible="false" condition="Window.Previous(Home)">WindowOpen</animation>
+
+      <include>HomeMainMenuBG</include>
+
+      <control type="wraplist" id="300">
+        <description>Setting Categories Menu</description>
+        <include>HomeMainMenuWrapList</include>
+
+        <content>
+          <item id="7">
+            <description>System Settings</description>
+            <label> $LOCALIZE[13000] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(SystemSettings)</onclick>
+          </item>
+          <item id="9">
+            <description>Skin Settings</description>
+            <label> $LOCALIZE[166] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(1001)</onclick>
+          </item>
+          <item id="8">
+            <description>Appearance Settings</description>
+            <label> $LOCALIZE[480] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(AppearanceSettings)</onclick>
+          </item>
+          <item id="1">
+            <description>Videos Settings</description>
+            <label> $LOCALIZE[3] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(MyVideosSettings)</onclick>
+          </item>
+          <item id="2">
+            <description>Music Settings</description>
+            <label> $LOCALIZE[2] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(MyMusicSettings)</onclick>
+          </item>
+          <item id="3">
+            <description>Pictures Settings</description>
+            <label> $LOCALIZE[1] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(MyPicturesSettings)</onclick>
+          </item>
+          <item id="4">
+            <description>Profiles Settings</description>
+            <label> $LOCALIZE[13200] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(Profiles)</onclick>
+          </item>
+          <item id="5">
+            <description>Weather Settings</description>
+            <label> $LOCALIZE[8] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(MyWeatherSettings)</onclick>
+          </item>
+          <item id="6">
+            <description>Network Settings</description>
+            <label> $LOCALIZE[705] </label>
+            <label2> $LOCALIZE[31016] </label2>
+            <onclick>ActivateWindow(NetworkSettings)</onclick>
+          </item>
+        </content>
+      </control>
+    </control>
+
+    <control type="group">
+      <description>Settings Menu Text (from Home)</description>
+      <include>HomeMainMenuPos</include>
+
+      <control type="group">
+        <posx>-35</posx>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="35,0" end="0,0" reversible="false" condition="!Window.Previous(SettingsCategory.xml)">WindowOpen</animation>
+
+        <control type="group">
+          <posy>30</posy>
+
+          <control type="label">
+            <label> $LOCALIZE[31016] </label>
+            <include>HomeMainMenuSubLabel</include>
+          </control>
+          <control type="label">
+            <label> $LOCALIZE[13000] </label>
+            <include>DialogTextColors</include>
+            <include>HomeMainMenuMainLabel</include>
+          </control>
+        </control>
+
+        <include>HomeMainMenuBG</include>
+      </control>
+    </control>
+
+    <include>MusicNowPlaying</include>
+    <include>VideoOverlayUI</include>
+
+  </controls>
+</window>

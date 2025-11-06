@@ -1,0 +1,220 @@
+<window>
+	<id>0</id>
+	<defaultcontrol>900</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<animation effect="fade" time="500" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="500" start="100" end="0">WindowClose</animation>
+	<controls>
+
+		<!-- backgrounds -->
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>64</posy>
+			<width>720</width>
+			<height>416</height>
+			<aspectratio>scale</aspectratio>
+			<imagepath>bg_pictures</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(4)</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>64</posy>
+			<width>720</width>
+			<height>416</height>
+			<aspectratio>scale</aspectratio>
+			<imagepath>bg_movies</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(5)</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>64</posy>
+			<width>720</width>
+			<height>416</height>
+			<aspectratio>scale</aspectratio>
+			<imagepath>bg_tvshows</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(6)</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>64</posy>
+			<width>720</width>
+			<height>416</height>
+			<aspectratio>scale</aspectratio>
+			<imagepath>bg_music</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(7)</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>64</posy>
+			<width>720</width>
+			<height>416</height>
+			<aspectratio>scale</aspectratio>
+			<imagepath>bg_games</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(3)</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>416</posy>
+			<width>720</width>
+			<height>64</height>
+			<texture>home_glass.png</texture>
+			<aspectratio>-</aspectratio>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>64</height>
+			<texture>home_glass.png</texture>
+			<aspectratio>-</aspectratio>
+		</control>
+		
+		<!-- main buttons -->
+		<control type="wraplist" id="900">
+			<posx>0</posx>
+			<posy>416</posy>
+			<height>64</height>
+			<width>720</width>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>900</onleft>
+			<onright>900</onright>
+			<viewtype>list</viewtype>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<scrolltime>0</scrolltime>
+			<itemlayout width="192" height="59">
+				<control type="label">
+					<posx>96</posx>
+					<posy>0</posy>
+					<width>192</width>
+					<height>59</height>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>home_menu</font>
+					<textcolor>FFFFFFFF</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="192" height="59">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>192</width>
+					<height>64</height>
+					<texture>home_selected.png</texture>
+				</control>
+				<control type="label">
+					<posx>96</posx>
+					<posy>0</posy>
+					<width>192</width>
+					<height>59</height>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>home_menu</font>
+					<textcolor>FFffffff</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Weather</description>
+					<label>Weather</label>
+					<onclick>XBMC.ActivateWindow(MyWeather)</onclick>
+				</item>
+				<item id="2">
+					<description>Scripts</description>
+					<label>Scripts</label>
+					<onclick>XBMC.ActivateWindow(20)</onclick>
+				</item>
+				<item id="3">
+					<description>Games</description>
+					<label>Games</label>
+					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+				</item>
+				<item id="4">
+					<description>Pictures</description>
+					<label>Pictures</label>
+					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+				</item>
+				<item id="5">
+					<description>Movies</description>
+					<label>Movies</label>
+					<onclick>ActivateWindow(MyVideoLibrary,videodb://1/2/)</onclick>
+				</item>
+				<item id="6">
+					<description>TV Shows</description>
+					<label>TV Shows</label>
+					<onclick>ActivateWindow(MyVideoLibrary,videodb://2/2/)</onclick>
+				</item>
+				<item id="7">
+					<description>My Music</description>
+					<label>Music</label>
+					<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+				</item>
+				<item id="8">
+					<description>Settings</description>
+					<label>Settings</label>
+					<onclick>ActivateWindow(4)</onclick>
+				</item>
+				<item id="9">
+					<description>File Manager</description>
+					<label>Files</label>
+					<onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+				</item>
+			</content>
+		</control>
+		
+		<!-- labels -->
+		<control type="label">
+			<description>date label</description>
+			<posx>680</posx>
+			<posy>20</posy>
+			<label>$INFO[System.Date] | $INFO[System.Time]</label>
+			<align>right</align>
+			<aligy>center</aligy>
+			<font>font20</font>
+		</control>
+		<control type="image">
+			<description>Weather image</description>
+			<posx>10</posx>
+			<posy>0</posy>
+			<width>56</width>
+			<height>80</height>
+			<aspectratio>keep</aspectratio>
+			<info>Weather.Conditions</info>
+		</control>
+		<control type="label">
+			<description>temp Label</description>
+			<width>255</width>
+			<posx>80</posx>
+			<posy>20</posy>
+			<label>$INFO[Weather.Conditions],$INFO[Weather.Temperature]</label>
+			<align>left</align>
+			<aligy>center</aligy>
+			<font>font20</font>
+		</control>
+		
+	</controls>
+</window>

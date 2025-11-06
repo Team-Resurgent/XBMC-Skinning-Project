@@ -1,0 +1,178 @@
+<window>
+	<defaultcontrol>100</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>23</posx>
+		<posy>80</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>-5</posy>
+			<width>675</width>
+			<height>432</height>
+			<texture border="0,45,0,10">Dialog.png</texture>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="label" id="20">
+			<description>Heading label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<font>font16</font>
+			<label>-</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<!-- ** Required ** Do not change <description> or <type> -->
+		<control type="label" id="30">
+			<description>Showtimes Label2</description>
+			<posx>124</posx>
+			<posy>36</posy>
+			<width>428</width>
+			<align>left</align>
+			<font>font12</font>
+			<label>-</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<!-- ** Required ** Do not change <description> or <type> -->
+		<control type="label" id="40">
+			<description>Showtimes Label3</description>
+			<posx>124</posx>
+			<posy>56</posy>
+			<width>236</width>
+			<align>left</align>
+			<font>font12</font>
+			<label>-</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<!-- ** Required ** Do not change <description> or <type> -->
+		<control type="label" id="50">
+			<description>Showtimes Label4</description>
+			<posx>551</posx>
+			<posy>56</posy>
+			<width>236</width>
+			<align>right</align>
+			<font>font12</font>
+			<label>-</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="list" id="100">
+			<description>Team Credits List</description>
+			<posx>121</posx>
+			<posy>80</posy>
+			<width>433</width>
+			<height>320</height>
+			<scrolltime>200</scrolltime>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<itemlayout height="80">
+				<control type="image">
+					<width>433</width>
+					<height>76</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>dialog-button-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>6</posx>
+					<posy>8</posy>
+					<width>422</width>
+					<height>16</height>
+					<font>font12</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>422</posx>
+					<posy>8</posy>
+					<width>394</width>
+					<height>16</height>
+					<font>font12</font>
+					<aligny>center</aligny>
+					<align>right</align>
+					<info>ListItem.Thumb</info>
+				</control>
+				<control type="label">
+					<posx>6</posx>
+					<posy>30</posy>
+					<width>422</width>
+					<height>16</height>
+					<font>font12</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.ActualIcon</info>
+				</control>
+				<control type="label">
+					<posx>6</posx>
+					<posy>52</posy>
+					<width>422</width>
+					<height>16</height>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="80">
+				<control type="image">
+					<width>433</width>
+					<height>76</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="10,0,10,0">folder-focus2.png</texture>
+				</control>
+				<control type="label">
+					<posx>6</posx>
+					<posy>8</posy>
+					<width>422</width>
+					<height>16</height>
+					<font>font12</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>422</posx>
+					<posy>8</posy>
+					<width>394</width>
+					<height>16</height>
+					<font>font12</font>
+					<aligny>center</aligny>
+					<align>right</align>
+					<info>ListItem.Thumb</info>
+				</control>
+				<control type="label">
+					<posx>6</posx>
+					<posy>30</posy>
+					<width>422</width>
+					<height>16</height>
+					<font>font12</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.ActualIcon</info>
+				</control>
+				<control type="label">
+					<posx>6</posx>
+					<posy>52</posy>
+					<width>422</width>
+					<height>16</height>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

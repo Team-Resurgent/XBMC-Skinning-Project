@@ -1,0 +1,510 @@
+<window id="51">
+<defaultcontrol always="true">9000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+  
+<controls>
+
+<include>Backgrounds</include>
+
+  <control type="group">
+    <posx>20</posx>
+    <posy>65</posy>
+    <include>SettingsBack</include>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>680</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="1000">
+      <description>Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>660</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[5] $LOCALIZE[10507]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>650</posx>
+      <posy>55</posy>
+      <height>380</height>
+      <onleft>9001</onleft>
+      <onright>9000</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(60)">Conditional</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>650</posx>
+      <posy>55</posy>
+      <height>380</height>
+      <onleft>9001</onleft>
+      <onright>9000</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>!Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(60)">Conditional</animation>
+    </control>
+
+		<control type="grouplist" id="9000">
+      <description>Main Categories</description>
+			<posx>10</posx>
+			<posy>55</posy>
+      <width>140</width>
+      <height>380</height>
+      <itemgap>5</itemgap>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>60</onleft>
+			<onright>9001</onright>
+      <orientation>vertical</orientation>
+			<control type="button" id="22">
+				<description>Home Links</description>
+        <width>140</width>
+        <label>$LOCALIZE[31080]</label>
+        <font>18BdFont</font>
+			</control>
+      <control type="button" id="23">
+        <description>Home Extras</description>
+        <width>140</width>
+        <label>$LOCALIZE[31081]</label>
+        <font>18BdFont</font>
+      </control>
+      <control type="button" id="24">
+        <description>Backgrounds</description>
+        <width>140</width>
+        <label>$LOCALIZE[31082]</label>
+        <font>18BdFont</font>
+      </control>
+      <control type="button" id="25">
+        <description>More Options</description>
+        <width>140</width>
+        <label>$LOCALIZE[31083]</label>
+        <font>18BdFont</font>
+      </control>
+      <control type="button" id="26">
+        <description>Reload Skin</description>
+        <width>140</width>
+        <label>$LOCALIZE[31084]</label>
+        <font>18BdFont</font>
+        <onclick>ReloadSkin()</onclick>
+      </control>
+		</control>
+
+    <control type="grouplist" id="9001">
+      <description>Home Links Area</description>
+      <posx>160</posx>
+      <posy>55</posy>
+      <width>490</width>
+      <height>380</height>
+      <itemgap>5</itemgap>
+      <orientation>vertical</orientation>
+      <onup>9001</onup>
+      <ondown>9001</ondown>
+      <onleft>9000</onleft>
+      <onright>60</onright>
+      <pagecontrol>60</pagecontrol>
+      <visible>ControlGroup(9000).HasFocus(22)</visible>
+      <control type="radiobutton" id="42">
+        <description>DVD-Rom Visible On Home Menu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31090]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomeDVD)</selected>
+        <onclick>Skin.ToggleSetting(HomeDVD)</onclick>
+      </control>
+      <control type="radiobutton" id="43">
+        <description>Videos Visible On Home Menu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31091]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomeVideos)</selected>
+        <onclick>Skin.ToggleSetting(HomeVideos)</onclick>
+      </control>
+      <control type="radiobutton" id="44">
+        <description>Videos Submenu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31092]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(HomeVideosSubmenu)</selected>
+        <onclick>Skin.ToggleSetting(HomeVideosSubmenu)</onclick>
+        <visible>!Skin.HasSetting(HomeVideos)</visible>
+      </control>
+      <control type="radiobutton" id="45">
+        <description>Music Visible On Home Menu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31093]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomeMusic)</selected>
+        <onclick>Skin.ToggleSetting(HomeMusic)</onclick>
+      </control>
+      <control type="radiobutton" id="46">
+        <description>Music Submenu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31094]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(HomeMusicSubmenu)</selected>
+        <onclick>Skin.ToggleSetting(HomeMusicSubmenu)</onclick>
+        <visible>!Skin.HasSetting(HomeMusic)</visible>
+      </control>
+      <control type="radiobutton" id="47">
+        <description>Photos Visible On Home Menu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31095]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomePhotos)</selected>
+        <onclick>Skin.ToggleSetting(HomePhotos)</onclick>
+      </control>
+      <control type="radiobutton" id="48">
+        <description>Scripts Visible On Home Menu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31096]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomeScripts)</selected>
+        <onclick>Skin.ToggleSetting(HomeScripts)</onclick>
+      </control>
+      <control type="radiobutton" id="49">
+        <description>Services Visible On Home Menu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31097]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomeServices)</selected>
+        <onclick>Skin.ToggleSetting(HomeServices)</onclick>
+      </control>
+      <control type="radiobutton" id="50">
+        <description>Services Submenu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31098]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(HomeServicesSubmenu)</selected>
+        <onclick>Skin.ToggleSetting(HomeServicesSubmenu)</onclick>
+        <visible>!Skin.HasSetting(HomeServices)</visible>
+      </control>
+      <control type="radiobutton" id="51">
+        <description>Weather Visible On Home Menu</description>
+        <width>490</width>
+        <label>$LOCALIZE[31099]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomeWeather)</selected>
+        <onclick>Skin.ToggleSetting(HomeWeather)</onclick>
+      </control>
+    </control>
+    
+    <control type="grouplist" id="9001">
+      <description>Home Extras</description>
+      <posx>160</posx>
+      <posy>55</posy>
+      <width>490</width>
+      <height>380</height>
+      <itemgap>5</itemgap>
+      <orientation>vertical</orientation>
+      <onup>9001</onup>
+      <ondown>9001</ondown>
+      <onleft>9000</onleft>
+      <onright>60</onright>
+      <pagecontrol>60</pagecontrol>
+      <visible>ControlGroup(9000).HasFocus(23)</visible>
+      <control type="radiobutton" id="52">
+        <description>Current Weather Conditions</description>
+        <width>490</width>
+        <label>$LOCALIZE[31100]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(HomeWeatherInfo)</selected>
+        <onclick>Skin.ToggleSetting(HomeWeatherInfo)</onclick>
+      </control>
+      <control type="radiobutton" id="53">
+        <description>Menu Animation</description>
+        <width>490</width>
+        <label>$LOCALIZE[31101]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(HomeMenuAnimation)</selected>
+        <onclick>Skin.ToggleSetting(HomeMenuAnimation)</onclick>
+      </control>
+      <control type="radiobutton" id="54">
+        <description>Custom Home Selection Images</description>
+        <width>490</width>
+        <label>$LOCALIZE[31102]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(HomeSelectionImages)</selected>
+        <onclick>Skin.ToggleSetting(HomeSelectionImages)</onclick>
+      </control>
+      <control type="button" id="55">
+        <description>Set Videos Image Folder</description>
+        <width>490</width>
+        <align>left</align>
+        <label> - $LOCALIZE[31103]</label>
+        <label2>[COLOR=FocusedTextColor]$INFO[Skin.String(HomeVideosImages)][/COLOR]</label2>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <onclick>Skin.SetPath(HomeVideosImages)</onclick>
+        <visible>Skin.HasSetting(HomeSelectionImages)</visible>
+      </control>
+      <control type="button" id="56">
+        <description>Set Music Image Folder</description>
+        <width>490</width>
+        <align>left</align>
+        <label> - $LOCALIZE[31104]</label>
+        <label2>[COLOR=FocusedTextColor]$INFO[Skin.String(HomeMusicImages)][/COLOR]</label2>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <onclick>Skin.SetPath(HomeMusicImages)</onclick>
+        <visible>Skin.HasSetting(HomeSelectionImages)</visible>
+      </control>
+      <control type="button" id="57">
+        <description>Set Photos Image Folder</description>
+        <width>490</width>
+        <align>left</align>
+        <label> - $LOCALIZE[31105]</label>
+        <label2>[COLOR=FocusedTextColor]$INFO[Skin.String(HomePhotosImages)][/COLOR]</label2>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <onclick>Skin.SetPath(HomePhotosImages)</onclick>
+        <visible>Skin.HasSetting(HomeSelectionImages)</visible>
+      </control>
+      <control type="button" id="58">
+        <description>Reset Selection Images</description>
+        <width>490</width>
+        <align>left</align>
+        <label> - $LOCALIZE[31106]</label>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <onclick>Skin.Reset(HomeVideosImages)</onclick>
+        <onclick>Skin.Reset(HomeMusicImages)</onclick>
+        <onclick>Skin.Reset(HomePhotosImages)</onclick>
+        <onclick>Skin.Reset(HomeSelectionImages)</onclick>
+        <onclick>SetFocus(54)</onclick>
+        <visible>Skin.HasSetting(HomeSelectionImages)</visible>
+      </control>
+    </control>
+
+    <control type="grouplist" id="9001">
+      <description>Backgrounds Colors Area</description>
+      <posx>325</posx>
+      <posy>55</posy>
+      <width>490</width>
+      <height>30</height>
+      <itemgap>5</itemgap>
+      <onup>9002</onup>
+      <ondown>9002</ondown>
+      <onleft>9000</onleft>
+      <onright>60</onright>
+      <orientation>horizontal</orientation>
+      <pagecontrol>-</pagecontrol>
+      <visible>ControlGroup(9000).HasFocus(24)</visible>
+      <control type="button" id="182">
+        <description>Default Background</description>
+        <width>50</width>
+        <label>-</label>
+        <font>18BdFont</font>
+        <texturefocus border="1">BackgroundDefaultFo.png</texturefocus>
+        <texturenofocus border="1">BackgroundDefaultNF.png</texturenofocus>
+        <onclick>Skin.Reset(DefaultBackground)</onclick>
+      </control>
+      <control type="button" id="183">
+        <description>Grey Background</description>
+        <width>50</width>
+        <label>-</label>
+        <font>18BdFont</font>
+        <texturefocus border="1">BackgroundGreyFo.png</texturefocus>
+        <texturenofocus border="1">BackgroundGreyNF.png</texturenofocus>
+        <onclick>Skin.SetString(DefaultBackground,BackgroundGrey.png)</onclick>
+      </control>
+      <control type="button" id="184">
+        <description>Blue Background</description>
+        <width>50</width>
+        <label>-</label>
+        <font>18BdFont</font>
+        <texturefocus border="1">BackgroundBlueFo.png</texturefocus>
+        <texturenofocus border="1">BackgroundBlueNF.png</texturenofocus>
+        <onclick>Skin.SetString(DefaultBackground,BackgroundBlue.png)</onclick>
+      </control>
+      <control type="button" id="185">
+        <description>Green Background</description>
+        <width>50</width>
+        <label>-</label>
+        <font>18BdFont</font>
+        <texturefocus border="1">BackgroundGreenFo.png</texturefocus>
+        <texturenofocus border="1">BackgroundGreenNF.png</texturenofocus>
+        <onclick>Skin.SetString(DefaultBackground,BackgroundGreen.png)</onclick>
+      </control>
+      <control type="button" id="186">
+        <description>Orange Background</description>
+        <width>50</width>
+        <label>-</label>
+        <font>18BdFont</font>
+        <texturefocus border="1">BackgroundOrangeFo.png</texturefocus>
+        <texturenofocus border="1">BackgroundOrangeNF.png</texturenofocus>
+        <onclick>Skin.SetString(DefaultBackground,BackgroundOrange.png)</onclick>
+      </control>
+      <control type="button" id="187">
+        <description>Red Background</description>
+        <width>50</width>
+        <label>-</label>
+        <font>18BdFont</font>
+        <texturefocus border="1">BackgroundRedFo.png</texturefocus>
+        <texturenofocus border="1">BackgroundRedNF.png</texturenofocus>
+        <onclick>Skin.SetString(DefaultBackground,BackgroundRed.png)</onclick>
+      </control>
+    </control>
+
+    <control type="image">
+      <posx>160</posx>
+      <posy>55</posy>
+      <description>Background Color Image</description>
+      <width>160</width>
+      <height>30</height>
+      <align>left</align>
+      <aspectratio>stretch</aspectratio>
+      <texture border="1">ButtonInputNF.png</texture>
+      <visible>ControlGroup(9000).HasFocus(24)</visible>
+    </control>
+    <control type="label">
+      <posx>165</posx>
+      <posy>55</posy>
+      <description>Background Color label</description>
+      <width>160</width>
+      <height>30</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[31107]</label>
+      <scroll>true</scroll>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>ControlGroup(9000).HasFocus(24)</visible>
+    </control>
+    
+    <control type="grouplist" id="9002">
+      <description>Background Control Area</description>
+      <posx>160</posx>
+      <posy>90</posy>
+      <width>490</width>
+      <height>350</height>
+      <itemgap>5</itemgap>
+      <onup>9001</onup>
+      <ondown>9001</ondown>
+      <onleft>9000</onleft>
+      <onright>60</onright>
+      <pagecontrol>60</pagecontrol>
+      <visible>ControlGroup(9000).HasFocus(24)</visible>
+      <control type="radiobutton" id="202">
+        <description>Enable Custom Background</description>
+        <width>490</width>
+        <label>$LOCALIZE[31108]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(CustomBackEnable)</selected>
+        <onclick>Skin.ToggleSetting(CustomBackEnable)</onclick>
+      </control>
+      <control type="button" id="203">
+        <description>Set Background Image Path</description>
+        <width>490</width>
+        <align>left</align>
+        <label> - $LOCALIZE[31109]</label>
+        <label2>[COLOR=FocusedTextColor]$INFO[Skin.String(CustomBackImage)][/COLOR]</label2>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <scroll>true</scroll>
+        <enable>!Skin.String(CustomBackFolder)</enable>
+        <onclick>Skin.SetImage(CustomBackImage)</onclick>
+        <visible>Skin.HasSetting(CustomBackEnable)</visible>
+      </control>   
+      <control type="button" id="204">
+        <description>Set Background Folder Path</description>
+        <width>490</width>
+        <align>left</align>
+        <label> - $LOCALIZE[31110]</label>
+        <label2>[COLOR=FocusedTextColor]$INFO[Skin.String(CustomBackFolder)][/COLOR]</label2>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <scroll>true</scroll>
+        <enable>!Skin.String(CustomBackImage)</enable>
+        <onclick>Skin.SetPath(CustomBackFolder)</onclick>
+        <visible>Skin.HasSetting(CustomBackEnable)</visible>
+      </control>
+      <control type="button" id="206">
+        <description>Reset Background</description>
+        <width>490</width>
+        <align>left</align>
+        <label> - $LOCALIZE[31111]</label>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <scroll>true</scroll>
+        <onclick>Skin.Reset(CustomBackEnable)</onclick>
+        <onclick>Skin.Reset(CustomBackImage)</onclick>
+        <onclick>Skin.Reset(CustomBackFolder)</onclick>
+        <onclick>Skin.Reset(DefaultBackground)</onclick>
+        <onclick>SetFocus(202)</onclick>
+        <visible>Skin.String(CustomBackImage) | Skin.String(CustomBackFolder)</visible>
+      </control>
+    </control>
+
+    <control type="grouplist" id="9001">
+      <description>More Options Control Area</description>
+      <posx>160</posx>
+      <posy>55</posy>
+      <width>490</width>
+      <height>380</height>
+      <itemgap>5</itemgap>
+      <onup>9001</onup>
+      <ondown>9001</ondown>
+      <onleft>9000</onleft>
+      <onright>60</onright>
+      <pagecontrol>60</pagecontrol>
+      <visible>ControlGroup(9000).HasFocus(25)</visible>
+      <control type="radiobutton" id="227">
+        <description>Startup Playlist Script Enable</description>
+        <width>490</width>
+        <label>$LOCALIZE[21398]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(StartupPlaylistEnable)</selected>
+        <onclick>Skin.SetFile(StartupPlaylistPath,.m3u,Q:\UserData\playlists\music\)</onclick>
+      </control>
+      <control type="radiobutton" id="228">
+        <description>Media Flags Enable</description>
+        <width>490</width>
+        <label>$LOCALIZE[31033]</label>
+        <font>18BdFont</font>
+        <selected>!Skin.HasSetting(MediaFlagsEnable)</selected>
+        <onclick>Skin.ToggleSetting(MediaFlagsEnable)</onclick>
+      </control>
+      <control type="button" id="229">
+        <description>Reset Settings</description>
+        <width>490</width>
+        <align>left</align>
+        <label>$LOCALIZE[31118]</label>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <textoffsetx>5</textoffsetx>
+        <onclick>XBMC.ActivateWindow(57)</onclick>
+      </control>
+    </control>
+
+	</control>
+  
+</controls>
+</window>

@@ -1,0 +1,64 @@
+<window id="107">
+	<defaultcontrol>402</defaultcontrol>
+	<include>notifybar</include> 
+	<controls>
+
+	<control type="image" id="23">
+		<description>Popup Seek Dialog Background</description>
+		<posx>370</posx>
+		<posy>94</posy>
+		<width>350</width>
+		<height>60</height>
+		<texture>SlideBar.png</texture>
+	</control>
+
+	<control type="image" id="400">
+		<description>Info-Icon</description>
+		<posx>395</posx>
+		<posy>102</posy>
+		<width>45</width>
+		<height>43</height>
+		<aspectratio>keep</aspectratio>
+		<texture>icon-info.png</texture>
+	</control>
+
+	<control type="label" id="401">
+		<description>Caption Label</description>
+		<posx>440</posx>
+		<posy>110</posy>
+		<width>300</width>
+		<align>left</align>
+		<haspath>yes</haspath>
+		<label>-</label>
+		<font>font12</font>
+	</control>
+
+	<control type="label" id="402">
+		<description>Current Directory Label</description>
+		<posx>440</posx>
+		<posy>124</posy>
+		<width>300</width>
+		<align>left</align>
+		<haspath>yes</haspath>
+		<font>font10</font>
+		<align>left</align>
+	</control>
+
+	<control type="button" id="402">
+		<description>Description Button</description>
+		<posx>76</posx>
+		<posy>29</posy>
+		<width>160</width>
+		<height>32</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>font10</font>
+		<onleft>402</onleft>
+		<align>center</align>
+		<onright>402</onright>
+		<onup>402</onup>
+		<ondown>402</ondown>
+	</control>
+
+	</controls>
+</window>

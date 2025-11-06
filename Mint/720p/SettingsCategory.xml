@@ -1,0 +1,136 @@
+<window id="12">
+
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+
+		<!-- background -->
+		<include>bg-system</include>
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>e5ffffff</colordiffuse>
+		</control>
+
+		<!-- settings panel -->
+		<control type="image">
+			<texture border="12">container-back-nf.png</texture>
+			<width>300</width>
+			<height>600</height>
+			<posx>40</posx>
+			<posy>80</posy>
+		</control>
+		<!-- categories -->
+		<control type="grouplist" id="3">
+			<width>270</width>
+			<height>450</height>
+			<posx>50</posx>
+			<posy>90</posy>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+		</control>
+		<control type="button" id="10">
+			<include>type-sidebar</include>
+		</control>
+		
+		<!-- content panel -->
+		<control type="image">
+			<texture border="12">container-back-nf.png</texture>
+			<width>830</width>
+			<height>600</height>
+			<posx>360</posx>
+			<posy>80</posy>
+		</control>
+		<!-- settings -->
+		<control type="grouplist" id="5">
+			<width>810</width>
+			<height>580</height>
+			<posx>370</posx>
+			<posy>90</posy>
+			<pagecontrol>90</pagecontrol>
+			<onleft>3</onleft>
+			<onright>90</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<itemgap>5</itemgap>
+		</control>
+		<control type="button" id="7">
+				<include>settings-button</include>
+		</control>
+		<control type="radiobutton" id="8">
+				<include>settings-button</include>
+		</control>
+		<control type="spincontrolex" id="9">
+				<include>settings-button</include>
+		</control>
+		<!-- separator -->
+		<control type="image" id="11">
+			<texture>listitem-back-nf.png</texture>
+			<width>600</width>
+			<height>5</height>
+		</control>
+		<!-- scrollbar -->
+		<control type="group">
+			<posx>1210</posx>
+			<posy>80</posy>
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>30</width>
+				<height>600</height>
+			</control>
+			<control type="scrollbar" id="90">
+				<width>30</width>
+				<height>600</height>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+			</control>
+		</control>
+
+		<!-- header -->
+		<control type="group">
+		
+			<!-- background
+			<control type="image">
+				<texture>mint2x2.png</texture>
+				<width>1280</width>
+				<height>80</height>
+			</control> -->
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+				<label>$INFO[Skin.String(settingstitle)]</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, |]  $INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>					
+
+	</controls>
+</window>

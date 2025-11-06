@@ -1,0 +1,402 @@
+<window id="2001">
+  <defaultcontrol>5</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+  <controls>
+
+    <control type="group">
+      <posx>688</posx>
+      <posy>-10</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,-80" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,-80" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,-80">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,-80">Hidden</animation>
+      <animation effect="slide" time="0" start="0,0" end="146,0" condition="!Container.Content(artists)">Conditional</animation>
+      <include>HideWhenOnlyUpperDialogActive</include>
+
+      <control type="image">
+        <width>602</width>
+        <height>50</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="grouplist">
+        <posx>6</posx>
+        <posy>12</posy>
+        <orientation>horizontal</orientation>
+        <itemgap>6</itemgap>
+        <ondown>49</ondown>
+
+        <control type="button" id="5">
+          <description>Plot/Cast</description>
+        </control>
+
+        <control type="button" id="6">
+          <description>Refresh</description>
+          <label>$LOCALIZE[184]</label>
+        </control>
+
+        <control type="button" id="10">
+          <description>Thumb</description>
+          <label>$LOCALIZE[31301]</label>
+        </control>
+
+        <control type="button" id="12">
+          <description>Fanart</description>
+          <label>$LOCALIZE[31302]</label>
+          <visible>Container.Content(artists)</visible>
+        </control>
+      </control>
+    </control>
+
+    <control type="group">
+      <posx>30</posx>
+      <posy>470</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,400" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,400" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,400">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,400">Hidden</animation>
+
+      <control type="image">
+        <width>1220</width>
+        <height>260</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posx>20</posx>
+        <posy>20</posy>
+
+        <control type="label">
+          <description>Album title</description>
+          <width>558</width>
+          <textcolor>Selected</textcolor>
+          <font>MediumTitleFont</font>
+          <info>ListItem.Album</info>
+          <visible>Container.Content(albums)</visible>
+        </control>
+        <control type="label">
+          <description>Artist name</description>
+          <width>558</width>
+          <textcolor>Selected</textcolor>
+          <font>MediumTitleFont</font>
+          <info>ListItem.Artist</info>
+          <visible>Container.Content(artists)</visible>
+        </control>
+
+        <control type="group">
+          <posy>34</posy>
+
+          <control type="textbox" id="4">
+            <description>Plot</description>
+            <width>558</width>
+            <height>178</height>
+            <info>ListItem.Property(description)</info>
+          </control>
+
+          <control type="list" id="50">
+            <description>Tracks/Members</description>
+            <width>540</width>
+            <height>178</height>
+            <onup>5</onup>
+            <onright>5</onright>
+            <orientation>vertical</orientation>
+            <scrolltime>200</scrolltime>
+            <pagecontrol>63</pagecontrol>
+
+            <itemlayout width="540" height="29">
+              <control type="label">
+                <info>ListItem.Label</info>
+                <textcolor>Unfocused</textcolor>
+              </control>
+            </itemlayout>
+
+            <focusedlayout width="540" height="29">
+              <control type="label">
+                <info>ListItem.Label</info>
+                <width>540</width>
+                <visible>!Control.HasFocus(50)</visible>
+              </control>
+              <control type="label">
+                <info>ListItem.Label</info>
+                <width>540</width>
+                <textcolor>Highlighted</textcolor>
+                <visible>Control.HasFocus(50)</visible>
+              </control>
+            </focusedlayout>
+          </control>
+
+          <control type="scrollbar" id="63">
+            <posx>544</posx>
+            <posy>0</posy>
+            <height>178</height>
+            <visible>Control.IsVisible(50)</visible>
+          </control>
+        </control>
+
+        <control type="group">
+          <posx>750</posx>
+
+          <control type="group" id="49">
+            <posy>300</posy>
+            <animation effect="slide" time="300" tween="circle" easing="out" start="0,0" end="0,-300">Focus</animation>
+            <animation effect="slide" time="200" tween="circle" easing="in" start="0,-300" end="0,0">Unfocus</animation>
+            <visible>!Control.IsVisible(50)</visible>
+
+            <control type="button">
+              <onright>1</onright>
+              <onup>1</onup>
+              <label>-</label>
+              <texturefocus>-</texturefocus>
+              <texturenofocus>-</texturenofocus>
+            </control>
+
+            <control type="image">
+             <description>Press right indicator</description>
+             <posx>400</posx>
+             <posy>-14</posy>
+             <width>6</width>
+             <height>12</height>
+             <texture>arrow_right.png</texture>
+            </control>
+
+            <control type="label">
+              <description>File Path</description>
+              <label>21801</label>
+              <include>DialogInfoCaption</include>
+            </control>
+
+            <control type="textbox">
+              <description>File Path</description>
+              <posx>-166</posx>
+              <height>90</height>
+              <info>ListItem.FileNameAndPath</info>
+              <include>DialogInfoExtraDetails</include>
+            </control>
+
+            <control type="group">
+              <posy>116</posy>
+              
+              <control type="group">
+                <visible>[Container.Content(albums)]</visible>
+
+                <control type="label">
+                  <description>Album Themes</description>
+                  <label>$LOCALIZE[21895]</label>
+                  <include>DialogInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.Property(AlbumThemes)</info>
+                  <include>DialogInfoExtraDetails</include>
+                </control>
+
+                <control type="group">
+                  <posy>DialogInfoDetailsVertGap</posy>
+
+                  <control type="label">
+                    <description>Album Type</description>
+                    <label>$LOCALIZE[467]</label>
+                    <include>DialogInfoCaption</include>
+                  </control>
+                  <control type="label">
+                    <info>ListItem.Property(AlbumType)</info>
+                    <include>DialogInfoExtraDetails</include>
+                  </control>
+                </control>
+              </control>
+
+              <control type="group">
+                <visible>[Container.Content(artists)]</visible>
+
+                <control type="label">
+                  <description>Instruments</description>
+                  <label>$LOCALIZE[21892]</label>
+                  <include>DialogInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.Property(Instruments)</info>
+                  <include>DialogInfoExtraDetails</include>
+                </control>
+
+                <control type="group">
+                  <posy>DialogInfoDetailsVertGap</posy>
+
+                  <control type="label">
+                    <description>Died/Disbanded</description>
+                    <label>$LOCALIZE[31400]</label>
+                    <include>DialogInfoCaption</include>
+                  </control>
+                  <control type="label">
+                    <info>ListItem.Property(Died)</info>
+                    <include>DialogInfoExtraDetails</include>
+                  </control>
+                  <control type="label">
+                    <info>ListItem.Property(Disbanded)</info>
+                    <include>DialogInfoExtraDetails</include>
+                  </control>
+                </control>
+              </control>
+            </control>
+          </control>
+
+          <control type="group">
+            <animation effect="slide" time="300" tween="circle" easing="out" start="0,300" end="0,0">Visible</animation>
+            <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,300">Hidden</animation>
+            <visible>!ControlGroup(49).HasFocus()</visible>
+
+            <control type="group">
+              <posx>-166</posx>
+
+              <control type="image">
+                <description>Album Cover</description>
+                <posx>-8</posx>
+                <posy>-8</posy>
+                <width>236</width>
+                <height>236</height>
+                <aspectratio align="left" aligny="top">keep</aspectratio>
+                <info>ListItem.Thumb</info>
+                <bordertexture border="14">thumb_shadow.png</bordertexture>
+                <bordersize>8</bordersize>
+              </control>
+            </control>
+
+            <control type="group">
+              <visible>[Container.Content(albums)]</visible>
+
+              <control type="label">
+                <description>Artist</description>
+                <info>ListItem.Artist</info>
+                <include>DialogInfoCaption</include>
+              </control>
+  
+              <control type="label">
+                <description>Year</description>
+                <info>ListItem.Year</info>
+                <include>DialogInfoDetails</include>
+              </control>
+  
+              <control type="label">
+                <description>Genre</description>
+                <posy>36</posy>
+                <info>ListItem.Genre</info>
+                <include>DialogInfoDetails</include>
+              </control>
+  
+              <control type="image">
+                <description>Star Rating</description>
+                <posx>376</posx>
+                <posy>52</posy>
+                <width>64</width>
+                <aspectratio>keep</aspectratio>
+                <info>ListItem.StarRating</info>
+              </control>
+  
+              <control type="group">
+                <posy>116</posy>
+  
+                <control type="label">
+                  <description>Album Moods</description>
+                  <label>$LOCALIZE[175]</label>
+                  <include>DialogInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.Property(AlbumMoods)</info>
+                  <include>DialogInfoMusicDetails</include>
+                </control>
+  
+                <control type="group">
+                  <posy>DialogInfoDetailsVertGap</posy>
+  
+                  <control type="label">
+                    <description>Album Styles</description>
+                    <label>$LOCALIZE[176]</label>
+                    <include>DialogInfoCaption</include>
+                  </control>
+                  <control type="label">
+                    <info>ListItem.Property(AlbumStyles)</info>
+                    <include>DialogInfoMusicDetails</include>
+                  </control>
+                </control>
+              </control>
+            </control>
+
+            <control type="group">
+              <visible>[Container.Content(artists)]</visible>
+
+              <control type="label">
+                <description>Born/Formed</description>
+                <label>21894</label>
+                <include>DialogInfoCaption</include>
+              </control>
+              <control type="label">
+                <info>ListItem.Property(Born)</info>
+                <include>DialogInfoDetails</include>
+                <visible>!IsEmpty(ListItem.Property(Born))</visible>
+              </control>
+              <control type="label">
+                <info>ListItem.Property(Formed)</info>
+                <include>DialogInfoDetails</include>
+                <visible>IsEmpty(ListItem.Property(Born))</visible>
+              </control>
+
+              <control type="label">
+                <description>Genre</description>
+                <posy>36</posy>
+                <info>ListItem.Genre</info>
+                <include>DialogInfoDetails</include>
+              </control>
+
+              <control type="image">
+                <description>Star Rating</description>
+                <posx>376</posx>
+                <posy>52</posy>
+                <width>64</width>
+                <aspectratio>keep</aspectratio>
+                <info>ListItem.StarRating</info>
+              </control>
+
+              <control type="group">
+                <posy>116</posy>
+  
+                <control type="label">
+                  <description>Moods</description>
+                  <label>$LOCALIZE[175]</label>
+                  <include>DialogInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.Property(Moods)</info>
+                  <include>DialogInfoMusicDetails</include>
+                </control>
+
+                <control type="group">
+                  <posy>DialogInfoDetailsVertGap</posy>
+  
+                  <control type="label">
+                    <description>Styles</description>
+                    <label>$LOCALIZE[176]</label>
+                    <include>DialogInfoCaption</include>
+                  </control>
+                  <control type="label">
+                    <info>ListItem.Property(Styles)</info>
+                    <include>DialogInfoMusicDetails</include>
+                  </control>
+                </control>
+              </control>
+            </control>
+
+            <control type="image">
+             <description>Press down indicator</description>
+             <posx>400</posx>
+             <posy>216</posy>
+             <width>12</width>
+             <height>6</height>
+             <texture flipy="true">arrow_up.png</texture>
+             <visible>!Control.IsVisible(50)</visible>
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

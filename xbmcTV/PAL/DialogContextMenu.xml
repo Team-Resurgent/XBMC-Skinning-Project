@@ -1,0 +1,43 @@
+﻿<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>shutdown-ani</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="997">
+			<description>background top image</description>
+			<posx>15</posx>
+			<posy>-15</posy>
+			<width>240</width>
+			<height>15</height>
+			<texture>context2-top.png</texture>
+		</control>
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>240</width>
+			<texture>context2-middle.png</texture>
+		</control>
+		<control type="image" id="998">
+			<description>background bottom image</description>
+			<posx>15</posx>
+			<width>240</width>
+			<height>15</height>
+			<texture>context2-bottom.png</texture>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>18</posx>
+			<posy>15</posy>
+			<width>235</width>
+			<height>32</height>
+			<align>center</align>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>default-button.png</texturefocus>
+		</control>
+	</controls>
+</window>

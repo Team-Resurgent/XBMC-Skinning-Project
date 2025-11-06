@@ -1,0 +1,45 @@
+<window id="2004">
+
+	<defaultcontrol>5</defaultcontrol>
+	
+	<controls>
+	
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+
+		<control type="group">
+		
+			<posx>400</posx>
+			<posy>120</posy>
+		
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>480</width>
+				<height>480</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label">
+				<label>Script Info</label>
+				<width>440</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+			<!-- info -->
+			<control type="textbox" id="5">
+				<width>440</width>
+				<height>400</height>
+				<posx>60</posx>
+				<posy>20</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+			</control>
+		</control>
+		
+	</controls>
+	
+</window>

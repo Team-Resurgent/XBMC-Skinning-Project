@@ -1,0 +1,123 @@
+<window id="135">
+	<defaultcontrol>5</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>115</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>-300</posx>
+			<posy>-300</posy>
+			<width>1320</width>
+			<height>1176</height>
+			<colordiffuse>BBFFFFFF</colordiffuse>
+			<texture>black.png</texture>
+		</control>
+		<control type="image">
+			<description>Dialog Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>520</width>
+			<height>320</height>
+			<texture border="0,35,0,10">Dialog.png</texture>
+		</control>
+		<control type="image">
+			<description>Dialog Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>520</width>
+			<height>320</height>
+			<texture border="0,35,0,10">Dialog.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Title Label</description>
+			<posx>60</posx>
+			<posy>0</posy>
+			<label>13406</label>
+			<width>400</width>
+			<align>center</align>
+			<font>font22</font>
+		</control>
+		<control type="list" id="5">
+			<posx>20</posx>
+			<posy>35</posy>
+			<width>480</width>
+			<height>242</height>
+			<onleft>90</onleft>
+			<onright>90</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<viewtype label="$LOCALIZE[535] 2">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>70</posx>
+					<posy>4</posy>
+					<width>340</width>
+					<height>22</height>
+					<font>font18</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>410</posx>
+					<posy>4</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>font18</font>
+					<align>right</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="image">
+					<width>480</width>
+					<height>46</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>ListItem_Focus.png</texture>
+					<visible>Control.HasFocus(5)</visible>
+				</control>
+				<control type="label">
+					<posx>70</posx>
+					<posy>8</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>font22</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>410</posx>
+					<posy>8</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>font22</font>
+					<align>right</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="spincontrol" id="90">
+			<posx>400</posx>
+			<posy>285</posy>
+			<subtype>page</subtype>
+			<showonepage>false</showonepage>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+	</controls>
+</window>

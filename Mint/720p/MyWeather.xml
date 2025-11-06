@@ -1,0 +1,350 @@
+<window id="2600">
+
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<!-- background -->
+		<include>bg-weather</include>
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>overlay-bg</colordiffuse>
+		</control>		
+		
+		<!-- invisible button to trigger view options -->
+		<control type="button" id="50">
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onclick></onclick>
+		</control>
+		
+		<!-- today -->
+		<control type="group" >
+		
+			<posx>40</posx>
+			<posy>120</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="16">container-back-nf.png</texture>
+				<width>285</width>
+				<height>560</height>
+				<colordiffuse>overlay-icon</colordiffuse>
+			</control>
+			<!-- label -->
+			<control type="label">
+				<label>Current</label>
+				<width>245</width>
+				<posx>20</posx>
+				<posy>40</posy>
+				<font>weather-lg</font>
+				<textcolor>weather</textcolor>
+				<align>center</align>
+			</control>
+			<!-- condition icon -->
+			<control type="image" id="21">
+				<width>245</width>
+				<height>245</height>
+				<posx>20</posx>
+				<posy>80</posy>
+			</control>
+			<!-- current condition -->
+			<control type="label" id="22">
+				<width>245</width>
+				<posx>20</posx>
+				<posy>380</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>center</align>
+				<scroll>true</scroll>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<!-- current temp -->
+			<control type="label" id="23">
+				<width>245</width>
+				<posx>40</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+			</control>
+			<!-- low temp -->
+			<control type="label" id="33">
+				<width>245</width>
+				<posx>245</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+		
+		<!-- day 1 -->
+		<control type="group">
+		
+			<posx>345</posx>
+			<posy>120</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="16">container-back-nf.png</texture>
+				<width>285</width>
+				<height>560</height>
+				<colordiffuse>overlay-icon</colordiffuse>
+			</control>
+			<!-- day label -->
+			<control type="label" id="41">
+				<width>245</width>
+				<posx>20</posx>
+				<posy>40</posy>
+				<font>weather-lg</font>
+				<textcolor>weather</textcolor>
+				<align>center</align>
+			</control>
+			<!-- condition icon -->
+			<control type="image" id="45">
+				<width>245</width>
+				<height>245</height>
+				<posx>20</posx>
+				<posy>80</posy>
+			</control>
+			<!-- condition -->
+			<control type="label" id="44">
+				<width>245</width>
+				<posx>20</posx>
+				<posy>380</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>center</align>
+				<scroll>true</scroll>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<!-- high temp -->
+			<control type="label" id="42">
+				<width>245</width>
+				<posx>40</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+			</control>
+			<!-- low temp -->
+			<control type="label" id="43">
+				<width>245</width>
+				<posx>245</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+		
+		<!-- day 2 -->
+		<control type="group">
+		
+			<posx>650</posx>
+			<posy>120</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="16">container-back-nf.png</texture>
+				<width>285</width>
+				<height>560</height>
+				<colordiffuse>overlay-icon</colordiffuse>
+			</control>
+			<!-- day label -->
+			<control type="label" id="51">
+				<width>245</width>
+				<posx>20</posx>
+				<posy>40</posy>
+				<font>weather-lg</font>
+				<textcolor>weather</textcolor>
+				<align>center</align>
+			</control>
+			<!-- condition icon -->
+			<control type="image" id="55">
+				<width>245</width>
+				<height>245</height>
+				<posx>20</posx>
+				<posy>80</posy>
+			</control>
+			<!-- condition -->
+			<control type="label" id="54">
+				<width>245</width>
+				<posx>20</posx>
+				<posy>380</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>center</align>
+				<scroll>true</scroll>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<!-- high temp -->
+			<control type="label" id="52">
+				<width>245</width>
+				<posx>40</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+			</control>
+			<!-- low temp -->
+			<control type="label" id="53">
+				<width>245</width>
+				<posx>245</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+		
+		<!-- day 3 -->
+		<control type="group">
+		
+			<posx>955</posx>
+			<posy>120</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="16">container-back-nf.png</texture>
+				<width>285</width>
+				<height>560</height>
+				<colordiffuse>overlay-icon</colordiffuse>
+			</control>
+			<!-- day label -->
+			<control type="label" id="61">
+				<width>245</width>
+				<posx>20</posx>
+				<posy>40</posy>
+				<font>weather-lg</font>
+				<textcolor>weather</textcolor>
+				<align>center</align>
+			</control>
+			<!-- condition icon -->
+			<control type="image" id="65">
+				<width>245</width>
+				<height>245</height>
+				<posx>20</posx>
+				<posy>80</posy>
+			</control>
+			<!-- condition -->
+			<control type="label" id="64">
+				<width>245</width>
+				<posx>20</posx>
+				<posy>380</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>center</align>
+				<scroll>true</scroll>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<!-- high temp -->
+			<control type="label" id="62">
+				<width>245</width>
+				<posx>40</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+			</control>
+			<!-- low temp -->
+			<control type="label" id="63">
+				<width>245</width>
+				<posx>245</posx>
+				<posy>500</posy>
+				<font>weather-lg</font>
+				<textcolor>weather-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+		
+		<!-- header -->
+		<control type="group">
+
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+				<label>Weather</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- time -->
+			<control type="label">
+				<label>$INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+					
+		<!-- view options -->
+		<control type="group">
+		
+			<posx>1280</posx>
+			<posy>20</posy>
+			
+			<include>anim-sidebar</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>black.png</texture>
+				<width>400</width>
+				<height>680</height>
+				<colordiffuse>sidebar</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="9000">			
+				<width>360</width>
+				<height>680</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<!-- location -->
+				<control type="spincontrol" id="3">
+					<width>32</width>
+					<height>32</height>
+					<include>type-sidebar</include>
+				</control>
+				<!-- refresh -->
+				<control type="button" id="2">
+					<label>Refresh</label>
+					<posy>10</posy>
+					<include>type-sidebar</include>
+				</control>
+				<!-- settings -->
+				<control type="button" id="4">
+					<label>Settings</label>
+					<include>type-sidebar</include>
+					<onclick>ActivateWindow(weathersettings)</onclick>
+				</control>
+
+			</control>
+		</control>
+
+	</controls>
+</window>

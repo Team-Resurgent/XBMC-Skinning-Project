@@ -1,0 +1,110 @@
+<window>
+  <id>10</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>calbration help top</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>30</posY>
+      <height>100</height>
+      <width>100</width>
+      <texture>calibrate-topleft.png</texture>
+    </control>
+
+    <control>
+      <description>calbration help bottom</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>570</posX>
+      <posY>446</posY>
+      <height>100</height>
+      <width>100</width>
+      <texture>calibrate-bottomright.png</texture>
+    </control>
+
+    <control>
+      <description>rectangle image</description>
+      <type>mover</type>
+      <id>2</id>
+      <posX>0</posX>
+      <posY>271</posY>
+      <width>720</width>
+      <height>40</height>
+      <textureFocus>bluebar.png</textureFocus>
+      <textureNoFocus>bluebar.png</textureNoFocus>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <description>settings label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>213</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>coordinates label</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>360</posX>
+      <posY>275</posY>
+      <label>5</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+  </controls>
+
+</window>
+

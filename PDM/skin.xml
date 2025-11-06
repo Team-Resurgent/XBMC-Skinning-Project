@@ -1,0 +1,17 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <defaultthemename>Textures.xpr</defaultthemename>
+  <version>2.1</version>
+  <effectslowdown>1</effectslowdown>
+  <zoom>1.0</zoom>
+
+  <credits>
+    <skinname>PDM</skinname>
+    <name>Design and coding by SmokeHead</name>
+    <name>Lots of thanks goes out to :</name>
+    <name>XBMC Developers &amp; XBMC Forums for reading support</name>
+    <name>ChokeManiac for creating Project Mayhem 1-3</name>
+  </credits>
+</skin>
+

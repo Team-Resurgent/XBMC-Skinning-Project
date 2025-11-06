@@ -1,0 +1,285 @@
+<window id="503">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<include>IPodGirl_Image</include>
+		<include>XBMC_Logo_Image</include>
+		<control type="label">
+			<description>Heading text label</description>
+			<posx>242</posx>
+			<posy>70</posy>
+			<label>$LOCALIZE[559] Editor</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<!-- -->
+		<control type="label">
+			<description>heading label</description>
+			<posx>20</posx>
+			<posy>115</posy>
+			<width>340</width>
+			<align>center</align>
+			<label>1211</label>
+			<font>font13</font>
+			<textcolor>yellow</textcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="label" id="12">
+			<description>number of files text label</description>
+			<posx>20</posx>
+			<posy>525</posy>
+			<width>340</width>
+			<align>center</align>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>yellow</textcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="list" id="50">
+			<posx>30</posx>
+			<posy>140</posy>
+			<width>330</width>
+			<height>384</height>
+			<onleft>100</onleft>
+			<onright>100</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<include>Slide_From_Left_Animation</include>
+			<itemlayout height="32">
+				<control type="image">
+					<width>330</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>4</posy>
+					<width>275</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>320</posx>
+					<posy>4</posy>
+					<width>200</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>330</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-nofocus.png</texture>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+				<control type="image">
+					<width>330</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(50)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>4</posy>
+					<width>275</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>320</posx>
+					<posy>4</posy>
+					<width>200</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<posx>365</posx>
+			<posy>115</posy>
+			<width>340</width>
+			<align>center</align>
+			<label>559</label>
+			<font>font13</font>
+			<textcolor>yellow</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="101">
+			<description>number of files text label</description>
+			<posx>365</posx>
+			<posy>525</posy>
+			<width>340</width>
+			<align>center</align>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>yellow</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="list" id="100">
+			<posx>365</posx>
+			<posy>140</posy>
+			<width>330</width>
+			<height>320</height>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<viewtype label="">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<include>Slide_From_Right_Animation</include>
+			<itemlayout height="32">
+				<control type="image">
+					<width>330</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>4</posy>
+					<width>275</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>320</posx>
+					<posy>4</posy>
+					<width>200</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>330</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-nofocus.png</texture>
+					<visible>!Control.HasFocus(100)</visible>
+				</control>
+				<control type="image">
+					<width>330</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(100)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>4</posy>
+					<width>275</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>320</posx>
+					<posy>4</posy>
+					<width>200</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligy>center</aligy>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

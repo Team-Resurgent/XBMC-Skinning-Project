@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ --> 
+<!--  strings 31000 thru 31999 reserved for skins  --> 
+
+<strings> 
+  <!-- Home / General --> 
+  <string id="31000">File Manager</string> 
+  <string id="31001">Informazioni</string> 
+  <string id="31002">Reset</string> 
+  <string id="31003">Analizza</string> 
+  <string id="31004">Cambia</string> 
+  <string id="31005">Varie</string> 
+  <string id="31006">Visuale</string> 
+  <string id="31007">On/Off</string> 
+  <string id="31008">Senza Voto</string> 
+  <string id="31009">Guarda i tuoi</string> <!-- Movies -->
+  <string id="31010">Guarda le tue</string> <!-- TV Shows-->
+  <string id="31011">Guarda i tuoi</string> <!-- Videos--> 
+  <string id="31012">Ascolta la tua</string> 
+  <string id="31013">Guarda le tue</string> 
+  <string id="31014">Usa i tuoi</string> 
+  <string id="31015">Controlla</string> 
+  <string id="31016">Configura</string> 
+  <string id="31017">Power</string> 
+  <string id="31018">Informazioni di base</string>   
+  <string id="31019">Riproduci </string> 
+  <string id="31020">Controlla il</string> 
+  <string id="31021">Per</string> 
+  <string id="31022">Aggiunti di recente</string>
+  <string id="31023">Ultimi</string>
+  <string id="31024">Pagina</string>
+  <string id="31025">Elementi</string>
+
+  <!-- Options Menu -->
+  <string id="31100">Poster Info</string>
+  <string id="31101">Ordina per</string>
+  <string id="31102">Opzioni</string>
+  <string id="31103">Vetrina</string>
+  <string id="31104">Mostra orologio grande</string>
+  <string id="31105">Cascata</string>
+  <string id="31106">Esibizione</string>
+  <string id="31107">Lista bassa</string>
+  <string id="31108">Esposizione</string>
+  <string id="31109">Lista alta</string>
+
+  <!-- Settings -->
+  <string id="31200">Mostra la trama</string>
+  <string id="31201">Aggiornati di recente</string>
+  <string id="31202"> la cartella degli sfondi</string>
+  <string id="31203">Sfondi</string>
+  <string id="31204">Menu Opzioni</string>
+  <string id="31205">Nascondi</string>
+  <string id="31206">Orologio</string>
+  <string id="31207">Nascondi il Meteo in Home</string>
+  <string id="31208">Disabilita</string>
+  <string id="31209">Configura le opzioni per </string>
+  <string id="31210">Menu</string>
+  <string id="31211">Nascondi la trama nell' OSD Video</string>
+  <string id="31212">Nascondi l'Overlay "Visto"</string>
+  <string id="31213">Nascondi la diapositiva</string>
+  <string id="31214">Mostra la recensione</string>
+  <string id="31215">Mostra il Tipo</string>
+  <string id="31216">Nascondi il numero dei media</string>
+  <string id="31217">Usa i poster per le serie TV</string>
+  <string id="31218">Mostra un OSD Video minimale</string>
+  <string id="31219">Nascondi il BG Rumure bianco</string>
+  <string id="31220">Usa immagini meteo animate</string>
+  <string id="31221">Nascondi ultimi video</string>
+
+  <!-- Video -->
+  <string id="31300">N/A</string> 
+  <string id="31301">Diapositiva</string> 
+  <string id="31302">Fanart</string> 
+  <string id="31303">Stagioni</string> 
+  <string id="31304">Tempo rimanente</string> 
+
+  <!-- Music --> 
+  <string id="31400">Finito</string> 
+  <string id="31401">Corrente</string> 
+  <string id="31402">Seleziona Visuale</string> 
+  <string id="31403">Preimpostazioni di Visualizzazione</string> 
+  <string id="31404">Opzioni di Visualizzazione</string> 
+  <string id="31405">Testi</string> 
+  <string id="31406">Path dei Testi</string>
+  <string id="31407">Apri playlist</string>
+  <string id="31408">Salva playlist</string>
+  <string id="31409">Chiudi playlist</string>
+  <string id="31410">Elenco brani</string> 
+  <string id="31411">Playlist corrente</string>
+
+  <!-- Dialogs --> 
+  <string id="31500">Seleziona Profilo</string> 
+  <string id="31501">Muto</string> 
+  <string id="31502">Crea</string>
+  <string id="31503">Codec</string>
+
+</strings>

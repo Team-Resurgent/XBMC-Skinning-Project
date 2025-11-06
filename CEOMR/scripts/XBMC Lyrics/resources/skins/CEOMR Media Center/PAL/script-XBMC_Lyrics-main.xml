@@ -1,0 +1,286 @@
+<window>
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="false">101</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+
+    <controls>
+        <control type="image" id="1">
+            <description>background image</description>
+            <posx>210</posx>
+            <posy>0</posy>
+            <width>430</width>
+            <height>500</height>
+            <texture>lyricspanel.png</texture>
+	    <include>contentpanelslide</include>
+        </control>
+
+		<!-- ** Required ** Do not change <id> or <type> -->
+        <control type="textbox" id="100">
+            <description>textarea</description>
+            <posx>237</posx>
+            <posy>210</posy>
+            <width>310</width>
+            <height>240</height>
+            <onup>101</onup>
+            <ondown>101</ondown>
+            <onleft>101</onleft>
+            <onright>101</onright>
+			<pagecontrol>101</pagecontrol>
+            <font>font12</font>
+            <textcolor>DDFFFFFF</textcolor>
+			<include>contentpanelslide</include>
+        </control>
+  		<control type="spincontrol" id="101">
+			<description>Next page button</description>
+			<posx>550</posx>
+			<posy>420</posy>
+			<subtype>page</subtype>
+			<font>font12</font>
+			<onleft>101</onleft>
+			<onright>101</onright>
+			<ondown>101</ondown>
+			<onup>101</onup>
+			<showonepage>false</showonepage>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(100)</visible>
+		</control>
+        
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="list" id="110">
+            <posx>237</posx>
+            <posy>210</posy>
+            <width>310</width>
+            <height>240</height>
+            <onleft>111</onleft>
+            <onright>111</onright>
+            <onup>110</onup>
+            <ondown>110</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>111</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<include>contentpanelslide</include>
+			<itemlayout height="29">
+				<control type="label">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="29">
+				<control type="image">
+					<width>310</width>
+					<height>29</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(110)</visible>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+                    <textcolor>FFe2ff43</textcolor>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+  		<control type="spincontrol" id="111">
+			<description>Next page button</description>
+			<posx>550</posx>
+			<posy>420</posy>
+			<subtype>page</subtype>
+			<font>font12</font>
+			<onleft>110</onleft>
+			<onright>110</onright>
+			<ondown>110</ondown>
+			<onup>110</onup>
+			<showonepage>false</showonepage>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(110)</visible>
+		</control>
+
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="list" id="120">
+            <posx>237</posx>
+            <posy>210</posy>
+            <width>310</width>
+            <height>240</height>
+            <onleft>121</onleft>
+            <onright>121</onright>
+            <onup>120</onup>
+            <ondown>120</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>121</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<include>contentpanelslide</include>
+			<itemlayout height="29">
+				<control type="label">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="29">
+				<control type="image">
+					<width>300</width>
+					<height>29</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(120)</visible>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+  		<control type="spincontrol" id="121">
+			<description>Next page button</description>
+			<posx>550</posx>
+			<posy>420</posy>
+			<subtype>page</subtype>
+			<font>font12</font>
+			<onleft>120</onleft>
+			<onright>120</onright>
+			<ondown>120</ondown>
+			<onup>120</onup>
+			<showonepage>false</showonepage>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(120)</visible>
+		</control>
+
+		<!-- media infos -->
+		<control type="group" id="1">
+			<posx>60</posx>
+			<posy>95</posy>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>-20</posx>
+				<posy>240</posy>
+				<width>196</width>
+				<height>196</height>
+				<info>MusicPlayer.Cover</info>
+                <colordiffuse>BBFFFFFF</colordiffuse>
+				<aspectratio>keep</aspectratio>
+                <animation effect="fade" time="1500">WindowOpen</animation>
+			</control>
+			<control type="label" id="200">
+				<description>Scraper Label</description>
+				<width>205</width>
+				<posx>350</posx>
+				<posy>-23</posy>
+                <label>-</label>
+				<align>right</align>
+				<disabledcolor>60FFFFFF</disabledcolor>
+				<textcolor>FFFFFFFF</textcolor>
+				<font>special12</font>
+                <include>contentpanelslide</include>
+			</control>
+			<control type="label" id="1">
+				<description>Artist label</description>
+				<width>300</width>
+				<posx>180</posx>
+				<posy>5</posy>
+				<info>MusicPlayer.Artist</info>
+				<align>left</align>
+				<font>special12</font>
+                <include>contentpanelslide</include>
+			</control>
+			<control type="label" id="1">
+				<description>Title label</description>
+				<width>300</width>
+				<posx>180</posx>
+				<posy>30</posy>
+				<info>MusicPlayer.Title</info>
+				<align>left</align>
+				<font>special13</font>
+                <include>contentpanelslide</include>
+			</control>
+			<control type="label" id="1">
+				<description>Album label</description>
+				<width>300</width>
+				<posx>180</posx>
+				<posy>60</posy>
+				<info>MusicPlayer.Album</info>
+				<align>left</align>
+				<font>font10</font>
+                <include>contentpanelslide</include>
+			</control>
+			<control type="label" id="1">
+				<description>time label</description>
+				<width>310</width>
+				<posx>180</posx>
+				<posy>80</posy>
+				<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+				<align>left</align>
+				<font>font10</font>
+                <include>contentpanelslide</include>
+			</control>
+			<control type="label" id="1">
+				<description>Playlist Pos No</description>
+				<width>200</width>
+				<posx>500</posx>
+				<posy>80</posy>
+				<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+				<visible>!MusicPartyMode.Enabled</visible>
+				<align>right</align>
+				<font>font10</font>
+                <include>contentpanelslide</include>
+			</control>
+			<control type="label" id="1">
+				<description>PartyMode Enabled</description>
+				<width>200</width>
+				<posx>600</posx>
+				<posy>80</posy>
+				<label>589</label>
+				<visible>MusicPartyMode.Enabled</visible>
+				<align>right</align>
+				<font>font10</font>
+                <include>contentpanelslide</include>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>180</posx>
+				<posy>105</posy>
+				<width>310</width>
+				<height>5</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+                <include>contentpanelslide</include>
+			</control>
+		</control>
+    </controls>
+</window>

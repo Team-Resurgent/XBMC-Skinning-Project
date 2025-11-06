@@ -1,0 +1,235 @@
+<window>
+	<id>2700</id>
+	<defaultcontrol>12</defaultcontrol>
+<controls>
+        <control>
+            <description>background image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>720</width>
+            <height>576</height>
+            <texture>background.png</texture>
+        </control>
+        <control>
+            <description>left menu</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>300</width>
+            <height>576</height>
+            <texture>menu.png</texture>
+        </control>
+        <control>
+            <description>BBmini</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>165</posX>
+            <posY>70</posY>
+            <width>80</width>
+            <height>43</height>
+            <texture>BB_logo.png</texture>
+        </control>
+    		<control>
+      		<description>title image</description>
+      		<type>image</type>
+      		<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>200</width>
+			<height>150</height>
+			<texture>title-games.png</texture>
+    		</control>  
+
+
+		<control>
+			<description>Mode text label</description>
+			<type>label</type>
+			<id>50</id>
+			<posX>250</posX>
+			<posY>80</posY>
+			<label>8</label>
+			<font>font18</font>
+		</control>
+
+	<control>
+		<description>Mode Button</description>
+		<type>button</type>
+		<id>12</id>
+		<posX>45</posX>
+		<posY>150</posY>
+		<onleft>12</onleft>
+		<onright>31</onright>
+		<onup>15</onup>
+		<ondown>13</ondown>
+	</control>
+	<control>
+		<description>Join (Friends)</description>
+		<type>button</type>
+		<id>13</id>
+		<posX>45</posX>
+		<posY>186</posY>
+		<onleft>13</onleft>
+		<onright>31</onright>
+		<onup>12</onup>
+		<ondown>14</ondown>
+	</control>
+	<control>
+		<description>Invite (Friends)</description>
+		<type>button</type>
+		<id>14</id>
+		<posX>45</posX>
+		<posY>222</posY>
+		<onleft>14</onleft>
+		<onright>31</onright>
+		<onup>13</onup>
+		<ondown>15</ondown>
+	</control>
+	<control>
+		<description>Remove (Friends)</description>
+		<type>button</type>
+		<id>15</id>
+		<posX>45</posX>
+		<posY>258</posY>
+		<onleft>15</onleft>
+		<onright>31</onright>
+		<onup>14</onup>
+		<ondown>12</ondown>
+	</control>
+
+	<control>
+		<description>Arena List</description>
+		<type>listcontrol</type>
+		<id>31</id>
+		<posX>265</posX>
+		<posY>158</posY>
+		<width>352</width>
+		<height>300</height>
+		<onleft>12</onleft>
+		<onright>31</onright>
+		<onup>31</onup>
+		<ondown>31</ondown>
+		<textcolor>FFFFFFFF</textcolor>
+	</control>
+	<control>
+		<description>Play (Arenas)</description>
+		<type>button</type>
+		<id>33</id>
+		<posX>45</posX>
+		<posY>186</posY>
+		<onleft>33</onleft>
+		<onright>31</onright>
+		<onup>12</onup>
+		<ondown>34</ondown>
+	</control>
+	<control>
+		<description>Add (Arenas)</description>
+		<type>button</type>
+		<id>34</id>
+		<posX>45</posX>
+		<posY>222</posY>
+		<onleft>34</onleft>
+		<onright>31</onright>
+		<onup>33</onup>
+		<ondown>12</ondown>
+	</control>
+
+	<control>
+		<description>Username</description>
+		<type>label</type>
+		<id>51</id>
+		<posX>370</posX>
+		<posY>80</posY>
+		<label>-</label>
+		<font>font18</font>
+		<textcolor>FFA7B5C0</textcolor>
+	</control>
+	<control>
+		<description>Date Time</description>
+		<type>label</type>
+		<id>52</id>
+		<posX>370</posX>
+		<posY>110</posY>
+		<label>-</label>
+		<font>font18</font>
+		<textcolor>FFA7B5C0</textcolor>
+	</control>
+	<control>		
+		<description>Buddy (offline) icon</description>
+		<type>image</type>
+		<id>60</id>
+		<posX>270</posX>
+		<posY>466</posY>
+		<texture>buddy-offline.png</texture>
+		<colorkey>FFFF00FF</colorkey>
+		<colordiffuse>AAFFFFFF</colordiffuse>
+	</control>
+	<control>		
+		<description>Buddy (online) icon</description>
+		<type>image</type>
+		<id>61</id>
+		<posX>270</posX>
+		<posY>466</posY>
+		<texture>buddy-online.png</texture>
+		<colorkey>FFFF00FF</colorkey>
+		<colordiffuse>BBFFFFFF</colordiffuse>
+	</control>
+	<control>		
+		<description>Opponent icon</description>
+		<type>image</type>
+		<id>62</id>
+		<posX>270</posX>
+		<posY>466</posY>
+		<texture>opponent.png</texture>
+		<colorkey>FFFF00FF</colorkey>
+		<colordiffuse>BBFFFFFF</colordiffuse>
+	</control>
+	<control>		
+		<description>Arena icon</description>
+		<type>image</type>
+		<id>63</id>
+		<posX>270</posX>
+		<posY>466</posY>
+		<texture>arena.png</texture>
+		<colorkey>FFFF00FF</colorkey>
+		<colordiffuse>BBFFFFFF</colordiffuse>
+	</control>		
+	<control>
+		<description>Buddy Name</description>
+		<type>label</type>
+		<id>70</id>
+		<posX>330</posX>
+		<posY>466</posY>
+		<width>50</width>
+		<label>-</label>
+	</control>
+	<control>
+		<description>Buddy Status</description>
+		<type>label</type>
+		<id>71</id>
+		<posX>330</posX>
+		<posY>484</posY>
+		<width>50</width>
+		<label>-</label>
+	</control>
+	<control>
+		<description>Buddy Invitation Status</description>
+		<type>label</type>
+		<id>72</id>
+		<posX>330</posX>
+		<posY>502</posY>
+		<width>50</width>
+		<label>-</label>
+	</control>
+ 	<control>
+		<description>Player Count</description>
+		<type>label</type>
+		<id>73</id>
+		<posX>570</posX>
+		<posY>80</posY>
+		<label>-</label>
+	</control>	
+</controls>
+</window>

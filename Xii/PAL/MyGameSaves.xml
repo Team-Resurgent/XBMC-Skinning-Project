@@ -1,0 +1,282 @@
+<window id="35">
+	<defaultcontrol>52</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-blackbase.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>background middle overlay</description>
+			<posx>0</posx>
+			<posy>85</posy>
+			<width>720</width>
+			<height>367</height>
+			<texture>background-bluesquares.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>white tab image 1</description>
+			<posx>25</posx>
+			<posy>48</posy>
+			<width>400</width>
+			<height>33</height>
+			<texture>background-tab-grey.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>white tab image 2</description>
+			<posx>65</posx>
+			<posy>40</posy>
+			<width>400</width>
+			<height>41</height>
+			<texture>background-tab-white.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>data tab image</description>
+			<posx>38</posx>
+			<posy>56</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>icon-data2.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>gamesave tab image</description>
+			<posx>78</posx>
+			<posy>47</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture>icon-data2.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>white tab label 1</description>
+			<posx>125</posx>
+			<posy>43</posy>
+			<font>font28</font>
+			<height>41</height>
+			<include>textcolorblack</include>
+			<include>4f</include>
+			<align>left</align>
+		</control>
+		<control type="group" id="9000">
+  		<control type="image" id="6">
+  			<description>Sort background</description>
+  			<posx>525</posx>
+  			<posy>21</posy>
+  			<width>165</width>
+  			<height>60</height>
+  			<texture>button-glass-nofocus.png</texture>
+				<visible>!Control.HasFocus(4) + !Control.HasFocus.(3)</visible>
+  		</control>
+  		<control type="image" id="5">
+  			<description>Sort background</description>
+  			<posx>525</posx>
+  			<posy>21</posy>
+  			<width>165</width>
+  			<height>60</height>
+  			<texture>button-glass-focus.png</texture>
+				<visible>Control.HasFocus(4)</visible>
+  		</control>
+  		<control type="button" id="3">
+  			<description>Sort button</description>
+  			<label>103</label>
+  			<posx>525</posx>
+  			<posy>21</posy>
+  			<font>font20</font>
+  			<width>165</width>
+  			<height>60</height>
+  			<include>textcolorwhite</include>
+  			<include>4f</include>
+  			<align>left</align>
+    		<onleft>4</onleft>
+    		<onright>4</onright>
+    		<onup>3</onup>
+    		<ondown>52</ondown>
+  			<textoffsetx>10</textoffsetx>
+  			<aligny>center</aligny>
+  			<texturenofocus>-</texturenofocus>
+  			<texturefocus>button-glass-focus.png</texturefocus>
+  		</control>
+			<control type="togglebutton" id="4">
+				<description>Sort asc</description>
+				<label>-</label>
+				<posx>660</posx>
+  			<posy>43</posy>
+    		<width>20</width>
+    		<height>22</height>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>3</onup>
+				<ondown>52</ondown>
+			</control>
+		</control>
+		
+		<control type="panel" id="52">
+			<posx>55</posx>
+			<posy>100</posy>
+			<width>625</width>
+			<height>350</height>
+			<onleft>52</onleft>
+			<onright>60</onright>
+			<onup>9000</onup>
+			<ondown>25</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">icon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="117" width="120">
+				<control type="image">
+					<width>105</width>
+					<height>105</height>
+					<posx>10</posx>
+					<posy>0</posy>
+					<texture>button-gamesave-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>80</width>
+					<height>80</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>83</posx>
+					<posy>65</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="117" width="120">
+				<control type="image">
+					<width>105</width>
+					<height>105</height>
+					<posx>10</posx>
+					<posy>0</posy>
+					<texture>button-gamesave-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>80</width>
+					<height>80</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>83</posx>
+					<posy>65</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>100</posy>
+					<width>120</width>
+					<height>30</height>
+					<texture>button-big.png</texture>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>100</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font13</font>
+					<include>textcolorblack</include>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="60">
+			<posx>690</posx>
+			<posy>100</posy>
+			<width>17</width>
+			<height>335</height>
+			<texturesliderbackground border="4">scrollbar_background.png</texturesliderbackground>
+			<texturesliderbar border="3">scrollbar_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="3">scrollbar_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar_nib.PNG</textureslidernib>
+			<textureslidernibfocus>scrollbar_nib_focus.PNG</textureslidernibfocus>
+			<onleft>52</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<include>contentpanelslide</include>
+			<visible>!Skin.HasSetting(UseScrollbars)</visible>
+		</control>
+		<control type="spincontrol" id="60">
+			<description>Next page button</description>
+			<posx>610</posx>
+			<posy>526</posy>
+			<subtype>page</subtype>
+			<font>font12</font>
+			<onleft>52</onleft>
+			<onright>9000</onright>
+			<ondown>60</ondown>
+			<onup>50</onup>
+			<showonepage>false</showonepage>
+			<include>contentpanelslide</include>
+			<visible>Skin.HasSetting(UseScrollbars)</visible>
+		</control>
+		<control type="label" id="12">
+			<description>number of files text label</description>
+			<posx>500</posx>
+			<posy>465</posy>
+			<label>-</label>
+			<font>font20</font>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="label">
+			<posx>500</posx>
+			<posy>490</posy>
+			<width>150</width>
+			<height>50</height>
+			<font>font20</font>
+      <scroll>true</scroll>
+			<include>textcolorwhite</include>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>500</posx>
+			<posy>515</posy>
+			<width>150</width>
+			<height>50</height>
+			<font>font20</font>
+      <scroll>true</scroll>
+			<include>textcolorwhite</include>
+			<info>ListItem.Label2</info>
+		</control>
+				
+		<control type="button" id="25">
+  		<description>Back</description>
+  		<posx>35</posx>
+  		<posy>465</posy>
+  		<width>316</width>
+  		<height>79</height>
+  		<include>backlabel</include>
+  		<font>font28</font>
+  		<align>center</align>
+  		<aligny>center</aligny>
+  		<include>textcolorblack</include>
+  		<onclick>ActivateWindow(1111)</onclick>
+  		<onleft>60</onleft>
+  		<onright>60</onright>
+  		<onup>52</onup>
+  		<ondown>9000</ondown>
+  		<texturefocus>button-big-focus.png</texturefocus>
+  		<texturenofocus>button-big-nofocus.png</texturenofocus>
+			<include>homebuttonanimation</include>
+		</control>
+		<control type="image">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control>
+	</controls>
+</window>

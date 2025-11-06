@@ -1,0 +1,278 @@
+<window id="1112">
+  <defaultcontrol>101</defaultcontrol>
+  <controls>
+    <include>CommonBackground</include>
+
+    <!--<control type="grouplist" id="100">
+      <onup>100</onup>
+      <ondown>101</ondown>
+      <posx>20</posx>
+      <posy>120</posy>
+      <width>680</width>
+      <height>400</height>
+
+
+      <control type="radiobutton" id="202">
+        <description>Background_Video radiobutton</description>
+        <posx>-</posx>
+        <posy>-</posy>
+        <width>680</width>
+        <height>32</height>
+        <include>1002</include>
+        <font>font18</font>
+        <align>left</align>
+
+        <textureradiofocus>settings-check-box.png</textureradiofocus>
+        <textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+        <onclick>Skin.ToggleSetting(Background_Video)</onclick>
+        <selected>Skin.HasSetting(Background_Video)</selected>
+      </control>
+      <control type="radiobutton" id="203">
+        <description>Background_Vis radiobutton</description>
+        <posx>-</posx>
+        <posy>-</posy>
+        <width>680</width>
+        <height>32</height>
+        <include>1003</include>
+        <font>font18</font>
+        <align>left</align>
+
+        <textureradiofocus>settings-check-box.png</textureradiofocus>
+        <textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+        <onclick>Skin.ToggleSetting(Background_Vis)</onclick>
+        <selected>Skin.HasSetting(Background_Vis)</selected>
+      </control>
+      <control type="radiobutton" id="204">
+        <description>Background_Vis radiobutton</description>
+        <posx>-</posx>
+        <posy>-</posy>
+        <width>680</width>
+        <height>32</height>
+        <include>1004</include>
+        <font>font18</font>
+        <align>left</align>
+
+        <textureradiofocus>settings-check-box.png</textureradiofocus>
+        <textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+        <onclick>Skin.ToggleSetting(No_Wide_Overlay)</onclick>
+        <selected>Skin.HasSetting(No_Wide_Overlay)</selected>
+      </control>
+    </control>
+-->
+
+    <control type="label">
+      <description>Main Title text label</description>
+      <align>center</align>
+      <posx>360</posx>
+      <posy>35</posy>
+      <label>20077</label>
+      <font>font20</font>
+    </control>
+
+
+    
+    <control type="togglebutton" id="101">
+      <description>"Custom Background" Switch</description>
+      <posx>50</posx>
+      <posy>100</posy>
+      <label>Enable TFT Custom Wallpaper Folder</label>
+      <altlabel>Reset Custom Background Folder</altlabel>
+      <onclick>Skin.SetPath(Custom-Background-Folder)</onclick>
+      <altclick>Skin.Reset(Custom-Background-Folder)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>101</onup>
+      <ondown>102</ondown>
+    </control>
+
+
+    <control type="togglebutton" id="102">
+      <description>"Home  -  Video Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>140</posy>
+      <label>Enable Home Video Folder</label>
+      <altlabel>Reset Home Video Folder</altlabel>
+      <onclick>Skin.SetPath(CustomMovies)</onclick>
+      <altclick>Skin.Reset(CustomMovies)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>101</onup>
+      <ondown>103</ondown>
+    </control>
+
+    <control type="togglebutton" id="103">
+      <description>"Home - Music Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>160</posy>
+      <label>Enable Home Music Folder</label>
+      <altlabel>Reset Home Music Folder</altlabel>
+      <onclick>Skin.SetPath(CustomMusic)</onclick>
+      <altclick>Skin.Reset(CustomMusic)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>102</onup>
+      <ondown>104</ondown>
+    </control>
+
+    <control type="togglebutton" id="104">
+      <description>"Home - Pictures Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>180</posy>
+      <label>Enable Home Pictures Folder</label>
+      <altlabel>Reset Home Pictures Folder</altlabel>
+      <onclick>Skin.SetPath(CustomPictures)</onclick>
+      <altclick>Skin.Reset(CustomPictures)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>103</onup>
+      <ondown>105</ondown>
+    </control>
+
+    <control type="togglebutton" id="105">
+      <description>"Home - Favourites Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>200</posy>
+      <label>Enable Home Favourites Folder</label>
+      <altlabel>Reset Home Favourites Folder</altlabel>
+      <onclick>Skin.SetPath(CustomFavourites)</onclick>
+      <altclick>Skin.Reset(CustomFavourites)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>104</onup>
+      <ondown>106</ondown>
+    </control>
+
+
+
+
+
+    <control type="togglebutton" id="106">
+      <description>"Home - Programs Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>240</posy>
+      <label>Enable Home Programs Folder</label>
+      <altlabel>Reset Home Programs Folder</altlabel>
+      <onclick>Skin.SetPath(CustomPrograms)</onclick>
+      <altclick>Skin.Reset(CustomPrograms)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>105</onup>
+      <ondown>107</ondown>
+    </control>
+
+    <control type="togglebutton" id="107">
+      <description>"Home - Games Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>260</posy>
+      <label>Enable Home Games Folder</label>
+      <altlabel>Reset Home Games Folder</altlabel>
+      <onclick>Skin.SetPath(CustomGames)</onclick>
+      <altclick>Skin.Reset(CustomGames)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>106</onup>
+      <ondown>108</ondown>
+    </control>
+
+    <control type="togglebutton" id="108">
+      <description>"Home - Emulators Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>280</posy>
+      <label>Enable Home Emulators Folder</label>
+      <altlabel>Reset Home Emulators Folder</altlabel>
+      <onclick>Skin.SetPath(CustomEmulators)</onclick>
+      <altclick>Skin.Reset(CustomEmulators)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>107</onup>
+      <ondown>109</ondown>
+    </control>
+
+       
+    
+    <control type="togglebutton" id="109">
+      <description>"Home - Files Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>320</posy>
+      <label>Enable Home Files Folder</label>
+      <altlabel>Reset Home Files Folder</altlabel>
+      <onclick>Skin.SetPath(CustomFiles)</onclick>
+      <altclick>Skin.Reset(CustomFiles)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>108</onup>
+      <ondown>110</ondown>
+    </control>
+
+    <control type="togglebutton" id="110">
+      <description>"Home - Settings Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>340</posy>
+      <label>Enable Home Settings Folder</label>
+      <altlabel>Reset Home Settings Folder</altlabel>
+      <onclick>Skin.SetPath(CustomSettings)</onclick>
+      <altclick>Skin.Reset(CustomSettings)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>109</onup>
+      <ondown>111</ondown>
+    </control>
+
+    <control type="togglebutton" id="111">
+      <description>"Home - Weather Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>360</posy>
+      <label>Enable Home Weather Folder</label>
+      <altlabel>Reset Home Weather Folder</altlabel>
+      <onclick>Skin.SetPath(CustomWeather)</onclick>
+      <altclick>Skin.Reset(CustomWeather)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>110</onup>
+      <ondown>112</ondown>
+    </control>
+
+    <control type="togglebutton" id="112">
+      <description>"Home - Scripts Wallpaper" Switch</description>
+      <posx>50</posx>
+      <posy>380</posy>
+      <label>Enable Home Scripts Folder</label>
+      <altlabel>Reset Home Scripts Folder</altlabel>
+      <onclick>Skin.SetPath(CustomScripts)</onclick>
+      <altclick>Skin.Reset(CustomScripts)</altclick>
+      <align>left</align>
+      <font>font18</font>
+      <width>680</width>
+      <height>30</height>
+      <onup>111</onup>
+      <ondown>112</ondown>
+    </control>
+
+
+
+
+  </controls>
+
+</window>

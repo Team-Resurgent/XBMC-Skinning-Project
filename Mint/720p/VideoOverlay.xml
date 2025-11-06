@@ -1,0 +1,41 @@
+<window id="2004">
+	
+	<controls>
+	
+		<control type="group">
+		
+			<visible>!Skin.HasSetting(bg-video)</visible>
+			<posx>900</posx>
+			<posy>380</posy>
+			<include>anim-videooverlay</include>
+
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>360</width>
+				<height>320</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- video -->
+			<control type="videowindow" id="0">
+				<width>340</width>
+				<height>260</height>
+				<posx>10</posx>
+				<posy>10</posy>
+			</control>
+			<!-- time -->
+			<control type="label">
+				<label>$INFO[VideoPlayer.Time,, / ]$INFO[VideoPlayer.Duration]</label>
+				<width>320</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>270</posy>
+				<font>video</font>
+				<textcolor>type-video-dark</textcolor>
+				<align>center</align>
+			</control>			
+		</control>
+				
+	</controls>
+
+</window>

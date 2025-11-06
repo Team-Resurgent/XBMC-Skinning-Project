@@ -1,0 +1,250 @@
+ <window>
+  <id>4</id> 
+  <defaultcontrol>2</defaultcontrol> 
+ <controls>
+ <control>
+  <description>background image</description> 
+  <type>image</type> 
+  <id>1</id> 
+  <posX>0</posX> 
+  <posY>0</posY> 
+  <width>720</width> 
+  <height>576</height> 
+  <texture>background.png</texture> 
+  <colorkey>0</colorkey> 
+  <colordiffuse>ffffffff</colordiffuse> 
+  </control>
+<control>
+      
+<type>image</type>
+      
+      
+<id>1</id>
+<posX>50</posX>
+      
+<posY>50</posY>
+
+<height>500</height>
+<width>650</width>            
+      
+<texture>bg-settings.png</texture>
+           
+</control>
+ <control>
+  <description>applications logo</description> 
+  <type>image</type> 
+  <id>1</id> 
+  <posX>585</posX> 
+  <posY>33</posY>
+<height>90</height>
+<width>90</width>
+  <texture>gearssmall.png</texture>
+  <colordiffuse>60FFFFFF</colordiffuse> 
+  </control>
+ <control>
+  <description>start logo</description> 
+  <type>image</type> 
+  <id>1</id> 
+  <posX>55</posX> 
+  <posY>35</posY>
+<height>75</height>
+  <texture>background-settings.png</texture> 
+  </control>
+ <control>
+  <description>settings label</description> 
+  <type>label</type> 
+  <id>1</id> 
+  <align>right</align> <posX>660</posX> <posY>85</posY> 
+  <label>5</label> 
+  <font>font14</font> 
+  <textcolor>FFB2D4F5</textcolor> 
+  </control>
+
+	<control>
+		<description>General</description>
+		<type>button</type>
+		<id>2</id>
+		<font>font14</font>
+		<posX>160</posX>
+		<posY>189</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>128</label>
+		<hyperlink>8</hyperlink>
+		<onleft>2</onleft>
+		<onright>6</onright>
+		<onup>12</onup>
+		<ondown>3</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>User Interface = Skin and Language</description>
+		<type>button</type>
+		<id>3</id>
+		<font>font14</font>
+		<posX>160</posX>
+		<posY>226</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>480</label>
+		<hyperlink>19</hyperlink>
+		<onleft>3</onleft>
+		<onright>6</onright>
+		<onup>2</onup>
+		<ondown>5</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<*control>
+		<description>User Interface</description>
+		<type>button</type>
+		<id>4</id>
+		<font>font14</font>
+		<posX>50</posX>
+		<posY>264</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>480</label>
+		<hyperlink>30</hyperlink>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>3</onup>
+		<ondown>5</ondown>
+		<textOffsetX>13</textOffsetX>
+	<*/control>
+	<control>
+		<description>Audio Options</description>
+		<type>button</type>
+		<id>5</id>
+		<font>font14</font>
+		<posX>160</posX>
+		<posY>263</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>481</label>
+		<hyperlink>31</hyperlink>
+		<onleft>5</onleft>
+		<onright>7</onright>
+		<onup>3</onup>
+		<ondown>11</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>System Info</description>
+		<type>button</type>
+		<id>11</id>
+		<font>font14</font>
+		<posX>160</posX>
+		<posY>301</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>130</label>
+		<hyperlink>7</hyperlink>
+		<onleft>11</onleft>
+		<onright>9</onright>
+		<onup>5</onup>
+		<ondown>12</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>About XBMC</description>
+		<type>button</type>
+		<id>12</id>
+		<font>font14</font>
+		<posX>160</posX>
+		<posY>338</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>482</label>
+		<onleft>12</onleft>
+		<onright>8</onright>
+		<onup>11</onup>
+		<ondown>2</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>My Videos</description>
+		<type>button</type>
+		<id>6</id>
+		<font>font14</font>
+		<posX>400</posX>
+		<posY>227</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>3</label>
+		<hyperlink>9</hyperlink>
+		<onleft>3</onleft>
+		<onright>6</onright>
+		<onup>10</onup>
+		<ondown>7</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>My Music</description>
+		<type>button</type>
+		<id>7</id>
+		<font>font14</font>
+		<posX>400</posX>
+		<posY>264</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>2</label>
+		<hyperlink>14</hyperlink>
+		<onleft>5</onleft>
+		<onright>7</onright>
+		<onup>6</onup>
+		<ondown>9</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>My Pictures</description>
+		<type>button</type>
+		<id>9</id>
+		<font>font14</font>
+		<posX>400</posX>
+		<posY>302</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>1</label>
+		<hyperlink>12</hyperlink>
+		<onleft>11</onleft>
+		<onright>9</onright>
+		<onup>7</onup>
+		<ondown>8</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>My Programs</description>
+		<type>button</type>
+		<id>8</id>
+		<font>font14</font>
+		<posX>400</posX>
+		<posY>339</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>0</label>
+		<hyperlink>24</hyperlink>
+		<onleft>12</onleft>
+		<onright>8</onright>
+		<onup>9</onup>
+		<ondown>10</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	<control>
+		<description>My Weather</description>
+		<type>button</type>
+		<id>10</id>
+		<font>font14</font>
+		<posX>400</posX>
+		<posY>376</posY>
+		<width>190</width>
+		<height>35</height>
+		<label>8</label>
+		<hyperlink>17</hyperlink>
+		<onleft>12</onleft>
+		<onright>10</onright>
+		<onup>8</onup>
+		<ondown>6</ondown>
+		<textOffsetX>13</textOffsetX>
+	</control>
+	</controls>
+</window>

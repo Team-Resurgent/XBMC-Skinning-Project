@@ -1,0 +1,128 @@
+<window id="2804">
+        <defaultcontrol>11</defaultcontrol>
+        <coordinates>
+          <system>1</system>
+          <posx>250</posx>
+          <posy>116</posy>
+        </coordinates>
+        <animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="200">WindowClose</animation>
+        <controls>
+
+     <control type="image" id="1">
+        <posx>-250</posx>
+        <posy>-116</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background_dialog.png</texture>
+    </control>
+
+                <control type="image" id="1">
+                        <description>background image</description>
+                        <posx>-25</posx>
+                        <posy>-11</posy>
+                        <width>447</width>
+                        <height>310</height>
+                        <texture>osd_menu_bg.png</texture>
+                        <colordiffuse>CCFFFFFF</colordiffuse>
+                </control>
+                <control type="label" id="0">
+                        <description>History Label</description>
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <label>20406</label>
+                        <width>420</width>
+                        <font>font13</font>
+                        <textcolor>DDced8da</textcolor>
+                </control>
+ 	       <control type="button" id="2">
+                        <description>Clear history button</description>
+                        <posx>10</posx>
+                        <posy>35</posy>
+                        <width>195</width>
+                        <height>31</height>
+                        <font>font12</font>
+                        <textOffsetX>12</textOffsetX>
+                        <alignY>center</alignY>
+                        <align>center</align>
+                        <label>20407</label>
+                        <ondown>11</ondown>
+                        <onup>11</onup>
+                </control>
+
+		<control type="list" id="11">
+			<posx>5</posx>
+			<posy>80</posy>
+			<width>405</width>
+			<height>200</height>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<viewtype>list</viewtype>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="29">
+				<control type="label">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>355</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>400</posx>
+					<posy>4</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>FFB2D4F5</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="29">
+				<control type="image">
+					<width>405</width>
+					<height>29</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(11)</visible>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>355</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>400</posx>
+					<posy>4</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>FFB2D4F5</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+        </controls>
+</window>

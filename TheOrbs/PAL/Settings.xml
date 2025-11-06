@@ -1,0 +1,305 @@
+﻿<window id="4">
+	<defaultcontrol always="false">6</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="multiimage">
+			<posx>50</posx>
+			<posy>30</posy>
+			<width>160</width>
+			<height>160</height>
+			<imagepath>settings</imagepath>
+			<timeperimage>40</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<visible>!player.hasmedia</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+		</control>
+		<include>CTRLsections1</include>
+		<control type="label">
+			<description>section text label</description>
+			<include>ContainerHeader</include>
+			<include>ContainerFade</include>
+			<label>5</label>
+		</control>
+		<control type="group">
+			<control type="button" id="14">
+				<description>sys info</description>
+				<posx>45</posx>
+				<posy>220</posy>
+				<label>130</label>
+				<onclick>ActivateWindow(7)</onclick>
+				<onleft>8</onleft>
+				<onright>6</onright>
+				<onup>12</onup>
+				<ondown>11</ondown>
+			</control>
+			<control type="button" id="11">
+				<description>profiles</description>
+				<posx>45</posx>
+				<posy>257</posy>
+				<label>13200</label>
+				<onclick>xbmc.activatewindow(34)</onclick>
+				<onleft>8</onleft>
+				<onright>6</onright>
+				<onup>14</onup>
+				<ondown>12</ondown>
+			</control>
+			<control type="button" id="12">
+				<description>about xbmc</description>
+				<posx>45</posx>
+				<posy>294</posy>
+				<label>482</label>
+				<onclick>xbmc.credits()</onclick>
+				<onleft>8</onleft>
+				<onright>6</onright>
+				<onup>11</onup>
+				<ondown>13</ondown>
+			</control>
+			<control type="button" id="13">
+				<description>Skin Settings button</description>
+				<posx>45</posx>
+				<posy>331</posy>
+				<label>20077</label>
+				<onclick></onclick>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<onup>12</onup>
+				<ondown>15</ondown>
+			</control>
+			<control type="button" id="15">
+				<description>reload skin</description>
+				<posx>45</posx>
+				<posy>368</posy>
+				<label>20183</label>
+				<onclick>XBMC.ReloadSkin()</onclick>
+				<onleft>8</onleft>
+				<onright>6</onright>
+				<onup>13</onup>
+				<ondown>14</ondown>
+			</control>
+		</control>
+		<control type="group">
+		<include>ContainerFade</include>
+			<control type="button" id="6">
+				<description>appereance</description>
+				<font>font12</font>
+				<posx>245</posx>
+				<posy>155</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-appearance-focus.png</texturefocus>
+				<texturenofocus>settings-appearance-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>480</label>
+				<align>center</align>
+				<onclick>ActivateWindow(19)</onclick>
+				<onleft>13</onleft>
+				<onright>7</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+			<control type="button" id="7">
+				<description>network</description>
+				<font>font12</font>
+				<posx>355</posx>
+				<posy>155</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-network-focus.png</texturefocus>
+				<texturenofocus>settings-network-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>705</label>
+				<align>center</align>
+				<onclick>ActivateWindow(18)</onclick>
+				<onleft>6</onleft>
+				<onright>9</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+			<control type="button" id="9">
+				<description>settings</description>
+				<font>font12</font>
+				<posx>465</posx>
+				<posy>155</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-system-focus.png</texturefocus>
+				<texturenofocus>settings-system-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>13000</label>
+				<align>center</align>
+				<onclick>ActivateWindow(16)</onclick>
+				<onleft>7</onleft>
+				<onright>8</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+			<control type="button" id="8">
+				<description>my weather</description>
+				<font>font12</font>
+				<posx>575</posx>
+				<posy>155</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-weather-focus.png</texturefocus>
+				<texturenofocus>settings-weather-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>8</label>
+				<align>center</align>
+				<onclick>ActivateWindow(14)</onclick>
+				<onleft>9</onleft>
+				<onright>13</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+			<control type="button" id="10">
+				<description>my programs</description>
+				<font>font12</font>
+				<posx>245</posx>
+				<posy>345</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-programs-focus.png</texturefocus>
+				<texturenofocus>settings-programs-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>0</label>
+				<align>center</align>
+				<onclick>ActivateWindow(13)</onclick>
+				<onleft>13</onleft>
+				<onright>2</onright>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+			<control type="button" id="2">
+				<description>my videos</description>
+				<font>font12</font>
+				<posx>355</posx>
+				<posy>345</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-videos-focus.png</texturefocus>
+				<texturenofocus>settings-videos-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>3</label>
+				<align>center</align>
+				<onclick>ActivateWindow(17)</onclick>
+				<onleft>10</onleft>
+				<onright>4</onright>
+				<onup>7</onup>
+				<ondown>7</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+			<control type="button" id="4">
+				<description>my music</description>
+				<font>font12</font>
+				<posx>465</posx>
+				<posy>345</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-music-focus.png</texturefocus>
+				<texturenofocus>settings-music-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>2</label>
+				<align>center</align>
+				<onclick>ActivateWindow(15)</onclick>
+				<onleft>2</onleft>
+				<onright>3</onright>
+				<onup>9</onup>
+				<ondown>9</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+			<control type="button" id="3">
+				<description>my pictures</description>
+				<font>font12</font>
+				<posx>575</posx>
+				<posy>345</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturefocus>settings-pictures-focus.png</texturefocus>
+				<texturenofocus>settings-pictures-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>110</textoffsety>
+				<label>1</label>
+				<align>center</align>
+				<onclick>ActivateWindow(12)</onclick>
+				<onleft>4</onleft>
+				<onright>13</onright>
+				<onup>8</onup>
+				<ondown>8</ondown>
+				<visible>![Control.HasFocus(13) | ControlGroup(100).HasFocus()]</visible>
+			</control>
+		</control>
+		<!-- Skin Settings button Options -->
+		<control type="grouplist" id="100">
+			<posx>235</posx>
+			<posy>96</posy>
+			<width>450</width>
+			<height>450</height>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<include>list-fade</include>
+			<include>ContainerFade</include>
+			<visible>Control.HasFocus(13) | ControlGroup(100).HasFocus()</visible>
+				<control type="radiobutton" id="101">
+					<description>Disable Window Trasition Animations</description>
+					<width>435</width>
+					<height>26</height>
+					<label>31002</label>
+					<onclick>Skin.ToggleSetting(trans-ani)</onclick>
+					<selected>Skin.HasSetting(trans-ani)</selected>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>settings-check-box.png</textureradiofocus>
+					<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+				</control>
+				<control type="radiobutton" id="102">
+					<description>Disable home Button Animations</description>
+					<width>435</width>
+					<height>26</height>
+					<label>31003</label>
+					<onclick>Skin.ToggleSetting(homebutton-ani)</onclick>
+					<selected>Skin.HasSetting(homebutton-ani)</selected>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>settings-check-box.png</textureradiofocus>
+					<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+				</control>
+				<control type="radiobutton" id="109">
+					<description>Use Startup Playlist</description>
+					<width>435</width>
+					<height>26</height>
+					<label>21398</label>
+					<onclick>Skin.ToggleSetting(startup-playlist)</onclick>
+					<selected>Skin.HasSetting(startup-playlist)</selected>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>settings-check-box.png</textureradiofocus>
+					<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+				</control>
+				<control type="button" id="110">
+					<description>Choose Startup Playlist</description>
+					<width>435</width>
+					<height>30</height>
+					<label>524</label>
+					<onclick>Skin.SetFile(playlist,.m3u,Q:\UserData\playlists\music)</onclick>
+					<visible>Skin.HasSetting(startup-playlist)</visible>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+		</control>
+	</controls>
+</window>  

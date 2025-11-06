@@ -1,0 +1,25 @@
+<window id="136">
+
+  <controls>
+
+    <control type="group">
+      <include>BusyDialogPos</include>
+      <animation effect="slide" time="500" tween="circle" easing="out" start="0,-100" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="500" tween="circle" easing="in" start="0,0" end="0,-100">WindowClose</animation>
+
+      <control type="image">
+        <description>Panel background</description>
+        <include>BusyDialogBGDims</include>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="label">
+        <description>Please Wait label</description>
+        <include>BusyDialogLabelDims</include>
+        <align>center</align>
+        <label>$LOCALIZE[20186]</label>
+      </control>
+    </control>
+
+  </controls>
+</window>

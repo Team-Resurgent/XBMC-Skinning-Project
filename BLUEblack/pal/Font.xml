@@ -1,0 +1,22 @@
+<fonts>
+  <font>
+    <name>font12</name>
+    <filename>common-font12.xpr</filename>
+  </font>
+  <font>
+    <name>font13</name>
+    <filename>common-font13.xpr</filename>
+  </font>
+  <font>
+    <name>font14</name>
+    <filename>common-font14.xpr</filename>
+  </font>
+  <font>
+    <name>font18</name>
+    <filename>common-font18.xpr</filename>
+  </font>
+  <font>
+	<name>matrix8</name>
+	<filename>matrix8.xpr</filename>
+  </font>
+</fonts>

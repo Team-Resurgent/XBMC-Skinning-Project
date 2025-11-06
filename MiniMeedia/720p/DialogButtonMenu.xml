@@ -1,0 +1,240 @@
+<window type="buttonMenu" id="111">
+  <defaultcontrol always="true">3112</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <posx>190</posx>
+      <posy>10</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-120" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-120" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-120">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-120">Hidden</animation>
+
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-20</posy>
+        <width>920</width>
+        <height>94</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posy>16</posy>
+
+        <control type="label" id="3100">
+          <description>Title text</description>
+          <width>300</width>
+          <height>50</height>
+          <align>center</align>
+          <font>TitleFont</font>
+          <scroll>yes</scroll>
+          <visible>!Control.HasFocus(3120)</visible>
+        </control>
+        <control type="label">
+          <description>Title text</description>
+          <width>300</width>
+          <height>50</height>
+          <align>center</align>
+          <label>$LOCALIZE[20144]</label>
+          <font>TitleFont</font>
+          <scroll>yes</scroll>
+          <visible>Control.HasFocus(3120)</visible>
+        </control>
+      </control>
+
+      <control type="grouplist">
+        <posx>320</posx>
+        <width>560</width>
+        <orientation>horizontal</orientation>
+        <itemgap>10</itemgap>
+        <onup>3120</onup>
+        <ondown>3120</ondown>
+
+        <control type="togglebutton" id="3118">
+          <description>Master mode button</description>
+          <include>ButtonMenuButtonDims</include>
+          <label>20046</label>
+          <altlabel>20045</altlabel>
+          <texturefocus>ButtonMenuMasterFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuMasterFO.png</texturenofocus>
+          <usealttexture>!System.IsMaster</usealttexture>
+          <alttexturefocus>ButtonMenuNoMasterFO.png</alttexturefocus>
+          <alttexturenofocus diffuse="GreyDark.png">ButtonMenuNoMasterFO.png</alttexturenofocus>
+          <onclick>xbmc.mastermode</onclick>
+          <font>-</font>
+          <visible>System.LoggedOn + System.HasLocks</visible>
+        </control>
+
+        <control type="button" id="3113">
+          <description>System Info button</description>
+          <include>ButtonMenuButtonDims</include>
+          <texturefocus>ButtonMenuSystemFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuSystemFO.png</texturenofocus>
+          <onclick>XBMC.ActivateWindow(7)</onclick>
+          <font>-</font>
+          <label>130</label>
+          <visible>System.LoggedOn</visible>
+        </control>
+
+        <control type="button" id="3117">
+          <description>Profile LogOff</description>
+          <include>ButtonMenuButtonDims</include>
+          <texturefocus>ButtonMenuProfileFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuProfileFO.png</texturenofocus>
+          <onclick>dialog.close(all,true)</onclick>
+          <onclick>system.logoff</onclick>
+          <font>-</font>
+          <label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+          <visible>System.LoggedOn + System.HasLoginScreen</visible>
+        </control>
+
+        <control type="button" id="3112">
+          <description>Shutdown button</description>
+          <include>ButtonMenuButtonDims</include>
+          <texturefocus>ButtonMenuShutdownFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuShutdownFO.png</texturenofocus>
+          <onclick>XBMC.ShutDown()</onclick>
+          <font>-</font>
+          <label>13005</label>
+          <visible>System.LoggedOn</visible>
+        </control>
+
+        <control type="button" id="3110">
+          <description>Favourites button</description>
+          <include>ButtonMenuButtonDims</include>
+          <texturefocus>ButtonMenuFavouritesFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuFavouritesFO.png</texturenofocus>
+          <onclick>XBMC.ActivateWindow(Favourites)</onclick>
+          <font>-</font>
+          <label>1036</label>
+          <visible>System.LoggedOn</visible>
+        </control>
+
+        <control type="button" id="3115">
+          <description>Restart XBMC button</description>
+          <include>ButtonMenuButtonDims</include>
+          <texturefocus>ButtonMenuRestartFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuRestartFO.png</texturenofocus>
+          <onclick>XBMC.RestartApp()</onclick>
+          <font>-</font>
+          <label>$LOCALIZE[13313] XBMC</label>
+          <visible>System.LoggedOn</visible>
+        </control>
+      </control>
+
+      <control type="group">
+        <posx>418</posx>
+        <animation effect="slide" start="0,0" end="74,0" time="0" condition="!System.HasLocks + System.HasLoginScreen">Conditional</animation>
+        <animation effect="slide" start="0,0" end="74,0" time="0" condition="System.HasLocks + !System.HasLoginScreen">Conditional</animation>
+        <animation effect="slide" start="0,0" end="148,0" time="0" condition="System.HasLocks + System.HasLoginScreen">Conditional</animation>
+
+        <control type="image">
+          <description>Shutdown Timer Arrow</description>
+          <posy>-12</posy>
+          <texture>ArrowUpNF.png</texture>
+          <visible>System.LoggedOn</visible>
+        </control>
+
+        <control type="image">
+          <description>Shutdown Timer Arrow</description>
+          <posy>58</posy>
+          <texture>ArrowDownNF.png</texture>
+          <visible>System.LoggedOn</visible>
+        </control>
+
+        <control type="wraplist" id="3120">
+          <description>Shutdown Timer Menu</description>
+          <posx>-16</posx>
+          <posy>4</posy>
+          <width>48</width>
+          <height>48</height>
+          <onup>3120</onup>
+          <ondown>3120</ondown>
+          <onleft>3112</onleft>
+          <onright>3112</onright>
+          <orientation>vertical</orientation>
+          <scrolltime>200</scrolltime>
+          <itemgap>0</itemgap>
+          <visible allowhiddenfocus="true">Control.HasFocus(3120)</visible>
+          <animation effect="fade" start="0" end="100" time="300">focus</animation>
+
+          <itemlayout height="48" width="48">
+          </itemlayout>
+
+          <focusedlayout height="48" width="48">
+            <control type="label">
+              <posx>24</posx>
+              <posy>0</posy>
+              <width>48</width>
+              <height>48</height>
+              <align>center</align>
+              <aligny>center</aligny>
+              <font>TitleFont</font>
+              <info>ListItem.Label</info>
+            </control>
+          </focusedlayout>
+
+          <content>
+            <item id="1">
+              <description>15 minutes</description>
+              <label>$INFO[,15]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),15)</onclick>
+            </item>
+            <item id="2">
+              <description>30 minutes</description>
+              <label>$INFO[,30]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),30)</onclick>
+            </item>
+            <item id="3">
+              <description>45 minutes</description>
+              <label>$INFO[,45]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),45)</onclick>
+            </item>
+            <item id="4">
+              <description>60 minutes</description>
+              <label>$INFO[,60]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),60)</onclick>
+            </item>
+            <item id="5">
+              <description>75 minutes</description>
+              <label>$INFO[,75]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),75)</onclick>
+            </item>
+            <item id="6">
+              <description>90 minutes</description>
+              <label>$INFO[,90]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),90)</onclick>
+            </item>
+            <item id="7">
+              <description>105 minutes</description>
+              <label>$INFO[,105]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),105)</onclick>
+            </item>
+            <item id="8">
+              <description>120 minutes</description>
+              <label>$INFO[,120]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),120)</onclick>
+            </item>
+            <item id="9">
+              <description>135 minutes</description>
+              <label>$INFO[,135]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),135)</onclick>
+            </item>
+            <item id="10">
+              <description>150 minutes</description>
+              <label>$INFO[,150]</label>
+              <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),150)</onclick>
+            </item>
+            <item id="11">
+              <description>Cancel Timer</description>
+              <label>CL</label>
+              <onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+            </item>
+          </content>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

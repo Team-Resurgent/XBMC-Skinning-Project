@@ -1,0 +1,208 @@
+﻿<window id="2901">
+	<defaultcontrol>213</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<controls>
+		<control type="image" id="1">
+			<description>panel</description>
+			<posx>50</posx>
+			<posy>400</posy>
+			<height>168</height>
+			<texture>osd_panel.png</texture>
+			<visible>yes</visible>
+		</control>
+		<control type="togglebutton" id="210">
+			<description>skip bwd</description>
+			<posx>251</posx>
+			<posy>438</posy>
+			<width>26</width>
+			<height>31</height>
+			<alttexturefocus>osd_button_skip_minusfo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_skip_minusselfo.png</texturefocus>
+			<texturenofocus>osd_button_skip_minusselnf.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>215</onright>
+			<onup>210</onup>
+			<ondown>220</ondown>
+		</control>
+		<control type="togglebutton" id="211">
+			<description>rewind</description>
+			<posx>325</posx>
+			<posy>439</posy>
+			<width>25</width>
+			<height>27</height>
+			<alttexturefocus>osd_button_rewfo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_rewselfo.png</texturefocus>
+			<texturenofocus>osd_button_rewselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			<onleft>215</onleft>
+			<onright>214</onright>
+			<onup>211</onup>
+			<ondown>220</ondown>
+		</control>
+		<control type="button" id="212">
+			<description>stop</description>
+			<posx>142</posx>
+			<posy>435</posy>
+			<width>31</width>
+			<height>36</height>
+			<texturefocus>osd_button_stopfo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
+			<onleft>216</onleft>
+			<onright>213</onright>
+			<onup>212</onup>
+			<ondown>218</ondown>
+		</control>
+		<control type="togglebutton" id="213">
+			<description>play</description>
+			<posx>186</posx>
+			<posy>427</posy>
+			<width>47</width>
+			<height>52</height>
+			<alttexturefocus>osd_button_playfo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_pausefo.png</texturefocus>
+			<texturenofocus>osd_button_pausenf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<onleft>212</onleft>
+			<onright>210</onright>
+			<onup>213</onup>
+			<ondown>220</ondown>
+		</control>
+		<control type="togglebutton" id="214">
+			<description>fast forward</description>
+			<posx>354</posx>
+			<posy>439</posy>
+			<width>25</width>
+			<height>27</height>
+			<alttexturefocus>osd_button_fffo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_ffselfo.png</texturefocus>
+			<texturenofocus>osd_button_ffselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+			<onleft>211</onleft>
+			<onright>216</onright>
+			<onup>214</onup>
+			<ondown>220</ondown>
+		</control>
+		<control type="togglebutton" id="215">
+			<description>skip fwd</description>
+			<posx>280</posx>
+			<posy>439</posy>
+			<width>25</width>
+			<height>27</height>
+			<alttexturefocus>osd_button_skip_plusfo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_skip_plusselfo.png</texturefocus>
+			<texturenofocus>osd_button_skip_plusselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+			<onleft>210</onleft>
+			<onright>211</onright>
+			<onup>215</onup>
+			<ondown>220</ondown>
+		</control>
+		<control type="button" id="216">
+			<description>DVD Menu</description>
+			<posx>93</posx>
+			<posy>406</posy>
+			<width>30</width>
+			<height>34</height>
+			<texturefocus>osd_button_volumeselfo.png</texturefocus>
+			<texturenofocus>osd_button_volumeselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			<onleft>214</onleft>
+			<onright>212</onright>
+			<onup>216</onup>
+			<ondown>219</ondown>
+		</control>
+		<control type="togglebutton" id="218">
+			<description>Playlist menu</description>
+			<posx>129</posx>
+			<posy>496</posy>
+			<width>26</width>
+			<height>28</height>
+			<alttexturefocus>osd_button_subtitlesfo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_subtitlesselfo.png</texturefocus>
+			<texturenofocus>osd_button_subtitlesselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.ActivateWindow(28)</onclick>
+			<onleft>219</onleft>
+			<onright>221</onright>
+			<onup>212</onup>
+			<ondown>218</ondown>
+		</control>
+		<control type="togglebutton" id="219">
+			<description>bookmarks menu</description>
+			<posx>97</posx>
+			<posy>496</posy>
+			<width>26</width>
+			<height>28</height>
+			<alttexturefocus>osd_button_bookmarkfo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_bookmarkselfo.png</texturefocus>
+			<texturenofocus>osd_button_bookmarkselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.ActivateWindow(125)</onclick>
+			<onleft>220</onleft>
+			<onright>218</onright>
+			<onup>216</onup>
+			<ondown>219</ondown>
+		</control>
+		<control type="togglebutton" id="220">
+			<description>video menu</description>
+			<posx>194</posx>
+			<posy>496</posy>
+			<width>26</width>
+			<height>28</height>
+			<alttexturefocus>osd_button_videofo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_videoselfo.png</texturefocus>
+			<texturenofocus>osd_button_videoselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.ActivateWindow(123)</onclick>
+			<onleft>221</onleft>
+			<onright>219</onright>
+			<onup>213</onup>
+			<ondown>220</ondown>
+		</control>
+		<control type="togglebutton" id="221">
+			<description>audio menu</description>
+			<posx>162</posx>
+			<posy>496</posy>
+			<width>26</width>
+			<height>28</height>
+			<alttexturefocus>osd_button_audiofo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<texturefocus>osd_button_audioselfo.png</texturefocus>
+			<texturenofocus>osd_button_audioselnf.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onclick>XBMC.ActivateWindow(124)</onclick>
+			<onleft>218</onleft>
+			<onright>220</onright>
+			<onup>213</onup>
+			<ondown>221</ondown>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,414 @@
+<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+<include>background-image</include>
+
+	<control type="image">
+	    <posx>78</posx>
+	    <posy>267</posy>
+	    <width>25</width>
+	    <height>40</height>
+	    <aspectratio>stretch</aspectratio>
+	    <texture>bmx-arrow-left.png</texture>
+	    <include>settingssubslide</include>
+        </control>
+
+        <control type="image">
+            <posx>120</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-users.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>18</posx>
+            <posy>125</posy>
+            <width>45</width>
+            <height>60</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-settings-glow.png</texture>
+	    <include>settingsmainslide</include>
+        </control>
+       <control type="label">
+            <posx>6</posx>
+            <posy>167</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+	    <include>settingsmainslide</include>
+	    <label>5</label>
+        </control>
+
+
+
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-folder-glow.png</texture>
+		<include>settingsmainslide</include>
+        </control>
+
+
+
+
+        <control type="image">
+            <posx>260</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-pictures.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>330</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-music.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>400</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-video.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>470</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-game.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>540</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-network.png</texture>
+	    <include>iconfade</include>
+        </control>
+        <control type="image">
+            <posx>610</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-friends.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+<!-- sub Settings -->
+
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-update.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-video.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-music.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-pictures.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End sub Settings -->
+
+
+		<control type="image" id="0">
+			<posx>100</posx>
+			<posy>0</posy>
+			<width>620</width>
+			<height>576</height>
+			<texture>popup.png</texture>
+			<animation effect="fade" end="80" time="2000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+
+
+		<control type="group">
+			<include>settingpanelslide</include>
+<!--			<control type="image">
+				<description>filemanager background image</description>
+				<posx>50</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>576</height>
+				<texture>filemanager.png</texture>
+			</control>
+-->
+
+        <control type="image">
+            <posx>100</posx>
+            <posy>0</posy>
+            <width>620</width>
+            <height>576</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>sidebar.png</texture>
+	    <colordiffuse>sidebar</colordiffuse>
+	    <include>settingpanelslide</include>
+        </control>
+			<control type="fadelabel" id="101">
+				<description>current Directory text label left</description>
+				<align>left</align>
+				<posx>128</posx>
+				<posy>45</posy>
+				<width>270</width>
+				<font>font13</font>
+			</control>
+			<control type="fadelabel" id="102">
+				<description>current Directory text label right</description>
+				<align>left</align>
+				<posx>417</posx>
+				<posy>45</posy>
+				<width>270</width>
+				<font>font13</font>
+			</control>
+
+
+        <control type="image">
+			<posx>110</posx>
+			<posy>67</posy>
+			<width>600</width>
+			<height>2</height>
+			<texture>bmx-line.png</texture>
+        </control>
+
+
+			<control type="label" id="12">
+				<description>number of files in left list text label</description>
+				<posx>128</posx>
+				<posy>493</posy>
+				<label>-</label>
+				<font>font13</font>
+			</control>
+			<control type="label" id="13">
+				<description>number of files in right list text label</description>
+				<posx>417</posx>
+				<posy>493</posy>
+				<label>-</label>
+				<font>font13</font>
+			</control>
+
+        <control type="image">
+			<posx>110</posx>
+			<posy>487</posy>
+			<width>600</width>
+			<height>2</height>
+			<texture>bmx-line.png</texture>
+        </control>
+        <control type="image">
+			<posx>110</posx>
+			<posy>519</posy>
+			<width>600</width>
+			<height>2</height>
+			<texture>bmx-line.png</texture>
+        </control>
+
+			<control type="image">
+				<description>filemanager List Sel Left</description>
+				<posx>120</posx>
+				<posy>76</posy>
+				<width>290</width>
+				<height>404</height>
+				<texture>filemanager_Panel_Sel.png</texture>
+				<visible>Control.HasFocus(20)</visible>
+			</control>
+			<control type="listcontrol" id="20">
+				<description>Left File list</description>
+				<selectedcolor>green</selectedcolor>
+				<posx>126</posx>
+				<posy>82</posy>
+				<width>280</width>
+				<height>433</height>
+				<texturefocus>input-focus.png</texturefocus>
+				<texturenofocus>input-nofocus.png</texturenofocus>
+				<onleft>21</onleft>
+				<onright>21</onright>
+				<onup>20</onup>
+				<ondown>20</ondown>
+				<font>font12</font>
+			</control>
+			<control type="image">
+				<description>filemanager List Sel Right</description>
+				<posx>411</posx>
+				<posy>76</posy>
+				<width>290</width>
+				<height>404</height>
+				<texture>filemanager_Panel_Sel.png</texture>
+				<visible>Control.HasFocus(21)</visible>
+			</control>
+			<control type="listcontrol" id="21">
+				<description>Right File list</description>
+				<selectedcolor>green</selectedcolor>
+				<posx>415</posx>
+				<posy>82</posy>
+				<width>280</width>
+				<height>433</height>
+				<texturefocus>input-focus.png</texturefocus>
+				<texturenofocus>input-nofocus.png</texturenofocus>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<onup>21</onup>
+				<ondown>21</ondown>
+				<font>font12</font>
+			</control>
+		</control>
+		<control type="group">
+			<include>settingpanelslide</include>
+			<visible>System.HasDriveG</visible>
+			<control type="label">
+				<description>free space label</description>
+				<posx>124</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<label>$INFO[System.Freespace(C)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>free space label</description>
+				<posx>257</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<label>$INFO[System.Freespace(E)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>free space label</description>
+				<posx>403</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<label>$INFO[System.Freespace(F)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>free space label</description>
+				<posx>556</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<label>$INFO[System.Freespace(G)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>left</align>
+			</control>
+		</control>
+		<control type="group">
+			<include>settingpanelslide</include>
+			<visible>System.HasDriveF + !System.HasDriveG</visible>
+			<control type="label">
+				<description>free space label</description>
+				<posx>124</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<label>$INFO[System.Freespace(C)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>free space label</description>
+				<posx>410</posx>
+				<posy>525</posy>
+				<align>center</align>
+				<label>$INFO[System.Freespace(E)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>free space label</description>
+				<posx>690</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<align>right</align>
+				<label>$INFO[System.Freespace(F)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>left</align>
+			</control>
+		</control>
+		<control type="group">
+			<include>settingpanelslide</include>
+			<visible>!System.HasDriveF + !System.HasDriveG</visible>
+			<control type="label">
+				<description>free space label</description>
+				<posx>190</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<label>$INFO[System.Freespace(C)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>free space label</description>
+				<posx>620</posx>
+				<posy>525</posy>
+				<width>142</width>
+				<align>right</align>
+				<label>$INFO[System.Freespace(E)]</label>
+				<textcolor>lightgrey</textcolor>
+				<font>font13</font>
+				<align>center</align>
+			</control>
+		</control>
+	</controls>
+</window>

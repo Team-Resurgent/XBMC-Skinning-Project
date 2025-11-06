@@ -1,0 +1,215 @@
+<includes>
+
+  <!-- Common Stuff -->
+  <!-- ====== ===== -->
+
+  <constant name="ScreenWidth">1280</constant>
+  <constant name="ScreenHeight">720</constant>
+
+  <!-- Home screen -->
+  <!-- ==== ====== -->
+
+  <constant name="HomeWeatherBGWidth">470</constant>
+  <constant name="HomeWeatherImageWidth">54</constant>
+  <constant name="HomeWeatherTextWidth">388</constant>
+
+  <constant name="HomeMainMenuBGWidth">250</constant>
+  <constant name="HomeMainMenuTextWidth">224</constant>
+
+  <constant name="HomeSubMenuBGOffset">195</constant>
+
+  <include name="HomeMainMenuBGDims">
+    <posy>1</posy>
+    <width>HomeMainMenuBGWidth</width>
+    <height>130</height>
+  </include>
+
+  <!-- Dialogs -->
+  <!-- ======= -->
+
+  <!-- Horizontal Dialogs -->
+  <include name="HorizDialogPos">
+    <posx>1000</posx>
+    <posy>0</posy>
+  </include>
+
+  <include name="HorizDialogBGDims">
+    <width>320</width>
+    <height>720</height>
+  </include>
+
+  <constant name="HorizDialogTextWidth">260</constant>
+
+  <include name="HorizWideDialogPos">
+    <posx>740</posx>
+    <posy>0</posy>
+  </include>
+
+  <include name="HorizWideDialogBGDims">
+    <width>580</width>
+    <height>720</height>
+  </include>
+
+  <constant name="HorizWideDialogTextWidth">520</constant>
+
+  <!-- Busy Dialog -->
+  <include name="BusyDialogPos">
+    <posx>640</posx>
+    <posy>-10</posy>
+  </include>
+
+  <include name="BusyDialogBGDims">
+    <width>249</width>
+    <height>70</height>
+  </include>
+
+  <include name="BusyDialogLabelDims">
+    <posx>8</posx>
+    <posy>25</posy>
+    <width>237</width>
+    <font>TitleFont</font>
+  </include>
+
+  <!-- Progress Dialogs -->
+  <include name="ProgressDialogPos">
+    <posx>490</posx>
+    <posy>-10</posy>
+  </include>
+
+  <constant name="ProgressDialogTextWidth">760</constant>
+  <constant name="ProgressDialogProgressWidth">768</constant>
+
+  <!-- Confirmation Dialogs -->
+  <include name="DialogYesNoButtonPos">
+    <posy>ConfirmDialogButtonYPos</posy>
+    <posx>-4</posx>
+  </include>
+
+  <constant name="DialogYesNoButtonWidth">140</constant>
+
+  <include name="DialogYesNoYesBtnDims">
+    <posx>150</posx>
+    <width>DialogYesNoButtonWidth</width>
+  </include>
+
+  <!-- Selection Dialogs -->
+  <include name="SelectionDialogPos">
+    <posx>490</posx>
+    <posy>-10</posy>
+  </include>
+
+  <include name="SelectionDialogBGDims">
+    <width>800</width>
+    <height>300</height>
+  </include>
+
+  <constant name="SelectionDialogTextWidth">770</constant>
+  <constant name="SelectionDialogShortTextWidth">600</constant>
+  <constant name="SelectionDialogButtonPosX">610</constant>
+
+  <include name="MediaSourceBottomBtnsDims">
+    <posx>145</posx>
+    <posy>206</posy>
+  </include>
+
+  <constant name="MediaSourceSetContentBtnWidth">180</constant>
+
+  <!-- Set Content Dialog -->
+  <constant name="SetContentTextWidth">500</constant>
+
+  <!-- Button Menu -->
+  <constant name="ButtonMenuButtonWidth">64</constant>
+
+  <include name="ButtonMenuButtonDims">
+    <width>ButtonMenuButtonWidth</width>
+    <height>64</height>
+  </include>
+
+  <!-- OSD -->
+  <!-- === -->
+
+  <constant name="OSDIconHeight">45</constant>
+
+  <include name="OSDIconDims">
+    <posx>11</posx>
+    <posy>10</posy>
+    <width>45</width>
+    <height>OSDIconHeight</height>
+  </include>
+
+  <!-- Video OSD -->
+  <include name="VideoOSDTitleTextDims">
+    <width>400</width>
+  </include>
+
+  <include name="VideoOSDTitleWideTextDims">
+    <width>920</width>
+  </include>
+
+  <include name="VideoOSDButtonDims">
+    <width>32</width>
+    <height>32</height>
+  </include>
+
+  <include name="VideoOSDSettingsSpinControlDims">
+    <width>440</width>
+    <textoffsetx>10</textoffsetx>
+    <textoffsety>0</textoffsety>
+  </include>
+
+  <constant name="VideoOSDBkmkThumbAreaWidth">130</constant>
+  <constant name="VideoOSDBkmkThumbImageWidth">118</constant>
+
+  <include name="VideoOSDBkmkBtnsGroupDims">
+    <posx>0</posx>
+    <posy>660</posy>
+    <height>30</height>
+    <itemgap>10</itemgap>
+  </include>
+
+  <constant name="VideoOSDBkmkBtnWidth">240</constant>
+
+  <!-- Volume Dialogs -->
+  <include name="VolumeImageDims">
+    <posx>10</posx>
+    <posy>8</posy>
+    <width>47</width>
+    <height>47</height>
+  </include>
+
+  <include name="VolumeLabelDims">
+    <posx>60</posx>
+    <posy>20</posy>
+    <width>90</width>
+  </include>
+
+  <!-- Media Views -->
+  <!-- ===== ===== -->
+
+  <constant name="MediaLeftOverlayWidth">640</constant>
+  <constant name="MediaLeftOverlayContentWidth">584</constant>
+  <constant name="MediaLeftOverlayLabelWidth">560</constant>
+  <constant name="MediaLeftOverlayContentBGWidth">596</constant>
+
+  <include name="MediaLeftOverlayAnim">
+    <animation effect="slide" time="300" tween="circle" easing="out" start="-700,300" end="0,0">WindowOpen</animation>
+    <animation effect="slide" time="300" tween="circle" easing="out" start="-700,300" end="0,0">Visible</animation>
+    <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-700,300">WindowClose</animation>
+    <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-700,300">Hidden</animation>
+  </include>
+
+  <include name="MediaLeftHighOverlayAnim">
+    <animation effect="slide" time="300" tween="circle" easing="out" start="-700,500" end="0,0">WindowOpen</animation>
+    <animation effect="slide" time="300" tween="circle" easing="out" start="-700,500" end="0,0">Visible</animation>
+    <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-700,500">WindowClose</animation>
+    <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-700,500">Hidden</animation>
+  </include>
+
+  <constant name="LowListTVWideContentWidth">384</constant>
+  <constant name="LowListTVWideLabelWidth">360</constant>
+  <constant name="LowListTVWideContentBGWidth">396</constant>
+
+  <constant name="HighListEpisodeContentWidth">549</constant>
+  <constant name="HighListEpisodeLabelWidth">525</constant>
+  <constant name="HighListEpisodeContentBGWidth">561</constant>
+</includes>

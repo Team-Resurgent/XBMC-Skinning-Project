@@ -1,0 +1,118 @@
+<window type="buttonMenu" id="111">
+	<defaultcontrol always="true">3130</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+		<!-- background 16x9 -->
+		<include>background-image</include>
+
+		<!-- Upper images -->
+
+        <control type="image">
+        <posx>0</posx>
+        <posy>90</posy>
+        <width>1000</width>
+		<height>2</height>
+        <texture>bmx-line.png</texture>
+        </control>
+
+
+		<!-- buttons -->
+			<control type="button" id="3130">
+				<description>Restart button</description>
+				<posx>270</posx>
+				<posy>197</posy>
+				<width>30</width>
+				<height>49</height>
+				<onclick>XBMC.RestartApp()</onclick>
+				<pulseonselect>no</pulseonselect>
+				<onup>3132</onup>
+				<ondown>3132</ondown>
+				<texturefocus>bmx-stop-glow.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<animation effect="slide" time="190" start="172,0" end="0,0" acceleration="-1.1">WindowOpen</animation>
+			</control>
+
+			<control type="button" id="3132">
+				<description>Shutdown button</description>
+				<posx>270</posx>
+				<posy>247</posy>
+				<width>30</width>
+				<height>49</height>
+				<onclick>XBMC.ShutDown()</onclick>
+				<pulseonselect>no</pulseonselect>
+				<onup>3130</onup>
+				<ondown>3130</ondown>
+				<texturefocus>bmx-stop-glow.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<animation effect="slide" time="190" start="172,0" end="0,0" acceleration="-1.1">WindowOpen</animation>
+			</control>
+
+			<control type="label">
+				<description>Restart button</description>
+				<posx>300</posx>
+				<posy>210</posy>
+				<font>special13</font>
+				<label>$LOCALIZE[13313] XBMC</label>
+				<animation effect="slide" time="190" start="172,0" end="0,0" acceleration="-1.1">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<description>Shutdown button</description>
+				<posx>300</posx>
+				<posy>260</posy>
+				<font>special13</font>
+				<label>13005</label>
+				<animation effect="slide" time="190" start="172,0" end="0,0" acceleration="-1.1">WindowOpen</animation>
+			</control>
+
+
+		<!-- Bottom images -->
+        <control type="image">
+			<posx>0</posx>
+			<posy>480</posy>
+			<width>1000</width>
+			<height>2</height>
+			<texture>bmx-line.png</texture>
+        </control>
+
+        <control type="label">
+			<posx>140</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special13</font>
+			<align>left</align>
+			<label>A</label>
+        </control>
+        <control type="label">
+			<posx>160</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special12</font>
+			<align>left</align>
+			<label>Accept</label>
+        </control>
+
+
+        <control type="label">
+			<posx>510</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special13</font>
+			<align>left</align>
+			<label>B</label>
+        </control>
+        <control type="label">
+			<posx>530</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special12</font>
+			<align>left</align>
+			<label>Cancel</label>
+        </control>
+
+	</controls>
+</window>

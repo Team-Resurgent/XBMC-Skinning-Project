@@ -1,0 +1,119 @@
+<window id="120">
+	<defaultcontrol>200</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>250</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" time="200" end="0,200" condition="Window.IsActive(VisualisationSettings) | Window.IsActive(VisualisationPresetList)">Conditional</animation>
+			<control type="image">
+				<description>Media Overlay Image</description>
+				<posx>0</posx>
+				<posy>-10</posy>
+				<width>724</width>
+				<height>79</height>
+				<texture>osd_panel.png</texture>
+			</control>
+			<control type="wraplist" id="200">
+				<posx>184</posx>
+				<posy>0</posy>
+				<height>61</height>
+				<width>357</width>
+				<onup>302</onup>
+				<ondown>200</ondown>
+				<onleft>2</onleft>
+				<onright>200</onright>
+				<focusposition>3</focusposition>
+				<orientation>horizontal</orientation>
+				<itemlayout height="61" width="51">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>46</width>
+						<height>61</height>
+						<info>ListItem.ActualIcon</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="61" width="51">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>46</width>
+						<height>61</height>
+						<info>ListItem.Thumb</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<thumb>osd_button_skip_minus_FO.png</thumb>
+						<icon>osd_button_skip_minus.png</icon>
+						<onclick>XBMC.PlayerControl(Previous)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_rew_FO.png</thumb>
+						<icon>osd_button_rew.png</icon>
+						<onclick>XBMC.PlayerControl(Rewind)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_stop_FO.png</thumb>
+						<icon>osd_button_stop.png</icon>
+						<onclick>XBMC.PlayerControl(Stop)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_pause_FO.png</thumb>
+						<icon>osd_button_pause.png</icon>
+						<onclick>XBMC.PlayerControl(Play)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_ff_FO.png</thumb>
+						<icon>osd_button_ff.png</icon>
+						<onclick>XBMC.PlayerControl(Forward)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_skip_plus_FO.png</thumb>
+						<icon>osd_button_skip_plus.png</icon>
+						<onclick>XBMC.PlayerControl(Next)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_record_FO.png</thumb>
+						<icon>osd_button_record_FO.png</icon>
+						<onclick>XBMC.PlayerControl(Record)</onclick>
+						<visible>Player.CanRecord</visible>
+					</item>
+					<item>
+						<thumb>osd_button_viz_select_FO.png</thumb>
+						<icon>osd_button_viz_select.png</icon>
+						<onclick>XBMC.ActivateWindow(VisualisationPresetList)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_viz_settings_FO.png</thumb>
+						<icon>osd_button_viz_settings.png</icon>
+						<onclick>XBMC.ActivateWindow(VisualisationSettings)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_playlist_FO.png</thumb>
+						<icon>osd_button_playlist.png</icon>
+						<onclick>XBMC.ActivateWindow(MyMusicPlaylist)</onclick>
+					</item>
+					<item>
+						<thumb>osd_button_lyrics_FO.png</thumb>
+						<icon>osd_button_lyrics.png</icon>
+						<onclick>RunScript(Q:\scripts\XBMC Lyrics\default.py)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="image">
+				<description>Chrome Button Guy</description>
+				<posx>320</posx>
+				<posy>-10</posy>
+				<width>79</width>
+				<height>79</height>
+				<aspectratio>keep</aspectratio>
+				<texture>OSD_Button.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

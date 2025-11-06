@@ -1,0 +1,26 @@
+<skin>
+  <defaultresolution>720p</defaultresolution>
+  <defaultresolutionwide>720p</defaultresolutionwide>
+  <version>2.11</version>
+  <skinversion>v0.95</skinversion>
+
+  <credits>
+    <skinname>MiniMeedia</skinname>
+    <name>A skin by skunkm0nkee</name>
+    <name>Thanks to JustMeD for helping out with testing etc</name>
+    <name>Thanks also to Team-XBMC for their fantastic media centre software, without which this skin wouldn't exist</name>
+    <name>Additional thanks to the follwing users who helped out with the translations:</name>
+    <name>Melandryu and laope (Spanish)</name>
+    <name>kimp93 (Korean)</name>
+    <name>jorisdekloris (Dutch)</name>
+    <name>xbs08 (Portuguese)</name>
+    <name>logictester (Hebrew)</name>
+    <name>PiNCH (Danish)</name>
+    <name>ZIOLele (Italian)</name>
+    <name>Haggy (German)</name>
+    <name>exal (Swedish)</name>
+    <name>luuuke78 (French)</name>
+    <name>fat.hamster (Russian)</name>
+    <name>taxigps (Chinese)</name>
+  </credits>
+</skin>

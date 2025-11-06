@@ -1,0 +1,404 @@
+<window id="2700">
+
+  <defaultcontrol>3012</defaultcontrol>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>avatar bg</description>
+      <include>logo</include>
+      <posx>462</posx>
+      <posy>30</posy>
+      <height>113</height>
+      <width>200</width>
+      <texture>kai-panel-avatar.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="image" id="1">
+      <description>List Panel</description>
+      <include>logo</include>
+      <posx>220</posx>
+      <posy>117</posy>
+      <width>493</width>
+      <height>452</height>
+      <texture>panel2.png</texture>
+    </control>
+
+    <control type="button" id="3080">
+      <description>List Panel</description>
+      <include>logo</include>
+      <posx>274</posx>
+      <posy>140</posy>
+      <width>83</width>
+      <height>37</height>
+      <label>15010</label>
+      <align>center</align>
+      <aligny>top</aligny>
+      <textoffsety>8</textoffsety>
+      <font>font12</font>
+      <texturefocus>Kai-tab-focus.png</texturefocus>
+      <texturenofocus>Kai-tab-nofocus.png</texturenofocus>
+    </control>
+
+    <control type="button" id="3081">
+      <description>List Panel</description>
+      <include>logo</include>
+      <posx>360</posx>
+      <posy>140</posy>
+      <width>83</width>
+      <height>37</height>
+      <label>15016</label>
+      <align>center</align>
+      <aligny>top</aligny>
+      <textoffsety>8</textoffsety>
+      <font>font12</font>
+      <texturefocus>Kai-tab-focus.png</texturefocus>
+      <texturenofocus>Kai-tab-nofocus.png</texturenofocus>
+    </control>
+
+    <control type="button" id="3082">
+      <description>List Panel</description>
+      <include>logo</include>
+      <posx>446</posx>
+      <posy>140</posy>
+      <width>83</width>
+      <height>37</height>
+      <label>15021</label>
+      <align>center</align>
+      <aligny>top</aligny>
+      <textoffsety>8</textoffsety>
+      <font>font12</font>
+      <texturefocus>Kai-tab-focus.png</texturefocus>
+      <texturenofocus>Kai-tab-nofocus.png</texturenofocus>
+    </control>
+
+    <control type="button" id="3083">
+      <description>List Panel</description>
+      <include>logo</include>
+      <posx>532</posx>
+      <posy>140</posy>
+      <width>83</width>
+      <height>37</height>
+      <label>15026</label>
+      <align>center</align>
+      <aligny>top</aligny>
+      <textoffsety>8</textoffsety>
+      <font>font12</font>
+      <texturefocus>Kai-tab-focus.png</texturefocus>
+      <texturenofocus>Kai-tab-nofocus.png</texturenofocus>
+    </control>
+
+    <control type="image" id="1">
+      <description>Logo</description>
+      <include>logo</include>
+      <posx>160</posx>
+      <posy>60</posy>
+      <width>112</width>
+      <height>112</height>
+      <texture>xlink.png</texture>
+    </control>
+
+    <control type="listcontrolex" id="3031">
+      <description>Arena List</description>
+      <include>logo</include>
+      <width>340</width>
+      <onleft>3012</onleft>
+      <onright>3031</onright>
+      <onup>3031</onup>
+      <ondown>3031</ondown>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="console" id="3074">
+      <description>Console control</description>
+      <include>logo</include>
+      <posx>245</posx>
+      <posy>215</posy>
+      <width>390</width>
+      <height>280</height>
+      <font>font12</font>
+      <include>textcolorlightgrey</include>         <!-- normal  (pen0) -->
+      <textcolor2>FFF2B466</textcolor2>       <!-- action  (pen1) -->
+      <titlecolor>FFA4FFAE</titlecolor>       <!-- system  (pen2) -->
+      <selectedcolor>FFF3FB6B</selectedcolor> <!-- private (pen3) -->
+      <onleft>3074</onleft>
+      <onright>3074</onright>
+      <onup>3074</onup>
+      <ondown>3074</ondown>
+    </control>
+
+    <control type="image" id="3076">
+      <description>List Panel</description>
+      <include>logo</include>
+      <posx>233</posx>
+      <posy>494</posy>
+      <width>415</width>
+      <height>8</height>
+      <texture>kai-divider.png</texture>
+    </control>
+
+    <control type="edit" id="3075">
+      <description>Edit control</description>
+      <include>logo</include>
+      <posx>245</posx>
+      <posy>497</posy>
+      <width>390</width>
+      <label>-</label>
+      <font>font12</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="3051">
+      <description>Username</description>
+      <include>logo</include>
+      <posx>643</posx>
+      <posy>110</posy>
+      <align>right</align>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorlightgrey</include>
+    </control>
+
+    <control type="button" id="3052">
+      <description>Arena Name</description>
+      <include>logo</include>
+      <posx>274</posx>
+      <posy>173</posy>
+      <width>340</width>
+      <label>-</label>
+      <font>font12</font>
+      <align>center</align>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <include>textcolorlightgrey</include>
+    </control>
+
+    <control type="image" id="3060">
+      <description>Buddy (offline) icon</description>
+      <include>logo</include>
+      <posx>290</posx>
+      <posy>455</posy>
+      <width>58</width>
+      <height>58</height>
+      <texture>buddy-offline.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      
+    </control>
+
+    <control type="image" id="3061">
+      <description>Buddy (online) icon</description>
+      <include>logo</include>
+      <posx>290</posx>
+      <posy>455</posy>
+      <width>58</width>
+      <height>58</height>
+      <texture>buddy-online.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      
+    </control>
+
+    <control type="image" id="3062">
+      <description>Opponent icon</description>
+      <include>logo</include>
+      <posx>290</posx>
+      <posy>455</posy>
+      <width>58</width>
+      <height>58</height>
+      <texture>opponent.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      
+    </control>
+
+    <control type="image" id="3063">
+      <description>Arena icon</description>
+      <include>logo</include>
+      <posx>290</posx>
+      <posy>455</posy>
+      <width>58</width>
+      <height>58</height>
+      <texture>arena.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      
+    </control>
+
+    <control type="image" id="3064">
+      <description>My avatar icon</description>
+      <include>logo</include>
+      <posx>586</posx>
+      <posy>47</posy>
+      <width>57</width>
+      <height>57</height>
+      <texture>buddyitem-default-avatar.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      
+    </control>
+
+    <control type="fadelabel" id="3070">
+      <description>Buddy Name</description>
+      <include>logo</include>
+      <posx>360</posx>
+      <posy>455</posy>
+      <width>250</width>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="fadelabel" id="3071">
+      <description>Buddy Status</description>
+      <include>logo</include>
+      <posx>360</posx>
+      <posy>485</posy>
+      <width>250</width>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="3072">
+      <description>Buddy Invitation Status</description>
+      <include>logo</include>
+      <posx>360</posx>
+      <posy>500</posy>
+      <width>50</width>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="3073">
+      <description>Player Count</description>
+      <include>logo</include>
+      <posx>596</posx>
+      <posy>180</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="button" id="3012">
+      <description>Mode Button</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>194</posy>
+      <onleft>12</onleft>
+      <onright>3031</onright>
+      <onup>3015</onup>
+      <ondown>3013</ondown>
+    </control>
+
+    <control type="button" id="3013">
+      <description>Join (Friends)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>231</posy>
+      <onleft>3013</onleft>
+      <onright>3031</onright>
+      <onup>3012</onup>
+      <ondown>3016</ondown>
+    </control>
+
+    <control type="button" id="3016">
+      <description>Speex (Friends)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>268</posy>
+      <onleft>3016</onleft>
+      <onright>3031</onright>
+      <onup>3013</onup>
+      <ondown>3014</ondown>
+    </control>
+
+    <control type="button" id="3014">
+      <description>Invite (Friends)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>305</posy>
+      <onleft>3014</onleft>
+      <onright>3031</onright>
+      <onup>3016</onup>
+      <ondown>3015</ondown>
+    </control>
+
+    <control type="button" id="3015">
+      <description>Remove (Friends)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>342</posy>
+      <onleft>3015</onleft>
+      <onright>3031</onright>
+      <onup>3014</onup>
+      <ondown>3012</ondown>
+    </control>
+
+    <control type="button" id="3036">
+      <description>Keyboard (chat)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>231</posy>
+      <onleft>3036</onleft>
+      <onright>3036</onright>
+      <onup>3012</onup>
+      <ondown>3012</ondown>
+    </control>
+
+    <control type="button" id="3033">
+      <description>Play (Arenas)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>231</posy>
+      <onleft>3033</onleft>
+      <onright>3031</onright>
+      <onup>3012</onup>
+      <ondown>3035</ondown>
+    </control>
+
+    <control type="button" id="3035">
+      <description>Host (Arenas)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>268</posy>
+      <onleft>3035</onleft>
+      <onright>3031</onright>
+      <onup>3033</onup>
+      <ondown>3034</ondown>
+    </control>
+
+    <control type="button" id="3034">
+      <description>Add (Arenas)</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>305</posy>
+      <onleft>3034</onleft>
+      <onright>3031</onright>
+      <onup>3035</onup>
+      <ondown>3012</ondown>
+    </control>
+
+  </controls>
+
+</window>

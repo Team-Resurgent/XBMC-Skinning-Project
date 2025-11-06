@@ -1,0 +1,41 @@
+<window id="2004">
+	<defaultcontrol>60</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Fullscreen_Dialog_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="textbox" id="5">
+				<description>textarea</description>
+				<posx>11</posx>
+				<posy>76</posy>
+				<width>698</width>
+				<height>424</height>
+				<font>font13</font>
+				<pagecontrol>60</pagecontrol>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>72</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>23</posx>
+				<posy>16</posy>
+				<width>338</width>
+				<height>34</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>262</label>
+				<font>font16b</font>
+			</control>
+			<include>Common_Now_Playing</include>
+			<include>AllViewCommonPageControls</include>
+		</control>
+	</controls>
+</window>

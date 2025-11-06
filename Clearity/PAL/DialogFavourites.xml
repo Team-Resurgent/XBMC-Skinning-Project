@@ -1,0 +1,157 @@
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>MediaOverlay</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+	</control>
+	<control type="image">
+		<posx>63</posx>
+		<posy>106</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Top.png</texture>
+	</control>
+	<control type="image">
+		<posx>63</posx>
+		<posy>414</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Bottom.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+	</control>
+	<control type="label">
+		<description>dialog Heading</description>
+		<posx>160</posx>
+		<posy>145</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>center</align>
+		<label>1036</label>
+		<font>special16</font>
+		<shadowcolor>black</shadowcolor>
+	</control>
+	<control type="image">
+		<description>Cover Image</description>
+		<posx>80</posx>
+		<posy>200</posy>
+		<width>200</width>
+		<height>200</height>
+		<texture>defaultalbumcover.png</texture>
+		<info>ListItem.Icon</info>
+	</control>
+	<control type="image">
+		<description>Cover Overlay</description>
+		<posx>60</posx>
+		<posy>190</posy>
+		<width>230</width>
+		<height>225</height>
+		<texture>Case.png</texture>
+	</control>
+	<control type="list" id="450">
+		<posx>218</posx>
+		<posy>196</posy>
+		<width>450</width>
+		<height>210</height>
+		<font>font101</font>
+		<onleft>450</onleft>
+		<onright>450</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<itemlayout height="30">
+			<control type="image">
+				<posx>70</posx>
+				<posy>0</posy>
+				<width>360</width>
+				<height>28</height>
+				<texture border="10,0,10,0">-</texture>
+			</control>
+			<control type="label">
+				<posx>98</posx>
+				<posy>3</posy>
+				<width>330</width>
+				<height>20</height>
+				<font>font101</font>
+				<aligny>center</aligny>
+				<align>left</align>
+				<info>ListItem.Label</info>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+			</control>
+			<control type="image">
+				<posx>75</posx>
+				<posy>4</posy>
+				<width>20</width>
+				<height>20</height>
+				<aspectratio>keep</aspectratio>
+				<info>ListItem.Thumb</info>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+		</itemlayout>
+		<focusedlayout height="30">
+			<control type="image">
+				<posx>70</posx>
+				<posy>0</posy>
+				<width>360</width>
+				<height>28</height>
+				<texture border="50,0,50,0">Button-List-Fade-Focus.png</texture>
+				<visible>Control.HasFocus(450)</visible>
+			</control>
+			<control type="image">
+				<posx>70</posx>
+				<posy>0</posy>
+				<width>360</width>
+				<height>28</height>
+				<texture border="50,0,50,0">Button-List-Fade-Focus.png</texture>
+				<visible>!Control.HasFocus(450)</visible>
+			</control>
+			<control type="label">
+				<posx>98</posx>
+				<posy>3</posy>
+				<width>330</width>
+				<height>20</height>
+				<font>font101</font>
+				<aligny>center</aligny>
+				<align>left</align>
+				<info>ListItem.Label</info>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+				<posx>75</posx>
+				<posy>4</posy>
+				<width>20</width>
+				<height>20</height>
+				<aspectratio>keep</aspectratio>
+				<info>ListItem.Thumb</info>
+			</control>
+		</focusedlayout>
+	</control>
+
+	</controls>
+</window>

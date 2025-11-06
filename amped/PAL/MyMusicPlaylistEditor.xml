@@ -1,0 +1,305 @@
+<window id="503">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+    <include>ScreenViewsFadeIn</include>
+		<control type="group">
+			<include>Fade_List_FocusUnfocus_Animation</include>
+			<control type="label" id="12">
+				<description>number of files text label</description>
+				<posx>60</posx>
+				<posy>540</posy>
+				<align>left</align>
+				<label>-</label>
+				<font>font20</font>
+				<textcolor>ff0065fa</textcolor>
+			</control>
+			<control type="label" id="1">
+				<description>description label</description>
+				<posx>60</posx>
+				<posy>110</posy>
+				<align>left</align>
+				<label>1211</label>
+				<font>font20</font>
+				<textcolor>ff0065fa</textcolor>
+			</control>
+			<control type="list" id="50">
+				<posx>40</posx>
+				<posy>140</posy>
+				<width>330</width>
+				<height>402</height>
+				<onleft>9000</onleft>
+				<onright>100</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>-</pagecontrol>
+				<itemlayout height="32">
+					<control type="image">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>6</posy>
+						<width>290</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>325</posx>
+						<posy>6</posy>
+						<width>100</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>right</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="32">
+					<control type="image">
+						<width>330</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>1</posy>
+						<texture>ListItem_Focus.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>6</posy>
+						<width>290</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>325</posx>
+						<posy>6</posy>
+						<width>100</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>right</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label" id="101">
+				<description>number of songs in playlist text label</description>
+				<posx>400</posx>
+				<posy>540</posy>
+				<align>left</align>
+				<label>-</label>
+				<font>font20</font>
+				<textcolor>ff0065fa</textcolor>
+			</control>
+			<control type="label" id="1">
+				<description>description label</description>
+				<posx>400</posx>
+				<posy>110</posy>
+				<align>left</align>
+				<label>559</label>
+				<font>font20</font>
+				<textcolor>ff0065fa</textcolor>
+			</control>
+			<control type="list" id="100">
+				<posx>380</posx>
+				<posy>140</posy>
+				<width>330</width>
+				<height>402</height>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>-</pagecontrol>
+				<itemlayout height="32">
+					<control type="image">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>6</posy>
+						<width>290</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>325</posx>
+						<posy>6</posy>
+						<width>100</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>right</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="32">
+					<control type="image">
+						<width>330</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>1</posy>
+						<texture>ListItem_Focus.png</texture>
+						<visible>Control.HasFocus(100)</visible>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>6</posy>
+						<width>290</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>325</posx>
+						<posy>6</posy>
+						<width>100</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>right</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group" id="9000">
+      <!--Copy this-->
+      <description>Sidebar group</description>
+      <include>MenuEffect</include>
+      <control type="image">
+        <description>Sidebar Back image</description>
+        <posx>-65</posx>
+        <posy>120</posy>
+        <width>325</width>
+        <height>230</height>
+        <texture>Side_Slideout.png</texture>
+      </control>
+      <control type="label">
+        <posx>-64</posx>
+        <posy>340</posy>
+        <label>5</label>
+        <font>fntHeader</font>
+        <angle>90</angle>
+      </control>
+      <!-- To This-->
+			<control type="button" id="6">
+				<description>Open Button</description>
+				<posy>120</posy>
+        <posx>30</posx>
+				<label>502</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<onup>8</onup>
+				<ondown>7</ondown>
+			</control>
+			<control type="button" id="7">
+				<description>Save Button</description>
+				<posy>150</posy>
+        <posx>30</posx>
+				<label>190</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>8</ondown>
+			</control>
+			<control type="button" id="8">
+				<description>Clear button</description>
+				<posy>180</posy>
+        <posx>30</posx>
+				<label>192</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<onup>7</onup>
+				<ondown>6</ondown>
+			</control>
+		</control>
+
+    <control type="group">
+
+      <include>ScreenItemsFadeIn</include>
+      <control type="label" delay="8000">
+        <description>Main Heading text label</description>
+        <align>center</align>
+        <posx>90</posx>
+        <posy>35</posy>
+        <label>2</label>
+        <include>textcolor-PageHeader</include>
+        <font>fntHeader</font>
+      </control>
+
+
+
+      <include>MusicNowPlayingDisplay</include>
+      <include>mediaPlayer</include>
+
+      <control type="label" id="12">
+        <description>number of files text label</description>
+        <posx>135</posx>
+        <posy>80</posy>
+        <width>200</width>
+        <label>-</label>
+        <font>font6</font>
+        <align>right</align>
+        <textcolor>ffc0bfbe</textcolor>
+      </control>
+   
+    </control>
+
+  </controls>
+</window>

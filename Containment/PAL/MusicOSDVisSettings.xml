@@ -1,0 +1,116 @@
+﻿<window id="121">
+	<defaultcontrol>5</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>10</posx>
+		<posy>5</posy>
+	</coordinates>
+	<controls>
+<!-- Start Menu Background -->
+		<control type="image" id="1">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>90</posy>
+			<width>390</width>
+			<height>30</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture>dialog-context-end.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>120</posy>
+			<width>390</width>
+			<height>330</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture>dialog-context-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>450</posy>
+			<width>390</width>
+			<height>30</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture flipy="true">dialog-context-end.png</texture>
+		</control>
+<!-- End Menu Background -->
+		<control type="label" id="2">
+			<description>Video Settings Label</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>420</width>
+			<align>left</align>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label" id="3">
+			<description>No Settings Label</description>
+			<posx>10</posx>
+			<posy>140</posy>
+			<width>370</width>
+			<label>13390</label>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>10</posx>
+			<posy>145</posy>
+			<width>370</width>
+			<height>320</height>
+			<itemgap>2</itemgap>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>30</height>
+			<font>font10</font>
+			<textcolor>main-text</textcolor>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>line.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<colordiffuse>object-color</colordiffuse>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>30</height>
+			<font>font10</font>
+			<textcolor>main-text</textcolor>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>line.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<colordiffuse>object-color</colordiffuse>
+			<textureradiofocus>checkbox-fo.png</textureradiofocus>
+			<textureradionofocus>checkbox-nf.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>30</height>
+			<width>300</width>
+			<texturefocus>line.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font10</font>
+			<textcolor>main-text</textcolor>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+			<colordiffuse>object-color</colordiffuse>
+		</control>
+	</controls>
+</window>

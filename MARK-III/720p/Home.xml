@@ -1,0 +1,711 @@
+<window id="0">
+	<defaultcontrol always ="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>	
+	<controls>
+		<include>CommonBackground</include>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">$INFO[Container(2).ListItem.Thumb]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+		</control>
+		<include>CommonNowPlaying</include>
+		<control type="group">
+			<control type="group">
+				<include>HomeBar_Window_OpenClose_Animation</include>
+				<posx>130r</posx>
+				<posy>10</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>35</height>
+					<colordiffuse>ccFFFFFF</colordiffuse>
+					<texture border="10">barground2.png</texture>
+				</control>
+				<control type="label">
+					<description>date/time label</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>35</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<label>$INFO[System.Time]</label>
+				</control>
+			</control>
+			<control type="group">
+				<posy>350</posy>
+				<animation effect="slide" start="0,370" end="0,0" time="700" delay="0" tween="back" easing="out">WindowOpen</animation>
+				<animation effect="slide" end="0,370" start="0,0" time="700" delay="400" tween="back" easing="in">WindowClose</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>155</posy>
+					<width>1280</width>
+					<height>210</height>
+					<texture>HorizontalBack.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>290</posy>
+					<width>512</width>
+					<height>64</height>
+					<texture>HorizontalGlowHome.png</texture>
+				</control>
+				<control type="image">
+					<posx>768</posx>
+					<posy>290</posy>
+					<width>512</width>
+					<height>64</height>
+					<texture>HorizontalGlowHome.png</texture>
+				</control>
+				<control type="image">
+					<posx>477</posx>
+					<posy>0</posy>
+					<width>326</width>
+					<height>385</height>
+					<colordiffuse>99FFFFFF</colordiffuse>
+					<texture>MenuBack.png</texture>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+				</control>
+				<control type="wraplist" id="2">
+					<posx>0</posx>
+					<posy>175</posy>
+					<height>192</height>
+					<width>1280</width>
+					<onup>105</onup>
+					<ondown>101</ondown>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<focusposition>2</focusposition>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<hitrect x="512" y="195" w="256" h="96" />
+					<itemlayout  width="256" height="96">
+						<control type="image">
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>256</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>$INFO[ListItem.ActualIcon]</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>256</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>MyBlackFade.png</texture>
+						</control>
+						<control type="image">
+							<posx>-3</posx>
+							<posy>20</posy>
+							<width>6</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>VeticalLight.png</texture>
+						</control>
+						<control type="image">
+							<posx>253</posx>
+							<posy>20</posy>
+							<width>6</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>VeticalLight.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>116</posy>
+							<width>256</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture flipy="true" diffuse="diffuse_mirror.png">$INFO[ListItem.ActualIcon]</texture>
+						</control>
+						<control type="label">
+							<posx>128</posx>
+							<posy>0</posy>
+							<width>236</width>
+							<height>15</height>
+							<label>$INFO[ListItem.label2]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font10</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!Skin.HasSetting(No_Home_Descriptions)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout  width="256" height="96">
+						<control type="image">
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>256</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>$INFO[ListItem.ActualIcon]</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>256</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>MyBlackFade.png</texture>
+							<animation effect="fade" reversible="false" start="100" end="0" time="300">focus</animation>
+							<animation effect="fade" reversible="false" start="0" end="100" time="300">unfocus</animation>
+						</control>
+						<control type="image">
+							<posx>-3</posx>
+							<posy>20</posy>
+							<width>6</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>VeticalLight.png</texture>
+						</control>
+						<control type="image">
+							<posx>253</posx>
+							<posy>20</posy>
+							<width>6</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>VeticalLight.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>116</posy>
+							<width>256</width>
+							<height>96</height>
+							<aspectratio>stretch</aspectratio>
+							<texture flipy="true" diffuse="diffuse_mirror.png">$INFO[ListItem.ActualIcon]</texture>
+						</control>
+						<control type="label">
+							<posx>128</posx>
+							<posy>0</posy>
+							<width>236</width>
+							<height>15</height>
+							<label>$INFO[ListItem.label2]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font10</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!Skin.HasSetting(No_Home_Descriptions)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="6">
+							<icon>MyWeather.png</icon>
+							<thumb>special://skin/backgrounds/weather-background.png</thumb>
+							<label>8</label>
+							<label2>31015</label2>
+							<onclick>ActivateWindow(Weather)</onclick>
+						</item>
+						<item id="3">
+							<icon>MyMusic.png</icon>
+							<thumb>special://skin/backgrounds/music-background.png</thumb>
+							<label>2</label>
+							<label2>31012</label2>
+							<onclick>ActivateWindow(MyMusic)</onclick>
+						</item>
+						<item id="2">
+							<icon>MyVideos.png</icon>
+							<thumb>special://skin/backgrounds/video-background.png</thumb>
+							<label>3</label>
+							<label2>31011</label2>
+							<onclick>ActivateWindow(MyVideos)</onclick>
+						</item>
+						<item id="4">
+							<icon>MyPictures.png</icon>
+							<thumb>special://skin/backgrounds/pictures-background.png</thumb>
+							<label>1</label>
+							<label2>31013</label2>
+							<onclick>ActivateWindow(MyPictures)</onclick>
+						</item>
+						<item id="1">
+							<icon>MyPrograms.png</icon>
+							<thumb>special://skin/backgrounds/programs-background.png</thumb>
+							<label>0</label>
+							<label2>31010</label2>
+							<onclick>ActivateWindow(MyPrograms)</onclick>
+							<visible>!System.Platform.Linux</visible>
+						</item>
+						<item id="8">
+							<icon>MyScripts.png</icon>
+							<thumb>special://skin/backgrounds/scripts-background.png</thumb>
+							<label>247</label>
+							<label2>31017</label2>
+							<onclick>ActivateWindow(Scripts)</onclick>
+						</item>
+						<item id="5">
+							<icon>MySettings.png</icon>
+							<thumb>special://skin/backgrounds/settings-background.png</thumb>
+							<label>5</label>
+							<label2>31014</label2>
+							<onfocus>Skin.SetString(SettingsPrevious,Settings)</onfocus>
+							<onclick>ActivateWindow(Settings)</onclick>
+						</item>
+						<item id="7">
+							<icon>MyShutdown.png</icon>
+							<thumb>special://skin/backgrounds/power-background.png</thumb>
+							<label>13005</label>
+							<label2>31016</label2>
+							<onclick>ActivateWindow(ShutdownMenu)</onclick>
+						</item>
+					</content>
+				</control>
+				<control type="image">
+					<posx>477</posx>
+					<posy>0</posy>
+					<width>326</width>
+					<height>385</height>
+					<texture>MenuFront.png</texture>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+				</control>
+				<control type="button">
+					<posx>515</posx>
+					<posy>312</posy>
+					<width>26</width>
+					<height>26</height>
+					<label>-</label>
+					<texturefocus>scroll-left-focus.png</texturefocus>
+					<texturenofocus>scroll-left.png</texturenofocus>
+					<onleft>601</onleft>
+					<onright>401</onright>
+					<onup>400</onup>
+					<ondown>400</ondown>
+					<onclick>Control.Move(2,-1)</onclick>
+					<visible>system.getbool(lookandfeel.enablemouse)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+				</control>
+				<control type="button">
+					<posx>735</posx>
+					<posy>312</posy>
+					<width>26</width>
+					<height>26</height>
+					<label>-</label>
+					<texturefocus>scroll-right-focus.png</texturefocus>
+					<texturenofocus>scroll-right.png</texturenofocus>
+					<onleft>601</onleft>
+					<onright>401</onright>
+					<onup>400</onup>
+					<ondown>400</ondown>
+					<onclick>Control.Move(2,1)</onclick>
+					<visible>system.getbool(lookandfeel.enablemouse)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+				</control>
+				<control type="label">
+					<posx>545</posx>
+					<posy>310</posy>
+					<width>185</width>
+					<height>30</height>
+					<label>[B]$INFO[Container(2).ListItem.label][/B]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font22</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(1)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button1</description>
+						<label>15016</label>
+						<onclick>ActivateWindow(Programs,Games)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="102">
+						<description>Button2</description>
+						<label>0</label>
+						<onclick>ActivateWindow(Programs,Programs)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="103">
+						<description>Button3</description>
+						<label>31020</label>
+						<onclick>ActivateWindow(Programs,Emulators)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="104">
+						<description>Button4</description>
+						<label>$LOCALIZE[31052] $LOCALIZE[5]</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Programs)</onfocus>
+						<onclick>ActivateWindow(ProgramsSettings)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="105">
+						<description>Button5</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(2)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button1</description>
+						<label>342</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>library.hascontent(movies)</visible>
+					</control>
+					<control type="button" id="102">
+						<description>Button2</description>
+						<label>20343</label>
+						<onclick>ActivateWindow(VideoLibrary,TvShowTitles)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>library.hascontent(tvshows)</visible>
+					</control>
+					<control type="button" id="103">
+						<description>Button3</description>
+						<label>20389</label>
+						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>library.hascontent(musicvideos)</visible>
+					</control>
+					<control type="button" id="104">
+						<description>Button4</description>
+						<label>31021</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="105">
+						<description>Button5</description>
+						<label>13395</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Videos)</onfocus>
+						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(3)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button1</description>
+						<label>132</label>
+						<onclick>ActivateWindow(MusicLibrary,Albums)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>library.hascontent(music)</visible>
+					</control>
+					<control type="button" id="102">
+						<description>Button2</description>
+						<label>133</label>
+						<onclick>ActivateWindow(MusicLibrary,Artists)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>library.hascontent(music)</visible>
+					</control>
+					<control type="button" id="103">
+						<description>Button3</description>
+						<label>31022</label>
+						<onclick>ActivateWindow(MusicFiles)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="104">
+						<description>Button4</description>
+						<label>$LOCALIZE[2] $LOCALIZE[5]</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Music)</onfocus>
+						<onclick>ActivateWindow(MusicSettings)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="105">
+						<description>Button5</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(4)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button1</description>
+						<label>31023</label>
+						<onclick>ActivateWindow(Pictures)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="102">
+						<description>Button2</description>
+						<label>$LOCALIZE[31050] $LOCALIZE[5]</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Pictures)</onfocus>
+						<onclick>ActivateWindow(PicturesSettings)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="103">
+						<description>Button3</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+					<control type="button" id="104">
+						<description>Button4</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+					<control type="button" id="105">
+						<description>Button5</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(6)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button1</description>
+						<label>10508</label>
+						<onclick>ActivateWindow(Weather)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="102">
+						<description>Button2</description>
+						<label>$LOCALIZE[8] $LOCALIZE[5]</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Weather)</onfocus>
+						<onclick>ActivateWindow(WeatherSettings)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="103">
+						<description>Button3</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+					<control type="button" id="104">
+						<description>Button4</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+					<control type="button" id="105">
+						<description>Button5</description>
+						<label>-</label>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(5)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button5</description>
+						<label>20077</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Settings)</onfocus>
+						<onclick>ActivateWindow(1111)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="102">
+						<description>Button3</description>
+						<label>130</label>
+						<onclick>XBMC.ActivateWindow(systeminfo)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<onfocus>Skin.SetString(SettingsPrevious,Settings)</onfocus>
+					</control>
+					<control type="button" id="103">
+						<description>Button1</description>
+						<label>7</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Settings)</onfocus>
+						<onclick>ActivateWindow(Files)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="104">
+						<description>Button3</description>
+						<label>1036</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Settings)</onfocus>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="105">
+						<description>Button4</description>
+						<label>-</label>
+						<onfocus>Skin.SetString(SettingsPrevious,Settings)</onfocus>
+						<onclick>-</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(7)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button1</description>
+						<label>$LOCALIZE[13005]</label>
+						<onclick>XBMC.ShutDown()</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="102">
+						<description>Button2</description>
+						<label>$LOCALIZE[13005] Linux</label>
+						<onclick>System.Exec(shutdown -h now)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
+					</control>
+					<control type="button" id="103">
+						<description>Button3</description>
+						<label>13313</label>
+						<onclick>XBMC.RestartApp()</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+					<control type="button" id="104">
+						<description>Button4</description>
+						<label>20045</label>
+						<onclick>xbmc.mastermode</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!System.IsMaster + System.LoggedOn + System.HasLocks</visible>
+					</control>
+					<control type="button" id="105">
+						<description>Button5</description>
+						<label>20126</label>
+						<onclick>system.logoff</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>System.LoggedOn + System.HasLoginScreen</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>Container(2).HasFocus(8)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+					<animation effect="fade" delay="100" time="200" start="0" end="100">visible</animation>
+					<animation effect="fade" delay="0" time="200" start="100" end="0">hidden</animation>
+					<posx>480</posx>
+					<posy>45</posy>
+					<width>320</width>
+					<height>115</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="101">
+						<description>Button1</description>
+						<label>1037</label>
+						<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!Skin.HasSetting(HomeScriptMenu_VideoPlugins_Visible)</visible>
+					</control>
+					<control type="button" id="102">
+						<description>Button2</description>
+						<label>1038</label>
+						<onclick>ActivateWindow(MusicLibrary,Plugins)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!Skin.HasSetting(HomeScriptMenu_MusicPlugins_Visible)</visible>
+					</control>
+					<control type="button" id="103">
+						<description>Button3</description>
+						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
+					</control>
+					<control type="button" id="104">
+						<description>Button4</description>
+						<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
+					</control>
+					<control type="button" id="105">
+						<description>Button5</description>
+						<label>$LOCALIZE[31051] $LOCALIZE[5]</label>
+						<onclick>ActivateWindow(1112)</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>	
+</window>

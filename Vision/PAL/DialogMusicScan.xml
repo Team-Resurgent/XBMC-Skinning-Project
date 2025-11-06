@@ -1,0 +1,34 @@
+<window id="112">
+	<defaultcontrol>-</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>20</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>popup music scan dialog background</description>
+			<posx>0</posx>
+			<posy>-15</posy>
+			<width>400</width>
+			<height>90</height>
+			<texture>busy_bg.png</texture>
+		</control>
+		<control type="label" id="401">
+			<description>caption label</description>
+			<posx>30</posx>
+			<posy>10</posy>
+			<width>340</width>
+			<font>font16</font>
+		</control>
+		<control type="label" id="402">
+			<description>current directory label</description>
+			<posx>30</posx>
+			<posy>30</posy>
+			<width>340</width>
+			<haspath>yes</haspath>
+			<font>font16</font>
+		</control>
+	</controls>
+</window>

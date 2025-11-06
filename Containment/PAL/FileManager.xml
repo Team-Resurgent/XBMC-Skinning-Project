@@ -1,0 +1,198 @@
+﻿<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Background</include>
+<!-- Start List Containers -->
+
+		<control type="image">
+			<description>panel</description>
+			<posx>-400</posx>
+			<posy>0</posy>
+			<height>576</height>
+			<width>400</width>
+			<texture>dialog-container.png</texture>
+			<animation effect="slide" end="360,0" time="225">WindowOpen</animation>
+			<animation effect="slide" start="360,0" time="225">WindowClose</animation>
+		</control>
+
+		<control type="image">
+			<description>panel</description>
+			<posx>720</posx>
+			<posy>0</posy>
+			<height>576</height>
+			<width>400</width>
+			<texture flipx="true">dialog-container.png</texture>
+			<animation effect="slide" end="-360,0" time="225">WindowOpen</animation>
+			<animation effect="slide" start="-360,0" time="225">WindowClose</animation>
+		</control>
+
+<!-- End List Containers -->
+
+<!-- Left List -->
+		<control type="list" id="20">
+			<posx>10</posx>
+			<posy>110</posy>
+			<width>320</width>
+			<height>356</height>
+			<onleft>21</onleft>
+			<onright>21</onright>
+			<onup>20</onup>
+			<ondown>20</ondown>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="32">
+			<texture>dialog-container.png</texture>
+				<control type="label">
+					<posx>2</posx>
+					<posy>7</posy>
+					<width>210</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>310</posx>
+					<posy>7</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>320</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>4</posy>
+					<texture>line.png</texture>
+					<visible>Control.HasFocus(20)</visible>
+					<colordiffuse>object-color</colordiffuse>
+				</control>
+				<control type="image">
+					<width>320</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>4</posy>
+					<texture>line.png</texture>
+					<visible>!Control.HasFocus(20)</visible>
+					<colordiffuse>icon-nf-color</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>210</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>310</posx>
+					<posy>7</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+			<animation effect="slide" end="-360,0" time="225">WindowClose</animation>
+			<animation effect="slide" start="-360,0" time="225">WindowOpen</animation>
+		</control>
+
+<!-- Right List -->
+
+		<control type="list" id="21">
+			<posx>395</posx>
+			<posy>110</posy>
+			<width>320</width>
+			<height>356</height>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="32">
+			<texture flipx="true">dialog-container.png</texture>
+				<control type="label">
+					<posx>2</posx>
+					<posy>7</posy>
+					<width>210</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>310</posx>
+					<posy>7</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>320</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>4</posy>
+					<texture>line.png</texture>
+					<visible>Control.HasFocus(21)</visible>
+					<colordiffuse>object-color</colordiffuse>
+				</control>
+				<control type="image">
+					<width>320</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>4</posy>
+					<texture>line.png</texture>
+					<visible>!Control.HasFocus(21)</visible>
+					<colordiffuse>icon-nf-color</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>210</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>310</posx>
+					<posy>7</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+			<animation effect="slide" end="360,0" time="225">WindowClose</animation>
+			<animation effect="slide" start="360,0" time="225">WindowOpen</animation>
+		</control>
+		<include>Shutters</include>
+	</controls>
+</window>

@@ -1,0 +1,58 @@
+<includes>
+
+	<include name="SimpleListView">
+		<control type="list" id="51">
+			<viewtype label="SimpleList">list</viewtype>
+			<width>790</width>
+			<height>400</height>
+			<posx>400</posx>
+			<posy>160</posy>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout height="50">
+				<control type="label">
+					<info>ListItem.Label</info>
+					<width>610</width>
+					<height>50</height>
+					<posx>600</posx>
+					<font>content</font>
+					<textcolor>content-dark</textcolor>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<info>ListItem.Label2</info>
+					<width>180</width>
+					<height>50</height>
+					<posx>660</posx>
+					<font>content</font>
+					<textcolor>content-dark</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="label">
+					<info>ListItem.Label</info>
+					<width>610</width>
+					<height>50</height>
+					<posx>600</posx>
+					<font>content</font>
+					<textcolor>content</textcolor>
+					<scroll>true</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<info>ListItem.Label2</info>
+					<width>180</width>
+					<height>50</height>
+					<posx>660</posx>
+					<font>content</font>
+					<textcolor>content</textcolor>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+</includes>

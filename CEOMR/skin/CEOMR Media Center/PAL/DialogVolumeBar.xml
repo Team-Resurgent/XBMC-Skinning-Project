@@ -1,0 +1,47 @@
+<window id="104">
+  <defaultcontrol>1</defaultcontrol>
+
+   <animation effect="fade" time="200">WindowOpen</animation> 
+   <animation effect="fade" time="200">WindowClose</animation>
+
+  <controls>
+    <control type="image" id="1">
+      <description>Popup Volume Dialog Background</description>
+      <posx>420</posx>
+      <posy>450</posy>
+      <width>225</width>
+      <height>70</height>
+      <texture>volume-panel-bg.png</texture>
+    </control>
+
+    <control type="slider" id="1">
+      <description>Volume Slider</description>
+      <info>Player.Volume</info>
+      <posx>500</posx>
+      <posy>470</posy>
+      <width>90</width>
+      <height>10</height>
+      <texturesliderbar>osd_slider_volume_bg.png</texturesliderbar>
+      <textureslidernib>slider_nibFO.png</textureslidernib>
+      <textureslidernibFocus>slider_nibFO.png</textureslidernibFocus>
+      <onup>1</onup>
+      <ondown>1</ondown>
+      <onleft>1</onleft>
+      <onright>1</onright>
+    </control>
+
+    <control type="label" id="1">
+      <description>Volume Label</description>
+      <info>Player.Volume</info>
+      <posx>490</posx>
+      <posy>468</posy>
+      <font>font101</font>
+      <align>right</align>
+      <width>55</width>
+      <height>20</height>
+    </control>
+
+  </controls>
+
+</window>
+

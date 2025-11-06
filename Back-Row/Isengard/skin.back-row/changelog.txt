@@ -1,0 +1,39 @@
+[B]Version 7.1.1[/B]
+- Added skin setting to increase video osd plot length, useful for large fonts 
+
+[B]Version 7.1.0[/B]
+- Added clearart for movies when paused in video OSD 
+
+[B]Version 7.0.9[/B]
+- Added clearart for movies to video OSD
+
+[B]Version 7.0.8[/B]
+- Added customisation controls over the sub-menu for Live TV
+
+[B]Version 7.0.7[/B]
+- Added plot info to movie list 3 view for expanded list option
+- Added two extra font sizes for future addon use
+- Fixed back space label for numeric pad on large fonts
+
+[B]Version 7.0.6[/B]
+- Removed skin GUI sound and replaced with files imported from new resource.uisounds.backrow resource.
+- Added support for twolaw's Alternative Movie Duration script
+
+[B]Version 7.0.5[/B]
+- Added update library controls to the video and music home submenus
+
+[B]Version 7.0.4[/B]
+- Made the required changes to continue using tv tunes
+
+[B]Version 7.0.3[/B]
+- Added support for disc art in DVD case wrap view
+
+[B]Version 7.0.2[/B]
+- Replaced some of the lower res home menu icons
+
+[B]Version 7.0.1[/B]
+- Increased the size of the touch control buttons
+- Added touch support to menus
+
+[B]Version 7.0.0[/B]
+- First Isengard Build

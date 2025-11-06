@@ -1,0 +1,102 @@
+<window id="35">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<include>Fade_List_FocusUnfocus_Animation</include>
+			<include>CommonListView</include>
+			<include>CommonListView2</include>
+			<include>CommonThumbSmall</include>
+			<include>CommonThumbBig</include>
+		</control>
+		<include>AllCommonPageControls</include>
+		<control type="group" id="9000">
+      <description>Sidebar group</description>
+      <include>MenuEffect</include>
+      <control type="image">
+        <description>Sidebar Back image</description>
+        <posx>-65</posx>
+        <posy>120</posy>
+        <width>325</width>
+        <height>230</height>
+        <texture>Side_Slideout.png</texture>
+      </control>
+      <control type="label">
+        <posx>-64</posx>
+        <posy>340</posy>
+        <label>5</label>
+        <font>fntHeader</font>
+        <angle>90</angle>
+      </control>
+      <control type="button" id="2">
+				<description>view as icons button</description>
+				<posy>120</posy>
+        <posx>30</posx>
+				<label>100</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>99</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="3">
+				<description>sort by button</description>
+				<posy>150</posy>
+        <posx>30</posx>
+				<label>103</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="togglebutton" id="4">
+        <posx>30</posx>
+        <description>sort asc</description>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+			</control>
+	
+		</control>
+	
+		<control type="image">
+			<description>folder image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>103</height>
+			<aspectratio align="right">keep</aspectratio>
+			<info>container.folderthumb</info>
+		</control>
+
+		<control type="label">
+			<description>gsm text label</description>
+			<align>center</align>
+			<posx>105</posx>
+			<posy>35</posy>
+      <font>fntHeader</font>
+      <include>textcolor-PageHeader</include>
+      <label>20315</label>
+		</control>
+    
+		<include>MusicNowPlayingDisplay</include>
+		<control type="label" id="12">
+			<description>number of files text label</description>
+			<posx>550</posx>
+			<posy>533</posy>
+			<width>200</width>
+			<label>-</label>
+			<font>font18</font>
+			<align>right</align>
+			<textcolor>ff0065fa</textcolor>
+		</control>
+	</controls>
+</window>

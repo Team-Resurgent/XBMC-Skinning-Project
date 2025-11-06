@@ -1,0 +1,48 @@
+<window id="107">
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+		<include>FX-ShutDownMenu</include>
+	</control>
+	<control type="label" id="401">
+		<description>Caption Label</description>
+		<posx>280</posx>
+		<posy>260</posy>
+		<width>160</width>
+		<font>font12</font>
+		<align>center</align>
+		<label>-</label>
+		<scroll>true</scroll>
+		<include>DialogInfo</include>
+	</control>
+	<include>Black-Special</include>
+	<include>Lines-Special</include>
+
+	<control type="label" id="402">
+		<description>Heading Label</description>
+		<posx>160</posx>
+		<posy>145</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>center</align>
+		<label>-</label>
+		<font>special16</font>
+		<include>dialogheadingcolor</include>
+		<include>FX-ShutDownMenu</include>
+	</control>
+
+	</controls>
+</window>

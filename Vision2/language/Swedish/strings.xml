@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <!-- 31000 to 31009 reseved for home buttons -->
+  <string id="31000">Spela</string>
+  <string id="31001">Titta</string>
+  <string id="31002">Lyssna</string>
+  <string id="31003">Visa</string>
+  <string id="31004">Ändra</string>
+  <string id="31005">Kolla</string>
+  <string id="31006">Lämna</string>
+  <string id="31007">Kör</string>
+  <string id="31008"></string>
+  <string id="31009"></string>
+  <!-- 31010 to 31019 reseved for home buttons Label 2-->
+  <string id="31010">spel &amp; emulatorer</string>
+  <string id="31011">på filmer,serier &amp; klipp</string>
+  <string id="31012">på musik &amp; CD</string>
+  <string id="31013">bilder &amp; foton</string>
+  <string id="31014">inställningar &amp; valmöjligheter</string>
+  <string id="31015">väderprognoser</string>
+  <string id="31016">stäng av &amp; starta om</string>
+  <string id="31017">skript &amp; instick</string>
+  <string id="31018"></string>
+  <string id="31019"></string>
+
+  <string id="31020">Emulatorer</string>
+  <string id="31021">Videofiler</string>
+  <string id="31022">Musikfiler</string>
+  <string id="31023">Bildfiler</string>
+  <string id="31024">Sida</string>
+  <string id="31025">Objekt</string>
+  <string id="31026">Filmremsa</string>
+
+  <string id="31027">SÄSONGS-[CR]OMSLAG[CR]FINNS[CR]EJ</string>
+  <string id="31028">AVSNITTS-[CR]BILD[CR]FINNS[CR]EJ</string>
+  <string id="31029">ALBUM-[CR]OMSLAG[CR]FINNS[CR]EJ</string>
+  <string id="31030">ARTIST-[CR]BILD[CR]FINNS[CR]EJ</string>
+
+  <string id="31031">Nuvarande TV-Series[CR]Fanart-bild[CR][CR]Klicka för att ändra</string>
+  <string id="31032">SPELAR</string>
+  <string id="31033">PAUSAD</string>
+  <string id="31034">SNABBSPOLA FRAMÅT</string>
+  <string id="31035">SNABBSPOLA BAKÅT</string>
+  <string id="31036">LJUD AV</string>
+  <string id="31037">Senaste inloggning:</string>
+
+  <!-- Skin Settings labels -->
+  <string id="31100">Använd grått överdrag på bakgrunden</string>
+  <string id="31101">Visa bakgrundsvideo</string>
+  <string id="31102">Visa bakgrundsvisualisering</string>
+  <string id="31103">Visa särskilda hem-bakgrunder</string>
+  <string id="31104">Ta bort sidkontrollen från medialistor</string>
+  <string id="31105">Ta bort inställningar från huvudmenyns undermenyer</string>
+  <string id="31106">Visa väder på hemfönstret</string>
+  <string id="31107">Hindra menyfokus i mediafönster</string>
+  
+  <!-- Script Settings labels -->
+  <string id="31200">SKRIPTINSTÄLLNINGAR</string>
+  <string id="31201">Hemfönster undermenyval</string>
+  <string id="31202">Aktivera eget menyobjekt</string>
+  <string id="31203">Ange knappetikett</string>
+  <string id="31204">Skriptsökväg</string>
+  <string id="31205">Visa videoinsticksknapp</string>
+  <string id="31206">Visa musikinsticksknapp</string>
+
+<!-- 
+  The 2 strings below are special ones that control the forced Capitailization of text
+  in the skin.  If your langauge does not support or use UPPERCASE (Capital) Letters
+  like English does then you need to change out these 2 strings like this if they are
+  blank it defaults back to the english uppercase ones
+  
+  <string id="31998">[B]</string>
+  <string id="31999">[/B]</string>
+  
+  and all Custom forced uppercase text will now be its normal case and hopefully display
+  correct in your lanaguage
+-->  
+
+  <string id="31998">[UPPERCASE]</string>
+  <string id="31999">[/UPPERCASE]</string>
+</strings>

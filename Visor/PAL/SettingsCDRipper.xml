@@ -1,0 +1,150 @@
+<window>
+  <id>33</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>Settings text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>620</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>Include Track Number checkbox</description>
+      <type>checkmark</type>
+      <id>2</id>
+      <posX>208</posX>
+      <posY>150</posY>
+      <label>624</label>
+      <onup>8</onup>
+      <ondown>4</ondown>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>CDRip Encoder label</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>208</posX>
+      <posY>200</posY>
+      <label>621</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>CDRip Encoder select</description>
+      <type>spincontrol</type>
+      <id>4</id>
+      <align>right</align>
+      <posX>560</posX>
+      <posY>200</posY>>
+      <reverse>yes</reverse>
+      <onup>2</onup>
+      <ondown>6</ondown>
+      <onleft>4</onleft>
+      <onright>4</onright>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>CDRip Quality label</description>
+      <type>label</type>
+      <id>5</id>
+      <posX>208</posX>
+      <posY>250</posY>
+      <label>622</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>CDRip Quality select</description>
+      <type>spincontrol</type>
+      <id>6</id>
+      <align>right</align>
+      <posX>560</posX>
+      <posY>250</posY>
+      <reverse>yes</reverse>
+      <onup>4</onup>
+      <ondown>8</ondown>
+      <onleft>6</onleft>
+      <onright>6</onright>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>CDRip Bitrate label</description>
+      <type>label</type>
+      <id>7</id>
+      <posX>208</posX>
+      <posY>300</posY>
+      <label>623</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>CDRip Bitrate select </description>
+      <type>spincontrol</type>
+      <id>8</id>
+      <align>right</align>
+      <posX>560</posX>
+      <posY>300</posY>
+      <reverse>yes</reverse>
+      <onup>6</onup>
+      <ondown>2</ondown>
+      <onleft>8</onleft>
+      <onright>8</onright>
+      <font>font13</font>
+    </control>
+
+  </controls>
+
+</window>
+

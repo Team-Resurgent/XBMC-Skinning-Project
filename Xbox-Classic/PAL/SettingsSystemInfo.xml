@@ -1,0 +1,270 @@
+﻿<window id="7">
+	<defaultcontrol>95</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="image">
+			<posx>460</posx>
+			<posy>250</posy>
+			<height>320</height>
+			<width>300</width>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<texture>home-settings.png</texture>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<include>XBMC_Logo_Image</include>
+		<control type="label">
+			<description>Settings text label</description>
+			<posx>242</posx>
+			<posy>70</posy>
+			<label>130</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="label" id="40">
+			<description>filter text label</description>
+			<align>right</align>
+			<posx>660</posx>
+			<posy>70</posy>
+			<label>-</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image">
+			<description>panel</description>
+			<posx>55</posx>
+			<posy>115</posy>
+			<height>275</height>
+			<width>150</width>
+			<texture>panel.png</texture>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="image">
+			<description>Middle panel Bar</description>
+			<posx>55</posx>
+			<posy>110</posy>
+			<height>20</height>
+			<width>150</width>
+			<texture>middle-bar.png</texture>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="group">
+			<control type="button" id="95">
+				<description>Button Default Values</description>
+				<posx>60</posx>
+				<posy>130</posy>
+				<label>13278</label>
+				<onleft>95</onleft>
+				<onright>95</onright>
+				<onup>98</onup>
+				<ondown>94</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>Slide_From_Left_Animation</include>
+			</control>
+			<control type="button" id="94">
+				<description>Button Storage</description>
+				<posx>60</posx>
+				<posy>167</posy>
+				<label>13277</label>
+				<onleft>94</onleft>
+				<onright>94</onright>
+				<onup>95</onup>
+				<ondown>92</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>Slide_From_Left_Animation</include>
+			</control>
+			<control type="button" id="92">
+				<description>Button HDD</description>
+				<posx>60</posx>
+				<posy>204</posy>
+				<label>13275</label>
+				<onleft>92</onleft>
+				<onright>92</onright>
+				<onup>94</onup>
+				<ondown>93</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>Slide_From_Left_Animation</include>
+			</control>
+			<control type="button" id="93">
+				<description>Button DVD</description>
+				<posx>60</posx>
+				<posy>241</posy>
+				<label>13276</label>
+				<onleft>93</onleft>
+				<onright>93</onright>
+				<onup>92</onup>
+				<ondown>96</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>Slide_From_Left_Animation</include>
+			</control>
+			<control type="button" id="96">
+				<description>Button Network</description>
+				<posx>60</posx>
+				<posy>278</posy>
+				<label>13279</label>
+				<onleft>96</onleft>
+				<onright>96</onright>
+				<onup>93</onup>
+				<ondown>97</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>Slide_From_Left_Animation</include>
+			</control>
+			<control type="button" id="97">
+				<description>Button VIDEO</description>
+				<posx>60</posx>
+				<posy>315</posy>
+				<label>13280</label>
+				<onleft>97</onleft>
+				<onright>97</onright>
+				<onup>96</onup>
+				<ondown>98</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>Slide_From_Left_Animation</include>
+			</control>
+			<control type="button" id="98">
+				<description>Button XBOX Hardware</description>
+				<posx>60</posx>
+				<posy>352</posy>
+				<label>13281</label>
+				<onleft>98</onleft>
+				<onright>98</onright>
+				<onup>97</onup>
+				<ondown>95</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>Slide_From_Left_Animation</include>
+			</control>
+		</control>
+		<control type="label" id="2">
+			<description>Label 2</description>
+			<posx>220</posx>
+			<posy>120</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="3">
+			<description>Label 3</description>
+			<posx>220</posx>
+			<posy>150</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="4">
+			<description>Label 4</description>
+			<posx>220</posx>
+			<posy>180</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="5">
+			<description>Label 5</description>
+			<posx>220</posx>
+			<posy>210</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="6">
+			<description>Label 6</description>
+			<posx>220</posx>
+			<posy>240</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="7">
+			<description>Label 7</description>
+			<posx>220</posx>
+			<posy>270</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="8">
+			<description>Label 8</description>
+			<posx>220</posx>
+			<posy>300</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="9">
+			<description>Label 9</description>
+			<posx>220</posx>
+			<posy>330</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="10">
+			<description>Label 10</description>
+			<posx>220</posx>
+			<posy>360</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="11">
+			<description>Label 11</description>
+			<posx>220</posx>
+			<posy>390</posy>
+			<label>13282</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image">
+			<description>panel</description>
+			<posx>55</posx>
+			<posy>450</posy>
+			<height>110</height>
+			<width>610</width>
+			<texture>panel.png</texture>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="50">
+			<description>Current Time</description>
+			<posx>65</posx>
+			<posy>460</posy>
+			<label>143</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="52">
+			<description>XBMC XBE BUILD Version</description>
+			<posx>65</posx>
+			<posy>490</posy>
+			<label>144</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="53">
+			<description>Mplayer DLL Version</description>
+			<posx>65</posx>
+			<posy>520</posy>
+			<label>144</label>
+			<font>font13</font>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,559 @@
+<window id="0">
+<defaultcontrol always="true">9001</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+	
+<controls>
+
+	<include>Backgrounds</include>
+
+  <control type="group">
+    
+    <control type="videowindow">
+      <description>Video Preview Window</description>
+      <posx>320</posx>
+      <posy>90</posy>
+      <width>390</width>
+      <height>390</height>
+      <include>DefaultFade</include>
+    </control>
+    <control type="visualisation">
+      <posx>320</posx>
+      <posy>90</posy>
+      <width>390</width>
+      <height>390</height>
+      <include>DefaultFade</include>
+    </control>
+
+    <control type="rss">
+      <description>Rss Feed</description>
+      <posx>0</posx>
+      <posy>550</posy>
+      <width>720</width>
+      <height>30</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <font>18BdFont</font>
+      <urlset>1</urlset>
+      <titlecolor>SelectedTextColor</titlecolor>
+      <headlinecolor>FocusedTextColor</headlinecolor>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>!Window.IsVisible(56)</visible>
+      <include>DefaultFade</include>
+    </control>
+
+
+    <control type="list" id="9001">
+      <description>Home Menu Buttons</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>!Window.IsVisible(56)</visible>
+      <onup>9001</onup>
+      <ondown>9001</ondown>
+      <onleft>ActivateWindow(52)</onleft>
+      <onright>ActivateWindow(52)</onright>
+      <orientation>vertical</orientation>
+      <scrolltime>200</scrolltime>
+      <itemgap>60</itemgap>
+      <itemlayout height="60" width="400">
+        <control type="label">
+        </control>
+      </itemlayout>
+      <focusedlayout height="60" width="400">
+        <control type="label">
+        </control>
+      </focusedlayout>
+      <content>
+        <item id="1">
+          <description>DVD Launch</description>
+          <label>$LOCALIZE[446]</label>
+          <icon>HomeDVD.png</icon>
+          <thumb>HomeDVDThumb.png</thumb>
+          <onclick>XBMC.PlayDVD()</onclick>
+          <visible>System.HasMediaDVD + !Skin.HasSetting(HomeDVD)</visible>
+        </item>
+        <item id="2">
+          <description>Videos</description>
+          <label>$LOCALIZE[3]</label>
+          <icon>HomeVideos.png</icon>
+          <thumb>HomeVideosThumb.png</thumb>
+          <onclick>ActivateWindow(53)</onclick>
+          <visible>!Skin.HasSetting(HomeVideos) + Skin.HasSetting(HomeVideosSubmenu)</visible>
+        </item>
+        <item id="2">
+          <description>Videos</description>
+          <label>$LOCALIZE[3]</label>
+          <icon>HomeVideos.png</icon>
+          <thumb>HomeVideosThumb.png</thumb>
+          <onclick>ActivateWindow(MyVideos)</onclick>
+          <visible>!Skin.HasSetting(HomeVideos) + !Skin.HasSetting(HomeVideosSubmenu)</visible>
+        </item>
+        <item id="3">
+          <description>Music</description>
+          <label>$LOCALIZE[2]</label>
+          <icon>HomeMusic.png</icon>
+          <thumb>HomeMusicThumb.png</thumb>
+          <onclick>ActivateWindow(54)</onclick>
+          <visible>!Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomeMusicSubmenu)</visible>
+        </item>
+        <item id="3">
+          <description>Music</description>
+          <label>$LOCALIZE[2]</label>
+          <icon>HomeMusic.png</icon>
+          <thumb>HomeMusicThumb.png</thumb>
+          <onclick>ActivateWindow(MyMusic)</onclick>
+          <visible>!Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomeMusicSubmenu)</visible>
+        </item>
+        <item id="4">
+          <description>Photos</description>
+          <label>$LOCALIZE[31010]</label>
+          <icon>HomePhotos.png</icon>
+          <thumb>HomePhotosThumb.png</thumb>
+          <onclick>ActivateWindow(MyPictures)</onclick>
+          <visible>!Skin.HasSetting(HomePhotos)</visible>
+        </item>
+        <item id="5">
+          <description>Scripts</description>
+          <label>$LOCALIZE[247]</label>
+          <icon>HomeScripts.png</icon>
+          <thumb>HomeScriptsThumb.png</thumb>
+          <onclick>ActivateWindow(MyScripts)</onclick>
+          <visible>!Skin.HasSetting(HomeScripts)</visible>
+        </item>
+        <item id="6">
+          <description>Services</description>
+          <label>$LOCALIZE[31011]</label>
+          <icon>HomeServices.png</icon>
+          <thumb>HomeServicesThumb.png</thumb>
+          <onclick>ActivateWindow(55)</onclick>
+          <visible>!Skin.HasSetting(HomeServices) + Skin.HasSetting(HomeServicesSubmenu)</visible>
+        </item>
+        <item id="6">
+          <description>Services</description>
+          <label>$LOCALIZE[31011]</label>
+          <icon>HomeServices.png</icon>
+          <thumb>HomeServicesThumb.png</thumb>
+          <onclick>ActivateWindow(MyPrograms)</onclick>
+          <visible>!Skin.HasSetting(HomeServices) + !Skin.HasSetting(HomeServicesSubmenu)</visible>
+        </item>
+        <item id="7">
+          <description>Weather</description>
+          <label>$LOCALIZE[8]</label>
+          <icon>HomeWeather.png</icon>
+          <thumb>HomeWeatherThumb.png</thumb>
+          <onclick>ActivateWindow(MyWeather)</onclick>
+          <visible>!Skin.HasSetting(HomeWeather)</visible>
+        </item>
+        <item id="8">
+          <description>No Shortcuts</description>
+          <label>No Shortcuts!</label>
+          <icon>-</icon>
+          <thumb>-</thumb>
+          <onclick>ActivateWindow(51)</onclick>
+          <visible>Skin.HasSetting(HomeDVD) + Skin.HasSetting(HomeVideos) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePhotos) + Skin.HasSetting(HomePlugins) + Skin.HasSetting(HomeServices) + Skin.HasSetting(HomeWeather)</visible>
+        </item>
+      </content>
+    </control>
+
+    <control type="group" id="9002">
+      <posx>0</posx>
+      <posy>0</posy>
+      <visible>Control.IsVisible(9001) + Container(9001).OnPrevious + !Skin.HasSetting(HomeMenuAnimation)</visible>
+      <animation effect="fade" start="60" end="0" time="300" reversible="false">Hidden</animation>
+      <control type="group">
+        <visible>Container(9001).OnPrevious</visible>
+        <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+        <animation effect="slide" end="5,119" time="300" reversible="false">Hidden</animation>
+        <control type="label">
+          <posx>HomeMenu1posx</posx>
+          <posy>-99</posy>
+          <width>500</width>
+          <height>60</height>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(-2).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>0</posx>
+          <posy>-99</posy>
+          <width>60</width>
+          <height>60</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(-2).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu2posx</posx>
+          <posy>10</posy>
+          <width>500</width>
+          <height>60</height>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(-1).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>5</posx>
+          <posy>10</posy>
+          <width>60</width>
+          <height>60</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(-1).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu3posx</posx>
+          <posy>90</posy>
+          <width>500</width>
+          <height>90</height>
+          <font>26BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(0).Label </info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>10</posx>
+          <posy>90</posy>
+          <width>90</width>
+          <height>90</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(-0).Thumb</info>
+        </control>
+      </control>
+
+      <control type="group">
+        <visible>Container(9001).OnPrevious</visible>
+        <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+        <animation effect="slide" end="-5,119" time="300" reversible="false">Hidden</animation>
+        <control type="label">
+          <posx>HomeMenu4posx</posx>
+          <posy>219</posy>
+          <width>500</width>
+          <height>120</height>
+          <font>26BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(1).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>15</posx>
+          <posy>219</posy>
+          <width>120</width>
+          <height>120</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(1).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu3posx</posx>
+          <posy>379</posy>
+          <width>500</width>
+          <height>90</height>
+          <font>26BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(2).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>10</posx>
+          <posy>379</posy>
+          <width>90</width>
+          <height>90</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(2).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu2posx</posx>
+          <posy>488</posy>
+          <width>500</width>
+          <height>60</height>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(3).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>5</posx>
+          <posy>488</posy>
+          <width>60</width>
+          <height>60</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(3).Thumb</info>
+        </control>
+      </control>
+    </control>
+    <control type="group" id="9003">
+      <posx>0</posx>
+      <posy>0</posy>
+      <visible>Control.IsVisible(9001) + Container(9001).OnNext + !Skin.HasSetting(HomeMenuAnimation)</visible>
+      <animation effect="fade" start="60" end="0" time="300" reversible="false">Hidden</animation>
+      <control type="group">
+        <visible>Container(9001).OnNext</visible>
+        <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+        <animation effect="slide" end="-5,-119" time="300" reversible="false">Hidden</animation>
+        <control type="label">
+          <posx>HomeMenu2posx</posx>
+          <posy>10</posy>
+          <width>500</width>
+          <height>60</height>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(-3).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>5</posx>
+          <posy>10</posy>
+          <width>60</width>
+          <height>60</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(-3).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu3posx</posx>
+          <posy>90</posy>
+          <width>500</width>
+          <height>90</height>
+          <font>26BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(-2).Label </info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>10</posx>
+          <posy>90</posy>
+          <width>90</width>
+          <height>90</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(-2).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu4posx</posx>
+          <posy>219</posy>
+          <width>500</width>
+          <height>120</height>
+          <font>26BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(-1).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>15</posx>
+          <posy>219</posy>
+          <width>120</width>
+          <height>120</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(-1).Thumb</info>
+        </control>
+      </control>
+
+      <control type="group">
+        <visible>Container(9001).OnNext</visible>
+        <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+        <animation effect="slide" end="5,-119" time="300" reversible="false">Hidden</animation>
+        <control type="label">
+          <posx>HomeMenu3posx</posx>
+          <posy>379</posy>
+          <width>500</width>
+          <height>90</height>
+          <font>26BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(0).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>10</posx>
+          <posy>379</posy>
+          <width>90</width>
+          <height>90</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(0).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu2posx</posx>
+          <posy>488</posy>
+          <width>500</width>
+          <height>60</height>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(1).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>5</posx>
+          <posy>488</posy>
+          <width>60</width>
+          <height>60</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(1).Thumb</info>
+        </control>
+        <control type="label">
+          <posx>HomeMenu1posx</posx>
+          <posy>597</posy>
+          <width>500</width>
+          <height>60</height>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>Container(9001).ListItem(2).Label</info>
+        </control>
+        <control type="image">
+          <description>Selected Image</description>
+          <posx>0</posx>
+          <posy>597</posy>
+          <width>60</width>
+          <height>60</height>
+          <aspectratio align="left">keep</aspectratio>
+          <info>Container(9001).ListItem(2).Thumb</info>
+        </control>
+      </control>
+    </control>
+
+    <include>Logo</include>
+    <include>HomeSelection</include>
+    <include>HomeWeatherInfo</include>
+    
+  </control>
+
+  <control type="group">
+    <visible>Control.IsVisible(9001) + !Control.IsVisible(9002) + !Control.IsVisible(9003)</visible>
+    <include>HomeSlideAnimation</include>
+    
+      <control type="group" id="9004">
+        <control type="group">
+          <animation effect="fade" time="300" start="0" end="60" condition="true">Conditional</animation>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>10</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(9001).ListItem(-2).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>10</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(9001).ListItem(-2).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>90</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(9001).ListItem(-1).Label </info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>90</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(9001).ListItem(-1).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>379</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(9001).ListItem(1).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>379</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(9001).ListItem(1).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>488</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(9001).ListItem(2).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>488</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(9001).ListItem(2).Thumb</info>
+          </control>
+        </control>
+      </control>
+  
+      <control type="group" id="9005">
+          <control type="group">
+            <control type="label">
+              <posx>HomeMenu5posx</posx>
+              <posy>200</posy>
+              <width>500</width>
+              <height>160</height>
+              <align>left</align>
+              <aligny>center</aligny>
+              <font>50BdFont</font>
+              <textcolor>FocusedTextColor</textcolor>
+              <info>Container(9001).ListItem(0).Label</info>
+            </control>
+            <control type="image">
+              <description>Selected Image</description>
+              <posx>10</posx>
+              <posy>200</posy>
+              <width>160</width>
+              <height>160</height>
+              <aspectratio align="left">keep</aspectratio>
+              <info>Container(9001).ListItem(0).Thumb</info>
+            </control>
+          </control>
+        </control>
+  </control>
+
+  <include>NowPlaying</include>
+
+</controls>
+</window>

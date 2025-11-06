@@ -1,0 +1,445 @@
+<window id="4">
+	<defaultcontrol>6</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel</include>
+	<include>Menu-Time</include>
+
+	<control>
+		<description>Title Label</description>
+		<label>5</label>
+		<include>Window-Title</include>
+	</control>
+
+	<control type="group" id="1">
+		<control type="button" id="21">
+			<description>Profiles button</description>
+			<posx>58</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>13200</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onclick>XBMC.ActivateWindow(profiles)</onclick>
+			<onleft>24</onleft>
+			<onright>22</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+		<control type="button" id="22">
+			<description>Skin Settings button</description>
+			<posx>168</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>31050</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onclick>ActivateWindow(56)</onclick>
+			<onleft>21</onleft>
+			<onright>23</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+		<control type="button" id="23">
+			<description>About XBMC button</description>
+			<posx>278</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>482</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onclick>XBMC.Credits()</onclick>
+			<onleft>22</onleft>
+			<onright>24</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+		<control type="button" id="24">
+			<description>Reload Skin button</description>
+			<posx>388</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>20183</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onclick>XBMC.ReloadSkin()</onclick>
+			<onleft>23</onleft>
+			<onright>21</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+	</control>
+
+	<!-- MyVideos Button/labels -->
+
+	<control type="group">
+		<include>FX-Settings</include>
+
+		<control type="button" id="6">
+			<posx>110</posx>
+			<posy>150</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-MyVideos-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-MyVideos-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(17)</onclick>
+			<onleft>8</onleft>
+			<onright>7</onright>
+			<onup>21</onup>
+			<ondown>10</ondown>
+			<include>SettingsIcon_1_16x9</include>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>3</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_1_16x9</include>
+			<visible>!Control.HasFocus(6)</visible>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>3</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_1_16x9</include>
+			<visible>Control.HasFocus(6)</visible>
+		</control>
+
+		<!-- MyMusic Button/labels -->
+
+		<control type="button" id="7">
+			<posx>250</posx>
+			<posy>150</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-Music-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-Music-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(15)</onclick>
+			<onleft>6</onleft>
+			<onright>9</onright>
+			<onup>21</onup>
+			<ondown>2</ondown>
+			<include>SettingsIcon_2_16x9</include>
+		</control>
+		<control type="label">
+			<posx>240</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>2</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_2_16x9</include>
+			<visible>!Control.HasFocus(7)</visible>
+		</control>
+		<control type="label">
+			<posx>240</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>2</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_2_16x9</include>
+			<visible>Control.HasFocus(7)</visible>
+		</control>
+
+		<!-- MyPics Button/labels -->
+
+		<control type="button" id="9">
+			<posx>390</posx>
+			<posy>150</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-Pictures-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-Pictures-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(12)</onclick>
+			<onleft>7</onleft>
+			<onright>8</onright>
+			<onup>21</onup>
+			<ondown>4</ondown>
+			<include>SettingsIcon_3_16x9</include>
+		</control>
+		<control type="label">
+			<posx>380</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>1</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_3_16x9</include>
+			<visible>!Control.HasFocus(9)</visible>
+		</control>
+		<control type="label">
+			<posx>380</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>1</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_3_16x9</include>
+			<visible>Control.HasFocus(9)</visible>
+		</control>
+
+		<!-- MyPrograms Button/labels -->
+
+		<control type="button" id="8">
+			<posx>530</posx>
+			<posy>150</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-Programs-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-Programs-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(13)</onclick>
+			<onleft>9</onleft>
+			<onright>6</onright>
+			<onup>21</onup>
+			<ondown>3</ondown>
+			<include>SettingsIcon_4_16x9</include>
+		</control>
+		<control type="label">
+			<posx>520</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>0</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_4_16x9</include>
+			<visible>!Control.HasFocus(8)</visible>
+		</control>
+		<control type="label">
+			<posx>520</posx>
+			<posy>255</posy>
+			<width>95</width>
+			<label>0</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_4_16x9</include>
+			<visible>Control.HasFocus(8)</visible>
+		</control>
+
+		<!-- Weather Button/labels -->
+
+		<control type="button" id="10">
+			<posx>110</posx>
+			<posy>310</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-Weather-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-Weather-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(14)</onclick>
+			<onleft>3</onleft>
+			<onright>2</onright>
+			<onup>6</onup>
+			<ondown>21</ondown>
+			<include>SettingsIcon_5_16x9</include>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>8</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_5_16x9</include>
+			<visible>!Control.HasFocus(10)</visible>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>8</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_5_16x9</include>
+			<visible>Control.HasFocus(10)</visible>
+		</control>
+
+		<!-- Network Button/labels -->
+
+		<control type="button" id="2">
+			<posx>250</posx>
+			<posy>310</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-Network-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-Network-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(18)</onclick>
+			<onleft>10</onleft>
+			<onright>4</onright>
+			<onup>7</onup>
+			<ondown>21</ondown>
+			<include>SettingsIcon_6_16x9</include>
+		</control>
+		<control type="label">
+			<posx>240</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>705</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_6_16x9</include>
+			<visible>!Control.HasFocus(2)</visible>
+		</control>
+		<control type="label">
+			<posx>240</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>705</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_6_16x9</include>
+			<visible>Control.HasFocus(2)</visible>
+		</control>
+
+		<!-- System Button/labels -->
+
+		<control type="button" id="4">
+			<posx>390</posx>
+			<posy>310</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-System-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-System-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(16)</onclick>
+			<onleft>2</onleft>
+			<onright>3</onright>
+			<onup>9</onup>
+			<ondown>21</ondown>
+			<include>SettingsIcon_7_16x9</include>
+		</control>
+		<control type="label">
+			<posx>380</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>13000</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_7_16x9</include>
+			<visible>!Control.HasFocus(4)</visible>
+		</control>
+		<control type="label">
+			<posx>380</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>13000</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_7_16x9</include>
+			<visible>Control.HasFocus(4)</visible>
+		</control>
+
+		<!-- Appearance Button/labels -->
+
+		<control type="button" id="3">
+			<posx>530</posx>
+			<posy>310</posy>
+			<width>75</width>
+			<height>100</height>
+			<texturefocus>Settings-Icon-Appearance-Focus.png</texturefocus>
+			<texturenofocus>Settings-Icon-Appearance-NoFocus.png</texturenofocus>
+			<aligny>top</aligny>
+			<align>center</align>
+			<onclick>XBMC.ActivateWindow(19)</onclick>
+			<onleft>4</onleft>
+			<onright>10</onright>
+			<onup>8</onup>
+			<ondown>21</ondown>
+			<include>SettingsIcon_8_16x9</include>
+		</control>
+		<control type="label">
+			<posx>520</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>480</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black2</shadowcolor>
+			<include>SettingsIcon_8_16x9</include>
+			<visible>!Control.HasFocus(3)</visible>
+		</control>
+		<control type="label">
+			<posx>520</posx>
+			<posy>415</posy>
+			<width>95</width>
+			<label>480</label>
+			<font>font13</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>SettingsIcon_8_16x9</include>
+			<visible>Control.HasFocus(3)</visible>
+		</control>
+	</control>
+
+	<include>Black-Overlay</include>
+	<include>Lines</include>
+	</controls>
+</window>

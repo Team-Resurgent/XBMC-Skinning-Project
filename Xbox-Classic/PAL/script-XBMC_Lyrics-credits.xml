@@ -1,0 +1,237 @@
+﻿<window>
+	<coordinates>
+		<system>1</system>
+		<posx>161</posx>
+		<posy>132</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" time="0" end="65,-30" condition="!Window.IsVisible(script-XBMC_Lyrics-settings.xml)">Conditional</animation>
+			<control type="image">
+				<description>backdrop</description>
+				<posx>60</posx>
+				<posy>30</posy>
+				<width>310</width>
+				<height>315</height>
+				<texture>dialog_middle.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+			</control>
+			<control type="image">
+				<description>BG Image Top</description>
+				<posx>45</posx>
+				<posy>10</posy>
+				<width>330</width>
+				<height>31</height>
+				<texture>dialog-context-top.png</texture>
+			</control>
+			<control type="image">
+				<description>BG Image Middle</description>
+				<posx>45</posx>
+				<posy>40</posy>
+				<width>330</width>
+				<height>290</height>
+				<texture>dialog-context-middle.png</texture>
+			</control>
+			<control type="image">
+				<description>BG Image Bottom</description>
+				<posx>45</posx>
+				<posy>330</posy>
+				<width>330</width>
+				<height>37</height>
+				<texture>dialog-context-bottom.png</texture>
+			</control>
+			<!-- credits dialog -->
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="label" id="20">
+				<description>Credits Label</description>
+				<posx>70</posx>
+				<posy>40</posy>
+				<width>175</width>
+				<align>left</align>
+				<font>font10</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="label" id="30">
+				<description>Credits Version Label</description>
+				<posx>360</posx>
+				<posy>40</posy>
+				<width>150</width>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="fadelabel" id="40">
+				<description>SVN URL Label</description>
+				<posx>70</posx>
+				<posy>315</posy>
+				<width>290</width>
+				<align>left</align>
+				<font>font10</font>
+				<textcolor>yellow</textcolor>
+			</control>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="label" id="901">
+				<description>Team Credits Label</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>200</width>
+				<align>left</align>
+				<font>font10</font>
+				<textcolor>green</textcolor>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="101">
+				<description>Team Credits List</description>
+				<posx>65</posx>
+				<posy>100</posy>
+				<width>330</width>
+				<height>60</height>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="20">
+					<control type="label">
+						<posx>5</posx>
+						<posy>1</posy>
+						<width>250</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>297</posx>
+						<posy>1</posy>
+						<width>130</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="20">
+					<control type="label">
+						<posx>5</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>297</posx>
+						<posy>1</posy>
+						<width>130</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- ** Required ** Do not change <description> -->
+			<control type="label" id="902">
+				<description>Additional Credits Label</description>
+				<posx>75</posx>
+				<posy>170</posy>
+				<width>200</width>
+				<align>left</align>
+				<font>font10</font>
+				<textcolor>green</textcolor>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="102">
+				<description>Additional Credits List</description>
+				<posx>65</posx>
+				<posy>190</posy>
+				<width>330</width>
+				<height>60</height>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="20">
+					<control type="label">
+						<posx>5</posx>
+						<posy>1</posy>
+						<width>250</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>297</posx>
+						<posy>1</posy>
+						<width>130</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="20">
+					<control type="label">
+						<posx>5</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>297</posx>
+						<posy>1</posy>
+						<width>130</width>
+						<height>18</height>
+						<font>font10</font>
+						<aligny>center</aligny>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- ** Required ** Do not change <description> -->
+			<control type="label" id="903">
+				<description>Skin Credits Label</description>
+				<posx>75</posx>
+				<posy>260</posy>
+				<width>200</width>
+				<align>left</align>
+				<font>font10</font>
+				<textcolor>green</textcolor>
+			</control>
+			<!-- ** Optional ** -->
+			<!-- This control is where you add your credits. -->
+			<control type="label">
+				<description>Skin Credits</description>
+				<posx>70</posx>
+				<posy>281</posy>
+				<width>200</width>
+				<height>20</height>
+				<font>font10</font>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>Skinning &amp; Graphics</label>
+			</control>
+			<control type="label">
+				<posx>362</posx>
+				<posy>281</posy>
+				<width>200</width>
+				<height>20</height>
+				<font>font10</font>
+				<aligny>center</aligny>
+				<align>right</align>
+				<label>Jezz_X &amp; BlackBolt</label>
+			</control>
+		</control>
+	</controls>
+</window>

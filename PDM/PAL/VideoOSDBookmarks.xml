@@ -1,0 +1,96 @@
+<window type="125">
+	<defaultcontrol>2</defaultcontrol>
+	<include>dialog-effect</include> 
+	<coordinates>
+	<system>1</system>
+	<origin x="150" y="110">true</origin>
+	</coordinates>
+	<controls>
+
+	<control type="image">
+		<description>Background Image</description>
+		<posx>0</posx>
+		<posy>25</posy>
+		<width>420</width>
+		<height>320</height>
+		<texture>osd_menu_bg.png</texture>
+	</control>
+
+	<control type="image">
+		<description>Background Header Image</description>
+		<posx>0</posx>
+		<posy>-5</posy>
+		<width>420</width>
+		<height>31</height>
+		<texture>osd_settings_header.png</texture>
+	</control>
+
+	<control type="label">
+		<description>Settings Label</description>
+		<posx>0</posx>
+		<posy>2</posy>
+		<label>13398</label>
+		<width>420</width>
+		<align>center</align>
+		<font>font12</font>
+	</control>
+
+	<control type="button" id="2">
+		<description>Create Bookmark Button</description>
+		<posx>10</posx>
+		<posy>35</posy>
+		<width>195</width>
+		<height>31</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<texture>button-focus-dialog.png</texture>
+		<aligny>center</aligny>
+		<align>center</align>
+		<label>294</label>
+		<onleft>3</onleft>
+		<onright>3</onright>
+		<ondown>11</ondown>
+		<onup>11</onup>
+	</control>
+
+	<control type="button" id="3">
+		<description>Clear Bookmarks Button</description>
+		<posx>215</posx>
+		<posy>35</posy>
+		<width>195</width>
+		<height>31</height>
+		<font>font12</font>
+		<texture>button-focus-dialog.png</texture>
+		<aligny>center</aligny>
+		<align>center</align>
+		<label>296</label>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<ondown>11</ondown>
+		<onup>11</onup>
+	</control>
+
+	<control type="thumbnailpanel" id="11">
+		<description>Bookmarks Thumbnail Panel</description>
+		<posx>10</posx>
+		<posy>80</posy>
+		<width>400</width>
+		<height>300</height>
+		<spinposx>360</spinposx>
+		<spinposy>240</spinposy>
+		<itemwidth>100</itemwidth> 
+		<itemheight>110</itemheight>
+		<texturewidth>90</texturewidth>
+		<textureheight>80</textureheight>
+		<thumbwidth>80</thumbwidth>
+		<thumbheight>70</thumbheight>
+		<thumbposx>5</thumbposx>
+		<thumbposy>5</thumbposy>
+		<onleft>2</onleft>
+		<onright>3</onright>
+		<ondown>2</ondown>
+		<onup>2</onup>
+	</control>
+
+	</controls>
+</window>

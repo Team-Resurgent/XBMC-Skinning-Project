@@ -1,0 +1,234 @@
+﻿<window id="115">
+	<defaultcontrol>401</defaultcontrol>
+	<include>common-fade</include>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<controls>
+
+	<!-- playstate images -->
+
+	<control type="image" id="0">
+		<description>pause image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Paused</visible>
+		<texture>video-pause.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>2x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Forwarding2x</visible>
+		<texture>video-2x.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>4x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Forwarding4x</visible>
+		<texture>video-4x.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>8x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Forwarding8x</visible>
+		<texture>video-8x.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>16x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Forwarding16x</visible>
+		<texture>video-16x.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>32x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Forwarding32x</visible>
+		<texture>video-32x.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>-2x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Rewinding2x</visible>
+		<texture>video-2xr.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>-4x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Rewinding4x</visible>
+		<texture>video-4xr.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>-8x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Rewinding8x</visible>
+		<texture>video-8xr.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>-16x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Rewinding16x</visible>
+		<texture>video-16xr.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<control type="image" id="0">
+		<description>-32x image</description>
+		<align>right</align>
+		<posx>410</posx>
+		<posy>35</posy>
+		<height>60</height>
+		<width>115</width>
+		<visible>Player.Rewinding32x</visible>
+		<texture>video-32xr.png</texture>
+		<colorkey>0</colorkey>
+	</control>
+
+	<!-- progressbar dialog -->
+
+	<control type="label" id="22">
+		<description>Elapsed Time Label</description>
+		<posx>180</posx>
+		<posy>500</posy>
+		<font>special18</font>
+		<align>right</align>
+		<info>Player.Time</info>
+		<width>100</width>
+		<height>16</height>
+		<include>DialogInfo</include>
+		<visible>!Player.Seeking</visible>
+	</control>
+
+	<control type="label" id="22">
+		<description>Seek Time Label</description>
+		<posx>130</posx>
+		<posy>500</posy>
+		<font>special18</font>
+		<align>right</align>
+		<info>Player.SeekTime</info>
+		<width>100</width>
+		<height>16</height>
+		<include>DialogInfo</include>
+		<visible>Player.Seeking</visible>
+	</control>
+
+	<control type="label" id="0">
+		<description>Duration Label</description>
+		<posx>560</posx>
+		<posy>500</posy>
+		<label>$INFO[Player.Duration,/ ]</label>
+		<font>special18</font>
+		<align>left</align>
+		<width>100</width>
+		<height>16</height>
+		<include>DialogInfo</include>
+	</control>
+
+	<control type="progress" id="23">
+		<description>Progressbar</description>
+		<posx>193</posx>
+		<posy>506</posy>
+		<width>350</width>
+		<height>8</height>
+		<info>Player.Progress</info>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture>-</overlaytexture>
+		<include>DialogInfo</include>
+	</control>
+
+	<control type="image" id="0">
+		<description></description>
+		<align>right</align>
+		<posx>185</posx>
+		<posy>501</posy>
+		<texture>Holder_SeekBar_Left.png</texture>
+		<width>100</width>
+		<height>20</height>
+		<colordiffuse>99ffffff</colordiffuse>
+	</control>
+	<control type="image" id="0">
+		<description></description>
+		<align>right</align>
+		<posx>450</posx>
+		<posy>501</posy>
+		<texture>Holder_SeekBar_Right.png</texture>
+		<width>100</width>
+		<height>20</height>
+		<colordiffuse>99ffffff</colordiffuse>
+	</control>
+
+	<control type="slider" id="401">
+		<description>Seek Slider</description>
+		<posx>180</posx>
+		<posy>325</posy>
+		<width>350</width>
+		<height>6</height>
+		<texturesliderbar>seekslider.png</texturesliderbar>
+		<textureslidernib>-</textureslidernib>
+		<textureslidernibfocus>-</textureslidernibfocus>
+		<visible>true</visible>
+		<onup>1</onup>
+		<ondown>1</ondown>
+		<onleft>1</onleft>
+		<onright>1</onright>
+		<include>DialogInfo</include>
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,182 @@
+<window id="2006">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+    
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<width>720</width>
+			<height>576</height>
+		</control>
+    
+    <!-- Codec Info -->
+    <control type="group" id="0">
+      <posx>20</posx>
+      <posy>15</posy>
+      <include>SlideFromTop</include>
+      <include>VideoFullScreenBack</include>
+      <visible>Player.ShowCodec</visible>
+      <control type="label">
+        <description>row 1 label</description>
+        <posx>10</posx>
+        <posy>5</posy>
+        <width>660</width>
+        <label>$LOCALIZE[445] | $INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+        <align>left</align>
+        <font>16BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+      </control>
+      <control type="label">
+        <description>row 2 label</description>
+        <posx>10</posx>
+        <posy>45</posy>
+        <width>660</width>
+        <label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+        <align>left</align>
+        <font>16BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+        <visible>Visualisation.Locked</visible>
+      </control>
+      <control type="label">
+        <description>row 2 label</description>
+        <posx>10</posx>
+        <posy>45</posy>
+        <width>660</width>
+        <label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+        <align>left</align>
+        <font>16BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+        <visible>!Visualisation.Locked</visible>
+      </control>
+      <control type="label">
+        <description>row 3 label</description>
+        <posx>10</posx>
+        <posy>85</posy>
+        <width>660</width>
+        <label>$LOCALIZE[13388] | $INFO[Visualisation.Preset]</label>
+        <align>left</align>
+        <font>16BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+      </control>
+    </control>
+
+    <!-- Music Info -->
+    <control type="group" id="1">
+      <posx>300</posx>
+      <posy>15</posy>
+      <include>SlideFromRight</include>
+      <include>NowPlayingBack</include>
+      <visible>Player.ShowInfo + !Window.IsVisible(121) + !Window.IsVisible(122)</visible>
+
+      <!-- Common Info -->
+      <control type="image">
+        <description>Header Back</description>
+        <width>400</width>
+        <height>45</height>
+        <align>left</align>
+        <texture>ButtonNF.png</texture>
+      </control>
+      <control type="image" id="0">
+        <description>album cover</description>
+        <posx>10</posx>
+        <posy>55</posy>
+        <width>85</width>
+        <height>85</height>
+        <texture>DefaultAlbumCover.png</texture>
+        <info>MusicPlayer.Cover</info>
+        <aspectratio align="left" aligny="top">keep</aspectratio>
+        <bordertexture border="14">ButtonNF.png</bordertexture>
+        <bordersize>5</bordersize>
+      </control>
+      <control type="label" id="1">
+        <description>Current Time Label</description>
+        <posx>390</posx>
+        <width>100</width>
+        <height>45</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[System.Time]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+      <control type="label" id="401">
+        <description>Header Label</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>270</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[MusicPlayer.Album] [COLOR=FocusedTextColor]$INFO[MusicPlayer.Year][/COLOR]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>!IsEmpty(MusicPlayer.Album)</visible>
+      </control>
+      <control type="label" id="401">
+        <description>Header Label</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>270</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[MusicPlayer.Label] [COLOR=FocusedTextColor]$INFO[MusicPlayer.Year][/COLOR]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>IsEmpty(MusicPlayer.Album)</visible>
+      </control>
+      <control type="label" id="0">
+        <description>artist</description>
+        <posx>105</posx>
+        <posy>55</posy>
+        <width>285</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$INFO[MusicPlayer.Artist]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+      </control>
+      <control type="label" id="0">
+        <description>track title</description>
+        <posx>105</posx>
+        <posy>85</posy>
+        <width>300</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$INFO[MusicPlayer.Title]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+      </control>
+      <control type="progress" id="1">
+        <description>Progressbar</description>
+        <posx>105</posx>
+        <posy>127</posy>
+        <width>125</width>
+        <info>Player.Progress</info>
+      </control>
+      <control type="label" id="1">
+        <description>Time Remaining</description>
+        <posx>390</posx>
+        <posy>115</posy>
+        <width>200</width>
+        <height>30</height>
+        <align>right</align>
+        <label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <scroll>true</scroll>
+      </control>
+    </control>
+    
+	</controls>
+</window>

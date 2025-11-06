@@ -1,0 +1,699 @@
+<window id="1058">
+
+  <defaultcontrol always="true">9006</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+<controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Settings text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>1034</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+
+
+		<!-- Submenu button Options -->
+		<control type="group" id="9006">
+			<include>control</include>
+			<control type="radiobutton" id="40">
+				<description>enable bookmarks button</description>
+				<posx>125</posx>
+				<posy>120</posy>
+				<width>200</width>
+				<label>1035</label>
+				<onclick>Skin.ToggleSetting(submenubuttons)</onclick>
+				<selected>Skin.HasSetting(submenubuttons)</selected>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>48</onup>
+				<ondown>41</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+			</control>
+			<control type="group" id="9007">
+				<visible>Skin.HasSetting(submenubuttons)</visible>
+				<!-- Submenu Bookmarks -->
+
+				<control type="button" id="41">
+					<description>Submenu button String Set 1</description>
+					<posx>60</posx>
+					<posy>194</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu1Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu1Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu1)</onclick>
+					<onleft>9001</onleft>
+					<onright>51</onright>
+					<onup>40</onup>
+					<ondown>42</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 1 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>209</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu1Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="51">
+					<description>enable Submenu button 1</description>
+					<posx>215</posx>
+					<posy>194</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu1)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu1)</selected>
+					<onleft>41</onleft>
+					<onright>49</onright>
+					<onup>40</onup>
+					<ondown>52</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="42">
+					<description>Submenu button String Set 2</description>
+					<posx>60</posx>
+					<posy>231</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu2Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu2Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu2)</onclick>
+					<onleft>9001</onleft>
+					<onright>52</onright>
+					<onup>41</onup>
+					<ondown>43</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 2 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>246</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu2Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="52">
+					<description>enable Submenu button 2</description>
+					<posx>215</posx>
+					<posy>231</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu2)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu2)</selected>
+					<onleft>42</onleft>
+					<onright>410</onright>
+					<onup>51</onup>
+					<ondown>53</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="43">
+					<description>Submenu button String Set 3</description>
+					<posx>60</posx>
+					<posy>268</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu3Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu3Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu3)</onclick>
+					<onleft>9001</onleft>
+					<onright>53</onright>
+					<onup>42</onup>
+					<ondown>44</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 3 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>283</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu3Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="53">
+					<description>enable Submenu button 3</description>
+					<posx>215</posx>
+					<posy>268</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu3)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu3)</selected>
+					<onleft>43</onleft>
+					<onright>411</onright>
+					<onup>52</onup>
+					<ondown>54</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="44">
+					<description>Submenu button String Set 4</description>
+					<posx>60</posx>
+					<posy>305</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu4Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu4Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu4)</onclick>
+					<onleft>9001</onleft>
+					<onright>54</onright>
+					<onup>43</onup>
+					<ondown>45</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 4 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>320</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu4Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="54">
+					<description>enable Submenu button 4</description>
+					<posx>215</posx>
+					<posy>305</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu4)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu4)</selected>
+					<onleft>44</onleft>
+					<onright>412</onright>
+					<onup>53</onup>
+					<ondown>55</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="45">
+					<description>Submenu button String Set 5</description>
+					<posx>60</posx>
+					<posy>342</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu5Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu5Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu5)</onclick>
+					<onleft>9001</onleft>
+					<onright>55</onright>
+					<onup>44</onup>
+					<ondown>46</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 5 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>357</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu5Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="55">
+					<description>enable Submenu button 5</description>
+					<posx>215</posx>
+					<posy>342</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu5)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu5)</selected>
+					<onleft>45</onleft>
+					<onright>413</onright>
+					<onup>54</onup>
+					<ondown>56</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="46">
+					<description>Submenu button String Set 6</description>
+					<posx>60</posx>
+					<posy>379</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu6Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu6Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu6)</onclick>
+					<onleft>9001</onleft>
+					<onright>56</onright>
+					<onup>45</onup>
+					<ondown>47</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 6 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>394</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu6Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="56">
+					<description>enable Submenu button 6</description>
+					<posx>215</posx>
+					<posy>379</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu6)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu6)</selected>
+					<onleft>46</onleft>
+					<onright>414</onright>
+					<onup>55</onup>
+					<ondown>57</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="47">
+					<description>Submenu button String Set 7</description>
+					<posx>60</posx>
+					<posy>416</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu7Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu7Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu7)</onclick>
+					<onleft>9001</onleft>
+					<onright>57</onright>
+					<onup>46</onup>
+					<ondown>48</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 7 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>431</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu7Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="57">
+					<description>enable Submenu button 7</description>
+					<posx>215</posx>
+					<posy>416</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu7)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu7)</selected>
+					<onleft>47</onleft>
+					<onright>415</onright>
+					<onup>56</onup>
+					<ondown>58</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="48">
+					<description>Submenu button String Set 8</description>
+					<posx>60</posx>
+					<posy>453</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu8Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu8Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu8)</onclick>
+					<onleft>9001</onleft>
+					<onright>58</onright>
+					<onup>47</onup>
+					<ondown>41</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 8 String NOT SET label</description>
+					<posx>70</posx>
+					<posy>468</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu8Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="58">
+					<description>enable Submenu button 8</description>
+					<posx>215</posx>
+					<posy>453</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu8)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu8)</selected>
+					<onleft>48</onleft>
+					<onright>416</onright>
+					<onup>57</onup>
+					<ondown>51</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+
+
+
+
+				<control type="button" id="49">
+					<description>Submenu button String Set 9</description>
+					<posx>293</posx>
+					<posy>194</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu9Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu9Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu9)</onclick>
+					<onleft>51</onleft>
+					<onright>59</onright>
+					<onup>40</onup>
+					<ondown>410</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 9 String NOT SET label</description>
+					<posx>303</posx>
+					<posy>205</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu9Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="59">
+					<description>enable Submenu button 9</description>
+					<posx>448</posx>
+					<posy>194</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu9)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu9)</selected>
+					<onleft>49</onleft>
+					<onright>59</onright>
+					<onup>40</onup>
+					<ondown>60</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="410">
+					<description>Submenu button String Set 10</description>
+					<posx>293</posx>
+					<posy>231</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu10Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu10Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu10)</onclick>
+					<onleft>52</onleft>
+					<onright>60</onright>
+					<onup>49</onup>
+					<ondown>411</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 10 String NOT SET label</description>
+					<posx>303</posx>
+					<posy>242</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu10Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="60">
+					<description>enable Submenu button 10</description>
+					<posx>448</posx>
+					<posy>231</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu10)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu10)</selected>
+					<onleft>410</onleft>
+					<onright>60</onright>
+					<onup>59</onup>
+					<ondown>61</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="411">
+					<description>Submenu button String Set 11</description>
+					<posx>293</posx>
+					<posy>268</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu11Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu11Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu11)</onclick>
+					<onleft>53</onleft>
+					<onright>61</onright>
+					<onup>410</onup>
+					<ondown>412</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 11 String NOT SET label</description>
+					<posx>303</posx>
+					<posy>279</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu11Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="61">
+					<description>enable Submenu button 11</description>
+					<posx>448</posx>
+					<posy>268</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu11)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu11)</selected>
+					<onleft>411</onleft>
+					<onright>61</onright>
+					<onup>60</onup>
+					<ondown>62</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="412">
+					<description>Submenu button String Set 12</description>
+					<posx>293</posx>
+					<posy>305</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu12Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu12Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu12)</onclick>
+					<onleft>54</onleft>
+					<onright>62</onright>
+					<onup>411</onup>
+					<ondown>413</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 12 String NOT SET label</description>
+					<posx>303</posx>
+					<posy>316</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu12Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="62">
+					<description>enable Submenu button 12</description>
+					<posx>448</posx>
+					<posy>305</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu12)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu12)</selected>
+					<onleft>412</onleft>
+					<onright>62</onright>
+					<onup>61</onup>
+					<ondown>63</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="413">
+					<description>Submenu button String Set 13</description>
+					<posx>293</posx>
+					<posy>342</posy>
+					<width>150</width>
+					<label>$INFO[Skin.String(DialogSubMenu13Title)]</label>
+					<onclick>Skin.SetString(DialogSubMenu13Title)</onclick>
+					<onclick>Skin.SetFile(DialogSubMenu13)</onclick>
+					<onleft>55</onleft>
+					<onright>63</onright>
+					<onup>412</onup>
+					<ondown>49</ondown>
+				</control>
+				<control type="label">
+					<description>Submenu button 13 String NOT SET label</description>
+					<posx>303</posx>
+					<posy>353</posy>
+					<width>150</width>
+					<aligny>center</aligny>
+					<label>20078</label>
+					<visible>!Skin.String(DialogSubMenu13Title)</visible>
+					<textcolor>60ffffff</textcolor>
+				</control>
+				<control type="radiobutton" id="63">
+					<description>enable Submenu button 13</description>
+					<posx>448</posx>
+					<posy>342</posy>
+					<width>32</width>
+					<label>-</label>
+					<onclick>Skin.ToggleSetting(DialogSubMenu13)</onclick>
+					<selected>Skin.HasSetting(DialogSubMenu13)</selected>
+					<onleft>413</onleft>
+					<onright>63</onright>
+					<onup>62</onup>
+					<ondown>59</ondown>
+					<texturefocus border="5">list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+				</control>
+			</control>
+		</control>
+
+
+		<control type="group" id="9007">
+			<include>contentpanelslide</include>
+
+          <control type="image" id="1">
+            <posx>495</posx>
+            <posy>75</posy>
+            <width>160</width>
+            <height>460</height>
+            <texture>subpanel.png</texture>
+          </control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu13Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu13)</visible>
+      	<posx>570</posx>
+      	<posy>190</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu12Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu12)</visible>
+      	<posx>570</posx>
+      	<posy>210</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu11Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu11)</visible>
+      	<posx>570</posx>
+      	<posy>230</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu10Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu10)</visible>
+      	<posx>570</posx>
+      	<posy>250</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu9Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu9)</visible>
+      	<posx>570</posx>
+      	<posy>270</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu8Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu8)</visible>
+      	<posx>570</posx>
+      	<posy>290</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu7Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu7)</visible>
+      	<posx>570</posx>
+      	<posy>310</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu6Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu6)</visible>
+      	<posx>570</posx>
+      	<posy>330</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu5Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu5)</visible>
+      	<posx>570</posx>
+      	<posy>350</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu4Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu4)</visible>
+      	<posx>570</posx>
+      	<posy>370</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu3Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu3)</visible>
+      	<posx>570</posx>
+      	<posy>390</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu2Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu2)</visible>
+      	<posx>570</posx>
+      	<posy>410</posy>
+      	<align>center</align>
+	</control>
+
+	<control type="label">
+	<label>$INFO[Skin.String(DialogSubMenu1Title)]</label>
+	<visible>Skin.HasSetting(DialogSubMenu1)</visible>
+      	<posx>570</posx>
+      	<posy>430</posy>
+      	<align>center</align>
+	</control>
+
+			</control>
+
+</controls>
+
+</window>

@@ -1,0 +1,48 @@
+<!-- Home Screen Menu Items -->
+<content>
+	<item id="1">
+		<description>Weather</description>
+		<label>Weather</label>
+		<onclick>XBMC.ActivateWindow(MyWeather)</onclick>
+	</item>
+	<item id="2">
+		<description>Scripts</description>
+		<label>Scripts</label>
+		<onclick>XBMC.ActivateWindow(20)</onclick>
+	</item>
+	<item id="3">
+		<description>Games</description>
+		<label>Games</label>
+		<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+	</item>
+	<item id="4">
+		<description>Pictures</description>
+		<label>Pictures</label>
+		<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+	</item>
+	<item id="5">
+		<description>Movies</description>
+		<label>Movies</label>
+		<onclick>ActivateWindow(MyVideoLibrary,videodb://1/2/)</onclick>
+	</item>
+	<item id="6">
+		<description>TV Shows</description>
+		<label>TV Shows</label>
+		<onclick>ActivateWindow(MyVideoLibrary,videodb://2/2/)</onclick>
+	</item>
+	<item id="7">
+		<description>My Music</description>
+		<label>Music</label>
+		<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+	</item>
+	<item id="8">
+		<description>Settings</description>
+		<label>Settings</label>
+		<onclick>ActivateWindow(4)</onclick>
+	</item>
+	<item id="9">
+		<description>File Manager</description>
+		<label>Files</label>
+		<onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+	</item>
+</content>

@@ -1,0 +1,59 @@
+﻿<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<controls>
+		<control type="image" id="0">
+			<posx>147</posx>
+			<posy>220</posy>
+			<width>436</width>
+			<height>170</height>
+			<texture>dialog-popup.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>dialog heading</description>
+			<posx>190</posx>
+			<posy>226</posy>
+			<label>0</label>
+			<font>font13</font>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<posx>190</posx>
+			<posy>260</posy>
+			<label>0</label>
+			<font>font10</font>
+			<textcolor>ff000000</textcolor>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posx>190</posx>
+			<posy>280</posy>
+			<label>0</label>
+			<font>font10</font>
+			<textcolor>ff000000</textcolor>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posx>190</posx>
+			<posy>300</posy>
+			<label>0</label>
+			<font>font10</font>
+			<textcolor>ff000000</textcolor>
+		</control>
+		<control type="button" id="10">
+			<description>ok button</description>
+			<posx>330</posx>
+			<posy>310</posy>
+			<width>100</width>
+			<height>32</height>
+			<label>186</label>
+			<font>font10</font>
+			<onleft>10</onleft>
+			<align>center</align>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+		</control>
+	</controls>
+</window>

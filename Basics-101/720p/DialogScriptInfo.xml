@@ -1,0 +1,53 @@
+<window id="2004">
+	<defaultcontrol>60</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Fullscreen_Dialog_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>262</label>
+				<font>font40</font>
+			</control>
+			<include>AllViewCommonPageControls</include>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
+				<control type="image">
+					<description>Background image</description>
+					<posx>20</posx>
+					<posy>85</posy>
+					<width>1200</width>
+					<height>550</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="textbox" id="5">
+					<description>textarea</description>
+					<posx>30</posx>
+					<posy>95</posy>
+					<width>1180</width>
+					<height>530</height>
+					<font>font13</font>
+					<pagecontrol>60</pagecontrol>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

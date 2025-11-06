@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated by taxigps-->
+<!--Date of translation: 07/09/2009-->
+<!-- $Revision: 204$ -->
+<!--  strings 31000 thru 31999 reserved for skins  -->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">文件管理</string>
+  <string id="31001">系统信息</string>
+  <string id="31002">系统重起</string>
+  <string id="31003">分析</string>
+  <string id="31004">修改</string>
+  <string id="31005">杂项</string>
+  <string id="31006">可见</string>
+  <string id="31007">开/关</string>
+  <string id="31008">未投票</string>
+  <string id="31009">观看您的</string>  <!-- used for Movies -->
+  <string id="31010">观看您的</string>  <!-- used for TV Shows -->
+  <string id="31011">观看您的</string>  <!-- used for Videos -->
+  <string id="31012">聆听您的</string>
+  <string id="31013">浏览您的</string>
+  <string id="31014">使用您的</string>
+  <string id="31015">查看</string>
+  <string id="31016">配置您的</string>
+  <string id="31017">电源控制</string>
+  <string id="31018">基本信息</string>
+  <string id="31019">播放您的</string>
+  <string id="31020">查看您的</string>
+  <string id="31021">按</string>
+  <string id="31022">最近新增</string>
+  <string id="31023">最近</string>
+  <string id="31024">页</string>
+  <string id="31025">项</string>
+  
+  <!-- Options Menu -->
+  <string id="31100">海报信息</string>
+  <string id="31101">排序方式</string>
+  <string id="31102">设置选项</string>
+  <string id="31103">陈列柜</string>
+  <string id="31104">显示大时钟</string>
+  <string id="31105">瀑布</string>
+  <string id="31106">展示</string>
+  <string id="31107">低位列表</string>
+  <string id="31108">暴露</string>
+  <string id="31109">高位列表</string>
+
+  <!-- Settings -->
+  <string id="31200">显示剧情简介</string>
+  <string id="31201">最近更新</string>
+  <string id="31202">桌面背景目录</string>
+  <string id="31203">桌面背景</string>
+  <string id="31204">选项菜单</string>
+  <string id="31205">隐藏</string>
+  <string id="31206">时钟</string>
+  <string id="31207">隐藏主界面的天气预报</string>
+  <string id="31208">禁用</string>
+  <string id="31209">设置</string>
+  <string id="31210">菜单</string>
+  <string id="31211">隐藏视频OSD中的电影介绍</string>
+  <string id="31212">隐藏已观看的Overlay</string>
+  <string id="31213">隐藏缩略图</string>
+  <string id="31214">显示评论</string>
+  <string id="31215">显示内容类型</string>
+  <string id="31216">隐藏媒体计数</string>
+  <string id="31217">使用电视的相片缩略图</string>
+  <string id="31218">显示精简视频模式OSD</string>
+  <string id="31219">隐藏白噪点背景</string>
+  <string id="31220">使用动态天气缩略图</string>
+
+  <!-- Video -->
+  <string id="31300">不可用</string>
+  <string id="31301">缩略图</string>
+  <string id="31302">同人画</string>
+  <string id="31303">季</string>
+  <string id="31304">预计完成时间</string>
+
+  <!-- Music -->
+  <string id="31400">结束</string>
+  <string id="31401">当前</string>
+  <string id="31402">选择可视化效果</string>
+  <string id="31403">预设可视化效果</string>
+  <string id="31404">设置可视化效果</string>
+  <string id="31405">歌词</string>
+  <string id="31406">设置歌词目录</string>
+  <string id="31407">打开播放列表</string>
+  <string id="31408">保存播放列表</string>
+  <string id="31409">关闭播放列表</string>
+  <string id="31410">系统音乐文件</string>
+  <string id="31411">当前播放列表</string>
+  
+  <!-- Dialogs -->
+  <string id="31500">选择用户配置文件</string>
+  <string id="31501">静音</string>
+  <string id="31502">创建</string>
+  <string id="31503">编码</string>
+
+</strings>

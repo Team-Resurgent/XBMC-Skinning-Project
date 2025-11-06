@@ -1,0 +1,2163 @@
+<includes>
+
+  <include name="List">
+    <control type="group">
+      <include>ListViewVisible</include>
+
+      <include>MediaLeftContentType</include>
+      <include>MediaLeftMediaCount</include>
+
+      <include>MediaLeftOverlay</include>
+
+      <control type="group">
+        <posx>20</posx>
+        <posy>-110</posy>
+
+        <control type="list" id="50">
+          <viewtype label="List">list</viewtype>
+          <onup>50</onup>
+          <ondown>50</ondown>
+          <pagecontrol>102</pagecontrol>
+          <onright>101</onright>
+          <include>ListViewLayout</include>
+        </control>
+
+        <control type="group">
+          <posx>-400</posx>
+
+    			<control type="button" id="101">
+    				<visible>!IsEmpty(ListItem.Trailer)]</visible>
+    				<onfocus>PlayMedia($INFO[ListItem.Trailer],1,noresume)</onfocus>
+    				<onfocus>SetFocus(102)</onfocus>
+    			</control>
+
+    			<control type="button" id="101">
+    				<visible>IsEmpty(ListItem.Trailer)]</visible>
+    				<onfocus>SetFocus(102)</onfocus>
+    			</control>
+        </control>
+
+        <control type="scrollbar" id="102">
+          <posx>590</posx>
+          <posy>110</posy>
+          <height>260</height>
+          <onleft>50</onleft>
+          <onright>9009</onright>
+        </control>
+      </control>
+    </control>
+
+    <control type="group">
+      <description>Thumb</description>
+      <include>ListViewVisible</include>
+
+      <control type="group">
+        <posy>-10</posy>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="300,-250" end="0,0">WindowOpen</animation>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="300,-250" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="300,-250">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="300,-250">Hidden</animation>
+        <visible>[![Skin.HasSetting(HideThumbInListView) | IsEmpty(ListItem.Thumb) | Window.IsVisible(2004) | Window.IsVisible(MyPics.xml)]] | Container.Content(genres)</visible>
+        <include>HideWhenUpperDialogActive</include>
+
+        <control type="group">
+          <description>Default Thumbnail</description>
+          <posx>1130</posx>
+          <visible>![Window.IsVisible(MyVideo.xml) | [Container.Content(tvshows) + !Skin.HasSetting(UsePortraitTVThumbs)] | Container.Content(episodes) | Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)] | Container.Content(genres)</visible>
+
+          <control type="image">
+            <width>160</width>
+            <height>210</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="image">
+            <width>146</width>
+            <height>196</height>
+            <include>ListViewThumbForGenres</include>
+            <include>ListViewThumbDims</include>
+            <visible>Container.Content(genres)</visible>
+          </control>
+
+          <control type="image">
+            <width>146</width>
+            <height>196</height>
+            <include>ListViewThumb</include>
+            <visible>!Container.Content(genres)</visible>
+          </control>
+        </control>
+
+        <control type="group">
+          <description>Video Thumbnail</description>
+          <posx>956</posx>
+          <visible>Window.IsVisible(MyVideo.xml)</visible>
+
+          <control type="image">
+            <width>334</width>
+            <height>210</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="image">
+            <width>320</width>
+            <height>196</height>
+            <include>ListViewThumb</include>
+          </control>
+
+          <control type="image">
+            <description>Watched Overlay</description>
+            <posy>192</posy>
+            <include>WatchedOverlay</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <description>TV Show Thumbnail</description>
+          <posx>956</posx>
+          <visible>[[Container.Content(tvshows) + !Skin.HasSetting(UsePortraitTVThumbs)] + !Window.IsVisible(MyVideo.xml)]</visible>
+
+          <control type="image">
+            <width>334</width>
+            <height>94</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="image">
+            <width>320</width>
+            <height>80</height>
+            <include>ListViewThumb</include>
+          </control>
+
+          <control type="image">
+            <description>Watched Overlay</description>
+            <posy>76</posy>
+            <include>WatchedOverlay</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <description>TV Episode Thumbnail</description>
+          <posx>956</posx>
+          <visible>Container.Content(episodes)</visible>
+
+          <control type="image">
+            <width>334</width>
+            <height>194</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="image">
+            <width>320</width>
+            <height>180</height>
+            <include>ListViewThumb</include>
+          </control>
+
+          <control type="image">
+            <description>Watched Overlay</description>
+            <posy>176</posy>
+            <include>WatchedOverlay</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <description>Music Thumbnail</description>
+          <posx>1080</posx>
+          <visible>[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+
+          <control type="image">
+            <width>210</width>
+            <height>210</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="image">
+            <width>196</width>
+            <height>196</height>
+            <include>ListViewThumb</include>
+          </control>
+        </control>
+      </control>
+
+      <include>ListViewItemDetails</include>
+    </control>
+  </include>
+
+  <include name="PosterInfo">
+    <control type="group">
+      <include>PosterViewVisible</include>
+
+      <include>MediaLeftContentType</include>
+      <include>MediaLeftMediaCount</include>
+
+      <include>MediaLeftOverlay</include>
+
+      <control type="group">
+        <posx>20</posx>
+        <posy>-110</posy>
+
+        <control type="wraplist" id="51">
+          <viewtype label="Poster Info">list</viewtype>
+          <posy>120</posy>
+          <width>620</width>
+          <height>240</height>
+          <scrolltime>300</scrolltime>
+          <onup>9009</onup>
+          <ondown>Skin.ToggleSetting(HideMusicNowPlayingInfo)</ondown>
+          <orientation>horizontal</orientation>
+
+          <itemlayout width="120" height="120">
+          </itemlayout>
+
+          <focusedlayout width="120" height="120">
+          </focusedlayout>
+        </control>
+
+        <control type="group">
+          <posy>120</posy>
+          <animation effect="slide" time="0" start="0,0" end="0,-20" condition="Container.Content(albums) | Container.Content(songs)">Conditional</animation>
+
+          <control type="group">
+            <description>Moving to Previous</description>
+
+            <control type="image" id="9500">
+              <posx>-44</posx>
+              <posy>0</posy>
+              <width>90</width>
+              <height>240</height>
+              <info>ListItem(-2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,90,240" end="74,-39,119,317">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+
+            <control type="image">
+              <posx>16</posx>
+              <posy>0</posy>
+              <width>119</width>
+              <height>240</height>
+              <info>ListItem(-1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,119,240" end="80,-26,145,292">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+
+            <control type="image">
+              <posx>360</posx>
+              <posy>0</posy>
+              <width>145</width>
+              <height>240</height>
+              <info>ListItem(2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,145,240" end="170,22,119,197">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+
+            <control type="image">
+              <posx>225</posx>
+              <posy>0</posy>
+              <width>170</width>
+              <height>240</height>
+              <colordiffuse></colordiffuse>
+              <info>ListItem(1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,170,240" end="170,17,145,205">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+
+            <control type="image">
+              <posx>95</posx>
+              <posy>0</posy>
+              <width>145</width>
+              <height>240</height>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,145,240" end="115,-20,170,281">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+          </control>
+
+          <control type="group">
+            <description>Moving to Next</description>
+
+            <control type="image" id="9500">
+              <posx>95</posx>
+              <posy>0</posy>
+              <width>145</width>
+              <height>240</height>
+              <info>ListItem(-2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,145,240" end="-65,22,119,197">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+
+            <control type="image">
+              <posx>225</posx>
+              <posy>0</posy>
+              <width>170</width>
+              <height>240</height>
+              <colordiffuse></colordiffuse>
+              <info>ListItem(-1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,170,240" end="-101,17,145,205">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+
+            <control type="image">
+              <posx>525</posx>
+              <posy>0</posy>
+              <width>90</width>
+              <height>240</height>
+              <info>ListItem(2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,90,240" end="-231,-39,119,317">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+
+            <control type="image">
+              <posx>465</posx>
+              <posy>0</posy>
+              <width>119</width>
+              <height>240</height>
+              <info>ListItem(1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,119,240" end="-210,-26,145,292">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+
+            <control type="image">
+              <posx>360</posx>
+              <posy>0</posy>
+              <width>145</width>
+              <height>240</height>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" time="300" start="0,0,145,240" end="-200,-20,170,281">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+          </control>
+
+          <control type="group">
+            <visible>![Container.OnNext | Container.OnPrevious | Control.IsVisible(9500)]</visible>
+
+            <control type="image">
+              <posx>16</posx>
+              <posy>0</posy>
+              <width>119</width>
+              <height>240</height>
+              <info>ListItem(-2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+            </control>
+
+            <control type="image">
+              <posx>95</posx>
+              <posy>0</posy>
+              <width>145</width>
+              <height>240</height>
+              <info>ListItem(-1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+            </control>
+
+            <control type="image">
+              <posx>465</posx>
+              <posy>0</posy>
+              <width>119</width>
+              <height>240</height>
+              <info>ListItem(2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+            </control>
+
+            <control type="image">
+              <posx>360</posx>
+              <posy>0</posy>
+              <width>145</width>
+              <height>240</height>
+              <info>ListItem(1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+            </control>
+
+            <control type="image">
+              <posx>225</posx>
+              <posy>0</posy>
+              <width>170</width>
+              <height>240</height>
+              <colordiffuse></colordiffuse>
+              <include>ListViewThumb</include>
+            </control>
+          </control>
+        </control>
+
+      </control>
+    </control>
+
+    <control type="group">
+      <include>PosterViewVisible</include>
+
+      <control type="group">
+        <description>Title</description>
+        <posx>-10</posx>
+        <posy>686</posy>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,50" end="0,0">WindowOpen</animation>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,50" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,50">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,50">Hidden</animation>
+        <visible>!IsEmpty(ListItem.Label)</visible>
+
+        <control type="image">
+          <width>MediaLeftOverlayWidth</width>
+          <height>44</height>
+          <include>OverlayDarkArea</include>
+        </control>
+
+        <control type="label">
+          <posx>20</posx>
+          <posy>4</posy>
+          <width>610</width>
+          <height>34</height>
+          <align>center</align>
+          <textcolor>Selected</textcolor>
+          <font>MediumTitleFont</font>
+          <info>ListItem.Label</info>
+        </control>
+      </control>
+
+      <include>ListViewItemDetails</include>
+    </control>
+
+    <control type="group">
+      <include>PosterViewVisible</include>
+    </control>
+  </include>
+
+  <include name="Showcase">
+    <control type="group">
+      <posx>-10</posx>
+      <posy>490</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,350" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,350" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,350">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,350">Hidden</animation>
+      <include>ShowcaseViewVisible</include>
+      <visible allowhiddenfocus="true">!Window.IsVisible(2004) + !Window.IsVisible(MyPics.xml)</visible>
+      <include>HideWhenLowerDialogActive</include>
+
+      <include>MediaLeftContentType</include>
+      <include>MediaRightMediaCount</include>
+
+      <control type="image">
+        <width>1300</width>
+        <height>310</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="wraplist" id="52">
+        <viewtype label="Showcase">list</viewtype>
+        <posx>-55</posx>
+        <posy>-50</posy>
+        <width>1660</width>
+        <height>240</height>
+        <scrolltime>200</scrolltime>
+        <onup>9009</onup>
+        <ondown>Skin.ToggleSetting(HideMusicNowPlayingInfo)</ondown>
+        <orientation>horizontal</orientation>
+        <focusposition>8</focusposition>
+
+        <itemlayout width="80" height="240" condition="![[Container.Content(tvshows) + !Skin.HasSetting(UsePortraitTVThumbs)] | [Container.Content(episodes)]]">
+          <control type="image">
+            <posy>30</posy>
+            <width>130</width>
+            <height>240</height>
+            <texture diffuse="GreyDark.png"/>
+            <include>ListViewThumb</include>
+            <animation effect="rotate" time="0" delay="0" start="0" end="-15" condition="true">Conditional</animation>
+          </control>
+        </itemlayout>
+
+        <itemlayout width="80" height="240" condition="[Container.Content(tvshows) + !Skin.HasSetting(UsePortraitTVThumbs)]">
+          <control type="image">
+            <posy>30</posy>
+            <width>360</width>
+            <height>240</height>
+            <texture diffuse="GreyDark.png"/>
+            <include>ListViewThumb</include>
+            <animation effect="rotate" time="0" delay="0" start="0" end="-45" condition="true">Conditional</animation>
+          </control>
+        </itemlayout>
+
+        <itemlayout width="80" height="240" condition="[Container.Content(episodes)]">
+          <control type="image">
+            <posy>30</posy>
+            <width>220</width>
+            <height>240</height>
+            <texture diffuse="GreyDark.png"/>
+            <include>ListViewThumb</include>
+            <animation effect="rotate" time="0" delay="0" start="0" end="-30" condition="true">Conditional</animation>
+          </control>
+        </itemlayout>
+
+        <focusedlayout width="170" height="240" condition="![Container.Content(episodes)] + ![Container.Content(tvshows) + !Skin.HasSetting(UsePortraitTVThumbs)] + ![Window.IsVisible(MyMusicFiles) | [Window.IsVisible(MyMusicLibrary) + !Container.Content(artists)] | Window.IsVisible(MyMusicPlaylist)]">
+          <control type="image">
+            <posy>30</posy>
+            <width>130</width>
+            <height>240</height>
+            <include>ListViewThumb</include>
+            <animation type="focus" reversible="false">
+              <effect type="zoom" tween="quadratic" end="-33,-70,195,360" time="200" delay="100"/>
+              <effect type="rotate" start="-15" end="0" time="200" delay="100"/>
+            </animation>
+            <animation type="unfocus" reversible="false">
+              <effect type="zoom" tween="quadratic" start="-33,-70,195,360" end="0,0,130,240" time="100" delay="0"/>
+              <effect type="rotate" start="0" end="-15" time="100" delay="0"/>
+            </animation>
+          </control>
+        </focusedlayout>
+
+        <focusedlayout width="170" height="240" condition="[Container.Content(tvshows) + !Skin.HasSetting(UsePortraitTVThumbs)]">
+          <control type="image">
+            <posy>30</posy>
+            <width>360</width>
+            <height>240</height>
+            <include>ListViewThumb</include>
+            <animation type="focus" reversible="false">
+              <effect type="zoom" tween="quadratic" end="-230,-40,540,360" time="200" delay="100"/>
+              <effect type="rotate" start="-45" end="0" time="200" delay="100"/>
+            </animation>
+            <animation type="unfocus" reversible="false">
+              <effect type="zoom" tween="quadratic" start="-230,-40,540,360" end="0,0,360,240" time="100" delay="50"/>
+              <effect type="rotate" start="0" end="-45" time="100" delay="50"/>
+            </animation>
+          </control>
+        </focusedlayout>
+
+        <focusedlayout width="170" height="240" condition="[Container.Content(episodes)]">
+          <control type="image">
+            <posy>30</posy>
+            <width>220</width>
+            <height>240</height>
+            <include>ListViewThumb</include>
+            <animation type="focus" reversible="false">
+              <effect type="zoom" tween="quadratic" end="-100,-44,352,384" time="200" delay="100"/>
+              <effect type="rotate" start="-30" end="0" time="200" delay="100"/>
+            </animation>
+            <animation type="unfocus" reversible="false">
+              <effect type="zoom" tween="quadratic" start="-100,-44,352,384" end="0,0,220,240" time="100" delay="50"/>
+              <effect type="rotate" start="0" end="-30" time="100" delay="50"/>
+            </animation>
+          </control>
+        </focusedlayout>
+
+        <focusedlayout width="170" height="240" condition="[Window.IsVisible(MyMusicFiles) | [Window.IsVisible(MyMusicLibrary) + !Container.Content(artists)] | Window.IsVisible(MyMusicPlaylist)]">
+          <control type="image">
+            <posy>30</posy>
+            <width>130</width>
+            <height>240</height>
+            <include>ListViewThumb</include>
+            <animation type="focus" reversible="false">
+              <effect type="zoom" tween="quadratic" end="-46,-60,220,391" time="200" delay="100"/>
+              <effect type="rotate" start="-15" end="0" time="200" delay="100"/>
+            </animation>
+            <animation type="unfocus" reversible="false">
+              <effect type="zoom" tween="quadratic" start="-46,-60,220,391" end="0,0,130,240" time="100" delay="0"/>
+              <effect type="rotate" start="0" end="-15" time="100" delay="0"/>
+            </animation>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+
+    <control type="group">
+      <include>ShowcaseViewVisible</include>
+
+      <control type="group">
+        <description>Title</description>
+        <posx>30</posx>
+        <posy>672</posy>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,120" end="0,0">WindowOpen</animation>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,120" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,120">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,120">Hidden</animation>
+        <visible>!IsEmpty(ListItem.Label)</visible>
+        <include>HideWhenLowerDialogActive</include>
+
+        <control type="image">
+          <width>1220</width>
+          <height>98</height>
+          <include>OverlayDarkArea</include>
+        </control>
+
+        <!-- Left Hand Info -->
+        <control type="label">
+          <info>ListItem.Label2</info>
+          <include>ShowcaseViewLeftLabel</include>
+          <visible>![Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+        </control>
+
+        <control type="label">
+          <info>ListItem.Year</info>
+          <include>ShowcaseViewLeftLabel</include>
+          <visible>Container.Content(movies)</visible>
+        </control>
+
+        <control type="label">
+          <label>$INFO[ListItem.Episode] $LOCALIZE[20360]</label>
+          <include>ShowcaseViewLeftLabel</include>
+          <visible>Container.Content(seasons)</visible>
+        </control>
+
+        <control type="label">
+          <info>ListItem.Date</info>
+          <include>ShowcaseViewLeftLabel</include>
+          <visible>Container.Content(episodes)</visible>
+        </control>
+
+        <control type="group">
+          <animation effect="slide" time="0" start="0,0" end="-50,0" condition="Container.Content(movies)">Conditional</animation>
+
+          <control type="group">
+            <description>Movie Studio Logo</description>
+            <posx>0</posx>
+            <posy>-42</posy>
+            <include>VideoStudioFlags</include>
+            <visible>Container.Content(movies)</visible>
+            <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+          </control>
+
+          <control type="group">
+            <description>TV Network Logo</description>
+            <posx>35</posx>
+            <posy>12</posy>
+            <include>VideoTVNetworkFlags</include>
+            <visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+            <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+          </control>
+
+          <control type="group">
+            <description>Video Codec Logo</description>
+            <posx>208</posx>
+            <posy>-42</posy>
+            <include>VideoCodecFlags</include>
+            <visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+            <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+          </control>
+
+          <control type="group">
+            <description>Video Audio Codec Logo</description>
+            <posx>220</posx>
+            <posy>-42</posy>
+            <include>VideoAudioSmallFlags</include>
+            <visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+            <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+          </control>
+        </control>
+
+        <!-- Central Info -->
+        <control type="label">
+          <posx>300</posx>
+          <posy>12</posy>
+          <width>620</width>
+          <align>center</align>
+          <textcolor>Selected</textcolor>
+          <font>MediumTitleFont</font>
+          <info>ListItem.Label</info>
+        </control>
+
+        <!-- Right Hand Info -->
+        <control type="group">
+          <control type="group">
+            <description>Video Resolution Logo</description>
+            <posx>946</posx>
+            <posy>-70</posy>
+            <include>VideoResFlags</include>
+            <visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+            <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+          </control>
+
+          <control type="group">
+            <description>Video Aspect Logo</description>
+            <posx>946</posx>
+            <posy>-70</posy>
+            <include>VideoAspectFlags</include>
+            <visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+            <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+          </control>
+
+          <control type="group">
+            <description>Movie MPAA Logo</description>
+            <posx>906</posx>
+            <posy>-24</posy>
+            <include>VideoMPAASmallFlags</include>
+            <visible>Container.Content(movies)</visible>
+            <animation effect="zoom" start="100" end="56" time="0" condition="true">Conditional</animation>
+          </control>
+  
+          <control type="group">
+            <description>TV Rating Logo</description>
+            <posx>875</posx>
+            <posy>10</posy>
+            <include>VideoTVRatingFlags</include>
+            <visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+            <animation effect="zoom" start="100" end="80" time="0" condition="true">Conditional</animation>
+          </control>
+        </control>
+
+        <control type="image">
+          <description>Watched Overlay</description>
+          <posx>1118</posx>
+          <posy>18</posy>
+          <include>WatchedOverlay</include>
+        </control>
+
+        <control type="image">
+          <description>Star Rating</description>
+          <posx>1146</posx>
+          <posy>8</posy>
+          <width>64</width>
+          <aspectratio>keep</aspectratio>
+          <align>right</align>
+          <info>ListItem.StarRating</info>
+        </control>
+      </control>
+    </control>
+  </include>
+
+  <include name="Waterfall">
+    <control type="group">
+      <posx>-10</posx>
+      <posy>300</posy>
+      <include>WaterfallViewVisible</include>
+      <include>HideWhenFullScreenDialogActive</include>
+
+      <control type="image">
+        <width>524</width>
+        <height>430</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="list" id="53">
+        <viewtype label="Waterfall">list</viewtype>
+        <width>640</width>
+        <height>200</height>
+        <scrolltime>200</scrolltime>
+        <onup>9009</onup>
+        <ondown>Skin.ToggleSetting(HideMusicNowPlayingInfo)</ondown>
+        <orientation>horizontal</orientation>
+        <visible allowhiddenfocus="false">true</visible>
+
+        <itemlayout width="160" height="200">
+        </itemlayout>
+
+        <focusedlayout width="160" height="200">
+        </focusedlayout>
+      </control>
+
+      <control type="group">
+        <posx>20</posx>
+
+        <control type="group">
+          <posx>190</posx>
+          <posy>286</posy>
+
+          <control type="image">
+            <description>Watched Overlay</description>
+            <posy>8</posy>
+            <include>WatchedOverlay</include>
+          </control>
+
+          <control type="image">
+            <description>Star Rating</description>
+            <posx>18</posx>
+            <width>64</width>
+            <aspectratio>keep</aspectratio>
+            <align>right</align>
+            <info>ListItem.StarRating</info>
+          </control>
+        </control>
+
+        <control type="group">
+          <posy>320</posy>
+
+          <control type="image">
+            <posx>-30</posx>
+            <posy>-10</posy>
+            <width>360</width>
+            <height>110</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="label">
+            <description>Title</description>
+            <width>300</width>
+            <textcolor>Selected</textcolor>
+            <font>MediumTitleFont</font>
+            <info>ListItem.Label</info>
+          </control>
+
+          <control type="group">
+            <posy>50</posy>
+
+            <control type="group">
+              <visible>![Window.IsVisible(MyVideoLibrary) | Window.IsVisible(MyMusicLibrary)]</visible>
+
+              <control type="label">
+                <posy>16</posy>
+                <width>300</width>
+                <textcolor>Highlighted</textcolor>
+                <label>$INFO[ListItem.Label2]</label>
+              </control>
+            </control>
+
+            <control type="group">
+              <visible>[Window.IsVisible(MyVideoLibrary) | Window.IsVisible(MyMusicLibrary)]</visible>
+
+              <control type="group">
+                <visible>Container.Content(movies)</visible>
+
+                <control type="label">
+                  <width>300</width>
+                  <font>SmallTitleFont</font>
+                  <label>$INFO[ListItem.Year]</label>
+                </control>
+
+                <control type="label">
+                  <posy>16</posy>
+                  <width>300</width>
+                  <textcolor>Highlighted</textcolor>
+                  <label>$INFO[ListItem.Genre]</label>
+                </control>
+              </control>
+
+              <control type="group">
+                <visible>Container.Content(tvshows)</visible>
+
+                <control type="label">
+                  <width>300</width>
+                  <font>SmallTitleFont</font>
+                  <label>$INFO[ListItem.Genre]</label>
+                </control>
+
+                <control type="label">
+                  <posy>16</posy>
+                  <width>300</width>
+                  <textcolor>Highlighted</textcolor>
+                  <include>TVEpisodeCountLabel</include>
+                </control>
+              </control>
+
+              <control type="group">
+                <visible>Container.Content(seasons)</visible>
+
+                <control type="label">
+                  <width>300</width>
+                  <font>SmallTitleFont</font>
+                  <label>$INFO[ListItem.TVShowTitle]</label>
+                </control>
+
+                <control type="label">
+                  <posy>16</posy>
+                  <width>300</width>
+                  <textcolor>Highlighted</textcolor>
+                  <include>TVEpisodeCountLabel</include>
+                </control>
+              </control>
+
+              <control type="group">
+                <visible>Container.Content(episodes)</visible>
+
+                <control type="label">
+                  <width>300</width>
+                  <font>SmallTitleFont</font>
+                  <label>$INFO[ListItem.TVShowTitle]</label>
+                </control>
+
+                <control type="label">
+                  <posy>16</posy>
+                  <width>300</width>
+                  <textcolor>Highlighted</textcolor>
+                  <label>$INFO[ListItem.Season,$LOCALIZE[20373] ,$COMMA ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
+                </control>
+              </control>
+
+              <control type="group">
+                <visible>Container.Content(albums)</visible>
+
+                <control type="label">
+                  <width>300</width>
+                  <font>SmallTitleFont</font>
+                  <label>$INFO[ListItem.Year]</label>
+                </control>
+
+                <control type="label">
+                  <posy>16</posy>
+                  <width>300</width>
+                  <textcolor>Highlighted</textcolor>
+                  <label>$INFO[ListItem.Artist]</label>
+                </control>
+              </control>
+
+              <control type="group">
+                <visible>Container.Content(songs)</visible>
+
+                <control type="label">
+                  <width>300</width>
+                  <font>SmallTitleFont</font>
+                  <label>$INFO[ListItem.Artist]</label>
+                </control>
+
+                <control type="label">
+                  <posy>16</posy>
+                  <width>300</width>
+                  <textcolor>Highlighted</textcolor>
+                  <label>$INFO[ListItem.Album]</label>
+                </control>
+              </control>
+
+              <control type="group">
+                <visible>Container.Content(songs)</visible>
+
+                <control type="label">
+                  <width>300</width>
+                  <font>SmallTitleFont</font>
+                  <label>$INFO[ListItem.Artist]</label>
+                </control>
+
+                <control type="label">
+                  <posy>16</posy>
+                  <width>300</width>
+                  <textcolor>Highlighted</textcolor>
+                  <label>$INFO[ListItem.Album]</label>
+                </control>
+              </control>
+            </control>
+
+            <control type="image">
+              <description>Trailer Indicator</description>
+              <posx>300</posx>
+              <posy>12</posy>
+              <width>18</width>
+              <aspectratio>keep</aspectratio>
+              <align>right</align>
+              <texture>trailer.png</texture>
+              <visible>!IsEmpty(ListItem.Trailer)</visible>
+            </control>
+          </control>
+        </control>
+      </control>
+
+      <control type="group">
+        <posy>60</posy>
+
+        <control type="image">
+          <posx>-200</posx>
+          <posy>-50</posy>
+          <width>85</width>
+          <height>120</height>
+          <info>ListItem(-2).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="30" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,85,120" end="282,70,119,168" time="200">Hidden</animation>
+          <visible>Container.OnPrevious</visible>
+        </control>
+
+        <control type="image">
+          <posx>14</posx>
+          <posy>-20</posy>
+          <width>119</width>
+          <height>168</height>
+          <info>ListItem(-1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="15" end="15" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,119,168" end="82,27,138,194" time="200">Hidden</animation>
+          <visible>Container.OnPrevious</visible>
+        </control>
+
+        <control type="image">
+          <posx>442</posx>
+          <posy>-69</posy>
+          <width>119</width>
+          <height>168</height>
+          <info>ListItem(3).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="-30" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,119,168" end="240,140,80,112" time="100">Hidden</animation>
+          <visible>Container.OnPrevious</visible>
+        </control>
+
+        <control type="image">
+          <posx>356</posx>
+          <posy>-126</posy>
+          <width>136</width>
+          <height>192</height>
+          <info>ListItem(2).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="-30" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,136,192" end="130,42,119,168" time="200">Hidden</animation>
+          <visible>Container.OnPrevious</visible>
+        </control>
+
+        <control type="image">
+          <posx>220</posx>
+          <posy>-80</posy>
+          <width>170</width>
+          <height>240</height>
+          <info>ListItem(1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="-15" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,170,240" end="172,46,136,192" time="200">Hidden</animation>
+          <visible>Container.OnPrevious</visible>
+        </control>
+
+        <control type="image" id="9002">
+          <posx>108</posx>
+          <posy>-40</posy>
+          <width>136</width>
+          <height>192</height>
+          <colordiffuse></colordiffuse>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="0,0,152,208" end="30,29,170,240" time="200">Hidden</animation>
+          <visible>Container.OnPrevious</visible>
+        </control>
+      </control>
+
+      <control type="group">
+        <posy>60</posy>
+
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>119</width>
+          <height>168</height>
+          <info>ListItem(-3).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="30" end="30" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,119,168" end="-200,-150,85,120" time="200">Hidden</animation>
+          <visible>Container.OnNext</visible>
+        </control>
+
+        <control type="image">
+          <posx>70</posx>
+          <posy>48</posy>
+          <width>136</width>
+          <height>192</height>
+          <info>ListItem(-2).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="30" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,136,192" end="-61,-42,119,168" time="200">Hidden</animation>
+          <visible>Container.OnNext</visible>
+        </control>
+
+        <control type="image">
+          <posx>160</posx>
+          <posy>70</posy>
+          <width>170</width>
+          <height>240</height>
+          <info>ListItem(-1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="15" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,170,240" end="-28,-50,136,192" time="200">Hidden</animation>
+          <visible>Container.OnNext</visible>
+        </control>
+
+        <control type="image">
+          <posx>550</posx>
+          <posy>160</posy>
+          <width>85</width>
+          <height>120</height>
+          <info>ListItem(2).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="-30" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,85,120" end="-329,-292,119,168" time="200">Hidden</animation>
+          <visible>Container.OnNext</visible>
+        </control>
+
+        <control type="image">
+          <posx>422</posx>
+          <posy>60</posy>
+          <width>119</width>
+          <height>168</height>
+          <info>ListItem(1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="-15" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,119,168" end="-135,-87,136,192" time="200">Hidden</animation>
+          <visible>Container.OnNext</visible>
+        </control>
+
+        <control type="image" id="9001">
+          <posx>310</posx>
+          <posy>86</posy>
+          <width>136</width>
+          <height>192</height>
+          <colordiffuse></colordiffuse>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="0,0,136,192" end="-188,-108,170,240" time="200">Hidden</animation>
+          <visible>Container.OnNext</visible>
+        </control>
+      </control>
+
+      <control type="group">
+        <posy>60</posy>
+        <visible>![Container.OnNext | Container.OnPrevious] + ![Control.IsVisible(9001) | Control.IsVisible(9002)]</visible>
+
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>170</width>
+          <height>240</height>
+          <info>ListItem(-2).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="100" end="70" time="0" condition="true">Conditional</animation>
+          <animation effect="rotate" start="0" end="30" time="0" condition="true">Conditional</animation>
+        </control>
+
+        <control type="image">
+          <posx>100</posx>
+          <posy>0</posy>
+          <width>170</width>
+          <height>240</height>
+          <info>ListItem(-1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="100" end="80" time="0" condition="true">Conditional</animation>
+          <animation effect="rotate" start="0" end="15" time="0" condition="true">Conditional</animation>
+        </control>
+
+        <control type="image">
+          <posx>460</posx>
+          <posy>0</posy>
+          <width>170</width>
+          <height>240</height>
+          <info>ListItem(2).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="100" end="70" time="0" condition="true">Conditional</animation>
+          <animation effect="rotate" start="0" end="-30" time="0" condition="true">Conditional</animation>
+        </control>
+
+        <control type="image">
+          <posx>350</posx>
+          <posy>0</posy>
+          <width>170</width>
+          <height>240</height>
+          <info>ListItem(1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="100" end="80" time="0" condition="true">Conditional</animation>
+          <animation effect="rotate" start="0" end="-15" time="0" condition="true">Conditional</animation>
+        </control>
+
+        <control type="image">
+          <posx>200</posx>
+          <posy>0</posy>
+          <width>170</width>
+          <height>240</height>
+          <colordiffuse></colordiffuse>
+          <include>ListViewThumb</include>
+        </control>
+      </control>
+
+
+
+<!--
+      <control type="group">
+        <posy>60</posy>
+
+        <control type="image">
+<colordiffuse>99ffffff</colordiffuse>
+          <posx>-200</posx>
+          <posy>-50</posy>
+          <width>85</width>
+          <height>120</height>
+          <info>ListItem(-2).Icon</info>
+          <texture diffuse="GreyDark.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="rotate" start="0" end="30" time="0" condition="true">Conditional</animation>
+          <animation effect="zoom" start="0,0,85,120" end="282,70,119,168" time="200" condition="true">Conditional</animation>
+        </control>
+      </control>
+-->
+    </control>
+  </include>
+
+  <include name="Exhibit">
+    <control type="group">
+      <include>ExhibitViewVisible</include>
+
+      <control type="list" id="54">
+        <viewtype label="Exhibit">list</viewtype>
+        <width>640</width>
+        <height>200</height>
+        <scrolltime>200</scrolltime>
+        <onup>9009</onup>
+        <ondown>Skin.ToggleSetting(HideMusicNowPlayingInfo)</ondown>
+        <orientation>horizontal</orientation>
+        <visible allowhiddenfocus="false">true</visible>
+
+        <itemlayout width="160" height="200">
+        </itemlayout>
+
+        <focusedlayout width="160" height="200">
+        </focusedlayout>
+      </control>
+
+      <control type="group">
+        <posx>-10</posx>
+        <posy>490</posy>
+        <include>HideWhenLowerDialogActive</include>
+
+        <control type="image">
+          <width>250</width>
+          <height>240</height>
+          <include>OverlayArea</include>
+        </control>
+
+        <control type="group">
+          <posx>20</posx>
+          <posy>10</posy>
+
+          <control type="group">
+            <control type="image" id="9001">
+              <posx>-120</posx>
+              <posy>80</posy>
+              <width>85</width>
+              <height>120</height>
+              <info>ListItem(-2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,85,120" end="181,-90,131,184" time="200">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+
+            <control type="image">
+              <posy>40</posy>
+              <width>119</width>
+              <height>168</height>
+              <info>ListItem(-1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,119,168" end="76,-51,140,199" time="200">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+
+            <control type="image">
+              <posx>79</posx>
+              <posy>-2</posy>
+              <width>138</width>
+              <height>196</height>
+              <colordiffuse>EEFFFFFF</colordiffuse>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,138,196" end="128,-473,477,680" time="200">Hidden</animation>
+              <visible>Container.OnPrevious + !Window.IsVisible(MyPics.xml)</visible>
+            </control>
+          </control>
+
+          <control type="group">
+            <control type="image" id="9001">
+              <posx>1</posx>
+              <posy>38</posy>
+              <width>121</width>
+              <height>172</height>
+              <info>ListItem(-3).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,121,172" end="-200,80,85,120" time="200">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+
+            <control type="image">
+              <posx>79</posx>
+              <posy>-2</posy>
+              <width>138</width>
+              <height>196</height>
+              <info>ListItem(-2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,138,196" end="-66,40,119,170" time="200">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+          </control>
+
+          <control type="group">
+            <visible>![Container.OnNext | Container.OnPrevious] + !Control.IsVisible(9001)</visible>
+
+            <control type="image">
+              <posy>40</posy>
+              <width>170</width>
+              <height>240</height>
+              <info>ListItem(-2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="100" end="70" time="0" condition="true">Conditional</animation>
+            </control>
+
+            <control type="image">
+              <posx>80</posx>
+              <posy>0</posy>
+              <width>170</width>
+              <height>240</height>
+              <info>ListItem(-1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="100" end="80" time="0" condition="true">Conditional</animation>
+            </control>
+          </control>
+        </control>
+      </control>
+
+      <control type="group">
+        <posx>1060</posx>
+        <posy>-10</posy>
+        <include>HideWhenUpperDialogActive</include>
+
+        <control type="image">
+          <width>230</width>
+          <height>240</height>
+          <include>OverlayArea</include>
+        </control>
+
+        <control type="group">
+          <posy>20</posy>
+
+          <control type="group">
+            <control type="image">
+              <posx>89</posx>
+              <posy>-2</posy>
+              <width>121</width>
+              <height>172</height>
+              <info>ListItem(3).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,121,172" end="300,-60,85,120" time="200">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+
+            <control type="image">
+              <posx>9</posx>
+              <posy>18</posy>
+              <width>140</width>
+              <height>196</height>
+              <info>ListItem(2).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,140,196" end="82,-16,119,168" time="200">Hidden</animation>
+              <visible>Container.OnPrevious</visible>
+            </control>
+          </control>
+
+          <control type="group">
+            <control type="image">
+              <posx>300</posx>
+              <posy>-40</posy>
+              <width>85</width>
+              <height>120</height>
+              <info>ListItem(2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,85,120" end="-366,54,128,180" time="200">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+
+            <control type="image">
+              <posx>89</posx>
+              <posy>-2</posy>
+              <width>121</width>
+              <height>172</height>
+              <info>ListItem(1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,121,172" end="-92,20,140,198" time="200">Hidden</animation>
+              <visible>Container.OnNext</visible>
+            </control>
+
+            <control type="image">
+              <posx>9</posx>
+              <posy>18</posy>
+              <width>140</width>
+              <height>196</height>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="0,0,140,196" end="-683,-52,483,678" time="200">Hidden</animation>
+              <visible>Container.OnNext + !Window.IsVisible(MyPics.xml)</visible>
+            </control>
+          </control>
+
+          <control type="group">
+            <visible>![Container.OnNext | Container.OnPrevious] + !Control.IsVisible(9001)</visible>
+
+            <control type="image">
+              <posx>90</posx>
+              <posy>0</posy>
+              <width>170</width>
+              <height>240</height>
+              <info>ListItem(2).Icon</info>
+              <texture diffuse="GreyDark.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="100" end="70" time="0" condition="true">Conditional</animation>
+            </control>
+
+            <control type="image">
+              <posx>10</posx>
+              <posy>20</posy>
+              <width>170</width>
+              <height>240</height>
+              <info>ListItem(1).Icon</info>
+              <texture diffuse="Grey.png"/>
+              <include>ListViewThumb</include>
+              <animation effect="zoom" start="100" end="80" time="0" condition="true">Conditional</animation>
+            </control>
+          </control>
+        </control>
+      </control>
+
+      <control type="group">
+        <visible>!Window.IsVisible(MyPics.xml)</visible>
+
+        <control type="image">
+          <posx>242</posx>
+          <posy>40</posy>
+          <width>816</width>
+          <height>640</height>
+          <info>ListItem(1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="0,0,816,640" end="952,22,233,184" time="200">Hidden</animation>
+          <visible>Container.OnPrevious</visible>
+        </control>
+
+        <control type="image">
+          <posx>242</posx>
+          <posy>40</posy>
+          <width>816</width>
+          <height>640</height>
+          <info>ListItem(-1).Icon</info>
+          <texture diffuse="Grey.png"/>
+          <include>ListViewThumb</include>
+          <animation effect="zoom" start="0,0,816,640" end="-28,492,233,184" time="200">Hidden</animation>
+          <visible>Container.OnNext</visible>
+        </control>
+
+        <control type="image">
+          <posx>242</posx>
+          <posy>40</posy>
+          <width>816</width>
+          <height>640</height>
+          <colordiffuse>EEFFFFFF</colordiffuse>
+          <include>ListViewThumb</include>
+          <visible>![Container.OnNext | Container.OnPrevious] + !Control.IsVisible(9001)</visible>
+        </control>
+      </control>
+
+      <include>ListViewItemDetails</include>
+    </control>
+  </include>
+
+  <include name="LowList">
+    <control type="group">
+      <posx>-10</posx>
+      <posy>564</posy>
+
+      <control type="group">
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,200" end="0,0">WindowOpen</animation>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,200" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,200">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,200">Hidden</animation>
+        <include>LowListViewVisible</include>
+        <include>HideWhenLowerDialogActive</include>
+
+        <include>MediaLeftContentType</include>
+        <include>MediaRightMediaCount</include>
+
+        <control type="image">
+          <width>1300</width>
+          <height>166</height>
+          <include>OverlayArea</include>
+        </control>
+      </control>
+
+      <control type="group">
+        <posx>20</posx>
+        <include>LowListViewVisible</include>
+        <include>MediaLeftOverlayAnim</include>
+        <include>HideWhenLowerDialogActive</include>
+
+        <include>LowListThumb</include>
+      </control>
+
+      <control type="group">
+        <posx>380</posx>
+        <posy>-110</posy>
+        <include>LowListViewVisible</include>
+        <include>MediaLeftOverlayAnim</include>
+        <include>HideWhenLowerDialogActive</include>
+        <visible allowhiddenfocus="true">true</visible>
+
+        <control type="list" id="55">
+          <viewtype label="Low List">list</viewtype>
+          <onup>55</onup>
+          <ondown>55</ondown>
+          <pagecontrol>65</pagecontrol>
+          <onright>65</onright>
+          <height>130</height>
+          <include>ListViewLayout</include>
+        </control>
+
+        <control type="scrollbar" id="65">
+          <posx>590</posx>
+          <posy>115</posy>
+          <height>148</height>
+          <onleft>50</onleft>
+          <onright>9009</onright>
+        </control>
+      </control>
+    </control>
+
+    <control type="group">
+      <posx>630</posx>
+      <posy>556</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,200" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,200" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,200">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,200">Hidden</animation>
+      <include>HideWhenLowerDialogActive</include>
+      <include>LowListViewVisible</include>
+
+      <control type="group">
+        <posx>360</posx>
+        <posy>20</posy>
+
+        <control type="image">
+          <posy>-12</posy>
+          <width>300</width>
+          <height>166</height>
+          <include>OverlayArea</include>
+        </control>
+
+        <include>LowListItemInfo</include>
+      </control>
+    </control>
+  </include>
+
+  <include name="Exposure">
+    <control type="group">
+      <posx>-10</posx>
+      <posy>410</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,350" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,350" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,350">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,350">Hidden</animation>
+      <include>ExposureViewVisible</include>
+      <visible allowhiddenfocus="true">!Window.IsVisible(2004) + !Window.IsVisible(MyPics.xml)</visible>
+      <include>HideWhenLowerDialogActive</include>
+
+      <include>MediaLeftContentType</include>
+      <include>MediaRightMediaCount</include>
+
+      <control type="image">
+        <width>1300</width>
+        <height>320</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="group">
+        <posx>78</posx>
+
+        <control type="group">
+          <posy>-20</posy>
+
+          <control type="image">
+            <posx>-1200</posx>
+            <info>ListItem(-16).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-1050</posx>
+            <info>ListItem(-15).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-900</posx>
+            <info>ListItem(-14).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-750</posx>
+            <info>ListItem(-13).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-600</posx>
+            <info>ListItem(-12).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-450</posx>
+            <info>ListItem(-11).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-300</posx>
+            <info>ListItem(-10).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-150</posx>
+            <info>ListItem(-9).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <info>ListItem(-8).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>150</posx>
+            <info>ListItem(-7).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>300</posx>
+            <info>ListItem(-6).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>450</posx>
+            <info>ListItem(-5).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>600</posx>
+            <info>ListItem(-4).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>750</posx>
+            <info>ListItem(-3).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>900</posx>
+            <info>ListItem(-2).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>1050</posx>
+            <info>ListItem(-1).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <posy>120</posy>
+
+          <control type="image">
+            <posx>-1200</posx>
+            <info>ListItem(1).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-1050</posx>
+            <info>ListItem(2).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-900</posx>
+            <info>ListItem(3).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-750</posx>
+            <info>ListItem(4).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-600</posx>
+            <info>ListItem(5).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-450</posx>
+            <info>ListItem(6).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-300</posx>
+            <info>ListItem(7).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>-150</posx>
+            <info>ListItem(8).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <info>ListItem(9).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>150</posx>
+            <info>ListItem(10).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>300</posx>
+            <info>ListItem(11).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>450</posx>
+            <info>ListItem(12).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>600</posx>
+            <info>ListItem(13).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>750</posx>
+            <info>ListItem(14).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>900</posx>
+            <info>ListItem(15).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+
+          <control type="image">
+            <posx>1050</posx>
+            <info>ListItem(16).Icon</info>
+            <include>ExposureBackRowThumb</include>
+          </control>
+        </control>
+      </control>
+
+      <control type="panel" id="56">
+        <viewtype label="Exposure">panel</viewtype>
+        <posx>50</posx>
+        <width>1200</width>
+        <height>240</height>
+        <scrolltime>200</scrolltime>
+        <onup>56</onup>
+        <ondown>56</ondown>
+        <onright>9009</onright>
+        <onleft>Skin.ToggleSetting(HideMusicNowPlayingInfo)</onleft>
+
+        <itemlayout width="150" height="240">
+          <control type="image">
+            <posx>10</posx>
+            <posy>30</posy>
+            <width>130</width>
+            <height>240</height>
+            <texture diffuse="Grey.png"/>
+            <include>ListViewThumb</include>
+          </control>
+        </itemlayout>
+
+        <focusedlayout width="210" height="240">
+          <control type="image">
+            <posx>10</posx>
+            <posy>30</posy>
+            <width>130</width>
+            <height>240</height>
+            <include>ListViewThumb</include>
+            <animation effect="zoom" time="200" delay="100" tween="circle" easing="in" end="-30,-25,210,340">Focus</animation>
+            <animation effect="zoom" time="100" delay="0" tween="cubic" easing="out" start="-30,-25,210,340">Unfocus</animation>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+  </include>
+
+  <include name="HighList">
+    <control type="group">
+      <posx>-10</posx>
+      <posy>564</posy>
+
+      <control type="group">
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,500" end="0,0">WindowOpen</animation>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,500" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,500">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,500">Hidden</animation>
+        <include>HideWhenLowerDialogActive</include>
+        <include>HighListViewVisible</include>
+
+        <include>MediaLeftContentType</include>
+        <include>MediaRightMediaCount</include>
+
+        <control type="image">
+          <posy>-206</posy>
+          <width>1300</width>
+          <height>372</height>
+          <include>OverlayArea</include>
+        </control>
+      </control>
+
+      <control type="group">
+        <posx>20</posx>
+        <include>HideWhenLowerDialogActive</include>
+        <include>HighListViewVisible</include>
+        <include>MediaLeftHighOverlayAnim</include>
+
+        <include>LowListThumb</include>
+
+        <control type="group">
+          <description>Plot</description>
+          <posx>10</posx>
+          <posy>-80</posy>
+          <visible>[Container.Content(tvshows) + !Skin.HasSetting(UsePortraitTVThumbs)]</visible>
+
+          <control type="image">
+            <posx>-4</posx>
+            <width>534</width>
+            <height>250</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="textbox">
+            <posx>4</posx>
+            <posy>6</posy>
+            <width>516</width>
+            <height>220</height>
+            <info>ListItem.Plot</info>
+            <include>LowListViewInfoText</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <description>Plot</description>
+          <posx>10</posx>
+          <posy>10</posy>
+          <visible>[Container.Content(episodes) + Skin.HasSetting(ShowPlotInListView)]</visible>
+
+          <control type="image">
+            <posx>-4</posx>
+            <width>367</width>
+            <height>160</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="textbox">
+            <posx>4</posx>
+            <posy>6</posy>
+            <width>351</width>
+            <height>130</height>
+            <info>ListItem.Plot</info>
+            <include>LowListViewInfoText</include>
+          </control>
+        </control>
+      </control>
+
+      <control type="group">
+        <posx>380</posx>
+        <posy>-316</posy>
+        <include>HighListViewVisible</include>
+        <include>HideWhenLowerDialogActive</include>
+        <include>MediaLeftHighOverlayAnim</include>
+        <visible allowhiddenfocus="true">true</visible>
+
+        <control type="list" id="57">
+          <viewtype label="High List">list</viewtype>
+          <onup>57</onup>
+          <ondown>57</ondown>
+          <onright>67</onright>
+          <pagecontrol>67</pagecontrol>
+          <height>336</height>
+          <include>ListViewLayout</include>
+        </control>
+
+        <control type="scrollbar" id="67">
+          <posx>590</posx>
+          <posy>115</posy>
+          <height>354</height>
+          <onleft>50</onleft>
+          <onright>9009</onright>
+        </control>
+      </control>
+    </control>
+
+    <control type="group">
+      <posx>630</posx>
+      <posy>350</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,500" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,500" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,500">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,500">Hidden</animation>
+      <include>HighListViewVisible</include>
+      <include>HideWhenLowerDialogActive</include>
+
+      <control type="group">
+        <posx>360</posx>
+        <posy>20</posy>
+
+        <control type="image">
+          <posy>-12</posy>
+          <width>300</width>
+          <height>372</height>
+          <include>OverlayArea</include>
+        </control>
+
+        <include>LowListItemInfo</include>
+
+        <control type="group">
+          <description>Plot</description>
+
+          <control type="textbox">
+            <posx>14</posx>
+            <posy>90</posy>
+            <height>240</height>
+            <info>Container.ShowPlot</info>
+            <include>LowListViewInfoText</include>
+            <visible>Container.Content(seasons)</visible>
+          </control>
+
+<!--
+          <control type="textbox">
+            <posx>14</posx>
+            <posy>140</posy>
+            <height>190</height>
+            <info>ListItem.Plot</info>
+            <include>LowListViewInfoText</include>
+            <visible>Container.Content(episodes)</visible>
+          </control>
+-->
+        </control>
+
+        <control type="group">
+          <description>Resolution/Aspect flags</description>
+          <posx>16</posx>
+          <posy>-88</posy>
+          <visible>Container.Content(episodes)</visible>
+          <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+
+          <include>VideoResFlags</include>
+
+          <control type="group">
+            <posx>-78</posx>
+            <posy>34</posy>
+            <include>VideoAspectFlags</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <posy>142</posy>
+          <animation effect="slide" time="0" start="0,0" end="0,46" condition="[Container.Content(tvshows) | Container.Content(episodes)] + Control.IsVisible(57) + ![IsEmpty(ListItem.MPAA) | IsEmpty(ListItem.Studio)]">Conditional</animation>
+
+          <control type="group">
+            <description>Video/Audio Flags</description>
+            <posx>30</posx>
+            <posy>-68</posy>
+            <visible>[Container.Content(movies)]</visible>
+            <animation effect="zoom" start="100" end="75" time="0" condition="true">Conditional</animation>
+
+            <include>VideoResFlags</include>
+
+            <control type="group">
+              <posx>21</posx>
+              <include>VideoAspectFlags</include>
+            </control>
+          </control>
+
+          <control type="group">
+            <description>Runtime</description>
+            <visible>[Container.Content(movies)]</visible>
+
+            <control type="label">
+              <label>2050</label>
+              <include>LowListViewInfoCaption</include>
+            </control>
+            <control type="label">
+              <width>110</width>
+              <info>ListItem.Duration</info>
+              <include>LowListViewInfoDetails</include>
+            </control>
+          </control>
+
+          <control type="group">
+            <description>Genre</description>
+            <visible>[Container.Content(tvshows)]</visible>
+
+            <control type="label">
+              <label>515</label>
+              <include>LowListViewInfoCaption</include>
+            </control>
+            <control type="label">
+              <info>ListItem.Genre</info>
+              <include>LowListViewInfoDetails</include>
+            </control>
+          </control>
+
+          <control type="group">
+            <description>Writer</description>
+            <visible>[Container.Content(episodes)]</visible>
+
+            <control type="label">
+              <label>20417</label>
+              <include>LowListViewInfoCaption</include>
+            </control>
+            <control type="label">
+              <info>ListItem.Writer</info>
+              <include>LowListViewInfoDetails</include>
+            </control>
+          </control>
+
+          <control type="group">
+            <posy>50</posy>
+
+            <control type="group">
+              <description>Director</description>
+              <visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+
+              <control type="label">
+                <label>20339</label>
+                <include>LowListViewInfoCaption</include>
+              </control>
+              <control type="label">
+                <info>ListItem.Director</info>
+                <include>LowListViewInfoDetails</include>
+              </control>
+            </control>
+
+            <control type="group">
+              <description>Network</description>
+              <visible>Container.Content(tvshows)</visible>
+
+              <control type="label">
+                <label>705</label>
+                <include>LowListViewInfoCaption</include>
+              </control>
+              <control type="label">
+                <info>ListItem.Studio</info>
+                <include>LowListViewInfoDetails</include>
+              </control>
+            </control>
+
+            <control type="group">
+              <posy>50</posy>
+
+              <control type="group">
+                <description>Writer</description>
+                <visible>[Container.Content(movies)]</visible>
+
+                <control type="label">
+                  <label>20417</label>
+                  <include>LowListViewInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.Writer</info>
+                  <include>LowListViewInfoDetails</include>
+                </control>
+              </control>
+
+              <control type="group">
+                <description>MPAA Rating</description>
+                <visible>Container.Content(tvshows)</visible>
+
+                <control type="label">
+                  <label>20074</label>
+                  <include>LowListViewInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.MPAA</info>
+                  <include>LowListViewInfoDetails</include>
+                </control>
+              </control>
+
+              <control type="group">
+                <description>Runtime</description>
+                <visible>[Container.Content(episodes)]</visible>
+
+                <control type="label">
+                  <label>2050</label>
+                  <include>LowListViewInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.Duration</info>
+                  <include>LowListViewInfoDetails</include>
+                </control>
+              </control>
+
+              <control type="group">
+                <posy>50</posy>
+
+                <control type="group">
+                  <description>Genre</description>
+                  <visible>[Container.Content(movies)]</visible>
+
+                  <control type="label">
+                    <label>515</label>
+                    <include>LowListViewInfoCaption</include>
+                  </control>
+                  <control type="label">
+                    <info>ListItem.Genre</info>
+                    <include>LowListViewInfoDetails</include>
+                  </control>
+                </control>
+
+                <control type="group">
+                  <description>Runtime</description>
+                  <visible>Container.Content(tvshows) + [IsEmpty(ListItem.MPAA) + IsEmpty(ListItem.Studio)]</visible>
+  
+                  <control type="label">
+                    <label>2050</label>
+                    <include>LowListViewInfoCaption</include>
+                  </control>
+                  <control type="label">
+                    <info>ListItem.Duration</info>
+                    <include>LowListViewInfoDetails</include>
+                  </control>
+                </control>
+              </control>
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+  </include>
+
+</includes>

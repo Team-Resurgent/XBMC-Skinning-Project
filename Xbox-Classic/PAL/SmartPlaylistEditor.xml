@@ -1,0 +1,310 @@
+<window id="129">
+	<defaultcontrol always="true">22</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<controls>
+		<control type="image" id="1">
+			<description>Black Back</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>black.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<include>XBMC_Logo_Image</include>
+		<control type="label">
+			<description>heading label</description>
+			<posx>242</posx>
+			<posy>70</posy>
+			<width>450</width>
+			<label>21432</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="group" id="9001">
+			<include>Slide_From_Left_Animation</include>
+			<posx>45</posx>
+			<control type="image">
+				<description>panel</description>
+				<posx>0</posx>
+				<posy>115</posy>
+				<height>250</height>
+				<width>150</width>
+				<texture>panel.png</texture>
+			</control>
+			<control type="image">
+				<description>Middle panel Bar</description>
+				<posx>0</posx>
+				<posy>190</posy>
+				<height>20</height>
+				<width>150</width>
+				<texture>middle-bar.png</texture>
+			</control>
+			<control type="button" id="20">
+				<description>Ok Button</description>
+				<posx>5</posx>
+				<posy>120</posy>
+				<label>190</label>
+				<onup>21</onup>
+				<onleft>9002</onleft>
+				<onright>9002</onright>
+				<ondown>21</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="21">
+				<description>Cancel Button</description>
+				<posx>5</posx>
+				<posy>157</posy>
+				<label>222</label>
+				<onup>20</onup>
+				<onleft>9002</onleft>
+				<onright>9002</onright>
+				<ondown>20</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+		<control type="group" id="9002">
+			<posx>200</posx>
+			<posy>120</posy>
+			<include>Slide_From_Right_Animation</include>
+			<control type="spincontrolex" id="22">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>480</width>
+				<label>467</label>
+				<font>font12</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onright>9001</onright>
+				<onleft>9001</onleft>
+				<onup>18</onup>
+				<ondown>12</ondown>
+			</control>
+			<control type="label" id="0">
+				<description>Name Label</description>
+				<posx>10</posx>
+				<posy>40</posy>
+				<width>420</width>
+				<font>font12</font>
+				<label>21433</label>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="button" id="12">
+				<description>Name Button</description>
+				<posx>0</posx>
+				<posy>65</posy>
+				<width>480</width>
+				<height>32</height>
+				<font>font12</font>
+				<textoffsetx>12</textoffsetx>
+				<textwidth>380</textwidth>
+				<aligny>center</aligny>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>-</label>
+				<onup>22</onup>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<ondown>10</ondown>
+			</control>
+			<control type="image" id="301">
+				<description>separator image</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>480</width>
+				<height>5</height>
+				<texture>kai-divider.png</texture>
+			</control>
+			<control type="label">
+				<description>rules label</description>
+				<posx>10</posx>
+				<posy>105</posy>
+				<width>420</width>
+				<align>left</align>
+				<font>font12</font>
+				<label>21434</label>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="list" id="10">
+				<description>Rules List Control</description>
+				<posx>0</posx>
+				<posy>130</posy>
+				<width>370</width>
+				<height>148</height>
+				<onup>12</onup>
+				<onleft>9001</onleft>
+				<onright>9000</onright>
+				<ondown>16</ondown>
+				<itemlayout width="370" height="37">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>370</width>
+						<height>33</height>
+						<texture>list-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>33</height>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<selectedcolor>green</selectedcolor>
+						<font>font12</font>
+					</control>
+				</itemlayout>
+				<focusedlayout width="370" height="37">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>370</width>
+						<height>33</height>
+						<texture>list-focus.png</texture>
+						<visible>Control.HasFocus(10)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>370</width>
+						<height>33</height>
+						<texture>list-nofocus.png</texture>
+						<visible>!Control.HasFocus(10)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>33</height>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<selectedcolor>green</selectedcolor>
+						<font>font12</font>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group" id="9000">
+				<control type="button" id="13">
+					<description>Add Rule Button</description>
+					<posx>380</posx>
+					<posy>130</posy>
+					<width>100</width>
+					<font>font12</font>
+					<label>15019</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<onup>17</onup>
+					<onleft>10</onleft>
+					<onright>9001</onright>
+					<ondown>14</ondown>
+				</control>
+				<control type="button" id="14">
+					<description>Remove Rule Button</description>
+					<posx>380</posx>
+					<posy>167</posy>
+					<width>100</width>
+					<font>font12</font>
+					<label>1210</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<onup>13</onup>
+					<onleft>10</onleft>
+					<onright>9001</onright>
+					<ondown>15</ondown>
+				</control>
+				<control type="button" id="15">
+					<description>Edit Rule Button</description>
+					<posx>380</posx>
+					<posy>204</posy>
+					<width>100</width>
+					<font>font12</font>
+					<label>21435</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<onup>14</onup>
+					<onleft>10</onleft>
+					<onright>9001</onright>
+					<ondown>16</ondown>
+				</control>
+			</control>
+			<control type="image" id="301">
+				<description>separator image</description>
+				<posx>0</posx>
+				<posy>285</posy>
+				<width>480</width>
+				<height>5</height>
+				<texture>kai-divider.png</texture>
+			</control>
+			<control type="spincontrolex" id="16">
+				<posx>0</posx>
+				<posy>290</posy>
+				<width>480</width>
+				<label>21424</label>
+				<font>font12</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onright>9001</onright>
+				<onleft>9001</onleft>
+				<onup>10</onup>
+				<ondown>17</ondown>
+			</control>
+			<control type="spincontrolex" id="17">
+				<posx>0</posx>
+				<posy>330</posy>
+				<width>480</width>
+				<label>21427</label>
+				<font>font12</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onright>9001</onright>
+				<onleft>9001</onleft>
+				<onup>16</onup>
+				<ondown>18</ondown>
+			</control>
+			<control type="spincontrolex" id="18">
+				<posx>0</posx>
+				<posy>370</posy>
+				<width>350</width>
+				<label>21429</label>
+				<font>font12</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onright>19</onright>
+				<onleft>9001</onleft>
+				<onup>17</onup>
+				<ondown>22</ondown>
+			</control>
+			<control type="togglebutton" id="19">
+				<posx>360</posx>
+				<posy>370</posy>
+				<width>120</width>
+				<height>32</height>
+				<font>font12</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<alttexturefocus>button-focus.png</alttexturefocus>
+				<alttexturenofocus>button-nofocus.png</alttexturenofocus>
+				<label>21431</label>
+				<altlabel>21430</altlabel>
+				<onright>9001</onright>
+				<onleft>18</onleft>
+				<onup>17</onup>
+				<ondown>22</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

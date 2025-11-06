@@ -1,0 +1,130 @@
+<!-- shows now playing music if music is playing during slideshow -->
+<window id="2007">
+
+	<defaultcontrol>2</defaultcontrol>
+
+	<controls>
+	
+		<!-- pause image -->
+		<control type="group">
+			<visible>Control.IsVisible(13)</visible>
+		
+			<posx>1190</posx>
+			<posy>20</posy>
+			
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>64</width>
+				<height>64</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- id 13 required to activate image on slideshow pause -->
+			<control type="image" id="13">
+				<texture>osd-pause-nf.png</texture>
+				<width>32</width>
+				<height>32</height>
+				<posx>16</posx>
+				<posy>16</posy>
+			</control>
+		</control>
+
+		<!-- music overlay -->
+		<control type="group">
+		
+			<visible>Player.ShowInfo + Player.HasMedia</visible>
+
+			<posx>20</posx>
+			<posy>500</posy>
+
+			<animation effect="slide" start="-800,0" end="0,0" time="600">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-800,0" time="300">WindowClose</animation>
+		
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>620</width>
+				<height>200</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- album cover -->
+			<control type="image">
+				<info>MusicPlayer.Cover</info>
+				<width>160</width>
+				<height>160</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<!-- title -->
+			<control type="label">
+				<label>title</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>20</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Title]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>20</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- artist -->
+			<control type="label">
+				<label>artist</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>60</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>60</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- album -->
+			<control type="label">
+				<label>album</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>100</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Album]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>100</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- time -->
+			<control type="label">
+				<label>time</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>140</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>140</posy>
+				<textcolor>overlay-time</textcolor>
+			</control>	
+		</control>
+
+	</controls>
+
+</window>

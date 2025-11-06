@@ -1,0 +1,170 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Slider_Glow_Common</include>
+		<control type="list" id="2">
+			<posx>0</posx>
+			<posy>110</posy>
+			<width>720</width>
+			<height>402</height>
+			<onleft>9000</onleft>
+			<onright>9002</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="image">
+					<posx>50</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>4</posy>
+					<width>620</width>
+					<height>22</height>
+					<font>font16</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>700</posx>
+					<posy>4</posy>
+					<width>500</width>
+					<height>22</height>
+					<font>font16</font>
+					<align>right</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="image">
+					<width>720</width>
+					<height>46</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>ListItem_Focus.png</texture>
+					<visible>Control.HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<posx>50</posx>
+					<posy>7</posy>
+					<width>36</width>
+					<height>36</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>8</posy>
+					<width>620</width>
+					<height>22</height>
+					<font>font22</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>700</posx>
+					<posy>8</posy>
+					<width>500</width>
+					<height>22</height>
+					<font>font22</font>
+					<align>right</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group" id="9002">
+			<posx>780</posx>
+			<posy>540</posy>
+			<animation effect="slide" time="150" start="0,0" end="-150,0">focus</animation>
+			<animation effect="slide" time="150" start="-150,0" end="0,0">unfocus</animation>
+			<control type="image">
+				<description>Scroller Highlight</description>
+				<posx>-100</posx>
+				<posy>-25</posy>
+				<width>200</width>
+				<height>60</height>
+				<texture>Scroller_Focus.png</texture>
+			</control>
+			<control type="spincontrol" id="90">
+				<posx>10</posx>
+				<posy>0</posy>
+				<subtype>page</subtype>
+				<showonepage>true</showonepage>
+				<onleft>2</onleft>
+				<onright>9000</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+		</control>
+		<control type="group" id="9000">
+			<description>Sidebar group</description>
+			<posx>-160</posx>
+			<animation effect="slide" time="100" start="160,0">unfocus</animation>
+			<animation effect="slide" time="100" end="160,0">focus</animation>
+			<control type="image">
+				<description>Sidebar Back image</description>
+				<posx>-145</posx>
+				<posy>0</posy>
+				<width>425</width>
+				<height>577</height>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="radiobutton" id="4">
+				<description>Profiles Button</description>
+				<posy>120</posy>
+				<label>20096</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<align>right</align>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+			</control>
+			<include>SlideBarClock</include>
+			<include>SlideBarWeather</include>
+		</control>
+		<control type="image">
+			<description>Top Bar BACK</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>105</height>
+			<texture>TBSettings.png</texture>
+		</control>
+		<control type="image">
+			<description>Top Bar FRONT</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>116</height>
+			<texture>Topbar_Front.png</texture>
+		</control>
+		<control type="label">
+			<description>Main Title text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>13200</label>
+			<font>font20</font>
+			<visible>!Skin.HasSetting(No_Title_Text)</visible>
+		</control>
+		<include>MusicNowPlayingDisplay</include>
+	</controls>
+</window>

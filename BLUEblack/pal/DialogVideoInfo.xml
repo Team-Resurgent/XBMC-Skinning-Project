@@ -1,0 +1,261 @@
+<window>
+  <id>2003</id>
+  <defaultcontrol>5</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+    </control>    
+    <control>
+      <description>Movie Title value</description>
+      <type>label</type>
+      <id>20</id>
+      <posX>55</posX>
+      <posY>520</posY>
+      <label>-</label>
+      <font>font18</font>
+	<control>
+		<description>title image</description>
+		<type>image</type>
+		<id>1</id>
+		<posX>0</posX>
+		<posY>0</posY>
+		<width>200</width>
+		<height>150</height>
+		<texture>title-info.png</texture>
+	</control>  
+    </control>
+
+    <control>
+      <description>Director txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>100</posY>
+      <label>199</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>
+    <control>
+      <description>Writing Credits txt </description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>120</posY>
+      <label>200</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>
+    <control>
+      <description>Genre txt </description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>140</posY>
+      <label>174</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>
+    <control>
+      <description>Year </description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>160</posY>
+      <label>201</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>
+    <control>
+      <description>TagLine txt </description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>180</posY>
+      <label>202</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>
+    <control>
+      <description>PlotOutline txt </description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>200</posY>
+      <label>203</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>
+    <control>
+      <description>Rating txt </description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>220</posY>
+      <label>204</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>    
+    <control>
+      <description>Votes txt </description>
+      <type>label</type>
+      <id>1</id>
+      <posX>100</posX>
+      <posY>240</posY>
+      <label>205</label>
+      <font>font13</font>
+      <textcolor>70FFFFFF</textcolor>
+    </control>    
+
+    <control>
+      <description>Director value</description>
+      <type>label</type>
+      <id>21</id>
+      <posX>240</posX>
+      <posY>100</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+    <control>
+      <description>Writing Credits  value</description>
+      <type>label</type>
+      <id>22</id>
+      <posX>240</posX>
+      <posY>120</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+    <control>
+      <description>Genre value</description>
+      <type>label</type>
+      <id>23</id>
+      <posX>240</posX>
+      <posY>140</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+    <control>
+      <description>Year value</description>
+      <type>label</type>
+      <id>24</id>
+      <posX>240</posX>
+      <posY>160</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+    <control>
+      <description>TagLine value</description>
+      <type>fadelabel</type>
+      <id>25</id>
+      <posX>240</posX>
+      <posY>180</posY>
+      <width>400</width>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+    <control>
+      <description>PlotOutline value</description>
+      <type>fadelabel</type>
+      <id>26</id>
+      <posX>240</posX>
+      <posY>200</posY>
+      <width>400</width>
+      <label>-</label>
+      <font>font13</font>
+    </control>    
+    <control>
+      <description>Rating value</description>
+      <type>label</type>
+      <id>27</id>
+      <posX>240</posX>
+      <posY>220</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+    <control>
+      <description>Votes value</description>
+      <type>label</type>
+      <id>28</id>
+      <posX>240</posX>
+      <posY>240</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+   
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>3</id>
+      <posX>100</posX>
+      <posY>275</posY>
+      <width>100</width>
+      <height>140</height>
+      <texture>-</texture>
+      <colorkey>FFFF00FF</colorkey>
+      <colordiffuse>20FFFFFF</colordiffuse>
+    </control>
+
+    		<control>
+      		<description>Textarea</description>
+      		<type>textbox</type>
+      		<id>4</id>
+      		<onleft>5</onleft>
+      		<onright>5</onright>
+      		<onup>5</onup>
+      		<ondown>5</ondown>
+     		</control>
+     		<control>
+			<description>Cast/Plot</description>
+			<type>button</type>
+			<id>5</id>
+			<posX>45</posX>
+			<posY>420</posY>
+			<width>151</width>
+			<label>206</label>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+		</control>
+	  	<control>
+			<description>Refresh</description>
+			<type>button</type>
+			<id>6</id>
+			<posX>45</posX>
+			<posY>452</posY>
+			<width>151</width>
+			<label>184</label>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>5</onup>
+			<ondown>7</ondown>
+		</control>
+		<control>
+			<description>Disc</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>55</posX>
+			<posY>484</posY>
+			<label>427</label>
+		</control>
+		<control>
+			<description>Disc select </description>
+			<type>spincontrol</type>
+			<id>7</id>
+			<posX>150</posX>
+			<posY>488</posY>
+			<reverse>yes</reverse>
+			<onup>6</onup>
+			<ondown>5</ondown>
+			<onleft>4</onleft>
+			<onright>4</onright>
+		</control>
+ 
+  </controls>
+</window>

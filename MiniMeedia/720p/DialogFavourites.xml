@@ -1,0 +1,61 @@
+<window type="dialog" id="134">
+  <defaultcontrol always="true">450</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <include>HorizWideDialogPos</include>
+      <include>VideoOSDSlideLeft</include>
+
+      <control type="image">
+        <description>Background Image</description>
+        <posx>-20</posx>
+        <include>HorizWideDialogBGDims</include>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="label" id="900">
+        <description>Favourites</description>
+        <posy>10</posy>
+        <label>$LOCALIZE[1036]</label>
+        <include>OMTitleItem</include>
+      </control>
+
+      <control type="list" id="450">
+        <posx>-8</posx>
+        <posy>60</posy>
+        <width>HorizWideDialogTextWidth</width>
+        <height>600</height>
+        <onup>450</onup>
+        <ondown>450</ondown>
+
+        <itemlayout width="HorizWideDialogTextWidth" height="30">
+          <control type="label">
+            <posx>8</posx>
+            <width>504</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>Unfocused</textcolor>
+          </control>
+        </itemlayout>
+
+        <focusedlayout width="HorizWideDialogTextWidth" height="30">
+          <control type="image">
+            <width>HorizWideDialogTextWidth</width>
+            <height>30</height>
+            <include>OverlayArea</include>
+          </control>
+
+          <control type="label">
+            <posx>8</posx>
+            <width>504</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+
+  </controls>
+  
+</window>

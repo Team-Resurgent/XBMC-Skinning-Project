@@ -1,0 +1,193 @@
+﻿<window id="2">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="multiimage">
+			<posx>50</posx>
+			<posy>30</posy>
+			<width>160</width>
+			<height>160</height>
+			<imagepath>mypics</imagepath>
+			<timeperimage>40</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<visible>!player.hasmedia</visible>
+			<animation effect="fade" time="300">VisibleChange</animation>
+		</control>
+		<include>CTRLsections1</include>
+		<control type="label">
+			<description>section text label</description>
+			<include>ContainerHeader</include>
+			<include>ContainerFade</include>
+			<label>1</label>
+		</control>
+		<!-- List Items when not playing -->
+		<control type="image" id="0">
+			<description>start logo</description>
+			<posx>40</posx>
+			<posy>270</posy>
+			<width>180</width>
+			<height>210</height>
+			<texture>folder-pic-nofocus.png</texture>
+			<visible>[!system.idletime(5) + control.hasfocus(50) + !player.hasaudio] | [player.hasaudio + !system.idletime(5) + control.hasfocus(50)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>image</description>
+			<posx>57</posx>
+			<posy>308</posy>
+			<width>146</width>
+			<height>112</height>
+			<visible>[!system.idletime(5) + control.hasfocus(50) + !player.hasaudio] | [player.hasaudio + !system.idletime(5) + control.hasfocus(50)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<texture>-</texture>
+			<info>ListItem.Thumb</info>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<include>CTRLsections3</include>
+		<control type="image">
+			<description>image</description>
+			<posx>70</posx>
+			<posy>275</posy>
+			<width>125</width>
+			<height>140</height>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<texture>-</texture>
+			<info>musicplayer.cover</info>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="group">
+			<control type="button" id="2">
+				<description>view as icons button</description>
+				<posx>45</posx>
+				<posy>220</posy>
+				<label>100</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>32</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="3">
+				<description>sort by button</description>
+				<posx>45</posx>
+				<posy>257</posy>
+				<label>103</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>6</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(3) | control.hasfocus(4) | control.hasfocus(6) | control.hasfocus(7) | control.hasfocus(9) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-37" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>sort asc</description>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(3) | control.hasfocus(4) | control.hasfocus(6) | control.hasfocus(7) | control.hasfocus(9) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-37" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="6">
+				<description>slideshow button</description>
+				<posx>45</posx>
+				<posy>294</posy>
+				<label>108</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>7</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(3) | control.hasfocus(4) | control.hasfocus(6) | control.hasfocus(7) | control.hasfocus(9) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-74" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="7">
+				<description>recursive slideshow</description>
+				<posx>45</posx>
+				<posy>331</posy>
+				<label>361</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>9</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(3) | control.hasfocus(4) | control.hasfocus(6) | control.hasfocus(7) | control.hasfocus(9) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-111" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="radiobutton" id="9">
+				<description>randomize button</description>
+				<posx>45</posx>
+				<posy>368</posy>
+				<label>13319</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>7</onup>
+				<ondown>31</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(3) | control.hasfocus(4) | control.hasfocus(6) | control.hasfocus(7) | control.hasfocus(9) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-148" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="31">
+				<description>Bookmark button 1</description>
+				<posx>45</posx>
+				<posy>405</posy>
+				<label>$INFO[Skin.String(Picturesbookmark1)]</label>
+				<onclick>ActivateWindow(MyPictures,$INFO[Skin.String(Picturesbookmark1)])</onclick>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9</onup>
+				<ondown>32</ondown>
+				<visible>Skin.HasSetting(bookmarkbuttons) + Skin.HasSetting(PicturesBM1)</visible>
+				<visible allowhiddenfocus="true">[!control.hasfocus(50) + !control.hasfocus(51)] | [control.hasfocus(51) + !player.hasaudio] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-185" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="0">
+				<description>Pictures Bookmark 1 String NOT SET label</description>
+				<posx>50</posx>
+				<posy>405</posy>
+				<width>150</width>
+				<label>20078</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>[Skin.HasSetting(bookmarkbuttons) + !Skin.String(PicturesBookmark1)] + Skin.HasSetting(PicturesBM1)</visible>
+				<visible allowhiddenfocus="true">[!control.hasfocus(50) + !control.hasfocus(51)] | [control.hasfocus(51) + !player.hasaudio] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-185" acceleration="1">VisibleChange</animation>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control type="button" id="32">
+				<description>Bookmark button 2</description>
+				<posx>45</posx>
+				<posy>442</posy>
+				<label>$INFO[Skin.String(Picturesbookmark2)]</label>
+				<onclick>ActivateWindow(MyPictures,$INFO[Skin.String(Picturesbookmark2)])</onclick>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>31</onup>
+				<ondown>2</ondown>
+				<visible>Skin.HasSetting(bookmarkbuttons) + Skin.HasSetting(PicturesBM2)</visible>
+				<visible allowhiddenfocus="true">[!control.hasfocus(50) + !control.hasfocus(51)] | [control.hasfocus(51) + !player.hasaudio] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-222" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="0">
+				<description>Pictures Bookmark 2 String NOT SET label</description>
+				<posx>45</posx>
+				<posy>442</posy>
+				<width>150</width>
+				<label>20078</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>[Skin.HasSetting(bookmarkbuttons) + !Skin.String(PicturesBookmark2)] + Skin.HasSetting(PicturesBM2)</visible>
+				<visible allowhiddenfocus="true">[!control.hasfocus(50) + !control.hasfocus(51)] | [control.hasfocus(51) + !player.hasaudio] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-222" acceleration="1">VisibleChange</animation>
+				<textcolor>60ffffff</textcolor>
+			</control>
+		</control>
+
+		<include>ListView</include>
+		<include>ListView2</include>
+	</controls>
+</window> 

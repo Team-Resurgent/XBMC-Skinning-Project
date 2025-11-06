@@ -1,0 +1,199 @@
+<!-- set folder contents / choose scraper -->
+<window id="132">
+
+	<defaultcontrol>3</defaultcontrol>
+
+	<controls>
+
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+		
+		<control type="group">
+			
+			<posx>320</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>640</width>
+				<height>540</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label">
+				<label>Set Folder Content</label>
+				<width>600</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+			
+			
+			<!-- scraper image -->
+			<control type="image">
+				<texture border="4">dialog-back-nf.png</texture>
+				<width>200</width>
+				<height>211</height>
+				<posx>20</posx>
+				<posy>60</posy>
+			</control>
+			<control type="image">
+				<texture>$INFO[ListItem.Icon]</texture>
+				<width>180</width>
+				<height>190</height>
+				<posx>30</posx>
+				<posy>70</posy>
+				<aspectratio>keep</aspectratio>
+			</control>
+			
+			<!-- content select -->
+			<control type="spincontrolex" id="3">
+				<height>20</height>
+				<posx>320</posx>
+				<posy>20</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+				<onup>29</onup>
+				<ondown>4</ondown>
+				<onleft>29</onleft>
+				<onright>29</onright>
+			</control>
+			
+			<!-- scraper list -->
+			<control type="list" id="4">
+				<width>350</width>
+				<height>215</height>
+				<posx>230</posx>
+				<posy>60</posy>
+				<onup>3</onup>
+				<ondown>5</ondown>
+				<onleft>5</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="43">
+					<control type="image">
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>350</width>
+						<height>39</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>330</width>
+						<height>39</height>
+						<posx>10</posx>
+						<font>dialog</font>
+						<textcolor>type-dialog-dark</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="43">
+					<control type="image">
+						<visible>Control.HasFocus(4)</visible>
+						<texture border="4">dialog-back.png</texture>
+						<width>350</width>
+						<height>39</height>
+					</control>
+					<control type="image">
+						<visible>!Control.HasFocus(4)</visible>
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>350</width>
+						<height>39</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>330</width>
+						<height>39</height>
+						<posx>10</posx>
+						<font>dialog</font>
+						<textcolor>type-dialog</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<posx>590</posx>
+				<posy>60</posy>
+				<control type="image">
+					<texture>dialog-back-nf.png</texture>
+					<width>30</width>
+					<height>211</height>
+				</control>
+				<control type="scrollbar" id="60">
+					<width>30</width>
+					<height>211</height>
+					<onleft>4</onleft>
+					<onright>5</onright>
+					<showonepage>false</showonepage>
+				</control>		
+			</control>
+			
+			<!-- options list -->
+			<control type="image">
+				<texture border="4">dialog-back-nf.png</texture>
+				<width>600</width>
+				<height>190</height>
+				<posx>20</posx>
+				<posy>280</posy>
+			</control>
+			<control type="grouplist" id="5">
+				<width>580</width>
+				<height>180</height>
+				<posx>30</posx>
+				<posy>290</posy>
+				<itemgap>4</itemgap>
+				<onup>4</onup>
+				<ondown>28</ondown>
+				<onleft>5</onleft>
+				<onright>5</onright>
+			</control>
+			<!-- default button -->
+			<control type="button" id="7">
+				<height>40</height>
+				<posx>530</posx>
+				<posy>150</posy>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<!-- default radiobutton -->
+			<control type="radiobutton" id="8">
+				<height>40</height>
+				<posx>530</posx>
+				<posy>150</posy>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			
+			<!-- settings button -->
+			<control type="button" id="6">
+				<label>Settings</label>
+				<posx>20</posx>
+				<posy>480</posy>
+				<onleft>28</onleft>
+				<onright>29</onright>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+			<!-- cancel button -->
+			<control type="button" id="29">
+				<label>Cancel</label>
+				<posx>310</posx>
+				<posy>480</posy>
+				<onleft>6</onleft>
+				<onright>28</onright>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+			<!-- ok button -->
+			<control type="button" id="28">
+				<label>Ok</label>
+				<posx>470</posx>
+				<posy>480</posy>
+				<onleft>29</onleft>
+				<onright>6</onright>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+		</control>
+	
+	</controls>
+	
+</window>

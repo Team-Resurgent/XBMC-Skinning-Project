@@ -1,0 +1,28 @@
+﻿# SVN to Git author mapping for XBMC SourceForge repo
+# Format:
+# svnusername = Full Name <email@example.com>
+
+blackbolt = blackbolt <blackbolt@example.com>
+blittan = blittan <blittan@example.com>
+Broads = Broads <Broads@example.com>
+ceomr = ceomr <ceomr@example.com>
+CHI3f = CHI3f <CHI3f@example.com>
+darkdonno = darkdonno <darkdonno@example.com>
+djdafreund = djdafreund <djdafreund@example.com>
+jeroen- = jeroen- <jeroen-@example.com>
+jezz_x = jezz_x <jezz_x@example.com>
+jmarshallnz = jmarshallnz <jmarshallnz@example.com>
+juju0 = juju0 <juju0@example.com>
+justmed = justmed <justmed@example.com>
+jwvanderbeck = jwvanderbeck <jwvanderbeck@example.com>
+jzbruno = jzbruno <jzbruno@example.com>
+macgyver1138a = macgyver1138a <macgyver1138a@example.com>
+manturafs = manturafs <manturafs@example.com>
+modhack2 = modhack2 <modhack2@example.com>
+ninet9mustang = ninet9mustang <ninet9mustang@example.com>
+sharpe2 = sharpe2 <sharpe2@example.com>
+skunkm0nkee = skunkm0nkee <skunkm0nkee@example.com>
+smokehead = smokehead <smokehead@example.com>
+spiff_ = spiff_ <spiff_@example.com>
+teamblackbolt = teamblackbolt <teamblackbolt@example.com>
+Wir3d = Wir3d <Wir3d@example.com>

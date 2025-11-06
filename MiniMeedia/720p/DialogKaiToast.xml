@@ -1,0 +1,43 @@
+<window id="107">
+
+  <controls>
+
+    <control type="group">
+      <posx>790</posx>
+      <posy>-10</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-130" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-130" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-130">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-130">Hidden</animation>
+
+      <control type="image">
+        <description>Panel background</description>
+        <width>500</width>
+        <height>90</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="image" id="400">
+        <description>Icon</description>
+        <posx>20</posx>
+        <posy>20</posy>
+        <width>60</width>
+        <height>60</height>
+      </control>
+      
+      <control type="label" id="401">
+        <description>Caption</description>
+        <posy>20</posy>
+        <font>MediumTitleFont</font>
+        <include>KaiDialogText</include>
+      </control>
+
+      <control type="label" id="402">
+        <description>Description</description>
+        <posy>52</posy>
+        <include>KaiDialogText</include>
+      </control>
+    </control>
+
+  </controls>
+</window>

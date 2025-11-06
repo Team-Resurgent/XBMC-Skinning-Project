@@ -1,0 +1,299 @@
+<window id="0">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>Background</include>
+	<include>Guider</include>
+	
+	<control type="group" id="10">
+		<include>CommonView_Home</include>
+
+		<control type="label" id="200">
+			<description>Time and Date Label</description>
+			<posx>694</posx>
+			<posy>35</posy>
+			<label>$INFO[System.Date] | $INFO[System.Time]</label>
+			<align>right</align>
+			<font>font10</font>
+			<include>textcolorlightgrey</include>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<include>Home-Visible</include>
+			<visible>!Skin.HasSetting(Home-Time)</visible>
+		</control>
+		<control type="image">
+			<description>Weather Conditions</description> 
+			<posx>26</posx> 
+			<posy>33</posy> 
+			<width>19</width> 
+			<height>25</height> 
+			<aspectratio>scale</aspectratio>
+			<info>Weather.Conditions</info> 
+			<colordiffuse>98FFFFFFF</colordiffuse>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<visible>Weather.IsFetched</visible>
+			<visible>!Skin.HasSetting(weather)</visible>
+			<visible>!Window.IsActive(114)</visible>
+		</control> 
+		<control type="label">
+			<description>Weather Temperature</description> 
+			<posx>53</posx> 
+			<posy>35</posy> 
+			<info>Weather.Temperature</info> 
+			<font>font10</font> 
+			<align>left</align>
+			<include>textcolorlightgrey</include>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<visible>Weather.IsFetched</visible>
+			<visible>!Skin.HasSetting(weather)</visible>
+			<visible>!Window.IsActive(114)</visible>
+		</control>
+		<control type="label">
+			<description>Weather Location</description> 
+			<posx>86</posx> 
+			<posy>35</posy> 
+			<info>Weather.Location</info> 
+			<font>font10</font> 
+			<align>left</align>
+			<include>textcolorlightgrey</include>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<visible>Weather.IsFetched</visible>
+			<visible>!Skin.HasSetting(weather)</visible>
+			<visible>!Window.IsActive(114)</visible>
+		</control>
+		<control type="rss" id="1">
+			<description>rss feed</description>
+			<posx>0</posx> 
+			<posy>550</posy>			
+			<width>720</width>
+			<font>font13</font>
+			<urlset>1</urlset>
+			<titlecolor>rss</titlecolor>
+			<headlinecolor>white</headlinecolor>
+			<textcolor>rss</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<include>Home-Visible</include>
+			<visible>!Skin.HasSetting(RSS)</visible>
+			<animation effect="fade" start="40" end="40" time="0" condition="true">conditional</animation>
+		</control>
+		<control type="label" id="200">
+			<description>CPU Label</description>
+			<posx>26</posx>
+			<posy>509</posy>
+			<label>CPU</label>
+			<align>left</align>
+			<font>font10</font>
+			<include>textcolorlightgrey</include>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<include>Home-Visible</include>
+			<visible>!Skin.HasSetting(SysStat)</visible>
+		</control>
+		<control type="progress">
+			<description>CPU Indicator</description>
+			<info>bar.cpuusage</info>
+			<visible>true</visible>
+			<posx>50</posx>
+			<posy>513</posy>
+			<width>40</width>
+			<height>9</height>
+			<texturebg>Progress-Back2.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>Progress-Mid3.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture border="10,0,10,0">Progress-Overlay.png</overlaytexture>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<include>Home-Visible</include>
+			<visible>!Skin.HasSetting(SysStat)</visible>
+			<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="label" id="200">
+			<description>MEM Label</description>
+			<posx>96</posx>
+			<posy>509</posy>
+			<label>MEM</label>
+			<align>left</align>
+			<font>font10</font>
+			<include>textcolorlightgrey</include>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<include>Home-Visible</include>
+			<visible>!Skin.HasSetting(SysStat)</visible>
+		</control>
+		<control type="progress">
+			<description>MEM Indicator</description>
+			<info>bar.freememory</info>
+			<visible>true</visible>
+			<posx>124</posx>
+			<posy>513</posy>
+			<width>40</width>
+			<height>9</height>
+			<texturebg>Progress-Back2.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>Progress-Mid3.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture border="10,0,10,0">Progress-Overlay.png</overlaytexture>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<include>Home-Visible</include>
+			<visible>!Skin.HasSetting(SysStat)</visible>
+			<animation effect="fade"  end="30" time="0" condition="true">Conditional</animation>
+		</control>
+
+		<control type="group" id="9001">
+			<orientation>horizontal</orientation>
+			<include>common-FX-1</include>
+			<include>Home-Visible</include>
+			<control type="button" id="100">
+				<description>DVD Button</description>
+				<posx>578</posx>
+				<posy>503</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<onclick>XBMC.PlayDVD</onclick>
+				<texturefocus>Small-Icon-Drive-Focus.png</texturefocus>
+				<texturenofocus>Small-Icon-Drive-NoFocus.png</texturenofocus>
+				<onleft>104</onleft>
+				<onright>101</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+				<visible>System.HasMediaDVD</visible>
+			</control>
+			<control type="image">
+				<description>DVD Button</description>
+				<posx>578</posx>
+				<posy>530</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<texture flipy="true" diffuse="Thumb_Mask.png">Small-Icon-Drive-NoFocus.png</texture>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+				<visible>System.HasMediaDVD</visible>
+			</control>
+			<control type="button" id="101">
+				<description>Settings Button</description>
+				<posx>601</posx>
+				<posy>503</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<onclick>Activatewindow(settings)</onclick>
+				<texturefocus>Small-Icon-Settings-Focus.png</texturefocus>
+				<texturenofocus>Small-Icon-Settings-NoFocus.png</texturenofocus>
+				<onleft>100</onleft>
+				<onright>102</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+			</control>
+			<control type="image">
+				<description>Settings Button</description>
+				<posx>601</posx>
+				<posy>530</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<texture flipy="true" diffuse="Thumb_Mask.png">Small-Icon-Settings-NoFocus.png</texture>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+			</control>
+			<control type="button" id="102">
+				<description>Favourite Button</description>
+				<posx>624</posx>
+				<posy>503</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<onclick>ActivateWindow(favourites)</onclick>
+				<texturefocus>Small-Icon-Favourite-Focus.png</texturefocus>
+				<texturenofocus>Small-Icon-Favourite-NoFocus.png</texturenofocus>
+				<onleft>101</onleft>
+				<onright>103</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+			</control>
+			<control type="image">
+				<description>Favourite Button</description>
+				<posx>624</posx>
+				<posy>530</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<texture flipy="true" diffuse="Thumb_Mask.png">Small-Icon-Favourite-NoFocus.png</texture>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+			</control>
+			<control type="button" id="103">
+				<description>ShutDown Button</description>
+				<posx>647</posx>
+				<posy>503</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<texturefocus>Small-Icon-Quit-Focus.png</texturefocus>
+				<texturenofocus>Small-Icon-Quit-NoFocus.png</texturenofocus>
+				<onleft>102</onleft>
+				<onright>104</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+			</control>
+			<control type="image">
+				<description>ShutDown Button</description>
+				<posx>647</posx>
+				<posy>530</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<texture flipy="true" diffuse="Thumb_Mask.png">Small-Icon-Quit-NoFocus.png</texture>
+				<include>common-fade-home</include>
+				<visible>!Skin.HasSetting(Home-Button)</visible>
+			</control>
+			<control type="button" id="104">
+				<description>Info Button</description>
+				<posx>670</posx>
+				<posy>503</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<onclick>Skin.ToggleSetting(weather)</onclick>
+				<onclick>Skin.ToggleSetting(Home-Time)</onclick>
+				<onclick>Skin.ToggleSetting(SysStat)</onclick>
+				<onclick>Skin.ToggleSetting(RSS)</onclick>
+				<onclick>Skin.ToggleSetting(Home-Button)</onclick>
+				<texturefocus>Small-Icon-Info-Focus.png</texturefocus>
+				<texturenofocus>Small-Icon-Info-NoFocus.png</texturenofocus>
+				<onleft>103</onleft>
+				<onright>100</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+			<control type="image">
+				<description>Info Button</description>
+				<posx>670</posx>
+				<posy>530</posy>
+				<width>23</width>
+				<height>30</height>
+				<align>left</align>
+				<texture flipy="true" diffuse="Thumb_Mask.png">Small-Icon-Info-NoFocus.png</texture>
+			</control>
+		</control>
+	</control>
+
+	</controls>
+</window>

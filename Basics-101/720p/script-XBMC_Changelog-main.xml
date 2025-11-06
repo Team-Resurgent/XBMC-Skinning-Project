@@ -1,0 +1,105 @@
+<window id="3000">
+	<defaultcontrol>90</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="label" id="10">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>XBMC Changelog</label>
+				<font>font40</font>
+			</control>
+			<control type="label" id="6">
+				<description>Date Label</description>
+				<posx>20</posx>
+				<posy>70</posy>
+				<width>450</width>
+				<label>XBMC Changelog</label>
+				<font>font13</font>
+				<align>right</align>
+				<visible>false</visible>
+			</control>
+			<control type="label" id="4">
+				<description>header label</description>
+				<posx>50</posx>
+				<posy>110</posy>
+				<width>610</width>
+				<visible>false</visible>
+			</control>
+			<control type="image">
+				<description>text background image</description>
+				<posx>25</posx>
+				<posy>85</posy>
+				<width>1195</width>
+				<height>550</height>
+				<texture>button-nofocus.png</texture>
+			</control>
+			<control type="textbox" id="5">
+				<description>textarea</description>
+				<posx>35</posx>
+				<posy>95</posy>
+				<width>1175</width>
+				<height>530</height>
+				<pagecontrol>90</pagecontrol>
+				<include>white</include>
+				<font>font13</font>
+			</control>
+			<control type="group">
+				<posx>1225</posx>
+				<posy>85</posy>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>30</width>
+					<height>30</height>
+					<onclick>PageUp(90)</onclick>
+					<texturefocus>scrollbar_arrow_up_focus.png</texturefocus>
+					<texturenofocus>scrollbar_arrow_up.png</texturenofocus>
+					<visible>Control.IsVisible(90)</visible>
+				</control>
+				<control type="scrollbar" id="90">
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>30</width>
+					<height>480</height>
+					<texturesliderbackground>button-nofocus.png</texturesliderbackground>
+					<texturesliderbar>scrollbar_bar.png</texturesliderbar>
+					<texturesliderbarfocus>scrollbar_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>520</posy>
+					<width>30</width>
+					<height>30</height>
+					<onclick>PageDown(90)</onclick>
+					<texturefocus>scrollbar_arrow_down_focus.png</texturefocus>
+					<texturenofocus>scrollbar_arrow_down.png</texturenofocus>
+					<visible>Control.IsVisible(90)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,32 @@
+<window id="2007">
+  <defaultcontrol>2</defaultcontrol>
+
+  <controls>
+
+    <control type="group" id="1">
+      <posx>1185</posx>
+      <posy>655</posy>
+      <animation effect="slide" time="300" delay="200" tween="circle" easing="out" start="0,100" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" delay="200" tween="circle" easing="out" start="0,100" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,100">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,100">Hidden</animation>
+      <visible>Control.IsVisible(13)</visible>
+
+      <control type="image" id="1">
+        <width>65</width>
+        <height>75</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="image" id="13">
+        <description>Paused image</description>
+        <include>OSDIconDims</include>
+        <texture>osd_pause.png</texture>
+        <visible>no</visible>
+      </control>
+    </control>
+
+    <include>MusicNowPlaying</include>
+
+  </controls>
+</window>

@@ -1,0 +1,23 @@
+[B]Version 5.0.3[/B]
+- Fixed video rating overlapping image defect for UK ratings
+
+[B]Version 5.0.2[/B]
+- Fixed Mpaa rating image for G rated movies
+
+[B]Version 5.0.1[/B]
+- Fixed Mpaa rating image for Rated NC-17 movies
+- Updated the video addon view File List 3 to show more list items
+
+[B]Version 5.0.0[/B]
+- First Gotham Build
+- Updated language files from Transifex
+- Added update library buttons to video and music sections
+- Fixed a new bug with the home control sub-menus
+- Started to work through the new layout changes for some dialogs
+- Started to add the new subtitle support
+- Added the new settings level category button
+- Added new settings descriptions label
+- Fixed a glitch with the icon sizes in screen calibration
+- Made the required changes for song lyrics
+- Fixed some issues with MPAA certificate flagging
+- Added a simple 3D OSD on/off toggle button

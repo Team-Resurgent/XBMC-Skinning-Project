@@ -1,0 +1,113 @@
+﻿<window id="12">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="multiimage">
+			<posx>50</posx>
+			<posy>30</posy>
+			<width>160</width>
+			<height>160</height>
+			<imagepath>settings</imagepath>
+			<timeperimage>40</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<visible>!player.hasmedia</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+		</control>
+		<include>CTRLsections1</include>
+		<control type="label">
+			<description>section text label</description>
+			<include>ContainerHeader</include>
+			<include>ContainerFade</include>
+			<label>5</label>
+		</control>
+		<control type="grouplist" id="3">
+			<description>button area</description>
+			<posx>45</posx>
+			<posy>220</posy>
+			<width>210</width>
+			<height>300</height>
+			<itemgap>0</itemgap>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>230</posx>
+			<posy>96</posy>
+			<width>450</width>
+			<height>423</height>
+			<itemgap>10</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		<control type="button" id="7">
+			<description>default button</description>
+			<posx>570</posx>
+			<posy>125</posy>
+			<font>font13</font>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-pixel.png</texturenofocus>
+			<textoffsetx>4</textoffsetx>
+			<textcolor>common-text</textcolor>
+			<disabledcolor>disabled-text</disabledcolor>
+			<include>ContainerFade</include>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>default radiobutton</description>
+			<posx>570</posx>
+			<posy>125</posy>
+			<font>font13</font>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-pixel.png</texturenofocus>
+			<textureradiofocus>settings-check-box.png</textureradiofocus>
+			<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+			<textcolor>common-text</textcolor>
+			<disabledcolor>disabled-text</disabledcolor>
+			<textoffsetx>4</textoffsetx>
+			<include>ContainerFade</include>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>default spincontrolex</description>
+			<posx>570</posx>
+			<posy>125</posy>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-pixel.png</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+			<disabledcolor>disabled-text</disabledcolor>
+			<textoffsetx>4</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+			<include>ContainerFade</include>
+		</control>
+		<control type="button" id="10">
+			<description>default category button</description>
+			<posx>208</posx>
+			<posy>125</posy>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<label>224</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+			<disabledcolor>disabled-text</disabledcolor>
+			<include>ContainerFade</include>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>340</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>ContainerFade</include>
+		</control>
+	</controls>
+</window> 

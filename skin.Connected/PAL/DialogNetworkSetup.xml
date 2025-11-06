@@ -1,0 +1,165 @@
+<window id="128">
+<defaultcontrol always="true">10</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<coordinates>
+	<system>1</system>
+	<posx>90</posx>
+	<posy>101</posy>
+</coordinates>
+
+<include>DefaultFade</include>
+	
+<controls>
+
+	<control type="group">
+    <include>DialogBackWide</include>
+    <control type="image">
+      <description>Header Back</description>
+      <width>540</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+		<control type="label" id="1">
+			<description>Header Label</description>
+			<posx>10</posx>
+			<posy>0</posy>
+			<width>268</width>
+			<height>45</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[1007]</label>
+			<font>22BdFont</font>
+			<textcolor>FocusedTextColor</textcolor>
+		</control>
+		
+		<control type="spincontrolex" id="10">
+			<description>Protocol SpinControlex</description>
+			<posx>10</posx>
+			<posy>55</posy>
+			<label>$LOCALIZE[1008]</label>
+			<font>18BdFont</font>
+			<onup>19</onup>
+			<ondown>11</ondown>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+		</control>
+		<control type="button" id="11">
+			<description>Server Name</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>410</width>
+			<label>-</label>
+			<font>18BdFont</font>
+			<align>left</align>
+      <texturefocus>ButtonInputFo.png</texturefocus>
+      <texturenofocus>ButtonInputNF.png</texturenofocus>
+			<textoffsetx>5</textoffsetx>
+			<onup>10</onup>
+			<onleft>9000</onleft>
+			<onright>12</onright>
+			<ondown>16</ondown>
+		</control>
+		<control type="button" id="12">
+			<description>Server Browse Button</description>
+			<posx>430</posx>
+			<posy>90</posy>
+			<label>$LOCALIZE[1024]</label>
+			<font>18BdFont</font>
+			<onup>10</onup>
+			<onleft>11</onleft>
+			<onright>9000</onright>
+			<ondown>13</ondown>
+		</control>
+		<control type="button" id="16">
+			<description>Shared Path Button</description>
+			<posx>10</posx>
+			<posy>125</posy>
+			<width>520</width>
+			<font>18BdFont</font>
+      <texturefocus>ButtonInputFo.png</texturefocus>
+      <texturenofocus>ButtonInputNF.png</texturenofocus>
+			<align>left</align>
+			<textoffsetx>5</textoffsetx>
+			<onup>11</onup>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<ondown>13</ondown>
+		</control>
+		<control type="button" id="13">
+			<description>Port Button</description>
+			<posx>10</posx>
+			<posy>160</posy>
+			<width>520</width>
+			<label>$LOCALIZE[1013]</label>
+			<font>18BdFont</font>
+      <texturefocus>ButtonInputFo.png</texturefocus>
+      <texturenofocus>ButtonInputNF.png</texturenofocus>
+			<align>left</align>
+			<textoffsetx>5</textoffsetx>
+			<onup>16</onup>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<ondown>14</ondown>
+		</control>
+    
+		<control type="button" id="14">
+			<description>Username Button</description>
+			<posx>10</posx>
+			<posy>230</posy>
+			<width>520</width>
+			<label>$LOCALIZE[1014]</label>
+			<font>18BdFont</font>
+      <texturefocus>ButtonInputFo.png</texturefocus>
+      <texturenofocus>ButtonInputNF.png</texturenofocus>
+			<align>left</align>
+			<textoffsetx>5</textoffsetx>
+			<onup>13</onup>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<ondown>15</ondown>
+		</control>
+		<control type="button" id="15">
+			<description>Password Button</description>
+			<posx>10</posx>
+			<posy>265</posy>
+			<width>520</width>
+      <label>$LOCALIZE[15052]</label>
+			<font>18BdFont</font>
+      <texturefocus>ButtonInputFo.png</texturefocus>
+      <texturenofocus>ButtonInputNF.png</texturenofocus>
+			<textoffsetx>5</textoffsetx>
+			<onup>14</onup>
+			<onleft>15</onleft>
+			<onright>15</onright>
+			<ondown>9000</ondown>
+		</control>
+
+    <control type="group" id="9000">
+      <posx>320</posx>
+      <posy>335</posy>
+      <control type="button" id="18">
+        <description>OK Button</description>
+        <label>$LOCALIZE[186]</label>
+        <font>18BdFont</font>
+        <onleft>19</onleft>
+        <onright>19</onright>
+        <onup>15</onup>
+        <ondown>10</ondown>
+      </control>
+      <control type="button" id="19">
+        <description>Cancel Button</description>
+        <posx>110</posx>
+        <label>$LOCALIZE[222]</label>
+        <font>18BdFont</font>
+        <onleft>18</onleft>
+        <onright>18</onright>
+        <onup>15</onup>
+        <ondown>10</ondown>
+      </control>
+    </control>
+
+	</control>
+</controls>
+</window>

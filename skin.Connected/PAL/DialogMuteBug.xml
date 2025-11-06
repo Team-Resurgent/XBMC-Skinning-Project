@@ -1,0 +1,29 @@
+<window id="113">
+<defaultcontrol>901</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<zorder>2</zorder>
+	
+<coordinates>
+	<system>1</system>
+	<posx>285</posx>
+	<posy>20</posy>
+</coordinates>
+
+<include>DefaultFade</include>
+  
+<controls>
+
+  <include>DialogMuteBugBack</include>
+
+  <control type="label" id="0">
+    <description>Volume Label</description>
+    <width>150</width>
+    <height>30</height>
+    <font>18BdFont</font>
+    <textcolor>FocusedTextColor</textcolor>
+    <align>center</align>
+    <label>[UPPERCASE]$LOCALIZE[31071][/UPPERCASE]</label>
+  </control>
+
+</controls>
+</window>

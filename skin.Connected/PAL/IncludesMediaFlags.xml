@@ -1,0 +1,130 @@
+<includes>
+
+  <include name="MediaFlagImages">
+    <control type="grouplist">
+      <description>Main Categories</description>
+      <posx>157</posx>
+      <posy>535</posy>
+      <width>405</width>
+      <height>33</height>
+      <itemgap>0</itemgap>
+      <onup>-</onup>
+      <ondown>-</ondown>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <orientation>horizontal</orientation>
+      <visible>Container.Content(movies) | Container.Content(episodes) + !Skin.HasSetting(MediaFlagsEnable)</visible>
+      <include>MediaFlagFade</include>
+
+      <!-- Video Resolutions -->
+      <control type="image" id="202">
+        <description>Video rez Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
+        <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+      </control>
+      <control type="image">
+        <description>Video rez Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>flagging/video/empty_resolution.png</texture>
+        <visible>IsEmpty(ListItem.VideoResolution)</visible>
+      </control>
+
+      <!-- Video Codecs -->
+      <control type="image" id="203">
+        <description>Common Codec Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>$INFO[ListItem.VideoCodec,flagging/video/,.png]</texture>
+        <!-- Don't show if its one of the 500 divx codecs -->      
+        <visible>!IsEmpty(ListItem.VideoCodec) + ![substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
+      </control>
+      <control type="image" id="203">
+        <description>Divx Codec Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>flagging/video/divx.png</texture>
+        <visible>!IsEmpty(ListItem.VideoCodec) + [substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
+      </control>
+      <control type="image">
+        <description>Empty Video Codec Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>flagging/video/empty_video_codec.png</texture>
+        <visible>!Control.IsVisible(203)</visible>
+      </control>
+
+      <!-- Audio Codecs -->
+      <control type="image" id="204">
+        <description>Dolby Digital Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>flagging/audio/dolbydigital.png</texture>
+        <visible>!IsEmpty(ListItem.AudioCodec) + [stringcompare(ListItem.AudioCodec,ac3) + stringcompare(ListItem.AudioChannels,6)]</visible>
+      </control>
+      <control type="image" id="204">
+        <description>Audio Codec Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
+        <!-- Don't show if I want the Dolby Digital Logo -->
+        <visible>!IsEmpty(ListItem.AudioCodec) + ![stringcompare(ListItem.AudioCodec,ac3) + stringcompare(ListItem.AudioChannels,6)]</visible>
+      </control>
+      <control type="image">
+        <description>Empty Audio Codec Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>flagging/audio/empty_audio_codec.png</texture>
+        <visible>!Control.IsVisible(204)</visible>
+      </control>
+
+      <!-- Audio Channels -->
+      <control type="image" id="205">
+        <description>Audio Channels Image</description>
+        <width>45</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
+        <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+      </control>
+      <control type="image">
+        <description>Audio Channels Image</description>
+        <width>45</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>flagging/audio/0.png</texture>
+        <visible>IsEmpty(ListItem.AudioChannels)</visible>
+      </control>
+
+      <!-- Aspect Ratio -->
+      <control type="image" id="206">
+        <description>Aspectratio Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+        <visible>!IsEmpty(ListItem.VideoAspect)</visible>
+      </control>
+      <control type="image">
+        <description>Aspectratio Image</description>
+        <width>90</width>
+        <height>33</height>
+        <aspectratio>keep</aspectratio>
+        <texture>flagging/aspectratio/empty_aspect.png</texture>
+        <visible>IsEmpty(ListItem.VideoAspect)</visible>
+      </control>
+
+    </control>
+  </include>
+  
+</includes>

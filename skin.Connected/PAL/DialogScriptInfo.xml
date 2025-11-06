@@ -1,0 +1,65 @@
+<window id="2004">
+  <defaultcontrol always="true">61</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <coordinates>
+    <system>1</system>
+    <posx>90</posx>
+    <posy>101</posy>
+  </coordinates>
+
+  <include>DefaultFade</include>
+
+  <controls>
+
+
+    <control type="group">
+      <include>DialogBackWide</include>
+      <control type="scrollbar" id="61">
+        <description>Scroll Bar</description>
+        <posx>509</posx>
+        <posy>55</posy>
+        <height>310</height>
+        <onleft>-</onleft>
+        <onright>-</onright>
+        <onup>61</onup>
+        <ondown>61</ondown>
+        <animation effect="fade" time="0" start="0" end="60" condition="true">Conditional</animation>
+      </control>
+      <control type="image">
+        <description>Header Back</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>540</width>
+        <height>45</height>
+        <align>left</align>
+        <texture>ButtonNF.png</texture>
+      </control>
+      <control type="label">
+        <description>Title label</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>395</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[262]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+      <control type="textbox" id="5">
+        <description>textarea</description>
+        <posx>10</posx>
+        <posy>55</posy>
+        <width>514</width>
+        <height>310</height>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <spinposx>600</spinposx>
+        <spinposy>445</spinposy>
+        <pagecontrol>61</pagecontrol>
+        <autoscroll delay="6000" time="2000" repeat="10000"></autoscroll>
+      </control>
+    </control>
+  </controls>
+</window>

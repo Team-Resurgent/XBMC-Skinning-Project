@@ -1,0 +1,295 @@
+<includes>
+	<include file="Defaults.xml" />
+	<include file="CommonViewTypes.xml" />
+
+<!-- Background Stuff -->
+	<include name="Home-Background">
+		<control type="visualisation" id="100">
+			<description>background visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(HomeViewToggle)</visible>
+			<visible>Player.HasAudio</visible>
+		</control>
+		<control type="videowindow" id="101">
+			<description>video</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(HomeViewToggle)</visible>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="multiimage">
+			<description>background animation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-ani)</info>
+			<timeperimage>2</timeperimage>
+			<visible>Skin.string(custom-ani)</visible>
+			<visible>![Control.IsVisible(100) | Control.IsVisible(101)]</visible>
+		</control>
+		<control type="image" id="102">
+			<description>Custom background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>Skin.String(custom-background)</visible>
+			<visible>!Skin.String(custom-ani)</visible>
+			<visible>![Control.IsVisible(100) | Control.IsVisible(101)]</visible>
+		</control>
+		<control type="image" id="103">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>!Skin.String(custom-background)</visible>
+			<visible>!Skin.String(custom-ani)</visible>
+			<visible>![Control.IsVisible(100) | Control.IsVisible(101)]</visible>
+		</control>
+		<control type="image">
+			<description>Custom background image with vis\video</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>![Control.IsVisible(102) | Control.IsVisible(103)]</visible>
+		</control>
+		<control type="image">
+			<description>background image with vis\video</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>![Control.IsVisible(102) | Control.IsVisible(103)]</visible>
+		</control>
+		<control type="image">
+			<description>background screen image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-screen.png</texture>
+		</control>
+	</include>
+	<include name="Background">
+		<control type="multiimage">
+			<description>background animation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-ani)</info>
+			<timeperimage>2</timeperimage>
+			<visible>Skin.string(custom-ani)</visible>
+		</control>
+		<control type="image" id="102">
+			<description>Custom background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>Skin.String(custom-background)</visible>
+			<visible>!Skin.String(custom-ani)</visible>
+		</control>
+		<control type="image" id="103">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>!Skin.String(custom-background)</visible>
+			<visible>!Skin.String(custom-ani)</visible>
+		</control>
+		<control type="image">
+			<description>Custom background image with vis\video</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>![Control.IsVisible(102) | Control.IsVisible(103)]</visible>
+		</control>
+		<control type="image">
+			<description>background image with vis\video</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>!Skin.HasSetting(no-background)</visible>
+			<visible>![Control.IsVisible(102) | Control.IsVisible(103)]</visible>
+		</control>
+		<control type="image">
+			<description>background screen image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-screen.png</texture>
+		</control>
+	</include>
+
+<!-- Shutters -->
+
+	<include name="Shutters">
+		<control type="image">
+			<description>top shutter</description>
+			<posx>0</posx>
+			<posy>-200</posy>
+			<width>720</width>
+			<height>300</height>
+			<texture>shutter-top.png</texture>
+			<animation effect="slide" start="0,188" time="225" condition="![Window.Previous(2005) | Window.Previous(2006)]">WindowOpen</animation>
+			<animation effect="slide" end="0,188" time="225" condition="![Window.Next(2005) | Window.Next(2006)]">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>bottom shutter</description>
+			<posx>0</posx>
+			<posy>476</posy>
+			<width>720</width>
+			<height>300</height>
+			<texture>shutter-bottom.png</texture>
+			<animation effect="slide" start="0,-188" time="225" condition="![Window.Previous(2005) | Window.Previous(2006)]">WindowOpen</animation>
+			<animation effect="slide" end="0,-188" time="225" condition="![Window.Next(2005) | Window.Next(2006)]">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Label For Wrap\wide List</description>
+			<posx>40</posx>
+			<posy>25</posy>
+			<width>640</width>
+			<info>ListItem.Label</info>
+			<font>home</font>
+			<textcolor>main-text</textcolor>
+			<align>center</align>
+			<scroll>true</scroll>
+			<visible>[Control.HasFocus(56) | Control.HasFocus(57) + Skin.HasSetting(wrap-labels)] | [Control.HasFocus(58) + Skin.HasSetting(wide-labels)]</visible>
+			<animation effect="fade" start="0" delay="250" time="200">WindowOpen</animation>
+			<animation effect="fade" end="0" time="20">WindowClose</animation>
+		</control>
+	</include>
+
+	<include name="Dialog-Shutters">
+		<control type="image">
+			<description>top shutter</description>
+			<posx>0</posx>
+			<posy>-200</posy>
+			<width>720</width>
+			<height>300</height>
+			<texture>shutter-top.png</texture>
+			<animation effect="slide" start="0,-100" time="225" condition="[Window.IsActive(2005) | Window.IsActive(2006)]">WindowOpen</animation>
+			<animation effect="slide" end="0,-100" time="225" condition="[Window.IsActive(2005) | Window.IsActive(2006)]">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>bottom shutter</description>
+			<posx>0</posx>
+			<posy>476</posy>
+			<width>720</width>
+			<height>300</height>
+			<texture>shutter-bottom.png</texture>
+			<animation effect="slide" start="0,100" time="225" condition="[Window.IsActive(2005) | Window.IsActive(2006)]">WindowOpen</animation>
+			<animation effect="slide" end="0,100" time="225" condition="[Window.IsActive(2005) | Window.IsActive(2006)]">WindowClose</animation>
+		</control>
+	</include>
+	
+<!-- Media Button Container -->
+	
+	<include name="Container">
+		<control type="image">
+			<description>panel</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>576</height>
+			<width>190</width>
+			<texture>container.png</texture>
+			<include>media-slide</include>
+		</control>
+	</include>
+	
+	<include name="Dialog-Container">
+		<control type="image">
+			<description>panel</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>576</height>
+			<width>400</width>
+			<texture>dialog-container.png</texture>
+			<include>media-slide</include>
+		</control>
+	</include>
+	
+<!-- Animations -->
+	
+	<include name="media-slide">
+		<animation effect="slide" start="-400,0" time="225" condition="![Window.Previous(2005) | Window.Previous(2006)]">WindowOpen</animation>
+		<animation effect="slide" end="-400,0" time="225" condition="![Window.Next(2005) | Window.Next(2006)]">WindowClose</animation>
+	</include>
+	
+	<include name="dialog-slide">
+		<animation effect="slide" start="-400,0" time="225" condition="![Window.Previous(2005) | Window.Previous(2006)]">WindowOpen</animation>
+		<animation effect="slide" end="-400,0" time="225" condition="![Window.Next(2005) | Window.Next(2006)]">WindowClose</animation>
+	</include>
+
+	<include name="View-as">
+		<control type="image">
+			<description>panel</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>576</height>
+			<width>190</width>
+			<texture>container.png</texture>
+		</control>
+		<animation effect="slide" start="-400,0" time="150" condition="![Window.Previous(2005) | Window.Previous(2006)]">Focus</animation>
+		<animation effect="slide" end="-400,0" time="150" condition="![Window.Next(2005) | Window.Next(2006)]">Hidden</animation>
+		<visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(56) | Control.HasFocus(57) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(900)]</visible>
+	</include>
+
+	<include name="home-fade">
+		<animation effect="fade" end="0" time="100" condition="!Skin.HasSetting(home-ani)">WindowClose</animation>
+		<animation effect="fade" start="0" delay="150" time="200" condition="![Window.Previous(2005) | Window.Previous(2006) | Window.Previous(startup)] + !Skin.HasSetting(home-ani)">WindowOpen</animation>
+	</include>
+
+	<include name="home-zoom">
+		<animation effect="zoom" center="360,288" end="0" delay="75" time="200" condition="!Skin.HasSetting(home-ani)">WindowClose</animation>
+		<animation effect="zoom" center="360,288" start="0" time="200" condition="![Window.Previous(2005) | Window.Previous(2006) | Window.Previous(startup)] + !Skin.HasSetting(home-ani)">WindowOpen</animation>
+	</include>
+
+	<include name="home-pulse">
+		<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.IsVisible(1) | Control.IsVisible(2) | Control.IsVisible(3) | Control.IsVisible(4) | Control.IsVisible(5)">Conditional</animation>
+	</include>
+
+	<include name="list-pulse">
+		<animation effect="fade" start ="100" end="75" time="1200" pulse="true">Focus</animation>
+	</include>
+
+<!-- Visibility -->
+
+	<include name="home-media-timeout">
+		<visible>![System.IdleTime(10) + Player.HasVideo + Skin.Hassetting(HomeViewToggle) + Skin.Hassetting(home-timeout)]</visible>
+		<visible>![System.IdleTime(10) + Player.HasAudio + Skin.Hassetting(HomeViewToggle) + Skin.Hassetting(home-timeout)]</visible>
+	</include>
+
+</includes>

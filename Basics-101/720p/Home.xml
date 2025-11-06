@@ -1,0 +1,266 @@
+<window id="0">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>9</label>
+				<font>font40</font>
+			</control>
+			<control type="group" id="9000">
+				<posx>152</posx>
+				<posy>92</posy>
+				<control type="button" id="2">
+					<description>Music push button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>240</height>
+					<width>320</width>
+					<label>2</label>
+					<align>center</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyMusic)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>200</textoffsety>
+					<onleft>4</onleft>
+					<onright>3</onright>
+					<onup>20</onup>
+					<ondown>6</ondown>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>280</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icon_music.png</texture>
+				</control>
+				<control type="button" id="3">
+					<description>Video push button</description>
+					<posx>325</posx>
+					<posy>0</posy>
+					<height>240</height>
+					<width>320</width>
+					<label>3</label>
+					<align>center</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyVideos)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>200</textoffsety>
+					<onleft>2</onleft>
+					<onright>4</onright>
+					<onup>21</onup>
+					<ondown>7</ondown>
+				</control>
+				<control type="image">
+					<posx>335</posx>
+					<posy>10</posy>
+					<width>290</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icon_video.png</texture>
+				</control>
+				<control type="button" id="4">
+					<posx>650</posx>
+					<posy>0</posy>
+					<height>240</height>
+					<width>320</width>
+					<label>1</label>
+					<align>center</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyPictures)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>200</textoffsety>
+					<onleft>3</onleft>
+					<onright>2</onright>
+					<onup>22</onup>
+					<ondown>8</ondown>
+				</control>
+				<control type="image">
+					<posx>660</posx>
+					<posy>10</posy>
+					<width>300</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icon_pics.png</texture>
+				</control>
+				<control type="button" id="6">
+					<description>Weather push button</description>
+					<posx>0</posx>
+					<posy>245</posy>
+					<height>240</height>
+					<width>320</width>
+					<label>8</label>
+					<align>center</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(Weather)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>200</textoffsety>
+					<onleft>8</onleft>
+					<onright>7</onright>
+					<onup>2</onup>
+					<ondown>20</ondown>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>255</posy>
+					<width>280</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icon_weather.png</texture>
+				</control>
+				<control type="button" id="7">
+					<description>Scripts push button</description>
+					<posx>325</posx>
+					<posy>245</posy>
+					<height>240</height>
+					<width>320</width>
+					<label>247</label>
+					<align>center</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(scripts)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>200</textoffsety>
+					<onleft>6</onleft>
+					<onright>8</onright>
+					<onup>3</onup>
+					<ondown>21</ondown>
+				</control>
+				<control type="image">
+					<posx>335</posx>
+					<posy>255</posy>
+					<width>280</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icon_scripts.png</texture>
+				</control>
+				<control type="button" id="8">
+					<description>FileManager push button</description>
+					<posx>650</posx>
+					<posy>245</posy>
+					<height>240</height>
+					<width>320</width>
+					<label>7</label>
+					<align>center</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyFiles)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>200</textoffsety>
+					<onleft>7</onleft>
+					<onright>6</onright>
+					<onup>4</onup>
+					<ondown>22</ondown>
+				</control>
+				<control type="image">
+					<posx>660</posx>
+					<posy>255</posy>
+					<width>280</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icon_files.png</texture>
+				</control>
+				<control type="group">
+					<posx>0</posx>
+					<posy>505</posy>
+					<control type="button" id="20">
+						<description>Shutdown push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>320</width>
+						<height>35</height>
+						<label>13005</label>
+						<align>center</align>
+						<onclick>ActivateWindow(shutdownmenu)</onclick>
+						<texturefocus>button-focus.png</texturefocus>
+						<texturenofocus>button-nofocus.png</texturenofocus>
+						<onleft>22</onleft>
+						<onright>21</onright>
+						<onup>6</onup>
+						<ondown>2</ondown>
+					</control>
+					<control type="button" id="21">
+						<description>Settings push button</description>
+						<posx>325</posx>
+						<posy>0</posy>
+						<width>320</width>
+						<height>35</height>
+						<label>5</label>
+						<align>center</align>
+						<onclick>ActivateWindow(Settings)</onclick>
+						<texturefocus>button-focus.png</texturefocus>
+						<texturenofocus>button-nofocus.png</texturenofocus>
+						<onleft>20</onleft>
+						<onright>22</onright>
+						<onup>7</onup>
+						<ondown>3</ondown>
+					</control>
+					<control type="button" id="22">
+						<description>Favourites push button</description>
+						<posx>650</posx>
+						<posy>0</posy>
+						<width>320</width>
+						<height>35</height>
+						<label>1036</label>
+						<align>center</align>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<texturefocus>button-focus.png</texturefocus>
+						<texturenofocus>button-nofocus.png</texturenofocus>
+						<onleft>21</onleft>
+						<onright>20</onright>
+						<onup>8</onup>
+						<ondown>4</ondown>
+					</control>
+				</control>
+			</control>
+			<control type="rss">
+				<description>rss feed</description>
+				<posx>0</posx>
+				<posy>665</posy>
+				<width>1280</width>
+				<font>15</font>
+				<urlset>1</urlset>
+				<textcolor>red</textcolor>
+				<titlecolor>red</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+	</controls>
+</window>

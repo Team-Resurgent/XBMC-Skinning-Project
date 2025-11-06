@@ -1,0 +1,947 @@
+<includes>
+	<include name="CommonLists">
+		<control type="list" id="50">
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>400</width>
+			<height>354</height>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="List">List</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>400</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<visible>Control.HasFocus(50)</visible>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(50)">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>400</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>icon-nf-color</colordiffuse>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>384</width>
+					<height>30</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+					<scroll>true></scroll>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>430</posx>
+			<posy>140</posy>
+			<width>250</width>
+			<height>250</height>
+			<info>ListItem.Icon</info>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.Isvisible(50)</visible>
+		</control>
+		<control type="image">
+			<posx>430</posx>
+			<posy>390</posy>
+			<width>250</width>
+			<height>250</height>
+			<texture flipy="true" diffuse="fade2.png" />
+			<info>ListItem.Icon</info>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.Isvisible(50)</visible>
+		</control>
+		<control type="image" id="1">
+			<posx>586</posx>
+			<posy>444</posy>
+			<width>121</width>
+			<height>21</height>
+			<info>ListItem.Rating</info>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.Isvisible(50) + Window.IsActive(MyMusicLibrary)</visible>
+		</control>
+<!-- End List View stuff -->
+			
+		<control type="list" id="51">
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>680</width>
+			<height>354</height>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="List2">List</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>570</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>670</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label2</info>
+					<visible>!Window.IsActive(MyMusicLibrary)</visible>
+				</control>
+				<control type="image">
+					<posx>550</posx>
+					<posy>5</posy>
+					<width>121</width>
+					<height>21</height>
+					<info>ListItem.Rating</info>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>icon-nf-color</colordiffuse>
+					<visible>Window.IsActive(MyMusicLibrary)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>680</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<visible>Control.HasFocus(51)</visible>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(50)">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>680</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>icon-nf-color</colordiffuse>
+					<visible>!Control.HasFocus(51)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>550</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+					<scroll>true></scroll>
+				</control>
+				<control type="label">
+					<posx>670</posx>
+					<posy>2</posy>
+					<width>100</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label2</info>
+					<scroll>true></scroll>
+					<visible>!Window.IsActive(MyMusicLibrary)</visible>
+				</control>
+				<control type="image">
+					<posx>550</posx>
+					<posy>5</posy>
+					<width>121</width>
+					<height>21</height>
+					<info>ListItem.Rating</info>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>object-color</colordiffuse>
+					<visible>Window.IsActive(MyMusicLibrary)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="list" id="52">
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>690</width>
+			<height>354</height>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="Big List">List</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>0</posx>
+					<posy>4</posy>
+					<width>560</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>680</posx>
+					<posy>4</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="90">
+				<control type="image">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>84</width>
+					<height>84</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>690</width>
+					<height>86</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<visible>Control.HasFocus(52)</visible>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(50)">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>690</width>
+					<height>86</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>icon-nf-color</colordiffuse>
+					<visible>!Control.HasFocus(52)</visible>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>470</width>
+					<height>38</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+					<scroll>true></scroll>
+				</control>
+				<control type="label">
+					<posx>680</posx>
+					<posy>5</posy>
+					<width>100</width>
+					<height>38</height>
+					<font>font14</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label2</info>
+					<scroll>true></scroll>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>48</posy>
+					<width>590</width>
+					<height>38</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<label>$INFO[ListItem.Director] - $INFO[ListItem.Year] - $INFO[ListItem.Genre] - $INFO[ListItem.PlotOutline]</label>
+					<scroll>true></scroll>
+					<visible>Window.IsActive(MyVideoLibrary,Movies)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+	<include name="VideoInfo">
+		<control type="list" id="53">
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>400</width>
+			<height>160</height>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<viewtype label="Video Info">List</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>23</pagecontrol>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>400</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<visible>Control.HasFocus(53)</visible>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(50)">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>400</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>icon-nf-color</colordiffuse>
+					<visible>!Control.HasFocus(53)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>384</width>
+					<height>30</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+					<scroll>true></scroll>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>430</posx>
+			<posy>140</posy>
+			<width>250</width>
+			<height>250</height>
+			<info>ListItem.Icon</info>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.Isvisible(53)</visible>
+			<animation effect="zoom" end="480,110,150,150" time="150" condition="System.IdleTime(2)">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>430</posx>
+			<posy>390</posy>
+			<width>250</width>
+			<height>250</height>
+			<texture flipy="true" diffuse="fade2.png" />
+			<info>ListItem.Icon</info>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.Isvisible(53)</visible>
+			<animation effect="zoom" end="480,260,150,150" time="150" condition="System.IdleTime(2)">Conditional</animation>
+		</control>
+		<control type="image">
+			<description>horizontal seperator</description>
+			<posx>20</posx>
+			<posy>290</posy>
+			<height>5</height>
+			<width>400</width>
+			<texture>line-horizontal.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.Isvisible(53)</visible>
+			<visible>Control.Isvisible(53)</visible>
+			<animation effect="zoom" end="20,290,700,5" time="150" condition="System.IdleTime(2)">Conditional</animation>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>300</posy>
+			<width>250</width>
+			<height>20</height>
+			<textcolor>button-nofocus-text</textcolor>
+			<font>font12</font>
+			<label>$INFO[ListItem.Genre ,$LOCALIZE[515]: ]</label>
+			<visible>Control.Isvisible(53)</visible>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>335</posy>
+			<width>250</width>
+			<height>20</height>
+			<textcolor>button-nofocus-text</textcolor>
+			<font>font12</font>
+			<label>$INFO[ListItem.Director ,$LOCALIZE[20339]: ]</label>
+			<visible>Control.Isvisible(53)</visible>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>370</posy>
+			<width>250</width>
+			<height>20</height>
+			<textcolor>button-nofocus-text</textcolor>
+			<font>font12</font>
+			<label>$INFO[ListItem.Year ,$LOCALIZE[562]: ]</label>
+			<visible>Control.Isvisible(53)</visible>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>405</posy>
+			<width>250</width>
+			<height>20</height>
+			<textcolor>button-nofocus-text</textcolor>>
+			<font>font12</font>
+			<label>$INFO[ListItem.Rating ,$LOCALIZE[563]: ]</label>
+			<visible>Control.Isvisible(53)</visible>
+		</control>
+		<control type="textbox">
+			<posx>280</posx>
+			<posy>300</posy>
+			<width>420</width>
+			<height>165</height>
+			<textcolor>main-text</textcolor>
+			<font>font12</font>
+			<info>ListItem.Plot</info>
+			<visible>Control.Isvisible(53) + System.IdleTime(2)</visible>
+			<animation effect="fade" start="0" time="150" delay="200">Visible</animation>
+		</control>
+	</include>
+<!-- Common Icon View -->
+	<include name="CommonIcons">
+		<control type="panel" id="55">
+			<posx>35</posx>
+			<posy>120</posy>
+			<width>650</width>
+			<height>394</height>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<viewtype label="Icons">Icons</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>23</pagecontrol>
+				<itemlayout height="180" width="130">
+					<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>90</width>
+					<height>130</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>75</posx>
+					<posy>75</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>65</posx>
+					<posy>145</posy>
+					<width>90</width>
+					<height>22</height>
+					<font>font13</font>
+					<include>button-text</include>
+					<include>listselectedtext</include>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="180" width="130">
+				<control type="image">
+					<posx>15</posx>
+					<posy>5</posy>
+					<width>100</width>
+					<height>140</height>
+					<colordiffuse>object-color</colordiffuse>
+					<texture>thumb-focus.png</texture>
+					<animation effect="zoom" end="10,0,105,150" time="100">focus</animation>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(55)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>90</width>
+					<height>130</height>
+					<info>ListItem.Icon</info>
+					<animation effect="zoom" end="15,5,95,140" time="100">focus</animation>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(55)">Conditional</animation>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>80</posx>
+					<posy>80</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(55)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>62</posx>
+					<posy>148</posy>
+					<width>105</width>
+					<height>22</height>
+					<font>font13</font>
+					<include>button-text</include>
+					<include>listselectedtext</include>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+<!-- Common Wrap Views -->
+	<include name="CommonWraps">
+		<control type="wraplist" id="56">
+			<posx>40</posx>
+			<posy>120</posy>
+			<width>640</width>
+			<height>394</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>420</onup>
+			<ondown>420</ondown>
+			<orientation>horizontal</orientation>
+			<viewtype label="Small Wrap">Wrap</viewtype>
+			<focusposition>3</focusposition>
+			<scrolltime>200</scrolltime>
+				<itemlayout height="110" width="80">
+					<control type="image">
+					<posx>0</posx>
+					<posy>180</posy>
+					<width>80</width>
+					<height>110</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+					<control type="image">
+					<posx>0</posx>
+					<posy>290</posy>
+					<width>80</width>
+					<height>110</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>75</posx>
+					<posy>75</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="220" width="160">
+				<control type="image">
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>160</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>290</posy>
+					<width>160</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>170</posx>
+					<posy>230</posy>
+					<width>50</width>
+					<height>50</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="wraplist" id="57">
+			<posx>55</posx>
+			<posy>120</posy>
+			<width>610</width>
+			<height>394</height>
+			<onleft>57</onleft>
+			<onright>57</onright>
+			<onup>420</onup>
+			<ondown>420</ondown>
+			<orientation>horizontal</orientation>
+			<viewtype label="Big Wrap">Wrap</viewtype>
+			<focusposition>1</focusposition>
+			<scrolltime>200</scrolltime>
+				<itemlayout height="260" width="180">
+					<control type="image">
+					<posx>10</posx>
+					<posy>70</posy>
+					<width>160</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+					<control type="image">
+					<posx>10</posx>
+					<posy>280</posy>
+					<width>160</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>75</posx>
+					<posy>75</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="270" width="250">
+				<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>210</width>
+					<height>280</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>290</posy>
+					<width>210</width>
+					<height>280</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>80</posx>
+					<posy>80</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				</focusedlayout>
+			</control>
+		</include>
+<!-- Wrap Views for Video Windows -->
+	<include name="VideoWraps">
+		<control type="wraplist" id="56">
+			<posx>18</posx>
+			<posy>120</posy>
+			<width>685</width>
+			<height>394</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>420</onup>
+			<ondown>420</ondown>
+			<orientation>horizontal</orientation>
+			<viewtype label="Small Wrap">Wrap</viewtype>
+			<focusposition>5</focusposition>
+			<scrolltime>200</scrolltime>
+				<itemlayout height="110" width="57">
+					<control type="image">
+					<posx>0</posx>
+					<posy>180</posy>
+					<width>57</width>
+					<height>110</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+					<control type="image">
+					<posx>0</posx>
+					<posy>290</posy>
+					<width>57</width>
+					<height>110</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>45</posx>
+					<posy>260</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(watched)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="220" width="115">
+				<control type="image">
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>115</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>290</posy>
+					<width>115</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>120</posx>
+					<posy>243</posy>
+					<width>50</width>
+					<height>50</height>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(watched)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="wraplist" id="57">
+			<posx>60</posx>
+			<posy>120</posy>
+			<width>600</width>
+			<height>394</height>
+			<onleft>57</onleft>
+			<onright>57</onright>
+			<onup>420</onup>
+			<ondown>420</ondown>
+			<orientation>horizontal</orientation>
+			<viewtype label="Big Wrap">Wrap</viewtype>
+			<focusposition>1</focusposition>
+			<scrolltime>200</scrolltime>
+				<itemlayout height="250" width="195">
+					<control type="image">
+					<posx>40</posx>
+					<posy>70</posy>
+					<width>115</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+					<control type="image">
+					<posx>40</posx>
+					<posy>290</posy>
+					<width>115</width>
+					<height>210</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>75</posx>
+					<posy>75</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(watched)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="270" width="210">
+				<control type="image">
+					<posx>30</posx>
+					<posy>10</posy>
+					<width>150</width>
+					<height>280</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>290</posy>
+					<width>150</width>
+					<height>280</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade2.png" />
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>80</posx>
+					<posy>80</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(watched)</visible>
+				</control>
+				</focusedlayout>
+			</control>
+		</include>
+
+<!-- Wide Icons -->
+	<include name="WideIcons">
+		<control type="panel" id="58">
+			<posx>5</posx>
+			<posy>125</posy>
+			<width>710</width>
+			<height>330</height>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<onup>58</onup>
+			<ondown>58</ondown>
+			<viewtype label="Wide Icons">Icons</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>23</pagecontrol>
+				<itemlayout height="110" width="350">
+					<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>310</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>75</posx>
+					<posy>75</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="110" width="350">
+				<control type="image">
+					<posx>17</posx>
+					<posy>8</posy>
+					<width>316</width>
+					<height>94</height>
+					<texture>wide-focus.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(58)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>10</posy>
+					<width>310</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(58)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>80</posx>
+					<posy>80</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>>
+			</focusedlayout>
+		</control>
+	</include>
+
+
+	<include name="PlaylistViews">
+		<control type="list" id="50">
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>400</width>
+			<height>354</height>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype>List</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>0</posx>
+					<posy>4</posy>
+					<width>380</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>400</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<visible>Control.HasFocus(50)</visible>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(50)">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>400</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>line.png</texture>
+					<colordiffuse>icon-nf-color</colordiffuse>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>4</posy>
+					<width>38430</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+					<scroll>true></scroll>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+</includes>

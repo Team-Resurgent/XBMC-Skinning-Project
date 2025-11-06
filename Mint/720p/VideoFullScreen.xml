@@ -1,0 +1,149 @@
+<!-- video information when pressing white/black/y during video playback -->
+<window id="2005">
+	
+	<controls>
+		
+		<!-- stretch mode -->
+		<control type="group">
+		
+			<posx>20</posx>
+			
+			<visible>!Window.IsVisible(videoosd)</visible>
+			<visible>!Window.IsVisible(volumebar)</visible>
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+			
+			<posy>20</posy>
+			
+			<animation effect="slide" start="0,-180" end="0,0" time="300">VisibleChange</animation>
+			
+			<!-- background -->
+			<control type="image">
+				<width>1240</width>
+				<height>140</height>
+				<texture>black.png</texture>
+				<colordiffuse>dimmed</colordiffuse>
+			</control>	
+			<!-- view mode -->
+			<control type="label" id="10">
+				<width>1200</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<font>videoosd</font>
+				<textcolor>type-videoosd</textcolor>
+			</control>
+			<!-- sizing -->
+			<control type="label" id="11">
+				<width>1200</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>60</posy>
+				<font>videoosd</font>
+				<textcolor>type-videoosd</textcolor>
+			</control>
+			<!-- resolution -->
+			<control type="label" id="12">
+				<width>1200</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>100</posy>
+				<font>videoosd</font>
+				<textcolor>type-videoosd</textcolor>
+			</control>
+		</control>
+		
+		<!-- video info -->
+		<control type="group" id="1">
+		
+			<visible>Player.ShowInfo</visible>
+			<visible>!Window.IsVisible(videoosd)</visible>
+			<visible>!Window.IsVisible(seekbar)</visible>
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+
+			<posx>620</posx>	
+			<posy>620</posy>
+
+			<animation effect="slide" start="620,0" end="0,0" time="300">VisibleChange</animation>
+			<animation effect="slide" start="0,0" end="620,0" time="300">VisibleChange</animation>
+
+			<!-- background -->
+			<control type="image" id="1">
+				<texture border="12">bg-dialog.png</texture>
+				<width>640</width>
+				<height>80</height>	
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			
+			<!-- video progress -->
+			<control type="progress" id="1">
+				<info>Player.Progress</info>
+				<width>600</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>20</posy>
+			</control>
+			<!-- video time/duration -->
+			<control type="label" id="1">
+				<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+				<width>320</width>
+				<height>40</height>
+				<posx>40</posx>
+				<posy>20</posy>	
+				<font>videoosd</font>
+				<textcolor>type-videoosd-dark</textcolor>
+			</control>
+			<!-- video finish time -->
+			<control type="label" id="1">
+				<label>End: $INFO[Player.FinishTime]</label>
+				<width>320</width>
+				<height>40</height>
+				<posx>600</posx>
+				<posy>20</posy>			
+				<font>videoosd</font>
+				<textcolor>type-videoosd-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>		
+		
+		<!-- buffering -->
+		<control type="label" id="24">
+			<animation effect="slide" start="620,0" end="0,0" time="300">VisibleChange</animation>
+			<animation effect="slide" start="0,0" end="620,0" time="300">VisibleChange</animation>
+			<label>Buffering</label>
+			<width>600</width>
+			<height>40</height>
+			<posx>660</posx>	
+			<posy>640</posy>
+			<font>videoosd</font>
+			<textcolor>type-videoosd-dark</textcolor>
+		</control>
+		<control type="group">
+		
+			<visible>Control.IsVisible(24)</visible>
+
+			<posx>620</posx>	
+			<posy>620</posy>
+
+			<animation effect="slide" start="620,0" end="0,0" time="300">VisibleChange</animation>
+			<animation effect="slide" start="0,0" end="620,0" time="300">VisibleChange</animation>
+
+			<!-- background -->
+			<control type="image" id="1">
+				<texture border="12">bg-dialog.png</texture>
+				<width>640</width>
+				<height>80</height>	
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- video progress -->
+			<control type="progress" id="1">
+				<info>Player.Progress</info>
+				<width>600</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>20</posy>
+			</control>
+		</control>
+		
+	</controls>
+	
+</window>

@@ -1,0 +1,287 @@
+﻿<window id="2003">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<animation effect="fade" time="1000">WindowOpen</animation>
+	<animation effect="fade" time="1000">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="image">
+			<description>panel small image</description>
+			<posx>60</posx>
+			<posy>15</posy>
+			<width>605</width>
+			<height>70</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="image">
+			<description>panel big image</description>
+			<posx>65</posx>
+			<posy>80</posy>
+			<width>600</width>
+			<height>185</height>
+			<texture>trans-panel.png</texture>
+		</control>
+		<control type="image">
+			<description>panel big image</description>
+			<posx>195</posx>
+			<posy>270</posy>
+			<width>475</width>
+			<height>260</height>
+			<texture>trans-panel.png</texture>
+		</control>
+		<control type="fadelabel" id="20">
+			<description>movie title value</description>
+			<posx>130</posx>
+			<posy>40</posy>
+			<width>460</width>
+			<label>-</label>
+			<font>font14</font>
+			<align>center</align>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label">
+			<description>director txt</description>
+			<posx>100</posx>
+			<posy>90</posy>
+			<label>199</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label">
+			<description>writing credits txt</description>
+			<posx>100</posx>
+			<posy>110</posy>
+			<label>200</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label">
+			<description>genre txt</description>
+			<posx>100</posx>
+			<posy>130</posy>
+			<label>174</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label">
+			<description>year</description>
+			<posx>100</posx>
+			<posy>150</posy>
+			<label>201</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label">
+			<description>tagline txt</description>
+			<posx>100</posx>
+			<posy>170</posy>
+			<label>202</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label">
+			<description>plotoutline txt</description>
+			<posx>100</posx>
+			<posy>190</posy>
+			<label>203</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label">
+			<description>rating txt</description>
+			<posx>100</posx>
+			<posy>210</posy>
+			<label>204</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label">
+			<description>runtime txt</description>
+			<posx>100</posx>
+			<posy>230</posy>
+			<label>2050</label>
+			<font>font13</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label" id="21">
+			<description>director value</description>
+			<posx>220</posx>
+			<posy>90</posy>
+			<width>400</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label" id="22">
+			<description>writing credits value</description>
+			<posx>220</posx>
+			<posy>110</posy>
+			<width>400</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label" id="23">
+			<description>genre value</description>
+			<posx>220</posx>
+			<posy>130</posy>
+			<width>400</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label" id="24">
+			<description>year value</description>
+			<posx>220</posx>
+			<posy>150</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="fadelabel" id="25">
+			<description>tagline value</description>
+			<posx>220</posx>
+			<posy>170</posy>
+			<width>400</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="fadelabel" id="26">
+			<description>plotoutline value</description>
+			<posx>220</posx>
+			<posy>190</posy>
+			<width>400</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label" id="30">
+			<description>rating and votes value</description>
+			<posx>220</posx>
+			<posy>210</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label" id="31">
+			<description>runtime value</description>
+			<posx>220</posx>
+			<posy>230</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="image" id="0">
+			<description>start logo</description>
+			<posx>50</posx>
+			<posy>282</posy>
+			<width>126</width>
+			<height>156</height>
+			<texture>folder-dvd-nofocus.png</texture>
+		</control>
+		<control type="image" id="3">
+			<description>start logo</description>
+			<posx>68</posx>
+			<posy>290</posy>
+			<width>90</width>
+			<height>140</height>
+			<texture>-</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="textbox" id="4">
+			<description>textarea</description>
+			<posx>220</posx>
+			<posy>275</posy>
+			<height>280</height>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<font>15</font>
+			<spinposx>410</spinposx>
+			<spinposy>260</spinposy>
+		</control>
+		<control type="listcontrol" id="50">
+			<description>cast listcontrol</description>
+			<posx>220</posx>
+			<posy>275</posy>
+			<height>280</height>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>5</onup>
+			<ondown>8</ondown>
+			<spinposx>410</spinposx>
+			<spinposy>260</spinposy>
+		</control>
+		<control type="button" id="5">
+			<description>tracks/review</description>
+			<posx>45</posx>
+			<posy>450</posy>
+			<width>140</width>
+			<label>206</label>
+			<font>font12</font>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>6</onup>
+			<ondown>8</ondown>
+			<align>center</align>
+		</control>
+		<control type="button" id="8">
+			<description>Play</description>
+			<posx>45</posx>
+			<posy>486</posy>
+			<width>140</width>
+			<label>208</label>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>5</onup>
+			<ondown>6</ondown>
+			<align>center</align>
+		</control>
+		<control type="button" id="6">
+			<description>refresh</description>
+			<posx>45</posx>
+			<posy>522</posy>
+			<width>140</width>
+			<label>184</label>
+			<font>font12</font>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>8</onup>
+			<ondown>5</ondown>
+			<align>center</align>
+		</control>
+		<!--    <control>
+      <description>disc:</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>100</posx>
+      <posy>495</posy>
+      <label>427</label>
+      <font>font12</font>
+      <textcolor>common-text</textcolor>
+    </control>
+
+    <control>
+      <description>disc select</description>
+      <type>spincontrol</type>
+      <id>7</id>
+      <posx>105</posx>
+      <posy>535</posy>
+      <font>font12</font>
+      <reverse>yes</reverse>
+      <onup>6</onup>
+      <ondown>5</ondown>
+      <onleft>4</onleft>
+      <onright>4</onright>
+    </control> -->
+	</controls>
+</window>   

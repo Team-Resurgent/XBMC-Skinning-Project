@@ -1,0 +1,58 @@
+<includes>
+	<include name="WideIconView">
+		<control type="panel" id="55">
+			<viewtype label="Wide Icons">Wide Icons</viewtype>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>700</width>
+			<height>565</height>
+			<onleft>2</onleft>
+			<onright>24</onright>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>24</pagecontrol>
+			<include></include>
+			<itemlayout height="94" width="350">
+				<control type="image">
+					<posx>5</posx>
+					<posy>2</posy>
+					<width>340</width>
+					<height>70</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</itemlayout>
+			<focusedlayout height="94" width="350">
+				<control type="image">
+					<posx>3</posx>
+					<posy>0</posy>
+					<width>344</width>
+					<height>94</height>
+					<texture>White-block.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>2</posy>
+					<width>340</width>
+					<height>70</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>74</posy>
+					<width>340</width>
+					<height>20</height>
+					<font>font12</font>
+					<align>left</align>
+					<scroll>true</scroll>
+					<textcolor>black-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<info>ListItem.Label</info>
+					<visible>!Skin.HasSetting(widelabels)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,215 @@
+<window id="7">
+	<defaultcontrol>95</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group" id="9000">
+	      <description>Sidebar group</description>
+      <include>MenuEffect</include>
+      <control type="image">
+        <description>Sidebar Back image</description>
+        <posx>-65</posx>
+        <posy>120</posy>
+          <width>325</width>
+          <height>230</height>
+          <texture>Side_Slideout.png</texture>
+        </control>
+        <control type="label">
+          <posx>-64</posx>
+          <posy>340</posy>
+          <label>5</label>
+          <font>fntHeader</font>
+          <angle>90</angle>
+        </control>
+			
+			<control type="button" id="95">
+				<description>Button Default Values</description>
+				<posy>120</posy>
+        <posx>30</posx>
+				<label>13278</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>95</onleft>
+				<onright>95</onright>
+				<onup>98</onup>
+				<ondown>94</ondown>
+			</control>
+			<control type="button" id="94">
+				<description>Button Storage</description>
+				<posy>150</posy>
+        <posx>30</posx>
+				<label>13277</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>94</onleft>
+				<onright>94</onright>
+				<onup>95</onup>
+				<ondown>92</ondown>
+			</control>
+			<control type="button" id="92">
+				<description>Button HDD</description>
+				<posy>180</posy>
+        <posx>30</posx>
+				<label>13275</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>92</onleft>
+				<onright>92</onright>
+				<onup>94</onup>
+				<ondown>93</ondown>
+			</control>
+			<control type="button" id="93">
+				<description>Button DVD</description>
+				<posy>210</posy>
+        <posx>30</posx>
+				<label>13276</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>93</onleft>
+				<onright>93</onright>
+				<onup>92</onup>
+				<ondown>96</ondown>
+			</control>
+			<control type="button" id="96">
+				<description>Button Network</description>
+				<posy>240</posy>
+        <posx>30</posx>
+				<label>13279</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>96</onleft>
+				<onright>96</onright>
+				<onup>93</onup>
+				<ondown>97</ondown>
+			</control>
+			<control type="button" id="97">
+				<description>Button VIDEO</description>
+				<posy>270</posy>
+        <posx>30</posx>
+				<label>13280</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>97</onleft>
+				<onright>97</onright>
+				<onup>96</onup>
+				<ondown>98</ondown>
+			</control>
+			<control type="button" id="98">
+				<description>Button XBOX Hardware</description>
+				<posy>300</posy>
+        <posx>30</posx>
+				<label>13281</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>98</onleft>
+				<onright>98</onright>
+				<onup>97</onup>
+				<ondown>95</ondown>
+			</control>
+		</control>
+		
+
+		<control type="label">
+			<description>system info text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>130</label>
+			<font>font20</font>
+		</control>
+
+
+
+		<control type="label" id="2">
+			<description>Label 2</description>
+			<posx>220</posx>
+			<posy>150</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="3">
+			<description>Label 3</description>
+			<posx>220</posx>
+			<posy>180</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="4">
+			<description>Label 4</description>
+			<posx>220</posx>
+			<posy>210</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="5">
+			<description>Label 5</description>
+			<posx>220</posx>
+			<posy>240</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="6">
+			<description>Label 6</description>
+			<posx>220</posx>
+			<posy>270</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="7">
+			<description>Label 7</description>
+			<posx>220</posx>
+			<posy>300</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="8">
+			<description>Label 8</description>
+			<posx>220</posx>
+			<posy>330</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="9">
+			<description>Label 9</description>
+			<posx>220</posx>
+			<posy>360</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="10">
+			<description>Label 10</description>
+			<posx>220</posx>
+			<posy>390</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="11">
+			<description>Label 11</description>
+			<posx>220</posx>
+			<posy>405</posy>
+			<label>13282</label>
+			<font>font20</font>
+		</control>
+		<control type="label" id="50">
+			<description>Current Time</description>
+			<posx>220</posx>
+			<posy>443</posy>
+			<label>143</label>
+			<font>font12</font>
+		</control>
+		<control type="label" id="52">
+			<description>XBMC XBE BUILD Version</description>
+			<posx>220</posx>
+			<posy>465</posy>
+			<label>144</label>
+			<font>font12</font>
+		</control>
+		<control type="label" id="53">
+			<description>Mplayer DLL Version</description>
+			<posx>220</posx>
+			<posy>485</posy>
+			<label>144</label>
+			<font>font12</font>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,12 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <version>2.1</version>
+  <credits>
+     <skinname>Containment</skinname>
+     <name>CHI3f and mebzik</name>
+  </credits>
+  <startupwindows>
+    <window id="0">Home</window>
+  </startupwindows>
+</skin>

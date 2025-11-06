@@ -1,0 +1,306 @@
+<window type="dialog" id="1113">
+	<defaultcontrol>200</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>140</posx>
+		<posy>140</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<posx>-50</posx>
+			<posy>-50</posy>
+			<control type="image">
+				<description>Dialog Text Area</description>
+				<posx>40</posx>
+				<posy>40</posy>
+				<width>490</width>
+				<height>360</height>
+				<texture border="5">dialog_middle.png</texture>
+				<animation effect="zoom" time="150" start="137,127,250,120" end="40,40,490,360" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			</control>
+		</control>
+		<control type="group">
+			<include>Dialog_Content_Animation</include>
+			<control type="label">
+				<description>Heading Label</description>
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>420</width>
+				<align>left</align>
+				<label>31014</label>
+				<font>font14</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>460</width>
+				<height>5</height>
+				<texture>kai-divider.png</texture>
+			</control>
+			<control type="radiobutton" id="200">
+				<description>Weather script radiobutton</description>
+				<posx>5</posx>
+				<posy>35</posy>
+				<width>460</width>
+				<height>32</height>
+				<label>31015</label>
+				<font>font13</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textureradiofocus>settings-check-box.png</textureradiofocus>
+				<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+				<onclick>Skin.ToggleSetting(WeatherScriptEnable)</onclick>
+				<selected>Skin.HasSetting(WeatherScriptEnable)</selected>
+				<onleft>200</onleft>
+				<onright>200</onright>
+				<onup>400</onup>
+				<ondown>201</ondown>
+			</control>
+			<control type="label">
+				<description> Weather Script Button Label</description>
+				<posx>145</posx>
+				<posy>75</posy>
+				<width>140</width>
+				<height>32</height>
+				<label>31018</label>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Skin.HasSetting(WeatherScriptEnable)</visible>
+			</control>
+			<control type="button" id="201">
+				<description>Weather script Name Button</description>
+				<posx>155</posx>
+				<posy>70</posy>
+				<width>310</width>
+				<height>32</height>
+				<textoffsetx>15</textoffsetx>
+				<label>-</label>
+				<font>font13</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onclick>Skin.SetString(WeatherScript_Name)</onclick>
+				<onleft>201</onleft>
+				<onright>201</onright>
+				<onup>200</onup>
+				<ondown>202</ondown>
+				<visible>Skin.HasSetting(WeatherScriptEnable)</visible>
+			</control>
+			<control type="fadelabel">
+				<description> Weather Script Button Value</description>
+				<posx>160</posx>
+				<posy>75</posy>
+				<width>300</width>
+				<height>32</height>
+				<align>left</align>
+				<info>Skin.String(WeatherScript_Name)</info>
+				<font>font13</font>
+				<scroll>true</scroll>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Skin.HasSetting(WeatherScriptEnable)</visible>
+			</control>
+			<control type="label">
+				<description> Weather Script Path Label</description>
+				<posx>145</posx>
+				<posy>110</posy>
+				<width>140</width>
+				<height>32</height>
+				<label>31019</label>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Skin.HasSetting(WeatherScriptEnable)</visible>
+			</control>
+			<control type="button" id="202">
+				<description>Weather script path Button</description>
+				<posx>155</posx>
+				<posy>105</posy>
+				<width>310</width>
+				<height>32</height>
+				<textoffsetx>15</textoffsetx>
+				<label>-</label>
+				<font>font13</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onclick>Skin.SetFile(WeatherScript_Path,.py,q:\scripts\)</onclick>
+				<onleft>202</onleft>
+				<onright>202</onright>
+				<onup>201</onup>
+				<ondown>300</ondown>
+				<visible>Skin.HasSetting(WeatherScriptEnable)</visible>
+			</control>
+			<control type="fadelabel">
+				<description> Weather Script Path Value</description>
+				<posx>160</posx>
+				<posy>110</posy>
+				<width>300</width>
+				<height>32</height>
+				<align>left</align>
+				<info>Skin.String(WeatherScript_Path)</info>
+				<font>font13</font>
+				<scroll>true</scroll>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Skin.HasSetting(WeatherScriptEnable)</visible>
+			</control>
+			<control type="group">
+				<animation effect="slide" time="0" end="0,-70" condition="!Skin.HasSetting(WeatherScriptEnable)">Conditional</animation>
+				<control type="image">
+					<description>separator image</description>
+					<posx>5</posx>
+					<posy>140</posy>
+					<width>460</width>
+					<height>5</height>
+					<texture>kai-divider.png</texture>
+				</control>
+				<control type="radiobutton" id="300">
+					<description>Video script radiobutton</description>
+					<posx>5</posx>
+					<posy>145</posy>
+					<width>460</width>
+					<height>32</height>
+					<label>31016</label>
+					<font>font13</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<textureradiofocus>settings-check-box.png</textureradiofocus>
+					<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+					<onclick>Skin.ToggleSetting(VideoScriptEnable)</onclick>
+					<selected>Skin.HasSetting(VideoScriptEnable)</selected>
+					<onleft>300</onleft>
+					<onright>300</onright>
+					<onup>202</onup>
+					<ondown>301</ondown>
+				</control>
+				<control type="label">
+					<description> Video Script Button Label</description>
+					<posx>145</posx>
+					<posy>185</posy>
+					<width>140</width>
+					<height>32</height>
+					<label>31018</label>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Skin.HasSetting(VideoScriptEnable)</visible>
+				</control>
+				<control type="button" id="301">
+					<description>Video script Name Button</description>
+					<posx>155</posx>
+					<posy>180</posy>
+					<width>310</width>
+					<height>32</height>
+					<textoffsetx>15</textoffsetx>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<onclick>Skin.SetString(VideoScript_Name)</onclick>
+					<onleft>301</onleft>
+					<onright>301</onright>
+					<onup>300</onup>
+					<ondown>302</ondown>
+					<visible>Skin.HasSetting(VideoScriptEnable)</visible>
+				</control>
+				<control type="fadelabel">
+					<description> Video Script Button Value</description>
+					<posx>160</posx>
+					<posy>185</posy>
+					<width>300</width>
+					<height>32</height>
+					<align>left</align>
+					<info>Skin.String(VideoScript_Name)</info>
+					<font>font13</font>
+					<scroll>true</scroll>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Skin.HasSetting(VideoScriptEnable)</visible>
+				</control>
+				<control type="label">
+					<description> Video Script Path Label</description>
+					<posx>145</posx>
+					<posy>220</posy>
+					<width>140</width>
+					<height>32</height>
+					<label>31019</label>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Skin.HasSetting(VideoScriptEnable)</visible>
+				</control>
+				<control type="button" id="302">
+					<description>Video script path Button</description>
+					<posx>155</posx>
+					<posy>215</posy>
+					<width>310</width>
+					<height>32</height>
+					<textoffsetx>15</textoffsetx>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<onclick>Skin.SetFile(VideoScript_Path,.py,q:\scripts\)</onclick>
+					<onleft>302</onleft>
+					<onright>302</onright>
+					<onup>301</onup>
+					<ondown>400</ondown>
+					<visible>Skin.HasSetting(VideoScriptEnable)</visible>
+				</control>
+				<control type="fadelabel">
+					<description> Video Script Path Value</description>
+					<posx>160</posx>
+					<posy>220</posy>
+					<width>300</width>
+					<height>32</height>
+					<align>left</align>
+					<info>Skin.String(VideoScript_Path)</info>
+					<font>font13</font>
+					<scroll>true</scroll>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Skin.HasSetting(VideoScriptEnable)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="slide" time="0" end="0,-70" condition="!Skin.HasSetting(WeatherScriptEnable)">Conditional</animation>
+				<animation effect="slide" time="0" end="0,-70" condition="!Skin.HasSetting(VideoScriptEnable)">Conditional</animation>
+				<control type="image">
+					<description>separator image</description>
+					<posx>5</posx>
+					<posy>250</posy>
+					<width>460</width>
+					<height>5</height>
+					<texture>kai-divider.png</texture>
+				</control>
+				<control type="radiobutton" id="400">
+					<description>Lyrics script radiobutton</description>
+					<posx>5</posx>
+					<posy>255</posy>
+					<width>460</width>
+					<height>32</height>
+					<label>31017</label>
+					<font>font13</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<textureradiofocus>settings-check-box.png</textureradiofocus>
+					<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+					<onclick>Skin.ToggleSetting(LyricsScriptEnable)</onclick>
+					<selected>Skin.HasSetting(LyricsScriptEnable)</selected>
+					<onleft>400</onleft>
+					<onright>400</onright>
+					<onup>302</onup>
+					<ondown>200</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>      

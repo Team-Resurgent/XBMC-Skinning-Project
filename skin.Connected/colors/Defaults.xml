@@ -1,0 +1,12 @@
+<colors>
+
+	<color name="DefaultTextColor">FF6A6A6A</color>
+	<color name="DisabledTextColor">FF343434</color>
+	<color name="FocusedTextColor">FFBABABA</color>
+	<color name="ShadowTextColor">FF000000</color>
+	<color name="SelectedTextColor">FFFDFF46</color>
+
+  <color name="IconDiffuseColor">FF6A6A6A</color>
+  <color name="BackgroundDiffuseColor">FF343434</color>
+
+</colors>

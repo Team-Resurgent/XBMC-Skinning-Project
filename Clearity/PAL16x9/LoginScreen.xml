@@ -1,0 +1,154 @@
+<window type="dialog" id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel</include>
+	<include>Menu-Time</include>
+
+	<control>
+		<description>Title Label</description>
+		<label>20096</label>
+		<include>Window-Title</include>
+		<include>common-FX</include>
+		<visible>!Window.IsActive(130) + !Window.IsActive(131)</visible>
+	</control>
+
+	<control type="wraplist" id="52">
+		<posx>68</posx>
+		<posy>130</posy>
+		<width>585</width>
+		<height>363</height>
+		<scrolltime>250</scrolltime>
+		<focusposition>1</focusposition>
+		<orientation>horizontal</orientation>
+		<onleft>90</onleft>
+		<onright>90</onright>
+		<onup>52</onup>
+		<ondown>98</ondown>
+		<include>common-FX</include>
+		<itemlayout height="140" width="190">
+			<control type="image">
+				<posx>25</posx>
+				<posy>17</posy>
+				<width>155</width>
+				<height>220</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>70ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>237</posy>
+				<width>155</width>
+				<height>220</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<colordiffuse>70ffffff</colordiffuse>
+			</control>
+		</itemlayout>
+		<focusedlayout height="140" width="190">
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>195</width>
+				<height>250</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<animation effect="zoom" end="5,5,195,250" time="500">Focus</animation>
+				<animation effect="fade" start="50" time="2000" condition="Control.HasFocus(52)" pulse="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>255</posy>
+				<width>195</width>
+				<height>250</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" start="50" time="2000" condition="Control.HasFocus(52)" pulse="true">Conditional</animation>
+			</control>
+ 		</focusedlayout>
+	</control>
+	<control type="label">
+		<posx>100</posx>
+		<posy>390</posy>
+		<width>520</width>
+		<height>16</height>
+		<font>special14</font>
+		<align>center</align>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<scroll>true</scroll>
+		<info>ListItem.Label</info>
+		<include>selectedcolor</include>
+		<include>common-FX</include>
+		<visible>Control.IsVisible(52)</visible>
+	</control>
+	<control type="label">
+		<posx>100</posx>
+		<posy>420</posy>
+		<width>520</width>
+		<height>16</height>
+		<font>special12</font>
+		<align>center</align>
+		<textcolor>white2</textcolor>
+		<shadowcolor>black2</shadowcolor>
+		<info>ListItem.Label2</info>
+		<include>selectedcolor</include>
+		<include>common-FX</include>
+		<visible>Control.IsVisible(52)</visible>
+	</control>
+	<control type="label" id="2">
+		<description>Heading Label</description>
+		<posx>80</posx>
+		<posy>120</posy>
+		<width>420</width>
+		<align>left</align>
+		<label>20115</label>
+		<font>special13</font>
+		<textcolor>white2</textcolor>
+		<shadowcolor>black2</shadowcolor>
+		<include>common-FX</include>
+		<visible>!Window.IsActive(130) + !Window.IsActive(131)</visible>
+	</control>
+	<control type="label" id="3">
+		<description>Profile Count Label</description>
+		<posx>630</posx>
+		<posy>120</posy>
+		<width>420</width>
+		<align>right</align>
+		<font>special13</font>
+		<textcolor>white2</textcolor>
+		<shadowcolor>black2</shadowcolor>
+		<include>common-FX</include>
+		<visible>!Window.IsActive(130) + !Window.IsActive(131)</visible>
+	</control>
+	<control type="button" id="98">
+		<description>ShutDown Button</description>
+		<posx>631</posx>
+		<posy>450</posy>
+		<width>26</width>
+		<height>35</height>
+		<align>right</align>
+		<textcolor>60ffffff</textcolor>
+		<onclick>ActivateWindow(ShutdownMenu)</onclick>
+		<texturefocus>Small-Icon-Quit-Focus.png</texturefocus>
+		<texturenofocus>Small-Icon-Quit-NoFocus.png</texturenofocus>
+		<onleft>52</onleft>
+		<onright>52</onright>
+		<onup>52</onup>
+		<ondown>52</ondown>
+		<include>common-FX</include>
+		<visible>!Window.IsActive(130) + !Window.IsActive(131)</visible>
+	</control>
+
+	<include>Lines</include>
+	</controls>
+</window>

@@ -1,0 +1,357 @@
+<window id="120">
+	<defaultcontrol>213</defaultcontrol>
+	<type>dialog</type>
+	<animation effect="slide" start="0,600" end="0,0" acceleration="-1" time="300">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="0,600" acceleration="1" time="300">WindowClose</animation>	
+	<coordinates>
+	<system>1</system>
+	<origin x="0" y="55">true</origin>
+	</coordinates>
+	<controls>
+
+	<control type="image">
+		<description>BG Panel</description>
+		<posx>105</posx>
+		<posy>403</posy>
+		<height>45</height>
+		<width>510</width>
+		<texture>color-black.png</texture>
+		<colordiffuse>90ffffff</colordiffuse>
+	</control>
+
+	<control type="button" id="925">
+		<description>Empty button</description>
+		<posx>100</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-left-focus.png</texturefocus>
+		<texturenofocus>osd-button-left-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick></onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>926</onleft>
+		<onright>928</onright>
+		<onup>925</onup>
+		<ondown>925</ondown>
+	</control>
+
+	<control type="button" id="928">
+		<description>Another button</description>
+		<posx>140</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-music-focus.png</texturefocus>
+		<texturenofocus>osd-button-music-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick></onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>925</onleft>
+		<onright>208</onright>
+		<onup>928</onup>
+		<ondown>928</ondown>
+	</control>
+
+	<control type="button" id="208">
+		<description>Random button</description>
+		<posx>180</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-random-focus.png</texturefocus>
+		<texturenofocus>osd-button-random-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Random)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>928</onleft>
+		<onright>918</onright>
+		<onup>208</onup>
+		<ondown>208</ondown>
+	</control>
+
+	<control type="button" id="918">
+		<description>Playlist buton</description>
+		<posx>220</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-list-focus.png</texturefocus>
+		<texturenofocus>osd-button-list-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.ActivateWindow(500)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>208</onleft>
+		<onright>210</onright>
+		<onup>918</onup>
+		<ondown>918</ondown>
+	</control>
+
+	<control type="button" id="210">
+		<description>Previous button</description>
+		<posx>260</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-previous-focus.png</texturefocus>
+		<texturenofocus>osd-button-previous-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Previous)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>918</onleft>
+		<onright>211</onright>
+		<onup>210</onup>
+		<ondown>210</ondown>
+	</control>
+
+	<control type="button" id="211">
+		<description>Rewind button</description>
+		<posx>300</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-rewind-focus.png</texturefocus>
+		<texturenofocus>osd-button-rewind-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>210</onleft>
+		<onright>213</onright>
+		<onup>211</onup>
+		<ondown>211</ondown>
+	</control>
+
+	<control type="togglebutton" id="213">
+		<description>Play/Pause button</description>
+		<posx>340</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-pause-focus.png</texturefocus>
+		<texturenofocus>osd-button-pause-nofocus.png</texturenofocus>
+		<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+		<alttexturefocus>osd-button-play-focus.png</alttexturefocus>
+		<alttexturenofocus>osd-button-play-nofocus.png</alttexturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Play)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>211</onleft>
+		<onright>214</onright>
+		<onup>213</onup>
+		<ondown>213</ondown>
+		<animation effect="fade" time="250" condition="!Player.Paused">VisibleChange</animation>
+	</control>
+
+	<control type="button" id="214">
+		<description>Forward button</description>
+		<posx>380</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-forward-focus.png</texturefocus>
+		<texturenofocus>osd-button-forward-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Forward)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>213</onleft>
+		<onright>215</onright>
+		<onup>214</onup>
+		<ondown>214</ondown>
+	</control>
+
+	<control type="button" id="215">
+		<description>Next button</description>
+		<posx>420</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-next-focus.png</texturefocus>
+		<texturenofocus>osd-button-next-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Next)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>214</onleft>
+		<onright>216</onright>
+		<onup>215</onup>
+		<ondown>215</ondown>
+	</control>
+
+	<control type="button" id="216">
+		<description>Mute button</description>
+		<posx>460</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-mute-focus.png</texturefocus>
+		<texturenofocus>osd-button-mute-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.Mute</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>215</onleft>
+		<onright>920</onright>
+		<onup>216</onup>
+		<ondown>216</ondown>
+	</control>
+
+	<control type="button" id="920">
+		<description>Visualisation button</description>
+		<posx>500</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-vis-focus.png</texturefocus>
+		<texturenofocus>osd-button-vis-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.ActivateWindow(122)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>216</onleft>
+		<onright>921</onright>
+		<onup>920</onup>
+		<ondown>920</ondown>
+	</control>
+
+	<control type="button" id="921">
+		<description>Audio Menu button</description>
+		<posx>540</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-music-focus.png</texturefocus>
+		<texturenofocus>osd-button-music-nofocus.png</texturenofocus>
+		<onclick>XBMC.ActivateWindow(124)</onclick>
+		<pulseonselect>yes</pulseonselect>
+		<label>-</label>
+		<font>-</font>
+		<onleft>920</onleft>
+		<onright>926</onright>
+		<onup>921</onup>
+		<ondown>921</ondown>
+	</control>
+
+	<control type="button" id="926">
+		<description>Empty button</description>
+		<posx>580</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>50</height>
+		<texturefocus>osd-button-right-focus.png</texturefocus>
+		<texturenofocus>osd-button-right-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick></onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>921</onleft>
+		<onright>925</onright>
+		<onup>926</onup>
+		<ondown>926</ondown>
+	</control>
+
+<!-- ----------------------- !!! OLd Layout !!!----------------------- -->
+
+
+	<!-- Top Button-->
+	<!-- <control>
+		<description>OSD - Popup Vis Preset List Button</description>
+		<type>button</type>
+		<id>220</id>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>155</width>
+		<height>155</height>
+		<label>-</label>
+		<texturefocus>OSD_Buttons_Top_Vis_Focus.png</texturefocus>
+		<texturenofocus>OSD_Buttons_Top_Vis_NoFocus.png</texturenofocus>
+		<onleft>210</onleft>
+		<onright>215</onright>
+		<onup>500</onup>
+		<ondown>213</ondown>
+		<onclick>XBMC.ActivateWindow(122)</onclick>
+		<visible allowhiddenfocus="true">!Control.HasFocus(500)</visible>
+		<animation effect="zoom" start="0" end="100" center="77,77" acceleration="1" time="200">WindowOpen</animation>
+		<animation effect="zoom" start="100" end="0" center="77,77" acceleration="-1" time="200">WindowClose</animation>
+		<animation effect="zoom" start="100" end="103" center="77,77" acceleration="1" time="200">Focus</animation>
+		<animation effect="zoom" start="103" end="100" center="77,77" acceleration="-1" time="500">Unfocus</animation>
+	</control> -->
+
+	<!-- <control>
+		<description>OSD - Popup Vis Select Button</description>
+		<type>button</type>
+		<id>500</id>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>155</width>
+		<height>155</height>
+		<texturefocus>OSD_Buttons_Top_Focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<pulseonselect>no</pulseonselect>
+		<label>-</label>
+		<onleft>210</onleft>
+		<onright>215</onright>
+		<onup>222</onup>
+		<ondown>220</ondown>
+		<visible allowhiddenfocus="true">!Control.HasFocus(220)</visible>
+		<animation effect="zoom" start="0" end="100" center="77,77" acceleration="1" time="200">WindowOpen</animation>
+		<animation effect="zoom" start="100" end="0" center="77,77" acceleration="-1" time="200">WindowClose</animation>
+		<animation effect="zoom" start="100" end="103" center="77,77" acceleration="1" time="0">Focus</animation>
+		<animation effect="zoom" start="103" end="100" center="77,77" acceleration="-1" time="0">Unfocus</animation>
+		<animation effect="slide" start="0,0" end="0,-3" acceleration="-1" time="400">Visible</animation>
+		<animation effect="slide" start="0,-3" end="0,0" acceleration="1" time="500">Hidden</animation>
+	</control> -->
+
+	<!-- <control>
+		<description>OSD - Visualisation Select Button</description>
+		<type>selectbutton</type>
+		<id>503</id>
+		<visible>false</visible>
+		<posx>150</posx>
+		<posy>100</posy>
+		<width>420</width>
+		<height>35</height>
+		<label>-</label>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+		<texturebg>osd_settings_header.png</texturebg>
+		<onleft>500</onleft>
+		<onright>500</onright>
+		<onup>500</onup>
+		<ondown>500</ondown>
+	</control> -->
+
+
+	<!-- Bottom Button-->
+	<!-- <control>
+		<description>OSD - Popup Vis Settings Button</description>
+		<type>button</type>
+		<id>219</id>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>155</width>
+		<height>155</height>
+		<label>-</label>
+		<texturefocus>OSD_Buttons_Bottom_Focus.png</texturefocus>
+		<texturenofocus>OSD_Buttons_Bottom_NoFocus.png</texturenofocus>
+		<onleft>210</onleft>
+		<onright>215</onright>
+		<onup>213</onup>
+		<ondown>499</ondown>
+		<onclick>XBMC.ActivateWindow(121)</onclick>
+		<visible allowhiddenfocus="true">!Control.HasFocus(499)</visible>
+		<animation effect="zoom" start="0" end="100" center="77,77" acceleration="1" time="200">WindowOpen</animation>
+		<animation effect="zoom" start="100" end="0" center="77,77" acceleration="-1" time="200">WindowClose</animation>
+		<animation effect="zoom" start="100" end="103" center="77,77" acceleration="1" time="200">Focus</animation>
+		<animation effect="zoom" start="103" end="100" center="77,77" acceleration="-1" time="500">Unfocus</animation>
+	</control> -->
+
+	</controls>
+</window>

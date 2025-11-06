@@ -1,0 +1,970 @@
+<fonts>
+  <fontset id="Default" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>tahoma.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>tahoma.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>tahoma.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>tahoma.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>tahoma.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>tahoma.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>tahoma.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>tahoma.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>tahoma.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>tahoma.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>tahoma.ttf</filename>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>tahoma.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>tahoma.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>tahoma.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>tahoma.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>nasa-big</name>
+      <filename>nasa.ttf</filename>
+      <size>21</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-small</name>
+      <filename>nasa.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+  </fontset>
+
+  <fontset id="Century Gothic TTF" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>cgothic.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>cgothic.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>cgothic.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>cgothic.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>cgothic.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>cgothic.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>cgothic.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>cgothic.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>nasa-big</name>
+      <filename>nasa.ttf</filename>
+      <size>21</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-small</name>
+      <filename>nasa.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+  </fontset>
+
+  <fontset id="Verdana TTF" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>verdana.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>verdana.ttf</filename>
+      <size>12</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>verdana.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>verdana.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>verdana.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>verdana.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>verdana.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>verdana.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>verdana.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>verdana.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>verdana.ttf</filename>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>verdana.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>verdana.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>verdana.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>verdana.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>nasa-big</name>
+      <filename>nasa.ttf</filename>
+      <size>21</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-small</name>
+      <filename>nasa.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+  </fontset>
+
+  <fontset id="Street TTF" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>street.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>street.ttf</filename>
+      <size>12</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>street.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>street.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>street.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>street.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>street.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>street.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>street.ttf</filename>
+      <size>13</size>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>street.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>street.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>street.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>street.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>street.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>street.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>nasa-big</name>
+      <filename>nasa.ttf</filename>
+      <size>21</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-small</name>
+      <filename>nasa.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+  </fontset>
+
+  <fontset id="Test TTF" unicode="false">
+    <font>
+      <name>font18</name>
+      <filename>test.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>test.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>test.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>test.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>test.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>test.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>test.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>test.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>test.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>test.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>test.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>test.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>test.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>test.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>test.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>nasa-big</name>
+      <filename>nasa.ttf</filename>
+      <size>21</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-small</name>
+      <filename>nasa.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+  </fontset>
+
+  <fontset id="Arial TTF (normal)" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>arial.ttf</filename>
+      <size>14</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>arial.ttf</filename>
+      <size>11</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>arial.ttf</filename>
+      <size>14</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>arial.ttf</filename>
+      <size>13</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <size>23</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>arial.ttf</filename>
+      <size>14</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-big</name>
+      <filename>arial.ttf</filename>
+      <size>21</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-small</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+  </fontset>
+
+  <fontset id="Arial TTF (bold)" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>arial.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>arial.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>arial.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>arial.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>arial.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>arial.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>arial.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>arial.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>arial.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>13</size>
+    </font>
+
+    <font>
+      <name>nasa-big</name>
+      <filename>arial.ttf</filename>
+      <size>21</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>nasa-small</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+  </fontset>
+
+</fonts>

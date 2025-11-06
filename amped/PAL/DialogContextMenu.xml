@@ -1,0 +1,33 @@
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>140</posx>
+		<posy>100</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="997">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy></posy>
+			<width>500</width>
+			<height>400</height>
+			<texture>DialogContext.png</texture>
+		</control>
+		
+		
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>120</posx>
+			<posy>350</posy>
+			<width>258</width>
+			<height>28</height>
+			<font>font18</font>
+      <include>textcolor-black</include>
+      <texturefocus>ListItem_Focus.png</texturefocus>
+      <texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			<align>center</align>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,166 @@
+<!-- 
+USE: General view for displaying a list of folders/files.
+-->
+<includes>
+	<include name="ViewPlaylist">
+	
+		<control type="group">
+			
+			<visible>Control.IsVisible(50)</visible>
+			<posx>40</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>1150</width>
+				<height>590</height>
+			</control>
+
+			<!-- list container -->
+			<control type="list" id="50">
+			
+				<viewtype label="Playlist">list</viewtype>
+				<width>1140</width>
+				<height>590</height>
+				<posx>5</posx>
+				<posy>5</posy>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="59">
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>1140</width>
+						<height>50</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>10</posx>
+						<posy>9</posy>
+						<colordiffuse>dimmed</colordiffuse>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>770</width>
+						<height>50</height>
+						<posx>62</posx>
+						<font>listitem</font>
+						<textcolor>type-listitem-dark</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label2]</label>
+						<width>250</width>
+						<height>50</height>
+						<posx>1120</posx>
+						<font>listitem</font>
+						<textcolor>type-listitem-dark</textcolor>
+						<align>right</align>
+					</control>
+				</itemlayout>
+				<focusedlayout height="59">
+					<control type="image">
+						<visible>Control.HasFocus(50)</visible>
+						<texture border="8">listitem-back.png</texture>
+						<width>1140</width>
+						<height>50</height>
+					</control>
+					<control type="image">
+						<visible>!Control.HasFocus(50)</visible>
+						<texture border="8">container-back-nf.png</texture>
+						<width>1140</width>
+						<height>50</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>10</posx>
+						<posy>9</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>770</width>
+						<height>50</height>
+						<posx>62</posx>
+						<font>listitem</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.label2]</label>
+						<width>250</width>
+						<height>50</height>
+						<posx>1120</posx>
+						<font>listitem</font>
+						<textcolor>type-listitem</textcolor>
+						<align>right</align>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<!-- scrollbar -->
+			<control type="group">
+				<posx>1170</posx>
+				<control type="image">
+					<texture>container-back-nf.png</texture>
+					<width>30</width>
+					<height>590</height>
+				</control>
+				<control type="scrollbar" id="60">
+					<width>30</width>
+					<height>590</height>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+				</control>
+			</control>
+			
+			<!-- container info -->
+			<control type="group">
+				<posy>590</posy>
+				<!-- number of files -->
+				<control type="label" id="12">
+					<visible>!Player.HasMedia</visible>
+					<width>670</width>
+					<height>40</height>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+				</control>
+				<!-- number of files -->
+				<control type="label">
+					<visible>Player.HasMedia</visible>
+					<label>$INFO[Playlist.Position,, / ]$INFO[Playlist.Length]</label>
+					<width>670</width>
+					<height>40</height>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+				</control>
+				<!-- random and repeat -->
+				<control type="label">
+					<label>$INFO[Playlist.Random,Random: , / ]$INFO[Playlist.Repeat, Repeat: ]</label>
+					<width>1200</width>
+					<height>40</height>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+					<align>center</align>
+				</control>
+				<!-- current page / number of pages -->
+				<control type="label">
+					<label>$INFO[Container().CurrentPage,, / ]$INFO[Container().NumPages]</label>
+					<width>670</width>
+					<height>40</height>
+					<posx>1200</posx>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+					<align>right</align>
+				</control>
+			</control>
+		</control>
+		
+	</include>
+</includes>

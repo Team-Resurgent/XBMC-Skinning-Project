@@ -1,0 +1,238 @@
+<!-- window name: videolibrary or myvideolibrary -->
+<window id="25">
+
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<!-- background -->
+		<include>bg-movies</include>
+		<include>bg-tv</include>		
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>e5ffffff</colordiffuse>
+		</control>		
+		
+		<!-- view modes -->		
+		<include>ViewList</include>
+		<include>ViewIcon</include>
+		<include>ViewPanel</include>
+		<include>ViewWide</include>
+		<include>ViewDVDCover</include>
+		<include>ViewEpisodes</include>
+		<include>ViewShows</include>
+		<include>ViewFanart</include>
+		<include>ViewMovies</include>
+
+		<!-- header -->
+		<control type="group">
+		
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+			<visible>!container.content(tvshows) + !container.content(movies) + !container.content(musicvideos)</visible>
+				<label>Video Library</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<control type="label">
+				<visible>Container.Content(movies)</visible>
+				<label>Movies</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<control type="label">
+				<visible>Container.Content(tvshows)</visible>
+				<label>TV Shows</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<control type="label">
+				<visible>Container.Content(musicvideos)</visible>
+				<label>Music Videos</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, |]  $INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+					
+		<!-- view options -->
+		<control type="group">
+		
+			<posx>1280</posx>
+			<posy>20</posy>
+			
+			<include>anim-sidebar</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>black.png</texture>
+				<width>400</width>
+				<height>680</height>
+				<colordiffuse>sidebar</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="9000">			
+				<width>360</width>
+				<height>680</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<!-- view as -->
+				<control type="button" id="101">
+					<label>View: $INFO[Container.ViewMode]</label>
+					<include>type-sidebar</include>
+					<onclick>Container.NextViewMode</onclick>
+				</control>
+				
+				<!-- sort by -->
+				<control type="button" id="110">
+					<label>Sort: $INFO[Container.SortMethod]</label>
+					<include>type-sidebar</include>
+					<onclick>Container.NextSortMethod</onclick>
+				</control>
+				<!-- sort direction -->
+				<control type="togglebutton" id="4">
+					<width>50</width>
+					<height>50</height>
+					<posx>310</posx>
+					<posy>-50</posy>
+					<align>right</align>
+				</control>
+				
+				<!-- watched -->
+				<control type="button" id="10">
+					<visible>!Skin.HasSetting(watched_filtering_toggle)</visible>
+					<include>type-sidebar</include>
+				</control>
+				<control type="radiobutton" id="14">
+					<visible>Skin.HasSetting(watched_filtering_toggle)</visible>
+					<include>type-sidebar</include>
+				</control>
+				<!-- search -->
+				<control type="button" id="8">
+					<label>137</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- filter -->
+				<control type="radiobutton" id="19">
+					<label>587</label>
+					<include>type-sidebar</include>
+				</control>
+				
+				<!-- scripts -->
+				<control type="button" id="120">
+					<visible>Skin.HasSetting(usemoviescripts) | Skin.HasSetting(usetvscripts)</visible>
+					<label>Scripts</label>
+					<include>type-sidebar</include>
+					<onclick>Skin.ToggleSetting(showscripts)</onclick>
+				</control>				
+					<!-- movie script one -->
+					<control type="button" id="121">
+						<visible>Skin.HasSetting(showscripts)</visible>
+						<visible>Skin.HasSetting(moviescript1)</visible>
+						<visible>Skin.HasSetting(movies)</visible>
+						<label>$INFO[Skin.String(moviescript1name)]</label>
+						<posx>20</posx>
+						<include>type-sidebar</include>
+						<onclick>XBMC.RunScript($INFO[Skin.String(moviescript1path)])</onclick>
+						<onclick>Skin.Reset(showscripts)</onclick>
+					</control>
+					<!-- movie script two -->
+					<control type="button" id="122">
+						<visible>Skin.HasSetting(showscripts)</visible>
+						<visible>Skin.HasSetting(moviescript2)</visible>
+						<visible>Skin.HasSetting(movies)</visible>
+						<label>$INFO[Skin.String(moviescript2name)]</label>
+						<posx>20</posx>
+						<include>type-sidebar</include>
+						<onclick>XBMC.RunScript($INFO[Skin.String(moviescript2path)])</onclick>
+						<onclick>Skin.Reset(showscripts)</onclick>
+					</control>
+					<!-- tv script one -->
+					<control type="button" id="123">
+						<visible>Skin.HasSetting(showscripts)</visible>
+						<visible>Skin.HasSetting(tvscript1)</visible>
+						<visible>Skin.HasSetting(tv)</visible>
+						<label>$INFO[Skin.String(tvscript1name)]</label>
+						<posx>20</posx>
+						<include>type-sidebar</include>
+						<onclick>XBMC.RunScript($INFO[Skin.String(tvscript1path)])</onclick>
+						<onclick>Skin.Reset(showscripts)</onclick>
+					</control>
+					<!-- tv script two -->
+					<control type="button" id="124">
+						<visible>Skin.HasSetting(showscripts)</visible>
+						<visible>Skin.HasSetting(tvscript2)</visible>
+						<visible>Skin.HasSetting(tv)</visible>
+						<label>$INFO[Skin.String(tvscript2name)]</label>
+						<posx>20</posx>
+						<include>type-sidebar</include>
+						<onclick>XBMC.RunScript($INFO[Skin.String(tvscript2path)])</onclick>
+						<onclick>Skin.Reset(showscripts)</onclick>
+					</control>
+
+				<!-- unlock shares -->
+				<control type="radiobutton" id="11">
+					<visible>System.HasLocks</visible>
+					<label>20336</label>
+					<include>type-sidebar</include>
+					<selected>system.ismaster</selected>
+					<onclick>xbmc.mastermode</onclick>
+				</control>
+				<!-- file mode -->
+				<control type="button" id="130">
+					<label>File Mode</label>
+					<include>type-sidebar</include>
+					<onclick>ReplaceWindow(videofiles)</onclick>
+				</control>
+				<!-- settings -->
+				<control type="button" id="140">
+					<label>Settings</label>
+					<include>type-sidebar</include>
+					<onclick>Skin.SetString(settingstitle, Video Settings)</onclick>
+					<onclick>ActivateWindow(videossettings)</onclick>
+				</control>
+
+			</control>
+		</control>
+	
+	</controls>
+	
+</window>

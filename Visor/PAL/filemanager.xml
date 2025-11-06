@@ -1,0 +1,132 @@
+<window>
+  <id>3</id>
+  <defaultcontrol>20</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <width>720</width>
+      <height>576</height>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-files.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>HDDsmall.png</texture>
+      <colordiffuse>a0FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>files logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>33</posY>
+      <height>83</height>
+      <texture>background-myfiles.png</texture>
+    </control>
+
+    <control>
+      <description>number of files in left list text label</description>
+      <type>label</type>
+      <id>12</id>
+      <posX>30</posX>
+      <posY>525</posY>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>number of files in right list text label</description>
+      <type>label</type>
+      <id>13</id>
+      <posX>390</posX>
+      <posY>525</posY>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>My Files text label</description>
+      <type>label</type>
+      <id>100</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>7</label>
+      <font>font14</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>current Directory text label left</description>
+      <type>label</type>
+      <id>101</id>
+      <align>right</align>
+      <posX>330</posX>
+      <posY>55</posY>
+      <label>7</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>current Directory text label right</description>
+      <type>label</type>
+      <id>102</id>
+      <align>right</align>
+      <posX>690</posX>
+      <posY>55</posY>
+      <label>7</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>Left File list</description>
+      <type>listcontrol</type>
+      <id>20</id>
+      <selectedColor>FFFF9600</selectedColor>
+      <posX>21</posX>
+      <posY>121</posY>
+      <width>340</width>
+      <onleft>21</onleft>
+      <onright>21</onright>
+      <onup>20</onup>
+      <ondown>20</ondown>
+    </control>
+
+    <control>
+      <description>Right File list</description>
+      <type>listcontrol</type>
+      <id>21</id>
+      <selectedColor>FFFF9600</selectedColor>
+      <posX>381</posX>
+      <posY>121</posY>
+      <width>340</width>
+      <onleft>20</onleft>
+      <onright>20</onright>
+      <onup>21</onup>
+      <ondown>21</ondown>
+    </control>
+
+  </controls>
+
+</window>
+

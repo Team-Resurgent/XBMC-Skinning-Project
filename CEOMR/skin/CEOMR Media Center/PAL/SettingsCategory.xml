@@ -1,0 +1,171 @@
+<window id="12">
+
+  <defaultcontrol always="true">2</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Settings Label</description>
+      <include>logo</include>
+      <align>right</align>
+      <posx>660</posx>
+      <posy>85</posy>
+      <label>-</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="grouplist" id="3">
+      <description>button area</description>
+      <include>control</include>
+      <posx>50</posx>
+      <posy>120</posy>
+      <width>200</width>
+      <height>300</height>
+      <texture>-</texture>
+	<onleft>5</onleft>
+	<onright>5</onright>
+	<onup>3</onup>
+	<ondown>3</ondown>
+    </control>
+
+    <control type="image" id="4">
+      <description>button gap</description>
+      <include>control</include>
+      <width>350</width>
+      <height>38</height>
+      <texture>-</texture>
+    </control>
+
+    <control type="grouplist" id="5">
+      <description>control area</description>
+      <include>control</include>
+      <posx>211</posx>
+      <posy>121</posy>
+      <width>445</width>
+      <height>380</height>
+	<itemgap>0</itemgap>
+	<pagecontrol>90</pagecontrol>
+	<onleft>3</onleft>
+	<onright>90</onright>
+	<onup>5</onup>
+	<ondown>5</ondown>
+    </control>
+
+    <control type="image" id="6">
+      <description>control gap</description>
+      <include>control</include>
+      <width>350</width>
+      <height>38</height>
+      <texture>-</texture>
+    </control>
+
+    <control type="button" id="7">
+      <description>Default Button</description>
+      <posx>530</posx>
+      <posy>150</posy>
+      <font>font13</font>
+      <textoffsetx>7</textoffsetx>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+    </control>
+
+    <control type="radiobutton" id="8">
+      <description>Default RadioButton</description>
+      <posx>530</posx>
+      <posy>150</posy>
+      <font>font13</font>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textureradiofocus>settings-check-box.png</textureradiofocus>
+      <textureradionofocus>settings-check-boxNF.png</textureradionofocus>
+    </control>
+
+    <control type="spincontrolex" id="9">
+      <description>Default SpinControlEx</description>
+      <posx>530</posx>
+      <posy>150</posy>
+      <width>300</width>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textureup>scroll-up.png</textureup>
+      <texturedown>scroll-down.png</texturedown>
+      <textureupfocus>scroll-up-focus.gif</textureupfocus>
+      <texturedownfocus>scroll-down-focus.gif</texturedownfocus>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+      
+      <disabledcolor>60d0d0d0</disabledcolor>
+      <textoffsetx>7</textoffsetx>
+      <aligny>center</aligny>
+      <reverse>yes</reverse>
+    </control>
+
+    <control type="button" id="10">
+      <description>Default Category Button</description>
+      <posx>208</posx>
+      <posy>150</posy>
+      <label>224</label>
+      <font>font13</font>
+    <animation effect="slide" time="400" start="-230,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="slide" time="150" start="0,0" end="-230,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+    </control>
+
+      <control type="image" id="11"> 
+         <description>separator image</description> 
+         <width>350</width> 
+         <height>5</height> 
+         <texture>separator.png</texture> 
+       </control>
+
+		<control type="spincontrol" id="90">
+			<description>Next page button</description>
+			<posx>620</posx>
+			<posy>536</posy>
+			<subtype>page</subtype>
+			<font>font12</font>
+			<onleft>5</onleft>
+			<onright>3</onright>
+			<ondown>90</ondown>
+			<onup>5</onup>
+			<showonepage>false</showonepage>
+		</control>
+  </controls>
+
+</window>

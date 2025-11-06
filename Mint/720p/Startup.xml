@@ -1,0 +1,12 @@
+<window>
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	
+	<controls>
+	
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow(Home)</onfocus>
+		</control>
+		
+	</controls>
+</window>

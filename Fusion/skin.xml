@@ -1,0 +1,16 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <version>2.1</version>
+  
+  <!-- amount to zoom skin to remove overscan compensation -->
+  <zoom>1</zoom>
+  
+  <credits>
+    <skinname>Fusion</skinname>
+    <name>Agathorn</name>
+    <name>Inspired by:</name>
+    <name>Xephyr/Aeon</name>
+    <name>Fusion</name>
+  </credits>
+</skin>

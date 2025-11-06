@@ -1,0 +1,561 @@
+<window id="2600">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Slider_Glow_Common</include>
+		<control type="group">
+			<include>Fade_Window_OpenClose_Animation</include>
+			<include>Fade_List_FocusUnfocus_Animation</include>
+			<control type="spincontrol" id="3">
+				<description>weather location select</description>
+				<align>right</align>
+				<width>15</width>
+				<height>15</height>
+				<posx>50</posx>
+				<posy>120</posy>
+				<font>-</font>
+				<reverse>yes</reverse>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<textoffsety>-12</textoffsety>
+				<include>textcolor-disabled</include>
+			</control>
+			<control type="label">
+				<description>weather location select label</description>
+				<align>left</align>
+				<width>350</width>
+				<height>15</height>
+				<posx>100</posx>
+				<posy>120</posy>
+				<font>font20</font>
+				<include>shadow-black</include>
+				<aligny>center</aligny>
+				<info>Weather.Location</info>
+			</control>
+			<control type="label" id="11">
+				<description>update time label</description>
+				<posx>690</posx>
+				<posy>120</posy>
+				<align>right</align>
+				<label>-</label>
+				<font>font18</font>
+				<include>textcolor-blue</include>
+				<include>shadow-black</include>
+			</control>
+			<control type="group">
+				<posx>40</posx>
+				<posy>150</posy>
+				<control type="image" id="1">
+					<description>Main Weather Background</description>
+					<posx>0</posx>
+					<posy>-20</posy>
+					<width>470</width>
+					<height>230</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="label" id="223">
+					<description>current temp static label</description>
+					<posx>215</posx>
+					<posy>10</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="224">
+					<description>current feels like static label</description>
+					<posx>215</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="227">
+					<description>current dew static label</description>
+					<posx>215</posx>
+					<posy>70</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="228">
+					<description>current humidity static label</description>
+					<posx>215</posx>
+					<posy>100</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="225">
+					<description>current uv index static label</description>
+					<posx>215</posx>
+					<posy>130</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="226">
+					<description>current wind static label</description>
+					<posx>215</posx>
+					<posy>160</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="image" id="21">
+					<description>current weather icon</description>
+					<posx>20</posx>
+					<posy>10</posy>
+					<height>160</height>
+					<width>160</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="22">
+					<description>current condition label</description>
+					<posx>40</posx>
+					<posy>170</posy>
+					<width>120</width>
+					<wrapmultiline>true</wrapmultiline>
+					<label>-</label>
+					<font>font14</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="23">
+					<description>current temp label</description>
+					<posx>335</posx>
+					<posy>10</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label" id="24">
+					<description>current feels like label</description>
+					<posx>335</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label" id="27">
+					<description>current dew label</description>
+					<posx>335</posx>
+					<posy>70</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label" id="28">
+					<description>current humidity label</description>
+					<posx>335</posx>
+					<posy>100</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label" id="25">
+					<description>current uv index label</description>
+					<posx>335</posx>
+					<posy>130</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label" id="26">
+					<description>current wind label</description>
+					<posx>335</posx>
+					<posy>160</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-white</include>
+				</control>
+			</control>
+			<control type="label">
+				<description>Forcast Label</description>
+				<posx>360</posx>
+				<posy>340</posy>
+				<label>10508</label>
+				<align>center</align>
+				<font>font16</font>
+				<include>textcolor-blue</include>
+				<include>shadow-black</include>
+			</control>
+			<control type="group">
+				<description>day 0</description>
+				<posx>45</posx>
+				<posy>360</posy>
+				<control type="image">
+					<description>Section Background</description>
+					<posx>0</posx>
+					<posy>-10</posy>
+					<width>310</width>
+					<height>120</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="image" id="35">
+					<description>day icon</description>
+					<posx>10</posx>
+					<posy>10</posy>
+					<height>80</height>
+					<width>80</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="31">
+					<description>day label</description>
+					<posx>100</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>100</posx>
+					<posy>20</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="32">
+					<description>high value</description>
+					<posx>160</posx>
+					<posy>20</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>100</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="33">
+					<description>low value</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="34">
+					<description>conditions label</description>
+					<posx>100</posx>
+					<posy>60</posy>
+					<width>200</width>
+					<wrapmultiline>true</wrapmultiline>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+			</control>
+			<control type="group">
+				<description>day 1</description>
+				<posx>365</posx>
+				<posy>360</posy>
+				<control type="image">
+					<description>Section Background</description>
+					<posx>0</posx>
+					<posy>-10</posy>
+					<width>310</width>
+					<height>120</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="image" id="45">
+					<description>day icon</description>
+					<posx>10</posx>
+					<posy>10</posy>
+					<height>80</height>
+					<width>80</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="41">
+					<description>day label</description>
+					<posx>100</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>100</posx>
+					<posy>20</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="42">
+					<description>high value</description>
+					<posx>160</posx>
+					<posy>20</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>100</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="43">
+					<description>low value</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="44">
+					<description>conditions label</description>
+					<posx>100</posx>
+					<posy>60</posy>
+					<width>200</width>
+					<wrapmultiline>true</wrapmultiline>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+			</control>
+			<control type="group">
+				<description>day 2</description>
+				<posx>45</posx>
+				<posy>470</posy>
+				<control type="image">
+					<description>Section Background</description>
+					<posx>0</posx>
+					<posy>-10</posy>
+					<width>310</width>
+					<height>120</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="image" id="55">
+					<description>day icon</description>
+					<posx>10</posx>
+					<posy>10</posy>
+					<height>80</height>
+					<width>80</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="51">
+					<description>day label</description>
+					<posx>100</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>100</posx>
+					<posy>20</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="52">
+					<description>high value</description>
+					<posx>160</posx>
+					<posy>20</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>100</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="53">
+					<description>low value</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="54">
+					<description>conditions label</description>
+					<posx>100</posx>
+					<posy>60</posy>
+					<width>200</width>
+					<wrapmultiline>true</wrapmultiline>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+			</control>
+			<control type="group">
+				<description>day 3</description>
+				<posx>365</posx>
+				<posy>470</posy>
+				<control type="image">
+					<description>Section Background</description>
+					<posx>0</posx>
+					<posy>-10</posy>
+					<width>310</width>
+					<height>120</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="image" id="65">
+					<description>day icon</description>
+					<posx>10</posx>
+					<posy>10</posy>
+					<height>80</height>
+					<width>80</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="61">
+					<description>day label</description>
+					<posx>100</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<include>textcolor-blue</include>
+					<include>shadow-black</include>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>100</posx>
+					<posy>20</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="62">
+					<description>high value</description>
+					<posx>160</posx>
+					<posy>20</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>textcolor-white</include>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>100</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="63">
+					<description>low value</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+				<control type="label" id="64">
+					<description>conditions label</description>
+					<posx>100</posx>
+					<posy>60</posy>
+					<width>200</width>
+					<wrapmultiline>true</wrapmultiline>
+					<label>-</label>
+					<font>font14</font>
+					<include>shadow-black</include>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9000">
+			<description>Sidebar group</description>
+			<posx>-160</posx>
+			<animation effect="slide" time="100" start="160,0">unfocus</animation>
+			<animation effect="slide" time="100" end="160,0">focus</animation>
+			<control type="image">
+				<description>Sidebar Back image</description>
+				<posx>-145</posx>
+				<posy>0</posy>
+				<width>425</width>
+				<height>576</height>
+				<texture>Side_Slideout.png</texture>
+			</control>
+
+			<control type="button" id="2">
+				<description>refresh button</description>
+				<posy>120</posy>
+				<label>184</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+			</control>
+			<control type="button" id="4">
+				<description>settings button</description>
+				<posy>150</posy>
+				<label>5</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onclick>XBMC.ActivateWindow(myweathersettings)</onclick>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+			<include>SlideBarClock</include>
+		</control>
+		<control type="image">
+			<description>Top Bar BACK</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>105</height>
+			<texture>TBWeather.png</texture>
+		</control>
+		<control type="image">
+			<description>Top Bar FRONT</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>116</height>
+			<texture>Topbar_Front.png</texture>
+		</control>
+		<control type="label">
+			<description>weather text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>8</label>
+			<font>font20</font>
+			<visible>!Skin.HasSetting(No_Title_Text)</visible>
+		</control>
+		<include>MusicNowPlayingDisplay</include>
+	</controls>
+</window>

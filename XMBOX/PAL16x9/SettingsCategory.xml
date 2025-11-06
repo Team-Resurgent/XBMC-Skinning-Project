@@ -1,0 +1,799 @@
+<window id="12">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- background 16x9 -->
+<include>background-image</include>
+
+		<control type="image" id="0">
+			<posx>400</posx>
+			<posy>0</posy>
+			<width>320</width>
+			<height>576</height>
+			<texture>popup.png</texture>
+			<animation effect="fade" end="80" time="2000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+        <control type="image">
+            <posx>400</posx>
+            <posy>0</posy>
+            <width>320</width>
+            <height>576</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>sidebar.png</texture>
+	    <colordiffuse>sidebar</colordiffuse>
+	    <include>settingpanelslide</include>
+        </control>
+	<control type="image">
+	    <posx>78</posx>
+	    <posy>267</posy>
+	    <width>25</width>
+	    <height>40</height>
+	    <aspectratio>stretch</aspectratio>
+	    <texture>bmx-arrow-left.png</texture>
+	    <include>settingssubslide</include>
+        </control>
+
+        <control type="image">
+            <posx>120</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-users.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>18</posx>
+            <posy>125</posy>
+            <width>45</width>
+            <height>60</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-settings-glow.png</texture>
+	    <include>settingsmainslide</include>
+        </control>
+       <control type="label">
+            <posx>6</posx>
+            <posy>167</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+	    <include>settingsmainslide</include>
+	    <label>5</label>
+        </control>
+
+
+
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-pictures-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(12)</visible>
+        </control>
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-game-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(13)</visible>
+        </control>
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-network-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(14)</visible>
+        </control>
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-music-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(15)</visible>
+        </control>
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-system-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(16)</visible>
+        </control>
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-video-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(17)</visible>
+        </control>
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-net-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(18)</visible>
+        </control>
+
+	<control type="image">
+		<posx>18</posx>
+		<posy>240</posy>
+		<width>55</width>
+		<height>75</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-display-glow.png</texture>
+		<include>settingsmainslide</include>
+	<visible allowhiddenfocus="true">Window.IsActive(19)</visible>
+        </control>
+
+
+
+
+        <control type="image">
+            <posx>260</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-pictures.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>330</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-music.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>400</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-video.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>470</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-game.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>540</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-network.png</texture>
+	    <include>iconfade</include>
+        </control>
+        <control type="image">
+            <posx>610</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-friends.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+
+		<!-- Menu section -->
+		<control type="grouplist" id="3">
+			<description>button area</description>
+			<posx>120</posx>
+			<posy>276</posy>
+			<width>130</width>
+			<height>300</height>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<texturefocus>bmx-button-focus.png</texturefocus>
+			<texturenofocus>bmx-button-nofocus.png</texturenofocus>
+			<include>settingssubslide</include>
+		</control>
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<posx>208</posx>
+			<posy>150</posy>
+			<label>224</label>
+			<font>font13</font>
+			<width>120</width>
+			<height>20</height>
+			<align>left</align>
+			<textoffsetx>25</textoffsetx>
+			<texturefocus>bmx-button-focus.png</texturefocus>
+			<texturenofocus>bmx-button-nofocus.png</texturenofocus>
+			<include>settingssubslide</include>
+		</control>
+
+
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>400</posx>
+			<posy>191</posy>
+			<width>310</width>
+			<height>400</height>
+			<itemgap>0</itemgap>
+			<pagecontrol>90</pagecontrol>
+			<onleft>3</onleft>
+			<onright>60</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<font>font13</font>
+			<textoffsetx>7</textoffsetx>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<font>font13</font>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>7</textoffsetx>
+			<textureradiofocus>settings-check-box.png</textureradiofocus>
+			<textureradionofocus> settings-check-boxNF.png</textureradionofocus>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>7</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>settingpanelslide</include>
+		</control>
+<!--		<control type="spincontrol" id="90">
+			<description>Next page button</description>
+			<posx>610</posx>
+			<posy>526</posy>
+			<subtype>page</subtype>
+			<font>font12</font>
+			<onleft>5</onleft>
+			<onright>3</onright>
+			<ondown>60</ondown>
+			<onup>5</onup>
+			<include>settingpanelslide</include>
+			<showonepage>false</showonepage>
+		</control>
+-->
+<!-- Video Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-update.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(17)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-music.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(17)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-pictures.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(17)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-game.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(17)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-system.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(17)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End Video Settings -->
+
+<!-- Music Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-video.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(15)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-pictures.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(15)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-game.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(15)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-system.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(15)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-network.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(15)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End Music Settings -->
+
+<!-- Picture Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-music.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(12)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-game.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(12)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-system.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(12)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-network.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(12)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-display.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(12)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End Picture Settings -->
+
+<!-- Programs Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-pictures.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(13)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-system.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(13)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-network.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(13)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-display.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(13)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-theme.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(13)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End Programs Settings -->
+
+<!-- System Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-game.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(16)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-network.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(16)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-display.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(16)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-theme.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(16)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-net.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(16)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End System Settings -->
+
+<!-- Weather Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-system.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(14)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-display.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(14)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-theme.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(14)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-net.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(14)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>users-add.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(14)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End Weather Settings -->
+
+<!-- Appearance Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-network.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(19)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-theme.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(19)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-net.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(19)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>440</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>users-add.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(19)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>495</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-question.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(19)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+
+
+
+
+<!-- End Appearance Settings -->
+
+<!-- Network Settings -->
+
+	<control type="image">
+		<posx>28</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-theme.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(18)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>330</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>users-add.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(18)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>28</posx>
+		<posy>385</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-question.png</texture>
+		<include>settingsslide</include>
+		<visible allowhiddenfocus="true">Window.IsActive(18)</visible>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!-- End Network Settings -->
+
+	</controls>
+</window>

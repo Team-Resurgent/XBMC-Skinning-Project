@@ -1,0 +1,253 @@
+<window id="132">
+<defaultcontrol always="true">3</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+	
+<coordinates>
+	<system>1</system>
+	<posx>90</posx>
+	<posy>101</posy>
+</coordinates>
+
+<include>DefaultFade</include>
+  
+<controls>
+	
+	<control type="group">
+		<include>DialogBackWide</include>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>509</posx>
+      <posy>55</posy>
+      <height>100</height>
+      <onleft>4</onleft>
+      <onright>3</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(60)">Conditional</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>509</posx>
+      <posy>55</posy>
+      <height>100</height>
+      <onleft>4</onleft>
+      <onright>3</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>!Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(60)">Conditional</animation>
+    </control>
+    <control type="scrollbar" id="61">
+      <description>Scroll Bar</description>
+      <posx>509</posx>
+      <posy>195</posy>
+      <height>135</height>
+      <onleft>5</onleft>
+      <onright>4</onright>
+      <onup>61</onup>
+      <ondown>61</ondown>
+      <visible>Control.HasFocus(61)</visible>
+      <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(61)">Conditional</animation>
+    </control>
+    <control type="scrollbar" id="61">
+      <description>Scroll Bar</description>
+      <posx>509</posx>
+      <posy>195</posy>
+      <height>135</height>
+      <onleft>5</onleft>
+      <onright>4</onright>
+      <onup>61</onup>
+      <ondown>61</ondown>
+      <visible>!Control.HasFocus(61)</visible>
+      <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(61)">Conditional</animation>
+    </control>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>540</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+		<control type="label" id="1000">
+			<description>Header Label</description>
+			<posx>10</posx>
+			<posy>0</posy>
+			<width>395</width>
+			<height>45</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[20333] - $INFO[ListItem.Label]</label>
+			<font>22BdFont</font>
+			<textcolor>FocusedTextColor</textcolor>
+		</control>
+    
+		<control type="spincontrolex" id="3">
+			<description>Directory Content</description>
+			<posy>10</posy>
+			<width>535</width>
+			<label>-</label>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<font>18BdFont</font>
+			<align>right</align>
+			<onup>29</onup>
+			<ondown>4</ondown>
+			<onleft>4</onleft>
+			<onright>4</onright>
+		</control>
+		<control type="image">
+			<description>Scraper Image</description>
+			<posx>10</posx>
+			<posy>55</posy>
+			<width>110</width>
+			<height>110</height>
+			<align>center</align>
+      <aligny>top</aligny>
+			<aspectratio>keep</aspectratio>
+			<info>ListItem.Icon</info>
+      <bordertexture border="14">ButtonNF.png</bordertexture>
+      <bordersize>5</bordersize>
+		</control>
+
+		<control type="list" id="4">
+			<posx>130</posx>
+			<posy>55</posy>
+			<width>381</width>
+			<height>100</height>
+			<onup>3</onup>
+			<onleft>5</onleft>
+			<onright>60</onright>
+			<ondown>4</ondown>
+      <pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="35">
+        <control type="image">
+          <width>381</width>
+          <height>30</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+				<control type="label">
+					<posx>5</posx>
+					<width>370</width>
+					<height>30</height>
+					<align>left</align>
+          <aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<font>18BdFont</font>
+					<scroll>no</scroll>
+					<textcolor>DefaultTextColor</textcolor>
+					<selectedcolor>SelectedTextColor</selectedcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35">
+        <control type="image">
+          <width>381</width>
+          <height>30</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="left">keep</aspectratio>
+          <visible>!Control.HasFocus(4)</visible>
+        </control>
+				<control type="image">
+					<width>381</width>
+					<height>30</height>
+          <texture>ButtonInputFo.png</texture>
+					<aspectratio aligny="left">keep</aspectratio>
+					<visible>Control.HasFocus(4)</visible>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+          <width>370</width>
+					<height>30</height>
+					<align>left</align>
+          <aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<font>18BdFont</font>
+					<scroll>yes</scroll>
+					<textcolor>DefaultTextColor</textcolor>
+					<selectedcolor>SelectedTextColor</selectedcolor>
+					<visible>!Control.HasFocus(4)</visible>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+          <width>370</width>
+					<height>30</height>
+					<align>left</align>
+          <aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<font>18BdFont</font>
+					<scroll>yes</scroll>
+					<textcolor>FocusedTextColor</textcolor>
+					<selectedcolor>SelectedTextColor</selectedcolor>
+					<visible>Control.HasFocus(4)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>10</posx>
+			<posy>195</posy>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+			<width>501</width>
+      <height>135</height>
+      <pagecontrol>61</pagecontrol>
+			<onup>4</onup>
+			<ondown>6</ondown>
+			<onleft>29</onleft>
+			<onright>61</onright>
+		</control>
+    <control type="button" id="7">
+      <description>Default Button</description>
+      <width>-</width>
+      <font>18BdFont</font>
+      <align>left</align>
+      <textoffsetx>5</textoffsetx>
+    </control>
+		<control type="radiobutton" id="8">
+			<description>Radiobutton</description>
+			<width>-</width>
+			<font>18BdFont</font>
+			<label>$LOCALIZE[590]</label>
+			<pulseonselect>false</pulseonselect>
+		</control>
+
+		<control type="group" id="9000">
+      <posy>335</posy>
+      <posx>190</posx>
+			<control type="button" id="6">
+				<description>Settings</description>
+				<label>$LOCALIZE[5]</label>
+				<font>18BdFont</font>
+				<onup>5</onup>
+				<onleft>29</onleft>
+				<onright>28</onright>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="28">
+				<description>Select</description>
+				<posx>110</posx>
+				<label>$LOCALIZE[424]</label>
+				<font>18BdFont</font>
+				<onup>5</onup>
+				<onleft>6</onleft>
+				<onright>29</onright>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel</description>
+				<posx>220</posx>
+				<label>$LOCALIZE[222]</label>
+				<font>18BdFont</font>
+				<onup>5</onup>
+				<onleft>28</onleft>
+				<onright>6</onright>
+				<ondown>3</ondown>
+			</control>
+		</control>
+	</control>
+</controls>
+</window>

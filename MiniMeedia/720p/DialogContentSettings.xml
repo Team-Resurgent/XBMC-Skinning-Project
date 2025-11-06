@@ -1,0 +1,178 @@
+<window id="132">
+  <defaultcontrol>3</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <posx>740</posx>
+      <posy>0</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,0" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,0" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">Hidden</animation>
+
+      <control type="image">
+        <description>Dialog Background</description>
+        <width>550</width>
+        <height>720</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posx>10</posx>
+        <posy>14</posy>
+
+        <control type="label" id="1000">
+          <description>Heading</description>
+          <posx>10</posx>
+          <width>SetContentTextWidth</width>
+          <align>center</align>
+          <font>TitleFont</font>
+          <label>$LOCALIZE[20333]</label>
+        </control>
+
+        <control type="image">
+          <posx>10</posx>
+          <posy>44</posy>
+          <width>SetContentTextWidth</width>
+          <height>24</height>
+          <include>OverlayArea</include>
+          <visible>Control.HasFocus(3)</visible>
+        </control>
+
+        <control type="spincontrolex" id="3">
+          <description>Directory Content</description>
+          <onup>5</onup>
+          <ondown>9001</ondown>
+          <onleft>3</onleft>
+          <onright>3</onright>
+          <posx>154</posx>
+          <posy>46</posy>
+          <textoffsetx>-26</textoffsetx>
+          <textoffsety>-4</textoffsety>
+          <font>MediumTitleFont</font>
+        </control>
+
+        <control type="group" id="9001">
+          <control type="list" id="4">
+            <description>Scrapers List</description>
+            <posx>10</posx>
+            <posy>84</posy>
+            <width>SetContentTextWidth</width>
+            <height>390</height>
+            <onup>3</onup>
+            <ondown>5</ondown>
+            <onleft>3</onleft>
+            <onright>5</onright>
+            <visible allowhiddenfocus="false">true</visible>
+
+            <itemlayout width="SetContentTextWidth" height="26">
+              <control type="label">
+                <textcolor>Unfocused</textcolor>
+                <include>SetContentScraperText</include>
+              </control>
+            </itemlayout>
+
+            <focusedlayout width="SetContentTextWidth" height="26">
+              <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>SetContentTextWidth</width>
+                <height>24</height>
+                <include>OverlayArea</include>
+                <visible>Control.HasFocus(4)</visible>
+                <animation effect="slide" start="0,-26" end="0,0" time="200" reversible="false" tween="quadratic" easing="out" condition="Container(4).OnNext">Focus</animation>
+                <animation effect="slide" start="0,26" end="0,0" time="200" reversible="false"  tween="quadratic" easing="out" condition="Container(4).OnPrevious">Focus</animation>
+              </control>
+
+              <control type="label">
+                <textcolor>Unfocused</textcolor>
+                <visible>!Control.HasFocus(4)</visible>
+                <include>SetContentScraperText</include>
+              </control>
+              <control type="label">
+                <textcolor>Focused</textcolor>
+                <visible>Control.HasFocus(4)</visible>
+                <include>DialogTextColors</include>
+                <include>SetContentScraperText</include>
+              </control>
+            </focusedlayout>
+          </control>
+
+          <control type="grouplist" id="5">
+            <description>Set Content Options</description>
+            <posx>0</posx>
+            <posy>500</posy>
+            <itemgap>0</itemgap>
+            <orientation>vertical</orientation>
+            <width>SetContentTextWidth</width>
+            <onup>4</onup>
+            <ondown>28</ondown>
+            <onleft>28</onleft>
+            <onright>28</onright>
+
+            <control type="button" id="7">
+              <description>Default Button</description>
+              <posx>0</posx>
+              <posy>0</posy>
+              <height>30</height>
+              <width>SetContentTextWidth</width>
+              <label>-</label>
+              <align>left</align>
+              <texturefocus>-</texturefocus>
+              <texturenofocus>-</texturenofocus>
+            </control>
+          </control>
+
+          <control type="radiobutton" id="8">
+            <description>Radiobutton</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textoffsetx>10</textoffsetx>
+            <include>DialogTextControl</include>
+          </control>
+
+          <control type="grouplist" id="9002">
+            <posx>35</posx>
+            <posy>660</posy>
+            <width>SetContentTextWidth</width>
+            <height>40</height>
+            <onup>5</onup>
+            <orientation>horizontal</orientation>
+            <itemgap>10</itemgap>
+
+            <control type="button" id="28">
+              <description>Select</description>
+              <onleft>29</onleft>
+              <onright>6</onright>
+              <label>$LOCALIZE[424]</label>
+              <include>SetContentDialogButton</include>
+            </control>
+
+            <control type="button" id="6">
+              <description>Settings button</description>
+              <onleft>28</onleft>
+              <onright>29</onright>
+              <label>$LOCALIZE[5]</label>
+              <width>170</width>
+              <include>SetContentDialogButton</include>
+            </control>
+
+            <control type="button" id="29">
+              <description>Cancel</description>
+              <onleft>6</onleft>
+              <onright>28</onright>
+              <label>$LOCALIZE[222]</label>
+              <include>SetContentDialogButton</include>
+            </control>
+
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

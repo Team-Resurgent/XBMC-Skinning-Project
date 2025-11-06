@@ -1,0 +1,823 @@
+<window type="dialog" id="1112" >
+	<defaultcontrol always="true">9005</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<animation effect="slide" time="150" start="0,0" end="0,100">WindowOpen</animation>
+	<animation effect="slide" time="150" start="0,100" end="0,0">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<posx>152</posx>
+			<posy>-85</posy>
+			<visible>Window.IsVisible(VideoFiles)</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>975</width>
+				<height>60</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>965</width>
+				<height>50</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="list" id="9005">
+				<description>Change ViewTypes List</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>960</width>
+				<height>40</height>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>9005</onup>
+				<ondown>Dialog.Close(1112)</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<itemlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>155</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>!Control.HasFocus(9005)</visible>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(9005)</visible>
+						<texture>button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>535</label>
+						<onclick>Container.SetViewMode(50)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[535] 2</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+					</item>
+					<item>
+						<label>536</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+					</item>
+					<item>
+						<label>538</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+					</item>
+					<item>
+						<label>542</label>
+						<onclick>Container.SetViewMode(54)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[539] $LOCALIZE[536]</label>
+						<onclick>Container.SetViewMode(59)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>72</posx>
+			<posy>-85</posy>
+			<visible>Window.IsVisible(VideoLibrary)</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1135</width>
+				<height>60</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>1125</width>
+				<height>50</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="list" id="9005">
+				<description>Change ViewTypes List</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>1120</width>
+				<height>40</height>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>9005</onup>
+				<ondown>Dialog.Close(1112)</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<hitrect x="0" y="-30" w="1120" h="90" />
+				<itemlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>155</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>!Control.HasFocus(9005)</visible>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(9005)</visible>
+						<texture>button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>544</label>
+						<onclick>Container.SetViewMode(50)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[544] 2</label>
+						<onclick>Container.SetViewMode(55)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[535] 2</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+					</item>
+					<item>
+						<label>536</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+					</item>
+					<item>
+						<label>538</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+					</item>
+					<item>
+						<label>542</label>
+						<onclick>Container.SetViewMode(54)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[539] $LOCALIZE[536]</label>
+						<onclick>Container.SetViewMode(59)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>232</posx>
+			<posy>-85</posy>
+			<visible>Window.IsVisible(VideoPlaylist)</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>815</width>
+				<height>60</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>805</width>
+				<height>50</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="list" id="9005">
+				<description>Change ViewTypes List</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>800</width>
+				<height>40</height>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>9005</onup>
+				<ondown>Dialog.Close(1112)</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<hitrect x="0" y="-30" w="800" h="90" />
+				<itemlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>155</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>!Control.HasFocus(9005)</visible>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(9005)</visible>
+						<texture>button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>535</label>
+						<onclick>Container.SetViewMode(50)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[535] 2</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+					</item>
+					<item>
+						<label>536</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+					</item>
+					<item>
+						<label>538</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+					</item>
+					<item>
+						<label>542</label>
+						<onclick>Container.SetViewMode(54)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>312</posx>
+			<posy>-85</posy>
+			<visible>Window.IsVisible(MusicLibrary)</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>655</width>
+				<height>60</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>645</width>
+				<height>50</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="list" id="9005">
+				<description>Change ViewTypes List</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>640</width>
+				<height>40</height>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>9005</onup>
+				<ondown>Dialog.Close(1112)</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<hitrect x="0" y="-30" w="640" h="90" />
+				<itemlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>155</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>!Control.HasFocus(9005)</visible>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(9005)</visible>
+						<texture>button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>544</label>
+						<onclick>Container.SetViewMode(54)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[535] 2</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+					</item>
+					<item>
+						<label>536</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+					</item>
+					<item>
+						<label>538</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>232</posx>
+			<posy>-85</posy>
+			<visible>Window.IsVisible(MusicFiles) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(Pictures)</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>815</width>
+				<height>60</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>805</width>
+				<height>50</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="list" id="9005">
+				<description>Change ViewTypes List</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>800</width>
+				<height>40</height>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>9005</onup>
+				<ondown>Dialog.Close(1112)</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<hitrect x="0" y="-30" w="800" h="90" />
+				<itemlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>155</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>!Control.HasFocus(9005)</visible>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(9005)</visible>
+						<texture>button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>535</label>
+						<onclick>Container.SetViewMode(50)</onclick>
+					</item>
+					<item>
+						<label>544</label>
+						<onclick>Container.SetViewMode(54)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[535] 2</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+					</item>
+					<item>
+						<label>536</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+					</item>
+					<item>
+						<label>538</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>232</posx>
+			<posy>-85</posy>
+			<visible>Window.IsVisible(Scripts) | Window.IsVisible(Programs)</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>815</width>
+				<height>60</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>805</width>
+				<height>50</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="list" id="9005">
+				<description>Change ViewTypes List</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>800</width>
+				<height>40</height>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>9005</onup>
+				<ondown>Dialog.Close(1112)</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<hitrect x="0" y="-30" w="800" h="90" />
+				<itemlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>155</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>!Control.HasFocus(9005)</visible>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(9005)</visible>
+						<texture>button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>535</label>
+						<onclick>Container.SetViewMode(50)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[535] 2</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+					</item>
+					<item>
+						<label>536</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+					</item>
+					<item>
+						<label>538</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[539] $LOCALIZE[536]</label>
+						<onclick>Container.SetViewMode(59)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>312</posx>
+			<posy>-85</posy>
+			<visible>Window.IsVisible(Gamesaves) + System.Platform.xbox</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>655</width>
+				<height>60</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>645</width>
+				<height>50</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="list" id="9005">
+				<description>Change ViewTypes List</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>640</width>
+				<height>40</height>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>9005</onup>
+				<ondown>Dialog.Close(1112)</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<hitrect x="0" y="-30" w="640" h="90" />
+				<itemlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>155</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>!Control.HasFocus(9005)</visible>
+						<texture>button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>40</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(9005)</visible>
+						<texture>button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>5</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>535</label>
+						<onclick>Container.SetViewMode(50)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[535] 2</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+					</item>
+					<item>
+						<label>536</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+					</item>
+					<item>
+						<label>538</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+	</controls>
+</window>

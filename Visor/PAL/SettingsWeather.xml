@@ -1,0 +1,218 @@
+<window>
+  <id>17</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>My Weather text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>400</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>weather refresh time label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <posY>150</posY>
+      <label>397</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>weather refresh time select</description>
+      <type>spincontrol</type>
+      <id>2</id>
+      <posX>530</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>12</onup>
+      <ondown>4</ondown>
+      <onleft>2</onleft>
+      <onright>2</onright>
+    </control>
+
+    <control>
+      <description>weather temp mode label</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>208</posX>
+      <posY>200</posY>
+      <label>398</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>weather temp mode select</description>
+      <type>spincontrol</type>
+      <id>4</id>
+      <posX>530</posX>
+      <posY>200</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>2</onup>
+      <ondown>6</ondown>
+      <onleft>4</onleft>
+      <onright>4</onright>
+    </control>
+
+    <control>
+      <description>weather speed mode label</description>
+      <type>label</type>
+      <id>5</id>
+      <posX>208</posX>
+      <posY>250</posY>
+      <label>399</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>weather speed mode select</description>
+      <type>spincontrol</type>
+      <id>6</id>
+      <posX>530</posX>
+      <posY>250</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>4</onup>
+      <ondown>8</ondown>
+      <onleft>6</onleft>
+      <onright>6</onright>
+    </control>
+
+    <control>
+      <description>location label</description>
+      <type>label</type>
+      <id>7</id>
+      <posX>208</posX>
+      <posY>300</posY>
+      <font>font13</font>
+      <label>-</label>
+    </control>
+
+    <control>
+      <description>Search Button</description>
+      <type>button</type>
+      <id>8</id>
+      <posX>430</posX>
+      <posY>296</posY>
+      <font>font13</font>
+      <width>130</width>
+      <height>35</height>
+      <textureFocus>button-focus.png</textureFocus>
+      <textureNoFocus>button-nofocus.jpg</textureNoFocus>
+      <label>137</label>
+      <font>font13</font>
+      <onleft>8</onleft>
+      <onright>8</onright>
+      <onup>6</onup>
+      <ondown>10</ondown>
+    </control>
+
+    <control>
+      <description>location 2 label</description>
+      <type>label</type>
+      <id>9</id>
+      <posX>208</posX>
+      <posY>350</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>Search 2 Button</description>
+      <type>button</type>
+      <id>10</id>
+      <posX>430</posX>
+      <posY>346</posY>
+      <width>130</width>
+      <height>35</height>
+      <textureFocus>button-focus.png</textureFocus>
+      <textureNoFocus>button-nofocus.jpg</textureNoFocus>
+      <label>137</label>
+      <font>font13</font>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>8</onup>
+      <ondown>12</ondown>
+    </control>
+
+    <control>
+      <description>location 3 label</description>
+      <type>label</type>
+      <id>11</id>
+      <posX>208</posX>
+      <posY>400</posY>
+      <label>-</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>Search 3 Button</description>
+      <type>button</type>
+      <id>12</id>
+      <posX>430</posX>
+      <posY>396</posY>
+      <width>130</width>
+      <height>35</height>
+      <textureFocus>button-focus.png</textureFocus>
+      <textureNoFocus>button-nofocus.jpg</textureNoFocus>
+      <label>137</label>
+      <font>font13</font>
+      <onleft>12</onleft>
+      <onright>12</onright>
+      <onup>10</onup>
+      <ondown>2</ondown>
+    </control>
+
+  </controls>
+
+</window>
+

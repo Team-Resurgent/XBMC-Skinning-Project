@@ -1,0 +1,267 @@
+<window id="135">
+  <defaultcontrol>10</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <control type="group">
+      <posx>838</posx>
+      <posy>-10</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="500,-80" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="500,-80" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="500,-80">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="500,-80">Hidden</animation>
+      <include>HideWhenOnlyUpperDialogActive</include>
+
+      <control type="image">
+        <width>460</width>
+        <height>50</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="grouplist">
+        <posx>6</posx>
+        <posy>12</posy>
+        <orientation>horizontal</orientation>
+        <itemgap>6</itemgap>
+        <ondown>15</ondown>
+
+        <control type="button" id="10">
+          <description>OK</description>
+          <label>186</label>
+        </control>
+
+        <control type="button" id="11">
+          <description>Cancel</description>
+          <label>222</label>
+        </control>
+
+        <control type="button" id="12">
+          <description>Album Info</description>
+          <label>10523</label>
+        </control>
+      </control>
+    </control>
+
+    <control type="group">
+      <posx>30</posx>
+      <posy>470</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,400" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,400" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,400">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,400">Hidden</animation>
+
+      <control type="image">
+        <width>1220</width>
+        <height>260</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posx>20</posx>
+        <posy>20</posy>
+
+        <control type="label">
+          <description>Song title</description>
+          <width>558</width>
+          <textcolor>Selected</textcolor>
+          <font>MediumTitleFont</font>
+          <info>ListItem.Title</info>
+        </control>
+
+        <control type="group">
+          <posy>34</posy>
+
+          <control type="textbox">
+            <description>Comments</description>
+            <width>558</width>
+            <height>178</height>
+            <info>ListItem.Comment</info>
+          </control>
+        </control>
+
+        <control type="group">
+          <posx>750</posx>
+
+          <control type="group" id="49">
+            <posy>300</posy>
+            <animation effect="slide" time="300" tween="circle" easing="out" start="0,0" end="0,-300">Focus</animation>
+            <animation effect="slide" time="200" tween="circle" easing="in" start="0,-300" end="0,0">Unfocus</animation>
+
+            <control type="button">
+              <onright>15</onright>
+              <onup>15</onup>
+              <label>-</label>
+              <texturefocus>-</texturefocus>
+              <texturenofocus>-</texturenofocus>
+            </control>
+
+            <control type="image">
+             <description>Press right indicator</description>
+             <posx>400</posx>
+             <posy>-14</posy>
+             <width>6</width>
+             <height>12</height>
+             <texture>arrow_right.png</texture>
+            </control>
+
+            <control type="label">
+              <description>File Size</description>
+              <label>21802</label>
+              <include>DialogInfoCaption</include>
+            </control>
+
+            <control type="label">
+              <description>Size</description>
+              <posy>16</posy>
+              <info>ListItem.Size</info>
+              <include>DialogInfoDetails</include>
+            </control>
+
+            <control type="label">
+              <description>File Path</description>
+              <posy>46</posy>
+              <label>21801</label>
+              <include>DialogInfoCaption</include>
+            </control>
+
+            <control type="textbox">
+              <description>File Path</description>
+              <posx>-166</posx>
+              <posy>62</posy>
+              <height>90</height>
+              <info>ListItem.FileNameAndPath</info>
+              <include>DialogInfoExtraDetails</include>
+            </control>
+          </control>
+
+          <control type="group">
+            <animation effect="slide" time="300" tween="circle" easing="out" start="0,300" end="0,0">Visible</animation>
+            <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,300">Hidden</animation>
+            <visible>!ControlGroup(49).HasFocus()</visible>
+
+            <control type="group">
+              <posx>-166</posx>
+
+              <control type="image">
+                <description>Album Cover</description>
+                <posx>-8</posx>
+                <posy>-8</posy>
+                <width>236</width>
+                <height>236</height>
+                <aspectratio align="left" aligny="top">keep</aspectratio>
+                <info>ListItem.Thumb</info>
+                <bordertexture border="14">thumb_shadow.png</bordertexture>
+                <bordersize>8</bordersize>
+              </control>
+            </control>
+
+            <control type="group">
+              <control type="label">
+                <description>Album</description>
+                <info>ListItem.Album</info>
+                <include>DialogInfoCaption</include>
+              </control>
+
+              <control type="label">
+                <description>Artist</description>
+                <info>ListItem.Artist</info>
+                <include>DialogInfoDetails</include>
+              </control>
+
+              <control type="label">
+                <description>Year</description>
+                <posy>36</posy>
+                <info>ListItem.Year</info>
+                <include>DialogInfoDetails</include>
+              </control>
+
+              <control type="image">
+                <description>Star Rating</description>
+                <posx>376</posx>
+                <posy>52</posy>
+                <width>64</width>
+                <aspectratio>keep</aspectratio>
+                <info>ListItem.StarRating</info>
+              </control>
+
+              <control type="group">
+                <posy>116</posy>
+
+                <control type="label">
+                  <description>Genre</description>
+                  <label>515</label>
+                  <include>DialogInfoCaption</include>
+                </control>
+                <control type="label">
+                  <info>ListItem.Genre</info>
+                  <include>DialogInfoDetails</include>
+                </control>
+
+                <control type="group">
+                  <posy>DialogInfoDetailsVertGap</posy>
+
+                  <control type="label">
+                    <description>Rating</description>
+                    <label>563</label>
+                    <include>DialogInfoCaption</include>
+                  </control>
+
+                  <control type="group">
+                    <posy>20</posy>
+                    <posx>338</posx>
+
+                    <control type="button" id="14">
+                      <description>Decrease Rating</description>
+                      <width>16</width>
+                      <height>16</height>
+                      <onclick>DecreaseRating</onclick>
+                      <texturenofocus>ArrowDownNF.png</texturenofocus>
+                      <texturefocus>ArrowDownFO.png</texturefocus>
+                      <onup>10</onup>
+                      <onleft>15</onleft>
+                      <onright>15</onright>
+                      <ondown>49</ondown>
+                    </control>
+                    <control type="button" id="15">
+                      <description>Increase Rating</description>
+                      <posx>12</posx>
+                      <width>16</width>
+                      <height>16</height>
+                      <onclick>IncreaseRating</onclick>
+                      <texturenofocus>ArrowUpNF.png</texturenofocus>
+                      <texturefocus>ArrowUpFO.png</texturefocus>
+                      <onup>10</onup>
+                      <onleft>14</onleft>
+                      <onright>14</onright>
+                      <ondown>49</ondown>
+                    </control>
+
+                    <control type="image">
+                      <include>SongInfoRatingImageDims</include>
+                      <posx>38</posx>
+                      <width>64</width>
+                      <info>ListItem.Rating</info>
+                      <include>DialogInfoCaption</include>
+                    </control>
+                  </control>
+                </control>
+              </control>
+            </control>
+
+            <control type="image">
+             <description>Press down indicator</description>
+             <posx>400</posx>
+             <posy>216</posy>
+             <width>12</width>
+             <height>6</height>
+             <texture flipy="true">arrow_up.png</texture>
+             <visible>!Control.IsVisible(50)</visible>
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

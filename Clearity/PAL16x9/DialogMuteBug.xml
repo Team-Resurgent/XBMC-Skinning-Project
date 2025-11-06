@@ -1,0 +1,21 @@
+<window id="113">
+	<defaultcontrol>901</defaultcontrol>
+	<coordinates>
+	<system>1</system>
+	<origin x="0" y="0">true</origin>
+	</coordinates>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image" id="901">
+		<description>Mute Image</description>
+		<posx>620</posx>
+		<posy>70</posy>
+		<width>30</width>
+		<height>40</height>
+		<texture>Media-Mute-On-Focus.png</texture>
+		<colordiffuse>80ffffff</colordiffuse>
+	</control>
+
+	</controls>
+</window>

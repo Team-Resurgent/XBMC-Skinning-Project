@@ -1,0 +1,79 @@
+<window type="dialog" id="134">
+
+	<defaultcontrol always="true">450</defaultcontrol>
+	<previouswindow>shutdownmenu</previouswindow>	
+	
+	<controls>
+
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+
+		<control type="group">
+		
+			<posx>860</posx>
+	
+			<!-- background -->
+			<control type="image">
+				<texture>black2x2.png</texture>
+				<width>420</width>
+				<height>720</height>
+				<colordiffuse>overlay-dark</colordiffuse>
+			</control>
+			<!-- favorites list -->
+			<control type="list" id="450">
+				<width>380</width>
+				<height>640</height>
+				<posx>20</posx>
+				<posy>100</posy>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<itemlayout height="40">
+					<control type="image">
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<width>20</width>
+						<height>20</height>
+						<posy>15</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>340</width>
+						<height>40</height>
+						<posx>40</posx>
+						<font>content</font>
+						<textcolor>content-dark</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="image">
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<width>20</width>
+						<height>20</height>
+						<posy>15</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>340</width>
+						<height>40</height>
+						<posx>40</posx>
+						<font>content</font>
+						<textcolor>content</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<!-- window label -->
+		<control type="label">
+			<label>Favorites</label>
+			<width>420</width>
+			<height>80</height>
+			<posx>1240</posx>
+			<font>header</font>
+			<textcolor>header-dark</textcolor>
+			<align>right</align>
+		</control>
+	
+	</controls>
+	
+</window>

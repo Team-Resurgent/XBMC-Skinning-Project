@@ -1,0 +1,330 @@
+<window type="buttonMenu" id="1003">
+	<defaultcontrol always="true">213</defaultcontrol>
+	<controls>
+
+<!-- top menu bar -->
+
+		<control type="group">
+			<control type="button" id="917">
+			<description>DVD menu button</description>
+			<posx>100</posx>
+			<posy>350</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-dvdmenu-glow.png</texturefocus>
+			<texturenofocus>bmx-dvdmenu.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			<label>DVD menu button</label>
+			<font>-</font>
+			<onleft>921</onleft>
+			<onright>918</onright>
+			<onup>222</onup>
+			<ondown>210</ondown>
+		</control>
+			<control type="button" id="918">
+			<description>Codec info</description>
+			<posx>150</posx>
+			<posy>350</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-question-glow.png</texturefocus>
+			<texturenofocus>bmx-question.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(CodecInfo)</onclick>
+			<label>Codec info</label>
+			<font>-</font>
+			<onleft>917</onleft>
+			<onright>919</onright>
+			<onup>222</onup>
+			<ondown>213</ondown>
+		</control>
+			<control type="button" id="919">
+			<description>Audio Menu</description>
+			<posx>200</posx>
+			<posy>350</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-soundmenu-glow.png</texturefocus>
+			<texturenofocus>bmx-soundmenu.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(124)</onclick>
+			<label>Audio Menu</label>
+			<font>-</font>
+			<onleft>918</onleft>
+			<onright>920</onright>
+			<onup>222</onup>
+			<ondown>213</ondown>
+		</control>
+			<control type="button" id="920">
+			<description>Subtitles On/Off</description>
+			<posx>250</posx>
+			<posy>350</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-subtitles-glow.png</texturefocus>
+			<texturenofocus>bmx-subtitles.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(ShowSubtitles)</onclick>
+			<label>Subtitles On/Off</label>
+			<font>-</font>
+			<onleft>919</onleft>
+			<onright>921</onright>
+			<onup>222</onup>
+			<ondown>918</ondown>
+		</control>
+			<control type="button" id="921">
+			<description>Bookmarks Menu</description>
+			<posx>300</posx>
+			<posy>350</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-bookmarks-glow.png</texturefocus>
+			<texturenofocus>bmx-bookmarks.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(125)</onclick>
+			<label>Bookmarks Menu</label>
+			<font>-</font>
+			<onleft>920</onleft>
+			<onright>922</onright>
+			<onup>222</onup>
+			<ondown>918</ondown>
+		</control>
+			<control type="button" id="922">
+			<description>Movie info</description>
+			<posx>350</posx>
+			<posy>350</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-movie-info-glow.png</texturefocus>
+			<texturenofocus>bmx-movie-info.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Info)</onclick>
+			<!-- <onclick>XBMC.ActivateWindow(2003)</onclick> -->
+			<label>Movie info</label>
+			<font>-</font>
+			<onleft>921</onleft>
+			<onright>917</onright>
+			<onup>222</onup>
+			<ondown>918</ondown>
+		</control>
+
+<!-- lower menu bar -->
+
+		<control type="group">
+		<control type="button" id="210">
+			<description>Skip Bwd</description>
+			<posx>50</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-skipbwd-glow.png</texturefocus>
+			<texturenofocus>bmx-skipbwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+			<label>Skip backwards</label>
+			<font>-</font>
+			<onleft>221</onleft>
+			<onright>215</onright>
+			<onup>208</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="button" id="215">
+			<description>Skip Fwd</description>
+			<posx>85</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-skipfwd-glow.png</texturefocus>
+			<texturenofocus>bmx-skipfwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+			<label>Skip Forwards</label>
+			<font>-</font>
+			<onleft>210</onleft>
+			<onright>211</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="togglebutton" id="211">
+			<description>Rewind</description>
+			<posx>120</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-rewind-glow.png</texturefocus>
+			<texturenofocus>bmx-rewind.png</texturenofocus>
+			<usealttexture>Player.Rewinding</usealttexture>
+			<alttexturefocus>bmx-rewind-glow.png</alttexturefocus>
+			<alttexturenofocus>bmx-rewind.png</alttexturenofocus>
+			<label>Rewind</label>
+			<font>-</font>
+			<onleft>215</onleft>
+			<onright>214</onright>
+			<onup>209</onup>
+			<ondown>222</ondown>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		</control>
+		<control type="togglebutton" id="214">
+			<description>Fast Forward</description>
+			<posx>155</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-ffd-glow.png</texturefocus>
+			<texturenofocus>bmx-ffd.png</texturenofocus>
+			<usealttexture>Player.Forwarding</usealttexture>
+			<alttexturefocus>bmx-ffd-glow.png</alttexturefocus>
+			<alttexturenofocus>bmx-ffd.png</alttexturenofocus>
+			<label>Fast Forward</label>
+			<font>-</font>
+			<onleft>211</onleft>
+			<onright>213</onright>
+			<onup>921</onup>
+			<ondown>222</ondown>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+		</control>
+		<control type="button" id="213">
+			<description>Play</description>
+			<posx>190</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-play-glow.png</texturefocus>
+			<texturenofocus>bmx-play.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<label>Play</label>
+			<font>-</font>
+			<onleft>214</onleft>
+			<onright>216</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="button" id="216">
+			<description>Pause</description>
+			<posx>225</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-pause-glow.png</texturefocus>
+			<texturenofocus>bmx-pause.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<label>Pause</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>217</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="button" id="217">
+			<description>Stop</description>
+			<posx>260</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-stop-glow.png</texturefocus>
+			<texturenofocus>bmx-stop.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
+			<label>Stop</label>
+			<font>-</font>
+			<onleft>216</onleft>
+			<onright>218</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="button" id="218">
+			<description>SmallSkipBackward</description>
+			<posx>295</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-sskip-bwd-glow.png</texturefocus>
+			<texturenofocus>bmx-sskip-bwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(SmallSkipBackward)</onclick>
+			<label>Small Skip Backward</label>
+			<font>-</font>
+			<onleft>217</onleft>
+			<onright>219</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="button" id="219">
+			<description>SmallSkipForward</description>
+			<posx>330</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-sskip-fwd-glow.png</texturefocus>
+			<texturenofocus>bmx-sskip-fwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(SmallSkipForward)</onclick>
+			<label>Small Skip Forward</label>
+			<font>-</font>
+			<onleft>218</onleft>
+			<onright>220</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="button" id="220">
+			<description>BigSkipBackward</description>
+			<posx>365</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-bskip-bwd-glow.png</texturefocus>
+			<texturenofocus>bmx-bskip-bwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(BigSkipBackward)</onclick>
+			<label>Big Skip Backward</label>
+			<font>-</font>
+			<onleft>219</onleft>
+			<onright>221</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		<control type="button" id="221">
+			<description>BigSkipForward</description>
+			<posx>400</posx>
+			<posy>400</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-bskip-fwd-glow.png</texturefocus>
+			<texturenofocus>bmx-bskip-fwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(BigSkipForward)</onclick>
+			<label>Big Skip Forward</label>
+			<font>-</font>
+			<onleft>220</onleft>
+			<onright>210</onright>
+			<onup>918</onup>
+			<ondown>222</ondown>
+		</control>
+		</control>
+
+
+<!-- lower menu bar -->
+
+		<control type="group">
+		<control type="button" id="222">
+			<description>repeat</description>
+			<posx>225</posx>
+			<posy>450</posy>
+            <width>55</width>
+            <height>69</height>
+			<texturefocus>bmx-repeat-glow.png</texturefocus>
+			<texturenofocus>bmx-repeat.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Repeat)</onclick>
+			<label>repeat</label>
+			<font>-</font>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>213</onup>
+			<ondown>918</ondown>
+		</control>
+	</control>
+</control>
+		
+<!--- Label -->
+
+		<control type="label" id="3100">
+			<description>Label control</description>
+			<posx>92</posx>
+			<posy>520</posy>
+			<width>322</width>
+			<height>20</height>
+			<label>-</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font13</font>
+		</control>
+	</controls>
+</window>

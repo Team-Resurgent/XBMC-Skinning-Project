@@ -1,0 +1,143 @@
+<window type="dialog" id="127">
+<defaultcontrol>60</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<coordinates>
+  <system>1</system>
+  <posx>90</posx>
+  <posy>101</posy>
+</coordinates>
+
+<include>DefaultFade</include>
+  
+<controls>
+
+  <control type="group">
+    <include>DialogBackWide</include>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>509</posx>
+      <posy>55</posy>
+      <height>275</height>
+      <onleft>5</onleft>
+      <onright>9000</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(60)">Conditional</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>509</posx>
+      <posy>55</posy>
+      <height>275</height>
+      <onleft>5</onleft>
+      <onright>9000</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>!Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(60)">Conditional</animation>
+    </control>
+    <control type="image">
+      <description>Header Back</description>
+      <width>540</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="1000">
+      <description>Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>395</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+		
+		<control type="label" id="2">
+			<description>Settings</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>395</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+		</control>
+
+    <control type="spincontrolex" id="9">
+      <description>Directory Content</description>
+      <posy>10</posy>
+      <width>540</width>
+      <font>18BdFont</font>
+      <onup>29</onup>
+      <ondown>5</ondown>
+      <onleft>5</onleft>
+      <onright>5</onright>
+    </control>
+
+    <control type="grouplist" id="5">
+      <description>Control Area</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <itemgap>5</itemgap>
+      <pagecontrol>60</pagecontrol>
+      <orientation>vertical</orientation>
+      <width>501</width>
+      <height>275</height>
+      <onup>9000</onup>
+      <ondown>9000</ondown>
+      <onleft>9000</onleft>
+      <onright>60</onright>
+    </control>
+    <control type="button" id="7">
+      <description>Default Button</description>
+      <width>-</width>
+      <font>18BdFont</font>
+      <texturefocus>ButtonInputFo.png</texturefocus>
+      <texturenofocus>ButtonInputNF.png</texturenofocus>
+      <align>left</align>
+      <textoffsetx>10</textoffsetx>
+      <textoffsety>-</textoffsety>
+    </control>
+    <control type="radiobutton" id="8">
+      <description>Radiobutton</description>
+      <width>-</width>
+      <font>18BdFont</font>
+      <label>$LOCALIZE[590]</label>
+    </control>
+
+    <control type="group" id="9000">
+      <posy>335</posy>
+      <posx>210</posx>
+      <control type="button" id="28">
+        <description>Ok</description>
+        <posx>110</posx>
+        <label>$LOCALIZE[186]</label>
+        <font>18BdFont</font>
+        <onup>5</onup>
+        <onleft>29</onleft>
+        <onright>29</onright>
+        <ondown>5</ondown>
+      </control>
+      <control type="button" id="29">
+        <description>Cancel</description>
+        <posx>220</posx>
+        <label>$LOCALIZE[222]</label>
+        <font>18BdFont</font>
+        <onup>5</onup>
+        <onleft>28</onleft>
+        <onright>28</onright>
+        <ondown>5</ondown>
+      </control>
+    </control>
+    
+	</control>
+	
+</controls>
+</window>

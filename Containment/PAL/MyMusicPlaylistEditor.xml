@@ -1,0 +1,165 @@
+<window id="503">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Background</include>
+		<include>Container</include>
+		<control type="group" id="420">
+			<include>media-slide</include>
+			<control type="button" id="6">
+				<description>Open Button</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<label>502</label>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<onup>8</onup>
+				<ondown>7</ondown>
+			</control>
+			<control type="button" id="7">
+				<description>Save Button</description>
+				<posx>5</posx>
+				<posy>147</posy>
+				<label>190</label>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>8</ondown>
+			</control>
+			<control type="button" id="8">
+				<description>Clear button</description>
+				<posx>5</posx>
+				<posy>184</posy>
+				<label>192</label>
+				<font>font13</font>
+				<onleft>100</onleft>
+				<onright>50</onright>
+				<onup>7</onup>
+				<ondown>6</ondown>
+			</control>
+		</control>
+		<control type="group">
+			<control type="list" id="50">
+				<description>Music List</description>
+				<posx>200</posx>
+				<posy>110</posy>
+				<width>235</width>
+				<height>356</height>
+				<onleft>6</onleft>
+				<onright>100</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="32">
+					<control type="label">
+						<posx>2</posx>
+						<posy>4</posy>
+						<width>235</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>button-nofocus-text</textcolor>
+						<selectedcolor>selected-nofocus-text</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="32">
+					<control type="image">
+						<width>235</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>3</posy>
+						<texture>line.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+						<colordiffuse>object-color</colordiffuse>
+					</control>
+					<control type="image">
+						<width>235</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>3</posy>
+						<texture>line.png</texture>
+						<visible>!Control.HasFocus(50)</visible>
+						<colordiffuse>icon-nf-color</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>2</posx>
+						<posy>4</posy>
+						<width>235</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>main-text</textcolor>
+						<selectedcolor>selected-text</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="list" id="100">
+				<description>Playlist List</description>
+				<posx>455</posx>
+				<posy>110</posy>
+				<width>235</width>
+				<height>356</height>
+				<onleft>50</onleft>
+				<onright>6</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="32">
+					<control type="label">
+						<posx>2</posx>
+						<posy>4</posy>
+						<width>235</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>button-nofocus-text</textcolor>
+						<selectedcolor>selected-nofocus-text</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="32">
+					<control type="image">
+						<width>235</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>3</posy>
+						<texture>line.png</texture>
+						<visible>Control.HasFocus(100)</visible>
+						<colordiffuse>object-color</colordiffuse>
+					</control>
+					<control type="image">
+						<width>235</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>3</posy>
+						<texture>line.png</texture>
+						<visible>!Control.HasFocus(100)</visible>
+						<colordiffuse>icon-nf-color</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>2</posx>
+						<posy>4</posy>
+						<width>235</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>main-text</textcolor>
+						<selectedcolor>selected-text</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<posx>435</posx>
+				<posy>100</posy>
+				<width>12</width>
+				<height>376</height>
+				<texture>line-vertical.png</texture>
+				<colordiffuse>object-color</colordiffuse>
+			</control>
+		</control>
+		<include>Shutters</include>
+	</controls>
+</window>

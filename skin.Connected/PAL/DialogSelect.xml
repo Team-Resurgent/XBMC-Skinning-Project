@@ -1,0 +1,296 @@
+<window id="2000">
+<defaultcontrol always="true">3</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+		
+<coordinates>
+	<system>1</system>
+	<posx>90</posx>
+	<posy>101</posy>
+</coordinates>
+  
+<include>DefaultFade</include>
+	
+<controls>
+
+	<control type="group">
+    <include>DialogBackWide</include>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>399</posx>
+      <posy>55</posy>
+      <height>310</height>
+      <onleft>3</onleft>
+      <onright>5</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(60)">Conditional</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>399</posx>
+      <posy>55</posy>
+      <height>310</height>
+      <onleft>3</onleft>
+      <onright>5</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>!Control.HasFocus(60)</visible>
+      <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(60)">Conditional</animation>
+    </control>
+    <control type="image">
+      <description>Header Back</description>
+      <width>540</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+		<control type="label" id="1">
+			<description>Header Label</description>
+			<posx>10</posx>
+			<posy>0</posy>
+			<width>410</width>
+			<height>45</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>22BdFont</font>
+			<textcolor>FocusedTextColor</textcolor>
+		</control>
+    
+		<control type="label" id="2">
+			<description>Number of Files</description>
+			<posx>530</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>45</height>
+			<label>-</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>18BdFont</font>
+			<scroll>no</scroll>
+			<textcolor>DefaultTextColor</textcolor>
+			<selectedcolor>SelectedTextColor</selectedcolor>
+		</control>
+    
+    <control type="list" id="3">
+        <posx>10</posx>
+        <posy>55</posy>
+        <width>391</width>
+        <height>310</height>
+        <onup>3</onup>
+        <onleft>5</onleft>
+        <onright>60</onright>
+        <ondown>3</ondown>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="35">
+          <control type="image">
+            <width>391</width>
+            <height>30</height>
+            <texture>ButtonInputNF.png</texture>
+            <aspectratio aligny="left">keep</aspectratio>
+          </control>
+          <control type="label">
+            <posx>5</posx>
+            <posy>0</posy>
+            <width>381</width>
+            <height>30</height>
+            <aligny>center</aligny>
+            <align>left</align>
+            <info>ListItem.Label</info>
+            <font>18BdFont</font>
+            <scroll>no</scroll>
+            <textcolor>DefaultTextColor</textcolor>
+            <selectedcolor>SelectedTextColor</selectedcolor>
+          </control>
+        </itemlayout>
+        <focusedlayout height="35">
+          <control type="image">
+            <width>391</width>
+            <height>30</height>
+            <texture>ButtonInputNF.png</texture>
+            <aspectratio aligny="left">keep</aspectratio>
+            <visible>!Control.HasFocus(3)</visible>
+          </control>
+          <control type="image">
+            <width>391</width>
+            <height>30</height>
+            <texture>ButtonInputFo.png</texture>
+            <aspectratio aligny="left">keep</aspectratio>
+            <visible>Control.HasFocus(3)</visible>
+          </control>
+          <control type="label">
+            <posx>5</posx>
+            <posy>0</posy>
+            <width>381</width>
+            <height>30</height>
+            <aligny>center</aligny>
+            <align>left</align>
+            <info>ListItem.Label</info>
+            <font>18BdFont</font>
+            <scroll>yes</scroll>
+            <textcolor>DefaultTextColor</textcolor>
+            <selectedcolor>SelectedTextColor</selectedcolor>
+            <visible>!Control.HasFocus(3)</visible>
+          </control>
+          <control type="label">
+            <posx>5</posx>
+            <posy>0</posy>
+            <width>381</width>
+            <height>30</height>
+            <aligny>center</aligny>
+            <align>left</align>
+            <info>ListItem.Label</info>
+            <font>18BdFont</font>
+            <scroll>yes</scroll>
+            <textcolor>FocusedTextColor</textcolor>
+            <selectedcolor>SelectedTextColor</selectedcolor>
+            <visible>Control.HasFocus(3)</visible>
+          </control>
+        </focusedlayout>
+      </control>
+    
+    <control type="list" id="6">
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>391</width>
+      <height>310</height>
+      <onleft>5</onleft>
+      <onright>60</onright>
+      <onup>6</onup>
+      <ondown>6</ondown>
+      <scrolltime>200</scrolltime>
+      <pagecontrol>60</pagecontrol>
+      <itemlayout height="65">
+        <control type="image">
+          <width>391</width>
+          <height>60</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+        </control>
+        <control type="image">
+          <posx>5</posx>
+          <posy>2</posy>
+          <width>56</width>
+          <height>56</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="middle">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>66</posx>
+          <posy>0</posy>
+          <width>316</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>66</posx>
+          <posy>25</posy>
+          <width>316</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>14BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <label>$INFO[ListItem.Property(Addon.Description)]</label>
+          <scroll>false</scroll>
+        </control>
+      </itemlayout>
+      <focusedlayout height="65">
+        <control type="image">
+          <width>391</width>
+          <height>60</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+          <visible>!Control.HasFocus(6)</visible>
+        </control>
+        <control type="image">
+          <width>391</width>
+          <height>60</height>
+          <texture>ButtonInputFo.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+          <visible>Control.HasFocus(6)</visible>
+        </control>
+        <control type="image">
+          <posx>5</posx>
+          <posy>2</posy>
+          <width>56</width>
+          <height>56</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="middle">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>66</posx>
+          <posy>0</posy>
+          <width>316</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <visible>!Control.HasFocus(6)</visible>
+        </control>
+        <control type="label">
+          <posx>66</posx>
+          <posy>25</posy>
+          <width>316</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>14BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <label>$INFO[ListItem.Property(Addon.Description)]</label>
+          <scroll>false</scroll>
+          <visible>!Control.HasFocus(6)</visible>
+        </control>
+        <control type="label">
+          <posx>66</posx>
+          <posy>0</posy>
+          <width>316</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <visible>Control.HasFocus(6)</visible>
+        </control>
+        <control type="label">
+          <posx>66</posx>
+          <posy>25</posy>
+          <width>316</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>14BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <label>$INFO[ListItem.Property(Addon.Description)]</label>
+          <scroll>false</scroll>
+          <visible>Control.HasFocus(6)</visible>
+        </control>
+      </focusedlayout>
+    </control>
+    
+    <control type="button" id="5">
+			<description>Manual</description>
+			<posx>430</posx>
+			<posy>55</posy>
+			<label>$LOCALIZE[368]</label>
+			<font>18BdFont</font>
+			<onup>3</onup>
+			<onleft>60</onleft>
+      <onright>3</onright>
+			<ondown>3</ondown>
+		</control>
+	</control>
+</controls>
+</window>

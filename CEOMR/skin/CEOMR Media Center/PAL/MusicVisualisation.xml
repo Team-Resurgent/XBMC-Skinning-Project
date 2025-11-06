@@ -1,0 +1,448 @@
+<window id="2006">
+
+  <allowoverlay>no</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+      <control type="visualisation" id="2">
+         <description>visualisation</description>
+         <posx>0</posx> 
+         <posy>0</posy> 
+         <width>720</width> 
+         <height>576</height> 
+       </control>
+
+    <control type="image" id="1">
+      <description>background</description>
+      <posx>0</posx>
+      <posy>433</posy>
+      <width>720</width>
+      <height>110</height>
+      <texture>blue_rectangle_weather.png</texture>
+      
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+    </control>
+
+    <control type="image" id="1">
+      <description>image</description>
+      <posx>55</posx>
+      <posy>438</posy>
+      <width>90</width>
+      <height>99</height>
+      <info>MusicPlayer.Cover</info>
+            
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+    </control>
+
+    <control type="label" id="1">
+      <description>Artist label</description>
+      <posx>160</posx>
+      <posy>440</posy>
+      <width>380</width>
+      <info>MusicPlayer.Artist</info>
+      <align>left</align>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+            
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+    </control>
+
+    <control type="label" id="1">
+      <description>Title label</description>
+      <posx>160</posx>
+      <posy>467</posy>
+      <width>380</width>
+      <info>MusicPlayer.Title</info>
+      <align>left</align>
+      <font>font13</font>
+
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+    </control>
+
+    <control type="label" id="1">
+      <description>Album label</description>
+      <posx>160</posx>
+      <posy>495</posy>
+      <width>380</width>
+      <info>MusicPlayer.Album</info>
+      <align>left</align>
+      <font>font10</font>
+      <include>textcolorlightgrey</include>
+
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+    </control>
+
+    <control type="image" id="1"> 
+    	<description>Song Rating Image</description> 
+    	<height>20</height> 
+    	<width>120</width> 
+    	<posx>565</posx> 
+    	<posy>55</posy> 
+    	<info>musicplayer.rating</info>
+
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+    </control>
+
+    <control type="label" id="1">
+      <description>time label</description>
+      <width>430</width>
+      <posx>160</posx>
+      <posy>520</posy>
+      <label>$INFO[musicplayer.Time] / $INFO[musicplayer.Duration]</label>
+      <align>left</align>
+      <font>font10</font>
+            
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+    </control>
+
+    <control type="label" id="1">
+      <description>Playlist</description>
+      <width>150</width>
+      <posx>650</posx>
+      <posy>520</posy>
+      <label>Track $INFO[musicplayer.Playlistposition] / $INFO[musicplayer.Playlistlength]</label>
+      <align>right</align>
+      <font>font10</font>
+            
+      <visible>Player.ShowInfo</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Paused+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>Pause logo</description>
+      <posx>553</posx>
+      <posy>462</posy>
+      <height>30</height>
+      <texture>music-pause.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding2x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>FF logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-forward-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding4x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>FF logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-forward-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding8x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>FF logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-forward-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding16x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>FF logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-forward-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding32x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>FF logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-forward-32.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding2x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>RW logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-rewind-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding4x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>RW logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-rewind-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding8x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>RW logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-rewind-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding16x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>RW logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-rewind-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding32x+Player.ShowInfo</visible>
+      <animation effect="fade" time="200">VisibleChange</animation>
+
+      <description>RW logo</description>
+      <posx>505</posx>
+      <posy>460</posy>
+      <height>35</height>
+      <texture>music-rewind-32.png</texture>
+    </control>
+
+      <control type="image" id="1">
+         <description>preset background image</description> 
+         <posx>55</posx> 
+         <posy>20</posy> 
+         <width>600</width> 
+         <height>60</height> 
+         <texture>music-panel-bg.png</texture>
+ 	 <visible>Player.ShowCodec</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+       </control> 
+    
+       <control type="label" id="1">  
+         <description>Presets label</description>
+         <posx>125</posx> 
+         <posy>40</posy> 
+         <width>460</width> 
+         <info>Visualisation.Preset</info> 
+         <font>font12</font> 
+         <align>center</align>
+	 <visible>Player.ShowCodec</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+       </control> 
+    
+       <control type="image" id="1">
+         <description>Preset locked image</description> 
+         <posx>93</posx> 
+         <posy>40</posy> 
+         <width>15</width> 
+         <height>15</height> 
+         <texture>defaultLocked.png</texture> 
+	 <visible>Visualisation.Locked + Player.ShowCodec</visible>
+      <animation effect="fade" time="600">VisibleChange</animation>
+
+       </control>
+
+    <!-- playstate images -->
+
+
+    <control type="image" id="1">
+      <description>pause image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Paused+!Player.Playing</visible>
+      <texture>video-pause.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>2x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding2x</visible>
+      <texture>video-2x.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>4x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding4x</visible>
+      <texture>video-4x.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>8x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding8x</visible>
+      <texture>video-8x.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>16x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding16x</visible>
+      <texture>video-16x.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>32x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding32x</visible>
+      <texture>video-32x.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>-2x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding2x</visible>
+      <texture>video-2xr.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>-4x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding4x</visible>
+      <texture>video-4xr.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>-8x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding8x</visible>
+      <texture>video-8xr.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>-16x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding16x</visible>
+      <texture>video-16xr.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>-32x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding32x</visible>
+      <texture>video-32xr.png</texture>
+    </control>
+
+       <control type="progress" id="23">
+         <description>progressbar</description>
+	 <visible>Player.ShowInfo</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+         <posx>0</posx> 
+         <posy>553</posy> 
+         <width>720</width> 
+         <height>8</height> 
+         <info>Player.Progress</info> 
+         <texturebg>blackbar.png</texturebg> 
+         <midtexture>bluebar.png</midtexture>
+         <lefttexture>-</lefttexture>
+         <righttexture>-</righttexture>
+         <overlaytexture>-</overlaytexture>
+       </control>
+
+  </controls>
+</window>

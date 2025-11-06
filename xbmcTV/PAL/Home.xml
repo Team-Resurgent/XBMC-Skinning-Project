@@ -1,0 +1,994 @@
+<window id="0">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="fade" start="100" end="50" time="300">WindowClose</animation>
+	<animation effect="fade" start="50" end="100" time="300">WindowOpen</animation>
+	<controls>
+		<include>home-background</include>
+		<!-- Time and Date -->
+		<control type="label">
+			<posx>10</posx>
+			<posy>10</posy>
+			<align>left</align>
+			<font>10</font>
+			<textcolor>button-text</textcolor>
+			<info>System.Time</info>
+		</control>
+		<control type="label">
+			<posx>710</posx>
+			<posy>10</posy>
+			<align>right</align>
+			<font>10</font>
+			<textcolor>button-text</textcolor>
+			<info>System.Date</info>
+		</control>
+		<!-- main logo and label-->
+		<control type="image">
+			<description>xTV Logo</description>
+			<posx>250</posx>
+			<posy>25</posy>
+			<width>220</width>
+			<height>285</height>
+			<aspectratio>keep</aspectratio>
+			<texture>home-logo.png</texture>
+		</control>
+		<!-- Fake unfocused main buttons -->
+		<control type="group">
+			<posx>159</posx>
+			<posy>220</posy>
+			<control type="image">
+				<description>Fake button 1</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(200)</visible>
+			</control>
+			<control type="image">
+				<description>Fake button 2</description>
+				<posx>0</posx>
+				<posy>32</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(300)</visible>
+			</control>
+			<control type="image">
+				<description>Fake button 3</description>
+				<posx>0</posx>
+				<posy>64</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(400)</visible>
+			</control>
+			<control type="image">
+				<description>Fake button 4</description>
+				<posx>0</posx>
+				<posy>96</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(500)</visible>
+			</control>
+			<control type="image">
+				<description>Fake button 5</description>
+				<posx>0</posx>
+				<posy>128</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(600)</visible>
+			</control>
+			<control type="image">
+				<description>Fake button 6</description>
+				<posx>0</posx>
+				<posy>160</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(700)</visible>
+			</control>
+			<control type="image">
+				<description>Fake button 7</description>
+				<posx>0</posx>
+				<posy>192</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(800)</visible>
+			</control>
+			<control type="image">
+				<description>Fake button 8</description>
+				<posx>0</posx>
+				<posy>224</posy>
+				<width>200</width>
+				<height>32</height>
+				<texture>default-button-alpha.png</texture>
+				<visible>Control.HasFocus(900)</visible>
+			</control>
+		</control>
+		
+		<!-- main buttons -->
+		<control type="group" id="100">
+			<posx>159</posx>
+			<posy>220</posy>
+			<control type="button" id="101">
+				<description>Movies button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31001</label>
+				<align>center</align>
+				<onclick>ActivateWindow(MyVideoFiles)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>101</onleft>
+				<onright>200</onright>
+				<onup>108</onup>
+				<ondown>102</ondown>
+			</control>
+			<control type="button" id="102">
+				<description>TV Shows button</description>
+				<posx>0</posx>
+				<posy>32</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31010</label>
+				<align>center</align>
+				<onclick>ActivateWindow(MyVideoLibrary,TVShowTitles)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>102</onleft>
+				<onright>300</onright>
+				<onup>101</onup>
+				<ondown>103</ondown>
+			</control>
+			<control type="button" id="103">
+				<description>Music button</description>
+				<posx>0</posx>
+				<posy>64</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31003</label>
+				<align>center</align>
+				<onclick>ActivateWindow(MyMusicFiles)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>103</onleft>
+				<onright>400</onright>
+				<onup>102</onup>
+				<ondown>104</ondown>
+			</control>
+			<control type="button" id="104">
+				<description>Programs button</description>
+				<posx>0</posx>
+				<posy>96</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31002</label>
+				<align>center</align>
+				<onclick>ActivateWindow(MyPrograms)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>104</onleft>
+				<onright>500</onright>
+				<onup>103</onup>
+				<ondown>105</ondown>
+				<visible>System.Platform.XBOX</visible>
+			</control>
+			<control type="button" id="104">
+				<description>Scripts button</description>
+				<posx>0</posx>
+				<posy>96</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31017</label>
+				<align>center</align>
+				<onclick>ActivateWindow(Scripts)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>104</onleft>
+				<onright>500</onright>
+				<onup>103</onup>
+				<ondown>105</ondown>
+				<visible>!System.Platform.XBOX</visible>
+			</control>
+			<control type="button" id="105">
+				<description>Pictures button</description>
+				<posx>0</posx>
+				<posy>128</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31004</label>
+				<align>center</align>
+				<onclick>ActivateWindow(MyPictures)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>105</onleft>
+				<onright>600</onright>
+				<onup>104</onup>
+				<ondown>106</ondown>
+			</control>
+			<control type="button" id="106">
+				<description>Weather button</description>
+				<posx>0</posx>
+				<posy>160</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31005</label>
+				<align>center</align>
+				<onclick>ActivateWindow(Weather)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>106</onleft>
+				<onright>700</onright>
+				<onup>105</onup>
+				<ondown>107</ondown>
+			</control>
+			<control type="button" id="107">
+				<description>Settings button</description>
+				<posx>0</posx>
+				<posy>192</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31015</label>
+				<align>center</align>
+				<onclick>ActivateWindow(50)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>107</onleft>
+				<onright>800</onright>
+				<onup>106</onup>
+				<ondown>108</ondown>
+			</control>
+			<control type="button" id="108">
+				<description>Settings button</description>
+				<posx>0</posx>
+				<posy>224</posy>
+				<width>200</width>
+				<height>32</height>
+				<label>31008</label>
+				<align>center</align>
+				<onclick>ActivateWindow(Settings)</onclick>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>108</onleft>
+				<onright>900</onright>
+				<onup>107</onup>
+				<ondown>101</ondown>
+			</control>
+		</control>
+
+		<!- Movies Sub Category Buttons ->
+		<control type="list" id="200">
+			<onleft>100</onleft>
+			<onright>200</onright>
+			<onup>200</onup>
+			<ondown>200</ondown>
+			<visible>Control.HasFocus(101) | Control.HasFocus(200)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(200)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>31100</label>
+					<onclick>ActivateWindow(MyVideoLibrary,MovieTitles)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>135</label>
+					<onclick>ActivateWindow(MyVideoLibrary,MovieGenres)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>344</label>
+					<onclick>ActivateWindow(MyVideoLibrary,MovieActors)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>20348</label>
+					<onclick>ActivateWindow(MyVideoLibrary,MovieDirectors)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31101</label>
+					<onclick>ActivateWindow(MyVideoLibrary,Plugins)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31102</label>
+					<onclick>ActivateWindow(MyVideoLibrary,RecentlyAddedMovies)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31103</label>
+					<onclick>XBMC.RunScript(Q:\Scripts\Apple Movie Trailers\default.py)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>653</label>
+					<onclick>XBMC.UpdateLibrary(Video)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31034</label>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+			</content>
+		</control>
+
+		<!- TV Shows Sub Category Buttons ->
+		<control type="list" id="300">
+			<onleft>100</onleft>
+			<onright>300</onright>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<visible>Control.HasFocus(102) | Control.HasFocus(300)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(300)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>31100</label>
+					<onclick>ActivateWindow(MyVideoLibrary,TVShowTitles)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>135</label>
+					<onclick>ActivateWindow(MyVideoLibrary,TVShowGenres)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>344</label>
+					<onclick>ActivateWindow(MyVideoLibrary,TVShowActors)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>652</label>
+					<onclick>ActivateWindow(MyVideoLibrary,TVShowYears)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31102</label>
+					<onclick>ActivateWindow(MyVideoLibrary,RecentlyAddedEpisodes)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>653</label>
+					<onclick>XBMC.updatelibrary(Video)</onclick>
+					<visible>-</visible>
+				</item>
+			</content>
+		</control>
+
+		<!- Music Sub Category Buttons ->
+		<control type="list" id="400">
+			<onleft>100</onleft>
+			<onright>400</onright>
+			<onup>400</onup>
+			<ondown>400</ondown>
+			<visible>Control.HasFocus(103) | Control.HasFocus(400)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(400)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>133</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Artists)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>132</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Albums)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>135</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Genres)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>134</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Songs)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>271</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Top100)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>652</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Years)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31102</label>
+					<onclick>ActivateWindow(MyMusicLibrary,RecentlyAddedAlbums)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31104</label>
+					<onclick>ActivateWindow(MyMusicLibrary,RecentlyPlayedAlbums)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>521</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Compilations)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>136</label>
+					<onclick>ActivateWindow(MyMusicLibrary,Playlists)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31034</label>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+			</content>
+		</control>
+
+		<!- Programs Sub Category Buttons ->
+		<control type="list" id="500">
+			<onleft>100</onleft>
+			<onright>500</onright>
+			<onup>500</onup>
+			<ondown>500</ondown>
+			<visible>Control.HasFocus(104) | Control.HasFocus(500)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(500)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>31113</label>
+					<onclick>ActivateWindow(MyPrograms,Games)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>31105</label>
+					<onclick>ActivateWindow(MyPrograms,Emulators)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>20315</label>
+					<onclick>ActivateWindow(Gamesaves)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>31034</label>
+					<onclick>ActivateWindow(ProgramsSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>31114</label>
+					<onclick>XBMC.RunScript(Q:\skin\Apple Movie Trailers\default.py)</onclick>
+					<visible>!System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>31117</label>
+					<onclick>XBMC.RunScript(Q:\skin\Tetris\default.py)</onclick>
+					<visible>!System.Platform.XBOX</visible>
+				</item>
+			</content>
+		</control>
+
+		<!- Pictures Sub Category Buttons ->
+		<control type="list" id="600">
+			<onleft>100</onleft>
+			<onright>600</onright>
+			<onup>600</onup>
+			<ondown>600</ondown>
+			<visible>Control.HasFocus(105) | Control.HasFocus(600)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(600)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>31034</label>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+			</content>
+		</control>
+
+		<!- Weather Sub Category Buttons ->
+		<control type="list" id="700">
+			<onleft>100</onleft>
+			<onright>700</onright>
+			<onup>700</onup>
+			<ondown>700</ondown>
+			<visible>Control.HasFocus(106) | Control.HasFocus(700)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(700)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>31034</label>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+			</content>
+		</control>
+		<!-- weather Condition Info -->
+		<control type="image">
+			<posx>401</posx>
+			<posy>272</posy>
+			<width>110</width>
+			<height>110</height>
+			<aspectratio>keep</aspectratio>
+			<info>Weather.Conditions</info>
+			<visible>Control.HasFocus(106) | Control.HasFocus(700)</visible>
+		</control>
+		<control type="label">
+			<posx>361</posx>
+			<posy>397</posy>
+			<width>200</width>
+			<height>25</height>
+			<align>center</align>
+			<label>$INFO[Weather.Location]</label>
+			<font>font10</font>
+			<textcolor>button-text</textcolor>
+			<visible>Control.HasFocus(106) | Control.HasFocus(700)</visible>
+		</control>
+		<control type="label">
+			<posx>361</posx>
+			<posy>412</posy>
+			<width>200</width>
+			<height>25</height>
+			<align>center</align>
+			<label>$INFO[Weather.Conditions]</label>
+			<font>font10</font>
+			<textcolor>button-text</textcolor>
+			<visible>Control.HasFocus(106) | Control.HasFocus(700)</visible>
+		</control>
+		<control type="label">
+			<posx>361</posx>
+			<posy>427</posy>
+			<width>200</width>
+			<height>25</height>
+			<align>center</align>
+			<label>$LOCALIZE[401]: $INFO[Weather.Temperature]</label>
+			<font>font10</font>
+			<textcolor>button-text</textcolor>
+			<visible>Control.HasFocus(106) | Control.HasFocus(700)</visible>
+		</control>
+
+		<!- System Sub Category Buttons ->
+		<control type="list" id="800">
+			<onleft>100</onleft>
+			<onright>800</onright>
+			<onup>800</onup>
+			<ondown>800</ondown>
+			<visible>Control.HasFocus(107) | Control.HasFocus(800)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(800)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>31009</label>
+					<onclick>XBMC.PlayDVD</onclick>
+					<visible>System.HasMediaDVD</visible>
+				</item>
+				<item>
+					<label>31016</label>
+					<onclick>ActivateWindow(FileManager)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31017</label>
+					<onclick>ActivateWindow(Scripts)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>1036</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31019</label>
+					<onclick>ActivateWindow(34)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31023</label>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31069</label>
+					<onclick>RunScript(Q:\skin\xbmcTV\extras\xbmcTV_Themes.py)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31114</label>
+					<onclick>XBMC.RestartApp</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>31115</label>
+					<onclick>XBMC.Shutdown</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>31116</label>
+					<onclick>XBMC.Shutdown</onclick>
+					<visible>!System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>31113</label>
+					<onclick>XBMC.Reboot</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>13011</label>
+					<onclick>XBMC.Suspend()</onclick>
+					<visible>!System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>20126</label>
+					<onclick>XBMC.LogOff</onclick>
+					<visible>System.IsLoggedOn</visible>
+				</item>
+				<item>
+					<label>13006</label>
+					<onclick>XBMC.Dashboard</onclick>
+					<visible>System.Platform.XBOX</visible>
+				</item>
+				<item>
+					<label>470</label>
+					<onclick>XBMC.Credits</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31109</label>
+					<onclick>XBMC.BackupSystemInfo</onclick>
+					<visible>-</visible>
+				</item>
+			</content>
+		</control>
+
+		<!- Settings Sub Category Buttons ->
+		<control type="list" id="900">
+			<onleft>100</onleft>
+			<onright>900</onright>
+			<onup>900</onup>
+			<ondown>900</ondown>
+			<visible>Control.HasFocus(108) | Control.HasFocus(900)</visible>
+			<include>home-sub</include>
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(900)</visible>
+				</control>
+				<control type="label">
+					<posx>102</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>32</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>button-text</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>480</label>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>1212</label>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31003</label>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31002</label>
+					<onclick>ActivateWindow(ProgramsSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31004</label>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31005</label>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>13279</label>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>13000</label>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31110</label>
+					<onclick>ActivateWindow(ProfileSettings)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>166</label>
+					<onclick>ActivateWindow(57)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31111</label>
+					<onclick>ActivateWindow(58)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+				<item>
+					<label>31112</label>
+					<onclick>ActivateWindow(59)</onclick>
+					<onclick>Dialog.Close(ShutdownMenu)</onclick>
+					<visible>-</visible>
+				</item>
+			</content>
+		</control>
+
+		<!-- Grid -->
+		<control type="image">
+			<description>Top Horizontal Line</description>
+			<posx>159</posx>
+			<posy>108</posy>
+			<width>402</width>
+			<height>2</height>
+			<texture>horizontal-home-line.png</texture>
+			<include>home-grid-diffuse</include>
+		</control>
+		<control type="image">
+			<description>Middle Horizontal Line</description>
+			<posx>159</posx>
+			<posy>218</posy>
+			<width>402</width>
+			<height>2</height>
+			<texture>horizontal-home-line.png</texture>
+			<include>home-grid-diffuse</include>
+		</control>
+		<control type="image">
+			<description>Bottom Horizontal Line</description>
+			<posx>159</posx>
+			<posy>476</posy>
+			<width>402</width>
+			<height>2</height>
+			<texture>horizontal-home-line.png</texture>
+			<include>home-grid-diffuse</include>
+		</control>
+		<control type="image">
+			<description>Left Vertical Line</description>
+			<posx>157</posx>
+			<posy>108</posy>
+			<width>2</width>
+			<height>370</height>
+			<texture>vertical-home-line.png</texture>
+			<include>home-grid-diffuse</include>
+		</control>
+		<control type="image">
+			<description>Middle Vertical Line</description>
+			<posx>359</posx>
+			<posy>220</posy>
+			<width>2</width>
+			<height>256</height>
+			<texture>vertical-home-line.png</texture>
+			<include>home-grid-diffuse</include>
+		</control>
+		<control type="image">
+			<description>Right Vertical Line</description>
+			<posx>561</posx>
+			<posy>108</posy>
+			<width>2</width>
+			<height>370</height>
+			<texture>vertical-home-line.png</texture>
+			<include>home-grid-diffuse</include>
+		</control>
+		<!-- page info -->
+		<include>page-info</include>
+	</controls>
+</window>        

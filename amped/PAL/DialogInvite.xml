@@ -1,0 +1,126 @@
+<window id="102">
+	<defaultcontrol>30</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>200</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>-300</posx>
+			<posy>-275</posy>
+			<width>1320</width>
+			<height>1176</height>
+			<texture>black.png</texture>
+		</control>
+		<control type="image">
+			<description>Dialog Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>520</width>
+			<height>210</height>
+			<texture border="0,35,0,10">Dialog.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Title Label</description>
+			<posx>60</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<label>15054</label>
+			<align>center</align>
+			<font>font22</font>
+		</control>
+		<control type="label">
+			<description>choose game</description>
+			<posx>60</posx>
+			<posy>35</posy>
+			<width>400</width>
+			<align>center</align>
+			<label>15055</label>
+			<font>font16</font>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+		</control>
+		<control type="spincontrolex" id="30">
+			<description>games spin control</description>
+			<font>font13</font>
+			<posx>60</posx>
+			<posy>60</posy>
+			<width>400</width>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			<reverse>yes</reverse>
+			<onleft>30</onleft>
+			<onright>30</onright>
+			<onup>10</onup>
+			<ondown>20</ondown>
+		</control>
+		<control type="label" id="4">
+			<posx>60</posx>
+			<posy>100</posy>
+			<width>400</width>
+			<align>center</align>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+			<description>message label</description>
+			<label>15056</label>
+		</control>
+		<control type="button" id="20">
+			<description>message button</description>
+			<posx>60</posx>
+			<posy>125</posy>
+			<width>400</width>
+			<align>left</align>
+			<textoffsetx>10</textoffsetx>
+			<label>15060</label>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+			<textoffsetx>10</textoffsetx>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>30</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="button" id="11">
+			<description>Send Button</description>
+			<posx>120</posx>
+			<posy>170</posy>
+			<height>25</height>
+			<width>130</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>15057</label>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			<onup>20</onup>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<ondown>30</ondown>
+		</control>
+		<control type="button" id="10">
+			<description>Cancel Button</description>
+			<posx>250</posx>
+			<posy>170</posy>
+			<height>25</height>
+			<width>130</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>222</label>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			<onup>20</onup>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<ondown>30</ondown>
+		</control>
+	</controls>
+</window>

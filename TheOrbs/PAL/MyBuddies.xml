@@ -1,0 +1,399 @@
+﻿<window id="2700">
+	<defaultcontrol>3012</defaultcontrol>
+	<controls>
+		<control type="image">
+			<posx>18</posx>
+			<posy>23</posy>
+			<width>220</width>
+			<height>177</height>
+			<texture>home-kai.png</texture>
+			<visible>!player.hasmedia</visible>
+		</control>
+		<control type="image">
+			<description>image</description>
+			<posx>55</posx>
+			<posy>35</posy>
+			<width>157</width>
+			<height>157</height>
+			<info>musicplayer.cover</info>
+			<visible>player.hasaudio</visible>
+		</control>
+		<control type="videowindow">
+			<description>video preview window</description>
+			<posx>35</posx>
+			<posy>30</posy>
+			<width>195</width>
+			<height>160</height>
+		</control>
+		<control type="image">
+			<posx>46</posx>
+			<posy>25</posy>
+			<width>175</width>
+			<height>172</height>
+			<texture>shutter_open.gif</texture>
+			<visible>player.hasvideo</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background2.png</texture>
+		</control>
+		<control type="image">
+			<description>logo</description>
+			<posx>83</posx>
+			<posy>428</posy>
+			<width>95</width>
+			<height>95</height>
+			<texture>trans-panel.png</texture>
+		</control>
+		<control type="image">
+			<description>logo</description>
+			<posx>45</posx>
+			<posy>528</posy>
+			<width>170</width>
+			<height>35</height>
+			<texture>button-nofocus.png</texture>
+		</control>
+		<control type="label" id="3051">
+			<description>username</description>
+			<posx>130</posx>
+			<posy>535</posy>
+			<label>-</label>
+			<align>center</align>
+			<font>font12</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="image" id="3064">
+			<description>my avatar icon</description>
+			<posx>90</posx>
+			<posy>434</posy>
+			<width>80</width>
+			<height>80</height>
+			<texture>buddyitem-default-avatar.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+		</control>
+		<control type="fadelabel">
+			<description>album/artist/genre etc info label</description>
+			<posx>70</posx>
+			<posy>195</posy>
+			<width>120</width>
+			<info>musicplayer.time</info>
+			<info>musicplayer.title</info>
+			<info>musicplayer.artist</info>
+			<info>musicplayer.album</info>
+			<info>musicplayer.year</info>
+			<font>font12</font>
+		</control>
+		<control type="fadelabel">
+			<description>album/artist/genre etc info label</description>
+			<posx>70</posx>
+			<posy>195</posy>
+			<width>120</width>
+			<info>videoplayer.time</info>
+			<info>videoplayer.title</info>
+			<info>videoplayer.year</info>
+			<info>videoplayer.genre</info>
+			<info>videoplayer.director</info>
+			<font>font12</font>
+		</control>
+		<control type="image">
+			<description>orb image</description>
+			<posx>25</posx>
+			<posy>7</posy>
+			<width>206</width>
+			<height>203</height>
+			<texture>top-orb2.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<description>community bg</description>
+			<posx>270</posx>
+			<posy>15</posy>
+			<width>270</width>
+			<height>80</height>
+			<texture>background-kai.png</texture>
+		</control>
+		<control type="image">
+			<description>panel small image</description>
+			<posx>210</posx>
+			<posy>125</posy>
+			<width>475</width>
+			<height>30</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="image">
+			<description>list panel</description>
+			<posx>220</posx>
+			<posy>155</posy>
+			<width>460</width>
+			<height>410</height>
+			<texture>trans-panel.png</texture>
+		</control>
+		<control type="button" id="3080">
+			<description>top orizz buttons</description>
+			<posx>274</posx>
+			<posy>90</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15010</label>
+			<align>center</align>
+			<font>font12</font>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+		</control>
+		<control type="button" id="3081">
+			<description>top orizz buttons</description>
+			<posx>360</posx>
+			<posy>90</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15016</label>
+			<align>center</align>
+			<font>font12</font>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+		</control>
+		<control type="button" id="3082">
+			<description>top orizz buttons</description>
+			<posx>446</posx>
+			<posy>90</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15021</label>
+			<align>center</align>
+			<font>font12</font>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+		</control>
+		<control type="button" id="3083">
+			<description>top orizz buttons</description>
+			<posx>532</posx>
+			<posy>90</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15026</label>
+			<align>center</align>
+			<font>font12</font>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+		</control>
+		<control type="listcontrolex" id="3031">
+			<description>arena list</description>
+			<posx>254</posx>
+			<posy>170</posy>
+			<width>390</width>
+			<height>310</height>
+			<onleft>3012</onleft>
+			<onright>3031</onright>
+			<onup>3031</onup>
+			<ondown>3031</ondown>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="console" id="3074">
+			<description>chat panel</description>
+			<posx>265</posx>
+			<posy>165</posy>
+			<width>340</width>
+			<height>330</height>
+			<font>font12</font>
+			<textcolor>common-text</textcolor>
+			<onleft>3074</onleft>
+			<onright>3074</onright>
+			<onup>3074</onup>
+			<ondown>3074</ondown>
+		</control>
+		<control type="image" id="3076">
+			<description>chat divider</description>
+			<posx>233</posx>
+			<posy>519</posy>
+			<width>415</width>
+			<height>8</height>
+			<texture>kai-divider.png</texture>
+		</control>
+		<control type="edit" id="3075">
+			<description>chat control</description>
+			<posx>245</posx>
+			<posy>522</posy>
+			<width>380</width>
+			<label>-</label>
+			<font>font12</font>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="button" id="3052">
+			<description>arena name</description>
+			<posx>274</posx>
+			<posy>123</posy>
+			<width>300</width>
+			<label>-</label>
+			<align>center</align>
+			<font>font12</font>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textcolor>grey-text</textcolor>
+		</control>
+		<control type="image">
+			<description>logo</description>
+			<posx>283</posx>
+			<posy>449</posy>
+			<width>68</width>
+			<height>68</height>
+			<texture>trans-panel.png</texture>
+		</control>
+		<control type="image" id="3060">
+			<description>buddy (offline) icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>58</width>
+			<height>58</height>
+			<texture>buddy-offline.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>aaffffff</colordiffuse>
+		</control>
+		<control type="image" id="3061">
+			<description>buddy (online) icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>58</width>
+			<height>58</height>
+			<texture>buddy-online.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+		</control>
+		<control type="image" id="3062">
+			<description>opponent icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>58</width>
+			<height>58</height>
+			<texture>opponent.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+		</control>
+		<control type="image" id="3063">
+			<description>arena icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>58</width>
+			<height>58</height>
+			<texture>arena.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+		</control>
+		<control type="fadelabel" id="3070">
+			<description>buddy name</description>
+			<posx>360</posx>
+			<posy>455</posy>
+			<width>250</width>
+			<label>-</label>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="fadelabel" id="3071">
+			<description>buddy status</description>
+			<posx>360</posx>
+			<posy>485</posy>
+			<width>250</width>
+			<label>-</label>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label" id="3072">
+			<description>buddy invitation status</description>
+			<posx>360</posx>
+			<posy>500</posy>
+			<width>50</width>
+			<label>-</label>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="label" id="3073">
+			<description>host label</description>
+			<posx>590</posx>
+			<posy>130</posy>
+			<label>-</label>
+			<textcolor>common-text</textcolor>
+		</control>
+		<control type="button" id="3012">
+			<description>mode button</description>
+			<posx>45</posx>
+			<posy>220</posy>
+			<onleft>12</onleft>
+			<onright>3031</onright>
+			<onup>3015</onup>
+			<ondown>3013</ondown>
+		</control>
+		<control type="button" id="3013">
+			<description>join (friends)</description>
+			<posx>45</posx>
+			<posy>257</posy>
+			<onleft>3013</onleft>
+			<onright>3031</onright>
+			<onup>3012</onup>
+			<ondown>3016</ondown>
+		</control>
+		<control type="button" id="3016">
+			<description>speex (friends)</description>
+			<posx>45</posx>
+			<posy>294</posy>
+			<onleft>3016</onleft>
+			<onright>3031</onright>
+			<onup>3013</onup>
+			<ondown>3014</ondown>
+		</control>
+		<control type="button" id="3014">
+			<description>invite (friends)</description>
+			<posx>45</posx>
+			<posy>331</posy>
+			<onleft>3014</onleft>
+			<onright>3031</onright>
+			<onup>3016</onup>
+			<ondown>3015</ondown>
+		</control>
+		<control type="button" id="3015">
+			<description>remove (friends)</description>
+			<posx>45</posx>
+			<posy>368</posy>
+			<onleft>3015</onleft>
+			<onright>3031</onright>
+			<onup>3014</onup>
+			<ondown>3012</ondown>
+		</control>
+		<control type="button" id="3036">
+			<description>keyboard (chat)</description>
+			<posx>45</posx>
+			<posy>257</posy>
+			<onleft>3036</onleft>
+			<onright>3036</onright>
+			<onup>3012</onup>
+			<ondown>3012</ondown>
+		</control>
+		<control type="button" id="3033">
+			<description>play (arenas)</description>
+			<posx>45</posx>
+			<posy>257</posy>
+			<onleft>3033</onleft>
+			<onright>3031</onright>
+			<onup>3012</onup>
+			<ondown>3035</ondown>
+		</control>
+		<control type="button" id="3035">
+			<description>host (arenas)</description>
+			<posx>45</posx>
+			<posy>294</posy>
+			<onleft>3035</onleft>
+			<onright>3031</onright>
+			<onup>3033</onup>
+			<ondown>3034</ondown>
+		</control>
+		<control type="button" id="3034">
+			<description>add (arenas)</description>
+			<posx>45</posx>
+			<posy>331</posy>
+			<onleft>3034</onleft>
+			<onright>3031</onright>
+			<onup>3035</onup>
+			<ondown>3012</ondown>
+		</control>
+	</controls>
+</window>   

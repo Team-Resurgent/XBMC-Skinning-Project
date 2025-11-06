@@ -1,0 +1,227 @@
+<!-- add new source dialog -->
+<window id="129">
+
+	<defaultcontrol>10</defaultcontrol>
+	
+	<controls>
+	
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+
+		<control type="group">
+		
+			<visible>!Window.IsActive(numericinput)</visible>	
+			<visible>!Window.IsActive(filebrowser)</visible>	
+			<posx>280</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>720</width>
+				<height>540</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label">
+				<label>Media Sources</label>
+				<width>680</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+
+			<control type="group">
+			
+				<posx>20</posx>
+				<posy>60</posy>
+				
+				<control type="image">
+					<texture border="4">dialog-back-nf.png</texture>
+					<width>500</width>
+					<height>300</height>
+				</control>
+				<!-- sources list -->
+				<control type="label">
+					<label>Enter the path or browse for media</label>
+					<width>680</width>
+					<height>40</height>
+					<posx>10</posx>
+					<font>dialog</font>
+					<textcolor>type-dialog</textcolor>
+				</control>
+				<control type="list" id="10">
+					<width>440</width>
+					<height>260</height>
+					<posx>10</posx>
+					<posy>40</posy>
+					<onup>19</onup>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<ondown>12</ondown>
+					<pagecontrol>60</pagecontrol>
+					<itemlayout height="43">
+						<control type="image">
+							<texture border="4">dialog-back-nf.png</texture>
+							<width>440</width>
+							<height>38</height>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<width>440</width>
+							<height>38</height>
+							<posx>10</posx>
+							<font>dialog</font>
+							<textcolor>type-dialog-dark</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="43">
+						<control type="image">
+							<visible>!Control.hasfocus(10)</visible>
+							<texture border="4">dialog-back-nf.png</texture>
+							<width>440</width>
+							<height>38</height>
+						</control>
+						<control type="image">
+							<visible>Control.hasfocus(10)</visible>
+							<texture border="4">dialog-back.png</texture>
+							<width>440</width>
+							<height>38</height>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<width>440</width>
+							<height>38</height>
+							<posx>10</posx>
+							<font>dialog</font>
+							<textcolor>type-dialog</textcolor>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="group">
+					<posx>460</posx>
+					<posy>40</posy>
+					<control type="image">
+						<texture>dialog-back-nf.png</texture>
+						<width>30</width>
+						<height>253</height>
+					</control>
+					<control type="scrollbar" id="60">
+						<width>30</width>
+						<height>253</height>
+						<onleft>10</onleft>
+						<onright>9000</onright>
+						<showonepage>false</showonepage>
+					</control>		
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>530</posx>
+				<posy>60</posy>
+				<control type="image">
+					<texture border="4">dialog-back-nf.png</texture>
+					<width>170</width>
+					<height>300</height>
+				</control>
+				<control type="grouplist" id="9000">
+				
+					<width>150</width>
+					<height>500</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<onup>19</onup>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<ondown>12</ondown>
+					<itemgap>5</itemgap>
+				
+					<!-- browse -->
+					<control type="button" id="11">
+						<label>Browse</label>
+					</control>
+					<!-- add path -->
+					<control type="button" id="13">
+						<label>Add</label>
+					</control>
+					<!-- remove path -->
+					<control type="button" id="14">
+						<label>Remove</label>
+					</control>
+				</control>
+			</control>
+			
+			<!-- name source -->
+			<control type="group">	
+					
+				<posx>20</posx>
+				<posy>370</posy>
+				
+				<control type="image">
+					<texture border="4">dialog-back-nf.png</texture>
+					<width>680</width>
+					<height>90</height>
+				</control>
+				<control type="label">
+					<label>Name</label>
+					<width>680</width>
+					<height>40</height>
+					<posx>10</posx>
+					<font>dialog</font>
+					<textcolor>type-dialog</textcolor>
+				</control>
+				<control type="button" id="12">
+					<width>660</width>
+					<height>40</height>
+					<posx>10</posx>
+					<posy>40</posy>
+					<textoffsetx>20</textoffsetx>
+					<textwidth>380</textwidth>
+					<texturefocus>dialog-back.png</texturefocus>
+					<texturenofocus>dialog-back-nf.png</texturenofocus>
+					<onup>10</onup>
+					<onleft>12</onleft>
+					<onright>12</onright>
+					<ondown>19</ondown>
+				</control>
+			</control>
+			
+			<control type="group">
+				
+				<posx>20</posx>
+				<posy>480</posy>
+				
+				<!-- set content button -->
+				<control type="button" id="20">
+					<label>Set Content</label>
+					<onup>12</onup>
+					<onleft>18</onleft>
+					<onright>19</onright>
+					<ondown>10</ondown>
+				</control>
+				<!-- cancel button -->
+				<control type="button" id="19">
+					<label>Cancel</label>
+					<posx>370</posx>
+					<onup>12</onup>
+					<onleft>20</onleft>
+					<onright>18</onright>
+					<ondown>10</ondown>
+				</control>`
+				<!-- ok button -->
+				<control type="button" id="18">
+					<label>Ok</label>
+					<posx>530</posx>
+					<onup>12</onup>
+					<onleft>19</onleft>
+					<onright>20</onright>
+					<ondown>10</ondown>
+				</control>
+			</control>
+		</control>
+	
+	</controls>
+	
+</window>

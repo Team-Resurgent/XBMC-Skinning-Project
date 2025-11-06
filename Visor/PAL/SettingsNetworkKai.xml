@@ -1,0 +1,138 @@
+<window>
+  <id>37</id>
+  <defaultcontrol>17</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>2</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>3</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>4</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>XLink Kai Settings</description>
+      <type>label</type>
+      <id>5</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>714</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>kai xtag</description>
+      <type>label</type>
+      <id>16</id>
+      <posX>208</posX>
+      <posY>154</posY>
+      <font>font13</font>
+      <label>709</label>
+    </control>
+
+    <control>
+      <description>kai xtag text</description>
+      <type>button</type>
+      <id>17</id>
+      <posX>430</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <width>200</width>
+      <height>35</height>
+      <textureFocus>button-focus.png</textureFocus>
+      <textureNoFocus>button-nofocus.jpg</textureNoFocus>
+      <label>-</label>
+      <font>font13</font>
+      <onleft>17</onleft>
+      <onright>17</onright>
+      <onup>50</onup>
+      <ondown>19</ondown>
+    </control>
+
+    <control>
+      <description>kai password</description>
+      <type>label</type>
+      <id>18</id>
+      <posX>208</posX>
+      <posY>204</posY>
+      <font>font13</font>
+      <label>710</label>
+    </control>
+
+    <control>
+      <description>kai password text</description>
+      <type>button</type>
+      <id>19</id>
+      <posX>430</posX>
+      <posY>200</posY>
+      <font>font13</font>
+      <width>200</width>
+      <height>35</height>
+      <textureFocus>button-focus.png</textureFocus>
+      <textureNoFocus>button-nofocus.jpg</textureNoFocus>
+      <label>-</label>
+      <font>font13</font>
+      <onleft>19</onleft>
+      <onright>19</onright>
+      <onup>17</onup>
+      <ondown>50</ondown>
+    </control>
+
+    <control>
+      <description>save</description>
+      <type>button</type>
+      <id>50</id>
+      <posX>208</posX>
+      <posY>375</posY>
+      <font>font13</font>
+      <width>250</width>
+      <height>35</height>
+      <textureFocus>button-focus.png</textureFocus>
+      <textureNoFocus>button-nofocus.jpg</textureNoFocus>
+      <label>732</label>
+      <font>font13</font>
+      <onleft>50</onleft>
+      <onright>50</onright>
+      <onup>19</onup>
+      <ondown>17</ondown>
+    </control>
+
+  </controls>
+
+</window>
+

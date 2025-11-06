@@ -1,0 +1,46 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	<include>Slide_From_Right_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>520</posx>
+		<posy>490</posy>
+		<origin x="520" y="440">Window.IsVisible(114)</origin>
+	</coordinates>
+	<controls>
+		<control type="image" id="0">
+			<description>popup volume dialog background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>202</width>
+			<height>64</height>
+			<texture>voulume-panel-bg.png</texture>
+		</control>
+		<control type="slider" id="1">
+			<description>volume slider</description>
+			<posx>95</posx>
+			<posy>18</posy>
+			<width>88</width>
+			<height>25</height>
+			<texturesliderbar>osd-osd_slider_volume_bg.png</texturesliderbar>
+			<textureslidernib>osd-osd_slider_nibfo.png</textureslidernib>
+			<textureslidernibfocus>osd-osd_slider_nibfo.png</textureslidernibfocus>
+			<info>Player.Volume</info>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+		<control type="label" id="0">
+			<description>volume label</description>
+			<posx>85</posx>
+			<posy>20</posy>
+			<font>font10</font>
+			<align>right</align>
+			<info>Player.Volume</info>
+			<width>70</width>
+			<height>16</height>
+			<textcolor>green2</textcolor>
+		</control>
+	</controls>
+</window>

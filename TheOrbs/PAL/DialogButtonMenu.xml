@@ -1,0 +1,140 @@
+﻿<window id="111" type="buttonmenu">
+	<defaultcontrol>3112</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>155</posx>
+		<posy>230</posy>
+	</coordinates>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>450</width>
+			<height>150</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="button" id="3110">
+			<description>dashboard button</description>
+			<posx>30</posx>
+			<posy>10</posy>
+			<width>61</width>
+			<height>61</height>
+			<texturefocus>sub-dashboard-focus.png</texturefocus>
+			<texturenofocus>sub-dashboard-nofocus.png</texturenofocus>
+			<onclick>xbmc.dashboard()</onclick>
+			<onleft>3115</onleft>
+			<onright>3111</onright>
+			<onup>3110</onup>
+			<ondown>3110</ondown>
+			<font>-</font>
+			<label>13006</label>
+		</control>
+		<control type="button" id="3111">
+			<description>reboot button</description>
+			<posx>90</posx>
+			<posy>10</posy>
+			<width>61</width>
+			<height>61</height>
+			<texturefocus>sub-reboot-focus.png</texturefocus>
+			<texturenofocus>sub-reboot-nofocus.png</texturenofocus>
+			<onclick>xbmc.reset()</onclick>
+			<onleft>3110</onleft>
+			<onright>3112</onright>
+			<onup>3115</onup>
+			<ondown>3115</ondown>
+			<font>-</font>
+			<label>13313</label>
+		</control>
+		<control type="button" id="3115">
+			<description>reboot xbmc button</description>
+			<posx>90</posx>
+			<posy>10</posy>
+			<width>61</width>
+			<height>61</height>
+			<texturefocus>sub-reboot-focus.png</texturefocus>
+			<texturenofocus>sub-reboot-nofocus.png</texturenofocus>
+			<onclick>XBMC.RestartApp()</onclick>
+			<onleft>3110</onleft>
+			<onright>3112</onright>
+			<onup>3111</onup>
+			<ondown>3111</ondown>
+			<font>-</font>
+			<label>$LOCALIZE[13313] XBMC</label>
+		</control>
+		<control type="button" id="3112">
+			<description>shutdown button</description>
+			<posx>150</posx>
+			<posy>10</posy>
+			<width>61</width>
+			<height>61</height>
+			<texturefocus>sub-shutdown-focus.png</texturefocus>
+			<texturenofocus>sub-shutdown-nofocus.png</texturenofocus>
+			<onclick>xbmc.shutdown()</onclick>
+			<onleft>3111</onleft>
+			<onright>3113</onright>
+			<onup>3112</onup>
+			<ondown>3112</ondown>
+			<font>-</font>
+			<label>13005</label>
+		</control>
+		<control type="button" id="3113">
+			<description>system info button</description>
+			<posx>210</posx>
+			<posy>10</posy>
+			<width>61</width>
+			<height>61</height>
+			<texturefocus>sub-info-focus.png</texturefocus>
+			<texturenofocus>sub-info-nofocus.png</texturenofocus>
+			<onclick>ActivateWindow(7)</onclick>
+			<onleft>3112</onleft>
+			<onright>3114</onright>
+			<onup>3113</onup>
+			<ondown>3113</ondown>
+			<font>-</font>
+			<label>130</label>
+		</control>
+		<control type="button" id="3114">
+			<description>profiles button</description>
+			<posx>270</posx>
+			<posy>10</posy>
+			<width>61</width>
+			<height>61</height>
+			<texturefocus>sub-profiles-focus.png</texturefocus>
+			<texturenofocus>sub-profiles-nofocus.png</texturenofocus>
+			<onclick>ActivateWindow(34)</onclick>
+			<onleft>3113</onleft>
+			<onright>3115</onright>
+			<onup>3114</onup>
+			<ondown>3114</ondown>
+			<font>-</font>
+			<label>13200</label>
+		</control>
+		<control type="button" id="3115">
+			<description>help button</description>
+			<posx>330</posx>
+			<posy>10</posy>
+			<width>61</width>
+			<height>61</height>
+			<texturefocus>sub-help-focus.png</texturefocus>
+			<texturenofocus>sub-help-nofocus.png</texturenofocus>
+			<onclick>xbmc.credits()</onclick>
+			<onleft>3114</onleft>
+			<onright>3110</onright>
+			<onup>3115</onup>
+			<ondown>3115</ondown>
+			<font>-</font>
+			<label>About XBMC</label>
+		</control>
+		<control type="label" id="3100">
+			<description>label control</description>
+			<posx>49</posx>
+			<posy>73</posy>
+			<width>322</width>
+			<height>20</height>
+			<align>center</align>
+			<font>font13</font>
+		</control>
+	</controls>
+</window>

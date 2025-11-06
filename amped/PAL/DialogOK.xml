@@ -1,0 +1,86 @@
+<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>200</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>-300</posx>
+			<posy>-300</posy>
+			<width>1320</width>
+			<height>1176</height>
+			<texture>black.png</texture>
+		</control>
+		<control type="image">
+			<description>Dialog Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>520</width>
+			<height>180</height>
+			<texture border="0,35,0,10">Dialog.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Title Label</description>
+			<posx>60</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<align>center</align>
+			<font>font22</font>
+      <include>textcolor-white</include>
+		</control>
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<posx>60</posx>
+			<posy>40</posy>
+			<width>400</width>
+			<align>center</align>
+			<label>0</label>
+			<font>font16</font>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posx>60</posx>
+			<posy>65</posy>
+			<width>400</width>
+			<align>center</align>
+			<label>0</label>
+			<font>font16</font>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posx>60</posx>
+			<posy>90</posy>
+			<width>400</width>
+			<align>center</align>
+			<label>0</label>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+			<font>font16</font>
+		</control>
+		<control type="button" id="10">
+			<description>Ok Button</description>
+			<posx>195</posx>
+			<posy>140</posy>
+			<height>25</height>
+			<width>130</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>186</label>
+      <include>textcolor-dialog</include>
+      <include>textcolor-selected</include>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			<onup>11</onup>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<ondown>11</ondown>
+		</control>
+	</controls>
+</window>

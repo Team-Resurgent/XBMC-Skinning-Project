@@ -1,0 +1,31 @@
+<includes>
+  
+<include file="Defaults.xml" />
+<include file="CommonViews.xml" />
+
+<include name="DialogBack">
+	<control type="image">
+		<width>520</width>
+		<height>424</height>
+		<texture>White.png</texture>
+    <aspectratio>stretch</aspectratio>
+	</control>
+</include>
+
+<include name="DialogID">
+	<posx>10</posx>
+	<posy>10</posy>
+	<font>Small</font>
+	<textcolor>Red</textcolor>
+	<align>left</align>
+</include>
+
+<include name="WindowID">
+	<posx>10</posx>
+	<posy>10</posy>
+	<font>Small</font>
+	<textcolor>Red</textcolor>
+	<align>left</align>
+</include>
+  
+</includes>

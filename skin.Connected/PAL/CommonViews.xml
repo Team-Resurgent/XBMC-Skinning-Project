@@ -1,0 +1,1448 @@
+<includes>
+  	
+	<include name="List">
+		<control type="list" id="51">
+			<posx>40</posx>
+			<posy>20</posy>
+			<width>330</width>
+			<height>485</height>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="$LOCALIZE[535]">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+      <include>MediaViewAnimation</include>
+			<itemlayout height="35" width="330">
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>IsEmpty(listitem.title) + !Window.IsVisible(MyGameSaves.xml)</visible>
+        </control>
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>Window.IsVisible(MyGameSaves.xml)</visible>
+        </control>
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.Title</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>!Window.IsVisible(MyGameSaves.xml)</visible>
+        </control>
+        <control type="label">
+          <posx>320</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.Label2</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>!Window.IsVisible(MyGameSaves.xml)</visible>
+        </control>
+			</itemlayout>
+			<focusedlayout height="35" width="330">
+				<control type="image">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>330</width>
+					<height>35</height>
+					<texture>ButtonBack.png</texture>
+					<aspectratio aligny="left">keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+          <width>310</width>
+					<height>35</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>20BdFont</font>
+					<textcolor>FocusedTextColor</textcolor>
+					<selectedcolor>FocusedTextColor</selectedcolor>
+					<info>listitem.label</info>
+          <visible>IsEmpty(listitem.title) + !Window.IsVisible(MyGameSaves.xml)</visible>
+				</control>
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <info>listitem.label</info>
+          <visible>Window.IsVisible(MyGameSaves.xml)</visible>
+        </control>
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <info>listitem.Title</info>
+          <visible>!Window.IsVisible(MyGameSaves.xml)</visible>
+        </control>
+        <control type="label">
+          <posx>320</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <info>listitem.Label2</info>
+          <scroll>false</scroll>
+          <visible>!Window.IsVisible(MyGameSaves.xml)</visible>
+        </control>
+			</focusedlayout>
+		</control>
+		
+    <control type="group">
+      <include>MediaViewAnimation</include>
+      <visible>Control.IsVisible(51)</visible>
+      <animation type="WindowOpen" reversible="false">
+        <effect type="slide" tween="quadratic" start="500" time="400"/>
+      </animation>
+      <animation type="WindowClose" reversible="false">
+        <effect type="fade" end="0" time="300"/>
+      </animation>
+		  <control type="image">
+			  <posx>380</posx>
+			  <posy>50</posy>
+			  <width>300</width>
+			  <height>300</height>
+			  <info>ListItem.Icon</info>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>!IsEmpty(ListItem.Thumb)</visible>
+		  </control>
+      <control type="image">
+        <posx>380</posx>
+        <posy>350</posy>
+        <width>300</width>
+        <height>300</height>
+        <info>ListItem.Icon</info>
+        <aspectratio align="center" aligny="top">keep</aspectratio>
+        <texture flipy="true" diffuse="DiffuseMirror.png">$INFO[ListItem.Icon]</texture>
+        <visible>!IsEmpty(ListItem.Thumb)</visible>
+      </control>     
+      <control type="image">
+        <description>Videos</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomeVideos.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>[Window.IsVisible(24) | Window.IsVisible(25) | Window.IsVisible(28)] + IsEmpty(ListItem.Thumb)</visible>
+      </control>
+      <control type="image">
+        <description>Music</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomeMusic.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>[Window.IsVisible(500) | Window.IsVisible(501) | Window.IsVisible(502)] + IsEmpty(ListItem.Thumb)</visible>
+      </control>
+      <control type="image">
+        <description>Photos</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomePhotos.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>Window.IsVisible(2) + IsEmpty(ListItem.Thumb)</visible>
+      </control>
+      <control type="image">
+        <description>Scripts</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomeScripts.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>Window.IsVisible(20) + IsEmpty(ListItem.Thumb)</visible>
+      </control>
+      <control type="image">
+        <description>Services</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomeServices.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>Window.IsVisible(1) + IsEmpty(ListItem.Thumb)</visible>
+      </control>
+    </control>
+
+    <include>CommonVerticalScrollBar</include>
+    <include>CommonHorizontalScrollBar</include>
+    <include>CommonSortLetters</include>
+	</include>
+
+	<include name="BigList">
+		<control type="list" id="52">
+			<posx>40</posx>
+			<posy>50</posy>
+			<width>650</width>
+			<height>450</height>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<viewtype label="$LOCALIZE[537]">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+      <include>MediaViewAnimation</include>
+			<itemlayout height="90" width="660">
+        <control type="image">
+          <posx>24</posx>
+          <posy>5</posy>
+          <width>80</width>
+          <height>80</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="center">keep</aspectratio>
+          <colordiffuse>IconDiffuseColor</colordiffuse>
+        </control>
+        <control type="label">
+          <posx>110</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <label>$INFO[listitem.label]</label>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>IsEmpty(listitem.title)</visible>
+        </control>
+        <control type="label">
+          <posx>110</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <label>$INFO[listitem.title] $INFO[ListItem.Year]</label>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>!IsEmpty(listitem.title)</visible>
+        </control>
+
+        <control type="group">
+          <visible>Window.IsVisible(videofiles) | Window.IsVisible(musicfiles)</visible>
+          <control type="label">
+            <description>Date Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[570]: $INFO[ListItem.Date]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Date)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21802]: $INFO[ListItem.Size]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(pictures)</visible>
+          <control type="label">
+            <description>Resolution Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21805]: $INFO[ListItem.PictureResolution]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.PictureResolution)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(programs) | Window.IsVisible(scripts) | Window.IsVisible(videoplaylist) | Window.IsVisible(musicplaylist)</visible>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.Size]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Label 2</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>ListItem.Label2</info>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(movies)</visible>
+          <control type="label">
+            <description>Rating Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[563]: $INFO[ListItem.Rating]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Rating)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Duration Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(seasons)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.Episode]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(episodes)</visible>
+          <control type="label">
+            <description>Season Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20373]: $INFO[ListItem.Season]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Season)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Episode Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20359]: $INFO[ListItem.Episode]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode) + Skin.HasSetting(MediaFlags)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(albums) | container.content(musicvideos)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(songs)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Album Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[558]: $INFO[ListItem.Album]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Album)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(artists)</visible>
+          <control type="label">
+            <description>Style Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[176]: $INFO[ListItem.Property(style)]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Property(style))</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(tvshows)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.episode]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.episode)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>   
+        <control type="group">
+          <visible>Window.IsVisible(MyGameSaves.xml)</visible>
+          <control type="label">
+            <description>Title Name</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Title]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Title)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+			</itemlayout>
+			<focusedlayout height="90" width="660">
+        <control type="image">
+          <posx>24</posx>
+          <posy>5</posy>
+          <width>80</width>
+          <height>80</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="center">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>110</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <label>$INFO[listitem.label]</label>
+          <scroll>false</scroll>
+          <visible>IsEmpty(listitem.title)</visible>
+        </control>
+        <control type="label">
+          <posx>110</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <scroll>true</scroll>
+          <label>$INFO[listitem.title] $INFO[ListItem.Year]</label>
+          <visible>!IsEmpty(listitem.title)</visible>
+        </control>
+        
+        <control type="group">
+          <visible>Window.IsVisible(videofiles) | Window.IsVisible(musicfiles)</visible>
+          <control type="label">
+            <description>Date Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[570]: $INFO[ListItem.Date]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Date)</visible>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21802]: $INFO[ListItem.Size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(pictures)</visible>
+          <control type="label">
+            <description>Resolution Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21805]: $INFO[ListItem.PictureResolution]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.PictureResolution)</visible>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(programs) | Window.IsVisible(scripts) | Window.IsVisible(videoplaylist) | Window.IsVisible(musicplaylist)</visible>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.size)</visible>
+          </control>
+          <control type="label">
+            <description>Label 2 Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>ListItem.Label2</info>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(movies)</visible>
+          <control type="label">
+            <description>Rating Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[563]: $INFO[ListItem.Rating]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Rating)</visible>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(seasons)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.Episode]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(episodes)</visible>
+          <control type="label">
+            <description>Season Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20373]: $INFO[ListItem.Season]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Season)</visible>
+          </control>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20359]: $INFO[ListItem.Episode]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode) + Skin.HasSetting(MediaFlags)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(albums) | container.content(musicvideos)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(songs)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+          </control>
+          <control type="label">
+            <description>Album Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[558]: $INFO[ListItem.Album]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Album)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(artists)</visible>
+          <control type="label">
+            <description>Style Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[176]: $INFO[ListItem.Property(style)]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Property(style))</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(tvshows)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.episode]</label>
+            <scroll>true</scroll>
+            <scrollout>false</scrollout>
+            <pauseatend>2000</pauseatend>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.episode)</visible>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>110</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.genre]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(MyGameSaves.xml)</visible>
+          <control type="label">
+            <description>Title Name</description>
+            <posx>110</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Title]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Title)</visible>
+          </control>
+        </control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<include name="Icons">
+		<control type="panel" id="53">
+			<posx>45</posx>
+			<posy>55</posy>
+			<width>720</width>
+			<height>480</height>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="$LOCALIZE[536]">icon</viewtype>
+			<orientation>vertical</orientation>
+			<pagecontrol>60</pagecontrol>
+      <include>MediaViewAnimation</include>
+			<itemlayout width="220" height="160">        
+        <control type="image">
+          <posx>5</posx>
+          <posy>0</posy>
+          <width>196</width>
+          <height>130</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="bottom">keep</aspectratio>
+          <colordiffuse>IconDiffuseColor</colordiffuse>
+        </control>       
+        <control type="image">
+          <posx>0</posx>
+          <posy>116</posy>
+          <width>210</width>
+          <height>30</height>
+          <texture>ButtonBack2.png</texture>
+          <colordiffuse>ShadowTextColor</colordiffuse>
+          <aspectratio align="center" aligny="top">stretch</aspectratio>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <visible>IsEmpty(ListItem.Title)</visible>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.title</info>
+          <scroll>false</scroll>
+          <visible>!IsEmpty(ListItem.Title)</visible>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <visible>Window.IsVisible(gamesaves)</visible>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.Title</info>
+          <scroll>false</scroll>
+          <visible>!Window.IsVisible(gamesaves)</visible>
+        </control>
+			</itemlayout>
+			<focusedlayout width="220" height="160">        
+        <control type="image">
+          <posx>5</posx>
+          <posy>0</posy>
+          <width>196</width>
+          <height>130</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="bottom">keep</aspectratio>
+          <animation effect="zoom" end="-2,-8,210,144" time="0">Focus</animation>
+          <animation effect="zoom" start="-2,-8,210,144" end="5,0,196,130" time="100">UnFocus</animation>
+        </control>
+        <control type="image">
+          <posx>0</posx>
+          <posy>116</posy>
+          <width>210</width>
+          <height>30</height>
+          <texture>ButtonBack2.png</texture>
+          <aspectratio align="center" aligny="top">stretch</aspectratio>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>DisabledTextColor</textcolor>
+          <selectedcolor>DisabledTextColor</selectedcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <visible>IsEmpty(ListItem.Title)</visible>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>DisabledTextColor</textcolor>
+          <selectedcolor>DisabledTextColor</selectedcolor>
+          <info>listitem.title</info>
+          <scroll>false</scroll>
+          <visible>!IsEmpty(ListItem.Title)</visible>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>DisabledTextColor</textcolor>
+          <selectedcolor>DisabledTextColor</selectedcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <visible>Window.IsVisible(gamesaves)</visible>
+        </control>
+        <control type="label">
+          <posx>104</posx>
+          <posy>120</posy>
+          <width>194</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>DisabledTextColor</textcolor>
+          <selectedcolor>DisabledTextColor</selectedcolor>
+          <info>listitem.Title</info>
+          <scroll>false</scroll>
+          <visible>!Window.IsVisible(gamesaves)</visible>
+        </control>
+			</focusedlayout>
+		</control>
+	</include>
+
+  <include name="Fanart">
+    <control type="wraplist" id="54">
+      <description>General Fanart Views</description>
+      <posx>-75</posx>
+      <posy>378</posy>
+      <width>800</width>
+      <height>130</height>
+      <onleft>55</onleft>
+      <onright>55</onright>
+      <onup>9000</onup>
+      <ondown>60</ondown>
+      <viewtype label="$LOCALIZE[31022]">wraplist</viewtype>
+      <scrolltime>200</scrolltime>
+      <pagecontrol>60</pagecontrol>
+      <focusposition>3</focusposition>
+      <orientation>horizontal</orientation>
+      <include>MediaViewAnimation</include>
+      <itemlayout height="125" width="125">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>120</width>
+          <height>120</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="center">keep</aspectratio>
+          <colordiffuse>IconDiffuseColor</colordiffuse>
+        </control>
+      </itemlayout>
+      <focusedlayout height="125" width="125">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>120</width>
+          <height>120</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="center">keep</aspectratio>
+          <animation effect="zoom" end="-10,-10,140,140" time="800" reversible="false">Focus</animation>
+        </control>
+      </focusedlayout>
+    </control>
+  </include>
+
+  <include name="CommonVerticalScrollBar">
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>5</posx>
+      <posy>30</posy>
+      <height>480</height>
+      <onleft>51</onleft>
+      <onright>51</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>[Control.HasFocus(60)] + [Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53)]]</visible>
+      <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(60)">Conditional</animation>
+      <animation effect="fade" time="100" start="0" end="100">WindowOpen</animation>
+      <animation effect="fade" time="100" start="100" end="0">WindowClose</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>5</posx>
+      <posy>30</posy>
+      <height>480</height>
+      <onleft>51</onleft>
+      <onright>51</onright>
+      <onup>60</onup>
+      <ondown>60</ondown>
+      <visible>[!Control.HasFocus(60)] + [Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53)]]</visible>
+      <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(60)">Conditional</animation>
+      <animation effect="fade" time="100" start="0" end="100">WindowOpen</animation>
+      <animation effect="fade" time="100" start="100" end="0">WindowClose</animation>
+    </control>
+  </include>
+
+  <include name="CommonHorizontalScrollBar">
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>120</posx>
+      <posy>505</posy>
+      <width>480</width>
+      <height>32</height>
+      <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
+      <textureslidernib>ScrollBarNibH.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNibH.png</textureslidernibfocus>
+      <orientation>horizontal</orientation>
+      <onleft>60</onleft>
+      <onright>60</onright>
+      <onup>51</onup>
+      <ondown>51</ondown>
+      <visible>Control.HasFocus(60) + Control.IsVisible(54)</visible>
+      <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(60)">Conditional</animation>
+      <animation effect="fade" time="100" start="0" end="100">WindowOpen</animation>
+      <animation effect="fade" time="100" start="100" end="0">WindowClose</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>120</posx>
+      <posy>505</posy>
+      <width>480</width>
+      <height>32</height>
+      <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
+      <textureslidernib>ScrollBarNibH.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNibH.png</textureslidernibfocus>
+      <orientation>horizontal</orientation>
+      <onleft>60</onleft>
+      <onright>60</onright>
+      <onup>51</onup>
+      <ondown>51</ondown>
+      <visible>!Control.HasFocus(60) + Control.IsVisible(54)</visible>
+      <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(60)">Conditional</animation>
+      <animation effect="fade" time="100" start="0" end="100">WindowOpen</animation>
+      <animation effect="fade" time="100" start="100" end="0">WindowClose</animation>
+    </control>
+  </include>
+
+  <include name="CommonSortLetters">
+    <control type="group">
+      <include>SortLetterFade</include>
+      <visible>Container.Scrolling</visible>
+      <control type="image">
+        <posx>310</posx>
+        <posy>238</posy>
+        <width>100</width>
+        <height>100</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+      <control type="label">
+        <posx>310</posx>
+        <posy>238</posy>
+        <width>100</width>
+        <height>95</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.SortLetter]</label>
+        <font>28BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <selectedcolor>FocusedTextColor</selectedcolor>
+      </control>
+    </control>
+  </include>
+
+  <include name="SubmenuList">
+    <control type="list" id="2000">
+      <posx>40</posx>
+      <posy>20</posy>
+      <width>330</width>
+      <height>485</height>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2000</onup>
+      <ondown>2000</ondown>
+      <viewtype label="$LOCALIZE[535]">list</viewtype>
+      <scrolltime>200</scrolltime>
+      <pagecontrol>60</pagecontrol>
+      <include>MediaViewAnimation</include>
+      <itemlayout height="35" width="330">
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+      </itemlayout>
+      <focusedlayout height="35" width="330">
+        <control type="image">
+          <posx>0</posx>
+          <posy>3</posy>
+          <width>330</width>
+          <height>35</height>
+          <texture>ButtonBack.png</texture>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>310</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <info>listitem.label</info>
+        </control>
+      </focusedlayout>
+      <content>
+        <!-- Video Submenu -->
+          <item id="1">
+            <description>Movies</description>
+            <label>$LOCALIZE[342]</label>
+            <onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+            <visible>Window.IsVisible(53)</visible>
+          </item>
+          <item id="2">
+            <description>TV Shows</description>
+            <label>$LOCALIZE[20343]</label>
+            <onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+            <visible>Window.IsVisible(53)</visible>
+          </item>
+          <item id="3">
+            <description>Music Viedeos</description>
+            <label>$LOCALIZE[20389]</label>
+            <onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+            <visible>Window.IsVisible(53)</visible>
+          </item>
+          <item id="4">
+            <description>Video Files</description>
+            <label>$LOCALIZE[744]</label>
+            <onclick>ActivateWindow(VideoFiles)</onclick>
+            <visible>Window.IsVisible(53)</visible>
+          </item>
+          <item id="5">
+            <description>Library</description>
+            <label>$LOCALIZE[14022]</label>
+            <onclick>ActivateWindow(VideoLibrary)</onclick>
+            <visible>Window.IsVisible(53)</visible>
+          </item>
+          <item id="6">
+            <description>Plugins</description>
+            <label>$LOCALIZE[31044]</label>
+            <onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+            <visible>Window.IsVisible(53)</visible>
+          </item>
+
+        <!-- Music Submenu -->
+          <item id="1">
+            <description>Artists</description>
+            <label>$LOCALIZE[133]</label>
+            <onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+            <visible>Window.IsVisible(54)</visible>
+          </item>
+          <item id="2">
+            <description>Albums</description>
+            <label>$LOCALIZE[132]</label>
+            <onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+            <visible>Window.IsVisible(54)</visible>
+          </item>
+          <item id="3">
+            <description>Songs</description>
+            <label>$LOCALIZE[134]</label>
+            <onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+            <visible>Window.IsVisible(54)</visible>
+          </item>
+          <item id="4">
+            <description>Music Files</description>
+            <label>$LOCALIZE[744]</label>
+            <onclick>ActivateWindow(MusicFiles)</onclick>
+            <visible>Window.IsVisible(54)</visible>
+          </item>
+          <item id="5">
+            <description>Library</description>
+            <label>$LOCALIZE[14022]</label>
+            <onclick>ActivateWindow(MusicLibrary)</onclick>
+            <visible>Window.IsVisible(54)</visible>
+          </item>
+          <item id="6">
+            <description>Plugins</description>
+            <label>$LOCALIZE[31044]</label>
+            <onclick>ActivateWindow(MusicLibrary,Plugins)</onclick>
+            <visible>Window.IsVisible(54)</visible>
+          </item>
+
+        <!-- Services Submenu -->
+          <item id="1">
+            <description>Games</description>
+            <label>$LOCALIZE[15016]</label>
+            <onclick>XBMC.ActivateWindow(MyPrograms,Games)</onclick>
+            <visible>Window.IsVisible(55)</visible>
+          </item>
+          <item id="2">
+            <description>Emulators</description>
+            <label>$LOCALIZE[31013]</label>
+            <onclick>XBMC.ActivateWindow(MyPrograms,Emulators)</onclick>
+            <visible>Window.IsVisible(55)</visible>
+          </item>
+          <item id="3">
+            <description>Programs</description>
+            <label>$LOCALIZE[0]</label>
+            <onclick>XBMC.ActivateWindow(MyPrograms,Programs)</onclick>
+            <visible>Window.IsVisible(55)</visible>
+          </item>
+          <item id="4">
+            <description>Game Saves</description>
+            <label>$LOCALIZE[20315]</label>
+            <onclick>XBMC.ActivateWindow(gamesaves)</onclick>
+            <visible>Window.IsVisible(55) + system.platform.xbox</visible>
+          </item>
+          <item id="5">
+            <description>Files</description>
+            <label>$LOCALIZE[744]</label>
+            <onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+            <visible>Window.IsVisible(55)</visible>
+          </item>
+          <item id="6">
+            <description>Plugins</description>
+            <label>$LOCALIZE[31044]</label>
+            <onclick>XBMC.ActivateWindow(MyPrograms,Program plugins)</onclick>
+            <visible>Window.IsVisible(55)</visible>
+          </item>
+      </content>
+    </control>
+
+    <control type="group">
+      <include>MediaViewAnimation</include>
+      <visible>Control.IsVisible(2000)</visible>
+      <control type="image">
+        <description>Videos</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomeVideos.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>Window.IsVisible(53)</visible>
+      </control>
+      <control type="image">
+        <description>Music</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomeMusic.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>Window.IsVisible(54)</visible>
+      </control>
+      <control type="image">
+        <description>Services</description>
+        <posx>380</posx>
+        <posy>50</posy>
+        <width>300</width>
+        <height>300</height>
+        <texture>HomeServices.png</texture>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <visible>Window.IsVisible(55)</visible>
+      </control>
+    </control>
+  </include>
+</includes>

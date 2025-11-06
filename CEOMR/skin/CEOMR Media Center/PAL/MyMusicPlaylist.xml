@@ -1,0 +1,417 @@
+<window id="500">
+
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <visible>!musicpartymode.enabled</visible>
+      <include>xbmcinfo</include>
+      <posx>588</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>default_Audio.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <visible>musicpartymode.enabled</visible>
+      <include>xbmcinfo</include>
+      <posx>528</posx>
+      <posy>33</posy>
+      <height>70</height>
+      <width>150</width>
+      <texture>party.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="12">
+      <description>number of files text label</description>
+      <include>logo</include>
+      <posx>210</posx>
+      <posy>525</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="14">
+      <description>playlist text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>136</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+<control type="group" id="9000">
+    
+    <control type="button" id="9053">
+      <description>help button</description>
+      <include>logo</include>
+
+	<visible>Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)</visible>
+
+      <posx>212</posx>
+      <posy>82</posy>
+      <width>30</width>
+      <height>30</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(1053)</onclick>
+      <texturefocus>help-focus.png</texturefocus>
+      <texturenofocus>help-nofocus.png</texturenofocus>
+      <onleft>2</onleft>
+      <onright>50</onright>
+      <onup>920</onup>
+      <ondown>2</ondown>
+      <align>center</align>
+    </control>
+    
+      <control type="button" id="2">
+        <description>View As Icons button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>120</posy>
+        <label>100</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>9053</onup>
+        <ondown>20</ondown>
+      </control>
+
+      <control type="radiobutton" id="20">
+        <description>Shuffle button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>157</posy>
+        <label>191</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>2</onup>
+        <ondown>26</ondown>
+      </control>
+
+      <control type="button" id="26">
+        <description>Repeat button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>194</posy>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>20</onup>
+        <ondown>27</ondown>
+      </control>
+
+      <control type="radiobutton" id="27">
+        <description>Repeat one button</description>
+      <include>button</include>
+	<visible>false</visible>
+        <posx>60</posx>
+        <posy>231</posy>
+        <label>487</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>26</onup>
+        <ondown>21</ondown>
+      </control>
+
+      <control type="button" id="21">
+        <description>Save button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>268</posy>
+        <label>190</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>27</onup>
+        <ondown>22</ondown>
+      </control>
+
+      <control type="button" id="22">
+        <description>Clear button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>305</posy>
+        <label>192</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>21</onup>
+        <ondown>917</ondown>
+      </control>
+
+      	<control type="button" id="917">
+		<description>Lyrics</description>
+		<visible>Player.HasMedia+!Skin.HasTheme(Hilfe)</visible>
+      <include>button</include>
+		<posx>60</posx>
+		<posy>342</posy>
+      		<onclick>XBMC.RunScript(q:\skin\CEOMR Media Center\scripts\launcher.py,XBMC Lyrics)</onclick>
+		<label>Lyrics</label>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>22</onup>
+		<ondown>918</ondown>
+	</control>
+
+      	<control type="button" id="918">
+		<description>Liedtexte</description>
+		<visible>Player.HasMedia+Skin.HasTheme(Hilfe)</visible>
+      <include>button</include>
+		<posx>60</posx>
+		<posy>342</posy>
+		<onclick>XBMC.RunScript(q:\skin\CEOMR Media Center\scripts\launcher.py,XBMC Lyrics)</onclick>
+		<label>Liedtexte</label>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>917</onup>
+		<ondown>919</ondown>
+	</control>
+
+      	<control type="button" id="919">
+		<description>musicpartymode info</description>
+		<visible>musicpartymode.enabled</visible>
+      <include>button</include>
+		<posx>60</posx>
+		<posy>379</posy>
+		<onclick>Skin.ToggleSetting(musicpartymode)</onclick>
+		<label>Info</label>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>918</onup>
+		<ondown>920</ondown>
+	</control>
+
+      	<control type="button" id="920">
+		<description>startup playlist</description>
+      <include>button</include>
+		<posx>60</posx>
+		<posy>416</posy>
+		<onclick>XBMC.ActivateWindow(1059)</onclick>
+        	<include>19000</include>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>919</onup>
+		<ondown>9053</ondown>
+	</control>
+
+</control>
+
+		<include>OldListViewCommons</include>
+		<include>MusicViewCommons</include>
+		<include>3D_Cover_View</include>
+		<include>AllViewCommonThumbSmall</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>MusicCoverThumbView</include>
+		<include>MusicCoverWrapView</include>
+		<include>AllViewCommonPageControls</include>
+
+     <control type="image" id="1">
+      <description>musicpartymode</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+        <posx>250</posx>
+        <posy>20</posy>
+      <width>200</width>
+      <height>100</height>
+      <texture>party_mode.png</texture>
+    </control>
+
+     <control type="label" id="1">
+      <description>musicpartymode</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+      <posx>265</posx>
+      <posy>28</posy>
+      <label>589</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font10</font>
+    </control>
+
+     <control type="label" id="1">
+      <description>musicpartymode.songsplayed</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+      <posx>290</posx>
+      <posy>60</posy>
+      <label>-</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>musicpartymode.songsplayed</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>musicpartymode.songsplayed</description>
+      <include>control</include>
+      <posx>265</posx>
+      <posy>56</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>party_songsplayed.png</texture>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+    </control>
+
+     <control type="label" id="1">
+      <description>musicpartymode.randomsongspicked</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+      <posx>290</posx>
+      <posy>87</posy>
+      <label>-</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>musicpartymode.randomsongspicked</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>musicpartymode.randomsongspicked</description>
+      <type>image</type>
+      <include>control</include>
+      <posx>265</posx>
+      <posy>85</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>party_randoms.png</texture>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+    </control>
+
+     <control type="label" id="1">
+      <description>musicpartymode.matchingsongs</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+      <posx>350</posx>
+      <posy>60</posy>
+      <label>-</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>musicpartymode.matchingsongs</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>musicpartymode.matchingsongs</description>
+      <type>image</type>
+      <include>control</include>
+      <posx>325</posx>
+      <posy>56</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>party_matchingsongs.png</texture>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+    </control>
+
+     <control type="label" id="1">
+      <description>musicpartymode.matchingsongsleft</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+      <posx>350</posx>
+      <posy>87</posy>
+      <label>-</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>musicpartymode.matchingsongsleft</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>musicpartymode.matchingsongsleft</description>
+      <type>image</type>
+      <include>control</include>
+      <posx>325</posx>
+      <posy>85</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>party_matchingsongsleft.png</texture>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+    </control>
+
+     <control type="label" id="1">
+      <description>musicpartymode.relaxedsongspicked</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+      <posx>420</posx>
+      <posy>60</posy>
+      <label>-</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>musicpartymode.relaxedsongspicked</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>musicpartymode.relaxedsongspicked</description>
+      <type>image</type>
+      <include>control</include>
+      <posx>395</posx>
+      <posy>56</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>party_matchingsongspicked.png</texture>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+    </control>
+
+     <control type="label" id="1">
+      <description>musicpartymode.matchingsongspicked</description>
+      <include>control</include>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+      <posx>420</posx>
+      <posy>87</posy>
+      <label>-</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>musicpartymode.matchingsongspicked</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>musicpartymode.matchingsongspicked</description>
+      <type>image</type>
+      <include>control</include>
+      <posx>395</posx>
+      <posy>85</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>party_matchingsongspicked.png</texture>
+      <visible>musicpartymode.enabled+Skin.HasSetting(musicpartymode)</visible>
+    </control>
+
+  </controls>
+
+</window>

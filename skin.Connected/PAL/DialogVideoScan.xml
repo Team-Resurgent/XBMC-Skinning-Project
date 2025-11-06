@@ -1,0 +1,57 @@
+<window id="133">
+<defaultcontrol>402</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+  
+<controls>
+
+  <control type="group">
+    <posx>420</posx>
+    <posy>15</posy>
+    <include>SlideFromRight</include>
+    <visible>!Window.IsActive(2006) + !VideoPlayer.IsFullscreen</visible>
+    <include>MediaScanBack</include>
+    <control type="label" id="401">
+      <description>Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>260</width>
+      <height>20</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>14BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    <control type="label" id="402">
+      <description>Current Directory Label</description>
+      <posx>10</posx>
+      <posy>15</posy>
+      <width>260</width>
+      <height>20</height>
+      <align>left</align>
+      <label></label>
+      <scroll>true</scroll>
+      <font>14BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <haspath>yes</haspath>
+    </control>
+    <control type="progress" id="403">
+      <description>progress control</description>
+      <posx>10</posx>
+      <posy>35</posy>
+      <width>260</width>
+      <height>6</height>
+      <texturebg border="1">ProgressBackSmall.png</texturebg>
+    </control>
+    <control type="progress" id="404">
+      <description>progress control</description>
+      <posx>10</posx>
+      <posy>45</posy>
+      <width>260</width>
+      <height>6</height>
+      <texturebg border="1">ProgressBackSmall.png</texturebg>
+    </control>
+	</control>
+
+</controls>
+</window>

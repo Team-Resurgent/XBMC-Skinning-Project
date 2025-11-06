@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+<!-- Start Home Labels -->
+	<string id="31001">Musik</string>
+	<string id="31002">Program</string>
+	<string id="31003">Video</string>
+	<string id="31004">Bilder</string>
+	<string id="31005">Inställningar</string>
+<!-- End Home Labels -->
+
+<!-- Start Music Labels -->
+	<string id="31006">All Musik</string>
+	<string id="31007">Betyg</string>
+<!-- End Music Labels -->
+
+<!-- Start Shutdown Labels -->
+	<string id="31008">Huvudläge</string>
+	<string id="31009">Färg på Textur</string>
+	<string id="31010">Färg på Teckensnitt</string>
+	<string id="31011">Omstart XBOX</string>
+	<string id="31012">Omstart XBMC</string>
+	<string id="31013">Favoriter</string>
+<!-- End Shutdown Labels -->
+
+<!-- Start Settings Labels -->
+	<string id="31014">Bakgrundsalternativ</string>
+	<string id="31015">Använd Bakgrund</string>
+	<string id="31016">Välj Anpassad Bakgrund</string>
+	<string id="31017">Återställ Anpassad Bakgrund</string>
+	<string id="31018">Välj Mapp för Bakgrundsanimation</string>
+	<string id="31019">Återställ Bakgrundsanimation</string>
+	<string id="31020">Använd RSS-ström i Hemfönstret</string>
+	<string id="31021">Information</string>
+	<string id="31022">Media</string>
+	<string id="31023">System</string>
+	<string id="31024">Skal</string>
+	<string id="31025">Bakgrund</string>
+	<string id="31026">Stäng av</string>
+	<string id="31027">Filhanterare</string>
+	<string id="31028">Skript</string>
+	<string id="31029">Väder</string>
+	<string id="31030">Sparade Speldata (Game Saves)</string>
+	<string id="31031">Använd "Sett/Ej sett"-överlagring</string>
+	<string id="31032">Inaktivera Mediaöverlagring</string>
+	<string id="31033">Inaktivera Animation för Hemknappen</string>
+	<string id="31034">Använd Uppstartsspellista</string>
+	<string id="31035">Aktivera Media Timeout för Hemknappen</string>
+	<string id="31036">Aktivera "Wide Icon Labels"</string>
+	<string id="31037">Välj Spellista</string>
+	<string id="31038">Hemfönster</string>
+	<string id="31039">Inaktivera "Home Button Labels"</string>
+	<string id="31040">Aktivera "Wrap View Labels"</string>
+	<string id="31041">Använd Containments Startbild</string>
+	<string id="31042">Ladda ner Containment Teman</string>
+<!-- End Settings Labels -->
+
+<!-- Start Misc. Labels -->
+	<string id="31043">Gå till Biblioteket</string>
+	<string id="31044">Gå från Biblioteket</string>
+	<string id="31045">Tyst</string>
+<!-- End Misc. Labels-->
+
+<!-- Start Script Labels -->
+	<string id="31046">Trailers</string>
+	<string id="31047">Containment Teman</string>
+	<string id="31048">Installerade Teman</string>
+	<string id="31049">Temat finns redan.</string>
+	<string id="31050">Inga teman hittades.</string>
+	<string id="31051">Laddar ner Tema.</string>
+	<string id="31052">Nedladdning Slutförd</string>
+	<string id="31053">Nedladdning Avbruten</string>
+	<string id="31054">Nedladdning Avbruten</string>
+	<string id="31055">Gå till inställningar för Utseende för att aktivera tema.</string>
+	<string id="31056">Misslyckades att ladda ner tema från servern.</string>
+	<string id="31057">Kunde inte ansluta till servern.</string>
+	<string id="31058">Kontrollera din uppkoppling och försök igen.</string>
+<!-- End Script Labels -->
+</strings>

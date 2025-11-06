@@ -1,0 +1,132 @@
+<window type="126">
+	<defaultcontrol>450</defaultcontrol>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="400">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>115</posy>
+	</coordinates>
+	<controls>
+
+		<control type="image" id="1">
+			<description>Profile Background -3</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>410</height>
+			<texture border="70,50,40,50">dialog-invite.png</texture>
+		</control>
+
+		<control type="group">
+			<posx>60</posx>
+			<posy>20</posy>
+			<control type="label" id="411">
+				<description>directory contains label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<align>left</align>
+				<font>special13</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>-</label>
+				<include>homemisc</include>
+			</control>
+
+			<control type="listcontrol" id="450">
+				<description>Listcontrol</description>
+				<posx>-10</posx>
+				<posy>40</posy>
+				<width>425</width>
+				<height>290</height>
+				<texturefocus>input-focus.png</texturefocus>
+				<texturenofocus>input-nofocus.png</texturenofocus>
+				<onleft>413</onleft>
+				<onright>413</onright>
+				<onup>413</onup>
+				<ondown>413</ondown>
+			</control>
+
+			<control type="thumbnailpanel" id="451">
+				<description>Thumbnailpanel</description>
+				<posx>-10</posx>
+				<posy>40</posy>
+				<width>425</width>
+				<height>270</height>
+				<itemwidth>141</itemwidth>
+				<itemheight>130</itemheight>
+				<texturewidth>141</texturewidth>
+				<textureheight>110</textureheight>
+				<thumbwidth>131</thumbwidth>
+				<thumbheight>110</thumbheight>
+				<thumbposx>5</thumbposx>
+				<thumbposy>5</thumbposy>
+				<texturefocus>list-focus.png</texturefocus>
+				<include>selectedcolor</include>
+				<include>controldefaults</include>
+				<suffix>-</suffix>
+				<onleft>413</onleft>
+				<onright>413</onright>
+				<onup>413</onup>
+				<ondown>413</ondown>
+			</control>
+
+			<!-- <control type="label" id="412">
+				<description>Path Label</description>
+				<posx>165</posx>
+				<posy>500</posy>
+				<width>400</width>
+				<align>left</align>
+				<font>special13</font>
+				<haspath>true</haspath>
+			</control> -->
+
+			<control type="button" id="415">
+				<description>Create folder button</description>
+				<posx>5</posx>
+				<posy>310</posy>
+				<width>100</width>
+				<align>center</align>
+				<label>119</label>
+				<font>font10</font>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>414</onleft>
+				<onright>413</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+			</control>
+
+			<control type="button" id="413">
+				<description>OK button</description>
+				<posx>150</posx>
+				<posy>310</posy>
+				<width>100</width>
+				<align>center</align>
+				<label>186</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>415</onleft>
+				<onright>414</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+			</control>
+
+			<control type="button" id="414">
+				<description>Cancel button</description>
+				<posx>300</posx>
+				<posy>310</posy>
+				<width>100</width>
+				<align>center</align>
+				<label>222</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>413</onleft>
+				<onright>415</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+			</control>
+		</control>
+
+	</controls>
+</window>

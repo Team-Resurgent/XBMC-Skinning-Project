@@ -1,0 +1,137 @@
+<window id="126">
+	<defaultcontrol alwyays="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Dialog-Container</include>
+		<control type="group">
+			<include>dialog-slide</include>
+			<control type="label" id="411">
+				<description>Heading Label</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<width>365</width>
+				<align>left</align>
+				<label>1023</label>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="label" id="0">
+				<description>path label</description>
+				<posx>5</posx>
+				<posy>140</posy>
+				<width>365</width>
+				<align>left</align>
+				<font>font12</font>
+				<label>1021</label>
+				<scroll>true</scroll>
+				<textcolor>button-nofocus-text</textcolor>
+			</control>
+			<control type="list" id="450">
+				<posx>5</posx>
+				<posy>180</posy>
+				<width>240</width>
+				<height>300</height>
+				<onleft>413</onleft>
+				<onright>413</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="32">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>240</width>
+						<height>30</height>
+						<font>font13</font>
+						<align>left</align>
+						<scroll>true</scroll>
+						<aligny>center</aligny>
+						<textcolor>button-nofocus-text</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="32">
+					<control type="image">
+						<width>240</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<texture>line.png</texture>
+						<colordiffuse>object-color</colordiffuse>
+						<visible>Control.HasFocus(450)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>240</width>
+						<height>30</height>
+						<font>font13</font>
+						<align>left</align>
+						<scroll>true</scroll>
+						<aligny>center</aligny>
+						<textcolor>main-text</textcolor>
+						<selectedcolor>selected-text</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="thumbnailpanel" id="451">
+				<description>thumbnailpanel</description>
+				<posx>5</posx>
+				<posy>180</posy>
+				<width>240</width>
+				<height>300</height>
+				<itemwidth>120</itemwidth>
+				<itemheight>135</itemheight>
+				<texturewidth>92</texturewidth>
+				<textureheight>90</textureheight>
+				<thumbwidth>82</thumbwidth>
+				<thumbheight>80</thumbheight>
+				<onleft>413</onleft>
+				<onright>413</onright>
+				<onup>451</onup>
+				<ondown>451</ondown>
+			</control>
+			<control type="button" id="413">
+				<description>OK button</description>
+				<posx>285</posx>
+				<posy>190</posy>
+				<width>90</width>
+				<font>font12</font>
+				<align>center</align>
+				<label>186</label>
+				<onleft>450</onleft>
+				<onright>414</onright>
+				<onup>415</onup>
+				<ondown>414</ondown>
+			</control>
+			<control type="button" id="414">
+				<description>Cancel button</description>
+				<posx>285</posx>
+				<posy>225</posy>
+				<width>90</width>
+				<font>font12</font>
+				<align>center</align>
+				<label>222</label>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>413</onup>
+				<ondown>415</ondown>
+			</control>
+			<control type="button" id="415">
+				<description>Create folder button</description>
+				<posx>285</posx>
+				<posy>260</posy>
+				<width>90</width>
+				<font>font12</font>
+				<align>center</align>
+				<label>119</label>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>414</onup>
+				<ondown>413</ondown>
+			</control>
+		</control>
+		<include>Dialog-Shutters</include>
+	</controls>
+</window>

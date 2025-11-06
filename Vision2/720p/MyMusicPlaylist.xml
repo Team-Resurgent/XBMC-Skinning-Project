@@ -1,0 +1,111 @@
+<window id="500">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>NowPlayingView</include>
+			<control type="group">
+				<control type="label">
+					<posx>565</posx>
+					<posy>40</posy>
+					<width>500</width>
+					<height>20</height>
+					<label>[B]$LOCALIZE[2][/B]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>570</posx>
+					<posy>70</posy>
+					<width>500</width>
+					<height>20</height>
+					<label>13350</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group" id="9000">
+				<include>SideMenuVisibleCommons</include>
+				<posx>465</posx>
+				<posy>152</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>415</height>
+					<texture border="40">MenuBack.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>415</height>
+					<texture border="40">MenuFront.png</texture>
+				</control>
+				<control type="radiobutton" id="20">
+					<description>Shuffle button</description>
+					<posx>40</posx>
+					<posy>50</posy>
+					<include>ButtonCommonValues</include>
+					<label>191</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>22</onup>
+					<ondown>26</ondown>
+				</control>
+				<control type="button" id="26">
+					<description>Repeat button</description>
+					<posx>40</posx>
+					<posy>80</posy>
+					<include>ButtonCommonValues</include>
+					<label>-</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>20</onup>
+					<ondown>21</ondown>
+				</control>
+				<control type="button" id="21">
+					<description>Save button</description>
+					<posx>40</posx>
+					<posy>110</posy>
+					<label>190</label>
+					<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+					<selected>Window.IsVisible(mymusiclibrary)</selected>
+					<include>ButtonCommonValues</include>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>26</onup>
+					<ondown>22</ondown>
+				</control>
+				<control type="button" id="22">
+					<description>Clear button</description>
+					<posx>40</posx>
+					<posy>140</posy>
+					<label>192</label>
+					<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+					<selected>Window.IsVisible(mymusiclibrary)</selected>
+					<include>ButtonCommonValues</include>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>21</onup>
+					<ondown>20</ondown>
+				</control>
+				<control type="image">
+					<posx>35</posx>
+					<posy>325</posy>
+					<width>278</width>
+					<height>55</height>
+					<texture>PM4_Small.png</texture>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

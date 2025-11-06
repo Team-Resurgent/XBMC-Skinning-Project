@@ -1,0 +1,87 @@
+﻿<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<include>Fade_Window_OpenClose_Animation</include>
+	<controls>
+		<control type="label" id="0">
+			<description>big play time label</description>
+			<posx>60</posx>
+			<posy>465</posy>
+			<info>MusicPlayer.Time</info>
+			<align>left</align>
+			<font>font64</font>
+			<textcolor>0a7c92ff</textcolor>
+		</control>
+		<control type="image" id="0">
+			<description>music rectangle</description>
+			<posx>60</posx>
+			<posy>381</posy>
+			<width>80</width>
+			<height>110</height>
+			<texture>blue_rectangle_music.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>music logo</description>
+			<posx>65</posx>
+			<posy>387</posy>
+			<width>70</width>
+			<height>99</height>
+			<keepaspectratio>true</keepaspectratio>
+			<texture>music.jpg</texture>
+			<info>MusicPlayer.Cover</info>
+		</control>
+		<control type="label" id="0">
+			<description>play time label</description>
+			<posx>100</posx>
+			<posy>500</posy>
+			<info>MusicPlayer.Time</info>
+			<align>left</align>
+			<font>font15</font>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+		<control type="image" id="0">
+			<description>play logo</description>
+			<posx>65</posx>
+			<posy>492</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture>music-play.png</texture>
+			<visible>Player.Playing</visible>
+		</control>
+		<control type="image" id="0">
+			<description>pause logo</description>
+			<posx>65</posx>
+			<posy>492</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture>music-pause.png</texture>
+			<visible>Player.Paused</visible>
+		</control>
+		<control type="image" id="0">
+			<description>ff logo</description>
+			<posx>65</posx>
+			<posy>492</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture>music-forward.png</texture>
+			<visible>Player.Forwarding</visible>
+		</control>
+		<control type="image" id="0">
+			<description>rw logo</description>
+			<posx>65</posx>
+			<posy>492</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture>music-rewind.png</texture>
+			<visible>Player.Rewinding </visible>
+		</control>
+		<control type="fadelabel">
+			<description>album/artist/genre etc info label</description>
+			<width>130</width>
+			<posx>65</posx>
+			<posy>525</posy>
+			<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Title, | ]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.Year, | ]</label>
+			<font>font13</font>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+	</controls>
+</window>

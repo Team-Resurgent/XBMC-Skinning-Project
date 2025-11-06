@@ -1,0 +1,122 @@
+<window id="12">
+	<defaultcontrol allways="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>35</posx>
+			<posy>110</posy>
+			<width>675</width>
+			<height>402</height>
+			<itemgap>-5</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<include>Fade_List_FocusUnfocus_Animation</include>
+		</control>
+		<control type="group" id="9000">
+			<description>Sidebar group</description>
+			<posx>-160</posx>
+			<animation effect="slide" time="100" start="160,0">unfocus</animation>
+			<animation effect="slide" time="100" end="160,0">focus</animation>
+			<control type="image">
+				<description>Sidebar Back image</description>
+				<posx>-145</posx>
+				<posy>0</posy>
+				<width>425</width>
+				<height>577</height>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>170</width>
+				<height>300</height>
+				<itemgap>-5</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+			<include>SlideBarClock</include>
+			<include>SlideBarWeather</include>
+		</control>
+		<control type="image">
+			<description>Top Bar BACK</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>105</height>
+			<texture>TBSettings.png</texture>
+		</control>
+		<control type="image">
+			<description>Top Bar FRONT</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>116</height>
+			<texture>Topbar_Front.png</texture>
+		</control>
+		<control type="label">
+			<description>Main Title text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>5</label>
+			<font>font20</font>
+			<visible>!Skin.HasSetting(No_Title_Text)</visible>
+		</control>
+		<control type="label" id="2">
+			<description>Sub Title text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>60</posy>
+			<label>5</label>
+			<font>font20</font>
+			<visible>!Skin.HasSetting(No_Title_Text)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>default category button</description>
+			<label>-</label>
+			<font>font20</font>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="button" id="7">
+			<description>default button</description>
+			<textoffsetx>10</textoffsetx>
+			<focusedcolor>-</focusedcolor>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>default radiobutton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<align>left</align>
+			<textoffsetx>10</textoffsetx>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureradiofocus>settings-check-box.png</textureradiofocus>
+			<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>default spincontrolex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<width>300</width>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>Arrow_Up.png</textureup>
+			<texturedown>Arrow_Down.png</texturedown>
+			<textureupfocus>Arrow_Up_Focus.png</textureupfocus>
+			<texturedownfocus>Arrow_Down_Focus.png</texturedownfocus>
+			<include>textcolor-disabled</include>
+			<textoffsetx>10</textoffsetx>
+			<reverse>yes</reverse>
+		</control>
+	</controls>
+</window>

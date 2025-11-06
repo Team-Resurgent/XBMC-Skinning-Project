@@ -1,0 +1,358 @@
+<window id="503">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>588</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>default_Audio.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Songs text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>10503</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="12">
+      <description>number of files text label</description>
+      <include>logo</include>
+      <posx>200</posx>
+      <posy>526</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+		<control type="label" id="101">
+			<description>number of songs in playlist text label</description>
+			<posx>440</posx>
+			<posy>526</posy>
+			<align>left</align>
+			<label>-</label>
+			<font>font13</font>
+      			<include>textcolorlightblue</include>
+		</control>
+
+
+<control type="group" id="9000">
+
+    <control type="button" id="9053">
+      <description>help button</description>
+      <include>logo</include>
+
+	<visible>Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)</visible>
+
+      <posx>212</posx>
+      <posy>82</posy>
+      <width>30</width>
+      <height>30</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(1053)</onclick>
+      <texturefocus>help-focus.png</texturefocus>
+      <texturenofocus>help-nofocus.png</texturenofocus>
+      <onleft>6</onleft>
+      <onright>100</onright>
+      <onup>8</onup>
+      <ondown>6</ondown>
+      <align>center</align>
+    </control>
+
+      <control type="button" id="6">
+        <description>Open Button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>120</posy>
+      <width>90</width>
+        <label>21385</label>
+        <font>font13</font>
+        <onleft>100</onleft>
+        <onright>50</onright>
+        <onup>9053</onup>
+        <ondown>7</ondown>
+      </control>
+
+      <control type="button" id="7">
+        <description>Save Button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>157</posy>
+      <width>90</width>
+        <label>190</label>
+        <font>font13</font>
+        <onleft>100</onleft>
+        <onright>50</onright>
+        <onup>6</onup>
+        <ondown>8</ondown>
+      </control>
+
+      <control type="button" id="8">
+        <description>Clear button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>194</posy>
+      <width>90</width>
+        <label>192</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>7</onup>
+        <ondown>9053</ondown>
+      </control>
+
+</control>
+
+<control type="group">
+			<control type="label" id="1">
+				<description>description label</description>
+				<posx>172</posx>
+				<posy>108</posy>
+				<align>left</align>
+				<label>1211</label>
+				<font>font13</font>
+			</control>
+			<control type="image">
+				<description>filemanager List Sel Left</description>
+				<posx>162</posx>
+				<posy>135</posy>
+				<width>250</width>
+				<height>375</height>
+				<texture>filemanager_Panel_Sel.png</texture>
+				<visible>Control.HasFocus(50)</visible>
+			</control>
+			<control type="image">
+				<description>filemanager List border Left</description>
+				<posx>162</posx>
+				<posy>135</posy>
+				<width>250</width>
+				<height>375</height>
+				<colordiffuse>55000000</colordiffuse>
+				<texture>filemanager_Panel_Sel.png</texture>
+				<visible>!Control.HasFocus(50)</visible>
+			</control>
+			<control type="list" id="50">
+				<description>left File list</description>
+				<posx>167</posx>
+				<posy>140</posy>
+				<width>240</width>
+				<height>365</height>
+				<onleft>9000</onleft>
+				<onright>100</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<itemlayout height="29">
+					<control type="image">
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>4</posy>
+						<width>120</width>
+						<height>22</height>
+						<font>font13</font>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>FFB2D4F5</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="29">
+					<control type="image">
+						<width>240</width>
+						<height>29</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<visible>Control.HasFocus(50)</visible>
+						<texture>list-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>4</posy>
+						<width>120</width>
+						<height>22</height>	
+						<font>font13</font>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label" id="1">
+				<description>description label</description>
+				<posx>430</posx>
+				<posy>108</posy>
+				<align>left</align>
+				<label>559</label>
+				<font>font13</font>
+			</control>
+			<control type="image">
+				<description>filemanager List Sel Right</description>
+				<posx>420</posx>
+				<posy>135</posy>
+				<width>250</width>
+				<height>375</height>
+				<texture>filemanager_Panel_Sel.png</texture>
+				<visible>Control.HasFocus(100)</visible>
+			</control>
+			<control type="image">
+				<description>filemanager List Sel Right</description>
+				<posx>420</posx>
+				<posy>135</posy>
+				<width>250</width>
+				<height>375</height>
+				<colordiffuse>55000000</colordiffuse>
+				<texture>filemanager_Panel_Sel.png</texture>
+				<visible>!Control.HasFocus(100)</visible>
+			</control>
+			<control type="list" id="100">
+				<description>Playlist</description>
+				<posx>425</posx>
+				<posy>140</posy>
+				<width>240</width>
+				<height>365</height>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<itemlayout height="29">
+					<control type="image">
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>4</posy>
+						<width>120</width>
+						<height>22</height>
+						<font>font13</font>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>FFB2D4F5</textcolor>
+						<textcolor>60ffffff</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="29">
+					<control type="image">
+						<width>240</width>
+						<height>29</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<visible>Control.HasFocus(100)</visible>
+						<texture>folder-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+						<include>listselectedcolor</include>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>4</posy>
+						<width>120</width>
+						<height>22</height>	
+						<font>font13</font>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>

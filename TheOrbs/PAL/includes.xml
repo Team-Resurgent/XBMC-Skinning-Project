@@ -1,0 +1,325 @@
+﻿<includes>
+	<include file="3D_CoverView.xml">-</include>
+	<include file="CommonViewTypes.xml">-</include>
+	<include file="Defaults.xml">-</include>
+
+	<include name="ContainerFade">
+		<animation effect="fade" time="300" delay="300" condition="!Skin.HasSetting(trans-ani)">WindowOpen</animation>
+		<animation effect="fade" time="10" condition="!Skin.HasSetting(trans-ani)">WindowClose</animation>
+	</include>
+
+	<include name="ContainerHeader">
+		<align>center</align>
+		<posx>455</posx>
+		<posy>20</posy>
+		<font>font34</font>
+		<textcolor>header-text</textcolor>
+		<include>ContainerFade</include>
+	</include>
+
+	<include name="CTRLsections1">
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>45</posx>
+			<posy>35</posy>
+			<width>170</width>
+			<height>170</height>
+			<visible>player.hasaudio</visible>
+			<animation effect="fade" time="300" delay="500">VisibleChange</animation>
+		</control>
+		<control type="videowindow">
+			<description>video preview window</description>
+			<posx>35</posx>
+			<posy>30</posy>
+			<width>195</width>
+			<height>160</height>
+		</control>
+		<control type="multiimage">
+			<posx>30</posx>
+			<posy>30</posy>
+			<width>160</width>
+			<height>160</height>
+			<imagepath>lostshut</imagepath>
+			<timeperimage>34</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>player.hasvideo</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posx>46</posx>
+			<posy>25</posy>
+			<width>175</width>
+			<height>172</height>
+			<texture>shutter_open.gif</texture>
+			<visible>player.hasvideo</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background2.png</texture>
+		</control>
+		<control type="multiimage">
+			<posx>220</posx>
+			<posy>80</posy>
+			<width>460</width>
+			<height>445</height>
+			<imagepath>bg2</imagepath>
+			<timeperimage>50</timeperimage>
+			<fadetime>0</fadetime>
+			<visible>!player.hasmedia + [[system.idletime(10) + !system.idletime(12)] | [system.idletime(20) + !system.idletime(22)]]</visible>
+		</control>
+		<control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+        <posx>45</posx>
+        <posy>185</posy>
+      <width>170</width>
+      <height>35</height>
+      <texture>label-bg.png</texture>
+      <visible>player.hasvideo</visible>
+    </control>
+
+    <control>
+      <description>album/artist/genre etc info label</description>
+      <type>fadelabel</type>
+      <width>120</width>
+      <posx>70</posx>
+      <posy>195</posy>
+      <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, | ]$INFO[VideoPlayer.Director, | ]$INFO[VideoPlayer.Genre, | ]</label>
+      <font>font12</font>
+      <textcolor>blue-text</textcolor>
+      <id>1</id>
+    </control>
+
+    <control>
+      <description>orb image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>23</posx>
+      <posy>3</posy>
+      <width>206</width>
+      <height>203</height>
+      <texture>top-orb2.png</texture>
+    </control>
+		<control type="image">
+			<description>panel small image</description>
+			<posx>210</posx>
+			<posy>5</posy>
+			<width>485</width>
+			<height>80</height>
+			<texture>trans-panel-small.png</texture>
+			<animation effect="slide" time="300" start="420,-15" acceleration="1" condition="!Skin.HasSetting(trans-ani)">WindowOpen</animation> 
+			<animation effect="slide" time="300" end="420,-15" acceleration="1" condition="!Skin.HasSetting(trans-ani)">WindowClose</animation>
+			<animation effect="zoom" start="0" end="100" center="450,50" time="200" condition="!Skin.HasSetting(trans-ani)">windowOpen</animation>
+		</control>
+		<control type="image">
+			<description>panel big image</description>
+			<posx>215</posx>
+			<posy>75</posy>
+			<width>480</width>
+			<height>465</height>
+			<texture>trans-panel.png</texture>
+			<animation effect="slide" time="300" start="420,-75" acceleration="1" condition="!Skin.HasSetting(trans-ani)">WindowOpen</animation> 
+			<animation effect="slide" time="300" end="420,-75" acceleration="1" condition="!Skin.HasSetting(trans-ani)">WindowClose</animation>
+			<animation effect="zoom" start="0" end="100" center="450,260" time="100" condition="!Skin.HasSetting(trans-ani)">windowOpen</animation>
+		</control>
+		<control type="multiimage">
+			<posx>146</posx>
+			<posy>5</posy>
+			<width>89</width>
+			<height>80</height>
+			<imagepath>PlayerControls-Close</imagepath>
+			<timeperimage>80</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<visible>!window.isactive(114)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>146</posx>
+			<posy>5</posy>
+			<width>89</width>
+			<height>80</height>
+			<texture>PLC.png</texture>
+			<visible>!window.isactive(114)</visible>
+			<animation effect="fade" delay="500" time="100">Visible</animation>
+			<animation effect="fade" time="0">windowopen</animation>
+		</control>
+	</include>
+
+	<include name="CTRLsections3">
+		<control type="label" id="12">
+			<description>number of files text label</description>
+			<posx>225</posx>
+			<posy>535</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+			<include>ContainerFade</include>
+		</control>
+		<!-- Music Overlay when playing -->
+		<control type="image" id="0">
+			<description>start logo</description>
+			<posx>50</posx>
+			<posy>270</posy>
+			<width>150</width>
+			<height>150</height>
+			<texture>folder-cd-nofocus.png</texture>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="image" id="0">
+			<description>play logo</description>
+			<posx>25</posx>
+			<posy>455</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<texture>music-play.png</texture>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>435</posy>
+			<info>MusicPlayer.Artist</info>
+			<font>font12</font>
+			<textcolor>ffdce9ff</textcolor>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>455</posy>
+			<info>MusicPlayer.Title</info>
+			<font>font14</font>
+			<textcolor>ffdce9ff</textcolor>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>478</posy>
+			<info>MusicPlayer.Album</info>
+			<font>font10</font>
+			<textcolor>ffdce9ff</textcolor>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>495</posy>
+			<info>MusicPlayer.Year</info>
+			<font>font10</font>
+			<textcolor>ffdce9ff</textcolor>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>512</posy>
+			<info>MusicPlayer.Genre</info>
+			<font>font10</font>
+			<textcolor>ffdce9ff</textcolor>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="label">
+			<description>time label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>532</posy>
+			<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
+			<font>font13</font>
+			<textcolor>ffdce9ff</textcolor>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+	</include>
+
+	<include name="CTRLmusicnoplay">
+		<!-- List Items when not playing -->
+		<control type="image" id="0">
+			<description>start logo</description>
+			<posx>50</posx>
+			<posy>270</posy>
+			<width>150</width>
+			<height>150</height>
+			<texture>folder-cd-nofocus.png</texture>
+			<visible>[player.hasaudio | !system.idletime(5)] + control.hasfocus(50)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>435</posy>
+			<info>ListItem.Artist</info>
+			<font>font12</font>
+			<textcolor>blue-text</textcolor>
+			<visible>!system.idletime(5) + control.hasfocus(50)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>455</posy>
+			<info>ListItem.Title</info>
+			<font>font14</font>
+			<textcolor>blue-text</textcolor>
+			<visible>!system.idletime(5) + control.hasfocus(50)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>478</posy>
+			<info>ListItem.Album</info>
+			<font>font10</font>
+			<textcolor>blue-text</textcolor>
+			<visible>!system.idletime(5) + control.hasfocus(50)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>495</posy>
+			<info>ListItem.Year</info>
+			<font>font10</font>
+			<textcolor>blue-text</textcolor>
+			<visible>!system.idletime(5) + control.hasfocus(50)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="0">
+			<description>title info label</description>
+			<width>170</width>
+			<posx>50</posx>
+			<posy>512</posy>
+			<info>ListItem.Genre</info>
+			<font>font10</font>
+			<textcolor>blue-text</textcolor>
+			<visible>!system.idletime(5) + control.hasfocus(50)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+	</include>
+
+</includes>    

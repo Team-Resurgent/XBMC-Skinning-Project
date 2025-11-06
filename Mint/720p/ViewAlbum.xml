@@ -1,0 +1,163 @@
+<!-- 
+USE: For displaying a single album. A folder containing only tracks from one album
+FROM: Inspired by view in Toshiba S30/60 Media Player.
+-->
+<includes>
+
+	<include name="ViewAlbum">
+			
+		<control type="group">
+				
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<visible>Control.IsVisible(57)</visible>
+				<texture>white2x2.png</texture>
+				<width>1280</width>
+				<height>640</height>
+				<colordiffuse>ff20281b</colordiffuse>
+			</control>
+			<!-- list container -->
+			<control type="list" id="57">
+			
+				<viewtype label="Album">list</viewtype>
+				<width>800</width>
+				<height>600</height>
+				<posx>480</posx>
+				<posy>20</posy>
+				<onup>57</onup>
+				<ondown>57</ondown>
+				<onleft></onleft>
+				<onright>9000</onright>
+				
+				<itemlayout height="60">
+					<control type="label">
+						<label>$INFO[ListItem.TrackNumber]</label>
+						<width>80</width>
+						<height>60</height>
+						<posx>80</posx>
+						<font>album</font>
+						<textcolor>album-dark</textcolor>
+						<selectedcolor>album-selected</selectedcolor>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Title]</label>
+						<width>500</width>
+						<height>60</height>
+						<posx>120</posx>
+						<font>album</font>
+						<textcolor>album-dark</textcolor>
+						<selectedcolor>album-selected</selectedcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Duration]</label>
+						<width>100</width>
+						<height>60</height>
+						<posx>760</posx>
+						<font>album</font>
+						<textcolor>album-dark</textcolor>
+						<selectedcolor>album-selected</selectedcolor>
+						<align>right</align>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="image">
+						<texture border="16">default_icon_back.png</texture>
+						<width>770</width>
+						<height>60</height>
+						<posx>15</posx>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.TrackNumber]</label>
+						<width>80</width>
+						<height>60</height>
+						<posx>80</posx>
+						<font>album</font>
+						<textcolor>album</textcolor>
+						<selectedcolor>album</selectedcolor>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Title]</label>
+						<width>500</width>
+						<height>60</height>
+						<posx>120</posx>
+						<font>album</font>
+						<textcolor>album</textcolor>
+						<selectedcolor>album</selectedcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Duration]</label>
+						<width>100</width>
+						<height>60</height>
+						<posx>760</posx>
+						<font>album</font>
+						<textcolor>album</textcolor>
+						<selectedcolor>album</selectedcolor>
+						<align>right</align>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- cover image -->
+			<control type="image">
+				<visible>Control.IsVisible(57)</visible>
+				<texture>white2x2.png</texture>
+				<width>480</width>
+				<height>640</height>
+				<colordiffuse>ee2e2e2e</colordiffuse>
+			</control>
+			<control type="image">
+				<visible>Control.IsVisible(57)</visible>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<width>480</width>
+				<height>480</height>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<!-- big track number -->
+			<control type="label">
+				<visible>Control.IsVisible(57)</visible>
+				<label>$INFO[ListItem.TrackNumber]</label>
+				<width>160</width>
+				<height>160</height>
+				<posy>480</posy>
+				<font>extralarge</font>
+				<textcolor>content-dark</textcolor>
+				<align>center</align>
+			</control>
+			<!-- artist -->
+			<control type="label">
+				<visible>Control.IsVisible(57)</visible>
+				<label>$INFO[ListItem.Artist]</label>
+				<width>300</width>
+				<height>40</height>
+				<posx>160</posx>
+				<posy>500</posy>
+				<textcolor>content-dark</textcolor>
+			</control>
+			<!-- title -->
+			<control type="label">
+				<visible>Control.IsVisible(57)</visible>
+				<label>$INFO[ListItem.Title]</label>
+				<width>300</width>
+				<height>40</height>
+				<posx>160</posx>
+				<posy>540</posy>
+				<textcolor>content-dark</textcolor>
+			</control>		
+			<!-- title -->
+			<control type="label">
+				<visible>Control.IsVisible(57)</visible>
+				<label>$INFO[ListItem.Duration]</label>
+				<width>300</width>
+				<height>40</height>
+				<posx>160</posx>
+				<posy>580</posy>
+				<textcolor>content-dark</textcolor>
+			</control>		
+		</control>
+				
+	</include>
+
+</includes>

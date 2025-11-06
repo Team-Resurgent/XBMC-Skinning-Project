@@ -1,0 +1,143 @@
+<window id="57">
+	<defaultcontrol always="true">420</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>ShutdownMenu</previouswindow>
+	<controls>
+		<include>background</include>
+		<include>xtv-box</include>
+		<include>Fake-Overlay</include>
+
+		<control type="grouplist" id="420">
+			<posx>405</posx>
+			<posy>90</posy>
+			<width>285</width>
+			<height>425</height>
+			<itemgap>-2</itemgap>
+			<onup>420</onup>
+			<ondown>420</ondown>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<control type="radiobutton" id="4">
+				<description>Scrollbar Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31024</label>
+				<onclick>Skin.ToggleSetting(sbar)</onclick>
+				<selected>Skin.HasSetting(sbar)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="5">
+				<description>Media Overlay Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31025</label>
+				<onclick>Skin.ToggleSetting(overlay)</onclick>
+				<selected>Skin.HasSetting(overlay)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="6">
+				<description>Now Playing Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31027</label>
+				<onclick>Skin.ToggleSetting(now-playing)</onclick>
+				<selected>!Skin.HasSetting(now-playing)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="7">
+				<description>Watched/Unwatched Overlay Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31026</label>
+				<onclick>Skin.ToggleSetting(watched-overlay)</onclick>
+				<selected>!Skin.HasSetting(watched-overlay)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Use Now Playing Screen Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31029</label>
+				<onclick>Skin.ToggleSetting(np-vis)</onclick>
+				<selected>Skin.HasSetting(np-vis)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="9">
+				<description>Icon Tilt Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31073</label>
+				<onclick>Skin.ToggleSetting(tilted-icons)</onclick>
+				<selected>Skin.HasSetting(tilted-icons)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="10">
+				<description>View As Panel Lock Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31074</label>
+				<onclick>Skin.ToggleSetting(view-as-lock)</onclick>
+				<selected>Skin.HasSetting(view-as-lock)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="13">
+				<description>Starup Playlist toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31075</label>
+				<textwidth>250</textwidth>
+				<onclick>Skin.ToggleSetting(startup-playlist)</onclick>
+				<selected>Skin.HasSetting(startup-playlist)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="button" id="14">
+				<description>Choose Playlist button</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31076</label>
+				<onclick>Skin.SetFile(playlist,.m3u,Q:\UserData\playlists\music)</onclick>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<visible>Skin.HasSetting(startup-playlist)</visible>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="15">
+				<description>Auto Scroll Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31080</label>
+				<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+				<selected>Skin.HasSetting(AutoScroll)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+		</control>
+	</controls>
+</window>

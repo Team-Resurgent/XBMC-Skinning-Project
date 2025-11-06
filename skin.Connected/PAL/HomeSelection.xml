@@ -1,0 +1,1229 @@
+<includes>
+	<include name="HomeSelection">
+
+    <control type="group">
+      <!-- Selection Default -->
+      <control type="group" id="2001">
+        <visible>Control.IsVisible(9001) + !Container(9001).OnNext + !Container(9001).OnPrevious + !Skin.HasSetting(HomeSelectionIcons) + !Skin.String(HomeVideosImages) + !Skin.String(HomeMusicImages) + !Skin.String(HomePhotosImages) + !Player.HasMedia</visible>
+        <animation type="WindowOpen" reversible="false">
+          <effect type="slide" tween="quadratic" start="500" time="1400"/>
+        </animation>
+        <animation type="WindowClose" reversible="false">
+          <effect type="fade" tween="quadratic" end="0" time="0"/>
+        </animation>
+        <animation type="Visible" reversible="false">
+          <effect type="slide" tween="quadratic" start="500" time="400"/>
+        </animation>
+        <control type="group">
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>300</width>
+            <height>300</height>
+            <info>Container(9001).ListItem(0).ActualIcon</info>
+            <aspectratio align="left">keep</aspectratio>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="2002">
+        <visible>Control.IsVisible(9001) + Container(9001).OnNext + !Player.HasMedia</visible>
+        <animation type="Hidden" reversible="false">
+          <effect type="zoom" end="440,180,150,150" time="200"/>
+          <effect type="fade" end="30" time="200"/>
+        </animation>
+        <control type="group">
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>300</width>
+            <height>300</height>
+            <info>Container(9001).ListItem(-1).ActualIcon</info>
+            <aspectratio align="left">keep</aspectratio>
+          </control>
+        </control>
+      </control>  
+      <control type="group" id="2003">
+        <visible>Control.IsVisible(9001) + Container(9001).OnPrevious + !Player.HasMedia</visible>
+        <animation type="Hidden" reversible="false">
+          <effect type="zoom" end="440,180,150,150" time="200"/>
+          <effect type="fade" end="30" time="200"/>
+        </animation>
+        <control type="group">
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>300</width>
+            <height>300</height>
+            <info>Container(9001).ListItem(1).ActualIcon</info>
+            <aspectratio align="left">keep</aspectratio>
+          </control>
+        </control>
+      </control>  
+    </control>
+
+    <control type="group">
+      <visible>Skin.HasSetting(HomeSelectionImages)</visible>
+      <!-- Selection Movies -->
+		  <control type="group" id="9010">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="20" center="790,200" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="20" center="790,200" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>0</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9011">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="-30" center="480,100" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="-30" center="480,100" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9012">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9013">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="20" center="920,400" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="20" center="920,400" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>10</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9014">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9015">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="-10" center="620,300" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="-10" center="620,300" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9016">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="-20" center="250,250" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="-20" center="250,250" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9017">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="5" center="990,500" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="5" center="990,500" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>380</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9018">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="20" center="500,200" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="20" center="500,200" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>350</posx>
+					  <posy>50</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+		  <control type="group" id="9019">
+			  <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			  <animation effect="slide" tween="circle" delay="18000" start="500,-100" time="400" reversible="false">Visible</animation>
+			  <animation effect="slide" tween="circle" delay="18000" start="500,-100" time="400" reversible="false">WindowOpen</animation>
+			  <control type="group">
+				  <animation effect="rotate" end="-10" center="100" time="0">WindowOpen</animation>
+				  <animation effect="rotate" end="-10" center="100" time="0">WindowClose</animation>
+				  <control type="multiimage">
+					  <description>Selected Image</description>
+					  <posx>450</posx>
+					  <posy>100</posy>
+					  <width>250</width>
+					  <height>250</height>
+					  <info>Skin.String(HomeVideosImages)</info>
+					  <timeperimage>1000000000</timeperimage>
+					  <fadetime>100</fadetime>
+					  <pauseatend>0</pauseatend>
+					  <randomize>true</randomize>
+					  <loop>no</loop>
+					  <aspectratio align="left">keep</aspectratio>
+					  <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+				  </control>
+			  </control>
+		  </control>
+      <control type="group" id="9020">
+        <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="20000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="20000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeVideosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9021">
+        <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="22000" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="22000" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>-10</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeVideosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9022">
+        <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="24000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="24000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeVideosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9023">
+        <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="26000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="26000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeVideosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9024">
+        <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="28000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="28000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeVideosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9025">
+        <visible>Container(9001).HasFocus(2) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="30000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="30000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeVideosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+
+      <!-- Selection Music -->
+      <control type="group" id="9010">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="790,200" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="790,200" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>0</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9011">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-30" center="480,100" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-30" center="480,100" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9012">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9013">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>10</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9014">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9015">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9016">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9017">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9018">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="500,200" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="500,200" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>350</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9019">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="18000" start="500,-100" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="18000" start="500,-100" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-10" center="100" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-10" center="100" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>450</posx>
+            <posy>100</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9020">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="20000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="20000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9021">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="22000" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="22000" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>-10</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9022">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="24000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="24000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9023">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="26000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="26000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9024">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="28000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="28000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9025">
+        <visible>Container(9001).HasFocus(3) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="30000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="30000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomeMusicImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+
+      <!-- Selection Pictures -->
+      <control type="group" id="9010">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="790,200" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="790,200" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>0</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9011">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-30" center="480,100" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-30" center="480,100" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9012">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9013">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>10</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9014">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9015">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9016">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9017">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9018">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="500,200" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="500,200" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>350</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9019">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="18000" start="500,-100" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="18000" start="500,-100" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-10" center="100" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-10" center="100" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>450</posx>
+            <posy>100</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9020">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="20000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="20000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9021">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="22000" start="500" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="22000" start="500" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="20" center="920,400" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>-10</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9022">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="24000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="24000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9023">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="26000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="26000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-10" center="620,300" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9024">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="28000" start="500,200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="28000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="-20" center="250,250" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9025">
+        <visible>Container(9001).HasFocus(4) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+        <animation effect="slide" tween="circle" delay="30000" start="500,-200" time="400" reversible="false">Visible</animation>
+        <animation effect="slide" tween="circle" delay="30000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+        <control type="group">
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowOpen</animation>
+          <animation effect="rotate" end="5" center="990,500" time="0">WindowClose</animation>
+          <control type="multiimage">
+            <description>Selected Image</description>
+            <posx>380</posx>
+            <posy>50</posy>
+            <width>250</width>
+            <height>250</height>
+            <info>Skin.String(HomePhotosImages)</info>
+            <timeperimage>1000000000</timeperimage>
+            <fadetime>100</fadetime>
+            <pauseatend>0</pauseatend>
+            <randomize>true</randomize>
+            <loop>no</loop>
+            <aspectratio align="left">keep</aspectratio>
+            <visible>![Window.Next(filemanager) | Window.Next(programs) | Window.Next(videofiles)  | Window.Next(videolibrary) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(pictures) | Window.Next(settings) | Window.Next(scripts)]</visible>
+          </control>
+        </control>
+      </control>
+    </control>
+
+	</include>
+</includes>

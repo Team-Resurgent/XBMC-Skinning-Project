@@ -1,0 +1,154 @@
+<window id="12">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$LOCALIZE[10507] $LOCALIZE[5]</label>
+				<font>font40</font>
+			</control>
+			<control type="group">
+				<posx>25</posx>
+				<posy>110</posy>
+				<control type="grouplist" id="3">
+					<description>button area</description>
+					<posx>0</posx>
+					<posy>30</posy>
+					<width>300</width>
+					<height>455</height>
+					<itemgap>5</itemgap>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+				</control>
+				<control type="grouplist" id="5">
+					<description>control area</description>
+					<posx>350</posx>
+					<posy>0</posy>
+					<width>845</width>
+					<height>500</height>
+					<itemgap>5</itemgap>
+					<pagecontrol>90</pagecontrol>
+					<onleft>3</onleft>
+					<onright>90</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posx>1225</posx>
+			<posy>110</posy>
+			<control type="button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<onclick>PageUp(90)</onclick>
+				<texturefocus>scrollbar_arrow_up_focus.png</texturefocus>
+				<texturenofocus>scrollbar_arrow_up.png</texturenofocus>
+				<visible>Control.IsVisible(90)</visible>
+			</control>
+			<control type="scrollbar" id="90">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>30</width>
+				<height>425</height>
+				<texturesliderbackground>button-nofocus.png</texturesliderbackground>
+				<texturesliderbar>scrollbar_bar.png</texturesliderbar>
+				<texturesliderbarfocus>scrollbar_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="button">
+				<posx>0</posx>
+				<posy>465</posy>
+				<width>30</width>
+				<height>30</height>
+				<onclick>PageDown(90)</onclick>
+				<texturefocus>scrollbar_arrow_down_focus.png</texturefocus>
+				<texturenofocus>scrollbar_arrow_down.png</texturenofocus>
+				<visible>Control.IsVisible(90)</visible>
+			</control>
+		</control>
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>40</height>
+			<width>300</width>
+			<label>-</label>
+			<font>font13b</font>
+			<align>left</align>
+			<textcolor>white</textcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>45</height>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<textoffsetx>7</textoffsetx>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>45</height>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textoffsetx>7</textoffsetx>
+			<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+			<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>45</height>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>7</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+	</controls>
+</window>

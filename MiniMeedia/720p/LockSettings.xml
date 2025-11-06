@@ -1,0 +1,92 @@
+<window id="131">
+  <defaultcontrol always="true">5</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <control type="group" id="301">
+      <description>Lock Settings Options Area</description>
+      <posx>630</posx>
+      <posy>460</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,0" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,0" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">Hidden</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">WindowClose</animation>
+
+      <control type="image">
+        <width>660</width>
+        <height>270</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posx>10</posx>
+        <posy>10</posy>
+
+        <control type="grouplist" id="5">
+          <description>Profile Options</description>
+          <width>620</width>
+          <height>100</height>
+          <onup>1000</onup>
+          <ondown>28</ondown>
+          <onright>5</onright>
+          <itemgap>0</itemgap>
+        </control>
+
+        <control type="button" id="7">
+          <description>Default Button</description>
+          <textoffsetx>10</textoffsetx>
+          <align>left</align>
+          <font>MediumDefaultFont</font>
+          <texturenofocus>-</texturenofocus>
+        </control>
+
+        <control type="radiobutton" id="8">
+          <description>Default Radio Button</description>
+          <textoffsetx>10</textoffsetx>
+          <align>left</align>
+          <font>MediumDefaultFont</font>
+        </control>
+
+        <control type="spincontrolex" id="9">
+          <description>Default Spincontrol</description>
+          <textoffsetx>10</textoffsetx>
+          <align>left</align>
+          <font>MediumDefaultFont</font>
+        </control>
+
+        <control type="group">
+          <posy>214</posy>
+
+          <control type="button" id="28">
+            <description>ok button</description>
+            <onup>5</onup>
+            <onright>29</onright>
+            <label>$LOCALIZE[186]</label>
+          </control>
+
+          <control type="button" id="29">
+            <description>cancel button</description>
+            <posx>150</posx>
+            <onup>5</onup>
+            <onright>4</onright>
+            <onleft>28</onleft>
+            <label>$LOCALIZE[222]</label>
+          </control>
+
+          <control type="radiobutton" id="4">
+            <description>Login Screen</description>
+            <posx>350</posx>
+            <onleft>29</onleft>
+            <onup>5</onup>
+            <width>270</width>
+            <height>28</height>
+            <textoffsetx>10</textoffsetx>
+            <label>$LOCALIZE[20096]</label>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

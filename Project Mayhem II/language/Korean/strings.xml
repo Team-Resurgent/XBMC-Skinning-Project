@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+  <string id="31001">미디어 표지 보여주기 &amp; 초기화면에 표시</string>
+  <string id="31002">배경에 음악시각화 사용</string>
+  <string id="31003">초기화면에 RSS 피드 보여주기</string>
+  <string id="31004">초기화면에 날씨정보 보여주기</string>
+  <string id="31005">리스트로 보기에서 미리보기 보여주기</string>
+  <string id="31006">배경에 사용자 배경 사용하기</string>
+  <string id="31007">스킨 애니메이션 활성화</string>
+  <string id="31008">초기화면에서 시간 &amp; 날짜 보여주기</string>
+  <string id="31009">기본 배경화면 사용</string>
+  <string id="31010">모든 스킨 설정을 기본상태로 되돌림</string>
+  <string id="31011">-</string>
+  <string id="31012">PM2 설정</string>
+
+</strings>

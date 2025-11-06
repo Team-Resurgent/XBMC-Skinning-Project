@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <!-- 31000 to 31009 reseved for home buttons -->
+  <string id="31000">Play</string>
+  <string id="31001">Watch</string>
+  <string id="31002">Listen</string>
+  <string id="31003">View</string>
+  <string id="31004">Change</string>
+  <string id="31005">Check</string>
+  <string id="31006">Leave</string>
+  <string id="31007">Run</string>
+  <string id="31008"></string>
+  <string id="31009"></string>
+  <!-- 31010 to 31019 reseved for home buttons Label 2-->
+  <string id="31010">games &amp; emulators</string>
+  <string id="31011">movies,shows &amp; clips</string>
+  <string id="31012">to music &amp; audio CD's</string>
+  <string id="31013">pictures &amp; images</string>
+  <string id="31014">settings &amp; options</string>
+  <string id="31015">weather forecasts</string>
+  <string id="31016">shutdown &amp; restart</string>
+  <string id="31017">scripts &amp; plugins</string>
+  <string id="31018"></string>
+  <string id="31019"></string>
+
+  <string id="31020">Emulators</string>
+  <string id="31021">Video Files</string>
+  <string id="31022">Music Files</string>
+  <string id="31023">Picture Files</string>
+  <string id="31024">Page</string>
+  <string id="31025">Items</string>
+  <string id="31026">Film Strip</string>
+
+  <string id="31027">SEASON[CR]POSTER[CR]NOT[CR]AVAILABLE</string>
+  <string id="31028">EPISODE[CR]IMAGE[CR]NOT[CR]AVAILABLE</string>
+  <string id="31029">ALBUM[CR]COVER[CR]NOT[CR]AVAILABLE</string>
+  <string id="31030">ARTIST[CR]IMAGE[CR]NOT[CR]AVAILABLE</string>
+
+  <string id="31031">Current TV Show[CR]Fanart Image[CR][CR]Click to Change</string>
+  <string id="31032">PLAYING</string>
+  <string id="31033">PAUSED</string>
+  <string id="31034">FAST FOWARD</string>
+  <string id="31035">REWIND</string>
+  <string id="31036">VOLUME MUTED</string>
+  <string id="31037">Last login:</string>
+
+  <!-- Skin Settings labels -->
+  <string id="31100">Use Grey Overlay on Background</string>
+  <string id="31101">Show Background Video</string>
+  <string id="31102">Show Background Visualisation</string>
+  <string id="31103">Show Specific HOME backgrounds</string>
+  <string id="31104">Remove Page Controls from Media Lists</string>
+  <string id="31105">Remove Settings options from Home Sub Menus</string>
+  <string id="31106">Show Weather on Home Screen</string>
+  <string id="31107">Prevent Media Window Menu Focus</string>
+  
+  <!-- Script Settings labels -->
+  <string id="31200">SCRIPT SETTINGS</string>
+  <string id="31201">Home submenu Options</string>
+  <string id="31202">Activate Custom Menu Item</string>
+  <string id="31203">Set Button Label</string>
+  <string id="31204">Script Path</string>
+  <string id="31205">Show Video Plugins Button</string>
+  <string id="31206">Show Music Plugins Button</string>
+
+<!-- 
+  The 2 strings below are special ones that control the forced Capitailization of text
+  in the skin.  If your langauge does not support or use UPPERCASE (Capital) Letters
+  like English does then you need to change out these 2 strings like this if they are
+  blank it defaults back to the english uppercase ones
+  
+  <string id="31998">[B]</string>
+  <string id="31999">[/B]</string>
+  
+  and all Custom forced uppercase text will now be its normal case and hopefully display
+  correct in your lanaguage
+-->  
+
+  <string id="31998">[UPPERCASE]</string>
+  <string id="31999">[/UPPERCASE]</string>
+</strings>

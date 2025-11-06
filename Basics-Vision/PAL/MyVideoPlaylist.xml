@@ -1,0 +1,113 @@
+<window id="28">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>OldListViewCommons</include>
+			<include>OldListViewFullCommons</include>
+			<include>AllViewCommonThumbSmall</include>
+			<include>AllViewCommonThumbBig</include>
+			<include>DVDThumbView</include>
+			<control type="group" id="9001">
+				<posx>-194</posx>
+				<posy>0</posy>
+				<animation effect="slide" time="150" end="194,0" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>225</width>
+					<height>576</height>
+					<onclick>-</onclick>
+					<hitrect x="0" y="0" w="200" h="576" />
+					<texturefocus>Side_Slideout.png</texturefocus>
+					<texturenofocus>Side_Slideout.png</texturenofocus>
+				</control>
+				<control type="group" id="9000">
+					<posx>0</posx>
+					<posy>112</posy>
+					<control type="button" id="2">
+						<description>View As button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>ButtonCommonValues</include>
+						<label>-</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>22</onup>
+						<ondown>20</ondown>
+					</control>
+					<control type="radiobutton" id="20">
+						<description>Shuffle button</description>
+						<posx>0</posx>
+						<posy>36</posy>
+						<include>ButtonCommonValues</include>
+						<label>191</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>2</onup>
+						<ondown>26</ondown>
+						<radioposx>165</radioposx>
+					</control>
+					<control type="button" id="26">
+						<description>Repeat button</description>
+						<posx>0</posx>
+						<posy>72</posy>
+						<include>ButtonCommonValues</include>
+						<label>194</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>20</onup>
+						<ondown>21</ondown>
+					</control>
+					<control type="button" id="21">
+						<description>Save button</description>
+						<posx>0</posx>
+						<posy>108</posy>
+						<include>ButtonCommonValues</include>
+						<label>190</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>26</onup>
+						<ondown>22</ondown>
+					</control>
+					<control type="button" id="22">
+						<description>Clear button</description>
+						<posx>0</posx>
+						<posy>144</posy>
+						<include>ButtonCommonValues</include>
+						<label>192</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>21</onup>
+						<ondown>2</ondown>
+					</control>
+				</control>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>72</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>23</posx>
+				<posy>16</posy>
+				<width>338</width>
+				<height>34</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>10522</label>
+				<font>font16b</font>
+			</control>
+			<include>Common_Now_Playing</include>
+			<include>Common_File_Count</include>
+			<include>AllViewCommonPageControls</include>
+		</control>
+	</controls>
+</window>

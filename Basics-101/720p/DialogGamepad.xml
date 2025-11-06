@@ -1,0 +1,64 @@
+<window id="110">
+	<defaultcontrol>0</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>290</posx>
+		<posy>235</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>700</width>
+			<height>250</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>690</width>
+			<height>240</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="label" id="1">
+			<description>heading label</description>
+			<posx>20</posx>
+			<posy>10</posy>
+			<width>660</width>
+			<align>left</align>
+			<font>font16</font>
+			<label>13406</label>
+			<textcolor>red</textcolor>
+		</control>
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<posx>20</posx>
+			<posy>60</posy>
+			<width>660</width>
+			<label>-</label>
+			<font>font13</font>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posx>20</posx>
+			<posy>95</posy>
+			<width>660</width>
+			<label>-</label>
+			<font>font13</font>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posx>20</posx>
+			<posy>130</posy>
+			<width>660</width>
+			<label>-</label>
+			<font>font30</font>
+		</control>
+	</controls>
+</window>

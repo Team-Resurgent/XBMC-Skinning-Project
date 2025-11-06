@@ -1,0 +1,718 @@
+<!-- P.D.M Changelog - V2.0 XBMC Skin ---------------------------------------------------------------------------->
+
+<!---------------------- Build 0680 ---------------------->
+0680 - 17-04-2007 added   : Some more icons (X theme) ,some small once were missing. Also changed DialogKeyboard.xml to zoom in.
+0679 - 17-04-2007 fixed   : MyVideoNav/MyVideo.xml buttons, they were still selectbuttons and not working right.
+0678 - 17-04-2007 fixed   : Weather.xml slider/background includes were wrong, they were still 16x9.
+0677 - 17-04-2007 fixed   : Controls had the wrong positions in Weather.xml (4x3) it was a mess, also increased icon size a bit.
+0676 - 17-04-2007 changed : All menu buttons go <onleft>60</ now which is spincontrols for list/thumb/wrap panels.
+0675 - 17-04-2007 fixed   : Translation includes.xml files were outdated, also removed some theme textures.
+0674 - 08-04-2007 changed : some more fine tuning on the filemanager lists.
+0673 - 08-04-2007 changed : FileManager listcontrols to new list,also changed icons for X theme.
+0672 - 05-04-2007 fixed   : DialogSelect.xml correct width + new list, also added DialogContentSettings.xml
+0671 - 05-04-2007 changed : Made SystemInfo progressbar textures seperate, made the content panels a bit better.
+0670 - 05-04-2007 changed : BG,progressbar colors,button (X theme), also added some new info's in the stats bar.
+0669 - 05-04-2007 added   : Big Icon panel to menu view option, still needs some tuning. also fixed weather (16x9).
+0668 - 04-04-2007 fixed   : Several invalid include warnings in DialogButtonMenu.xml.. also realigned 16x9 weather.
+0667 - 04-04-2007 changed : SystemInfo.xml to the new method (global info's + progressbars) ..thx to Jezz_X for the template.
+0666 - 01-04-2007 fixed   : Some more issues, also made seperate colors available for themes.
+0665 - 01-04-2007 fixed   : The "changelog" folder didn't get added to the "extra" folder in skin root.
+0664 - 01-04-2007 added   : New textures to the "X" theme folder, to get more diffrence...
+0663 - 01-04-2007 added   : Some more textures to the "X" theme folder, to get more diffrence.
+0662 - 01-04-2007 added   : WrapList view, this might need some more tuning though.
+0661 - 01-04-2007 fixed   : Some more issues in 4x3 mode, some controls were not on the right posx.
+0660 - 01-04-2007 added   : New List and Thumb Panels (4x3,16x9) may need some tuning here and there.
+0659 - 31-03-2007 added   : CommonContent.xml for switching to new list/thumb panels in the near future (4x3/16x9).
+0658 - 31-03-2007 added   : New Media texture structure so themes can be used in the future.
+0657 - 31-03-2007 changed : Build.bat, xbmctex.bat.. new xbmctex.exe, and removed the old log in the skin root.
+0656 - 31-03-2007 removed : Media texture structure so themes can be used in the future.
+0655 - 31-03-2007 changed : Default background wallpaper + fixed some more issues here and there
+0654 - 31-03-2007 fixed   : Skin Setting (date,time/cpu,ram) lost focus once you used it, changed it to the new method.
+0653 - 31-03-2007 changed : Made some more usage of the available width of the screen, moved buttons left,etc.
+0652 - 16-01-2007 fixed   : My Gamesaves/ My Programs were using hardcoded labels, and didn't translate.
+0651 - 13-01-2007 fixed   : Some issues including the annoying Skin settings page and home shade problem.
+
+<!---------------------- Build 0650 ---------------------->
+0650 - 12-12-2006 changed : Partially updated xmls to the 2.1 xml standard (4x3).
+0649 - 12-12-2006 removed : Unused SettingsUICalibration.xml (4x3/16x9). 
+0648 - 12-12-2006 changed : Partially updated xmls to the 2.1 xml standard (16x9).
+0647 - 12-12-2006 added   : MyVideoNav.xml (library) this is replacing the removed video xmls, similar to music library (4x3/16x9).
+0646 - 12-12-2006 removed : Unused Actor/year/title,etc video XMLS, they are no longer needed.. (4x3/16x9).
+0645 - 12-12-2006 changed : Partially updated skin to support v2.1 skin engine, higher skin version number, references changed to defaults.xml.
+0644 - 12-12-2006 removed : Forgot to remove the CustomGSM.xml that was used for the old GameSave script.
+0643 - 27-11-2006 added   : Game Save Manager (GSM) xml's, you can find it in MyPrograms (4x3/16x9).
+0642 - 27-11-2006 removed : GSM script + script folder, XBMC now handles game save's thru the new Game Save Manager.
+0641 - 26-11-2006 added   : French translation + Language picker for build.bat ..big thanks goes to Juju0.
+0640 - 22-10-2006 fixed   : DialogVolumeBar.xml was misbehaving in high resolutions, they now use the same as PAL.(720p/1080i)
+0639 - 22-10-2006 fixed   : Enable Scanlines Button (customisation.xml) wasn't working, reversed selected state. (16x9)
+0638 - 22-10-2006 fixed   : 720p/1080i fonts were way small, changed fonts.xml of both. 
+0637 - 23-09-2006 changed : Width of ListPanels, also adapted the width of other (radio)buttons in menu's to have it consistant. (4x3/16x9)
+0636 - 21-09-2006 removed : All xpr fonts from fonts and switched over to TTF fonts, this looks nicer.(4x3/16x9/NTSC/NTSC16x9/720P/1080i).
+
+<!---------------------- Build 0635 ---------------------->
+0635 - 17-08-2006 changed : Spincontrols + labels controls in My Weather,switched them now the spincontrol is in front (4x3/16x9).
+0634 - 16-08-2006 fixed   : Custom background packs (xpr) were not working cause of recent changes, now all is good again (4x3).
+0633 - 13-08-2006 fixed   : Classic Settings icons would still animate when the option was turn off in skin options (4x3/16x9).
+0632 - 13-08-2006 added   : Settings button in Weather.xml, for going to weather settings quickly, instead of going to settings (4x3/16x9)
+0631 - 13-08-2006 fixed   : New Settings (Settings.xml) background animation position was not 100% right, now it is (4x3/16x9).
+0630 - 13-08-2006 changed : DialogSubMenu background texture had too much alpha, doubled it now, so it looks a bit better (4x3).
+0629 - 13-08-2006 added   : Home top bar wasn't using a shadow overlay, added the texture to textures.xpr, also renamed/removed some.
+0628 - 13-08-2006 added   : Nofocus texture for the Horizontal ButtonScroller, added to includes/home.xml (4x4/16x9).
+0627 - 13-08-2006 changed : Seperated the menu/bg animation coloring proces, now it's possible to have diffrent colors for both.
+0626 - 13-08-2006 fixed   : The Black title bar images in Weather.xml , some of them used wrong "X" positions (4x3/16x9). 
+0625 - 13-08-2006 fixed   : FileManager (FileManager.xml) background animation position was not 100% right, now it is (4x3/16x9).
+0624 - 11-08-2006 added   : Norwegian to "language" folder --> (includes.xml), thanks to xLoial & Spiff for translations (4x3)
+0623 - 11-08-2006 added   : English + Dutch to "language" folder --> (includes.xml), usage: replace with excisting includes.xml (4x3)
+0622 - 11-08-2006 fixed   : Show Custom slideshow option turned off when an image folder was selected to display (4x3/16x9). 
+0621 - 11-08-2006 changed : Moved animation code from LoginScreen.xml over to includes.xml, saves a bit of code (4x3/16x9).
+0620 - 07-08-2006 fixed   : Onup in Customisation section (customisation.xml), was wrong, changed from "902" to "920" (4x3/16x9)
+0619 - 07-08-2006 fixed   : Default background so it wouldn't be black when the skin first loads, see PDM/media/Default (4x3/16x9).
+0618 - 07-08-2006 changed : <defaultcontrol always="true">5<defaultcontrol> was wrong in Customisation.xml, changed it to "1" (16x9).
+0617 - 07-08-2006 changed : It's now impossible to go to DialogContextmenu while in LoginScreen, cause i'm working on some stuff.
+0616 - 07-08-2006 fixed   : Last loaded info label wasn't showing in SettingsProfile.xml, added new localized label (4x3/16x9).
+0615 - 07-08-2006 changed : <Label>PDM Settings</label> to <include>20125</include> (DialogSubMenu),now it's multi-language (4x3).
+0614 - 07-08-2006 added   : <include>startup-main-bottom</include> to RSS feeds in home.xml so it slides along on startup (4x3/16x9)
+0613 - 07-08-2006 changed : Redid some (icons) Textures, they weren't centered correct, removed unused png's from textures.xpr.
+0612 - 07-08-2006 changed : "Skin Credits" button in settings.xml (classic) to "About XBMC" button, since the window is gone (4x3/16x9)
+0611 - 07-08-2006 fixed   : Rename "My Programs" Label in PDM Options didn't show the string.xml label ($LOCALIZE[0]) (4x3/16x9).
+0610 - 07-08-2006 fixed   : Settings was not multi-language ,labels now use string.xml labels + new labels to includes.xml (4x3/16x9)
+0609 - 06-08-2006 fixed   : Setbool(skin.setting(),"value") on Date,time/CPU/RAM switch wasn't working right, thnx to JMarshall (4x3/16x9)
+0608 - 05-08-2006 fixed   : Menu Background animation wasnt looking great, it now looks the same as the right menu panel (4x3/16x9).
+0607 - 05-08-2006 added   : <visible>!Skin.HasSetting(homebuttons)</visible> to shutdown button, in startup.xml it was missing (16x9)
+0606 - 05-08-2006 added   : Media progressbar to Settings.xml and FileManager.xml cause they were missing (16x9).
+0605 - 05-08-2006 removed : PY Skin Builder button from Settings.xml (classic), cause it isn't really needed anymore (4x3/16x9).
+0604 - 29-08-2006 changed : Shutdown button in LoginScreen.xml back to old behaviour, so it now opens up shutdownmenu (4x3).
+0603 - 02-08-2006 added   : Animation tags to videopreview and cover of Video/MusicOverlay.xml cause it didn't slide along (4x3/16x9).
+0602 - 02-08-2006 added   : !WindowActive(56) to Music/VideoOverlay.xml, to prevent it from overlapping buttons in PDM settings(16x9).
+0601 - 02-08-2006 removed : All unused buttons in settings buttonscroller, this speeds up scrolling (4x3/16x9).
+0600 - 02-08-2006 changed : Weather information in home is now OFF by default, turn it on if you want to use it (4x3/16x9).
+0599 - 02-08-2006 removed : Some fade animations on Logonscreen that weren't visible this improves open animation a bit (4x3/16x9).
+0598 - 02-08-2006 added   : DialogAlbumInfo/DialogVideoInfo were missing some included slide animations (16x9).
+0597 - 02-08-2006 added   : DialogSelect.xml was missing some menu animations aswell included description labels (4x3/16x9).
+0596 - 02-08-2006 added   : Time,Date/CPU,RAM info's to Startup, so the transition between logon>startup>home looks better (4x3/16x9).
+0595 - 02-08-2006 added   : Time,Date/CPU,RAM info's to LogonScreen.xml, cause they were missing there .... (4x3/16x9).
+
+<!---------------------- Build 0594 ---------------------->
+0594 - 31-07-2006 changed : DialogProgress/DialogMusicScan progressbar doesn't slide along with the slidepanel anymore (4x3/16x9).
+0593 - 31-07-2006 changed : Size of DialogOK/DialogYesNo, also centered in the middle now and button width is correct (4x3).
+0592 - 31-07-2006 removed : Visualisation and media progress bar from LogonScreen.xml, cause it's disabled now in XBMC (4x3/16x9).
+0591 - 31-07-2006 added   : always="true" to <defaultcontrol> in Home, this way the buttonscroller has always focus(4x3/16x9).
+0590 - 31-07-2006 changed : The transition between LogonScreen.xml and Startup.xml, it's now more smoother then before (4x3/16x9).
+0589 - 31-07-2006 added   : LogonScreen.xml to PAL16x9 folder, this was needed for 16x9 layout, it simply looks better (16x9)
+0588 - 31-07-2006 changed : Button Icons in DialogButtonMenu.xml were behaving odd, changed animation --> reversible="false" (4x3/16x9)
+0587 - 29-07-2006 changed : Shutdown button in LoginScreen.xml does now XBMC.ShutDown() instead of opening buttonmenu (4x3).
+0586 - 29-07-2006 fixed   : Left buttons were gone when you used "classic" settings in pdm options (Settings.xml)... (16x9)
+0585 - 29-07-2006 changed : Icon animation of "Profile" button layout in DialogButtonMenu.xml, they were a bit off (4x3/16x9) 
+0584 - 29-07-2006 changed : The positions of yes/no buttons in DialogYesNo.xml, also "YES" will be default now when opend (4x3).
+0583 - 29-07-2006 added   : Media progressbar to LogonScreen.xml, since it was missing (4x3/16x9) 
+0582 - 29-07-2006 added   : Media progressbar to Startup.xml, some scripts cause music to play before startup animation (4x3/16x9).
+0581 - 27-07-2006 added   : <onup>10</onup>,<ondown>10</ondown> to all list panels to get back the old onup/down behaviours (4x3/16x9)
+0580 - 20-07-2006 added   : Profile/Logon stuff is now functional, new buttons in buttonmenu, also redid the positions (4x3/16x9)
+0579 - 16-07-2006 changed : The Stretch/Keep aspect option in PDM settings, it was displaced when you used zoom options, etc (4x3/16x9)
+0578 - 10-07-2006 changed : Text Labels of Customisation.xml, moved them over into includes.xml for better translations (4x3).
+0577 - 10-07-2006 changed : PosX of "OK" button in DialogOK.xml cause it wasn't centered in the middle of the dialog (4x3).
+0576 - 03-07-2006 changed : Scanlines in Home are now "Off" by default, this is looks better for video/visualistaion/pics (4x3/16x9)
+0575 - 03-07-2006 changed : PlayerControl.xml, you now have 2 kinds of buttonsize ,bigger ones used in home,smaller in menu's (4x3/16x9)
+0574 - 03-07-2006 added   : <zoom>1.0</zoom> to skin.xml, this is for setting the default zoom amount of the skin.
+0573 - 03-07-2006 changed : Weather option is now "ON" by default, it will also hide when you open PlayerControl in Home (4x3/16x9).
+0572 - 03-07-2006 fixed   : WARNING: Skin has invalid include: menu-effect2, this was still in some of the windows (4x3/16x9).
+0571 - 03-07-2006 fixed   : WARNING: Skin has invalid include: menu-effect, this was still in some of the windows (4x3/16x9).
+0570 - 02-07-2006 fixed   : GameSave Manager script was not working, big thanks to Donno for fixing, also supports for thumbs now.
+0569 - 02-07-2006 changed : Show ListItem Thumb option is now "ON" by Default, music cover will show when inactive for 5 sec (4x3/16x9)
+0568 - 01-07-2006 added   : Menu BG animation.. this is not final though, just for testing functionality purpose (4x3/16x9).
+
+
+<!---------------------- Build 0567 ---------------------->
+0567 - 29-06-2006 added   : <visible>Weather.IsFetched</visible> to weather controls in Home.xml (4x3/16x9).
+0566 - 29-06-2006 added   : ProfileSettings.xml, LockSettings.xml to PAL because they were missing from the skin structure.
+0565 - 29-06-2006 fixed   : Horizontal ButtonScroller wasn't obeying the hide option, now it does hide after 5sec if option is on.
+0564 - 29-06-2006 fixed   : Buttons of old settings.xml weren't using the slide animations, also not in Profiles.xml (4x3).
+0563 - 29-06-2006 fixed   : Network Label on wrong position in SystemInfo.xml, also removed "build" label it was in twice (4x3). 
+0562 - 29-06-2006 changed : Moved animations of buttonmenu icons back into DialogButtonmenu.xml, done this cause they change positions.
+0561 - 29-06-2006 added   : Support for MasterLock, added new controls + new images to the skin ..(dialogbuttonmenu.xml) (4x3).
+0560 - 25-06-2006 fixed   : Section Labels in Customisation.xml were not using the right visibility tags (4x3).
+0559 - 25-06-2006 added   : You can now switch between horizontal or vertical ButtonScroller in Home.xml (4x3).
+0558 - 25-06-2006 changed : Customisation.xml now uses ControlGroup().HasFocus(), this saves code aswell in includes.xml (4x3)
+0557 - 25-06-2006 changed : Home Sub-buttons weren't moving along with the startup animation, added includes in includes.xml (PAL).
+0556 - 25-06-2006 changed : Menu's now support animation on windowOpen/Close, same as PM3, but it can be changed.. as long as it works.
+0555 - 25-06-2006 changed : Posx of rightpanel overlay in menu's, it was off by 2 pixels moved it to the right in includes.xml (PAL).
+0554 - 25-06-2006 changed : The way the menu's are build, located most of it over to includes, this saves kb's per xml(PAL/PAl16x9). 
+0553 - 25-06-2006 changed : Code optimailisations, TABs instead of spaces, saves few kb's per xml, (PAL/PAL16x9).
+0552 - 19-06-2006 changed : Description Labels are now off by default, you can turn them on in PDM options "Menu Options".
+0551 - 05-06-2006 changed : XBMC.Reload()to XBMC.RestartApp()in DialogButtonMenu.xml,(reload button to restart XBMC button ) ,PAL,PAL16x9
+0550 - 31-05-2006 changed : normal buttons to radiobutton wich use the new <selected> tag in Customisation.xml,this saves some filesize. 
+0549 - 27-05-2006 fixed   : VolumeBar wasn't displayed correct in 720p, added DialogVolumeBar.xml to PAL16x9..thanks to Loto_Bak.
+0548 - 18-05-2006 fixed   : WARNING: Skin has invalid include: listselectedcolor (MyMusicNav.xml) (PAL).
+0547 - 18-05-2006 fixed   : WARNING: Skin has invalid include: menu-animation, this was still in myprograms.xml (PAL).
+0546 - 05-05-2006 fixed   : Issues with Play button in MusicOSD, added Player.Paused | Player.Forwarding | Player.Rewinding (PAL,PAl16x9).
+
+<!---------------------- Build 0545 ---------------------->
+0545 - 29-04-2006 fixed   : Home Top-image didn't match the once used in the menu's, moved them up by 2 pixels from -180 to -182 (4x3,16x9)
+0544 - 29-04-2006 changed : Playlist button from myvideo/actors/genre/title/year to IMDb button, ... (PAL4x3,PAL16x9).
+0543 - 29-04-2006 changed : Stack button in "My Videos" ,changed it from a normal button to a radiobutton,(4x3,16x9).
+0542 - 29-04-2006 removed : Playlist button from "My Videos" cause this isn't really needed, press (black) button to goto playlist.
+0541 - 29-04-2006 removed : Search button from "My Music" because this option is allready in the contextmenu..(PAL,PAL16x9).
+0540 - 29-04-2006 fixed   : TrainerSettings slidepanel didn't had a background image cause of recent changes (color), added a texture to xml.
+0539 - 27-04-2006 fixed   : Some textures of Game save manager (16x9) weren't using the right 16x9 textures, but the 4x3 ones.
+0538 - 27-04-2006 added   : New buttons for Game Save Manager Window to Textures.xpr, there was no shadow on them from the right menu panel.
+0537 - 27-04-2006 changed : Labels of Music/VideoOverlay, InfoBar, etc, to use the new Label Parsing..
+0536 - 27-04-2006 added   : Notification message on PDM Options "Reset Skin Settings" button, when using the option, it will show a message.
+0535 - 27-04-2006 added   : Slide animation to buttonmenu in Xlink KAi window (MyBuddies.xml), it now moves in from the right (4x3,16x9)
+0534 - 26-04-2006 fixed   : Xlink Kai Button in home page wasn't obeying the startup procedure,changed some animations in includes.xml.
+0533 - 26-04-2006 fixed   : Xlink Kai (PAL16x9) was missing textures, also needed to change the order of certain buttons. 
+0532 - 25-04-2006 fixed   : Not all info Slidepanel were looking the same (KAiToast,DialogProgress,MusicScan etc), moved labels a bit. 
+0531 - 25-04-2006 added   : Multiple option button for Time,Date/CPU,RAM information in PDM Options >> Home Options, (includes/other xmls).
+0530 - 24-04-2006 fixed   : Object Number descriptions in "My Files" (FileManager.xml) weren't on the right "Y" position, up by 3 pixels.
+0529 - 24-04-2006 fixed   : Progress overlay image size wasn't correct, changed image lenght from 256 to 291 pixels in textures.xpr.
+0528 - 24-04-2006 changed : The Slidepanel background of Contextmenu/Filebrowser, they now change color like the menu's (4x3,16x9).
+0527 - 24-04-2006 fixed   : MyPrograms.xml Window description label wasn't changing when you changed the "My Programs" label in PDM options.
+0526 - 22-04-2006 fixed   : Menu button animations were visible under the right menu panel, When using transperacy in menucolors.
+0525 - 22-04-2006 fixed   : SettingsCatagory Buttons were not under the right menu panel, so the shadow was not visible (4x3,16x9).
+0524 - 22-04-2006 fixed   : SettingsCatagory list wasn't on the right y position, moved it up 6 pixels, so it matches all other hights.
+0523 - 22-04-2006 fixed   : MyWeather.xml black top bars were missing, renamed the old textures to new name (PAL16x9). 
+0522 - 20-04-2006 changed : Compressed all textures with the new XBMCTex.exe, this one is more efficient, and it will reduce memory usage.
+0521 - 20-04-2006 fixed   : System infoBar, Time/Date, Description label wasn't showing in Settings.xml, changed control order (4x3,16x9).
+0520 - 20-04-2006 changed : DialogButtonMenu.xml buttons were behaving strange when navigating a bit fast, removed typo from the code.
+0519 - 20-04-2006 added   : XBMC Logo now changes colors depending on the menu color, you can set this in includes (4x3,16x9).
+0518 - 20-04-2006 fixed   : List/Thumb panel of MyMusicNav.xml wasn't on the right position, moved it up by 5 pixels (4x3,16x9).
+0517 - 20-04-2006 fixed   : Buttons were not under the right menu panels so shade was not visible, changed positions of certain controls.
+0516 - 20-04-2006 changed : Button animation on button7 wasn't working correct, changed the animation in includes.xml (wrong posy).
+0515 - 19-04-2006 changed : DialogProgress.xml, made it look the same as DialogMusicScan.xml moved progressbar and added slidepanel.
+0514 - 19-04-2006 changed : Selectbutton for My Music Songs in "Library" to a normal button that replaces the window with other window.
+0513 - 19-04-2006 changed : Moved List/Thumb panel up by 5 pixels, so the list-focus doesn't get off the panel anymore (4x3,16x9).
+0512 - 19-04-2006 changed : Selectbutton for library in "My Music" to a normal button that replaces MusicSongs window with Library window.
+0511 - 19-04-2006 removed : Old PDM buttons, added PM3 buttons and moved them up, so now theres more space for more buttons.
+0510 - 19-04-2006 added   : New Menu panels (left/right) you can change the panel color to anything you like in includes.xml (4x3,16x9).
+0509 - 15-04-2006 added   : Animation to DialogMuteBug.xml, this is the icon you see when muting the sound, added a zoom effect (4x3,6x9).
+0508 - 15-04-2006 fixed   : Xlink Kai button in Home wasn't obeying the startup procedure, changed some tags and added new code (4x3,16x9) 
+0507 - 15-04-2006 added   : Transperacy <colordiffuse> to Buttons controls of DialogButtonMenu.xml, the rest was allready done (4x3,16x9).
+0506 - 14-04-2006 changed : Gamesavemanager.py script so that it looks like all the other PDM windows, Big thanks to Donno for fixing !!!.
+0505 - 14-04-2006 added   : SaveGames button to ButtonScroller, it's needed to start the python script (PAL/PAL).
+0504 - 14-04-2006 added   : Gamesavemanager.py to PDM scripts folder, this is a python script made by Donno, for managing your game save's.
+0503 - 14-04-2006 changed : Location of DialogButtonMenu.xml animation to includes.xml, for better maintenance and changes to PAL/PAL16x9.
+0502 - 14-04-2006 changed : DialogButtonMenu.xml, other button textures,.. transperacy to certain inmages,.. added animated icons.
+0501 - 12-04-2006 added   : New set of textures to Texture.xpr file, they are needed for usage in DialogButtonMenu.xml.
+0500 - 11-04-2006 removed : Custom3.xml (PY Skin Builder) cause who needs that anyways, also removed the button in Settings.xml
+0499 - 03-04-2006 added   : Startup.xml to PDM skin files, moved CustomHome stuff back to Home.xml,(black button for options work again).
+0498 - 03-04-2006 added   : StartUp slidepanels images to Textures.xpr, they are gonna be needed for the StartUp animation (PAL16x9).
+0497 - 03-04-2006 added   : StartUp Slide animation is now working, It will only be visible when you reboot your Xbox (PAL,PAL16x9).
+0496 - 03-04-2006 added   : <textoffsetx>-12</textoffsetx> to Cast list Control this looks better in DialogVideoInfo.xml (PAL,PAL16x9).
+0495 - 03-04-2006 added   : Spincontrols for textarea in DialogVideoInfo.xml..because they were missing (PAL,PAL16x9).
+0494 - 03-04-2006 added   : Cast list wasn't working in DialogVideoInfo.xml added a control for it (PAL,PAL16x9)...thanks to deanrparry.
+0493 - 03-04-2006 added   : Spincontrols for textarea in DialogVideoInfo.xml..because they were missing (PAL,PAL16x9).
+0492 - 03-04-2006 changed : Moved Home.xml code over to new CustomHome.xml, this is neccasery for the startup procedure to work correct.
+0491 - 03-04-2006 added   : StartUp slidepanels images to Textures.xpr, they are gonna be needed for the StartUp animation (PAL).
+0491 - 03-04-2006 added   : Option for Scanlines in home, PDM Options >> Home Options >> Enable Scanlines overlay (PAL,PAL16x9).
+
+<!---------------------- Build 0490 ---------------------->
+0490 - 28-03-2006 changed : Menu Backgrounds are now 2% transperant, so when you use visualisation in menu's you still see it a little bit.
+0489 - 28-03-2006 changed : Thumbpanel (4x3) back to PM3 layout, this way Big Icons are bigger than they were before + all looks better.
+0488 - 28-03-2006 changed : Placed time/date controls into includes.xml, this is better for maintance, also saves 3 controls per xml.
+0487 - 28-03-2006 changed : VisualisationPresetList.xml wasn't obeying animation time given in includes,.. added <include> tag.
+0486 - 27-03-2006 changed : Fade time for MultiImages in home, now the fadout time will take longer than the fadeIn, this looks nicer. 
+0485 - 24-03-2006 changed : Buttonscroller did only hide when not focused, now it hides when focused (only if you enable the option).
+0484 - 23-03-2006 changed : MyBuddies.xml was still using <keepaspectratio> tags, also added some <visible> tags to images (4x3,16x9).
+0483 - 23-03-2006 fixed   : Default icons were not correct, defaultplaylist.png, defaultaudio.png, etc .. now it's synchronised with CVS. 
+0482 - 23-03-2006 removed : Xored Trainer DVD cover image used by TrainerSettings.xml, cause it doesn't really fit into the slidepanel.
+0481 - 23-03-2006 fixed   : SpinControlx images were not working in TrainerSettings.xml, changed images (.png to .gif).. and now they do.
+0480 - 22-03-2006 fixed   : Vertical Volume was behaving a bit weird when doing the WindowClose animation, added a new WindowClose tag.
+0479 - 22-03-2006 changed : TrainerSettings.xml now uses the same slidepanel as the ContextMenu, so it all looks more intergrated into PDM.
+0478 - 22-03-2006 added   : Thumb Image for Unwatched video files (OverlayUnwatched.png), cause it was missing from the textures.xpr file.
+0477 - 22-03-2006 fixed   : Buttons in MyVideoPlaylist used wrong "y" positions, removed "shuffle" cause randomize does the same (4x3,16x9).
+0476 - 20-03-2006 added   : Attribute: unicode="" to Font.xml (PAL,720p,1080i), for better support for languages with none latin characters.
+0475 - 20-03-2006 changed : Buttons in "PDM Options" now stay highlighted when navigating trough the options, changed them to togglebuttons.
+0474 - 20-03-2006 changed : Media Options in "PDM Options" a bit, so it makes more sense now, also added a video preview option for Home.
+0473 - 20-03-2006 fixed   : DialogKeyboard.xml (Virtual Keyboard) wasn't working correct, changed up/down/left,etc numbers of certain keys.
+0472 - 18-03-2006 changed : Music/VideoOverlay.xml labels now show info's from the language string using $LOCALIZE[] tags (includes.xml).
+0471 - 17-03-2006 added   : Skin.String() to PDM Options "Customisations">>"My Programs" label so it change if you change "MyProgram" label.
+0470 - 17-03-2006 changed : PDM Options "Customisations" now use the right language string value's so they will show in the right language.
+0469 - 17-03-2006 fixed   : Option for changing "My Programs" to whatever you want is now working (needs latest XBMC build to work correct).
+0468 - 17-03-2006 changed : Option for Video Preview usage in menu's is now "ON" by default..when you play a movie file and invoke. 
+0467 - 17-03-2006 changed : Several Home Images for My Pictures and My Videos Home sections, also added a new 
+0466 - 17-03-2006 changed : Decreased image sizes of all Progress bars, .. from 291 to 256 so they will take less memory now. 
+0465 - 17-03-2006 fixed   : ContextMenu Slide Panel was using to much space in "My Files", added conditional animation to ContextMenu. 
+0464 - 17-03-2006 fixed   : Media Progress in home was not using the whole screen width, moved posx a bit to the left and changed width.
+0463 - 17-03-2006 fixed   : System Info label was not using the whole screen width, now it does just like the other one (RSS).
+0462 - 17-03-2006 changed : Textcolor of all controls are now handled by includes.xml, rather than independant colors per control.
+0461 - 15-03-2006 added   : OverlayWatched.png, this is the overlay image for showing wich movie you allready have seen.
+0460 - 14-03-2006 fixed   : Spincontrol of VideoOSDBookmarks.xml was incorrect (of the panel), changed PosY from "310" to "240" (PAL).
+0459 - 14-03-2006 fixed   : Music Library label was missing, added a control that uses the right id to MyMusicNav.xml (PAL,PAL16x9).
+0458 - 13-03-2006 changed : SlidePanel Image used by ContextMenu /FileBrowser, made it 5% Transperant..so you can see whats underneath it.
+0457 - 13-03-2006 changed : MusicScan Path Label on the SlideBar was to long, changed width from "300" to "280" (PAL).
+0456 - 13-03-2006 fixed   : Blue round Info icon on Slide Panel was not 16x9,.. added <aspectratio>keep</aspectratio> (PAL16x9).
+0455 - 13-03-2006 fixed   : ListItem.Icon of MyScripts (PAL16x9) was looking odd, not 16x9, added <aspectratio>keep</aspectratio>.
+0454 - 12-03-2006 changed : DialogMusicScan back to the way it was, and moved the Progress a bit so it looks the same as the Home progress.
+0453 - 12-03-2006 fixed   : Music Cover/info was visible in SettingsUICalibration.xml, changed <allowoverlay> "yes" to "no" (PAL,PAL16x9).
+0452 - 12-03-2006 fixed   : Video cover wasn't shown in Home when playing a video file, changed <aspectratio> "scale" to "keep" (4x3,16x9).
+0451 - 12-03-2006 fixed   : Section Label in SettingsSystemInfo.xml wasn't visible, it was under the BG.. moved label above it.(4x3,16x9).
+0450 - 11-03-2006 added   : Randomize button to MyMusicPlaylist.xml & MyVideoPlaylist.xml cause they were missing (PAL,PAL16x9).
+0449 - 11-03-2006 fixed   : Settings menu wasn't obeying the fade out effect when using Menu Vis, added <include>menueffect</include>.
+0448 - 11-03-2006 removed : <timeperimage>,<fadetime>,<randomize> of MultiImages in Home.xml (4x3,16x9), and moved them into includes.xml.
+0447 - 11-03-2006 removed : Font,textcolor,align,scroll tags of SystemStatBar in all xml's, and moved them over into in includes.xml
+0446 - 11-03-2006 fixed   : Menu Buttons were not fading away when using Visualisation in Menu's, changed the <include> order in all xml's.
+0445 - 11-03-2006 fixed   : DVD Covers that are shown when using Info in VideoFullScreen.xml (PAL) were not displayed in the correct size.
+0444 - 11-03-2006 fixed   : Black Info Panel shown in VideoFullScreen.xml (white button) was not displaying correct.
+0443 - 11-03-2006 removed : PM III ChatPanel image from Xlink KAI, also changed the height of the Chat Console a bit to fit better.
+0442 - 11-03-2006 fixed   : Music Covers in MusicVisualisation.xml and SlideShow.xml (PAL16x9) were not shown in the right size.
+0441 - 11-03-2006 fixed   : When using Music Info in Home (PAL16x9) the Cover wasn't shown, removed the <aspectratio>scale</aspectratio>.
+0440 - 11-03-2006 fixed   : Covers/Previews were over buttons in SettingsCatagory (16x9), visible in menu's with less than 5 buttons.
+0439 - 11-03-2006 fixed   : Covers in DialogAlbum/VideoInfo.xml (4x3,16x9) were not correct, also changed posx of labels a bit to the left.
+0438 - 11-03-2006 added   : Button effects to DialogMusic/VideoInfo.xml aswell as DialogSelect.xml, cause they hadn't any effects.
+0437 - 11-03-2006 fixed   : DialogMusicInfo.xml was using the wrong discription label (My movies) changed to the correct label.
+0436 - 11-03-2006 added   : <aspectratio>keep</aspectratio> to Cover images in DialogMusic/VideoInfo's.
+0435 - 10-03-2006 changed : Home and Menu Top and Bottom Images were not looking very good, (no Anti-Anialising), used a minor blur effect.
+0434 - 10-03-2006 added   : <shadow>ff000000</shadow> tags to Font.xml (720,1080), cause they didn't use it like PAL,PAL16x9 allready did.
+0433 - 09-03-2006 added   : New Option for enable/Disable the Video Preview in PDM Options..visible when you invoke a fullscreen movie.
+0432 - 09-03-2006 added   : New Buttons (Resume, GetThumb) for DialogVideoInfo.xml, and (GetThumb) for DialogAlbumInfo.xml.
+0431 - 09-03-2006 removed : All unused ID tags from all xml's (PAL,PAL16x9), mainly ID0 and ID1 (used for images and labels).
+0430 - 08-03-2006 fixed   : Images in scrolling button scrollers only show when scrolling has completed,...CVS fix on (06-03-2006). 
+0429 - 08-03-2006 changed : The looks of the old ContextMenu and intergrated it more into the PDM menu style, also added a slide effect.
+0428 - 08-03-2006 fixed   : Changed a couple of big Images in Textures, they wil now save some MB's (2MB's in Home, 1MB for each Menu).
+0427 - 06-03-2006 fixed   : Home Background aspect ratios were not correct when playing music, some code was missing in includes.xml.
+0426 - 06-03-2006 changed : FileBrowser, now has an own slide-in panel that fits a bit better into PDM style than the old browser did.        
+0425 - 03-03-2006 fixed   : Slide animation on the ButtonScroller gradient wasn't going well, changed slide effect to fade effect.
+0424 - 03-03-2006 changed : <selectedcolor> tags in references.xml to <include>selectedcolor</include>, added an entry to includes.xml
+0423 - 03-03-2006 fixed   : Default SpinControl wasn't really looking right in PAL16x9, changed the control width from 15 to 11.
+0422 - 03-03-2006 fixed   : RadioButton wasn't obeying the fade time settings that were in includes.xml, changed include order in controls.
+0421 - 03-03-2006 changed : <keepaspectratio> to <aspectratio> in MusicVisualisation.xml ,SlideShow, VideoFullScreen.xml on covers.
+0420 - 03-03-2006 changed : <Window.IsActive()> tags that were in "Classic Settings" to <XBMC.ActivateWindow()>, now they work again.
+0419 - 02-03-2006 changed : <keepaspectratio>true</keepaspectratio> to <aspectratio>scale</aspectratio> (Classic Settings images 4x3).
+0418 - 02-03-2006 changed : <keepaspectratio>false</keepaspectratio> to <aspectratio>stretch</aspectratio> (Classic Settings images 16x9).
+0417 - 02-03-2006 changed : <keepaspectratio>true</keepaspectratio> to <aspectratio>scale</aspectratio> on all Video Preview controls.
+0416 - 02-03-2006 changed : <keepaspectratio>true</keepaspectratio> to <aspectratio>scale</aspectratio> on XBMC logo (PAL,PAL16x9)
+0415 - 02-03-2006 changed : Enable Video/Music Information in Home is now default off in PDM options >> Media Options (black in home).
+0414 - 02-03-2006 changed : Use Alphabetical keyboard layout is now default on in PDM options (black in home) as is usage of Button Effect.
+0413 - 02-03-2006 fixed   : Custom multiimages weren't showing up in the right sizes, changed <keepaspectratio> tags to <aspectratio>.
+0412 - 02-03-2006 changed : The Customization section in PDM Options, cause the old one was absorbing to much memory and didn't run well.
+0411 - 02-03-2006 changed : System InfoBar and RSS are now default off in PDM options (black in home), enable if you want to use them. 
+0410 - 02-03-2006 changed : Removed visibility tags of all dialogs and moved code over to includes.xml for easy changing all dialogs.
+0409 - 02-03-2006 changed : Removed all instances of <hyperlink> (2.0 compatible), and replaced them with the new <onclick> tags. 
+0408 - 01-03-2006 changed : Button animation for Focus/UnFocus was still on when option was turned off, added condition to visibility tag.
+0407 - 01-03-2006 added   : <info>Skin.String()</info> to all multiimages in Home.xml (4x3,16x9), they are now changable in "PDM Options".
+
+<!---------------------- Build 0406 ---------------------->
+0406 - 28-02-2006 changed : Bar in MyWeather.xml wasn't on the right position, moved it 10 pixels to the left and changed width (4x3,16x9)
+0405 - 28-02-2006 removed : Old keyboard image from the textures.xpr file, also removed/changed a few other unused images.
+0404 - 28-02-2006 fixed   : Sort up/down wasn't working in "Sort by" buttons, controls (id3/4) were using the wrong id's for onright/onleft
+0403 - 28-02-2006 added   : New Discription Labels to "PDM Options" , they change depending on wich section you focus.
+0402 - 28-02-2006 added   : A new set of Backgrounds to Textures.xpr mainly for "My Movies" section in Home, also one for Scripts.
+0401 - 28-02-2006 changed : Visibility tags of dialogs to <include>dialog</include> and moved visibility code over into includes.xml.
+0400 - 27-02-2006 added   : A "Button Effect" switch to PDM Options >>"Menu Options", for switching the button animation on/off.
+0399 - 27-02-2006 added   : A reset switch to PDM Options >>"Other Options", for switching the skin settings back to default settings.
+0398 - 25-02-2006 fixed   : MusicInfo (white) Playlist "Track" label was still visible in SlideShow.xml, ..when not playing any Audio.
+0397 - 24-02-2006 fixed   : DialogScriptInfo.xml discription label was not showing up, it used the wrong visibility tag..missing "!".
+0396 - 24-02-2006 changed : VideoOSDBookmarks,VideoOSDSettings.xml "Y" position from 160 back to 110..OSD BG from 326 to 320.
+0395 - 24-02-2006 changed : MusicOSDVisSettings.xml,VisualisationPresetList.xml from 160 to 110..OSD BG from 326 to 320 to better fit.
+0394 - 24-02-2006 removed : Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) visible tags from the DialogSeekBar.xml (includes.xml).
+0393 - 24-02-2006 added   : Progress control to MusicVisualisation.xml, SlideShow.xml, VideoFullScreen.xml media info's (white).
+0392 - 24-02-2006 added   : <wrapmultiline>true</wrapmultiline> to MyWeather.xml General Labels, removed <texturefocus> & <texturenofocus>.
+0391 - 24-02-2006 added   : A new left-Panel image to Textures.xpr ,it's used only by dialogs and isn't transparent like the other panel.
+0390 - 23-02-2006 changed : DialogKeyboard.xml was using the wrong fade times, changed from 2000 to 200 milli sec. for WindowOpen/Close.
+0389 - 23-02-2006 added   : ThumbPanel (control id 451) to FileBrowser.xml.. for showing Pics in selected folders (not yet in cvs).
+0388 - 23-02-2006 added   : New <info>Skin.String(test1)</info> tag to Home.xml (PAL,PAL16x9) for new option in "PDM Options".
+0387 - 23-02-2006 changed : Spincontrol size for PAL16x9.. they seemed out of porportion, changed it in References.xml from 18x16 to 15x15.
+0386 - 23-02-2006 added   : Progress (control id 403) to DialogMusicscan.xml slide panel for indicating the progress of the scanning
+0385 - 23-02-2006 added   : Animations to menu buttons, they will only slide in when a window is opened (4x3, 16x9)
+0384 - 23-02-2006 fixed   : PM3 background showing up in MyWeather.xml (16x9).. changed control back from image to button.
+0383 - 21-02-2006 removed : <shadowcolor>ff000000</shadowcolor> tag from DialogVideoInfo.xml, cause it's allready in Font.xml.
+0382 - 21-02-2006 added   : New tag: <defaultcontrol always="true">id</defaultcontrol> to DialogButtonMenu.xml (PAL, PAL16x9).
+0381 - 21-02-2006 added   : Party Mode, for Audio..changed/added Random/Repeat buttons,(MyMusicNav, MyMusicPlaylist in PAL and PAL16x9).
+0380 - 21-02-2006 fixed   : Xbox Crash when in PDM Options and menu was inactive for 30sec (playing music + menu-Visualisation).
+0379 - 21-02-2006 fixed   : End Position of DialogVolumeBar.xml wasn't correct when doing the slide effect in PAL16x9.
+0378 - 21-02-2006 removed : Custom5.xml (PAL, PAL16x9), it was used by PM3 Settings menu,..Moved code over to Settings.xml.
+0377 - 21-02-2006 fixed   : PM3 Settings menu wasn't working when switching it on in PDM Options, (Thanks to JMarshall for mental suport).
+0376 - 20-02-2006 added   : New set of backgrounds for My Pictures,My Weather,My Music in Texture.xpr, removed: Weather/Profile-icons.
+0375 - 20-02-2006 changed : Weather labels as labels not buttons.(PAL,PAL16x9).
+0374 - 20-02-2006 fixed   : ERROR unable to load:Q:\skin\PDM\pal\MyVideoPlaylist.xml, Line 144 Error reading end tag (MyVideoPlaylist.xml).
+0373 - 19-02-2006 added   : A switch for Settings menu, you can choose between "PDM Style" or "Classic style (PM3)" in PDM Options.
+0372 - 19-02-2006 fixed   : Qwerty/ABC Keyboard layout switch in PDM Options is working, thanks to Jmarshall for fixing (18-02-2006). 
+0371 - 19-02-2006 changed : Music/VideoOverlay and List.Item Background, added a sort of shadow to them.
+0370 - 19-02-2006 changed : MusicOSDVisSettings.xml,VisualisationPresetList.xml from 116 to 160, cause they were under the slidebar.
+0369 - 18-02-2006 changed : VideoOSDBookmarks.xml,VideoOSDSettings.xml "Y" position from 116 to 160, cause they were under the slidebar.
+0368 - 18-02-2006 Removed : Weather icon in MyWeather.xml,  cause it really hasn't got any function what so ever. 
+0367 - 18-02-2006 changed : Info panels in MyWeather.xml, they were using buttons as background, now they are square (PAL,PAL16x9). 
+0366 - 18-02-2006 fixed   : Fade time of options in "PDM Options" where taking to long to become visible, made a new includes.xml entry.
+0365 - 17-02-2006 changed : Music/VideoOverlay.xml Media Info Labels to better fit within the [ and ]'s, for PAL16x9..,4x3 seems okay.
+0364 - 17-02-2006 fixed   : When changing the movie aspect ratio with the Y-button.... it doesn't show ratio info (VideoFullScreen.xml).
+0363 - 17-02-2006 added   : List.Item Thumbs code to MyMusicNav.xml for PAL4x3 and PAL16x9, cause it was missing.
+0362 - 16-02-2006 added   : Empty "Home pictures" folders to skin/media .. for people who want to add-in there own set of images.
+0361 - 16-02-2006 fixed   : State of LibView wasn't remembered, when going from MyMusic to Home and back to MyMusic again.
+0360 - 15-02-2006 changed : VideoOSD.xml (16x9) <execute></execute> tags to the new favorite tag <onclick></onclick>.
+0359 - 15-02-2006 changed : Old visibility code in MusicOSDVisSettings.xml,VideoOSDBookmarks.xml and VideoOSDSettings.xml (PAL) to new.
+0358 - 15-02-2006 changed : Position of button Info text in Settings, cause it was slightly out of place.. moved labels 2 pixels down.
+0357 - 15-02-2006 fixed   : Video Preview in Menu back wasn't working (black screen), added the right visibility tags to the video control.
+0356 - 15-02-2006 updated : Bumped up the skin version number from v1.99 to v2.00, since the skin system bug bashing has begon.
+0355 - 15-02-2006 changed : Moved "Media info" label code from MusicOverlay and VideoOverlay to includes.xml,..for easy changes.
+0354 - 15-02-2006 added   : Buttonscroller to Settings.xml, added slide effects to icons,icons size correct in 4x3,16x9. 
+0353 - 15-02-2006 added   : DialogMediaSource.xml and DialogNetworkSetup.xml to PDM skin, this was added to cvs on (13-02-2006).
+0352 - 14-02-2006 changed : DialogNumeric , added <disabledcolor>FFFFFFFF</disabledcolor> and changed <textcolor>FFff9600</textcolor>
+0351 - 14-02-2006 added   : IP Address button to the keyboard, added new control to DialogKeyboard.xml. 
+0350 - 13-02-2006 changed : Visualisation in menu backgrounds, changed the option for it, it's now in "media options", vis in menu's.
+0349 - 13-02-2006 changed : Font used in References.xml <spinfont> to match up with object count fonts (font10).
+0348 - 13-02-2006 fixed   : MusicOverlay.xml label issue (16x9), "[" in label was not visible, changed the positions.
+0347 - 11-02-2006 added   : Videoplayer.playlistlength and Videoplayer.playlistposition to VideoOverlay.xml.. for people who want this.
+0346 - 10-02-2006 added   : List Thumbs will be visible for 5 sec. after that the cover (When playing media and using List.Item Thumbs).
+0345 - 10-02-2006 changed : Moved home sub-buttons, music and video info visibility tags into includes.xml.
+0344 - 08-02-2006 changed : Slide panels (volumeBar,SeekBar) drop-in/out times from 500 milli seconds to 250, now you see what you config.
+0343 - 08-02-2006 changed : Button texture "button-focus.png" used by VideoOSDBookmark.xml to "button-focus-dialog.png".
+0342 - 08-02-2006 fixed   : Several issue's in VideoOSDSettings.xml, when a slider was focused it dissapeared.
+0341 - 07-02-2006 updated : Bumped up the skin version number from v1.90 to v1.99.. 
+0340 - 07-02-2006 changed : Moved common used visibility tags of Home backgrounds into includes.xml, saves a lot of code.
+0339 - 07-02-2006 changed : All Skin.HasSetting(videoinfo) to Skin.HasSetting(video-info).eg DialogVideoOverlay.xml, Home.xml.
+0338 - 07-02-2006 changed : All Skin.HasSetting(musicinfo) to Skin.HasSetting(music-info).eg DialogMusicOverlay.xml ,Home.xml.
+0337 - 07-02-2006 fixed   : ButtonMenu (16x9) wasn't really 16x9, changed DialogButtonMenu.xml aswell as DialogFileStacking.xml.
+0336 - 07-02-2006 added   : Multiimage for all backgrounds in Home.xml, they switch after 10 seconds and fade time is 2000 milli sec.
+0335 - 07-02-2006 removed : Skin options in Settings that are now in PDM Options, added the media cover back to display in settings (4x3).
+0334 - 05-02-2006 added   : New <spinfont> tag to References.xml for PAL(4x3 & 16x9), for more consistancy when switching view:list/icon.
+0333 - 05-02-2006 fixed   : Black screen in Home (16x9) when returning back from playing video file in myvideo, issue with Home.xml code. 
+0332 - 02-02-2006 changed : Split up "media options" option "Visualisation" into one for Home and one for Menu's.
+0331 - 02-02-2006 fixed   : No System InfoBar in Filemanager.xml when set option was on, changed the visibility code, and now it is.
+0330 - 02-02-2006 changed : Text labels of PDM options, some where using old names, and were a bit confusing.
+0329 - 02-02-2006 changed : Intergrated often used code to includes.xml (like sysinfo label,visible tags of list.item thumbs,etc).
+0328 - 02-02-2006 fixed   : List.Item Thumbs were visible even when not using lists, added visibility tags to them.
+0327 - 02-02-2006 fixed   : List.Item Thumbs were gone when "Music Info" was disabled and audio was playing, changed visibility tag. 
+0326 - 01-02-2006 fixed   : Cover of playing media wasn't obeying "Music Info" and "Video Info" when those options were disabled.
+0325 - 01-02-2006 changed : Music/VideoOverlay.xml (4x3,16x9) is visible in PDM options, cause there's enough space now.
+0324 - 01-02-2006 changed : PDM Options (black button in Home), made 4 new sections (Home,Menu,Media options) that contain the options.
+0323 - 01-02-2006 changed : All Skin.HasSetting(homevis) tags to Skin.HasSetting(home-visualisation/menu-visualisation).
+
+<!---------------------- Build 0322 ---------------------->
+0322 - 31-01-2006 fixed   : SpinControl is missing in menu's when using "view:List",..changed Listcontrol spin x,y position.
+0321 - 31-01-2006 changed : Multiimage <fadetime> set from 200 to 2000 for picture slideshow in home, this seems smoother.
+0320 - 31-01-2006 added   : DefaultAlbumCover.png to Music List.Item Thumbs, so when playing music without cover it will display.
+0319 - 31-01-2006 fixed   : Xlink Kai wasn't obeying Menu Vis like the rest of menu's, added <include> tags were needed (4x3,16x9).
+0318 - 31-01-2006 fixed   : There were some issues with Xlink Kai menu in (16x9), it was starting with a blank screen.
+0317 - 31-01-2006 fixed   : Scanlines in menu backs were gone when visualisation option was enabled, it is now under the menu panel.
+0316 - 31-01-2006 changed : Onleft/onright/onup of Shutdown and Reload Button in ButtonMenu.xml, also changed the reload image.
+0315 - 31-01-2006 removed : System Info button and BG from the buttonscroller, because it is allready in the ButtonMenu (R-Thumbstick).
+0314 - 31-01-2006 fixed   : Home Backgrounds wheren't visible if Home Visualistion was turn off in PDM options, changed visible tag.
+0313 - 30-01-2006 removed : <include> tag from SettingsCatagory.xml controls, cause some strange button appeared under the text.
+0312 - 30-01-2006 added   : Background panel for List.Items Thumbs, it uses a standard one and one special for DVD covers.
+0311 - 30-01-2006 fixed   : List.Items Thumbs wheren't using the right size for 16x9, keep aspect ratio is set to treu.
+0310 - 30-01-2006 added   : List.Items Thumbs for video files (4x3,16x9), also added it to scripts.xml and MyPrograms.xml.
+0309 - 30-01-2006 removed : My Games,Programs, Emulator buttons from MyPrograms menu, use "b"/"red" button to goto those options. 
+0308 - 29-01-2006 changed : Panel image of DialogButtonMenu.xml, also did the one for FileStacking.xml, they now match.
+0307 - 29-01-2006 changed : System.IdleTime of Menu Vis drop in, set time from 10 seconds to 20.. 10 seconds was way to fast.
+0306 - 29-01-2006 removed : All unused buttons from PDM options menu, this will slightly decrease time when going upwards.
+0305 - 29-01-2006 fixed   : VideoFullscreen.xml crashes from time to time, forgot to remove some text that where out of the controls.
+0304 - 28-01-2006 fixed   : Button in DialogSelect.xml (16x9) cause it was using the wrong position and button texture and Background.
+0303 - 28-01-2006 removed : Custom4.xml & Custom5.xml cause they are no longer needed, renamed Custom6.xml to be Custom4.xml
+0302 - 28-01-2006 changed : Cleaned up PDM code and moved some parts of them into includes.xml, for adjusting all options at ones.
+0301 - 28-01-2006 removed : All unused Backgrounds from Textures.xpr, and some parts are now multi-usable mainly for menu's.
+0300 - 28-01-2006 changed : The way Menu were displayed on the screen, cut the backs in 3 pieces for slide/fade effect when media playing.
+0299 - 25-01-2006 added   : Trainer.png to PDM textures.xpr, because it also is needed for the new xored trainer stuff.
+0298 - 25-01-2006 added   : TrainerSettings.xml for new xored trainer engine! thanks to team xored and to britneyspair for skinwork!
+0297 - 25-01-2006 added   : the <animation> tags to MusicVisualisation.xml,VideoFullScreen.xml,SlideShow.xml controls.
+0296 - 25-01-2006 added   : Non-transperant Backs for DialogSelect, totally forgot this one (4x3,16x9). 
+0295 - 25-01-2006 changed : XBMC-logo1.png to XBMC-logo1.bak, now only 1 logo is used as default, rename if you want more logos.
+0294 - 25-01-2006 added   : Non-transperant Backs for DialogAlbum/Script/VideoInfo.xml because stuff was visible under it (4x3,16x9). 
+0293 - 25-01-2006 added   : Player Time/Remaining Time/Duration Time/DVD cover,and more info's to VideoFullScreen.xml.
+0292 - 25-01-2006 added   : Remaining Time info label to MusicVisualisation.xml and, cause it's used everywhere like that.
+0291 - 23-01-2006 removed : All "Keepaspectratio" tags from list/thumbpanels, cause they are always using keepaspectratio.
+0290 - 23-01-2006 fixed   : DialogFileStacking CD labels weren't in the middle of the screen, also added "scroll" for long labels.
+0289 - 23-01-2006 changed : The information icon used by Xlink Kai notification, positions weren't right either.. now it is.
+0288 - 23-01-2006 added   : Some more info's to Home Musc/Video Info.. now you have Player Time, Remaining Time and Duration Time.
+0287 - 23-01-2006 fixed   : DialogMusic/video/ScriptInfo.xml didn't obey "allowoverlay" tag, added <zorder> tag and now they do obey.
+0286 - 22-01-2006 added   : PlayerControl to PAL16x9, and gave it the right "X" position.. centered under the music covers.
+0285 - 22-01-2006 added   : MusicOverlay.xml to PAL16x9 folder, cause music covers of playing media weren't really square.
+0284 - 22-01-2006 changed : PlayerControl "X" position by +15 pixels, now player control stands centered under the music covers.
+0283 - 22-01-2006 added   : ScanLines image to "Skin Credits", because it was missing in that window and wasn't looking very good.
+0282 - 22-01-2006 added   : Visibility tag to List.Item Thumbs in My Programs, MyPics & MyMusic,..When Player.HasAudio it dissapear.
+0281 - 22-01-2006 changed : List.Item Thumb size cause they weren't matching up with icons used by MusicOverlay.xml (4x3 and 16x9). 
+0280 - 22-01-2006 removed : List.Items for Movie files in 4x3 and 16x9,DVD covers are not square and they really looked fucked up.
+0279 - 21-01-2006 changed : Music/Video info labels in Home.xml, they now scroll when text is to long for max. width.
+0278 - 21-01-2006 changed : Settings menu icons, they don't change size anymore... also redesigned the select focus things.
+0277 - 21-01-2006 added   : Visualisation in menu backs of Custom2.xml (PDM Options), Custom3.xml (Skin Credits),Custom6.xml.
+0276 - 21-01-2006 changed : DialogFileStacking.xml (expirimental), it now uses the same back as buttonmenu and shows cd/label info's. 
+0275 - 21-01-2006 fixed   : Button "textoffset" in Settings & PDM options weren't matching up with the other offsets used by buttons.
+0274 - 21-01-2006 added   : Play button to DialogVideoInfo.xml, now you can start a movie from there if you want to.
+0273 - 21-01-2006 changed : System Info fonts, they were much to transperant ,changed color from "70ffffff" to "90ffffff".
+0272 - 20-01-2006 changed : Turned on all fade effect of radiobuttons in Settings and PDM options...fade-in to "200", out to "500".
+0271 - 20-01-2006 added   : Player Progress in Home.xml, it indicates play time aswell as remaining time, also made an option for it.
+0270 - 20-01-2006 Removed : Window fading of Custom2.xml (PDM Options), cause all other windows accesed in home are not using it.
+0269 - 20-01-2006 fixed   : PDM Main-Gradient (under buttonscroller) didn't fade in when Home window was opened, now it does.
+0268 - 20-01-2006 changed : XBMC Logo image, because the old image was cut to small and shadows were cut aswell. 
+0267 - 20-01-2006 changed : All fonts used in "Settings/PDM Options" buttons, from font10 to font13, to match up with other buttons.
+0266 - 19-01-2006 fixed   : Button gap in SettingsCatagory.xml wasn't matching up with all the other button gaps in the skin.
+0265 - 19-01-2006 changed : Custom2.xml is now "PDM options", press "black" in home to go to PDM options much faster than before.
+0264 - 19-01-2006 Removed : The annoying PDM animation movie from custom2.xml, also removed the movie file from "skin/media" folder.
+0263 - 19-01-2006 changed : Custom6.xml (removed the PDM Options) and replaced it with "PY Skin Builder" option in Settings menu.
+0262 - 19-01-2006 changed : Date & Time option is now turned "On" when skin is loaded for the first time, it's better this way.
+0261 - 19-01-2006 Removed : Home SlideOut option when player has media, wasn't working as hoped, made it a scanlines option instead. 
+0260 - 18-01-2006 added   : Player.Progress to DialogMusic/VideoOverlay.xml, it indicates the player progress now.
+0259 - 18-01-2006 added   : ListItem.Thumb option in PDM options, for displaying the thumbs of selected Items.
+0258 - 18-01-2006 removed : The media buttons in MyVideo,MyMusic,MyPics, because they didn't work right, and were a pain in the ass.
+0257 - 18-01-2006 changed : The PDM Home images (4x3,16x9), cut them to 3 pieces, this could be handy for future sliding effects. 
+0256 - 18-01-2006 changed : Number of files text label, it is now on the same height as the spincontrols (changed font13 to font10).
+0255 - 16-01-2006 changed : Check buttons, mostly used in scripts, they where both black and not indicating what was on/off.
+0254 - 16-01-2006 removed : Media button "Skin.HasSettings(mediabuttons)" option from the PDM skin, cause it isn't working.
+0253 - 16-01-2006 removed : Language files, labels now contain the full text (english)instead of language string value's/numbers.
+0252 - 16-01-2006 fixed   : Xlink avantar and username positions are now correct, thanks to sollie for (16x9), i did 4x3 aswell.
+0251 - 15-01-2006 fixed   : Xlink & DVD Conditional buttons in Home.xml, they now use the right X positions depending on what's En/Disabled.
+0250 - 15-01-2006 fixed   : Thumbnail panel issue.. changed "onleft, onright, onup, ondown" in all menu's were it's been used. 
+0249 - 15-01-2006 added   : Project Mayhem III Theme.xpr, for people who want the PM3 look rather than PDM backgrounds.
+0248 - 15-01-2006 fixed   : All windows that were using the slide effects ,they where broken after the V1.90 skin version bump.
+0247 - 15-01-2006 changed : Position of all menu labels, it's now on the same height as the Date & Time controls (from 45 to 43).  
+0246 - 15-01-2006 added   : Xlink Avantar Holder image to Textures.xpr, and added it to MyBuddies.xml because it was missing. 
+0245 - 12-01-2006 added   : Shadows to all fonts in Font.xml, now all fonts use a 1 pixel based shadow..this looks much better.
+0244 - 12-01-2006 updated : Bumped skin version number from v1.86 to v1.90, added animations were ever it was needed.
+0243 - 10-01-2006 changed : Position of CD's from FileStacking.xml, cause they where in the way when using Date & Time Options.
+0242 - 10-01-2006 fixed   : Xlink Button in Home, when going back from Xlink menu it wasn't focused anymore.
+0241 - 10-01-2006 fixed   : Position of Date & Time they where not matching up with the ones used in Home (4x3,16x9).
+0240 - 10-01-2006 changed : All Dialog Fade outtime from "500" to "200", also changed fade intime of buttonmenu from "500" to "200". 
+0239 - 10-01-2006 Removed : Playlist button in MyMusic, cause it's allready in Library and also can be used by pressing "black".
+0238 - 10-01-2006 updated : The Language files, changed "Audioscrobbler" value to use "LastFM", allready done in english string.
+0237 - 09-01-2006 fixed   : Button positions in SettingsCatagory.xml, cause they where using the wrong "posy" ..from 120 to 130.
+0236 - 09-01-2006 fixed   : Visuals in the back of several menu's (16x9), weren't working when option was enabled.
+0235 - 09-01-2006 added   : !Skin.HasSetting(sysstatsbarmenu) to PDM Options, info labels will disapear when using System Stats.
+0234 - 09-01-2006 added   : !Skin.HasSetting(sysstatsbarmenu) to Settings, info labels will now disapear when using System Stats.
+0233 - 08-01-2006 changed : Menu System Stats option to be set to disabled when xbox boots for the first time. 
+0232 - 08-01-2006 changed : Skin.xml version no. back to current used Version ... from v2.0 to v1.86.
+0231 - 08-01-2006 fixed   : XBMC WARNING file Q:\skin\PDM\pal\font.xml doesnt have <fontset> with name 'Default'.
+0230 - 08-01-2006 removed : Video preview window from Music/VideoOverlay.xml..cause it not needed anymore.
+0229 - 08-01-2006 removed : Video preview window from the menu's..you can watch movies fullscreen or in Home screen.
+0228 - 08-01-2006 changed : Xlink Tab buttons, they were using the wrong focus/nofocus button textures.
+0227 - 08-01-2006 changed : Positions of all menu buttons, they were displaced..and not looking good (4x3 and 16x9). 
+0226 - 08-01-2006 fixed   : Error in visibility tags in all windows were it's been used,..changed "accleration" to "acceleration".
+0225 - 07-01-2006 added   : Option for En/Disable Video Preview overlay, in all menu's.. added visual tag VideoOverlay.xml.
+0224 - 07-01-2006 fixed   : Playlist button in MyVideo/Actors/Genre/Title/Year.xml was linked to watched/unwatched, changed the id's.
+0223 - 07-01-2006 fixed   : Menuvisual in MyWeather (16x9) didn't obey "menuvisual" option..added !Skin.HasSetting(menuvisual). 
+0222 - 07-01-2006 fixed   : Several MyMusic/MyVideo/Actors/Genre/Title/Year.xml buttons, because they used wrong id numbers.
+0221 - 07-01-2006 fixed   : Gradient.png was visible in Home when Video Info was enabled, and playing music with no Music Info on.
+0220 - 07-01-2006 added   : MusicVisualisation.xml music info to the "!Skin.HasSetting(musicinfo)" settings options.
+0219 - 06-01-2006 changed : IMDb Button of MyVideo/Actors/Genre/Title/Year to Playlist button, also removed some unnecessary buttons. 
+0218 - 06-01-2006 changed : Fade out time of VideoOvelay.xml, it's now the same as MusicOverlay.xml.. set from "2000" to "500".
+0217 - 06-01-2006 added   : Option for En/Disable VideoOverlay Information, just like Music Information (in PDM Options).
+0216 - 06-01-2006 added   : !Skin.HasSetting(menuvisual) tag to DialogMusic/VideoInfo.xml for PAL4x3, this was missing.
+0215 - 06-01-2006 changed : DialogMusic/VideoInfo.xml was using the wrong buttons, now it looks just like other menu's.
+0214 - 06-01-2006 added   : VideoPlayer.Duration to VideoOverlay.xml, cause it was missing between all VideoInfo's.
+0213 - 06-01-2006 removed : Video/Music Info's and Covers from DialogMusic/VideoInfo.xml.
+0212 - 06-01-2006 fixed   : DialogMusic/VideoInfo.xml, Music/VideoOverlat were missing.. added it to the xml's.
+0211 - 06-01-2006 removed : Search, Scan and Record buttons from MyMusicSongs.xml, cause they are also in the context menu and OSD.
+0210 - 06-01-2006 fixed   : Positions of some buttons in MyMusicPlaylist, they were covering others buttons.
+0209 - 06-01-2006 removed : Search and Shuffle buttons in Music library, cause those options are also in context menu.
+0208 - 06-01-2006 fixed   : All DefaultFolder.png icons of Music/Video Section, now DefaultFolderBig is used everywhere. 
+0207 - 06-01-2006 removed : The weather config button, because of security issues when using passwords on menu's.
+0206 - 06-01-2006 fixed   : Icons in Settings wheren't the right size in PAL16x9, Resized from W85xH85 to W65xH85.
+0205 - 06-01-2006 fixed   : PlayerControl.xml didn't always obey visual effect, removed error from the visual tag.
+0204 - 06-01-2006 changed : 4x3main.png & 16x9main.png, made the scanlines under the buttonscroller more transperant..by 10%. 
+0203 - 05-01-2006 changed : Home.xml Sub-buttons (4x3/16x9),..only Xlink KAI button is visible when "System.KaiConnected".
+0202 - 05-01-2006 added   : Background visualisation in MyBuddies.xml (Xlink), only when option is enabled and when player has audio.
+0201 - 05-01-2006 changed : Positions of sub buttons in Home.xml (PAL16x9), the distance between them did not match with PAL4x3.
+0200 - 05-01-2006 added   : Visual slide effect to MusicOSD.xml and VideoOSD.xml. 
+0199 - 05-01-2006 changed : Date & Time alignment, it now matches up with home buttons and music/video covers.
+0198 - 05-01-2006 added   : MusicPlayer.Duration to MusicOverlay.xml, this fills up some space when using tracks with short titles.
+0197 - 05-01-2006 added   : Visual slide effect to PlayerControls.xml, it now slides in or out whenever you need it.
+0196 - 05-01-2006 changed : Several positions of things that were displaced in Filemanager,..especially the list control.
+0195 - 05-01-2006 added   : Video info in Home.xml, for viewing video time,duration, titel, director, and the year. 
+0194 - 04-01-2006 added   : 16x9-Background-filemanager.png to textures.xpr. now the correct background is used.
+0193 - 04-01-2006 added   : Date & Time labels to MyBuddies.xml (Xlink) 4x3 and 16x9, they where missing.
+0192 - 04-01-2006 fixed   : Label "Configure Pictures Options" in settings was missing, fault in english language string.
+0191 - 04-01-2006 fixed   : Home buttons in PAL16x9 where not using <keepaspectratio>true</keepaspectratio> needed to display correct.
+0190 - 04-01-2006 fixed   : Xlink menu, added <keepaspectratio>true</keepaspectratio> to avantar and other xlink images.
+0189 - 04-01-2006 fixed   : Xlink menu, it was not displaying in the correct size...(background is not finished yet).
+0188 - 04-01-2006 added   : [musicplayer.Time] / [musicplayer.Duration] to Home.xml for PAL and PAL16x9.
+0187 - 04-01-2006 added   : Modified xml's from PAL to PAL16x9,..now the use the correct aspect ratio for backgrounds and stuff.
+0186 - 04-01-2006 added   : 16x9background.png, 16x9background3.png, 16x9background4.png, 16x9background5.png to textures.xpr.
+0185 - 04-01-2006 changed : All fading tags of dialog windows from intime="200" outtime="1000" to intime="0" outtime="500".
+0184 - 04-01-2006 fixed   : Several 16x9 aspect ratio issue's.. all images are now use the right aspect ratio.
+0183 - 04-01-2006 added   : Background visualisation in all menu's, only when option is enabled and when player is playing audio.
+0182 - 04-01-2006 changed : Several image names in textures.xpr also added 4x3 and 16x9 backgrounds, and edited all xml's.
+0181 - 02-01-2006 changed : Textures of "Settings-check-box.png" and "Settings-check-boxNF.png", just like the blue Radiobuttons.
+0180 - 02-01-2006 changed : Made the black background of DefaultAlbumCover.png transperant, this is better looking.
+0179 - 02-01-2006 added   : MyVideos, MyPics, MyMusic buttons to MyMusicNav.xml and MyMusicPlaylist.xml.
+0178 - 02-01-2006 fixed   : Select Button was not working in "MyMusicSongs.xml", it was using the wrong id number.  
+0177 - 02-01-2006 added   : MyVideos, MyPics, MyMusic buttons to MyVideo/Actors/Genre/Playlist/Title/Year.xml.
+0176 - 02-01-2006 changed : RSS Feeds and SystemStats colors from "30FFFFFF" to "50FFFFFF", headline colors are now "90FFFFFF"
+0175 - 02-01-2006 changed : Width of Music Cover in Home.xml (16x9) aswell the icon used in MyBuddies.xml (16x9).
+0174 - 02-01-2006 removed : All Music Covers controls used in several windows, cause it's all or nothing.
+0173 - 02-01-2006 removed : The "Play Disc" buttons from MyVideo/Playlist/Actors/Titles/Year.xml, cause it's not needed anymore.
+0172 - 02-01-2006 updated : The Language files, changed several value's that where changed in skin options.
+0171 - 02-01-2006 fixed   : Toggle button "y" Position in "My Movies" and "My Scripts" added the right height. 
+0170 - 02-01-2006 fixed   : Default album cover was not showing up where needed, when album playing without folder.jpg.
+0169 - 02-01-2006 fixed   : Buttonscroller "onleft" and "onright" button numbers, it now goes to the right buttons.
+0168 - 02-01-2006 changed : Option "Music Info" in Settings, it now En/Disables all the Music Info in skin (not only in Home anymore).
+0167 - 02-01-2006 removed : ButtonScroller.HasFocus(id) tags of backgrounds in Home.xml that wheren't being used by buttonscroller.
+0166 - 01-01-2006 removed : My Movies, My Pictures and My Music buttons that where in the "Scripts" window.
+0165 - 01-01-2006 removed : Fade effects of System Stats, RSS Feeds... because they fade all the time when switching between windows.
+0164 - 01-01-2006 changed : Several id numbers of backgrounds used by Home.xml, they all use the same id's.
+0163 - 01-01-2006 added   : C:/,E:/,F:/ drive letters to System Stats scroll label, so now you see witch drive has how many GB's left.
+0162 - 01-01-2006 added   : System Stats scroll label to FileManager.xml, just like the one used in Home.
+0161 - 01-01-2006 added   : C:/,E:/,F:/ drive letters to FileManager.xml, also gave them the correct positions on the screen.
+0160 - 01-01-2006 fixed   : Option for en/Disable Weather in Settings didn't work, removed an error from the skin code.
+0159 - 01-01-2006 added   : An outdelay="200" to visual tag of Dialog/SeekBar,MusicScan,VolumeBar,KaiToast.xml.
+0158 - 01-01-2006 changed : The Settings icons images a little bit, this will do untill i find the right preset for it.
+0157 - 01-01-2006 fixed   : Position Problems with Xlink Kai Toast Dialog.. It's now a slide panel like Volume and SeekBar.
+0156 - 01-01-2006 changed : Date and Time colors, switched time to date and date to time color.. also removed fade effect.
+0155 - 01-01-2006 fixed   : A Problem with visual tags of DialogSeekBar, DialogVolumeBar, DialogMusicScan.
+0154 - 01-01-2006 fixed   : A Problem with a button in MyVideoGenre.xml, "ondown" didn't used the right button number.
+0153 - 01-01-2006 fixed   : Some issue's with visual tag of DialogKeyboard, DialogNumeric.xml.. caused xbox to crash.
+0152 - 01-01-2006 fixed   : All slide starting positions (startx and starty) are now relative to the control origin.
+0151 - 01-01-2006 added   : New infolabel "Player.Volume" to DialogVolumeBar.xml, it now indicates the current volume.
+
+<!---------------------- Build 0150 ---------------------->
+0150 - 31-12-2005 fixed   : RSS Feeds, Logo & Labels, StatsBar, MusicInfo and Home Buttons enabled when skin boots for the first time.
+0149 - 31-12-2005 added   : Button "All Videos" watched/Unwatched to MyVideoTitle.xml, cause it was missing.
+0148 - 29-12-2005 updated : The Language files to match XBMC Dec 28, ...added several id's for new skin options.
+0147 - 29-12-2005 removed : System.IdleTime(60) from visual tag of Music Info, when option is on it will stay forever.
+0146 - 29-12-2005 fixed   : Sometimes the apropriot backgrounds where lost in Home, added start="hidden" to visual tags of all backgrounds.
+0145 - 29-12-2005 changed : Reorganized the Settings menu, and added 4 new icon buttons, icon buttons goes from 8 to 12 options.
+0144 - 29-12-2005 fixed   : Stretch to Fit option in "Settings" menu was using the wrong language file ID. 
+0143 - 29-12-2005 changed : All text used by new Settings options are now in the language file.
+0142 - 29-12-2005 fixed   : Scrolling Video Label in VideoOverlay.xml was to long, moved the right suffix a bit.
+0141 - 29-12-2005 changed : Scanlines option in Settings to "Skin Logo", for turning On/Off the skin logo in all used xml's.
+0140 - 29-12-2005 changed : Several visual tags of backgrounds in Home.xml to speed up some things.
+0139 - 28-12-2005 fixed   : Background images from .xpr file didn't used the apropriot visual code, when using custom Images in "Settings".
+0138 - 28-12-2005 fixed   : Several issue's in Home.xml, multiimages where using the wrong "width" and height.
+0137 - 28-12-2005 added   : Several new options like: En/Disable System stats, Music Info in Home.
+0136 - 27-12-2005 changed : Radiobuttons in "Settings", Radiobuttons are visible when option is enabled.
+0135 - 27-12-2005 removed : Cleaned up some code in all .xml's, also removed unused images from textures.xpr.. to shrink PDM size.
+0134 - 27-12-2005 added   : Several Tags in Home.xml, for example "!Skin.HasSetting()", this was needed for "Settings" to work correct.
+0133 - 27-12-2005 added   : Several new things in "Settings", thanks to BritneysPAIRS, for idea's and code.
+0132 - 27-12-2005 removed : NTSC, NTSC16x9 folders from skin, XBMC will autoscale images if width and height are given.
+0131 - 27-12-2005 changed : Alignment and width of labels used in DialogMusicScan.xml, so they look better when all is showed.
+0130 - 27-12-2005 changed : DialogMusicScan.xml panel image, it now uses the same image as DialogVolume/Seekbar and uses slide effect.
+0129 - 27-12-2005 removed : Some code from visual tag of DialogSeekBar "(VideoOSD),(MusicOSD)", cause it was in the way of things.
+0128 - 27-12-2005 fixed   : Xbox hangs when Music folder was scanned, removed double visual tag from DialogMusicScan.xml.
+0127 - 26-12-2005 added   : Fade effect tags to "Settings", when opening window it wil fade between 200-1600 milliseconds.
+0126 - 26-12-2005 added   : Fade effect tag to the "My Files", it looks much better when opening it.
+0125 - 26-12-2005 changed : All slide effect tags in all window labels and set them to fade effect.
+0124 - 26-12-2005 fixed   : RSS feeds in Home.xml, where not working because of an error in the code.
+0123 - 26-12-2005 removed : Removed all unused code from Home.xml, like CPU temp, Fan speed, and the System info scroller.
+0122 - 26-12-2005 added   : Visual tags [!System.IdleTime(60) + System.HasNetwork] to Weather coditions and temperature.
+0121 - 26-12-2005 added   : Visual tags to Xlink kai and DVD Launch buttons, they are now conditional buttons.
+0120 - 26-12-2005 changed : Thumb images size in References.xml, made them smaller..so ypu have a better overview.
+0119 - 26-12-2005 added   : Discription label to "My Files", cause it was missing..and all other screens have one.
+0118 - 26-12-2005 updated : Skin version number in Skin.xml from v1.85 to v2.0
+0117 - 26-12-2005 fixed   : Several list,thumb control issues all over the place, My Programs, scripts and My Pics work again.
+0116 - 25-12-2005 fixed   : Filelist height issue in "My Files", changed height from 400 to 380.
+0115 - 25-12-2005 removed : Launch DVD, Xlink Kai, Scripts, Shutdown and the Filebrowser buttons from buttonscroller.
+0114 - 25-12-2005 removed : The E-mail script, and the E-mail background from the skin, download it from XBMCscripts.com.
+0113 - 25-12-2005 removed : All "Xbox Media Center" labels under the XBMC logo in all .xml files.
+0112 - 24-12-2005 changed : The DVD button in Home.xml, from (XBMC.Eject()) to (XBMC.PlayDVD()).
+0111 - 24-12-2005 removed : System Info scroller from home, (it's still in the code, if you want to use it). 
+0110 - 24-12-2005 changed : Music Info IdleTime tag from 30 sec. to 60 sec. (info will disapear after 1 minute when player has audio).
+0109 - 23-12-2005 removed : RSS panel (customX.xml), also removed the buttonscroller button and the background from textures.xpr
+0108 - 23-12-2005 fixed   : Texturefocus,texturenofocus issue in Music and video.  
+0107 - 23-12-2005 updated : Changed all References.xml tags to lower case (for using the new 1.8 XBMC skin system).
+0106 - 23-12-2005 fixed   : Filemanager position issues, also added the XBMC title text and logo.
+0105 - 23-12-2005 fixed   : Sub-buttons BG's wheren't working, added the right code to the visual tag of the BG's.
+0104 - 22-12-2005 removed : Pictures from textures.xml that aren't being used by the skin, and renamed some.
+0103 - 22-12-2005 fixed   : Main + main2.png issue, it now switches to the right BG when buttonscroller slides in or out.
+0102 - 21-12-2005 changed : Fade effect tag of buttonscroller to slide effect, it now dissapears after 5 sec. (only when player.has.media).
+0101 - 18-12-2005 updated : Skin version number in Skin.xml from v1.30 to v1.85.
+0100 - 18-12-2005 updated : Removed conditionalbutton control from references.xml,it's no longer needed in the new 1.8 XBMC skin system.
+0099 - 18-12-2005 updated : Changed various id's in Programs.xml (for using the new 1.8 XBMC skin system).
+0098 - 18-12-2005 updated : Changed various id's in Pics.xml,MyScripts.xml (for using the new 1.8 XBMC skin system).
+0097 - 18-12-2005 updated : Changed various id's in Home.xml (for using the new 1.8 XBMC skin system).
+0096 - 18-12-2005 updated : Buttonscroller now get's button information from the skin, instead of Xboxmediacenter.xml like V1.3 skins do.
+0095 - 18-12-2005 changed : Home.xml using of BG is now handled by ButtonScroller.HasFocus(ID) tags, instead of various other ID's.
+0094 - 18-12-2005 removed : The XBoxMediaCenter.xml example file from PDM Xtra's.. cause it's now handled by home.xml.
+0093 - 18-12-2005 added   : Slide effect tag in Skin Credits, the PDM BG will now slide in as you select the button. 
+0092 - 18-12-2005 added   : Slide effect tags instead of fade effects tags in VolumeBar.xml and DialogSeekBar.xml.
+0091 - 18-12-2005 changed : Click.wav and cursor.wav,.. cause i'm starting to add my own sounds for PDM skin.
+
+<!---------------------- Build 0090 ---------------------->
+0090 - 25-11-2005 added   : 16x9main2.png to textures.xpr of PDM Skin,..it will fade to the right background. 
+0089 - 25-11-2005 fixed   : Buttonscroller didn't obey visibility conditions, added the visibility tag in home.xml (PDM-buttonscroller).
+0088 - 18-11-2005 added   : Multiple Theme support for Both PDM skins (also made 2 theme's available for PDM, but are not included). 
+0087 - 18-11-2005 fixed   : Both PDM versions where not using the same backgrounds, renamed several backgrounds in textures.xpr. 
+0086 - 18-11-2005 changed : Several backgrounds in Home.xml, this was necessary, because both skins where not similar looking.
+0085 - 18-11-2005 changed : OSD menu background panel, made it 50% less transparent..because the options where sometimes not visible.
+0084 - 17-11-2005 added   : New tag "<defaultthemename>textures</defaultthemename>" in skin.xml, for defining the default .XPR file.
+0083 - 17-11-2005 fixed   : Skin Version was not working correct in some cases ,changed it from v1.3 to v1.30 in the skin.xml.
+
+<!---------------------- Build 0082 ---------------------->
+0082 - 26-10-2005 changed : Position of Togglebutton in MyMusicNav.xml,MyVideoActors/Genre/Title/Year.xml.
+0081 - 26-10-2005 fixed   : When switching between visualisation presents and returning to home the background was gone (custom5.xml)
+0080 - 26-10-2005 fixed   : Problem with MusicOSD.xml,some pics where not showing up where they should be.
+0079 - 26-10-2005 fixed   : VideoOSDSettings.xml, settings window(s) was missing some pics, and all the video/audio settings where gone.
+0078 - 26-10-2005 fixed   : Problem with VideoOSD.xml, some pics where not showing up where they should be, also updated some pictures.
+0077 - 26-10-2005 fixed   : VideoOverlay.xml was using the wrong font for showing the scrolling video information.
+0076 - 25-10-2005 changed : Togglebutton position in MyPrograms, cause it was using the wrong position there.
+0075 - 25-10-2005 added   : MyVideos, MyPics, MyMusic buttons to the MyRSS menu, also removed customX.bak for fullscreen RSS Feeds.
+0074 - 25-10-2005 changed : Refferences.xml, some buttons where not using the right height, also changed default togglebutton position.
+0073 - 25-10-2005 changed : MyVideos.xml to MyVideo.xml, also switched a few buttons to use the same position in every menu. 
+0072 - 25-10-2005 changed : Postions of MyMusic, Myvideos, MyPics buttons, now they all match with each other.
+0071 - 21-10-2005 added   : New Context menu Background pictures, it now looks similar to the other PDM dialog windows.
+0070 - 19-10-2005 removed : MyMusicTop100.xml window ,XBMC changelog: 09-10-2005 removed: my music top 100 window (use the library).
+0069 - 18-10-2005 fixed   : Weather info menu was using the wrong button bg, and didn't look very good.
+0068 - 18-10-2005 added   : Arial.ttf (normal) & Arial.ttf (bold) font to P.D.M Skin for PAL16x9 users.
+0067 - 18-10-2005 fixed   : No background showing up in Video Info,changed DialogVideoInfo.xml to use the right backgrounds.
+0066 - 18-10-2005 changed : DialogSeekBar.xml 2x,4x,8x,16x,32x,pause,rewind,and forward buttons, to fully visible, also other fonts.
+0065 - 15-10-2005 changed : RSS Feeds in Home.xml now use the same color settings as the System Info Label.
+0064 - 15-10-2005 changed : the RSS panel to PDM style, also changed button labels, they now work with multiple language files.
+0063 - 15-10-2005 added   : RSS panel is now working, you can use this for displaying multiple RSS Feeds at the same time.
+0062 - 15-10-2005 fixed   : Weather buttons, now look indentical to any other button used in the skin.
+0061 - 15-10-2005 added   : Button in Weather.xml, now you can go directly to weather options, instead of leaving the menu first.
+0060 - 14-10-2005 removed : Visual tag of System Info Label.
+0059 - 14-10-2005 changed : DialogButtonMenu.xml focus pictures now use animated gif's instead of png's.
+0058 - 13-10-2005 removed : System Info Label from DialogButtonMenu.xml because it is back in Home.xml.
+0057 - 13-10-2005 removed : Weather info from the System Info Label.
+0056 - 12-10-2005 changed : Position of the System Info Label in Home, by 10 pixels to the right, it's now in the middle of home.
+0055 - 12-10-2005 fixed   : System Info Label was causing crashes, fixed thanks to Peedjeeh, removed $INFO[System.GPUTemperature].
+0054 - 12-10-2005 changed : Some of the Home BG's (My Games, My Pictures,My sysinfo), also changed the "skin credits" in settings.
+0053 - 12-10-2005 added   : More BG's to textures.xpr,check your home.xml you can change it there if you like.
+0052 - 12-10-2005 fixed   : When playing audio, Music cover was over Xlink Kai Usericon.
+0051 - 12-10-2005 removed : Visual tag from DialogSubMenu.xml, now only dialogs that popup use focus/unfocus effects.
+0050 - 12-10-2005 changed : Album info label text from 90ffffff to 60ffffff in MusicOverlay.xml. 
+0049 - 10-10-2005 changed : Fade time in all Dialogs from 100 milli seconds to 10 milli seconds, black.png direct focus/unfocus.
+0048 - 10-10-2005 added   : Arial.ttf (bold) font to P.D.M Skin for PAL4x3 users.
+0047 - 10-10-2005 changed : Position of 2x,4x,8x,16x,32x,pause,rewind,and forward in DialogSeekBar, also added a new bg for it.
+0046 - 10-10-2005 changed : Restyled the DialogSeekBar and DialogVolumeBar BG panel, because the old one was crappy quality.
+0045 - 09-10-2005 removed : Visible Fade effect from MusicOverlay.xml, because music info dissapeared after showing for 5 minutes.
+0044 - 07-10-2005 removed : Weather Location from Home, cause Location is also in "My Weather" menu, also placed "Temprature" to center. 
+0043 - 07-10-2005 changed : Renamed 4x3Main-myglobalBG2.png to 4x3main-myreloadbutton.png.
+0042 - 07-10-2005 changed : Restyled "My programs","My Video" and "DVD Tray" Backgrounds.
+0041 - 05-10-2005 fixed   : The Weather menu now uses all the right buttons.
+0040 - 05-10-2005 fixed   : All Dialogs now uses background focus/unfocus, and all the right buttons.
+0039 - 05-10-2005 changed : Switched positions of weather "location" and "temprature" in Home.xml, maybe this is better.
+0038 - 05-10-2005 changed : Position of "Last loaded profile" in SettingsProfile.xml ,next to the Music overlay label.
+0037 - 05-10-2005 removed : Video info label that was shown when playing a Video file in home screen.
+0036 - 05-10-2005 changed : PlayerControl not in Home anymore, because it was changed ("start" button XBMC.PlayDVD) in keymap.xml
+0035 - 04-10-2005 added   : Album Cover of current playing Music, are now visible in menu's where ever possible.
+0034 - 04-10-2005 removed : Fade effect tag from DialogProgres.xml, cause it doesn't look good in combination with progress. 
+0033 - 04-10-2005 changed : Restyled the Video BG, 4x3main-myvideo01,02.png can be used in home.xml.
+0032 - 04-10-2005 changed : Restyled the MusicOverlay.xml it now uses scroll tag, and have a suffix on both sides of it. 
+0031 - 04-10-2005 changed : Cleaned up Home.xml code, and checked if there where no more errors in the code. 
+0030 - 04-10-2005 changed : Disabled the System Info Label in Home.xml, because it was causing a lot of crashes.  
+0029 - 03-10-2005 fixed   : Music Info time in Music Label in Home.xml didn't used the right fadeout time.
+0028 - 03-10-2005 added   : Arial.ttf (normal) font to P.D.M Skin for PAL4x3 users, i liked to have more than just 1 fontstyle.
+0027 - 03-10-2005 removed : Sub-Buttons and labels fadeout in Home, cause they are not in the way of anything using vis.  
+0026 - 02-10-2005 fixed   : There was no XBMC logo in the E-mail phyton script, also added the "Xbox Media Center" label.
+0025 - 02-10-2005 removed : SeekBar time duration label, cause it doesn't fit on the SeekBar Panel anymore.
+0024 - 02-10-2005 fixed   : SeekBar timelabel now on the right position when playing a music or video file.
+0023 - 02-10-2005 changed : Enabled Progress status in dialogs, cause it was turned off.
+0022 - 02-10-2005 changed : VolumeBar now uses the same pictures as the SeekBar, and both look identical now.
+0021 - 02-10-2005 fixed   : Some of the Music menu buttons where using the wrong up/down numbers.
+0020 - 01-10-2005 changed : Keyboard layout from original a-z to Qwerty style. (look almost as a normal keyboard).
+
+<!---------------------- Build 0019 ---------------------->
+0019 - 30-09-2005 fixed   : When playing media and switching between Xlink kai screen and Home screen, Music Info label was shown.
+0018 - 30-09-2005 removed : Buttonscroller visual effect tag in Home.xml, isn't going to work anyway.
+0017 - 27-09-2005 fixed   : Some fonts where not showing up in PAL16x9, NTSC, NTSC16x9, 720p, 1080i.
+0016 - 26-09-2005 added   : Background focus/ unfocus when using YES or NO and OK dialogs.
+0015 - 26-09-2005 changed : Position of music scan window changed from left to right side of the screen.
+0014 - 26-09-2005 added   : Background focus/ unfocus when using script button in home screen.
+0013 - 25-09-2005 changed : New Volume & seekbar (redesigned to look better in PDM skin). 
+0012 - 25-09-2005 changed : Redesigned the home screen and all the bg's, also more place for vis and previews.
+0011 - 25-09-2005 added   : Fading tags enabled in all xml's.
+0010 - 25-09-2005 added   : Clock,CPU and Fan speed labels in the home screen, also added a scrolling info label.
+0009 - 25-09-2005 added   : DVD-tray button in Home, also added a background fot it to textures.xpr.
+0008 - 25-09-2005 changed : New icons on the Home screen (kai,scripts,exit buttons) to match up with the PDM skin.  
+0007 - 25-09-2005 changed : New icons in "settings" menu, added profile icon, added "Skin Credits".
+0006 - 25-09-2005 changed : Redesigned the Filemanager to fit better in PDM Skin   
+0005 - 25-09-2005 changed : Replaced PM3 Buttons with Buttonscroller from PM2, you can add buttons in your XboxMediaCenter.xml 
+0004 - 25-09-2005 added   : Video, Music, Pictures menu's & clock - original by NeMeSiS PM3 skin remake. 
+0003 - 25-09-2005 changed : Replaced PM3 Logo and 4x3main with original XBMC logo, it's now on top of bg's instead of init. 
+0002 - 25-09-2005 changed : New backgrounds (PM3 redesigned background)
+0001 - 25-09-2005 fixed   : Skin now supports PAL16x9, NTSC, NTSC16x9, 720p, 1080i. 
+
+<!-- P.D.M known Bugs / Todo ------------------------------------------------------------------------------------->
+This Skin is still in beta stage, So there might be issues... 
+If you find any Bugs please report them in the PDM Topic @ the XBMC Forum...Enjoy !!
+
+* Video OSD is missing (working on it atm) !!!!!!!!!!!!
+
+
+<!-- PDM XBMC SKIN by SMOKEHEAD (C)2005/2006 ------------->

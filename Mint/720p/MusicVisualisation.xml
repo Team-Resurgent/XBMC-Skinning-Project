@@ -1,0 +1,152 @@
+<window id="2006">
+
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+
+		<!-- visualization -->
+		<control type="visualisation" id="2">
+			<width>1280</width>
+			<height>720</height>
+		</control>
+
+		<!-- codec & viz infos -->
+		<control type="group" id="0">
+
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<posx>20</posx>
+			<posy>20</posy>
+			<animation effect="slide" start="0,-180" end="0,0" time="200">VisibleChange</animation>
+
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>1240</width>
+				<height>160</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- codec info -->
+			<control type="label" id="0">
+				<label>$INFO[MusicPlayer.Codec,Codec: , -] $INFO[MusicPlayer.Bitrate,, kbps -] $INFO[MusicPlayer.bitspersample,, bit -] $INFO[MusicPlayer.Samplerate,, kHz -] $INFO[MusicPlayer.Channels,, channels]</label>
+				<width>1200</width>
+				<posx>20</posx>
+				<posy>20</posy>
+				<font>musicosd</font>
+				<textcolor>musicosd-dark</textcolor>
+			</control>
+			<!-- vis info -->
+			<control type="label" id="0">
+				<label>$INFO[Visualisation.Name,Visualisation: , -] $INFO[System.FPS,, fps]</label>
+				<width>1200</width>
+				<posx>20</posx>
+				<posy>60</posy>
+				<font>musicosd</font>
+				<textcolor>musicosd-dark</textcolor>
+			</control>
+			<!-- preset -->
+			<control type="label" id="0">
+				<label>$INFO[Visualisation.Preset,Preset: ]</label>
+				<width>1200</width>
+				<posx>20</posx>
+				<posy>100</posy>
+				<font>musicosd</font>
+				<textcolor>musicosd-dark</textcolor>
+			</control>
+		</control>
+
+		<!-- song info -->
+		<control type="group">
+		
+			<visible>Player.ShowInfo</visible>
+			<posx>640</posx>
+			<posy>500</posy>
+					
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>620</width>
+				<height>200</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- album cover -->
+			<control type="image">
+				<info>MusicPlayer.Cover</info>
+				<width>160</width>
+				<height>160</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<!-- title -->
+			<control type="label">
+				<label>title</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>20</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Title]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>20</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- artist -->
+			<control type="label">
+				<label>artist</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>60</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>60</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- album -->
+			<control type="label">
+				<label>album</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>100</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Album]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>100</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- time -->
+			<control type="label">
+				<label>time</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>140</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>140</posy>
+				<textcolor>overlay-time</textcolor>
+			</control>	
+		</control>
+
+	</controls>
+</window>

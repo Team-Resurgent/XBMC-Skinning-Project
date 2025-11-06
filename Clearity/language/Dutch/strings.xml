@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <string id="31001">Home Opties</string>
+  <string id="31002">Media Opties</string>
+  <string id="31003">Menu Opties</string>
+  <string id="31004">Andere Opties</string>
+  <string id="31005">-</string>
+  <string id="31006">-</string>
+  <string id="31007">Activeer Persoonlijke Achtergrond</string>
+  <string id="31008">Reset Persoonlijke Achtergrond</string>
+  <string id="31009">Activeer Persoonlijke Achtergrond Folder</string>
+  <string id="31010">Reset Persoonlijke Achtergrond Folder</string>
+  <string id="31011">Activeer Tijd en Datum</string>
+  <string id="31012">Activeer Weer Informatie</string>
+  <string id="31013">Activeer RSS Feeds</string>
+  <string id="31014">Activeer CPU en Geheugen Informatie</string>
+  <string id="31015">Reset Skin Instellingen</string>
+  <string id="31016">-</string>
+  <string id="31017">-</string>
+  <string id="31018">-</string>
+  <string id="31019">-</string>
+
+  <string id="31020">Activeer Achtergrond Visualisatie</string>
+  <string id="31021">Activeer Media Covers</string>
+  <string id="31022">Activeer Roterende Covers</string>
+  <string id="31023">Activeer "Afspeellijst Weergave" na 30 Seconden Inactiviteit</string>
+  <string id="31024">Activeer Media Informatie in Wraplijsten</string>
+  <string id="31025">Activeer Achtergrond Video</string>
+  <string id="31026">-</string>
+  <string id="31027">-</string>
+  <string id="31028">-</string>
+  <string id="31029">-</string>
+
+  <string id="31030">Activeer Tijd Indicatie</string>
+  <string id="31031">Activeer Venster Titels</string>
+  <string id="31032">Activeer ScrollBars</string>
+  <string id="31033">Activeer Achtergrond Paneel</string>
+  <string id="31034">Activeer Shutdown Menu Pijlen</string>
+  <string id="31032">-</string>
+  <string id="31033">-</string>
+  <string id="31034">-</string>
+  <string id="31035">-</string>
+  <string id="31036">-</string>
+  <string id="31037">-</string>
+  <string id="31038">-</string>
+  <string id="31039">-</string>
+
+  <string id="31040">Gebruik Zoom Transities op Vensters</string>
+  <string id="31041">Gebruik Flip Transities op Venster</string>
+  <string id="31042">Activeer Skin Animaties</string>
+  <string id="31043">Activeer Achtergrond Animatie</string>
+  <string id="31044">-</string>
+  <string id="31045">-</string>
+
+  <string id="31050">Skin Instellingen</string>
+</strings>

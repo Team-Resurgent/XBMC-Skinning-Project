@@ -1,0 +1,604 @@
+<window id="2600">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<!-- background 16x9 -->
+
+
+<include>background-image</include> 
+
+        <control type="image">
+            <posx>10</posx>
+            <posy>20</posy>
+            <width>64</width>
+            <height>64</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>TWClogo_64px.png</texture>
+	    <include>settingssubslide</include>
+        </control>
+
+		<control type="image" id="0">
+			<posx>470</posx>
+			<posy>0</posy>
+			<width>290</width>
+			<height>576</height>
+			<texture>popup.png</texture>
+			<animation effect="fade" end="80" time="2000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+
+        <control type="image">
+            <posx>470</posx>
+            <posy>0</posy>
+            <width>290</width>
+            <height>576</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>sidebar.png</texture>
+	    <colordiffuse>sidebar</colordiffuse>
+	    <include>settingpanelslide</include>
+        </control>
+
+
+        <control type="image">
+            <posx>50</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-video.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>120</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-game.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>260</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-friends.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>330</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-scripts.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+        <control type="image">
+            <posx>400</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-settings-update.png</texture>
+	    <include>iconfade</include>
+        </control>
+
+	<control type="image">
+		<posx>13</posx>
+		<posy>210</posy>
+		<width>55</width>
+		<height>70</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-network-weather-glow.png</texture>
+		<include>settingsmainslide</include>
+        </control>
+	<control type="image">
+	    <posx>78</posx>
+	    <posy>226</posy>
+	    <width>25</width>
+	    <height>40</height>
+	    <aspectratio>stretch</aspectratio>
+	    <texture>bmx-arrow-left.png</texture>
+	    <include>settingssubslide</include>
+        </control>
+
+
+
+	<control type="image">
+		<posx>20</posx>
+		<posy>288</posy>
+            <width>35</width>
+            <height>50</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-network-remote.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>20</posx>
+		<posy>358</posy>
+            <width>35</width>
+            <height>50</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-network-rss.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>20</posx>
+		<posy>428</posy>
+            <width>35</width>
+            <height>50</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-network-download.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+	<control type="image">
+		<posx>20</posx>
+		<posy>499</posy>
+            <width>35</width>
+            <height>50</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-network-store.png</texture>
+		<include>settingsslide</include>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+
+
+
+        <control type="image">
+            <posx>18</posx>
+            <posy>125</posy>
+            <width>45</width>
+            <height>60</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-network-glow.png</texture>
+	    <include>settingsmainslide</include>
+        </control>
+       <control type="label">
+            <posx>6</posx>
+            <posy>167</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+	    <include>settingsmainslide</include>
+	    <label>Network</label>
+        </control>
+
+
+
+		<control type="spincontrol" id="3">
+			<description>weather location select spincontrol</description>
+			<align>left</align>
+			<width>17</width>
+			<height>17</height>
+			<posx>130</posx>
+			<posy>237</posy>
+			<font>-</font>
+			<reverse>yes</reverse>
+			<onup>512</onup>
+			<ondown>512</ondown>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<disabledcolor>ffffffff</disabledcolor>
+			<textoffsetx>0</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<aligny>center</aligny>
+	    <include>settingssubslide</include>
+		</control>
+
+
+		<control type="label">
+			<description>menu label</description>
+			<align>center</align>
+			<width>110</width>
+			<height>20</height>
+			<posx>170</posx>
+			<posy>235</posy>
+			<label>Switch Location</label>
+			<font>special13</font>
+	    <include>settingssubslide2</include>
+		</control>
+
+		<control type="label" id="0">
+			<description>weather location select label</description>
+			<width>110</width>
+			<height>20</height>
+			<posx>490</posx>
+			<posy>10</posy>
+			<font>font14</font>
+			<reverse>yes</reverse>
+			<disabledcolor>ffffffff</disabledcolor>
+			<textoffsetx>0</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<aligny>center</aligny>
+			<align>center</align>
+	    <include>settingpanelslide</include>
+			<info>Weather.Location</info>
+		</control>
+		<control type="label" id="11">
+			<description>update time label</description>
+			<align>center</align>
+			<width>110</width>
+			<height>20</height>
+			<posx>490</posx>
+			<posy>40</posy>
+			<label>-</label>
+			<font>font13</font>
+	    <include>settingpanelslide</include>
+		</control>
+
+
+		<control type="label" id="223">
+			<description>current temp static label</description>
+			<posx>490</posx>
+			<posy>068</posy>
+			<label>Temp</label>
+			<font>font10</font>
+	    <include>settingpanelslide</include>
+		</control>
+		<control type="label" id="224">
+			<description>current feels like static label</description>
+			<posx>490</posx>
+			<posy>088</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="227">
+			<description>current dew static label</description>
+			<posx>490</posx>
+			<posy>108</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="228">
+			<description>current humidity static label</description>
+			<posx>490</posx>
+			<posy>128</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="225">
+			<description>current UV Index static label</description>
+			<posx>490</posx>
+			<posy>148</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="226">
+			<description>current wind static label</description>
+			<posx>490</posx>
+			<posy>168</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+
+
+		<control type="label" id="23">
+			<description>current temp label</description>
+			<align>right</align>
+			<posx>600</posx>
+			<posy>068</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="24">
+			<description>current feels like label</description>
+			<align>right</align>
+			<posx>600</posx>
+			<posy>088</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="27">
+			<description>current dew label</description>
+			<align>right</align>
+			<posx>600</posx>
+			<posy>108</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="28">
+			<description>current humidity label</description>
+			<align>right</align>
+			<posx>600</posx>
+			<posy>128</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="25">
+			<description>current UV Index label</description>
+			<align>right</align>
+			<posx>600</posx>
+			<posy>148</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="26">
+			<description>current wind label</description>
+			<align>right</align>
+			<posx>600</posx>
+			<posy>168</posy>
+			<label>-</label>
+			<font>font10</font>
+	    		<include>settingpanelslide</include>
+		</control>
+
+		<control type="image" id="21">
+			<description>current weather icon</description>
+			<posx>610</posx>
+			<posy>25</posy>
+			<height>138</height>
+			<width>106</width>
+			<texture>background-myweather.png</texture>
+	    		<include>settingpanelslide</include>
+		</control>
+
+		<control type="label" id="22">
+			<description>current condition label</description>
+			<align>right</align>
+			<posx>680</posx>
+			<posy>160</posy>
+			<width>120</width>
+			<wrapmultiline>true</wrapmultiline>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+
+
+
+		<control type="button" id="31">
+			<description>day 0 label</description>
+			<align>center</align>
+			<height>28</height>
+			<width>110</width>
+			<posx>490</posx>
+			<posy>190</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="32">
+			<description>day 0 Hi label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>490</posx>
+			<posy>224</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="33">
+			<description>day 0 low label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>490</posx>
+			<posy>250</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="34">
+			<description>day 0 general weather label</description>
+			<align>center</align>
+			<aligny>top</aligny>
+			<width>110</width>
+			<wrapmultiline>true</wrapmultiline>
+			<posx>490</posx>
+			<posy>345</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="image" id="35">
+			<description>day 0 icon</description>
+			<posx>523</posx>
+			<posy>275</posy>
+			<height>64</height>
+			<width>48</width>
+			<texture>background-myweather.png</texture>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="button" id="41">
+			<description>day 1 label</description>
+			<align>center</align>
+			<height>28</height>
+			<width>110</width>
+			<posx>605</posx>
+			<posy>190</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="42">
+			<description>day 1 Hi label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>605</posx>
+			<posy>224</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="43">
+			<description>day 1 low label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>605</posx>
+			<posy>250</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="44">
+			<description>day 1 general weather label</description>
+			<align>center</align>
+			<aligny>top</aligny>
+			<width>110</width>
+			<wrapmultiline>true</wrapmultiline>
+			<posx>605</posx>
+			<posy>345</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="image" id="45">
+			<description>day 1 icon</description>
+			<posx>636</posx>
+			<posy>275</posy>
+			<height>64</height>
+			<width>48</width>
+			<texture>background-myweather.png</texture>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="button" id="51">
+			<description>day 2 label</description>
+			<align>center</align>
+			<height>28</height>
+			<width>110</width>
+			<posx>490</posx>
+			<posy>380</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="52">
+			<description>day 2 Hi label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>490</posx>
+			<posy>414</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="53">
+			<description>day 2 low label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>490</posx>
+			<posy>440</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="54">
+			<description>day 2 general weather label</description>
+			<align>center</align>
+			<aligny>top</aligny>
+			<width>110</width>
+			<wrapmultiline>true</wrapmultiline>
+			<posx>490</posx>
+			<posy>535</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="image" id="55">
+			<description>day 2 icon</description>
+			<posx>523</posx>
+			<posy>465</posy>
+			<height>64</height>
+			<width>48</width>
+			<texture>background-myweather.png</texture>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="button" id="61">
+			<description>day 3 label</description>
+			<align>center</align>
+			<height>28</height>
+			<width>110</width>
+			<posx>605</posx>
+			<posy>380</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="62">
+			<description>day 3 Hi label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>605</posx>
+			<posy>414</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="63">
+			<description>day 3 low label</description>
+			<align>center</align>
+			<width>110</width>
+			<posx>605</posx>
+			<posy>440</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="64">
+			<description>day 3 general weather label</description>
+			<align>center</align>
+			<aligny>top</aligny>
+			<width>110</width>
+			<wrapmultiline>true</wrapmultiline>
+			<posx>605</posx>
+			<posy>535</posy>
+			<label>-</label>
+			<font>font13</font>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="image" id="65">
+			<description>day 3 icon</description>
+			<posx>636</posx>
+			<posy>465</posy>
+			<height>64</height>
+			<width>48</width>
+			<texture>background-myweather.png</texture>
+	    		<include>settingpanelslide</include>
+		</control>
+		<control type="image" id="0">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control>
+
+
+   <control type="button" id="512">
+	<description>power button</description>
+	<posx>665</posx>
+	<posy>500</posy>
+	<width>46</width>
+	<height>64</height>
+	<label>-</label>
+	<font>font14</font>
+    	<onfocus>SetFocus(2)</onfocus>
+    	<onfocus>ReplaceWindow(1001)</onfocus>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+   </control>
+
+	</controls>
+</window>

@@ -1,0 +1,64 @@
+<window id="2004">
+	<defaultcontrol>-</defaultcontrol>
+	<visible>Player.HasAudio</visible>
+	<visible>!Skin.HasSetting(overlay)</visible>
+	<visible>![Window.IsActive(2005) | Window.IsActive(2006)]</visible>
+	<controls>
+			<control type="image">
+				<description>Album Thumb</description>
+				<posx>10</posx>
+				<posy>476</posy>
+				<width>100</width>
+				<height>100</height>
+				<info>MusicPlayer.Cover</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="fadelabel">
+				<description>Artist and Album Labels</description>
+				<posx>115</posx>
+				<posy>550</posy>
+				<width>605</width>
+				<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Album]</label>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="fadelabel">
+				<description>Song Title</description>
+				<posx>115</posx>
+				<posy>530</posy>
+				<width>380</width>
+				<info>MusicPlayer.Title</info>
+				<align>left</align>
+				<font>font10</font>
+			</control>
+			<control type="label">
+				<description>Playlist Pos No</description>
+				<posx>115</posx>
+				<posy>510</posy>
+				<width>200</width>
+				<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554] ]$INFO[musicplayer.Playlistlength, / ]</label>
+				<visible>!MusicPartyMode.Enabled</visible>
+				<align>left</align>
+				<font>font10</font>
+			</control>
+			<control type="label">
+				<description>PartyMode Enabled</description>
+				<posx>115</posx>
+				<posy>510</posy>
+				<width>200</width>
+				<label>589</label>
+				<visible>MusicPartyMode.Enabled</visible>
+				<align>left</align>
+				<font>font10</font>
+			</control>
+			<control type="fadelabel">
+				<description>time label</description>
+				<posx>115</posx>
+				<posy>490</posy>
+				<width>380</width>
+				<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+				<align>left</align>
+				<font>font10</font>
+			</control>
+	</controls>
+</window>

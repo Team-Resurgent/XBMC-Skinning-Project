@@ -1,0 +1,225 @@
+<window id="6">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+		<control type="image" description="Content BG">
+			<posx>50</posx>
+			<posy>50</posy>
+			<width>1180</width>
+			<height>620</height>
+			<texture border="3">panel.png</texture>
+			<animation effect="slide" start="0,0" end="300,0" time="200" delay="0" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+		</control>
+
+		<control type="group">
+			<posx>75</posx>
+			<posy>75</posy>
+			<include>OldListViewCommons</include>
+			<include>VideoViewCommons</include>
+			<include>AllViewCommonThumbLarge</include>
+			<include>WideIcon_Big</include>
+			<include>AllViewCommonPageControls</include>
+		<animation effect="slide" start="0,0" end="300,0" time="200" delay="0" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+		</control>
+	
+		<control type="image" description="View Frame">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>border.png</texture>
+		</control>
+		
+		
+		<control type="group" id="9000">
+			<posx>15</posx>
+			<posy>70</posy>
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
+			<animation effect="slide" start="-300,0" end="0,0" time="200" delay="0" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+			<control type="image" description="Menu Background">
+				<posx>285</posx>
+				<posy>-55</posy>
+				<width>16</width>
+				<height>690</height>
+				<texture>panel_noborder.png</texture>
+			</control>
+			<control type="image" description="View Settings Header">
+				<posx>10</posx>
+				<posy>-40</posy>
+				<width>252</width>
+				<height>32</height>
+				<texture>nav_header_viewsettings.png</texture>
+			</control>
+			<control type="label" description="View Settings Label">
+				<posx>55</posx>
+				<posy>-39</posy>
+				<label>View Settings</label>
+				<font>font22</font>
+			</control>
+			<control type="image" description="Skin Settings Header">
+				<posx>10</posx>
+				<posy>400</posy>
+				<width>252</width>
+				<height>32</height>
+				<texture>nav_header_skinsettings.png</texture>
+			</control>
+			<control type="label" description="Skin Settings Label">
+				<posx>55</posx>
+				<posy>399</posy>
+				<label>Skin Settings</label>
+				<font>font22</font>
+			</control>
+			<control type="button" id="2">
+				<description>View As Icons button</description>
+				<posx>10</posx>
+				<posy>0</posy>
+				<label>100</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<width>240</width>
+				<onup>22</onup>
+				<ondown>3</ondown>
+				<textoffsetx>5</textoffsetx>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>list_highlight.png</texturefocus>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FF000000</focusedcolor>
+				<selectedcolor>FFFFFFFF</selectedcolor>
+				<align>left</align>
+			</control>
+			<control type="button" id="3">
+				<description>Sort by button</description>
+				<posx>10</posx>
+				<posy>37</posy>
+				<label>103</label>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+				<textoffsetx>5</textoffsetx>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>list_highlight.png</texturefocus>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FF000000</focusedcolor>
+				<selectedcolor>FFFFFFFF</selectedcolor>
+				<align>left</align>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Sort asc</description>
+				<label>-</label>
+				<posx>230</posx>
+				<posy>40</posy>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+				<width>26</width>
+				<height>26</height>
+				<texturefocus>scroll_up_sel.png</texturefocus>
+				<texturenofocus>scroll_up.png</texturenofocus>
+				<alttexturefocus>scroll_down_sel.png</alttexturefocus>
+				<alttexturenofocus>scroll_down.png</alttexturenofocus>
+			</control>
+			<control type="radiobutton" id="99">
+				<description>Library button</description>
+				<posx>10</posx>
+				<posy>74</posy>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<onclick>ReplaceWindow(myvideofiles)</onclick>
+				<onclick>SetFocus(99)</onclick>
+				<selected>Window.IsVisible(myvideolibrary)</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>7</ondown>
+				<radioposx>225</radioposx>
+				<textoffsetx>5</textoffsetx>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>list_highlight.png</texturefocus>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FF000000</focusedcolor>
+				<selectedcolor>FFFFFFFF</selectedcolor>
+				<align>left</align>
+			</control>
+			<control type="radiobutton" id="7">
+				<description>Stacking</description>
+				<posx>10</posx>
+				<posy>111</posy>
+				<label>346</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>99</onup>
+				<ondown>20</ondown>
+				<radioposx>225</radioposx>
+				<textoffsetx>5</textoffsetx>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>list_highlight.png</texturefocus>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FF000000</focusedcolor>
+				<selectedcolor>FFFFFFFF</selectedcolor>
+				<align>left</align>
+			</control>
+			<control type="radiobutton" id="20" description="Toggle Overlay Matte">
+				<posx>10</posx>
+				<posy>440</posy>
+				<label>Show Overlay Matte</label>
+				<onclick>Skin.ToggleSetting(EnableOverlayMatte)</onclick>
+				<selected>Skin.HasSetting(EnableOverlayMatte)</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>7</onup>
+				<ondown>21</ondown>
+				<radioposx>225</radioposx>
+				<textoffsetx>5</textoffsetx>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>list_highlight.png</texturefocus>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FF000000</focusedcolor>
+				<selectedcolor>FFFFFFFF</selectedcolor>
+				<align>left</align>
+			</control>
+			<control type="radiobutton" id="21" description="Toggle Control Matte">
+				<posx>10</posx>
+				<posy>472</posy>
+				<label>Show Control Matte</label>
+				<onclick>Skin.ToggleSetting(EnableBottomMatte)</onclick>
+				<selected>Skin.HasSetting(EnableBottomMatte)</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>20</onup>
+				<ondown>22</ondown>
+				<radioposx>225</radioposx>
+				<textoffsetx>5</textoffsetx>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>list_highlight.png</texturefocus>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FF000000</focusedcolor>
+				<selectedcolor>FFFFFFFF</selectedcolor>
+				<align>left</align>
+			</control>
+			<control type="radiobutton" id="22" description="Toggle Full Plot">
+				<posx>10</posx>
+				<posy>504</posy>
+				<label>Full Plot for Movies</label>
+				<onclick>Skin.ToggleSetting(FullPlot)</onclick>
+				<selected>Skin.HasSetting(FullPlot)</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>21</onup>
+				<ondown>2</ondown>
+				<radioposx>225</radioposx>
+				<textoffsetx>5</textoffsetx>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>list_highlight.png</texturefocus>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FF000000</focusedcolor>
+				<selectedcolor>FFFFFFFF</selectedcolor>
+				<align>left</align>
+				<visible>Container.Content(movies)</visible>
+			</control>
+		</control>
+	</controls>
+</window>
+
+

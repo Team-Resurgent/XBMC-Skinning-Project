@@ -1,0 +1,87 @@
+<includes>
+
+	<!-- backgrounds -->
+	<include name="anim-backgrounds">
+		<animation type="VisibleChange">
+		    <effect type="fade" delay="300" time="800" />
+		</animation>
+	</include>
+
+	<!-- sidebar -->
+	<include name="anim-sidebar">
+		<animation type="focus">
+		    <effect type="slide" start="0,0" end="-420,0" time="300" />
+		    <effect type="fade" start="0" end="80" time="500" />
+		</animation>
+		<animation type="unfocus">
+		    <effect type="slide" start="-420,0" end="0,0" time="300" />
+		    <effect type="fade" start="80" end="0" time="500" />
+		</animation>
+	</include>
+	
+	<!-- context menu -->
+	<include name="anim-context">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="300" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="300" />
+		</animation>
+	</include>
+	
+	<!-- music overlay -->
+	<include name="anim-musicoverlay">
+		<!-- fade in after idle time -->
+		<animation type="conditional" condition="System.IdleTime(5)">
+			<effect type="fade" start="0" end="90" time="600" />
+		</animation>
+		<!-- fade out if user is not idle -->
+		<animation type="conditional" condition="!System.IdleTime(5)">
+			<effect type="fade" start="90" end="0" time="300" />
+		</animation>
+	</include>
+	<!-- video overlay -->
+	<include name="anim-videooverlay">
+		<!-- fade in after idle time -->
+		<animation type="conditional" condition="System.IdleTime(5)">
+			<effect type="fade" start="0" end="90" time="600" />
+		</animation>
+		<!-- fade out if user is not idle -->
+		<animation type="conditional" condition="!System.IdleTime(5)">
+			<effect type="fade" start="90" end="0" time="300" />
+		</animation>
+	</include>
+	
+	<!-- dialog video/music scan -->
+	<include name="anim-scan">
+		<!-- fade out after idle time -->
+		<animation type="conditional" condition="!System.IdleTime(5)">
+			<effect type="fade" start="100" end="75" time="600" />
+		</animation>
+		<!-- fade in if user is not idle -->
+		<animation type="conditional" condition="System.IdleTime(5)">
+			<effect type="fade" start="75" end="100" time="300" />
+		</animation>
+	</include>
+	
+	<!-- seekbar -->
+	<include name="anim-seekbar">
+		<!-- slide in -->
+		<animation type="WindowOpen">
+			<effect type="slide" start="620,0" end="0,0" time="600" />
+		</animation>
+		<!-- slide out -->
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="620,0" time="600" />
+		</animation>
+		<!-- fade out after idle time -->
+		<animation type="conditional" condition="System.IdleTime(5)">
+			<effect type="fade" start="90" end="0" time="600" />
+		</animation>
+		<!-- fade in if user is not idle -->
+		<animation type="conditional" condition="!System.IdleTime(5)">
+			<effect type="fade" start="0" end="90" time="300" />
+		</animation>
+	</include>
+	
+</includes>

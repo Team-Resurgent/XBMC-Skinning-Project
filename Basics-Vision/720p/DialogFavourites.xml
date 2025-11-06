@@ -1,0 +1,119 @@
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>220</posx>
+		<posy>165</posy>
+		<origin x="220" y="75">Window.IsVisible(Home) + !Skin.HasSetting(Alternate_Home)</origin>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>-100</posx>
+			<posy>0</posy>
+			<width>1040</width>
+			<height>370</height>
+			<texture border="0,45,0,10">Dialog.png</texture>
+		</control>
+		<control type="image">
+			<posx>400</posx>
+			<posy>340</posy>
+			<width>40</width>
+			<height>16</height>
+			<texture>Arrow_Down.png</texture>
+			<visible>Container(450).HasNext</visible>
+		</control>
+		<control type="image">
+			<posx>400</posx>
+			<posy>52</posy>
+			<width>40</width>
+			<height>16</height>
+			<texture>Arrow_Up.png</texture>
+			<visible>Container(450).HasPrevious</visible>
+		</control>
+		<control type="label" id="1">
+			<description>heading label</description>
+			<posx>20</posx>
+			<posy>0</posy>
+			<width>840</width>
+			<height>40</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font16</font>
+			<label>$LOCALIZE[1036]</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="list" id="450">
+			<posx>0</posx>
+			<posy>70</posy>
+			<width>840</width>
+			<height>270</height>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="45">
+				<control type="image">
+					<posx>65</posx>
+					<posy>5</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>115</posx>
+					<posy>5</posy>
+					<width>475</width>
+					<height>35</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="45">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>840</width>
+					<height>45</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>Control.HasFocus(450)</visible>
+					<texture>ListItem_focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>65</posx>
+					<posy>5</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>115</posx>
+					<posy>5</posy>
+					<width>475</width>
+					<height>35</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>600</posx>
+			<posy>75</posy>
+			<width>200</width>
+			<height>260</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[Container(450).Listitem.Icon]</texture>
+			<bordertexture border="4">folder-focus.png</bordertexture>
+			<bordersize>4</bordersize>
+		</control>
+	</controls>
+</window>

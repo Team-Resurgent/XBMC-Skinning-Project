@@ -1,0 +1,525 @@
+<includes>
+	<include name="menu_videolibrary_main">
+		<control type="group" id="9000">
+			<description>Group containing all the code for VIDEO LIBRARY MAIN POP UP MENU</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>-</include>
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0) | ControlGroup(1001).HasFocus(0) | ControlGroup(1002).HasFocus(0)</visible>
+			<animation effect="fade" time="500" start="0" end="100">Visible</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>192</width>
+				<height>185</height>
+				<texture border="10">videolibrary_menu_bg.png</texture>
+			</control>
+			<control type="button" id="1">
+				<description>View mode</description>
+				<posx>0</posx>
+				<posy>5</posy>
+				<label>View Mode Options</label>
+				<onleft>50</onleft>
+				<onright>100</onright>
+				<onup>5</onup>
+				<ondown>11</ondown>
+				<width>182</width>
+				<height>32</height>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<posx>167</posx>
+				<posy>16</posy>
+				<width>11</width>
+				<height>10</height>
+				<texture>menu_arrow.png</texture>
+			</control>
+			<control type="button" id="11">
+				<description>Library button</description>
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Files Mode</label>
+				<onclick>ReplaceWindow(videofiles)</onclick>
+				<onclick>SetFocus(11)</onclick>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>1</onup>
+				<ondown>10</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<visible>Window.IsVisible(25)</visible>
+			</control>
+			<control type="button" id="11">
+				<description>Library button</description>
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Library Mode</label>
+				<onclick>ReplaceWindow(videolibrary)</onclick>
+				<onclick>SetFocus(11)</onclick>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>1</onup>
+				<ondown>10</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<visible>Window.IsVisible(6)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>Show Button</description>
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>-</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>11</onup>
+				<ondown>4</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="4">
+				<description>Reload Skin</description>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Reload Skin</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>10</onup>
+				<ondown>5</ondown>
+				<onclick>XBMC.ReloadSkin()</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="5">
+				<description>Set Font Sizes</description>
+				<posx>0</posx>
+				<posy>145</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Plot Font Size</label>
+				<onleft>50</onleft>
+				<onright>200</onright>
+				<onup>4</onup>
+				<ondown>1</ondown>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<posx>167</posx>
+				<posy>156</posy>
+				<width>11</width>
+				<height>10</height>
+				<texture>menu_arrow.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="menu_videolibrary_view">
+		<control type="group" id="1001">
+			<description>Pop-out control for VIEW MODE</description>
+			<posx>180</posx>
+			<posy>0</posy>
+			<include>-</include>
+			<visible allowhiddenfocus="true">Control.HasFocus(1) | ControlGroup(1001).HasFocus(0)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>192</width>
+				<height>220</height>
+				<texture border="10">videolibrary_menu_bg.png</texture>
+			</control>
+			<control type="button" id="100">
+				<description>Auto Select View</description>
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Auto Select</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>101</ondown>
+				<onclick>Container.SetViewMode(53)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<visible>Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="100">
+				<description>Auto Select View</description>
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Auto Select</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>101</ondown>
+				<onclick>Container.SetViewMode(56)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<visible>Container.Content(Episodes)</visible>
+			</control>
+			<control type="button" id="100">
+				<description>Auto Select View</description>
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Auto Select</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>101</ondown>
+				<onclick>Container.SetViewMode(58)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<visible>Container.Content(tvshows)</visible>
+			</control>
+			<control type="button" id="100">
+				<description>Auto Select View</description>
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Auto Select</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>101</ondown>
+				<onclick>Container.SetViewMode(54)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<visible>Container.Content(seasons)</visible>
+			</control>
+			<control type="button" id="101">
+				<description>Next View</description>
+				<posx>0</posx>
+				<posy>40</posy>
+				<label>Next View</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>100</onup>
+				<ondown>102</ondown>
+				<width>182</width>
+				<height>32</height>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.NextViewMode</onclick>
+			</control>
+			<control type="button" id="102">
+				<description>Previous View</description>
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Previous View</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>101</onup>
+				<ondown>103</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.PreviousViewMode</onclick>
+			</control>
+			<control type="button" id="103">
+				<description>Filtered View Mode</description>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>TV Show Titles</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>100</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.SetViewMode(58)</onclick>
+				<visible>Container.Content(tvshows)</visible>
+			</control>
+			<control type="button" id="103">
+				<description>Filtered View Mode</description>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>TV Show Seasons</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>100</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.SetViewMode(54)</onclick>
+				<visible>Container.Content(seasons)</visible>
+			</control>
+			<control type="button" id="103">
+				<description>Filtered View Mode</description>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>TV Show Episodes</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>100</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.SetViewMode(56)</onclick>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<control type="button" id="103">
+				<description>Filtered View Mode</description>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Movies - Brief</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>102</onup>
+				<ondown>104</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.SetViewMode(57)</onclick>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="button" id="104">
+				<description>Filtered View Mode</description>
+				<posx>0</posx>
+				<posy>145</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Movies - Detailed</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>103</onup>
+				<ondown>105</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.SetViewMode(59)</onclick>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="button" id="105">
+				<description>Filtered View Mode</description>
+				<posx>0</posx>
+				<posy>180</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Movies - Combined</label>
+				<onleft>1</onleft>
+				<onright>50</onright>
+				<onup>104</onup>
+				<ondown>100</ondown>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<onclick>Container.SetViewMode(53)</onclick>
+				<visible>Container.Content(movies)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="menu_videolibrary_font">
+		<control type="group" id="1002">
+			<description>Pop-out control for FONT SIZE</description>
+			<posx>180</posx>
+			<posy>140</posy>
+			<include>-</include>
+			<visible allowhiddenfocus="true">Control.HasFocus(5) | ControlGroup(1002).HasFocus(0)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>192</width>
+				<height>120</height>
+				<texture border="10">videolibrary_menu_bg.png</texture>
+			</control>
+			<control type="button" id="200">
+				<description>SMALL</description>
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Small</label>
+				<onleft>5</onleft>
+				<onright>50</onright>
+				<onup>202</onup>
+				<ondown>201</ondown>
+				<onclick>Skin.SetBool(fonts_small)</onclick>
+				<onclick>Skin.Reset(fonts_medium)</onclick>
+				<onclick>Skin.Reset(fonts_large)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font18</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="201">
+				<description>MEDIUM</description>
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Medium</label>
+				<onleft>5</onleft>
+				<onright>50</onright>
+				<onup>200</onup>
+				<ondown>202</ondown>
+				<onclick>Skin.Reset(fonts_small)</onclick>
+				<onclick>Skin.SetBool(fonts_medium)</onclick>
+				<onclick>Skin.Reset(fonts_large)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="202">
+				<description>LARGE</description>
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>182</width>
+				<height>32</height>
+				<label>Large</label>
+				<onleft>5</onleft>
+				<onright>50</onright>
+				<onup>201</onup>
+				<ondown>200</ondown>
+				<onclick>Skin.Reset(fonts_small)</onclick>
+				<onclick>Skin.Reset(fonts_medium)</onclick>
+				<onclick>Skin.SetBool(fonts_large)</onclick>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<texturefocus>videolibrary_menu_selected.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font22</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+			</control>
+		</control>
+	</include>
+	
+	
+</includes>

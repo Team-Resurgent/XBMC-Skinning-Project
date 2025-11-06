@@ -1,0 +1,130 @@
+<!-- selects movie/album from internet search -->
+<window id="2000">
+
+	<defaultcontrol>3</defaultcontrol>
+		
+	<controls>
+
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+	
+		<control type="group">
+		
+			<posx>320</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>640</width>
+				<height>540</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label">
+				<label>Results:</label>
+				<width>150</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+			<!-- number of files -->
+			<control type="label" id="2">
+				<width>510</width>
+				<height>40</height>
+				<posx>110</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+			</control>
+			
+			<!-- sources list -->
+			<control type="image">
+				<texture border="4">dialog-back-nf.png</texture>
+				<width>600</width>
+				<height>400</height>
+				<posx>20</posx>
+				<posy>60</posy>
+			</control>
+			<control type="list" id="3">
+			
+				<width>540</width>
+				<height>385</height>
+				<posx>30</posx>
+				<posy>70</posy>
+				<onleft>5</onleft>
+				<onright>60</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="43">
+					<control type="image">
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>540</width>
+						<height>38</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>520</width>
+						<height>38</height>
+						<posx>10</posx>
+						<font>dialog</font>
+						<textcolor>type-dialog-dark</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="43">
+					<control type="image">
+						<visible>!Control.HasFocus(3)</visible>
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>540</width>
+						<height>38</height>
+					</control>
+					<control type="image">
+						<visible>Control.HasFocus(3)</visible>
+						<texture border="4">dialog-back.png</texture>
+						<width>540</width>
+						<height>38</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>520</width>
+						<height>38</height>
+						<posx>10</posx>
+						<font>dialog</font>
+						<textcolor>type-dialog</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<posx>580</posx>
+				<posy>70</posy>
+				<control type="image">
+					<texture>dialog-back-nf.png</texture>
+					<width>30</width>
+					<height>382</height>
+				</control>
+				<control type="scrollbar" id="60">
+					<width>30</width>
+					<height>382</height>
+					<onleft>3</onleft>
+					<onright>5</onright>
+					<showonepage>false</showonepage>
+				</control>		
+			</control>
+
+			<!-- manual button -->
+			<control type="button" id="5">
+				<label>Manual</label>
+				<posx>470</posx>
+				<posy>480</posy>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+		</control>
+		
+	</controls>
+	
+</window>

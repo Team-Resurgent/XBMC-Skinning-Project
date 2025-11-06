@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: airplanez-->
+<!--Email: airplanez@gmail.com-->
+<!--Date of translation: 10/14/2009-->
+<!--$Revision$-->
+<!--Based on english strings version 204-->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">파일 관리자</string>
+  <string id="31001">정보</string>
+  <string id="31002">초기화</string>
+  <string id="31003">분석</string>
+  <string id="31004">바꿈</string>
+  <string id="31005">기타</string>
+  <string id="31006">시각적</string>
+  <string id="31007">켜기/끄기</string>
+  <string id="31008">등급 없음</string>
+  <string id="31009">시청하기</string>
+  <string id="31010">시청하기</string>
+  <string id="31011">시청하기</string>
+  <string id="31012">들어보기</string>
+  <string id="31013">살펴보기</string>
+  <string id="31014">사용하기</string>
+  <string id="31015">확인</string>
+  <string id="31016">설정하기</string>
+  <string id="31017">전원</string>
+  <string id="31018">기본 정보</string>
+  <string id="31019">재생하기</string>
+  <string id="31020">확인하기</string>
+  <string id="31021">:</string>
+  <string id="31022">최근에 추가된</string>
+  <string id="31023">최신</string>
+  <string id="31024">페이지</string>
+  <string id="31025">항목</string>
+
+  <!-- Options Menu -->
+  <string id="31100">포스터 정보</string>
+  <string id="31101">정렬</string>
+  <string id="31102">설정 옵션</string>
+  <string id="31103">쇼케이스</string>
+  <string id="31104">큰 시계 보이기</string>
+  <string id="31105">폭포</string>
+  <string id="31106">전시</string>
+  <string id="31107">낮은 목록</string>
+  <string id="31108">노출</string>
+  <string id="31109">높은 목록</string>
+
+  <!-- Settings -->
+  <string id="31200">줄거리 보기</string>
+  <string id="31201">마지막으로 고쳐진</string>
+  <string id="31202">배경 폴더</string>
+  <string id="31203">배경</string>
+  <string id="31204">욥션 메뉴</string>
+  <string id="31205">숨기기</string>
+  <string id="31206">시계</string>
+  <string id="31207">첫화면에 날씨 숨기기</string>
+  <string id="31208">사용안함</string>
+  <string id="31209">설정</string>
+  <string id="31210">메뉴</string>
+  <string id="31211">비디오 OSD 에 줄거리 숨기기</string>
+  <string id="31212">시청함 중첩 숨기기</string>
+  <string id="31213">미리보기 숨기기</string>
+  <string id="31214">리뷰 보이기</string>
+  <string id="31215">컨텐츠 형식 보이기</string>
+  <string id="31216">미디어 개수 숨기기</string>
+  <string id="31217">TV 에 세로방향 미리보기 사용</string>
+  <string id="31218">최소 비디오 OSD 사용</string>
+  <string id="31219">화이트 노이즈 배경 숨기기</string>
+  <string id="31220">움직이는 날씨 미리보기 사용</string>
+  <string id="31221">최근 비디오 숨김</string>
+
+  <!-- Video -->
+  <string id="31300">사용할수 없음</string>
+  <string id="31301">미리보기</string>
+  <string id="31302">팬아트</string>
+  <string id="31303">시즌</string>
+  <string id="31304">대략적 종료 시간</string>
+
+  <!-- Music -->
+  <string id="31400">끝남</string>
+  <string id="31401">현재</string>
+  <string id="31402">시각화 선택</string>
+  <string id="31403">시각화 기본설정</string>
+  <string id="31404">시각화 설정</string>
+  <string id="31405">가사</string>
+  <string id="31406">가사 경로 설정</string>
+  <string id="31407">재생목록 열기</string>
+  <string id="31408">재생목록 저장</string>
+  <string id="31409">재생목록 닫기</string>
+  <string id="31410">시스템 음악 파일</string>
+  <string id="31411">현재 재생목록</string>
+
+  <!-- Dialogs -->
+  <string id="31500">프로파일 선택</string>
+  <string id="31501">소리꺼짐</string>
+  <string id="31502">만들기</string>
+  <string id="31503">코덱</string>
+
+</strings>

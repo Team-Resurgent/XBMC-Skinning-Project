@@ -1,0 +1,160 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel</include>
+	<include>Menu-Time</include>
+
+	<control>
+		<description>Title Label</description>
+		<label>13200</label>
+		<include>Window-Title</include>
+		<visible>!Window.IsActive(130)</visible>
+	</control>
+
+	<control type="radiobutton" id="4">
+		<description>Enable Login Screen</description>
+		<posx>58</posx>
+		<posy>80</posy>
+		<height>30</height>
+		<width>110</width>
+		<label>20096</label>
+		<texturefocus>Button-Menu.png</texturefocus>
+		<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+		<font>menubutton</font>
+		<shadowcolor>black</shadowcolor>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<include>focusedcolor</include>
+		<include>FX-Button</include>
+	</control>
+	<control type="fadelabel" id="3">
+		<description>Last Loaded</description>
+		<type>fadelabel</type>
+		<id>3</id>
+		<posx>210</posx>
+		<posy>525</posy>
+		<width>656</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="list" id="2">
+		<posx>70</posx>
+		<posy>120</posy>
+		<width>570</width>
+		<height>370</height>
+		<onleft>4</onleft>
+		<onright>90</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<pagecontrol>90</pagecontrol>
+		<include>common-FX</include>
+		<visible>!Window.IsActive(126)</visible>
+		<itemlayout height="27">
+			<control type="image">
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>16</width>
+				<height>16</height>
+				<info>ListItem.Icon</info>
+				<texture>unknown-user.png</texture>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="40">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>40</height>
+				<texture border="50,0,50,0">Button-List-Fade-Focus.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>40</height>
+				<texture border="50,0,50,0">Button-List-Fade-NoFocus.png</texture>
+				<visible>!Control.HasFocus(2)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>3</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Icon</info>
+				<texture>defaultfolderbig.png</texture>
+			</control>
+			<control type="label">
+				<posx>45</posx>
+				<posy>8</posy>
+				<width>370</width>
+				<height>16</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>8</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font18</font>
+				<align>right</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+		</focusedlayout>
+	</control>
+	<control type="scrollbar" id="90">
+		<posx>638</posx>
+		<posy>115</posy>
+		<width>20</width>
+		<height>372</height>
+		<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+		<texturesliderbar border="3">scrollbar_bar.png</texturesliderbar>
+		<texturesliderbarfocus border="3">scrollbar_bar_focus.png</texturesliderbarfocus>
+		<textureslidernib>scrollbar_nib.png</textureslidernib>
+		<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+		<onleft>2</onleft>
+		<onright>9000</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<orientation>vertical</orientation>
+		<include>FX-Button</include>
+		<visible>!Window.IsActive(126)</visible>
+	</control>
+
+	<include>Black-Overlay</include>
+	<include>Lines</include>
+	</controls>
+</window>

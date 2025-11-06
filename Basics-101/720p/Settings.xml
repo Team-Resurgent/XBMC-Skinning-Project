@@ -1,0 +1,303 @@
+<window id="4">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$LOCALIZE[10507] $LOCALIZE[5]</label>
+				<font>font40</font>
+			</control>
+			<control type="group" id="8000">
+				<posx>137</posx>
+				<posy>102</posy>
+				<control type="button" id="2">
+					<description>Video push button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>3</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyVideosSettings)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>9000</onleft>
+					<onright>6</onright>
+					<onup>5</onup>
+					<ondown>3</ondown>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_video.png</texture>
+				</control>
+				<control type="button" id="3">
+					<description>Music push button</description>
+					<posx>0</posx>
+					<posy>130</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>2</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyMusicSettings)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>9000</onleft>
+					<onright>7</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>135</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_music.png</texture>
+				</control>
+				<control type="button" id="4">
+					<description>Pics push button</description>
+					<posx>0</posx>
+					<posy>260</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>1</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>9000</onleft>
+					<onright>8</onright>
+					<onup>3</onup>
+					<ondown>5</ondown>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>265</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_pics.png</texture>
+				</control>
+				<control type="button" id="5">
+					<description>Profiles push button</description>
+					<posx>0</posx>
+					<posy>390</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>13200</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>9000</onleft>
+					<onright>9</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>395</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>unknown-user.png</texture>
+				</control>
+				<control type="button" id="6">
+					<description>Weather push button</description>
+					<posx>505</posx>
+					<posy>0</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>8</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>2</onleft>
+					<onright>9000</onright>
+					<onup>9</onup>
+					<ondown>7</ondown>
+				</control>
+				<control type="image">
+					<posx>525</posx>
+					<posy>5</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_weather.png</texture>
+				</control>
+				<control type="button" id="7">
+					<description>Network push button</description>
+					<posx>505</posx>
+					<posy>130</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>705</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>3</onleft>
+					<onright>9000</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+				</control>
+				<control type="image">
+					<posx>525</posx>
+					<posy>135</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>icon_network.png</texture>
+				</control>
+				<control type="button" id="8">
+					<description>System push button</description>
+					<posx>505</posx>
+					<posy>260</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>13000</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>4</onleft>
+					<onright>9000</onright>
+					<onup>7</onup>
+					<ondown>9</ondown>
+				</control>
+				<control type="image">
+					<posx>525</posx>
+					<posy>265</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>icon_system.png</texture>
+				</control>
+				<control type="button" id="9">
+					<description>Appearence push button</description>
+					<posx>505</posx>
+					<posy>390</posy>
+					<height>125</height>
+					<width>500</width>
+					<label>480</label>
+					<align>right</align>
+					<aligny>-</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>80</textoffsety>
+					<onleft>5</onleft>
+					<onright>9000</onright>
+					<onup>8</onup>
+					<ondown>6</ondown>
+				</control>
+				<control type="image">
+					<posx>525</posx>
+					<posy>395</posy>
+					<width>120</width>
+					<height>115</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>icon_appearence.png</texture>
+				</control>
+			</control>
+			<control type="group" id="9001">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<animation effect="slide" time="150" end="345,0" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>720</height>
+					<onclick>-</onclick>
+					<hitrect x="0" y="0" w="360" h="720" />
+					<texturefocus>Side_Slideout.png</texturefocus>
+					<texturenofocus>Side_Slideout.png</texturenofocus>
+				</control>
+				<control type="group" id="9000">
+					<posx>25</posx>
+					<posy>140</posy>
+					<control type="button" id="20">
+						<description>Reload Skin button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>ButtonCommonValues</include>
+						<label>20183</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+						<onup>21</onup>
+						<ondown>21</ondown>
+					</control>
+					<control type="button" id="21">
+						<description>Skin Settings button</description>
+						<posx>0</posx>
+						<posy>45</posy>
+						<include>ButtonCommonValues</include>
+						<label>20077</label>
+						<onclick>ActivateWindow(1111)</onclick>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+						<onup>20</onup>
+						<ondown>20</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

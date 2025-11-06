@@ -1,0 +1,159 @@
+<window id="6">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+   
+    <control type="group">
+      <posy>-15</posy>
+      <include>ScreenViewsFadeIn</include>
+      <control type="image">
+        <description>Mplayer</description>
+        <posx>307</posx>
+        <posy>442</posy>
+        <width>380</width>
+        <height>85</height>
+        <texture>blank.png</texture>
+        <visible>Container.HasThumb</visible>
+      </control>
+
+      <control type="image">
+        <description>folder image</description>
+        <posx>280</posx>
+        <posy>455</posy>
+        <height>70</height>
+        <aspectratio>keep</aspectratio>
+        <info>container.folderthumb</info>
+      </control>
+      <control type="image">
+        <description>Mplayer</description>
+        <posx>300</posx>
+        <posy>442</posy>
+        <width>390</width>
+        <height>90</height>
+        <texture>mplayer.png</texture>
+        <visible>Container.HasThumb</visible>
+      </control>
+
+      <include>Fade_List_FocusUnfocus_Animation</include>
+			<include>CommonListView</include>
+			<include>CommonListView2</include>
+			<include>CommonThumbSmall</include>
+			<include>CommonThumbBig</include>
+			<include>VideoThumbDVD</include>
+			<include>VideoDVDWrapView</include>
+			<include>WideIcon_Small</include>
+			<include>WideIcon_Big</include>
+		</control>
+		<include>AllCommonPageControls</include>
+		<control type="group" id="9000">
+      <description>Sidebar group</description>
+      <include>MenuEffect</include>
+      <control type="image">
+        <description>Sidebar Back image</description>
+        <posx>-65</posx>
+        <posy>120</posy>
+        <width>325</width>
+        <height>230</height>
+        <texture>Side_Slideout.png</texture>
+      </control>
+      <control type="label">
+        <posx>-64</posx>
+        <posy>340</posy>
+        <label>5</label>
+        <font>fntHeader</font>
+        <angle>90</angle>
+      </control>
+      <control type="button" id="2">
+				<description>view as icons button</description>
+				<posy>120</posy>
+        <posx>30</posx>
+				<label>100</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>7</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="3">
+				<description>sort by button</description>
+				<posy>150</posy>
+        <posx>30</posx>
+				<label>103</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+			</control>
+			<control type="togglebutton" id="4">
+        <posx>30</posx>
+				<description>sort asc</description>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+			</control>
+			<control type="radiobutton" id="99">
+				<description>Library button</description>
+				<posx>30</posx>
+				<posy>180</posy>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<font>font20</font>
+				<align>right</align>
+				<onclick>ReplaceWindow(myvideolibrary)</onclick>
+				<onclick>SetFocus(99)</onclick>
+				<selected>Window.IsVisible(myvideolibrary)</selected>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>7</ondown>
+			</control>
+			<control type="button" id="7">
+				<description>Stacking Button</description>
+				<posy>210</posy>
+        <posx>30</posx>
+				<label>346</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>99</onup>
+				<ondown>2</ondown>
+			</control>
+		</control>
+
+    <control type="group">
+      <include>ScreenItemsFadeIn</include>
+      <control type="label">
+        <description>Main Heading text label</description>
+        <align>center</align>
+        <posx>90</posx>
+        <posy>35</posy>
+        <label>3</label>
+        <include>textcolor-PageHeader</include>
+        <font>fntHeader</font>
+      </control>
+
+      <include>MusicNowPlayingDisplay</include>
+      <control type="label" id="12">
+        <description>number of files text label</description>
+        <posx>135</posx>
+        <posy>60</posy>
+        <width>200</width>
+        <label>-</label>
+        <font>font6</font>
+        <align>right</align>
+        <textcolor>ffc0bfbe</textcolor>
+      </control>
+    </control>
+	</controls>
+</window>

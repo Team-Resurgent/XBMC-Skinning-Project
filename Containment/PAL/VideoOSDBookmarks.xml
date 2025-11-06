@@ -1,0 +1,109 @@
+﻿<window id="125">
+	<defaultcontrol>2</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>10</posx>
+		<posy>5</posy>
+	</coordinates>
+	<controls>
+<!-- Start Menu Background -->
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>90</posy>
+			<width>390</width>
+			<height>30</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture>dialog-context-end.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>120</posy>
+			<width>390</width>
+			<height>330</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture>dialog-context-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>450</posy>
+			<width>390</width>
+			<height>30</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture flipy="true">dialog-context-end.png</texture>
+		</control>
+<!-- End Menu Background -->
+		<control type="label" id="0">
+			<description>Settings Label</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>420</width>
+			<align>left</align>
+			<font>font13</font>
+			<label>13398</label>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="button" id="2">
+			<description>Create Bookmark button</description>
+			<posx>10</posx>
+			<posy>435</posy>
+			<width>190</width>
+			<label>294</label>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<ondown>11</ondown>
+			<onup>11</onup>
+		</control>
+		<control type="button" id="3">
+			<description>Clear Bookmarks button</description>
+			<posx>180</posx>
+			<posy>435</posy>
+			<width>190</width>
+			<label>296</label>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<ondown>11</ondown>
+			<onup>11</onup>
+		</control>
+		<control type="panel" id="11">
+			<posx>10</posx>
+			<posy>165</posy>
+			<width>370</width>
+			<height>235</height>
+			<onleft>2</onleft>
+			<onright>3</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="130" width="110">
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>100</width>
+					<height>100</height>
+					<info>ListItem.Icon</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="150" width="120">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>110</height>
+					<texture>thumb-focus.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>110</width>
+					<height>110</height>
+					<info>ListItem.Icon</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

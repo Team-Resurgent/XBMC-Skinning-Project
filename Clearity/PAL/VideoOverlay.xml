@@ -1,0 +1,150 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<zorder>3</zorder>
+	<include>MediaOverlay</include>
+	<include>Video_Overlay</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+	</control>
+	<control type="image">
+		<posx>63</posx>
+		<posy>106</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Top.png</texture>
+	</control>
+	<control type="image">
+		<posx>63</posx>
+		<posy>414</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Bottom.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+	</control>
+	<control type="label">
+		<description>dialog Heading</description>
+		<posx>160</posx>
+		<posy>145</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>center</align>
+		<label>13350</label>
+		<font>special16</font>
+		<include>dialogheadingcolor</include>
+	</control>
+
+	<!-- === Actual Media Content ================= -->
+
+	<control type="image">
+		<description>Cover Image</description>
+		<posx>70</posx>
+		<posy>200</posy>
+		<width>150</width>
+		<height>200</height>
+		<texture>defaultdvdcover.png</texture>
+		<info>VideoPlayer.Cover</info>
+	</control>
+	<control type="label">
+		<description>Title</description>
+		<posx>280</posx>
+		<posy>200</posy>
+		<width>350</width>
+		<font>special14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[369]: $INFO[VideoPlayer.Title]</label>
+	</control>
+	<control type="label">
+		<description>Director</description>
+		<posx>280</posx>
+		<posy>240</posy>
+		<width>350</width>
+		<font>mediainfo</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[199] $INFO[VideoPlayer.Director]</label>
+	</control>
+	<control type="label">
+		<description>Year</description>
+		<posx>280</posx>
+		<posy>260</posy>
+		<width>350</width>
+		<font>mediainfo</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[562]:  $INFO[VideoPlayer.Year]</label>
+	</control>
+	<control type="label">
+		<description>Genre</description>
+		<posx>280</posx>
+		<posy>280</posy>
+		<width>350</width>
+		<font>mediainfo</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[515]: $INFO[VideoPlayer.Genre]</label>
+	</control>
+	<control type="label">
+		<description>Play Time</description>
+		<posx>280</posx>
+		<posy>300</posy>
+		<font>mediainfo</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[142] $INFO[VideoPlayer.Time]  / $INFO[VideoPlayer.TimeRemaining]</label>
+	</control>
+	<control type="label">
+		<description>Duration</description>
+		<posx>280</posx>
+		<posy>320</posy>
+		<font>mediainfo</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[180]:  $INFO[VideoPlayer.Duration]</label>
+	</control>
+	<control type="label">
+		<description>DVDLabel</description>
+		<posx>280</posx>
+		<posy>340</posy>
+		<font>mediainfo</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[20157]: $INFO[System.DVDLabel]</label>
+	</control>
+	<control type="progress">
+		<description>Progressbar</description>
+		<posx>280</posx>
+		<posy>380</posy>
+		<width>350</width>
+		<height>8</height>
+		<info>Player.Progress</info>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture border="10,0,10,0">Progress-Overlay.png</overlaytexture>
+	</control>
+
+	</controls>
+</window>

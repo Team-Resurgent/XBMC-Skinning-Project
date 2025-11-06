@@ -1,0 +1,67 @@
+<window id="12">
+<defaultcontrol always="true">3</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+    
+  <control type="label">
+    <include>WindowID</include>
+    <label>SettingsCategory.xml</label>
+  </control>
+  
+	<control type="grouplist" id="3">
+		<description>Button Area</description>
+    <posx>10</posx>
+    <posy>40</posy>
+    <width>150</width>
+    <height>480</height>
+    <itemgap>2</itemgap>
+    <onleft>5</onleft>
+    <onright>5</onright>
+    <onup>3</onup>
+    <ondown>3</ondown>
+    <orientation>vertical</orientation>
+	</control>
+  
+	<control type="grouplist" id="5">
+		<description>Control Area</description>
+    <posx>170</posx>
+    <posy>40</posy>
+    <width>500</width>
+    <height>480</height>
+    <itemgap>2</itemgap>
+    <onleft>3</onleft>
+    <onright>3</onright>
+    <onup>5</onup>
+    <ondown>5</ondown>
+    <orientation>vertical</orientation>
+	</control>
+	<control type="button" id="7">
+		<description>Default Button</description>
+    <textcolor>White</textcolor>
+    <align>left</align>
+    <textoffsetx>5</textoffsetx>
+    <texturefocus border="1">ButtonFo.png</texturefocus>
+    <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	</control>
+	<control type="radiobutton" id="8">
+		<description>Default Radio Button</description>
+    <textcolor>White</textcolor>
+    <align>left</align>
+	</control>
+	<control type="spincontrolex" id="9">
+		<description>Default Spin Control</description>
+    <textcolor>White</textcolor>
+    <align>left</align>
+	</control>
+	<control type="button" id="10">
+		<description>Default Category Button</description>
+    <width>150</width>
+    <textcolor>White</textcolor>
+    <texturefocus border="1">ButtonFo.png</texturefocus>
+    <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	</control>
+  
+</controls>
+
+</window>

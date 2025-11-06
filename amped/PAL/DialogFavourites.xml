@@ -1,0 +1,137 @@
+<window type="dialog" id="134">
+  <defaultcontrol always="true">450</defaultcontrol>
+  
+
+
+  <controls>
+
+    <control type="group">
+
+      <animation effect="zoom" start="100" end="1" center="360,288" time="400" delay="200">WindowClose</animation>
+      <animation effect="zoom" start="1" end="100" center="360,288" time="400" delay="200">WindowOpen</animation>
+
+      <description>Group of Object for music playback and display.</description>
+      <posx>250</posx>
+      <posy>264</posy>
+
+
+      <control type="image">
+        <description>LeftFoot</description>
+        <posx>20</posx>
+        <posy>66</posy>
+        <width>90</width>
+        <height>40</height>
+        <texture>foot.png</texture>
+      </control>
+
+      <control type="image">
+        <description>RightFoot</description>
+        <posx>260</posx>
+        <posy>66</posy>
+        <width>90</width>
+        <height>40</height>
+        <texture>foot.png</texture>
+      </control>
+
+      <control type="image">
+        <description>black behind</description>
+        <posx>15</posx>
+        <posy>9</posy>
+        <width>340</width>
+        <height>85</height>
+        
+        <texture>blank.png</texture>
+      </control>
+
+     
+
+
+      <control type="image">
+        <description>Equaliser</description>
+        <posx></posx>
+        <posy></posy>
+        <width>370</width>
+        <height>100</height>
+        <texture>Equaliser.png</texture>
+        <animation effect="none" time="400" end="0" reversible="false">WindowClose</animation>
+      </control>
+    </control>
+
+
+
+
+
+
+
+
+
+
+    <control type="list" id="450">
+      <animation effect="fade"  time="200" delay="0">WindowClose</animation>
+      <animation effect="fade" time="400" delay="600">WindowOpen</animation>
+
+      <posx>205</posx>
+      <posy>290</posy>
+      <width>390</width>
+      <height>50</height>
+      <font>-</font>
+      <onleft>450</onleft>
+      <onright>450</onright>
+      <onup>450</onup>
+      <ondown>450</ondown>
+      <itemlayout height="30">
+        <control type="label">
+          <posx>150</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>25</height>
+          <aligny>left</aligny>
+          <align>left</align>
+          <info>ListItem.Label</info>
+          <include>textcolor-LEDBRIGHT</include>
+          <include>textcolor-LEDDIMM</include>
+        </control>
+      </itemlayout>
+      <focusedlayout height="30">
+        <control type="image">
+          <posx>150</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>25</height>
+          <aligny>left</aligny>
+          <texture>ListItem_Focus.png</texture>
+        </control>
+        <control type="label">
+          <posx>150</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>25</height>
+          <aligny></aligny>
+          <align>left</align>
+          <aligny>left</aligny>
+          <info>ListItem.Label</info>
+          <include>textcolor-PageHeader</include>
+        </control>
+      </focusedlayout>
+
+    </control>
+
+    <control type="group">
+      <posx>275</posx>
+      <posy>285</posy>
+
+      <control type="image">
+        <description>List Item Icon</description>
+        <width>60</width>
+        <height>60</height>
+
+        <info>ListItem.Icon</info>
+        <animation effect="fade"  time="400" delay="600">WindowOpen</animation>
+        <animation effect="fade"  time="100" delay="0">WindowClose</animation>
+      </control>
+    </control>
+
+
+
+  </controls>
+</window>

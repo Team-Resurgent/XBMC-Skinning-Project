@@ -1,0 +1,17 @@
+<window id="136">
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<controls>
+		<control type="multiimage">
+			<description>Busy animation</description>
+			<posx>10</posx>
+			<posy>526</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</controls>
+</window>

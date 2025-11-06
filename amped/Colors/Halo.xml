@@ -1,0 +1,26 @@
+<colors>
+  <color name="LEDBRIGHT">ffd6b811</color><!-- LED BRIGHT-->
+  <color name="LEDDIMM">ffada15e</color>  <!-- LED DIMM  -->
+  <color name="SpinText">FFFFFFFF</color>
+  <color name="NormalText">FFFFFFFF</color>  <!-- Main Text Color-->
+  <color name="DimmedText">FFbcbdbc</color>
+
+
+  <!-- Main Text Color-->
+  <color name="NormalText">FFFFFFFF</color>
+
+  <!-- Focused Text -->
+  <color name="FocusedText">ffeb9e17</color>
+
+  <!-- Selected Text-->
+  <color name="SelectedText">ffeb9e17</color>
+
+  <color name="DialogText">FF000000</color>
+
+  <color name="DimmedText">FFbcbdbc</color>
+  <color name="PageHeader">ffeb9e17</color>
+  <color name="ContextText">FF000000</color>
+  <color name="RssTitle">FFbcbdbc</color>  <!-- Heading Color -->
+  <color name="RssHeader">FFffffff</color>
+</colors>
+

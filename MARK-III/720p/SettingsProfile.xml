@@ -1,0 +1,216 @@
+<window id="20">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonSettingsBackground</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>520</height>
+				<texture>black-back.png</texture>
+			</control>
+			<control type="label">
+				<posx>285</posx>
+				<posy>115</posy>
+				<width>705</width>
+				<height>30</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$LOCALIZE[10034][/UPPERCASE]</label>
+			</control>
+			<control type="image">
+				<posx>285</posx>
+				<posy>150</posy>
+				<width>705</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="fadelabel" id="3">
+				<description>Last loaded</description>
+				<posx>440</posx>
+				<posy>590</posy>
+				<width>400</width>
+				<align>center</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$LOCALIZE[13204] $INFO[system.profilename]</label>
+				<font>font12</font>
+			</control>
+			<control type="list" id="2">
+				<posx>640</posx>
+				<posy>180</posy>
+				<width>540</width>
+				<height>395</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="30" width="540">
+					<control type="label">
+						<posx>270</posx>
+						<posy>0</posy>
+						<width>540</width>
+						<height>30</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="540">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>540</width>
+						<height>35</height>
+						<texture>list-focus.png</texture>
+						<visible>Control.HasFocus(2)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<posx>270</posx>
+						<posy>0</posy>
+						<width>540</width>
+						<height>35</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist">
+				<posx>110</posx>
+				<posy>180</posy>
+				<width>510</width>
+				<height>440</height>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="group">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>510</width>
+						<height>350</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<texture fallback="unknown-user.png">$INFO[Container(2).ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>350</posy>
+						<width>510</width>
+						<height>350</height>
+						<aspectratio aligny="top">keep</aspectratio>
+						<texture flipy="true" diffuse="diffuse_mirror2.png" fallback="unknown-user.png">$INFO[Container(2).ListItem.Icon]</texture>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<posx>80</posx>
+				<posy>590</posy>
+				<control type="image">
+					<posx>790</posx>
+					<posy>-5</posy>
+					<width>320</width>
+					<height>30</height>
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(60)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<description>Item Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container(2).NumItems]) $LOCALIZE[31025]</label>
+				</control>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>1010</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31024] ($INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>1020</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>2</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>2</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+			<control type="group" id="9000">
+				<include>VisibleFadeEffect</include>
+				<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
+				<posx>465</posx>
+				<posy>152</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>415</height>
+					<texture border="40">MenuBack.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>415</height>
+					<texture border="40">MenuFront.png</texture>
+				</control>
+				<control type="radiobutton" id="4">
+					<description>Enable Login screen</description>
+					<posx>40</posx>
+					<posy>50</posy>
+					<include>ButtonCommonValues</include>
+					<label>20096</label>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>4</onup>
+					<ondown>4</ondown>
+				</control>
+				<control type="image">
+					<posx>35</posx>
+					<posy>315</posy>
+					<width>278</width>
+					<height>65</height>
+					<texture>PM4_Small.png</texture>
+				</control>
+			</control>
+		</control>
+		<include>CommonSideBlades</include>
+	</controls>
+</window>

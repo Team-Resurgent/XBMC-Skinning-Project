@@ -1,0 +1,15 @@
+<window type="dialog" id="400">
+  <defaultcontrol always="true">218</defaultcontrol>
+
+  <controls>
+    <control type="group">
+      <posx>0</posx>
+      <posy>132</posy>
+      <visible>![Window.Next(2006) | Window.IsActive(2006)] + Player.HasAudio</visible>
+      <include>MusicNowPlayingAnim</include>
+
+      <include>MusicOSDPlayerControls</include>
+    </control>
+
+  </controls>
+</window>

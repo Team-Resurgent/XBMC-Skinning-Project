@@ -1,0 +1,145 @@
+<window type="dialog" id="400">
+<defaultcontrol always="true">218</defaultcontrol>
+
+<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+  
+  <coordinates>
+	<system>1</system>
+	<posx>20</posx>
+	<posy>485</posy>
+</coordinates>
+	
+<controls>
+  
+  <control type="group">
+    <include>SlideFromBottom</include>
+    <include>OSDBack</include>
+    <control type="label">
+      <description>Label</description>
+      <posx>10</posx>
+      <posy>10</posy>
+      <width>520</width>
+      <height>30</height>
+      <align>left</align>
+      <aligny>middle</aligny>
+      <font>20BdFont</font>
+      <label>$INFO[VideoPlayer.Label]</label>
+      <textcolor>FocusedTextColor</textcolor>
+      <scroll>true</scroll>
+      <visible>IsEmpty(VideoPlayer.Title) | IsEmpty(MusicPlayer.Title)</visible>
+    </control>
+    <control type="label">
+      <description>Label</description>
+      <posx>10</posx>
+      <posy>10</posy>
+      <width>520</width>
+      <height>30</height>
+      <align>left</align>
+      <aligny>middle</aligny>
+      <font>20BdFont</font>
+      <label>$INFO[VideoPlayer.Title]</label>
+      <textcolor>FocusedTextColor</textcolor>
+      <scroll>true</scroll>
+    </control>
+    <control type="label">
+      <description>Label</description>
+      <posx>10</posx>
+      <posy>10</posy>
+      <width>520</width>
+      <height>30</height>
+      <align>left</align>
+      <aligny>middle</aligny>
+      <font>20BdFont</font>
+      <label>$INFO[MusicPlayer.Title]</label>
+      <textcolor>FocusedTextColor</textcolor>
+      <scroll>true</scroll>
+    </control>
+
+    <control type="group" id="3000">
+      <control type="button" id="215">
+        <description>Prev Track button</description>
+        <posx>10</posx>
+        <posy>40</posy>
+        <width>101</width>
+        <font>18BdFont</font>
+        <label>$LOCALIZE[31064]</label>
+        <onclick>XBMC.PlayerControl(Previous)</onclick>
+        <onleft>220</onleft>
+        <onright>216</onright>
+        <onup>-</onup>
+        <ondown>-</ondown>
+      </control>
+      <control type="button" id="216">
+        <description>Rewind button</description>
+        <posx>121</posx>
+        <posy>40</posy>
+        <width>101</width>
+        <font>18BdFont</font>
+        <label>$LOCALIZE[31065]</label>
+        <onclick>XBMC.PlayerControl(Rewind)</onclick>
+        <onleft>215</onleft>
+        <onright>217</onright>
+        <onup>3001</onup>
+        <ondown>3001</ondown>
+      </control>
+      <control type="button" id="217">
+        <description>Stop button</description>
+        <posx>233</posx>
+        <posy>40</posy>
+        <width>101</width>
+        <font>18BdFont</font>
+        <label>$LOCALIZE[31066]</label>
+        <onclick>XBMC.PlayerControl(Stop)</onclick>
+        <onleft>216</onleft>
+        <onright>218</onright>
+        <onup>3001</onup>
+        <ondown>3001</ondown>
+      </control>
+      <control type="togglebutton" id="218">
+        <description>Play/Pause button</description>
+        <posx>345</posx>
+        <posy>40</posy>
+        <width>101</width>
+        <font>18BdFont</font>
+        <label>$LOCALIZE[31067]</label>
+        <altlabel>$LOCALIZE[31068]</altlabel>
+        <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+        <onclick>XBMC.PlayerControl(Play)</onclick>
+        <onleft>217</onleft>
+        <onright>219</onright>
+        <onup>3001</onup>
+        <ondown>3001</ondown>
+      </control>
+      <control type="button" id="219">
+        <description>Fast Forward button</description>
+        <posx>457</posx>
+        <posy>40</posy>
+        <width>101</width>
+        <font>18BdFont</font>
+        <label>$LOCALIZE[31069]</label>
+        <onclick>XBMC.PlayerControl(Forward)</onclick>
+        <onleft>218</onleft>
+        <onright>220</onright>
+        <onup>3001</onup>
+        <ondown>3001</ondown>
+      </control>
+      <control type="button" id="220">
+        <description>Skip Fwd</description>
+        <posx>569</posx>
+        <posy>40</posy>
+        <width>101</width>
+        <font>18BdFont</font>
+        <label>$LOCALIZE[31070]</label>
+        <onclick>XBMC.PlayerControl(Next)</onclick>
+        <onleft>219</onleft>
+        <onright>215</onright>
+        <onup>3001</onup>
+        <ondown>3001</ondown>
+      </control>
+    </control>
+    
+
+  </control>
+
+</controls>
+</window>

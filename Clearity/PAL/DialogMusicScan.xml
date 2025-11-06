@@ -1,0 +1,68 @@
+<window id="112">
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+		<include>FX-ShutDownMenu</include>
+	</control>
+	<control type="label" id="401">
+		<description>Caption Label</description>
+		<posx>190</posx>
+		<posy>260</posy>
+		<width>350</width>
+		<align>center</align>
+		<font>font12</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>DialogInfo</include>
+	</control>
+	<control type="label" id="402">
+		<description>Current Directory Label</description>
+		<posx>135</posx>
+		<posy>280</posy>
+		<width>450</width>
+		<align>center</align>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<haspath>no</haspath>
+		<include>DialogInfo</include>
+	</control>
+	<control type="progress" id="403">
+		<description>Progressbar</description>
+		<posx>188</posx>
+		<posy>360</posy>
+		<width>350</width>
+		<height>8</height>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid2.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture border="10,0,10,0">Progress-Overlay.png</overlaytexture>
+		<include>DialogInfo</include>
+	</control>
+	<include>Black-Special</include>
+	<include>Lines-Special</include>
+
+	<control type="label" id="1">
+		<description>Heading Label</description>
+		<posx>160</posx>
+		<posy>145</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>center</align>
+		<label>13352</label>
+		<font>special16</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>FX-ShutDownMenu</include>
+	</control>
+
+	<include>Black-Overlay</include>
+	</controls>
+</window>

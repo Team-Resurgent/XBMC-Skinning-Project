@@ -1,0 +1,89 @@
+<window id="115">
+
+  <defaultcontrol>1</defaultcontrol>
+
+  <visible>Player.Seeking | Player.DisplayAfterSeek | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+
+   <animation effect="slide" time="500" start="0,-100" acceleration="-1">WindowOpen</animation> 
+   <animation effect="slide" time="500" end="0,-100" acceleration="1">WindowClose</animation> 
+
+  <controls>
+
+    <control type="image" id="1">
+      <description>clock bg</description>
+      <posx>50</posx>
+      <posy>16</posy>
+      <width>240</width>
+      <height>100</height>
+      <texture>voulume-panel-bg.png</texture>
+    </control>
+
+       <control type="progress" id="23">
+         <description>progressbar</description>
+	 <visible>true</visible> 
+         <posx>100</posx> 
+         <posy>65</posy> 
+         <width>163</width> 
+         <height>7</height> 
+         <info>Player.Progress</info> 
+         <texturebg>progress_mid.png</texturebg> 
+         <midtexture>progress_mid_over.png</midtexture>
+         <lefttexture>-</lefttexture>
+         <righttexture>-</righttexture>
+         <overlaytexture>-</overlaytexture>
+       </control> 
+
+       <control type="slider" id="401">
+         <description>SeekSlider</description>
+         <visible>true</visible>
+         <posx>100</posx> 
+         <posy>65</posy> 
+         <width>163</width> 
+         <height>7</height>
+         <texturesliderbar>seekslider.png</texturesliderbar>
+         <textureslidernib>sslider_nibFO.png</textureslidernib>
+         <textureslidernibFocus>sslider_nibFO.png</textureslidernibFocus>
+         <onup>1</onup>
+         <ondown>1</ondown>
+         <onleft>1</onleft>
+         <onright>1</onright>
+       </control>
+
+    <control type="label" id="1">
+      <description>Current Time Info</description>
+      <posx>170</posx>
+      <posy>39</posy>
+      <info>Player.Time</info>
+      <label>-</label>
+      <align>right</align>
+      <font>font12</font>
+      <width>70</width> 
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Current Time Info</description>
+      <posx>175</posx>
+      <posy>39</posy>
+      <label>/</label>
+      <align>left</align>
+      <font>font12</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Current Time Info</description>
+      <posx>190</posx>
+      <posy>39</posy>
+      <info>Player.Duration</info>
+      <label>-</label>
+      <align>left</align>
+      <font>font12</font>
+      <width>70</width>
+      <include>textcolorlightblue</include>
+    </control>
+
+  </controls>
+
+</window>
+

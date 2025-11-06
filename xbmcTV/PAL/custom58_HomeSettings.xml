@@ -1,0 +1,131 @@
+<window id="58">
+	<defaultcontrol always="true">420</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>ShutdownMenu</previouswindow>
+	<controls>
+		<include>background</include>
+		<include>xtv-box</include>
+		<include>Fake-Overlay</include>
+
+		<control type="grouplist" id="420">
+			<posx>405</posx>
+			<posy>90</posy>
+			<width>285</width>
+			<height>425</height>
+			<itemgap>-2</itemgap>
+			<onup>420</onup>
+			<ondown>420</ondown>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<control type="radiobutton" id="9">
+				<description>Home video window toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31033</label>
+				<textwidth>250</textwidth>
+				<onclick>Skin.ToggleSetting(Startup-Video)</onclick>
+				<onclick>Skin.Reset(Startup-VideoLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Music)</onclick>
+				<onclick>Skin.Reset(Startup-MusicLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Photo)</onclick>
+				<onclick>Skin.Reset(Startup-Programs)</onclick>
+				<selected>Skin.HasSetting(Startup-Video)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="10">
+				<description>Home video library window toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31077</label>
+				<textwidth>250</textwidth>
+				<onclick>Skin.ToggleSetting(Startup-VideoLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Video)</onclick>
+				<onclick>Skin.Reset(Startup-Music)</onclick>
+				<onclick>Skin.Reset(Startup-MusicLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Photo)</onclick>
+				<onclick>Skin.Reset(Startup-Programs)</onclick>
+				<selected>Skin.HasSetting(Startup-VideoLibrary)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="11">
+				<description>Home music window toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31078</label>
+				<textwidth>250</textwidth>
+				<onclick>Skin.ToggleSetting(Startup-Music)</onclick>
+				<onclick>Skin.Reset(Startup-Video)</onclick>
+				<onclick>Skin.Reset(Startup-VideoLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-MusicLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Photo)</onclick>
+				<onclick>Skin.Reset(Startup-Programs)</onclick>
+				<selected>Skin.HasSetting(Startup-Music)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="12">
+				<description>Home music library window toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31079</label>
+				<textwidth>250</textwidth>
+				<onclick>Skin.ToggleSetting(Startup-MusicLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Video)</onclick>
+				<onclick>Skin.Reset(Startup-VideoLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Music)</onclick>
+				<onclick>Skin.Reset(Startup-Photo)</onclick>
+				<onclick>Skin.Reset(Startup-Programs)</onclick>
+				<selected>Skin.HasSetting(Startup-MusicLibrary)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="13">
+				<description>Home photo window toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31085</label>
+				<textwidth>250</textwidth>
+				<onclick>Skin.ToggleSetting(Startup-Photo)</onclick>
+				<onclick>Skin.Reset(Startup-Video)</onclick>
+				<onclick>Skin.Reset(Startup-VideoLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Music)</onclick>
+				<onclick>Skin.Reset(Startup-MusicLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Programs)</onclick>
+				<selected>Skin.HasSetting(Startup-Photo)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="14">
+				<description>Home programs window toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31086</label>
+				<textwidth>250</textwidth>
+				<onclick>Skin.ToggleSetting(Startup-Programs)</onclick>
+				<onclick>Skin.Reset(Startup-Video)</onclick>
+				<onclick>Skin.Reset(Startup-VideoLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Music)</onclick>
+				<onclick>Skin.Reset(Startup-MusicLibrary)</onclick>
+				<onclick>Skin.Reset(Startup-Photo)</onclick>
+				<selected>Skin.HasSetting(Startup-Programs)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<visible>System.Platform.XBOX</visible>
+			</control>
+		</control>
+	</controls>
+</window>     

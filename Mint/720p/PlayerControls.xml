@@ -1,0 +1,253 @@
+<window type="dialog" id="114">
+
+	<!-- 
+		todo: add controls for myvideo window
+	-->
+
+	<defaultcontrol always="true">4</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(114) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(24)</visible>
+	
+	<controls>
+	
+		<!-- video control -->
+		<control type="group">
+			<visible>Window.IsVisible(0) + Player.HasVideo</visible>
+		    <posx>40</posx>
+		    <posy>530</posy>
+		    <!-- previous button -->
+		    <control type="button" id="1">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<texturefocus>osd-prev.png</texturefocus>
+		    	<texturenofocus>osd-prev-nf.png</texturenofocus>
+		    	<onleft>9</onleft>
+		    	<onright>2</onright>
+		    	<onclick>XBMC.PlayerControl(Previous)</onclick>
+		    </control>
+		    <!-- rewind button -->
+		    <control type="button" id="2">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>48</posx>
+		    	<texturefocus>osd-rw.png</texturefocus>
+		    	<texturenofocus>osd-rw-nf.png</texturenofocus>
+		    	<onleft>1</onleft>
+		    	<onright>3</onright>
+		    	<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		    </control>
+		    <!-- stop button -->
+		    <control type="button" id="3">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>96</posx>
+		    	<texturefocus>osd-stop.png</texturefocus>
+		    	<texturenofocus>osd-stop-nf.png</texturenofocus>
+		    	<onleft>2</onleft>
+		    	<onright>4</onright>
+		    	<onclick>XBMC.PlayerControl(Stop)</onclick>
+		    </control>
+		    <!-- play/pause button -->
+		    <control type="togglebutton" id="4">
+		    	<visible>!Player.Forwarding + !Player.Rewinding</visible>
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>144</posx>
+		    	<texturefocus>osd-pause.png</texturefocus>
+		    	<texturenofocus>osd-pause-nf.png</texturenofocus>
+		    	<usealttexture>Player.Paused</usealttexture>
+		    	<alttexturefocus>osd-play.png</alttexturefocus>
+		    	<alttexturenofocus>osd-play-nf.png</alttexturenofocus>
+		    	<onleft>3</onleft>
+		    	<onright>5</onright>
+		    	<onclick>XBMC.PlayerControl(Play)</onclick>
+		    </control>
+		    <control type="button" id="4">
+		    	<visible>Player.Forwarding | Player.Rewinding</visible>
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>144</posx>
+		    	<texturefocus>osd-play.png</texturefocus>
+		    	<texturenofocus>osd-play-nf.png</texturenofocus>
+		    	<onleft>3</onleft>
+		    	<onright>5</onright>
+		    	<onclick>XBMC.PlayerControl(Play)</onclick>
+		    </control>
+		    <!-- fast forward button-->
+		    <control type="button" id="5">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>192</posx>
+		    	<texturefocus>osd-ff.png</texturefocus>
+		    	<texturenofocus>osd-ff-nf.png</texturenofocus>
+		    	<onleft>4</onleft>
+		    	<onright>6</onright>
+		    	<onclick>XBMC.PlayerControl(Forward)</onclick>
+		    </control>
+		    <!-- next button -->
+		    <control type="button" id="6">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>240</posx>
+		    	<texturefocus>osd-next.png</texturefocus>
+		    	<texturenofocus>osd-next-nf.png</texturenofocus>
+		    	<onleft>5</onleft>
+		    	<onright>7</onright>
+		    	<onclick>XBMC.PlayerControl(Next)</onclick>
+		    </control>
+		    <!-- mute button -->
+		    <control type="togglebutton" id="7">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>288</posx>
+		    	<texturefocus>osd-nomute.png</texturefocus>
+		    	<texturenofocus>osd-nomute-nf.png</texturenofocus>
+		    	<usealttexture>Player.Muted</usealttexture>
+		    	<alttexturefocus>osd-mute.png</alttexturefocus>
+		    	<alttexturenofocus>osd-mute-nf.png</alttexturenofocus>
+		    	<onleft>6</onleft>
+		    	<onright>8</onright>
+		    	<onclick>Mute</onclick>
+		    </control>
+		</control>
+				
+		<!-- audio control -->
+		<control type="group">
+			<visible>Window.IsVisible(0) + Player.HasAudio</visible>
+		    <posx>168</posx>
+		    <posy>422</posy>
+		    <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+		    <control type="image">
+		    	<texture border="12">bg-dialog.png</texture>
+		    	<width>472</width>
+		    	<height>68</height>
+		    </control>
+		    <!-- previous button -->
+		    <control type="button" id="1">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>20</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-prev.png</texturefocus>
+		    	<texturenofocus>osd-prev-nf.png</texturenofocus>
+		    	<onleft>9</onleft>
+		    	<onright>2</onright>
+		    	<onclick>XBMC.PlayerControl(Previous)</onclick>
+		    </control>
+		    <!-- rewind button -->
+		    <control type="button" id="2">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>68</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-rw.png</texturefocus>
+		    	<texturenofocus>osd-rw-nf.png</texturenofocus>
+		    	<onleft>1</onleft>
+		    	<onright>3</onright>
+		    	<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		    </control>
+		    <!-- stop button -->
+		    <control type="button" id="3">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>116</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-stop.png</texturefocus>
+		    	<texturenofocus>osd-stop-nf.png</texturenofocus>
+		    	<onleft>2</onleft>
+		    	<onright>4</onright>
+		    	<onclick>XBMC.PlayerControl(Stop)</onclick>
+		    </control>
+		    <!-- play/pause button -->
+		    <control type="togglebutton" id="4">
+		    	<visible>!Player.Forwarding + !Player.Rewinding</visible>
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>164</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-pause.png</texturefocus>
+		    	<texturenofocus>osd-pause-nf.png</texturenofocus>
+		    	<usealttexture>Player.Paused</usealttexture>
+		    	<alttexturefocus>osd-play.png</alttexturefocus>
+		    	<alttexturenofocus>osd-play-nf.png</alttexturenofocus>
+		    	<onleft>3</onleft>
+		    	<onright>5</onright>
+		    	<onclick>XBMC.PlayerControl(Play)</onclick>
+		    </control>
+		    <control type="button" id="4">
+		    	<visible>Player.Forwarding | Player.Rewinding</visible>
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>164</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-play.png</texturefocus>
+		    	<texturenofocus>osd-play-nf.png</texturenofocus>
+		    	<onleft>3</onleft>
+		    	<onright>5</onright>
+		    	<onclick>XBMC.PlayerControl(Play)</onclick>
+		    </control>
+		    <!-- fast forward button-->
+		    <control type="button" id="5">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>212</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-ff.png</texturefocus>
+		    	<texturenofocus>osd-ff-nf.png</texturenofocus>
+		    	<onleft>4</onleft>
+		    	<onright>6</onright>
+		    	<onclick>XBMC.PlayerControl(Forward)</onclick>
+		    </control>
+		    <!-- next button -->
+		    <control type="button" id="6">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>260</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-next.png</texturefocus>
+		    	<texturenofocus>osd-next-nf.png</texturenofocus>
+		    	<onleft>5</onleft>
+		    	<onright>7</onright>
+		    	<onclick>XBMC.PlayerControl(Next)</onclick>
+		    </control>
+		    <!-- mute button -->
+		    <control type="togglebutton" id="7">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>308</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-nomute.png</texturefocus>
+		    	<texturenofocus>osd-nomute-nf.png</texturenofocus>
+		    	<usealttexture>Player.Muted</usealttexture>
+		    	<alttexturefocus>osd-mute.png</alttexturefocus>
+		    	<alttexturenofocus>osd-mute-nf.png</alttexturenofocus>
+		    	<onleft>6</onleft>
+		    	<onright>8</onright>
+		    	<onclick>Mute</onclick>
+		    </control>
+		    <!-- shuffle -->
+		    <control type="togglebutton" id="8">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>356</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-shuffle.png</texturefocus>
+		    	<texturenofocus>osd-shuffle-nf.png</texturenofocus>
+		    	<onleft>7</onleft>
+		    	<onright>9</onright>
+		    	<onclick>XBMC.PlayerControl(Random)</onclick>
+		    </control>
+		    <!-- repeat -->
+		    <control type="togglebutton" id="9">
+		    	<width>48</width>
+		    	<height>48</height>
+		    	<posx>404</posx>
+		    	<posy>10</posy>
+		    	<texturefocus>osd-repeat.png</texturefocus>
+		    	<texturenofocus>osd-repeat-nf.png</texturenofocus>
+		    	<onleft>8</onleft>
+		    	<onright>1</onright>
+		    	<onclick>XBMC.PlayerControl(Repeat)</onclick>
+		    </control>
+		</control>
+	</controls>
+</window>

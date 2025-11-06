@@ -1,0 +1,123 @@
+<window id="28">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+	</control>
+
+	<control type="group">
+		<control type="button" id="2">
+			<description>View As Icons button</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<label>100</label>
+			<font>font13</font>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<onup>22</onup>
+			<ondown>28</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="radiobutton" id="28">
+			<description>Randomize button</description>
+			<posx>20</posx>
+			<posy>147</posy>
+			<label>13319</label>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<onup>2</onup>
+			<ondown>26</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="26">
+			<description>Repeat button</description>
+			<posx>20</posx>
+			<posy>184</posy>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<onup>28</onup>
+			<ondown>21</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="21">
+			<description>Save button</description>
+			<posx>20</posx>
+			<posy>221</posy>
+			<label>190</label>
+			<font>font13</font>
+			<onup>26</onup>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="22">
+			<description>Clear button</description>
+			<posx>20</posx>
+			<posy>258</posy>
+			<label>192</label>
+			<font>font13</font>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<ondown>2</ondown>
+			<include>slideleft</include>
+		</control>
+	</control>
+
+	<include>4x3menu-background</include>
+
+	<control type="image">
+		<description>ListItems Thumb BG</description>
+		<posx>10</posx>
+		<posy>370</posy>
+		<width>140</width>
+		<height>140</height>
+		<texture>keyboard-numeric-bg.png</texture>
+		<include>slideleft</include>
+		<include>listitemthumb</include>
+	</control>
+	<control type="image">
+		<description>ListItems Thumb</description>
+		<posx>24</posx>
+		<posy>375</posy>
+		<width>120</width>
+		<height>120</height>
+		<texture>defaultAlbumCover.png</texture>
+		<info>ListItem.Icon</info>
+		<include>slideleft</include>
+		<include>listitemthumb</include>
+	</control>
+	<control type="image">
+		<description>ListItems Thumb Overlay</description>
+		<posx>10</posx>
+		<posy>370</posy>
+		<width>140</width>
+		<height>140</height>
+		<texture>keyboard-numeric-bg2.png</texture>
+		<include>slideleft</include>
+		<include>listitemthumb</include>
+	</control>
+
+	<include>Common_List</include>
+	<include>Common_Icon</include>
+	<include>Common_BigIcon</include>
+	<include>Common_WrapList</include>
+
+	<include>4x3slider</include>
+	<include>SpinControl</include>
+	<include>numberoffiles</include>
+
+	<control>
+		<description>Description label</description>
+		<label>10517</label>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

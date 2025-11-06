@@ -1,0 +1,164 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+
+		<!-- background 16x9 -->
+<include>background-image</include>
+
+       <control type="label">
+            <posx>178</posx>
+            <posy>167</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+	    <label>Users</label>
+        </control>
+
+        <control type="image">
+            <posx>190</posx>
+            <posy>125</posy>
+            <width>45</width>
+            <height>60</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-users-glow.png</texture>
+        </control>
+
+        <control type="image">
+            <posx>260</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-settings.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+        <control type="image">
+            <posx>330</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-pictures.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+        <control type="image">
+            <posx>400</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-music.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+        <control type="image">
+            <posx>470</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-video.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+        <control type="image">
+            <posx>540</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-game.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+        <control type="image">
+            <posx>610</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-network.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+
+		<control type="list" id="52">
+			<posx>190</posx>
+			<posy>210</posy>
+			<width>880</width>
+			<height>406</height>
+			<onleft>512</onleft>
+			<onright>512</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+<include>settingssubslide2</include>
+			<itemlayout height="65">
+				<control type="image">
+            				<posx>5</posx>
+            				<posy>0</posy>
+					<width>45</width>
+					<height>60</height>
+	    				<aspectratio>stretch</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>80</posx>
+					<posy>15</posy>
+					<width>360</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<shadowcolor>ff000000</shadowcolor>
+				</control> 
+			</itemlayout>
+			<focusedlayout height="80">
+				<control type="image">
+            				<posx>0</posx>
+            				<posy>0</posy>
+            				<width>55</width>
+            				<height>75</height>
+	    				<aspectratio>stretch</aspectratio>
+					<info>ListItem.Icon</info>
+					<animation effect="fade" start="80" time="600" pulse="true" condition="Control.HasFocus(52)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>80</posx>
+					<posy>20</posy>
+					<width>360</width>
+					<height>22</height>
+					<font>special13</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<animation effect="fade" start="80" time="600" pulse="true" condition="Control.HasFocus(52)">Conditional</animation>
+					<shadowcolor>ff000000</shadowcolor>
+				</control> 
+			</focusedlayout>
+		</control>
+
+   <control type="button" id="512">
+	<description>return to home hidden button</description>
+	<posx>665</posx>
+	<posy>500</posy>
+	<width>46</width>
+	<height>64</height>
+	<label>-</label>
+	<font>font14</font>
+      <onfocus>SetFocus(52)</onfocus>
+      <onfocus>ReplaceWindow(home)</onfocus>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+   </control>
+	</controls>
+</window>

@@ -1,0 +1,52 @@
+<window id="2005">
+<defaultcontrol>-</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+	
+<controls>
+  
+		<!-- Codec Info -->
+		<control type="group">
+			<posx>20</posx>
+      <posy>15</posy>
+      <include>SlideFromTop</include>
+      <include>VideoFullScreenBack</include>
+  		<control type="label" id="10">
+  			<description>row 1 label</description>
+  			<posx>10</posx>
+  			<posy>5</posy>
+        <width>660</width>
+        <label>-</label>
+        <align>left</align>
+        <font>16BdFont</font>
+				<textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+  		</control>
+  		<control type="label" id="11">
+  			<description>row 2 label</description>
+  			<posx>10</posx>
+  			<posy>45</posy>
+        <width>660</width>
+        <label>-</label>
+        <align>left</align>
+        <font>16BdFont</font>
+				<textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+  		</control>
+  		<control type="label" id="12">
+  			<description>row 3 label</description>
+  			<posx>10</posx>
+  			<posy>85</posy>
+        <width>660</width>
+  			<label>-</label>
+        <align>left</align>
+        <font>16BdFont</font>
+				<textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+  		</control>  
+    </control>
+  
+	</controls>
+</window>

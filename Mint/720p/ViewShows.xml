@@ -1,0 +1,161 @@
+<!-- 
+USE: For displaying wide icons (tv series or games).
+-->
+<includes>
+	<include name="ViewShows">
+			
+		<control type="group">
+				
+			<visible>Control.IsVisible(55)</visible>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>bg-views.png</texture>
+				<width>1280</width>
+				<height>640</height>
+			</control>
+
+			<!-- show info -->
+			<control type="group">
+				<posx>40</posx>
+				<posy>40</posy>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>600</width>
+					<height>40</height>
+				</control>
+				<control type="label">
+					<label>$INFO[ListItem.Title]</label>
+					<width>560</width>
+					<height>40</height>
+					<posx>20</posx>
+					<font>info</font>
+					<textcolor>type-info-header</textcolor>
+				</control>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>600</width>
+					<height>190</height>
+					<posy>60</posy>
+				</control>
+				<control type="label">
+					<label>[COLOR type-info-dark]Premiered:[/COLOR] $INFO[ListItem.Premiered]</label>
+					<width>560</width>
+					<height>40</height>
+					<posx>20</posx>
+					<posy>60</posy>
+					<font>info</font>
+					<textcolor>type-info</textcolor>
+				</control>
+				<control type="label">
+					<label>[COLOR type-info-dark]Episodes:[/COLOR] $INFO[ListItem.Episode]</label>
+					<width>560</width>
+					<height>40</height>
+					<posx>20</posx>
+					<posy>100</posy>
+					<font>info</font>
+					<textcolor>type-info</textcolor>
+				</control>
+				<control type="label">
+					<label>[COLOR type-info-dark]Genre:[/COLOR] $INFO[ListItem.Genre]</label>
+					<width>560</width>
+					<height>40</height>
+					<posx>20</posx>
+					<posy>140</posy>
+					<font>info</font>
+					<textcolor>type-info</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<posx>40</posx>
+				<posy>310</posy>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>540</width>
+					<height>290</height>
+				</control>	
+				<control type="textbox">
+					<label>$INFO[ListItem.Plot,[COLOR type-info]Plot[/COLOR] ]</label>
+					<width>520</width>
+					<height>270</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<font>info</font>
+					<textcolor>type-info-dark</textcolor>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<!-- scrollbar -->
+				<control type="group">
+					<posx>560</posx>
+					<control type="scrollbar" id="61">
+						<height>290</height>
+						<onleft>9000</onleft>
+						<onright>55</onright>
+					</control>
+				</control>
+			</control>
+
+			<!-- list container -->
+			<control type="panel" id="55">
+			
+				<viewtype label="Shows">icon</viewtype>
+				<width>520</width>
+				<height>565</height>
+				<posx>660</posx>
+				<posy>40</posy>
+				<onup>55</onup>
+				<ondown>55</ondown>
+				<onleft>61</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="113" width="520">
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>520</width>
+						<height>108</height>
+						<colordiffuse>dimmed</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>500</width>
+						<height>88</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<colordiffuse>dimmed</colordiffuse>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout height="113" width="520">
+					<control type="image">
+						<texture border="8">listitem-back.png</texture>
+						<width>520</width>
+						<height>108</height>
+					</control>
+					<control type="image">
+						<texture aligny="bottom">$INFO[ListItem.Icon]</texture>
+						<width>500</width>
+						<height>88</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<!-- scrollbar -->
+			<control type="group">
+				<posx>1200</posx>
+				<posy>40</posy>
+				<control type="scrollbar" id="60">
+					<height>560</height>
+					<onleft>55</onleft>
+					<onright>9000</onright>
+				</control>
+			</control>
+			
+		</control>
+				
+	</include>
+</includes>

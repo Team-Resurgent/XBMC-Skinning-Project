@@ -1,0 +1,229 @@
+<window type="dialog" id="114">
+	<defaultcontrol always="true">402</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>342</posx>
+		<posy>640</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>595</width>
+			<height>60</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image">
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>585</width>
+			<height>50</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="button" id="400">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>40</width>
+			<height>40</height>
+			<label>-</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onleft>601</onleft>
+			<onright>401</onright>
+			<onup>400</onup>
+			<ondown>400</ondown>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+		</control>
+		<control type="image">
+			<posx>20</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>mediacontrol-skipback.png</texture>
+		</control>
+		<control type="button" id="401">
+			<posx>55</posx>
+			<posy>10</posy>
+			<width>40</width>
+			<height>40</height>
+			<label>-</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onleft>400</onleft>
+			<onright>402</onright>
+			<onup>401</onup>
+			<ondown>401</ondown>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		</control>
+		<control type="image">
+			<posx>65</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>mediacontrol-rewind.png</texture>
+		</control>
+		<control type="button" id="402">
+			<posx>100</posx>
+			<posy>10</posy>
+			<width>40</width>
+			<height>40</height>
+			<label>-</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onleft>401</onleft>
+			<onright>403</onright>
+			<onup>402</onup>
+			<ondown>402</ondown>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+		</control>
+		<control type="image">
+			<posx>110</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>!Player.Paused</visible>
+			<texture>mediacontrol-play.png</texture>
+		</control>
+		<control type="image">
+			<posx>110</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>Player.Paused</visible>
+			<texture>mediacontrol-pause.png</texture>
+		</control>
+		<control type="button" id="403">
+			<posx>145</posx>
+			<posy>10</posy>
+			<width>40</width>
+			<height>40</height>
+			<label>-</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onleft>402</onleft>
+			<onright>405</onright>
+			<onup>403</onup>
+			<ondown>403</ondown>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
+		</control>
+		<control type="image">
+			<posx>155</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>mediacontrol-stop.png</texture>
+		</control>
+		<control type="button" id="405">
+			<posx>190</posx>
+			<posy>10</posy>
+			<width>40</width>
+			<height>40</height>
+			<label>-</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+			<onleft>403</onleft>
+			<onright>406</onright>
+			<onup>405</onup>
+			<ondown>405</ondown>
+		</control>
+		<control type="image">
+			<posx>200</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>mediacontrol-fastforward.png</texture>
+		</control>
+		<control type="button" id="406">
+			<posx>235</posx>
+			<posy>10</posy>
+			<width>40</width>
+			<height>40</height>
+			<label>-</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+			<onleft>405</onleft>
+			<onright>600</onright>
+			<onup>406</onup>
+			<ondown>406</ondown>
+		</control>
+		<control type="image">
+			<posx>245</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>mediacontrol-skipforward.png</texture>
+		</control>
+		<control type="radiobutton" id="600">
+			<posx>280</posx>
+			<posy>10</posy>
+			<width>150</width>
+			<height>40</height>
+			<font>font12</font>
+			<label>590</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Random)</onclick>
+			<selected>Playlist.IsRandom</selected>
+			<pulseonselect>no</pulseonselect>
+			<onleft>406</onleft>
+			<onright>601</onright>
+			<onup>600</onup>
+			<ondown>600</ondown>
+		</control>
+		<control type="button" id="601">
+			<posx>435</posx>
+			<posy>10</posy>
+			<width>150</width>
+			<height>40</height>
+			<label>-</label>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Repeat)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>600</onleft>
+			<onright>400</onright>
+			<onup>601</onup>
+			<ondown>601</ondown>
+		</control>
+		<control type="label">
+			<posx>452</posx>
+			<posy>10</posy>
+			<width>116</width>
+			<height>40</height>
+			<font>font12</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>595</label>
+			<visible>!Playlist.IsRepeatOne + !Playlist.IsRepeat</visible>
+		</control>
+		<control type="label">
+			<posx>452</posx>
+			<posy>10</posy>
+			<width>116</width>
+			<height>40</height>
+			<font>font12</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>596</label>
+			<visible>Playlist.IsRepeatOne</visible>
+		</control>
+		<control type="label">
+			<posx>452</posx>
+			<posy>10</posy>
+			<width>116</width>
+			<height>40</height>
+			<font>font12</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>597</label>
+			<visible>Playlist.IsRepeat</visible>
+		</control>
+	</controls>
+</window>

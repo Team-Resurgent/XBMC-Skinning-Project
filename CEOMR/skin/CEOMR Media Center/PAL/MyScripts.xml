@@ -1,0 +1,170 @@
+<window id="20">
+
+  <defaultcontrol>5</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>DefaultScriptBig.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="12">
+      <description>number of files text label</description>
+      <include>logo</include>
+      <posx>210</posx>
+      <posy>525</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Scripts text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>247</label>
+      <font>font04</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+<control type="group" id="9000">
+
+      <control type="button" id="2">
+        <description>View As Icons button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>120</posy>
+        <label>100</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>7</onup>
+        <ondown>3</ondown>
+      </control>
+
+      <control type="button" id="3">
+        <description>Sort by button</description>
+      <include>button</include>
+      <width>120</width>
+        <posx>60</posx>
+        <posy>157</posy>
+        <label>103</label>
+        <onleft>50</onleft>
+        <onright>4</onright>
+        <onup>2</onup>
+        <ondown>5</ondown>
+      </control>
+
+      <control type="togglebutton" id="4">
+        <description>Sort asc</description>
+    <animation effect="slide" time="400" start="-200,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="slide" time="150" start="0,0" end="-200,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+        <label>-</label>
+        <onleft>3</onleft>
+        <onright>50</onright>
+        <onup>2</onup>
+        <ondown>5</ondown>
+      </control>
+
+      <control type="button" id="5">
+        <description>Submenu Editor</description>
+      <include>button</include>
+        <onclick>XBMC.ActivateWindow(1058)</onclick>
+        <posx>60</posx>
+        <posy>194</posy>
+        <label>1034</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>3</onup>
+        <ondown>6</ondown>
+      </control>
+
+      <control type="button" id="6">
+        <description>Scripts Installer</description>
+        <visible>System.HasNetwork</visible>
+      <include>button</include>
+        <onclick>XBMC.RunScript(Q:\scripts\XBMCScripts\default.py)</onclick>
+        <posx>60</posx>
+        <posy>231</posy>
+        <label>Script Installer</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>5</onup>
+        <ondown>7</ondown>
+      </control>
+
+      <control type="button" id="7">
+        <description>Notepad</description>
+      <include>button</include>
+        <onclick>XBMC.RunScript(Q:\scripts\Notepad\Notepad.py)</onclick>
+        <posx>60</posx>
+        <posy>410</posy>
+        <label>Notepad</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>6</onup>
+        <ondown>2</ondown>
+      </control>
+
+</control>
+
+    <control type="image" id="1">
+      <description>ListItems Thumb</description>
+      <include>control</include>
+      <posx>70</posx>
+      <posy>275</posy>
+      <width>120</width>
+      <height>120</height>
+      <texture>blue-rectangleNF.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>ListItems Thumb</description>
+      <include>control</include>
+      <posx>80</posx>
+      <posy>285</posy>
+      <width>100</width>
+      <height>100</height>
+      <info>ListItem.Thumb</info>
+    </control>
+
+		<include>OldListViewCommons</include>
+		<include>ProgramsViewCommons</include>
+		<include>AllViewCommonThumbSmall</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>ScriptThumbWrapView</include>
+		<include>AllViewCommonPageControls</include>
+  </controls>
+
+</window>

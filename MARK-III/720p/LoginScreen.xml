@@ -1,0 +1,154 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="largeimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/video-background.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/backgrounds/login-background.png</texture>
+			<animation effect="fade" time="500">WindowClose</animation>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>520</height>
+				<texture>black-back.png</texture>
+			</control>
+			<control type="label">
+				<posx>105</posx>
+				<posy>115</posy>
+				<width>705</width>
+				<height>30</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>31046</label>
+			</control>
+			<control type="image">
+				<posx>105</posx>
+				<posy>150</posy>
+				<width>705</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="panel" id="52">
+				<posx>120</posx>
+				<posy>180</posy>
+				<width>648</width>
+				<height>394</height>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<viewtype label="21371">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="197" width="216">
+					<control type="image">
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>214</width>
+						<height>170</height>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture>$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="label">
+						<posx>108</posx>
+						<posy>170</posy>
+						<width>206</width>
+						<height>25</height>
+						<font>font11</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="197" width="216">
+					<control type="image">
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>214</width>
+						<height>170</height>
+						<bordertexture border="5">folder-focus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture>$INFO[Listitem.Icon]</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<posx>108</posx>
+						<posy>170</posy>
+						<width>206</width>
+						<height>25</height>
+						<font>font11</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<include>CommonSideBlades</include>
+		<control type="label">
+			<description>date label</description>
+			<posx>1070</posx>
+			<posy>90</posy>
+			<label>$INFO[System.Date] [COLOR=blue] |  [/COLOR]$INFO[System.Time]</label>
+			<align>center</align>
+			<aligy>center</aligy>
+			<font>font12</font>
+			<animation effect="fade" end="100" start="0" time="200" delay="500">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="50">WindowClose</animation>
+		</control>
+		<control type="label">
+			<posx>1070</posx>
+			<posy>560</posy>
+			<height>30</height>
+			<font>font18</font>
+			<textcolor>white</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>[B]$INFO[ListItem.label][/B]</label>
+			<animation effect="fade" end="100" start="0" time="200" delay="500">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<posx>1070</posx>
+			<posy>600</posy>
+			<height>30</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.label2]</label>
+			<animation effect="fade" end="100" start="0" time="200" delay="500">WindowOpen</animation>
+		</control>
+	</controls>
+</window>

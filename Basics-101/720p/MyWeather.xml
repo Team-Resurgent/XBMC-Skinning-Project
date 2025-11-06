@@ -1,0 +1,597 @@
+<window id="2600">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>8</label>
+				<font>font40</font>
+			</control>
+			<control type="group">
+				<posx>25</posx>
+				<posy>85</posy>
+				<control type="image">
+					<description>Background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1230</width>
+					<height>45</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="spincontrol" id="3">
+					<description>weather location select</description>
+					<align>right</align>
+					<posx>20</posx>
+					<posy>13</posy>
+					<font>-</font>
+					<reverse>yes</reverse>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<textoffsety>-12</textoffsety>
+					<disabledcolor>grey</disabledcolor>
+				</control>
+				<control type="label">
+					<description>weather location select label</description>
+					<posx>80</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>45</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>Weather.Location</info>
+				</control>
+				<control type="label" id="11">
+					<description>update time label</description>
+					<posx>1210</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>45</height>
+					<font>font16</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<posx>25</posx>
+				<posy>135</posy>
+				<control type="image">
+					<description>Main Weather Background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1230</width>
+					<height>250</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<description>current temp label</description>
+					<posx>40</posx>
+					<posy>20</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>401</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>current feels like label</description>
+					<posx>40</posx>
+					<posy>55</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>402</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>current dew label</description>
+					<posx>40</posx>
+					<posy>90</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>405</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>current humidity label</description>
+					<posx>40</posx>
+					<posy>125</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>406</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>current UV Index label</description>
+					<posx>40</posx>
+					<posy>160</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>403</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>current Wind label</description>
+					<posx>40</posx>
+					<posy>195</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>404</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="23">
+					<description>current temp Value</description>
+					<posx>250</posx>
+					<posy>20</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="24">
+					<description>current feels like Value</description>
+					<posx>250</posx>
+					<posy>55</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="27">
+					<description>current dew Value</description>
+					<posx>250</posx>
+					<posy>90</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="28">
+					<description>current humidity Value</description>
+					<posx>250</posx>
+					<posy>125</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="25">
+					<description>current UV Index Value</description>
+					<posx>250</posx>
+					<posy>160</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="26">
+					<description>current Wind Value</description>
+					<posx>250</posx>
+					<posy>195</posy>
+					<height>35</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image" id="21">
+					<description>current weather icon</description>
+					<posx>950</posx>
+					<posy>10</posy>
+					<height>230</height>
+					<width>230</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="22">
+					<description>current condition label</description>
+					<posx>930</posx>
+					<posy>20</posy>
+					<width>200</width>
+					<wrapmultiline>true</wrapmultiline>
+					<label>-</label>
+					<font>font16</font>
+					<align>right</align>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<description>day 0</description>
+				<posx>25</posx>
+				<posy>390</posy>
+				<control type="image">
+					<description>Background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>612</width>
+					<height>120</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="image" id="35">
+					<description>day icon</description>
+					<posx>30</posx>
+					<posy>5</posy>
+					<height>110</height>
+					<width>110</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="31">
+					<description>day label</description>
+					<posx>160</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="32">
+					<description>high value</description>
+					<posx>230</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>350</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="33">
+					<description>low value</description>
+					<posx>420</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="34">
+					<description>conditions label</description>
+					<posx>160</posx>
+					<posy>80</posy>
+					<width>420</width>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<description>day 1</description>
+				<posx>643</posx>
+				<posy>390</posy>
+				<control type="image">
+					<description>Background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>612</width>
+					<height>120</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="image" id="45">
+					<description>day icon</description>
+					<posx>30</posx>
+					<posy>5</posy>
+					<height>110</height>
+					<width>110</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="41">
+					<description>day label</description>
+					<posx>160</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="42">
+					<description>high value</description>
+					<posx>230</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>350</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="43">
+					<description>low value</description>
+					<posx>420</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="44">
+					<description>conditions label</description>
+					<posx>160</posx>
+					<posy>80</posy>
+					<width>420</width>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<description>day 2</description>
+				<posx>25</posx>
+				<posy>515</posy>
+				<control type="image">
+					<description>Background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>612</width>
+					<height>120</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="image" id="55">
+					<description>day icon</description>
+					<posx>30</posx>
+					<posy>5</posy>
+					<height>110</height>
+					<width>110</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="51">
+					<description>day label</description>
+					<posx>160</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="52">
+					<description>high value</description>
+					<posx>230</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>350</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="53">
+					<description>low value</description>
+					<posx>420</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="54">
+					<description>conditions label</description>
+					<posx>160</posx>
+					<posy>80</posy>
+					<width>420</width>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<description>day 3</description>
+				<posx>643</posx>
+				<posy>515</posy>
+				<control type="image">
+					<description>Background</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>612</width>
+					<height>120</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="image" id="65">
+					<description>day icon</description>
+					<posx>30</posx>
+					<posy>5</posy>
+					<height>110</height>
+					<width>110</width>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="61">
+					<description>day label</description>
+					<posx>160</posx>
+					<posy>0</posy>
+					<label>-</label>
+					<font>font16</font>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>high label</description>
+					<posx>160</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[393] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="62">
+					<description>high value</description>
+					<posx>230</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>low label</description>
+					<posx>350</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[391] :</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="63">
+					<description>low value</description>
+					<posx>420</posx>
+					<posy>40</posy>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="64">
+					<description>conditions label</description>
+					<posx>160</posx>
+					<posy>80</posy>
+					<width>420</width>
+					<label>-</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group" id="9001">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<animation effect="slide" time="150" end="345,0" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>720</height>
+					<onclick>-</onclick>
+					<hitrect x="0" y="0" w="360" h="720" />
+					<texturefocus>Side_Slideout.png</texturefocus>
+					<texturenofocus>Side_Slideout.png</texturenofocus>
+				</control>
+				<control type="group" id="9000">
+					<posx>25</posx>
+					<posy>140</posy>
+					<control type="button" id="2">
+						<description>Refresh button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>ButtonCommonValues</include>
+						<label>184</label>
+						<onleft>3</onleft>
+						<onright>3</onright>
+						<onup>4</onup>
+						<ondown>4</ondown>
+					</control>
+					<control type="button" id="4">
+						<description>Settings button</description>
+						<posx>0</posx>
+						<posy>45</posy>
+						<include>ButtonCommonValues</include>
+						<label>5</label>
+						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+						<onleft>3</onleft>
+						<onright>3</onright>
+						<onup>2</onup>
+						<ondown>2</ondown>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

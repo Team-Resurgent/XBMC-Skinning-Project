@@ -1,0 +1,205 @@
+<window id="25">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="label">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>20314</label>
+				<font>font40</font>
+			</control>
+			<include>VideoLibraryMediaInfo1</include>
+			<include>VideoLibraryMediaInfo2</include>
+			<include>NewListViewCommons</include>
+			<include>AllViewCommonThumbSmall</include>
+			<include>AllViewCommonThumbBig</include>
+			<include>DVDThumbView</include>
+			<include>WideIconViewCommons</include>
+			<include>AllViewCommonPageControls</include>
+			<include>Common_File_Count</include>
+			<control type="group" id="9001">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<animation effect="slide" time="150" end="345,0" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>720</height>
+					<onclick>-</onclick>
+					<hitrect x="0" y="0" w="360" h="720" />
+					<texturefocus>Side_Slideout.png</texturefocus>
+					<texturenofocus>Side_Slideout.png</texturenofocus>
+				</control>
+				<control type="group" id="9000">
+					<posx>25</posx>
+					<posy>140</posy>
+					<control type="button" id="2000">
+						<description>View As button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>ButtonCommonValues</include>
+						<label>$LOCALIZE[31015] $INFO[Container.ViewMode]</label>
+						<onclick>ActivateWindow(1112)</onclick>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>200</onup>
+						<ondown>3</ondown>
+					</control>
+					<control type="button" id="3">
+						<description>Sort by button</description>
+						<posx>0</posx>
+						<posy>45</posy>
+						<include>ButtonCommonValues</include>
+						<label>103</label>
+						<onleft>50</onleft>
+						<onright>4</onright>
+						<onup>2000</onup>
+						<ondown>99</ondown>
+					</control>
+					<control type="togglebutton" id="4">
+						<description>Sort asc</description>
+						<posx>275</posx>
+						<posy>53</posy>
+						<label>-</label>
+						<texturefocus>scroll-up-focus.png</texturefocus>
+						<texturenofocus>scroll-up.png</texturenofocus>
+						<alttexturefocus>scroll-down-focus.png</alttexturefocus>
+						<alttexturenofocus>scroll-down.png</alttexturenofocus>
+						<onleft>3</onleft>
+						<onright>50</onright>
+						<onup>2000</onup>
+						<ondown>99</ondown>
+					</control>
+					<control type="radiobutton" id="99">
+						<description>Library button</description>
+						<posx>0</posx>
+						<posy>90</posy>
+						<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+						<font>font13</font>
+						<onclick>ReplaceWindow(myvideofiles)</onclick>
+						<selected>Window.IsVisible(myvideolibrary)</selected>
+						<include>ButtonCommonValues</include>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>3</onup>
+						<ondown>14</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+					<control type="radiobutton" id="14">
+						<description>Watched Toggle</description>
+						<posx>0</posx>
+						<posy>135</posy>
+						<include>ButtonCommonValues</include>
+						<label>20367</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>99</onup>
+						<ondown>8</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+					<control type="button" id="8">
+						<description>Search</description>
+						<posx>0</posx>
+						<posy>180</posy>
+						<include>ButtonCommonValues</include>
+						<label>137</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>14</onup>
+						<ondown>19</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+					<control type="radiobutton" id="19">
+						<description>Filter</description>
+						<posx>0</posx>
+						<posy>225</posy>
+						<include>ButtonCommonValues</include>
+						<label>587</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>8</onup>
+						<ondown>16</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+					<control type="radiobutton" id="16">
+						<description>PartyMode</description>
+						<posx>0</posx>
+						<posy>270</posy>
+						<include>ButtonCommonValues</include>
+						<label>589</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>19</onup>
+						<ondown>17</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+					<control type="radiobutton" id="17">
+						<description>Flatten</description>
+						<posx>0</posx>
+						<posy>315</posy>
+						<include>ButtonCommonValues</include>
+						<label>20411</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>16</onup>
+						<ondown>11</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+					<control type="radiobutton" id="11">
+						<description>Unlock Shares</description>
+						<posx>0</posx>
+						<posy>360</posy>
+						<include>ButtonCommonValues</include>
+						<label>20336</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>17</onup>
+						<ondown>200</ondown>
+						<pulseonselect>no</pulseonselect>
+						<onclick>xbmc.mastermode</onclick>
+						<selected>system.ismaster</selected>
+						<visible>system.haslocks</visible>
+					</control>
+					<control type="button" id="200">
+						<description>Temp Play DVD Button</description>
+						<posx>0</posx>
+						<posy>405</posy>
+						<include>ButtonCommonValues</include>
+						<label>341</label>
+						<onclick>XBMC.PlayDVD()</onclick>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>11</onup>
+						<ondown>2000</ondown>
+						<pulseonselect>no</pulseonselect>
+						<animation effect="slide" start="0,0" end="0,-45" time="0" condition="!Control.IsVisible(11)">Conditional</animation>
+						<visible>System.HasMediaDVD</visible>
+					</control>
+				</control>
+			</control>
+			<control type="button" id="9004">
+				<posx>342</posx>
+				<posy>0</posy>
+				<width>595</width>
+				<height>3</height>
+				<onclick>-</onclick>
+				<onfocus>ActivateWindow(1112)</onfocus>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<visible>Skin.HasSetting(UseAdvancedMouse)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,125 @@
+﻿<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Background</include>
+<!-- Start Buttons -->
+		<control type="multiimage">
+			<description>dial outer ring</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>object-color</colordiffuse>
+			<imagepath>dial-ani</imagepath>
+			<timeperimage>8</timeperimage>
+		</control>
+		<control type="image">
+			<description>dial</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<texture>dial.png</texture>
+		</control>
+		<control type="image">
+			<description>dial center</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<texture>dial-center.png</texture>
+		</control>
+	<!-- Music Button -->
+		<control type="image">
+			<description>music no focus image</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>object-color</colordiffuse>
+			<texture>icon-music.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+	<!-- Programs Button -->
+		<control type="image">
+			<description>programs no focus image</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-program.png</texture>
+			<visible>!Control.HasFocus(2)</visible>
+		</control>
+	<!-- Video Button -->
+		<control type="image">
+			<description>video no focus image</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-video.png</texture>
+			<visible>!Control.HasFocus(3)</visible>
+		</control>
+	<!-- Photos Button -->
+		<control type="image">
+			<description>photos no focus image</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-photo.png</texture>
+			<visible>!Control.HasFocus(4)</visible>
+		</control>
+	<!-- Settings Button -->
+		<control type="image">
+			<description>settings button</description>
+			<posx>235</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-settings.png</texture>
+		</control>
+
+<!-- End Buttons -->
+
+<!-- Start Button Labels -->
+
+		<control type="label">
+			<description>Music Label</description>
+			<posx>235</posx>
+			<posy>398</posy>
+			<width>200</width>
+			<height>30</height>
+			<textcolor>main-text</textcolor>
+			<label>31001</label>
+			<font>home</font>
+			<align>center</align>
+			<visible>Control.HasFocus(1)</visible>
+			<visible>!Skin.HasSetting(home-label)</visible>
+		</control>
+
+<!-- End Button Labels -->
+
+		<include>Shutters</include>
+
+		<control type="button" id="10">
+			<onfocus>ActivateWindow(Home)</onfocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+			<visible>!Skin.Hassetting(startup-playlist)</visible>
+		</control>
+<!-- Playlist Trigger -->
+		<control type="button" id="10">
+			<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+			<onfocus>ActivateWindow(Home)</onfocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+			<visible>Skin.Hassetting(startup-playlist)</visible>
+		</control>
+	</controls>
+</window>

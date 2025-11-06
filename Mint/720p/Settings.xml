@@ -1,0 +1,141 @@
+<window id="4">
+
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+	
+		<!-- background -->
+		<include>bg-system</include>
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>e5ffffff</colordiffuse>
+		</control>
+		
+		<control type="group">
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+			<posx>600</posx>
+			<posy>120</posy>
+							
+			<!-- main buttons -->
+			<control type="grouplist" id="9000">
+				<height>640</height>
+				<posx>-120</posx>
+				
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				
+				<control type="button" id="101">
+					<label>video</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Video Settings)</onclick>
+					<onclick>ActivateWindow(MyVideosSettings)</onclick>
+				</control>
+				<control type="button" id="102">
+					<label>music</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Music Settings)</onclick>
+					<onclick>ActivateWindow(MyMusicSettings)</onclick>
+				</control>
+				<control type="button" id="103">
+					<label>programs</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Programs Settings)</onclick>
+					<onclick>ActivateWindow(MyProgramsSettings)</onclick>
+				</control>
+				<control type="button" id="104">
+					<label>pictures</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Picture Settings)</onclick>
+					<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+				</control>
+				<control type="button" id="105">
+					<label>weather</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Weather Settings)</onclick>
+					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+				</control>
+				<control type="button" id="106">
+					<label>network</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Network Settings)</onclick>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+				</control>
+				<control type="button" id="107">
+					<label>system</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,System Settings)</onclick>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+				</control>
+				<control type="button" id="108">
+					<label>appearance</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Appearance Settings)</onclick>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+				</control>
+				<control type="button" id="109">
+					<label>skin</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(50)</onclick>
+				</control>
+				<!--
+				<control type="button" id="110">
+					<label>profiles</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(settingstitle,Profile Settings)</onclick>
+					<onclick>ActivateWindow(profiles)</onclick>
+				</control>
+				-->
+				<control type="button" id="111">
+					<label>credits</label>
+					<include>type-menu</include>
+					<onclick>XBMC.Credits()</onclick>
+				</control>
+			</control>
+		</control>
+		
+		<!-- header -->
+		<control type="group">
+
+			<!-- background 
+			<control type="image">
+				<texture>mint2x2.png</texture>
+				<width>1280</width>
+				<height>80</height>
+			</control>-->
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+				<label>Settings</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, |]  $INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>					
+				
+	</controls>
+</window>

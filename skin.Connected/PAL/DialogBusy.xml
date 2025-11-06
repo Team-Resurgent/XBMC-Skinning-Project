@@ -1,0 +1,26 @@
+<window id="136">
+<defaultcontrol always="true">-</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<animation effect="fade" time="100">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+
+<coordinates>
+  <system>1</system>
+  <posx>310</posx>
+  <posy>238</posy>
+</coordinates>
+
+<controls>
+
+  <control type="multiimage">
+    <description>Busy animation</description>
+    <width>100</width>
+    <height>100</height>
+    <imagepath>busy</imagepath>
+    <timeperimage>100</timeperimage>
+    <fadetime>0</fadetime>
+  </control>
+
+</controls>
+	
+</window>

@@ -1,0 +1,127 @@
+<window>
+  <id>12</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>Background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>480</height>
+      <texture>background.png</texture>
+    </control>
+    <control>
+      <description>Settings Logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>60</posX>
+      <posY>30</posY>
+      <width>328</width>
+      <height>89</height>
+      <texture>settings_logo.png</texture>
+    </control>
+    <control>
+      <description>Category label</description>
+      <type>label</type>
+      <id>2</id>
+      <posX>350</posX>
+      <posY>65</posY>
+      <label>-</label>
+      <font>font16</font>
+      <align>right</align>
+      <textcolor>ffffffff</textcolor>
+    </control>
+    <control>
+      <description>Category Button Template</description>
+      <type>button</type>
+      <id>10</id>
+      <posX>208</posX>
+      <posY>150</posY>
+      <width>170</width>
+      <height>28</height>
+      <label>224</label>
+      <font>font13</font>
+    </control>
+    <control>
+      <description>Category Button Area</description>
+      <type>image</type>
+      <id>3</id>
+      <posX>60</posX>
+      <posY>120</posY>
+      <width>180</width>
+      <height>300</height>
+      <texture>-</texture>
+    </control>
+    <control>
+      <description>Category Button Gap</description>
+      <type>image</type>
+      <id>4</id>
+      <width>350</width>
+      <height>30</height>
+      <texture>-</texture>
+    </control>
+    <control>
+      <description>Settings Area</description>
+      <type>image</type>
+      <id>5</id>
+      <posX>240</posX>
+      <posY>121</posY>
+      <width>410</width>
+      <height>300</height>
+      <texture>-</texture>
+    </control>
+    <control>
+      <description>Settings Button Template</description>
+      <type>button</type>
+      <id>7</id>
+      <posX>530</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <textureFocus>list-focus.png</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+    </control>
+    <control>
+      <description>Gap Between Settings Buttons</description>
+      <type>image</type>
+      <id>6</id>
+      <width>350</width>
+      <height>28</height>
+      <texture>-</texture>
+    </control>
+    <control>
+      <description>Settings RadioButton (checkmark)</description>
+      <type>radiobutton</type>
+      <id>8</id>
+      <posX>530</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <textureFocus>list-focus.png</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <textureRadioFocus>check-box.png</textureRadioFocus>
+      <textureRadioNoFocus>check-boxNF.png</textureRadioNoFocus>
+    </control>
+    <control>
+      <description>SpinControlEx</description>
+      <type>spincontrolex</type>
+      <id>9</id>
+      <posX>530</posX>
+      <posY>150</posY>
+      <width>300</width>
+      <textureFocus>list-focus.png</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <textureUp>scroll-up.png</textureUp>
+      <textureDown>scroll-down.png</textureDown>
+      <textureUpFocus>scroll-up-focus.png</textureUpFocus>
+      <textureDownFocus>scroll-down-focus.png</textureDownFocus>
+      <font>font13</font>
+      <textcolor>ddffffff</textcolor>
+      <colordiffuse>ffffffff</colordiffuse>
+      <disabledcolor>60d0d0d0</disabledcolor>
+      <textOffsetX>7</textOffsetX>
+      <alignY>center</alignY>
+      <reverse>yes</reverse>
+    </control>
+  </controls>
+</window>

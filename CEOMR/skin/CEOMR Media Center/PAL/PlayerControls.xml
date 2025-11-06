@@ -1,0 +1,267 @@
+<window id="114">
+
+  <defaultcontrol always="true">401</defaultcontrol>
+   <visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+   <animation effect="fade" time="200">WindowOpen</animation> 
+   <animation effect="fade" time="200">WindowClose</animation>
+
+  <type>dialog</type>
+
+  <controls>
+
+    <control type="image" id="1">
+      <posx>430</posx>
+      <posy>480</posy>
+      <height>112</height>
+      <width>233</width>
+      <texture>playercontrols_background.png</texture>
+    </control>
+
+    <control type="button" id="400">
+      <posx>491</posx>
+      <posy>502</posy>
+      <width>21</width>
+      <height>24</height>
+      <label>-</label>
+      <texturefocus>osd_button_stopFO.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onleft>405</onleft>
+      <onright>401</onright>
+      <onup>400</onup>
+      <ondown>400</ondown>
+      <onclick>XBMC.PlayerControl(Stop)</onclick>
+    </control>
+
+    <control type="togglebutton" id="401">
+      <posx>521</posx>
+      <posy>497</posy>
+      <width>31</width>
+      <height>35</height>
+      <label>-</label>
+      <texturefocus>osd_button_pauseFO.png</texturefocus>
+      <texturenofocus>osd_button_pauseNF.png</texturenofocus>
+      <usealttexture>Player.Paused</usealttexture>
+      <alttexturefocus>osd_button_playFO.png</alttexturefocus>
+      <alttexturenofocus>osd_button_playNF.png</alttexturenofocus>
+      <onleft>400</onleft>
+      <onright>402</onright>
+      <onup>401</onup>
+      <ondown>401</ondown>
+      <onclick>XBMC.PlayerControl(Play)</onclick>
+    </control>
+
+    <control type="button" id="402">
+      <posx>564</posx>
+      <posy>506</posy>
+      <width>17</width>
+      <height>18</height>
+      <label>-</label>
+      <texturefocus>osd_button_skip_minusFO.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onleft>401</onleft>
+      <onright>403</onright>
+      <onup>402</onup>
+      <ondown>402</ondown>
+      <onclick>XBMC.PlayerControl(Previous)</onclick>
+    </control>
+
+    <control type="button" id="403">
+      <posx>583</posx>
+      <posy>506</posy>
+      <width>17</width>
+      <height>18</height>
+      <label>-</label>
+      <texturefocus>osd_button_skip_plusFO.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onleft>402</onleft>
+      <onright>404</onright>
+      <onup>403</onup>
+      <ondown>403</ondown>
+      <onclick>XBMC.PlayerControl(Next)</onclick>
+    </control>
+
+    <control type="togglebutton" id="404">
+      <posx>613</posx>
+      <posy>506</posy>
+      <width>17</width>
+      <height>18</height>
+      <label>-</label>
+      <usealttexture>Player.Rewinding</usealttexture>
+      <alttexturefocus>osd_button_rewSELFO.png</alttexturefocus>
+      <alttexturenofocus>osd_button_rewSELNF.png</alttexturenofocus>
+      <texturefocus>osd_button_rewFO.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onleft>403</onleft>
+      <onright>405</onright>
+      <onup>404</onup>
+      <ondown>404</ondown>
+      <onclick>XBMC.PlayerControl(Rewind)</onclick>
+    </control>
+
+    <control type="togglebutton" id="405">
+      <posx>632</posx>
+      <posy>506</posy>
+      <width>17</width>
+      <height>18</height>
+      <label>-</label>
+      <usealttexture>Player.Forwarding</usealttexture>
+      <alttexturefocus>osd_button_ffSELFO.png</alttexturefocus>
+      <alttexturenofocus>osd_button_ffSELNF.png</alttexturenofocus>
+      <texturefocus>osd_button_ffFO.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onleft>404</onleft>
+      <onright>400</onright>
+      <onup>405</onup>
+      <ondown>405</ondown>
+      <onclick>XBMC.PlayerControl(Forward)</onclick>
+    </control>
+
+    <!-- playstate images -->
+
+
+    <control type="image" id="16">
+      <description>pause image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Paused</visible>
+      <texture>video-pause.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="17">
+      <description>2x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding2x</visible>
+      <texture>video-2x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="18">
+      <description>4x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding4x</visible>
+      <texture>video-4x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="19">
+      <description>8x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding8x</visible>
+      <texture>video-8x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="20">
+      <description>16x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding16x</visible>
+      <texture>video-16x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="21">
+      <description>32x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding32x</visible>
+      <texture>video-32x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="117">
+      <description>-2x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding2x</visible>
+      <texture>video-2xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="118">
+      <description>-4x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding4x</visible>
+      <texture>video-4xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="119">
+      <description>-8x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding8x</visible>
+      <texture>video-8xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="120">
+      <description>-16x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding16x</visible>
+      <texture>video-16xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="121">
+      <description>-32x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding32x</visible>
+      <texture>video-32xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+  </controls>
+
+</window>

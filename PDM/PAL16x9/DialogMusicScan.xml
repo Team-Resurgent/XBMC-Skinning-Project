@@ -1,0 +1,70 @@
+<window id="112">
+	<defaultcontrol>402</defaultcontrol>
+	<controls>
+
+	<control type="image" id="23">
+		<description>Popup Seek Dialog Background</description>
+		<posx>370</posx>
+		<posy>94</posy>
+		<width>350</width>
+		<height>60</height>
+		<texture>SlideBar.png</texture>
+		<include>notifybar</include> 
+	</control>
+
+	<control type="image" id="400">
+		<description>Info-Icon</description>
+		<posx>395</posx>
+		<posy>102</posy>
+		<width>45</width>
+		<height>43</height>
+		<aspectratio>keep</aspectratio>
+		<texture>icon-scan.png</texture>
+		<include>notifybar</include> 
+	</control>
+
+	<control type="label" id="401">
+		<description>Caption Label</description>
+		<posx>440</posx>
+		<posy>110</posy>
+		<width>300</width>
+		<align>left</align>
+		<font>font12</font>
+		<include>notifybar</include> 
+	</control>
+
+	<control type="label" id="402">
+		<description>Current Directory Label</description>
+		<posx>440</posx>
+		<posy>124</posy>
+		<width>250</width>
+		<align>left</align>
+		<font>font10</font>
+		<haspath>no</haspath>
+		<include>notifybar</include> 
+	</control>
+
+	<control type="progress" id="403">
+		<description>Progressbar</description>
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>3</height>
+		<lefttexture>progress_left.png</lefttexture>
+		<midtexture>progress_mid-blue2.png</midtexture>
+		<righttexture>progress_right.png</righttexture>
+		<overlaytexture></overlaytexture>
+	</control>
+
+	<control type="image">
+		<description>Media Progressbar overlay</description>
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>3</height>
+		<texture>progress_over_home.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+	</control>
+
+	</controls>
+</window>

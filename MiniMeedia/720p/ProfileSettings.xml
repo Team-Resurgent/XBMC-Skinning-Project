@@ -1,0 +1,123 @@
+<window id="130">
+  <defaultcontrol always="true">5</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <control type="group" id="301">
+      <description>Profile Settings Options Area</description>
+      <posx>630</posx>
+      <posy>460</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,0" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,0" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">Hidden</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">WindowClose</animation>
+      <visible>![Window.IsActive(LockSettings.xml) | Window.IsActive(DialogKeyboard.xml)]</visible>
+
+      <control type="image">
+        <width>660</width>
+        <height>270</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="group">
+        <posx>10</posx>
+        <posy>10</posy>
+
+        <control type="image" id="2">
+          <description>Profile Image</description>
+          <width>98</width>
+          <height>98</height>
+          <texture>unknown_user.png</texture>
+          <colordiffuse>ffffffff</colordiffuse>
+          <aspectratio>keep</aspectratio>
+        </control>
+
+        <control type="label">
+          <description>Profile Directory</description>
+          <posx>620</posx>
+          <width>520</width>
+          <scroll>true</scroll>
+          <align>right</align>
+          <textcolor>Unfocused</textcolor>
+          <font>SmallTitleFont</font>
+          <label>20070</label>
+        </control>
+        <control type="label" id="1001">
+          <description>Profile Directory</description>
+          <posx>620</posx>
+          <posy>20</posy>
+          <width>520</width>
+          <scroll>true</scroll>
+          <align>right</align>
+          <textcolor>Unfocused</textcolor>
+        </control>
+
+        <control type="grouplist" id="5">
+          <description>Profile Options</description>
+          <posy>102</posy>
+          <width>600</width>
+          <height>100</height>
+          <onup>1000</onup>
+          <ondown>28</ondown>
+          <onleft>28</onleft>
+          <onright>5</onright>
+          <itemgap>0</itemgap>
+          <pagecontrol>101</pagecontrol>
+        </control>
+
+        <control type="button" id="7">
+          <description>Default Button</description>
+          <textoffsetx>10</textoffsetx>
+          <align>left</align>
+          <font>MediumDefaultFont</font>
+          <texturenofocus>-</texturenofocus>
+        </control>
+
+        <control type="radiobutton" id="8">
+          <description>Default Radio Button</description>
+          <textoffsetx>10</textoffsetx>
+          <align>left</align>
+          <font>MediumDefaultFont</font>
+        </control>
+
+        <control type="spincontrolex" id="9">
+          <description>Default Spincontrol</description>
+          <height>30</height>
+          <textoffsetx>10</textoffsetx>
+          <align>left</align>
+          <font>MediumDefaultFont</font>
+          <texturefocus border="3">black_rounded.png</texturefocus>
+        </control>
+
+        <control type="scrollbar" id="101">
+          <posx>600</posx>
+          <posy>96</posy>
+          <height>112</height>
+          <onleft>50</onleft>
+          <onright>9009</onright>
+        </control>
+
+        <control type="group">
+          <posy>214</posy>
+
+          <control type="button" id="28">
+            <description>ok button</description>
+            <onup>5</onup>
+            <onright>29</onright>
+            <label>$LOCALIZE[186]</label>
+          </control>
+
+          <control type="button" id="29">
+            <description>cancel button</description>
+            <posx>150</posx>
+            <onup>5</onup>
+            <onleft>28</onleft>
+            <label>$LOCALIZE[222]</label>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

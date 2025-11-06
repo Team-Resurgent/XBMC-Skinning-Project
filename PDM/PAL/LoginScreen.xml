@@ -1,0 +1,274 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+	<system>1</system>
+	<origin x="0" y="0">true</origin>
+	</coordinates>
+	<controls>
+
+	<control type="multiimage">
+		<description>Background Animation - Default Theme</description>
+		<posx>-12</posx>
+		<posy>108</posy>
+		<width>732</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<aspectratio>scale</aspectratio>
+		<include>color-animation</include>
+		<visible>!Skin.HasSetting(menu-animation) | Skin.HasTheme(Default)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation - X Theme</description>
+		<posx>-12</posx>
+		<posy>108</posy>
+		<width>732</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<aspectratio>scale</aspectratio>
+		<include>color-animation-theme</include>
+		<visible>!Skin.HasSetting(menu-animation) + Skin.HasTheme(X)</visible>
+	</control>
+
+	<control type="image">
+		<description>Background Panel Overlayer</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>407</height>
+		<texture>keyboard-numeric-overlay2.png</texture>
+		<include>menu-overlay</include>
+		<visible>!Skin.HasSetting(menu-animation)</visible>
+	</control>
+
+	<control type="image">
+		<description>Background Image</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>425</height>
+		<texture>menu-background.png</texture>
+		<visible>Skin.HasSetting(menu-animation)</visible>
+	</control>
+
+	<control type="image" id="1">
+		<description>Profile Background</description>
+		<posx>140</posx>
+		<posy>135</posy>
+		<width>440</width>
+		<height>360</height>
+		<texture>keyboard-panel.png</texture>
+	</control>
+
+	<control type="label" id="2">
+		<description>Heading Label</description>
+		<posx>165</posx>
+		<posy>148</posy>
+		<width>420</width>
+		<align>left</align>
+		<font>special14</font>
+		<textcolor>DDced8da</textcolor>
+	</control>
+
+	<control type="label" id="3">
+		<description>Profile Count Label</description>
+		<posx>565</posx>
+		<posy>148</posy>
+		<width>420</width>
+		<align>right</align>
+		<font>special14</font>
+		<textcolor>DDced8da</textcolor>
+	</control>
+
+	<control type="listcontrol" id="52">
+		<description>Big Listcontrol</description>
+		<posx>165</posx>
+		<posy>180</posy>
+		<width>400</width>
+		<height>300</height>
+		<spinwidth>16</spinwidth>
+		<spinheight>16</spinheight>
+		<spincolor>ffffffff</spincolor>
+		<spinfont>font10</spinfont>
+		<spinposx>335</spinposx>
+		<spinposy>266</spinposy>
+		<textureup>scroll-up.png</textureup>
+		<texturedown>scroll-down.png</texturedown>
+		<textureupfocus>scroll-up-focus.gif</textureupfocus>
+		<texturedownfocus>scroll-down-focus.gif</texturedownfocus>
+		<texturefocus>profile-focus.png</texturefocus>
+		<texturenofocus>profile-nofocus.png</texturenofocus>
+		<font>nasa-big</font>
+		<font2>font10</font2>
+		<include>textcolorwhite-90</include>
+		<selectedcolor2>FFffffff</selectedcolor2>
+		<textcolor2>d0ffffff</textcolor2>
+		<suffix>|</suffix>
+		<textxoff>10</textxoff>
+		<textyoff>4</textyoff>
+		<textxoff2>390</textxoff2>
+		<textyoff2>58</textyoff2>
+		<aligny>top</aligny>
+		<itemwidth>80</itemwidth>
+		<itemheight>80</itemheight>
+		<spacebetweenitems>10</spacebetweenitems>
+		<textureheight>80</textureheight>
+		<onleft>98</onleft>
+		<onright>98</onright>
+		<onup>52</onup>
+		<ondown>52</ondown>
+	</control>
+
+	<control type="button" id="98">
+		<description>Submenu Button</description>
+		<posx>535</posx>
+		<posy>435</posy>
+		<width>35</width>
+		<height>35</height>
+		<onclick>ActivateWindow(ShutdownMenu)</onclick>
+		<texturefocus>home-power-focus.png</texturefocus>
+		<texturenofocus>home-power.png</texturenofocus>
+		<label>-</label>
+		<onleft>52</onleft>
+		<onright>52</onright>
+		<onup>52</onup>
+		<ondown>52</ondown>
+	</control>
+
+	<control type="image">
+		<description>Loginscreen Main-Top</description>
+		<posx>0</posx>
+		<posy>-182</posy>
+		<width>720</width>
+		<height>289</height>
+		<texture>4x3-Startup-top.png</texture>
+		<include>logon-main-top</include>
+	</control>
+	<control type="image">
+		<description>Loginscreen Main-Bottom</description>
+		<posx>0</posx>
+		<posy>465</posy>
+		<width>720</width>
+		<height>289</height>
+		<texture>4x3-Startup-bottom.png</texture>
+		<include>logon-main-bottom</include>
+	</control>
+
+	<control type="image">
+		<description>XBMC Logo</description>
+		<posx>5</posx>
+		<posy>21</posy>
+		<width>170</width>
+		<height>55</height>
+		<texture>XBMC-logo.png</texture>
+		<aspectratio>scale</aspectratio>
+		<include>logon-main-top</include>
+		<visible>!Skin.HasSetting(skinlogo)</visible>
+	</control>
+
+	<!-- Date and Time Labels -->
+
+	<control type="label">
+		<description>Date</description>
+		<posx>620</posx>
+		<posy>55</posy>
+		<label>date</label>
+		<info>System.Date</info>
+		<align>right</align>
+		<aligny>center</aligny>
+		<font>special12</font>
+		<include>textcolorwhite-50</include>
+		<include>logon-main-top</include>
+		<visible>!Skin.HasSetting(time-and-date) + !Skin.HasSetting(cpu-and-ram)</visible>
+	</control>
+	<control type="label">
+		<description>Date and Time Suffix</description>
+		<posx>632</posx>
+		<posy>53</posy>
+		<label>|</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<include>logon-main-top</include>
+		<visible>!Skin.HasSetting(time-and-date) + !Skin.HasSetting(cpu-and-ram)</visible>
+	</control>
+	<control type="label">
+		<description>Time</description>
+		<posx>650</posx>
+		<posy>55</posy>
+		<label>time</label>
+		<info>System.Time</info>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<include>logon-main-top</include>
+		<visible>!Skin.HasSetting(time-and-date) + !Skin.HasSetting(cpu-and-ram)</visible>
+	</control>
+
+	<!-- CPU and RAM Labels -->
+
+	<control type="label">
+		<description>CPU</description>
+		<posx>620</posx>
+		<posy>55</posy>
+    <label>$LOCALIZE[13271] $INFO[system.cpuusage]</label>
+    <align>right</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-50</include>
+		<include>logon-main-top</include>
+		<visible>Skin.HasSetting(cpu-and-ram) + Skin.HasSetting(time-and-date)</visible>
+	</control>
+	<control type="label">
+		<description>CPU and RAM Suffix</description>
+		<posx>632</posx>
+		<posy>53</posy>
+		<label>|</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<include>logon-main-top</include>
+		<visible>Skin.HasSetting(cpu-and-ram) + Skin.HasSetting(time-and-date)</visible>
+	</control>
+	<control type="label">
+		<description>RAM</description>
+		<posx>650</posx>
+		<posy>55</posy>
+		<info>System.FreeMemory</info>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<include>logon-main-top</include>
+		<visible>Skin.HasSetting(cpu-and-ram) + Skin.HasSetting(time-and-date)</visible>
+	</control>
+
+	<!-- System InfoBar -->
+
+	<control type="label">
+		<width>720</width>
+		<posx>720</posx>
+		<posy>82</posy>
+		<font>special13</font>
+		<scroll>true</scroll>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label> ..$INFO[System.FreeSpace(C)] of $INFO[system.totalspace(c)] - $INFO[System.FreeSpace(E)] of $INFO[system.totalspace(e)] - $INFO[System.FreeSpace(F)] of $INFO[system.totalspace(f)] - $INFO[System.FreeSpace(G)] of $INFO[system.totalspace(g)] - $LOCALIZE[150]: $INFO[Network.IPAddress] - $LOCALIZE[144] $INFO[System.BuildVersion] - $LOCALIZE[172]: $INFO[System.BuildDate] - $INFO[system.dvdtraystate]</label>
+		<include>textcolorwhite-50</include>
+		<visible>Skin.HasSetting(sysstatsbarhome)</visible>
+		<include>logon-main-top</include>
+	</control>
+
+	</controls>
+</window>

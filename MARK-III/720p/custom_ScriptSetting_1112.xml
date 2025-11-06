@@ -1,0 +1,233 @@
+<window type="dialog" id="1112">
+	<defaultcontrol>9000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>315</posx>
+		<posy>60</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>650</width>
+			<height>600</height>
+			<texture border="40">DialogBack.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>650</width>
+			<height>600</height>
+			<texture border="40">DialogFront.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>heading label</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>570</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font18</font>
+			<label>31200</label>
+			<textcolor>white</textcolor>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>75</posy>
+			<width>570</width>
+			<height>8</height>
+			<texture>StreakBlueFull.png</texture>
+		</control>
+		<control type="grouplist" id="9000">
+			<posx>40</posx>
+			<posy>90</posy>
+			<width>570</width>
+			<height>464</height>
+			<itemgap>5</itemgap>
+			<pagecontrol>-</pagecontrol>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="label" id="1">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>40</height>
+				<font>font18</font>
+				<label>31201</label>
+				<textcolor>white</textcolor>
+				<align>center</align>
+			</control>
+			<control type="radiobutton" id="2">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>$LOCALIZE[31205]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HomeScriptMenu_VideoPlugins_Visible)</onclick>
+				<selected>!Skin.HasSetting(HomeScriptMenu_VideoPlugins_Visible)</selected>
+			</control>
+			<control type="radiobutton" id="3">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>$LOCALIZE[31206]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HomeScriptMenu_MusicPlugins_Visible)</onclick>
+				<selected>!Skin.HasSetting(HomeScriptMenu_MusicPlugins_Visible)</selected>
+			</control>
+			<control type="image" id="100">
+				<width>570</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="radiobutton" id="11">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>$LOCALIZE[31202] 1</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HomeScriptButton1)</onclick>
+				<selected>Skin.HasSetting(HomeScriptButton1)</selected>
+			</control>
+			<control type="button" id="12">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>- $LOCALIZE[31203]</label>
+				<label2>[COLOR=blue]$INFO[Skin.String(HomeScriptButton1_label)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.SetString(HomeScriptButton1_label)</onclick>
+				<visible>Skin.HasSetting(HomeScriptButton1)</visible>
+			</control>
+			<control type="button" id="13">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>- $LOCALIZE[31204]</label>
+				<label2>[COLOR=blue]$INFO[Skin.String(HomeScriptButton1_Path)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.SetFile(HomeScriptButton1_Path,.py)</onclick>
+				<visible>Skin.HasSetting(HomeScriptButton1)</visible>
+			</control>
+			<control type="image" id="101">
+				<width>570</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="radiobutton" id="21">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>$LOCALIZE[31202] 2</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HomeScriptButton2)</onclick>
+				<selected>Skin.HasSetting(HomeScriptButton2)</selected>
+			</control>
+			<control type="button" id="22">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>- $LOCALIZE[31203]</label>
+				<label2>[COLOR=blue]$INFO[Skin.String(HomeScriptButton2_label)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.SetString(HomeScriptButton2_label)</onclick>
+				<visible>Skin.HasSetting(HomeScriptButton2)</visible>
+			</control>
+			<control type="button" id="23">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>- $LOCALIZE[31204]</label>
+				<label2>[COLOR=blue]$INFO[Skin.String(HomeScriptButton2_Path)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.SetFile(HomeScriptButton2_Path,.py)</onclick>
+				<visible>Skin.HasSetting(HomeScriptButton2)</visible>
+			</control>
+			<control type="label" id="4">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>40</height>
+				<font>font18</font>
+				<label>31207</label>
+				<textcolor>white</textcolor>
+				<align>center</align>
+			</control>
+			<control type="radiobutton" id="31">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>$LOCALIZE[31208]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
+				<selected>Skin.HasSetting(LyricScript_Enable)</selected>
+			</control>
+			<control type="button" id="32">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>- $LOCALIZE[31204]</label>
+				<label2>[COLOR=blue]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
+				<visible>Skin.HasSetting(LyricScript_Enable)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

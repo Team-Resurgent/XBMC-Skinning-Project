@@ -1,0 +1,564 @@
+<window id="2008">
+	<defaultcontrol>1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>dialog-effect</include> 
+	<controls>
+
+	<control type="image">
+		<description>bg focus black</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>color-black.png</texture>
+		<include>black-effect</include>
+	</control>
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>230</posy>
+		<width>720</width>
+		<height>90</height>
+		<texture>sub-background2.png</texture>
+	</control>
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>314</posy>
+		<width>720</width>
+		<height>41</height>
+		<texture>sub-background-label2.png</texture>
+	</control>
+
+	<control type="button" id="1">
+		<description>CD1</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onleft>20</onleft>
+		<onright>2</onright>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-01</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(1)</visible>
+	</control>
+
+	<control type="button" id="2">
+		<description>CD2</description>
+		<posx>700</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>3</onright>
+		<onleft>1</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-02</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(2)</visible>
+	</control>
+
+	<control type="button" id="3">
+		<description>CD3</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>4</onright>
+		<onleft>2</onleft>
+	</control>
+
+	<control type="label" id="300">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-03</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(3)</visible>
+	</control>
+
+	<control type="button" id="4">
+		<description>CD4</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>5</onright>
+		<onleft>3</onleft>
+	</control>
+
+	<control type="label" id="300">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-04</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(4)</visible>
+	</control>
+
+	<control type="button" id="5">
+		<description>CD5</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>6</onright>
+		<onleft>4</onleft>
+	</control>
+
+	<control type="label" id="300">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-05</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(5)</visible>
+	</control>
+
+	<control type="button" id="6">
+		<description>CD6</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>7</onright>
+		<onleft>5</onleft>
+	</control>
+
+	<control type="label" id="300">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-06</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(6)</visible>
+	</control>
+
+	<control type="button" id="7">
+		<description>CD7</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>8</onright>
+		<onleft>6</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-07</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(7)</visible>
+	</control>
+
+	<control type="button" id="8">
+		<description>CD8</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>9</onright>
+		<onleft>7</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-08</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(8)</visible>
+	</control>
+
+	<control type="button" id="9">
+		<description>CD9</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>10</onright>
+		<onleft>8</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-09</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(9)</visible>
+	</control>
+
+	<control type="button" id="10">
+		<description>CD10</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onright>11</onright>
+		<onleft>9</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-010</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(10)</visible>
+	</control>
+
+	<control type="button" id="11">
+		<description>CD11</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>12</onright>
+		<onleft>10</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-011</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(11)</visible>
+	</control>
+
+	<control type="button" id="12">
+		<description>CD12</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>13</onright>
+		<onleft>11</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-012</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(12)</visible>
+	</control>
+
+	<control type="button" id="13">
+		<description>CD13</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>14</onright>
+		<onleft>12</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-013</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(13)</visible>
+	</control>
+
+	<control type="button" id="14">
+		<description>CD14</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>15</onright>
+		<onleft>13</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-014</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(14)</visible>
+	</control>
+
+	<control type="button" id="15">
+		<description>CD15</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>16</onright>
+		<onleft>14</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-015</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(15)</visible>
+	</control>
+
+	<control type="button" id="16">
+		<description>CD16</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>17</onright>
+		<onleft>15</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-016</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(16)</visible>
+	</control>
+
+	<control type="button" id="17">
+		<description>CD17</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>18</onright>
+		<onleft>16</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-017</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(17)</visible>
+	</control>
+
+	<control type="button" id="18">
+		<description>CD18</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>19</onright>
+		<onleft>17</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-018</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(18)</visible>
+	</control>
+
+	<control type="button" id="19">
+		<description>CD19</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>20</onright>
+		<onleft>18</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-019</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(19)</visible>
+	</control>
+
+	<control type="button" id="20">
+		<description>CD20</description>
+		<posx>690</posx>
+		<posy>240</posy>
+		<width>54</width>
+		<height>54</height>
+		<label> </label>
+		<texturefocus>button-cd-focus.png</texturefocus>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<onright>1</onright>
+		<onleft>19</onleft>
+	</control>
+
+	<control type="label" id="400">
+		<description>cd num label</description>
+		<width>300</width>
+		<align>center</align> 
+		<posx>240</posx> 
+		<posy>317</posy>
+		<label>$INFO[ListItem.label] - CD-020</label>
+		<font>special14</font>
+		<textcolor>FFffffff</textcolor>
+		<scroll>true</scroll>
+		<visible>control.hasfocus(20)</visible>
+	</control>
+
+	</controls>
+</window>

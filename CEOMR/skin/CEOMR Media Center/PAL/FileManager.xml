@@ -1,0 +1,161 @@
+<window id="3">
+
+  <defaultcontrol>20</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <posx>63</posx>
+      <posy>46</posy>
+      <height>60</height>
+      <width>133</width>
+      <visible>!Skin.HasSetting(logo)</visible>
+      <texture>logo.png</texture>
+    <animation effect="zoom" time="200" end="60" center="320,70">WindowOpen</animation>
+    <animation effect="zoom" time="200" start="60" center="320,70">WindowClose</animation>
+
+    </control>
+
+    <control type="image" id="1">
+      <description>filemanager background image</description>
+      <include>logo</include>
+      <width>720</width>
+      <height>576</height>
+      <texture>filemanager_bg.png</texture>
+    </control>
+
+    <control type="fadelabel" id="101">
+      <description>current Directory text label left</description>
+      <include>control</include>
+      <align>left</align>
+      <posx>90</posx>
+      <posy>65</posy>
+      <width>270</width>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="fadelabel" id="102">
+      <description>current Directory text label right</description>
+      <include>control</include>
+      <align>left</align>
+      <posx>380</posx>
+      <posy>65</posy>
+      <width>270</width>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="12">
+      <description>number of files in left list text label</description>
+      <include>control</include>
+      <posx>90</posx>
+      <posy>484</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="13">
+      <description>number of files in right list text label</description>
+      <include>control</include>
+      <posx>380</posx>
+      <posy>484</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="listcontrol" id="20">
+      <description>Left File list</description>
+      <include>control</include>
+      <selectedcolor>FFFF9600</selectedcolor>
+      <posx>74</posx>
+      <posy>102</posy>
+      <width>290</width>
+      <height>400</height>
+      <onleft>21</onleft>
+      <onright>21</onright>
+      <onup>20</onup>
+      <ondown>20</ondown>
+    </control>
+
+    <control type="listcontrol" id="21">
+      <description>Right File list</description>
+      <include>control</include>
+      <selectedcolor>FFFF9600</selectedcolor>
+      <posx>364</posx>
+      <posy>102</posy>
+      <width>290</width>
+      <height>400</height>
+      <onleft>20</onleft>
+      <onright>20</onright>
+      <onup>21</onup>
+      <ondown>21</ondown>
+    </control>
+
+    <control type="image" id="1">
+      <description>filemanager background image</description>
+      <include>logo</include>
+      <width>720</width>
+      <height>576</height>
+      <texture>filemanager.png</texture>
+    </control>
+
+      <control type="label" id="1">
+         <description>free space label</description>  
+      <include>control</include>
+         <posx>120</posx> 
+         <posy>530</posy> 
+         <info>System.Freespace(C)</info> 
+         <include>textcolorlightblue</include> 
+         <font>font10</font> 
+         <align>left</align> 
+       </control> 
+    
+       <control type="label" id="1">
+         <description>free space label</description> 
+      <include>control</include>
+         <posx>270</posx> 
+         <posy>530</posy> 
+         <info>System.Freespace(E)</info> 
+         <include>textcolorlightblue</include> 
+         <font>font10</font> 
+         <align>left</align> 
+       </control> 
+    
+       <control type="label" id="1">
+         <description>free space label</description>  
+      <include>control</include>
+         <posx>430</posx> 
+         <posy>530</posy> 
+         <info>System.Freespace(F)</info> 
+         <include>textcolorlightblue</include> 
+         <font>font10</font> 
+         <align>left</align> 
+       </control> 
+
+  </controls>
+
+</window>

@@ -1,0 +1,1083 @@
+<window id="0">
+
+  <defaultcontrol>300</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="group" id="9000">
+
+    <control type="button" id="66">
+      <description>help button</description>
+      <include>logo</include>
+
+	<visible>Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)</visible>
+
+      <posx>30</posx>
+      <posy>170</posy>
+      <width>30</width>
+      <height>30</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(1051)</onclick>
+      <texturefocus>help-focus.png</texturefocus>
+      <texturenofocus>help-nofocus.png</texturenofocus>
+      <onleft>98</onleft>
+      <onright>67</onright>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <align>center</align>
+    </control>
+
+    <control type="button" id="67">
+      <description>FAV button</description>
+      <include>logo</include>
+      <posx>60</posx>
+      <posy>170</posy>
+      <width>45</width>
+      <height>45</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(Favourites)</onclick>
+      <texturefocus>fav-focus.png</texturefocus>
+      <texturenofocus>fav-nofocus.png</texturenofocus>
+      <onleft>66</onleft>
+      <onright>300</onright>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <align>center</align>
+    </control>
+
+    <control type="buttonscroller" id="300">
+      <description>Home Buttons</description>
+      <include>logo</include>
+      <posx>230</posx>
+      <posy>220</posy>
+      <width>180</width>
+      <height>35</height>
+      <visible>true</visible>
+      <texturefocus>button-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <font>font14</font>
+      <include>textcolorwhite</include>
+      <align>right</align>
+      <aligny>center</aligny>
+      <textoffsetx>15</textoffsetx>
+      <textoffsetY></textoffsetY>
+      <pulseonselect>false</pulseonselect>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <onleft>67</onleft>
+      <onright>95</onright>
+      <numbuttons>5</numbuttons>
+      <buttongap>5</buttongap>
+      <orientation>vertical</orientation>
+      <defaultbutton>3</defaultbutton>
+      <movement>0</movement>
+      <alpha>100</alpha>
+      <wraparound>yes</wraparound>
+      <smoothscrolling>yes</smoothscrolling>
+
+      <buttons>
+
+        <button id="101">
+          <label>2</label>
+          <onclick>XBMC.ActivateWindow(5)</onclick>
+        </button>
+
+        <button id="102">
+          <label>3</label>
+          <onclick>XBMC.ActivateWindow(6)</onclick>
+        </button>
+
+        <button id="103">
+          <label>20400</label>
+          <onclick>XBMC.ActivateWindow(webbrowser)</onclick>
+          <visible>System.HasNetwork</visible>
+        </button>
+
+        <button id="104">
+          <label>7</label>
+          <onclick>XBMC.ActivateWindow(3)</onclick>
+        </button>
+
+        <button id="105">
+          <label>8</label>
+          <onclick>XBMC.ActivateWindow(2600)</onclick>
+          <visible>System.HasNetwork</visible>
+        </button>
+<!--
+        <button id="108">
+          <label>5</label>
+          <onclick>XBMC.ActivateWindow(4)</onclick>
+        </button>
+-->
+        <button id="106">
+          <label>0</label>
+          <onclick>XBMC.ActivateWindow(1)</onclick>
+        </button>
+
+        <button id="107">
+          <label>1</label>
+          <onclick>XBMC.ActivateWindow(2)</onclick>
+        </button>
+
+      </buttons>
+    </control>
+
+    <control type="button" id="95">
+         <description>dvd media state and start button</description> 
+      <include>logo</include>
+         <posx>457</posx> 
+         <posy>500</posy> 
+         <width>30</width> 
+         <height>30</height> 
+         <label>-</label>
+         <texturefocus>button-cd-focus.png</texturefocus> 
+         <texturenofocus>button-cd-nofocus.png</texturenofocus> 
+         <onleft>300</onleft> 
+         <onright>97</onright> 
+         <onup>300</onup> 
+         <ondown>300</ondown>
+	 <onclick>XBMC.PlayDVD()</onclick>
+         <visible>System.hasmediadvd + [!Player.HasAudio | ![Player.HasAudio + System.IdleTime(60)]]</visible>
+         <animation effect="fade" time="600">VisibleChange</animation> 
+       </control> 
+
+      <control type="button" id="97">
+         <description>xlink kai</description> 
+      <include>logo</include>
+	 <visible>System.KaiConnected</visible>
+         <posx>494</posx> 
+         <posy>500</posy> 
+         <width>35</width> 
+         <height>35</height> 
+         <font>font10</font> 
+         <include>textcolorlightgrey</include> 
+         <label>-</label> 
+         <align>right</align> 
+         <texturefocus>kai-home-focus.png</texturefocus> 
+         <texturenofocus>kai-home-nofocus.png</texturenofocus>
+         <onclick>XBMC.ActivateWindow(2700)</onclick>
+         <onleft>95</onleft> 
+         <onright>100</onright> 
+         <onup>300</onup> 
+         <ondown>300</ondown> 
+       </control>
+
+    <control type="button" id="700">
+      <description>wecker button</description>
+      <include>logo</include>
+      <posx>566</posx>
+      <posy>453</posy>
+      <width>35</width>
+      <height>40</height>
+      <label>-</label>
+      <onclick>XBMC.AlarmClock()</onclick>
+      <texturefocus>wecker_over.png</texturefocus>
+      <texturenofocus>wecker.png</texturenofocus>
+      <onleft>300</onleft>
+      <onright>701</onright>
+      <onup>300</onup>
+      <ondown>90</ondown>
+      <align>center</align>
+      <visible>Skin.HasSetting(wecker)</visible>
+    </control>
+
+    <control type="button" id="701">
+      <description>wecker button deactivate</description>
+      <include>logo</include>
+      <posx>603</posx>
+      <posy>453</posy>
+      <width>35</width>
+      <height>40</height>
+      <label>-</label>
+      <onclick>XBMC.CancelAlarm()</onclick>
+      <texturefocus>wecker_stop_over.png</texturefocus>
+      <texturenofocus>wecker_stop.png</texturenofocus>
+      <onleft>700</onleft>
+      <onright>300</onright>
+      <onup>300</onup>
+      <ondown>98</ondown>
+      <align>center</align>
+      <visible>Skin.HasSetting(wecker)</visible>
+    </control>
+
+    <control type="button" id="100">
+      <description>subpanel button</description>
+      <visible>Skin.HasSetting(submenubuttons)</visible>
+      <include>logo</include>
+      <posx>531</posx>
+      <posy>500</posy>
+      <width>35</width>
+      <height>35</height>
+      <texturefocus>exit-f.png</texturefocus>
+      <texturenofocus>exit-nf.png</texturenofocus>
+      <onclick>XBMC.ActivateWindow(105)</onclick>
+      <label>-</label>
+      <onleft>97</onleft>
+      <onright>90</onright>
+      <onup>700</onup>
+      <ondown>300</ondown>
+    </control>
+
+    <control type="button" id="90">
+      <description>settings button</description>
+      <include>logo</include>
+      <posx>568</posx>
+      <posy>500</posy>
+      <width>35</width>
+      <height>35</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(Settings)</onclick>
+      <texturefocus>settings_focus.png</texturefocus>
+      <texturenofocus>settings_nofocus.png</texturenofocus>
+      <onleft>100</onleft>
+      <onright>98</onright>
+      <onup>700</onup>
+      <ondown>300</ondown>
+      <align>center</align>
+    </control>
+
+    <control type="button" id="98">
+      <description>submenu button</description>
+      <include>logo</include>
+      <posx>605</posx>
+      <posy>500</posy>
+      <width>35</width>
+      <height>35</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(111)</onclick>
+      <texturefocus>shutdown-focus.png</texturefocus>
+      <texturenofocus>shutdown-nofocus.png</texturenofocus>
+      <onleft>90</onleft>
+      <onright>66</onright>
+      <onup>701</onup>
+      <ondown>300</ondown>
+      <align>center</align>
+    </control>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-mymusic.png</texture>
+
+         <visible>ButtonScroller.HasFocus(101)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-myvideos.png</texture>
+
+         <visible>ButtonScroller.HasFocus(102)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-internet.png</texture>
+
+         <visible>ButtonScroller.HasFocus(103)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-myfiles.png</texture>
+
+         <visible>ButtonScroller.HasFocus(104)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-myweather.png</texture>
+
+         <visible>ButtonScroller.HasFocus(105)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-myprograms.png</texture>
+
+         <visible>ButtonScroller.HasFocus(106)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-mypictures.png</texture>
+
+         <visible>ButtonScroller.HasFocus(107)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-settings.png</texture>
+
+         <visible>ButtonScroller.HasFocus(108)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-settings.png</texture>
+
+         <visible>control.hasfocus(90)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-dvd.png</texture>
+
+         <visible>control.hasfocus(95)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-exit.png</texture>
+
+         <visible>control.hasfocus(98)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+    <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-xlink.png</texture>
+
+         <visible>control.hasfocus(97)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-fav.png</texture>
+
+         <visible>control.hasfocus(67)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-submenu.png</texture>
+
+         <visible>control.hasfocus(100)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>400</posx>
+        <posy>220</posy>
+      <width>250</width>
+      <height>200</height>
+      <texture>home-help.png</texture>
+
+         <visible>control.hasfocus(66)</visible>
+         <animation effect="fade" time="400">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+
+    </control>
+
+     <control type="label" id="1">
+      <description>date label</description>
+      <visible>!Skin.HasSetting(zeit)</visible>
+      <include>logo</include>
+      <posx>470</posx>
+      <posy>55</posy>
+      <label>date</label>
+      <info>System.Date</info>
+      <align>right</align>
+      <font>font13</font>
+    </control>
+
+     <control type="label" id="1">
+      <description>time label</description>
+      <visible>!Skin.HasSetting(zeit)</visible>
+      <include>logo</include>
+      <posx>480</posx>
+      <posy>55</posy>
+      <label>time</label>
+      <info>System.Time</info>
+      <align>left</align>
+      <font>font13</font>
+    </control>
+
+     <control type="image" id="1">
+      <description>weather image</description>
+      <visible>!Skin.HasSetting(wetter)</visible>
+      <include>logo</include>
+      <posx>565</posx>
+      <posy>20</posy>
+      <width>80</width>
+      <height>80</height>
+      <align>right</align>
+      <label>-</label>
+      <info>Weather.Conditions</info>
+      <font>font13</font>
+    </control>
+
+     <control type="label" id="1">
+      <description>temp label</description>
+      <visible>!Skin.HasSetting(wetter)</visible>
+      <include>logo</include>
+      <posx>443</posx>
+      <posy>79</posy>
+      <align>right</align>
+      <label>-</label>
+      <info>Weather.Temperature</info>
+      <font>font13</font>
+    </control>
+
+     <control type="label" id="1">
+      <description>cont label</description>
+      <include>logo</include>
+      <posx>448</posx>
+      <posy>79</posy>
+      <align>left</align>
+      <label>-</label>
+      <info>Weather.Conditions</info>
+      <font>font13</font>
+      <width>120</width>
+      <wrapmultiline>true</wrapmultiline>
+      <visible>!Skin.HasSetting(wetter)</visible>
+    </control>
+
+    <control type="rss" id="10001">
+      <description>rss feed</description>
+      <include>logo</include>
+      <posx>0</posx>
+      <posy>538</posy>
+      <width>720</width>
+      <font>font13</font>
+      <urlset>1</urlset>
+      <textcolor>FFB2D4F5</textcolor>
+      <titlecolor>6E9FAEFF</titlecolor>
+      <headlinecolor>FFB2D4F5</headlinecolor>
+    </control>
+
+    <control type="image" id="1">
+      <description>image</description>
+      <posx>100</posx>
+      <posy>418</posy>
+      <width>90</width>
+      <height>99</height>
+      <info>MusicPlayer.Cover</info>
+      <aspectratio>keep</aspectratio>
+
+         <visible>Player.HasAudio</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="label" id="1">
+      <description>Artist label</description>
+      <posx>205</posx>
+      <posy>423</posy>
+      <width>175</width>
+      <info>MusicPlayer.Artist</info>
+      <align>left</align>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+
+         <visible>Player.HasAudio</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="label" id="1">
+      <description>Title label</description>
+      <posx>205</posx>
+      <posy>450</posy>
+      <width>175</width>
+      <info>MusicPlayer.Title</info>
+      <align>left</align>
+      <font>font13</font>
+
+         <visible>Player.HasAudio</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>Album label</description>
+      <width>175</width>
+      <posx>205</posx>
+      <posy>478</posy>
+      <info>MusicPlayer.Album</info>
+      <align>left</align>
+      <font>font10</font>
+      <include>textcolorlightgrey</include>
+
+         <visible>Player.HasAudio</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>Time label</description>
+      <width>175</width>
+      <posx>205</posx>
+      <posy>500</posy>
+      <info>MusicPlayer.Time</info>
+      <align>left</align>
+      <font>font10</font>
+      <include>textcolorlightgrey</include>
+
+         <visible>Player.HasAudio</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+
+    <control type="videowindow" id="1">
+      <description>video preview window</description>
+      <aspectratio>keep</aspectratio>
+      <posx>100</posx>
+      <posy>350</posy>
+      <width>145</width>
+      <height>122</height>
+
+         <visible>Player.HasVideo</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>video info label</description>
+      <width>133</width>
+      <posx>115</posx>
+      <posy>480</posy>
+      <info>VideoPlayer.Title</info> 
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+      <align>left</align>
+
+         <visible>Player.HasVideo</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>video info label</description>
+      <width>100</width>
+      <posx>110</posx>
+      <posy>500</posy>
+      <info>VideoPlayer.Time</info>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+
+         <visible>Player.HasVideo</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>video info label</description>
+      <width>100</width>
+      <posx>190</posx>
+      <posy>500</posy>
+      <info>VideoPlayer.TimeRemaining</info>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+
+         <visible>Player.HasVideo</visible>
+         <animation effect="fade" time="600">VisibleChange</animation>
+    <animation effect="fade" time="400">WindowOpen</animation>
+    <animation effect="fade" time="400">WindowClose</animation>
+
+    </control>
+
+    <control type="image" id="1">
+      <description>xbmc logo</description>
+      <include>home</include>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="image" id="1">
+      <description>hdtv logo</description>
+      <include>logo</include>
+      <include>hdtv</include>
+      <visible>Skin.HasSetting(resolution)</visible>
+      <posx>55</posx>
+      <posy>30</posy>
+      <width>33</width>
+      <height>24</height>
+    </control>
+
+    <control type="image" id="1">
+      <description>play logo</description>
+      <include>control</include>
+      <posx>385</posx>
+      <posy>480</posy>
+      <width>40</width>
+      <height>30</height>
+      <texture>music-play.png</texture>
+      <visible>Player.Playing</visible>
+    </control>
+
+    <control type="image" id="1">
+      <description>party logo</description>
+      <visible>musicpartymode.enabled</visible>
+      <include>control</include>
+      <posx>385</posx>
+      <posy>445</posy>
+      <height>30</height>
+      <width>63</width>
+      <texture>party.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Paused</visible>
+      <description>Pause logo</description>
+      <include>control</include>
+      <posx>380</posx>
+      <posy>479</posy>
+      <height>30</height>
+      <texture>music-pause.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding2x</visible>
+      <description>FF logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-forward-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding4x</visible>
+      <description>FF logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-forward-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding8x</visible>
+      <description>FF logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-forward-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding16x</visible>
+      <description>FF logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-forward-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding32x</visible>
+      <description>FF logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-forward-32.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding2x</visible>
+      <description>RW logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-rewind-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding4x</visible>
+      <description>RW logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-rewind-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding8x</visible>
+      <description>RW logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-rewind-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding16x</visible>
+      <description>RW logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-rewind-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding32x</visible>
+      <description>RW logo</description>
+      <include>control</include>
+      <posx>378</posx>
+      <posy>477</posy>
+      <height>35</height>
+      <texture>music-rewind-32.png</texture>
+    </control>
+
+       <control type="progress" id="23">
+         <description>progressbar</description>
+	 <visible>Player.HasMedia</visible>
+      <include>control</include> 
+         <posx>100</posx> 
+         <posy>525</posy> 
+         <width>275</width> 
+         <height>8</height> 
+         <info>Player.Progress</info> 
+         <texturebg>progress_mid.png</texturebg> 
+         <midtexture>progress_mid_over.png</midtexture>
+         <lefttexture>-</lefttexture>
+         <righttexture>-</righttexture>
+         <overlaytexture>-</overlaytexture>
+       </control>
+
+
+
+<!-- profile -->
+
+
+     <control type="image" id="1">
+      <description>profil image</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+        <posx>430</posx>
+        <posy>130</posy>
+      <width>200</width>
+      <height>100</height>
+      <texture>profil.png</texture>
+
+    </control>
+
+     <control type="label" id="1">
+      <description>user label</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>440</posx>
+      <posy>137</posy>
+      <label>-</label>
+      <width>170</width>
+      <align>left</align>
+      <font>font101</font>
+      <info>system.profilename</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <aspectratio>stretch</aspectratio>
+        <posx>440</posx>
+        <posy>165</posy>
+      <width>55</width>
+      <height>55</height>
+      <info>system.profilethumb</info>
+      <texture>user.png</texture>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image netzwerk</description>
+      <include>control</include>
+      <posx>500</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_netzwerk.png</texture>
+      <visible>System.HasNetwork+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image netzwerk</description>
+      <include>control</include>
+      <posx>500</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_netzwerk_off.png</texture>
+      <visible>!System.HasNetwork+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image hilfe</description>
+      <include>control</include>
+      <posx>525</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_hilfe.png</texture>
+      <visible>[Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)]+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image hilfe</description>
+      <include>control</include>
+      <posx>525</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_hilfe_off.png</texture>
+      <visible>Skin.HasSetting(HomeViewToggle)+![Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)]</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image kai</description>
+      <include>control</include>
+      <posx>550</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_kai.png</texture>
+      <visible>System.KaiConnected+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image kai</description>
+      <include>control</include>
+      <posx>550</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_kai_off.png</texture>
+      <visible>!System.KaiConnected+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image dvd</description>
+      <include>control</include>
+      <posx>575</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_dvd.png</texture>
+      <visible>System.Hasmediadvd+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image dvd</description>
+      <include>control</include>
+      <posx>575</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_dvd_off.png</texture>
+      <visible>!System.Hasmediadvd+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image xbox</description>
+      <include>control</include>
+      <posx>600</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_xbox.png</texture>
+      <visible>System.AutoDetection+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image xbox</description>
+      <include>control</include>
+      <posx>600</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_xbox_off.png</texture>
+      <visible>!System.AutoDetection+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="fadelabel" id="1">
+      <description>xbmc</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>505</posx>
+      <posy>185</posy>
+      <label>XBMC:</label>
+      <width>100</width>
+      <align>left</align>
+      <font>font101</font>
+    </control>
+
+     <control type="fadelabel" id="1">
+      <description>user</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>550</posx>
+      <posy>185</posy>
+      <label>-</label>
+      <width>76</width>
+      <align>left</align>
+      <font>font101</font>
+      <info>System.BuildVersion</info>
+      <info>System.BuildDate</info>
+    </control>
+
+     <control type="label" id="1">
+      <description>user ip</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>505</posx>
+      <posy>205</posy>
+      <label>$LOCALIZE[150]: $INFO[Network.IPAddress]</label>
+      <width>125</width>
+      <align>left</align>
+      <font>font101</font>
+    </control>
+
+  </controls>
+
+</window>

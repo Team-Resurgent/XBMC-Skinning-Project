@@ -1,0 +1,56 @@
+<window id="133">
+	<defaultcontrol>402</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>220</posx>
+		<posy>235</posy>
+	</coordinates>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<description>popup music scan dialog background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<height>108</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="label" id="401">
+			<description>caption label</description>
+			<posx>126</posx>
+			<posy>21</posy>
+			<font>font12</font>
+			<align>center</align>
+			<width>160</width>
+			<height>20</height>
+		</control>
+		<control type="label" id="402">
+			<description>current directory label</description>
+			<posx>60</posx>
+			<posy>43</posy>
+			<haspath>yes</haspath>
+			<font>font10</font>
+			<onleft>402</onleft>
+			<onright>402</onright>
+			<onup>402</onup>
+			<ondown>402</ondown>
+		</control>
+		<control type="progress" id="403">
+			<description>progress control</description>
+			<posx>60</posx>
+			<posy>64</posy>
+			<width>291</width>
+			<height>13</height>
+			<texturebg>progress_back2.png</texturebg>
+		</control>
+		<control type="progress" id="404">
+			<description>progress control</description>
+			<posx>60</posx>
+			<posy>80</posy>
+			<width>291</width>
+			<height>13</height>
+			<texturebg>progress_back2.png</texturebg>
+		</control>
+	</controls>
+</window>

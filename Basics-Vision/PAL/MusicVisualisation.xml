@@ -1,0 +1,266 @@
+<window id="2006">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+		</control>
+		<!-- codec & viz infos -->
+		<control type="group" id="0">
+			<posx>0</posx>
+			<posy>16</posy>
+			<visible>Player.ShowCodec + ![Window.IsVisible(script-XBMC_Lyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<control type="image" id="1">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>80</height>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+				<texture border="0,10,0,10">volume-panel-bg.png</texture>
+			</control>
+			<control type="label" id="0">
+				<description>Codecinfo</description>
+				<posx>56</posx>
+				<posy>4</posy>
+				<width>534</width>
+				<height>24</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label>Audio | $INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+			</control>
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>56</posx>
+				<posy>26</posy>
+				<width>608</width>
+				<height>24</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+				<visible>Visualisation.Locked</visible>
+			</control>
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>56</posx>
+				<posy>26</posy>
+				<width>608</width>
+				<height>24</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+				<visible>!Visualisation.Locked</visible>
+			</control>
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>56</posx>
+				<posy>48</posy>
+				<width>608</width>
+				<height>24</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label>$LOCALIZE[13388] | $INFO[Visualisation.Preset]</label>
+			</control>
+		</control>
+		<!-- media infos -->
+		<control type="group" id="1">
+			<posx>79</posx>
+			<posy>148</posy>
+			<visible>Player.ShowInfo + ![Window.IsVisible(script-XBMC_Lyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<control type="image" id="1">
+				<posx>-56</posx>
+				<posy>-29</posy>
+				<width>675</width>
+				<height>269</height>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+				<texture border="0,45,0,10">Dialog.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>Heading label</description>
+				<posx>-56</posx>
+				<posy>-22</posy>
+				<width>675</width>
+				<height>32</height>
+				<align>center</align>
+				<font>font16</font>
+				<label>...$LOCALIZE[13350]</label>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image" id="1">
+				<posx>-56</posx>
+				<posy>244</posy>
+				<width>675</width>
+				<height>40</height>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+				<texture>volume-panel-bg.png</texture>
+			</control>
+			<control type="label" id="1">
+				<posx>68</posx>
+				<posy>248</posy>
+				<width>150</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[musicplayer.Time]</label>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>73</posx>
+				<posy>261</posy>
+				<width>413</width>
+				<height>8</height>
+				<info>Player.Progress</info>
+				<texturebg border="2">progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">progress_middle.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label" id="1">
+				<posx>492</posx>
+				<posy>248</posy>
+				<width>150</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[musicplayer.Duration]</label>
+			</control>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>170</width>
+				<height>200</height>
+				<info>MusicPlayer.Cover</info>
+				<aspectratio>keep</aspectratio>
+				<bordertexture>button-focus.png</bordertexture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>16</posy>
+				<control type="fadelabel" id="1">
+					<posx>0</posx>
+					<posy>12</posy>
+					<width>377</width>
+					<height>24</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>MusicPlayer.Artist</info>
+				</control>
+				<control type="fadelabel" id="1">
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>377</width>
+					<height>24</height>
+					<font>font16b</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>MusicPlayer.Title</info>
+				</control>
+				<control type="fadelabel" id="1">
+					<posx>0</posx>
+					<posy>68</posy>
+					<width>377</width>
+					<height>24</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>MusicPlayer.Album</info>
+				</control>
+				<control type="label" id="1">
+					<posx>0</posx>
+					<posy>104</posy>
+					<width>377</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[MusicPlayer.Genre,[COLOR=red]$LOCALIZE[515]: [/COLOR]]</label>
+				</control>
+				<control type="label" id="1">
+					<posx>0</posx>
+					<posy>132</posy>
+					<width>377</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[MusicPlayer.Year,[COLOR=red]$LOCALIZE[562]: [/COLOR]]</label>
+				</control>
+				<control type="label" id="1">
+					<description>Song Rating Label</description>
+					<posx>0</posx>
+					<posy>172</posy>
+					<width>377</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$LOCALIZE[563]:</label>
+				</control>
+				<control type="image" id="1">
+					<description>Song Rating Image</description>
+					<posx>60</posx>
+					<posy>172</posy>
+					<height>24</height>
+					<width>120</width>
+					<info>musicplayer.rating</info>
+				</control>
+				<control type="label" id="1">
+					<description>Playlist Pos No</description>
+					<posx>377</posx>
+					<posy>172</posy>
+					<width>113</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[musicplayer.Playlistposition,[COLOR=red]$LOCALIZE[554]: [/COLOR]]$INFO[musicplayer.Playlistlength, / ]</label>
+					<visible>!MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="label" id="1">
+					<description>PartyMode Enabled</description>
+					<posx>377</posx>
+					<posy>172</posy>
+					<width>113</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>589</label>
+					<visible>MusicPartyMode.Enabled</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

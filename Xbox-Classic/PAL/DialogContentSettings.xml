@@ -1,0 +1,254 @@
+<window id="132">
+	<defaultcontrol>3</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>140</posx>
+		<posy>140</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<posx>-50</posx>
+			<posy>-50</posy>
+			<include>Dialog_Background</include>
+		</control>
+		<control type="group">
+			<include>Dialog_Content_Animation</include>
+			<control type="image">
+				<description>scraper image Background</description>
+				<posx>10</posx>
+				<posy>45</posy>
+				<width>125</width>
+				<height>125</height>
+				<colordiffuse>99FFFFFF</colordiffuse>
+				<texture border="4">blue-rectanglenf.png</texture>
+			</control>
+			<control type="image">
+				<description>scraper image</description>
+				<posx>15</posx>
+				<posy>50</posy>
+				<width>115</width>
+				<height>115</height>
+				<aspectratio>keep</aspectratio>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="label" id="1000">
+				<description>directory contains label</description>
+				<posx>10</posx>
+				<posy>5</posy>
+				<width>280</width>
+				<align>left</align>
+				<font>font14</font>
+				<textcolor>white</textcolor>
+				<label>20344</label>
+			</control>
+			<control type="spincontrolex" id="3">
+				<description>directory content select spincontrol</description>
+				<align>left</align>
+				<width>200</width>
+				<height>17</height>
+				<posx>250</posx>
+				<posy>10</posy>
+				<font>font14</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<reverse>yes</reverse>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onup>28</onup>
+				<ondown>4</ondown>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<aligny>center</aligny>
+				<subtype>text</subtype>
+			</control>
+			<control type="list" id="4">
+				<posx>150</posx>
+				<posy>45</posy>
+				<width>390</width>
+				<height>120</height>
+				<onup>3</onup>
+				<ondown>30</ondown>
+				<onleft>3</onleft>
+				<onright>30</onright>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>315</width>
+						<height>31</height>
+						<texture>list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>6</posx>
+						<posy>3</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>32</posx>
+						<posy>4</posy>
+						<width>210</width>
+						<height>23</height>
+						<font>font13</font>
+						<selectedcolor>green</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>315</width>
+						<height>31</height>
+						<visible>Control.HasFocus(4)</visible>
+						<texture>list-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>315</width>
+						<height>31</height>
+						<visible>!Control.HasFocus(4)</visible>
+						<texture>list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>6</posx>
+						<posy>3</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>32</posx>
+						<posy>4</posy>
+						<width>210</width>
+						<height>23</height>
+						<font>font13</font>
+						<selectedcolor>green</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>5</posx>
+				<posy>185</posy>
+				<width>460</width>
+				<height>110</height>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>4</onup>
+				<ondown>28</ondown>
+			</control>
+			<control type="button" id="6">
+				<description>Settings Button</description>
+				<posx>55</posx>
+				<posy>305</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>5</label>
+				<onup>2</onup>
+				<onleft>29</onleft>
+				<onright>28</onright>
+				<ondown>2</ondown>
+			</control>
+			<control type="button" id="28">
+				<description>Ok Button</description>
+				<posx>185</posx>
+				<posy>305</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+				<onup>30</onup>
+				<onleft>6</onleft>
+				<onright>29</onright>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel Button</description>
+				<posx>315</posx>
+				<posy>305</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+				<onup>30</onup>
+				<onleft>28</onleft>
+				<onright>6</onright>
+				<ondown>3</ondown>
+			</control>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<font>font12</font>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<textureradiofocus>settings-check-box.png</textureradiofocus>
+			<textureradionofocus>settings-check-boxNF.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>25</height>
+			<width>200</width>
+			<textcolor>white</textcolor>
+			<disabledcolor>60d0d0d0</disabledcolor>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<sliderwidth>100</sliderwidth>
+			<sliderheight>12</sliderheight>
+			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+			<textureslidernib>osd-osd_slider_nibfo.png</textureslidernib>
+			<textureslidernibfocus>osd-osd_slider_nibfo.png</textureslidernibfocus>
+			<font>font10</font>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>5</height>
+			<texture>kai-divider.png</texture>
+		</control>
+	</controls>
+</window>

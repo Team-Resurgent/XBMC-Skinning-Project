@@ -1,0 +1,17 @@
+<colors>
+	<color name="main-text">FF820BBB</color>
+	<color name="button-nofocus-text">44FFFFFF</color>
+	<color name="button-focus-text">FF820BBB</color>
+	<color name="disabled-text">22FFFFFF</color>
+	<color name="button-nofocus-text2">44FFFFFF</color>
+	<color name="button-focus-text2">FF820BBB</color>
+	<color name="selected-nofocus-text">66FF0000</color>
+	<color name="selected-text">FFFF0000</color>
+	<color name="rss-title-color">FF820BBB</color>
+	<color name="rss-headline-color">44FFFFFF</color>
+	<color name="rss-text-color">FF820BBB</color>
+	<color name="spin-color">FF820BBB</color>
+
+	<color name="object-color">FF820BBB</color>
+	<color name="icon-nf-color">44FFFFFF</color>
+</colors>

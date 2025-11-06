@@ -1,0 +1,117 @@
+<window id="12">
+	<defaultcontrol allways="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="grouplist" id="5">
+      <animation effect="fade"  delay="3000" time="100">WindowOpen</animation>
+
+      <description>control area</description>
+			<posx>25</posx>
+			<posy>110</posy>
+			<width>675</width>
+			<height>402</height>
+			<itemgap>-5</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<include>Fade_List_FocusUnfocus_Animation</include>
+		</control>
+		<control type="group" id="9000">
+      <description>Sidebar group</description>
+      <include>MenuEffect</include>
+      <width>600</width>
+      <control type="image">
+        <description>Sidebar Back image</description>
+        <posx>-65</posx>
+        <posy>120</posy>
+        <width>325</width>
+        <height>250</height>
+        <texture>Side_Slideout.png</texture>
+      </control>
+      <control type="label">
+        <posx>-64</posx>
+        <posy>340</posy>
+        <label>5</label>
+        <font>fntHeader</font>
+        <angle>90</angle>
+      </control>
+      <control type="grouplist" id="3">
+				<description>button area</description>
+				<posx>30</posx>
+				<posy>120</posy>
+				<width>500</width>
+				<height>300</height>
+				<itemgap>-5</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+		</control>
+		
+		<control type="label">
+			<description>Main Title text label</description>
+			<align>center</align>
+			<posx>85</posx>
+			<posy>35</posy>
+			<label>5</label>
+      <include>textcolor-PageHeader</include>
+      <font>fntHeader</font>
+      <animation effect="fade"  delay="3500" time="100">WindowOpen</animation>
+		</control>
+		<control type="label" id="2">
+			<description>Sub Title text label</description>
+			<align>center</align>
+			<posx>115</posx>
+			<posy>65</posy>
+			<label>5</label>
+      <include>textcolor-PageHeader</include>
+			<font>font20</font>
+      <animation effect="fade"  delay="3500" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="10">
+			<description>default category button</description>
+			<label>-</label>
+			<font>font20</font>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="button" id="7">
+			<description>default button</description>
+			<textoffsetx>10</textoffsetx>
+			<focusedcolor>-</focusedcolor>
+      <width>480</width>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>default radiobutton</description>
+			<posx>500</posx>
+			<posy>150</posy>
+			<align>left</align>
+			<textoffsetx>10</textoffsetx>
+      <width>500</width>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureradiofocus>settings-check-box.png</textureradiofocus>
+			<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>default spincontrolex</description>
+			<posx>500</posx>
+			<posy>150</posy>
+			<width>300</width>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>Arrow_Up.png</textureup>
+			<texturedown>Arrow_Down.png</texturedown>
+			<textureupfocus>Arrow_Up_Focus.png</textureupfocus>
+			<texturedownfocus>Arrow_Down_Focus.png</texturedownfocus>
+			<disabledcolor>60d0d0d0</disabledcolor>
+			<textoffsetx>10</textoffsetx>
+			<reverse>yes</reverse>
+		</control>
+	</controls>
+</window>

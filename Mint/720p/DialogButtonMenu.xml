@@ -1,0 +1,100 @@
+<!-- window available on right thumbstick click -->
+<window type="buttonMenu" id="111">
+
+	<defaultcontrol>9001</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+	
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+		
+		<control type="group">
+			<posx>700</posx>
+	
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>bg-shutdown.png</texture>
+				<width>400</width>
+				<height>720</height>
+				<colordiffuse>overlay-home</colordiffuse>
+			</control>
+			
+			<control type="grouplist" id="9001">
+				<height>560</height>
+				<posx>-120</posx>
+				<posy>160</posy>
+				
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				
+				<control type="button" id="101">
+					<visible>Skin.HasSetting(debug)</visible>
+					<label>refresh</label>
+					<include>type-menu</include>
+					<onclick>ReloadSkin()</onclick>
+				</control>
+				<control type="button" id="102">
+					<label>favorites</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(myfavourites)</onclick>
+				</control>
+				<control type="button" id="103">
+					<label>files</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(filemanager)</onclick>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+				</control>
+				<control type="button" id="104">
+					<label>scripts</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(scripts)</onclick>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+				</control>
+				<control type="button" id="109">
+					<label>system info</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(systeminfo)</onclick>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+				</control>
+				<control type="button" id="105">
+					<label>settings</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(settings)</onclick>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+				</control>
+				<control type="button" id="106">
+					<label>dashboard</label>
+					<include>type-menu</include>
+					<onclick>Dashboard</onclick>
+				</control>
+				<control type="button" id="107">
+					<label>restart</label>
+					<include>type-menu</include>
+					<onclick>Restart()</onclick>
+				</control>
+				<control type="button" id="108">
+					<label>shutdown</label>
+					<include>type-menu</include>
+					<onclick>ShutDown()</onclick>
+				</control>
+			</control>
+			
+			<!-- window label -->
+			<control type="label">
+				<label>System</label>
+				<width>320</width>
+				<height>80</height>
+				<posx>360</posx>
+				<font>menu</font>
+				<textcolor>header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+	
+	</controls>
+	
+</window>

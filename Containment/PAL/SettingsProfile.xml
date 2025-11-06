@@ -1,0 +1,101 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Background</include>
+		<include>Container</include>
+		<control type="group">
+			<include>media-slide</include>
+			<control type="radiobutton" id="4">
+				<description>use logon</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<label>20096</label>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<visible>!Window.IsActive(130)</visible>
+			</control>
+		</control>
+		<control type="list" id="2">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>354</height>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>2</posx>
+					<posy>4</posy>
+					<width>370</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>500</posx>
+					<posy>4</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>500</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>8</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<visible>Control.HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<width>500</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>8</posy>
+					<texture>line.png</texture>
+					<colordiffuse>icon-nf-color</colordiffuse>
+					<visible>!Control.HasFocus(2)</visible>
+				</control>
+				<control type="label">
+					<posx>2</posx>
+					<posy>4</posy>
+					<width>370</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>500</posx>
+					<posy>4</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+			<visible>!Window.IsActive(130)</visible>
+		</control>
+		<include>Shutters</include>
+	</controls>
+</window>

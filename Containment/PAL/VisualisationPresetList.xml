@@ -1,0 +1,102 @@
+﻿<window id="122">
+	<defaultcontrol>2</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>10</posx>
+		<posy>5</posy>
+	</coordinates>
+	<controls>
+<!-- Start Menu Background -->
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>90</posy>
+			<width>390</width>
+			<height>30</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture>dialog-context-end.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>120</posy>
+			<width>390</width>
+			<height>330</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture>dialog-context-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>450</posy>
+			<width>390</width>
+			<height>30</height>
+			<colordiffuse>9FFFFFFF</colordiffuse>
+			<texture flipy="true">dialog-context-end.png</texture>
+		</control>
+<!-- End Menu Background -->
+		<control type="label" id="3">
+			<description>Settings Label</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>420</width>
+			<align>left</align>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label" id="4">
+			<description>No Settings Label</description>
+			<posx>10</posx>
+			<posy>140</posy>
+			<width>370</width>
+			<label>13389</label>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="list" id="2">
+			<posx>10</posx>
+			<posy>145</posy>
+			<width>370</width>
+			<height>320</height>
+			<onleft>2</onleft>
+			<onright>3</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>370</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>370</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>8</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>370</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

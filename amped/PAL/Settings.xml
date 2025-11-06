@@ -1,0 +1,262 @@
+<window id="4">
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+    
+    <control type="group" id="9001">
+      <posx>-40</posx>
+      <posy>-20</posy>
+      <animation effect="fade"  delay="3000" time="100">WindowOpen</animation>
+
+			<include>Fade_List_FocusUnfocus_Animation</include>
+			<control type="button" id="6">
+				<description>my videos</description>
+				<font>font16</font>
+				<posx>100</posx>
+				<posy>150</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-videos-focus.png</texturefocus>
+				<texturenofocus>settings-videos-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>3</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(17)</onclick>
+				<onleft>9000</onleft>
+				<onright>7</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<animation effect="zoom" start="100,150,128,128" end="90,140,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="100,150,128,128" start="90,140,148,148" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="7">
+				<description>my music</description>
+				<font>font16</font>
+				<posx>250</posx>
+				<posy>150</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-music-focus.png</texturefocus>
+				<texturenofocus>settings-music-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>2</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(15)</onclick>
+				<onleft>6</onleft>
+				<onright>9</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<animation effect="zoom" start="250,150,128,128" end="240,140,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="250,150,128,128" start="240,140,148,148" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="9">
+				<description>my pictures</description>
+				<font>font16</font>
+				<posx>400</posx>
+				<posy>150</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-pictures-focus.png</texturefocus>
+				<texturenofocus>settings-pictures-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>1</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(12)</onclick>
+				<onleft>7</onleft>
+				<onright>8</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<animation effect="zoom" start="400,150,128,128" end="390,140,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="400,150,128,128" start="390,140,148,148" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="8">
+				<description>my programs</description>
+				<font>font16</font>
+				<posx>550</posx>
+				<posy>150</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-programs-focus.png</texturefocus>
+				<texturenofocus>settings-programs-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>0</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(13)</onclick>
+				<onleft>9</onleft>
+				<onright>9000</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<animation effect="zoom" start="550,150,128,128" end="540,140,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="550,150,128,128" start="540,140,148,148" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="10">
+				<description>my weather</description>
+				<font>font16</font>
+				<posx>100</posx>
+				<posy>340</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-weather-focus.png</texturefocus>
+				<texturenofocus>settings-weather-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>8</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(14)</onclick>
+				<onleft>9000</onleft>
+				<onright>2</onright>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<animation effect="zoom" start="100,340,128,128" end="90,330,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="100,340,128,128" start="90,330,148,148" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="2">
+				<description>network</description>
+				<font>font16</font>
+				<posx>250</posx>
+				<posy>340</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-network-focus.png</texturefocus>
+				<texturenofocus>settings-network-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>705</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(18)</onclick>
+				<onleft>10</onleft>
+				<onright>4</onright>
+				<onup>7</onup>
+				<ondown>7</ondown>
+				<animation effect="zoom" start="250,340,128,128" end="240,330,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="250,340,128,128" start="240,330,148,148" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="4">
+				<description>system</description>
+				<font>font16</font>
+				<posx>400</posx>
+				<posy>340</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-system-focus.png</texturefocus>
+				<texturenofocus>settings-system-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>13000</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(16)</onclick>
+				<onleft>2</onleft>
+				<onright>3</onright>
+				<onup>9</onup>
+				<ondown>9</ondown>
+				<animation effect="zoom" start="400,340,128,128" end="390,330,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="400,340,128,128" start="390,330,148,148" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="3">
+				<description>appearance</description>
+				<font>font16</font>
+				<posx>550</posx>
+				<posy>340</posy>
+				<width>128</width>
+				<height>128</height>
+				<texturefocus>settings-appearance-focus.png</texturefocus>
+				<texturenofocus>settings-appearance-nofocus.png</texturenofocus>
+				<aligny>top</aligny>
+				<textoffsety>128</textoffsety>
+				<label>480</label>
+				<align>center</align>
+				<onclick>XBMC.ActivateWindow(19)</onclick>
+				<onleft>4</onleft>
+				<onright>9000</onright>
+				<onup>8</onup>
+				<ondown>8</ondown>
+				<animation effect="zoom" start="550,340,128,128" end="540,330,148,148" time="100">focus</animation>
+				<animation effect="zoom" end="550,340,128,128" start="540,330,148,148" time="100">unfocus</animation>
+			</control>
+		</control>
+		<control type="group" id="9000">
+			<description>Sidebar group</description>
+      <include>MenuEffect</include>
+      <control type="image">
+        <description>Sidebar Back image</description>
+        <posx>-65</posx>
+        <posy>120</posy>
+        <width>325</width>
+        <height>230</height>
+        <texture>Side_Slideout.png</texture>
+      </control>
+      <control type="label">
+        <posx>-64</posx>
+        <posy>340</posy>
+        <label>5</label>
+        <font>fntHeader</font>
+        <angle>90</angle>
+      </control>
+
+      
+        
+          <control type="button" id="100">
+				    <description>Profiles Button</description>
+				    <posy>120</posy>
+            <posx>30</posx>
+				    <label>13200</label>
+				    <texturefocus>-</texturefocus>
+				    <texturenofocus>-</texturenofocus>
+				    <font>font20</font>
+				    <onclick>XBMC.ActivateWindow(34)</onclick>
+				    <onleft>9001</onleft>
+				    <onright>9001</onright>
+				    <onup>102</onup>
+				    <ondown>101</ondown>
+			    </control>
+			    <control type="button" id="101">
+				    <description>Skin Settings button</description>
+            <posx>30</posx>
+            <posy>150</posy>
+				    <label>$LOCALIZE[166] $LOCALIZE[5]</label>
+				    <texturefocus>-</texturefocus>
+				    <texturenofocus>-</texturenofocus>
+				    <onclick>XBMC.ActivateWindow(1112)</onclick>
+				    <font>font20</font>
+				    <onleft>9001</onleft>
+				    <onright>9001</onright>
+				    <onup>100</onup>
+				    <ondown>102</ondown>
+			    </control>
+			    <control type="button" id="102">
+				    <description>About XBMC button</description>
+				    <posy>180</posy>
+            <posx>30</posx>
+				    <label>482</label>
+				    <texturefocus>-</texturefocus>
+				    <texturenofocus>-</texturenofocus>
+				    <font>font20</font>
+				    <onclick>XBMC.Credits()</onclick>
+				    <onleft>9001</onleft>
+				    <onright>9001</onright>
+				    <onup>101</onup>
+				    <ondown>100</ondown>
+			    </control>
+      
+
+    </control>
+
+
+		<control type="label">
+			<description>Main Title text label</description>
+			<align>center</align>
+			<posx>90</posx>
+			<posy>35</posy>
+			<label>5</label>
+      <include>textcolor-PageHeader</include>
+			<font>fntHeader</font>
+      <animation effect="fade"  delay="3500" time="100">WindowOpen</animation>
+		</control>
+		<include>MusicNowPlayingDisplay</include>
+	</controls>
+</window>

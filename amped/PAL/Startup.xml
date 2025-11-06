@@ -1,0 +1,26 @@
+﻿<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+    <control type="image">
+      <width>720</width>
+      <height>500</height>
+      <texture>curtains.png</texture>
+    </control>
+    <control type="image">
+      <description>floor</description>
+      <posx></posx>
+      <posy>480</posy>
+      <width>720</width>
+      <height>100</height>
+      <animation effect="fade"  time="1800">WindowOpen</animation>
+      <texture>floor.png</texture>
+    </control>
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,389 @@
+<window id="2700">
+	<defaultcontrol>3012</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Slider_Glow_Common</include>
+		<control type="group">
+			<include>Fade_List_FocusUnfocus_Animation</include>
+			<control type="button" id="3080">
+				<description>list panel</description>
+				<posx>50</posx>
+				<posy>150</posy>
+				<width>160</width>
+				<height>35</height>
+				<label>15010</label>
+				<align>center</align>
+				<font>font16</font>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			</control>
+			<control type="button" id="3081">
+				<description>list panel</description>
+				<posx>210</posx>
+				<posy>150</posy>
+				<width>160</width>
+				<height>35</height>
+				<label>15016</label>
+				<align>center</align>
+				<font>font16</font>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			</control>
+			<control type="button" id="3082">
+				<description>list panel</description>
+				<posx>370</posx>
+				<posy>150</posy>
+				<width>160</width>
+				<height>35</height>
+				<label>15021</label>
+				<align>center</align>
+				<font>font16</font>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			</control>
+			<control type="button" id="3083">
+				<description>list panel</description>
+				<posx>530</posx>
+				<posy>150</posy>
+				<width>160</width>
+				<height>35</height>
+				<label>15026</label>
+				<align>center</align>
+				<font>font16</font>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+			</control>
+			<control type="group" id="9001">
+				<control type="listcontrolex" id="3031">
+					<description>arena list</description>
+					<posy>205</posy>
+					<height>230</height>
+					<textxoff>5</textxoff>
+					<textxoff2>630</textxoff2>
+					<spinposx>580</spinposx>
+					<spinposy>225</spinposy>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>3031</onup>
+					<ondown>3031</ondown>
+					<include>textcolor-white</include>
+				</control>
+				<control type="console" id="3074">
+					<description>console control</description>
+					<posx>70</posx>
+					<posy>205</posy>
+					<width>650</width>
+					<height>210</height>
+					<font>font16</font>
+					<include>textcolor-white</include>
+					<!-- normal  (pen0) -->
+					<textcolor2>fff2b466</textcolor2>
+					<!-- action  (pen1) -->
+					<titlecolor>ffa4ffae</titlecolor>
+					<!-- system  (pen2) -->
+					<selectedcolor>fff3fb6b</selectedcolor>
+					<!-- private (pen3) -->
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>3074</onup>
+					<ondown>3074</ondown>
+				</control>
+				<control type="image" id="3076">
+					<description>list panel</description>
+					<posx>70</posx>
+					<posy>420</posy>
+					<width>650</width>
+					<height>8</height>
+					<texture>kai-divider.png</texture>
+				</control>
+				<control type="edit" id="3075">
+					<description>edit control</description>
+					<posx>70</posx>
+					<posy>425</posy>
+					<width>650</width>
+					<label>-</label>
+					<font>font22</font>
+					<include>textcolor-white</include>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>3075</onup>
+					<ondown>3075</ondown>
+				</control>
+				<control type="button" id="9003">
+					<description>list panel</description>
+					<posx>-10</posx>
+					<posy>-10</posy>
+					<width>1</width>
+					<height>1</height>
+					<font>-</font>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9003</onup>
+					<ondown>9003</ondown>
+					<visible>Contol.IsVisible(3075)</visible>
+				</control>
+			</control>
+			<control type="label" id="3051">
+				<description>username</description>
+				<posx>620</posx>
+				<posy>110</posy>
+				<align>right</align>
+				<label>-</label>
+				<font>font20</font>
+			</control>
+			<control type="label" id="3052">
+				<description>arena name</description>
+				<posx>80</posx>
+				<posy>110</posy>
+				<width>500</width>
+				<label>-</label>
+				<font>font20</font>
+				<align>left</align>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>460</posy>
+				<width>720</width>
+				<height>85</height>
+				<texture>ListItem_Focus.png</texture>
+			</control>
+			<control type="image" id="3060">
+				<description>buddy (offline) icon</description>
+				<posx>100</posx>
+				<posy>465</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>buddy-offline.png</texture>
+				<colorkey>ffff00ff</colorkey>
+				<colordiffuse>aaffffff</colordiffuse>
+			</control>
+			<control type="image" id="3061">
+				<description>buddy (online) icon</description>
+				<posx>100</posx>
+				<posy>465</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>buddy-online.png</texture>
+				<colorkey>ffff00ff</colorkey>
+				<colordiffuse>bbffffff</colordiffuse>
+			</control>
+			<control type="image" id="3062">
+				<description>opponent icon</description>
+				<posx>100</posx>
+				<posy>465</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>opponent.png</texture>
+				<colorkey>ffff00ff</colorkey>
+				<colordiffuse>bbffffff</colordiffuse>
+			</control>
+			<control type="image" id="3063">
+				<description>arena icon</description>
+				<posx>100</posx>
+				<posy>465</posy>
+				<width>70</width>
+				<height>70</height>
+				<aspectratio>keep</aspectratio>
+				<texture>arena.png</texture>
+				<colorkey>ffff00ff</colorkey>
+				<colordiffuse>bbffffff</colordiffuse>
+			</control>
+			<control type="image" id="3064">
+				<description>my avatar icon</description>
+				<posx>630</posx>
+				<posy>110</posy>
+				<width>35</width>
+				<height>35</height>
+				<texture>buddyitem-default-avatar.png</texture>
+				<colorkey>ffff00ff</colorkey>
+				<colordiffuse>bbffffff</colordiffuse>
+			</control>
+			<control type="fadelabel" id="3070">
+				<description>buddy name</description>
+				<posx>200</posx>
+				<posy>462</posy>
+				<width>480</width>
+				<label>-</label>
+				<font>font20</font>
+			</control>
+			<control type="fadelabel" id="3071">
+				<description>buddy status</description>
+				<posx>200</posx>
+				<posy>490</posy>
+				<width>480</width>
+				<label>-</label>
+				<font>font16</font>
+			</control>
+			<control type="label" id="3072">
+				<description>buddy invitation status</description>
+				<posx>200</posx>
+				<posy>517</posy>
+				<width>480</width>
+				<label>-</label>
+				<font>font16</font>
+			</control>
+			<control type="label" id="3073">
+				<description>player count</description>
+				<posx>680</posx>
+				<posy>517</posy>
+				<align>right</align>
+				<label>-</label>
+				<font>font16</font>
+			</control>
+		</control>
+		<control type="group" id="9000">
+			<description>Sidebar group</description>
+			<posx>-160</posx>
+			<animation effect="slide" time="100" start="160,0">unfocus</animation>
+			<animation effect="slide" time="100" end="160,0">focus</animation>
+			<control type="image">
+				<description>Sidebar Back image</description>
+				<posx>-145</posx>
+				<posy>0</posy>
+				<width>425</width>
+				<height>577</height>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="button" id="3012">
+				<description>mode button</description>
+				<posy>120</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3015</onup>
+				<ondown>3013</ondown>
+			</control>
+			<control type="button" id="3013">
+				<description>join (friends)</description>
+				<posy>150</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3012</onup>
+				<ondown>3016</ondown>
+			</control>
+			<control type="button" id="3016">
+				<description>speek (friends)</description>
+				<posy>180</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3013</onup>
+				<ondown>3014</ondown>
+			</control>
+			<control type="button" id="3014">
+				<description>invite (friends)</description>
+				<posy>210</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3016</onup>
+				<ondown>3015</ondown>
+			</control>
+			<control type="button" id="3015">
+				<description>remove (friends)</description>
+				<posy>250</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3014</onup>
+				<ondown>3012</ondown>
+			</control>
+			<control type="button" id="3036">
+				<description>keyboard (chat)</description>
+				<posy>150</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3012</onup>
+				<ondown>3012</ondown>
+			</control>
+			<control type="button" id="3033">
+				<description>play (arenas)</description>
+				<posy>150</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3012</onup>
+				<ondown>3035</ondown>
+			</control>
+			<control type="button" id="3035">
+				<description>host (arenas)</description>
+				<posy>180</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3033</onup>
+				<ondown>3034</ondown>
+			</control>
+			<control type="button" id="3034">
+				<description>add (arenas)</description>
+				<posy>210</posy>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>3035</onup>
+				<ondown>3012</ondown>
+			</control>
+			<include>SlideBarClock</include>
+			<include>SlideBarWeather</include>
+		</control>
+		<control type="image">
+			<description>Top Bar BACK</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>105</height>
+			<texture>TBGames.png</texture>
+		</control>
+		<control type="image">
+			<description>folder image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>106</height>
+			<aspectratio align="right">keep</aspectratio>
+			<info>container.folderthumb</info>
+		</control>
+		<control type="image">
+			<description>Top Bar FRONT</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>116</height>
+			<texture>Topbar_Front.png</texture>
+		</control>
+		<control type="label">
+			<description>KIA label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>714</label>
+			<font>font20</font>
+			<visible>!Skin.HasSetting(No_Title_Text)</visible>
+		</control>
+		<include>MusicNowPlayingDisplay</include>
+		<include>Number_of_Files_Count</include>
+	</controls>
+</window>

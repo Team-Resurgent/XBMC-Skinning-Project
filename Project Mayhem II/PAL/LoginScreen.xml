@@ -1,0 +1,111 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<type>dialog</type>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls>
+	<include>background</include>
+
+	<control type="image" id="1">
+		<description>Filemanager Background</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel_bg.png</texture>
+		<include>dialog-effect-special</include>
+	</control>
+
+	<control type="label" id="2">
+		<description>Heading Label</description>
+		<posx>100</posx>
+		<posy>100</posy>
+		<width>420</width>
+		<align>left</align>
+		<label>Select a Profile</label>
+		<font>special13</font>
+		<textcolor>DDced8da</textcolor>
+		<include>dialog-effect-special</include>
+	</control>
+
+	<control type="label" id="3">
+		<description>Profile Count Label</description>
+		<posx>600</posx>
+		<posy>100</posy>
+		<width>420</width>
+		<align>right</align>
+		<font>special13</font>
+		<textcolor>DDced8da</textcolor>
+		<include>dialog-effect-special</include>
+	</control>
+
+	<control type="listcontrol" id="52">
+		<description>Big Listcontrol</description>
+		<posx>100</posx>
+		<posy>150</posy>
+		<width>520</width>
+		<height>320</height>
+		<spinwidth>16</spinwidth>
+		<spinheight>16</spinheight>
+		<spincolor>ffffffff</spincolor>
+		<spinfont>font10</spinfont>
+		<spinposx>465</spinposx>
+		<spinposy>325</spinposy>
+		<textureup>scroll-up.png</textureup>
+		<texturedown>scroll-down.png</texturedown>
+		<textureupfocus>scroll-up-focus.gif</textureupfocus>
+		<texturedownfocus>scroll-down-focus.gif</texturedownfocus>
+		<texturefocus>folder-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>special13</font>
+		<font2>font13</font2>
+		<include>selectedcolor</include>
+		<include>textcolorlightgrey</include>
+		<selectedcolor2>FFFFffff</selectedcolor2>
+		<textcolor2>d0ffffff</textcolor2>
+		<suffix>|</suffix>
+		<textxoff>10</textxoff>
+		<textyoff>5</textyoff>
+		<textxoff2>490</textxoff2>
+		<textyoff2>50</textyoff2>
+		<aligny>top</aligny>
+		<itemwidth>70</itemwidth>
+		<itemheight>70</itemheight>
+		<spacebetweenitems>10</spacebetweenitems>
+		<textureheight>80</textureheight>
+		<onleft>98</onleft>
+		<onright>98</onright>
+		<onup>52</onup>
+		<ondown>52</ondown>
+		<include>dialog-effect-special</include>
+	</control>
+
+	<control type="button" id="98">
+		<description>Submenu Button</description>
+		<posx>600</posx>
+		<posy>460</posy>
+		<width>41</width>
+		<height>41</height>
+		<onclick>ActivateWindow(ShutdownMenu)</onclick>
+		<texturefocus>sub-shutdown-focus.png</texturefocus>
+		<texturenofocus>sub-shutdown-nofocus.png</texturenofocus>
+		<label>-</label>
+		<onleft>52</onleft>
+		<onright>52</onright>
+		<onup>52</onup>
+		<ondown>52</ondown>
+		<include>dialog-effect-special</include>
+	</control>
+
+	<control type="image" id="1">
+		<description>Background Overlay</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel.png</texture>
+		<include>dialog-effect-special</include>
+	</control>
+
+	</controls>
+</window>

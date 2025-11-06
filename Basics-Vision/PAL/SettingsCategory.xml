@@ -1,0 +1,152 @@
+<window id="12">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<animation effect="slide" time="150" start="-194,0" >WindowOpen</animation>
+			<animation effect="slide" time="150" end="-194,0" >WindowClose</animation>
+			<control type="image">
+				<posx>-11</posx>
+				<posy>0</posy>
+				<width>225</width>
+				<height>576</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>88</posy>
+				<control type="grouplist" id="3">
+					<description>button area</description>
+					<posx>0</posx>
+					<posy>24</posy>
+					<width>191</width>
+					<height>364</height>
+					<itemgap>5</itemgap>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+				</control>
+			</control>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>72</height>
+			<texture>Topbar.png</texture>
+		</control>
+		<control type="label">
+			<description>Title label</description>
+			<posx>23</posx>
+			<posy>16</posy>
+			<width>338</width>
+			<height>34</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$LOCALIZE[5] - $INFO[Control.GetLabel(2)]</label>
+			<font>font16b</font>
+		</control>
+		<control type="label" id="2">
+			<description>Title label2</description>
+			<visible>false</visible>
+		</control>
+		<include>Common_Now_Playing</include>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>186</posx>
+			<posy>88</posy>
+			<width>523</width>
+			<height>400</height>
+			<itemgap>5</itemgap>
+			<pagecontrol>90</pagecontrol>
+			<onleft>3</onleft>
+			<onright>90</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<posx>169r</posx>
+			<posy>520</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>169</width>
+				<height>35</height>
+				<texture>Slider_focus_left.png</texture>
+			</control>
+			<control type="spincontrol" id="90">
+				<description>Next page button</description>
+				<posx>124</posx>
+				<posy>8</posy>
+				<subtype>page</subtype>
+				<font>font13</font>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<ondown>90</ondown>
+				<onup>90</onup>
+				<textcolor>red</textcolor>
+				<showonepage>true</showonepage>
+			</control>
+		</control>
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>ButtonCommonValues</include>
+			<label>-</label>
+			<align>left</align>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>36</height>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<textoffsetx>15</textoffsetx>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<pulseonselect>no</pulseonselect>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>36</height>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+			<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
+			<radioposx>490</radioposx>
+			<pulseonselect>no</pulseonselect>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>36</height>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>15</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+			<pulseonselect>no</pulseonselect>
+		</control>
+	</controls>
+</window>

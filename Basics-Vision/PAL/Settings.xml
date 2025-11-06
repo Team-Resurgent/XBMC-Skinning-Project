@@ -1,0 +1,350 @@
+<window id="4">
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="group" id="8000">
+				<posx>17</posx>
+				<posy>82</posy>
+				<control type="image">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_video.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(2)">conditional</animation>
+				</control>
+				<control type="button" id="2">
+					<description>Video push button</description>
+					<posx>0</posx>
+					<posy>176</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>3</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyVideosSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>9000</onleft>
+					<onright>3</onright>
+					<onup>6</onup>
+					<ondown>6</ondown>
+					<hitrect x="0" y="0" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>192</posx>
+					<posy>0</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_music.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(3)">conditional</animation>
+				</control>
+				<control type="button" id="3">
+					<description>Music push button</description>
+					<posx>172</posx>
+					<posy>176</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>2</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyMusicSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>2</onleft>
+					<onright>4</onright>
+					<onup>7</onup>
+					<ondown>7</ondown>
+					<hitrect x="172" y="0" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>364</posx>
+					<posy>0</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_pics.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(4)">conditional</animation>
+				</control>
+				<control type="button" id="4">
+					<description>Pics push button</description>
+					<posx>343</posx>
+					<posy>176</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>1</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>3</onleft>
+					<onright>5</onright>
+					<onup>8</onup>
+					<ondown>8</ondown>
+					<hitrect x="343" y="0" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>535</posx>
+					<posy>0</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>unknown-user.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(5)">conditional</animation>
+					<visible>System.Platform.Linux</visible>
+				</control>
+				<control type="button" id="5">
+					<description>Profile push button</description>
+					<posx>515</posx>
+					<posy>176</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>13200</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>4</onleft>
+					<onright>9000</onright>
+					<onup>9</onup>
+					<ondown>9</ondown>
+					<visible>System.Platform.Linux</visible>
+					<hitrect x="515" y="0" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>535</posx>
+					<posy>0</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_apps.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(5)">conditional</animation>
+					<visible>!System.Platform.Linux</visible>
+				</control>
+				<control type="button" id="5">
+					<description>Apps push button</description>
+					<posx>515</posx>
+					<posy>176</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>0</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyProgramsSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>4</onleft>
+					<onright>9000</onright>
+					<onup>9</onup>
+					<ondown>9</ondown>
+					<visible>!System.Platform.Linux</visible>
+					<hitrect x="515" y="0" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>232</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_weather.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(6)">conditional</animation>
+				</control>
+				<control type="button" id="6">
+					<description>Weather push button</description>
+					<posx>0</posx>
+					<posy>408</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>8</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>9000</onleft>
+					<onright>7</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<hitrect x="0" y="232" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>192</posx>
+					<posy>232</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_network.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(7)">conditional</animation>
+				</control>
+				<control type="button" id="7">
+					<description>Network push button</description>
+					<posx>172</posx>
+					<posy>408</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>705</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>6</onleft>
+					<onright>8</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<hitrect x="172" y="232" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>364</posx>
+					<posy>232</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_system.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(8)">conditional</animation>
+				</control>
+				<control type="button" id="8">
+					<description>System push button</description>
+					<posx>343</posx>
+					<posy>408</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>13000</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>7</onleft>
+					<onright>9</onright>
+					<onup>4</onup>
+					<ondown>4</ondown>
+					<hitrect x="343" y="232" w="127" h="208" />
+				</control>
+				<control type="image">
+					<posx>535</posx>
+					<posy>232</posy>
+					<width>127</width>
+					<height>160</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>icon_appearence.png</texture>
+					<animation effect="zoom" start="100" end="115" center="auto" time="100" condition="Control.HasFocus(9)">conditional</animation>
+				</control>
+				<control type="button" id="9">
+					<description>Profile push button</description>
+					<posx>515</posx>
+					<posy>408</posy>
+					<height>32</height>
+					<width>172</width>
+					<label>480</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16b</font>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<texturefocus>folder-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onleft>8</onleft>
+					<onright>9000</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					<hitrect x="515" y="232" w="127" h="208" />
+				</control>
+			</control>
+			<control type="group" id="9001">
+				<posx>-194</posx>
+				<posy>0</posy>
+				<animation effect="slide" time="150" end="194,0" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>225</width>
+					<height>576</height>
+					<onclick>-</onclick>
+					<hitrect x="0" y="0" w="200" h="576" />
+					<texturefocus>Side_Slideout.png</texturefocus>
+					<texturenofocus>Side_Slideout.png</texturenofocus>
+				</control>
+				<control type="group" id="9000">
+					<posx>3</posx>
+					<posy>112</posy>
+					<control type="button" id="20">
+						<description>Skin Settings button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>ButtonCommonValues</include>
+						<label>20077</label>
+						<onclick>Setfocus(8000)</onclick>
+						<onclick>ActivateWindow(1111)</onclick>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+						<onup>22</onup>
+						<ondown>21</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+					<control type="button" id="21">
+						<description>Xbox Profiles button</description>
+						<posx>0</posx>
+						<posy>36</posy>
+						<include>ButtonCommonValues</include>
+						<label>13200</label>
+						<onclick>ActivateWindow(Profiles)</onclick>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+						<onup>20</onup>
+						<ondown>22</ondown>
+						<visible>!System.Platform.Linux</visible>
+					</control>
+					<control type="button" id="22">
+						<description>Reload Skin button</description>
+						<posx>0</posx>
+						<posy>72</posy>
+						<include>ButtonCommonValues</include>
+						<label>20183</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+						<onup>21</onup>
+						<ondown>20</ondown>
+						<animation effect="slide" time="0" end="0,-36" condition="!Control.IsVisible(21)">Conditional</animation>
+					</control>
+				</control>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>72</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>23</posx>
+				<posy>16</posy>
+				<width>338</width>
+				<height>34</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>5</label>
+				<font>font16b</font>
+			</control>
+			<include>Common_Now_Playing</include>
+		</control>
+	</controls>
+</window>

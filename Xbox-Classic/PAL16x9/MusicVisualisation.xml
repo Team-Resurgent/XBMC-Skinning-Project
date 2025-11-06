@@ -1,0 +1,199 @@
+<window id="2006">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+		</control>
+		<!-- codec & viz infos -->
+		<control type="group">
+			<posx>350</posx>
+			<posy>40</posy>
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<animation effect="fade" time="300">VisibleChange</animation>
+			<control type="image">
+				<description>Dialog Footer</description>
+				<posx>212</posx>
+				<posy>52</posy>
+				<width>120</width>
+				<height>70</height>
+				<texture>dialog_bottom.png</texture>
+			</control>
+			<control type="image">
+				<description>media info background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>105</height>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+				<texture border="10">dialog_middle.png</texture>
+			</control>
+			<control type="label">
+				<description>Codecinfo</description>
+				<width>300</width>
+				<posx>10</posx>
+				<posy>5</posy>
+				<label>$INFO[musicplayer.Codec,Audio Codec: ,] $INFO[musicplayer.Channels, - Channels: ]&#10;$INFO[musicplayer.Bitrate,Bitrate:,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]</label>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="label">
+				<description>Presets label</description>
+				<posx>10</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<label>$LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+				<font>font12</font>
+				<align>left</align>
+				<visible>!Visualisation.Locked</visible>
+			</control>
+			<control type="label">
+				<description>Presets label</description>
+				<posx>10</posx>
+				<posy>50</posy>
+				<width>300</width>
+				<label>$LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+				<font>font12</font>
+				<align>left</align>
+				<visible>Visualisation.Locked</visible>
+			</control>
+			<control type="label">
+				<description>Presets label</description>
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<label>$INFO[Visualisation.Preset]</label>
+				<font>font12</font>
+				<align>left</align>
+			</control>
+		</control>
+		<!-- media infos -->
+		<control type="group">
+			<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<control type="group">
+				<posx>40</posx>
+				<posy>350</posy>
+				<control type="image">
+					<description>Dialog Header</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>100</height>
+					<texture>dialog_top.png</texture>
+				</control>
+				<control type="image">
+					<description>Dialog Text Area</description>
+					<posx>16</posx>
+					<posy>22</posy>
+					<width>120</width>
+					<height>150</height>
+					<colordiffuse>BBFFFFFF</colordiffuse>
+					<texture border="10">dialog_middle.png</texture>
+				</control>
+				<control type="image">
+					<description>Dialog Footer</description>
+					<posx>28</posx>
+					<posy>119</posy>
+					<width>120</width>
+					<height>70</height>
+					<texture>dialog_bottom.png</texture>
+				</control>
+				<control type="image">
+					<description>CD Cover Image</description>
+					<posx>20</posx>
+					<posy>27</posy>
+					<width>112</width>
+					<height>140</height>
+					<info>MusicPlayer.Cover</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>350</posx>
+				<posy>400</posy>
+				<control type="image">
+					<description>Dialog Footer</description>
+					<posx>212</posx>
+					<posy>52</posy>
+					<width>120</width>
+					<height>70</height>
+					<texture>dialog_bottom.png</texture>
+				</control>
+				<control type="image">
+					<description>media info background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>320</width>
+					<height>105</height>
+					<colordiffuse>BBFFFFFF</colordiffuse>
+					<texture border="10">dialog_middle.png</texture>
+				</control>
+				<control type="fadelabel">
+					<description>Artist label</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<info>MusicPlayer.Artist</info>
+					<align>left</align>
+					<font>font13</font>
+				</control>
+				<control type="fadelabel">
+					<description>Title label</description>
+					<posx>10</posx>
+					<posy>26</posy>
+					<width>300</width>
+					<info>MusicPlayer.Title</info>
+					<textcolor>yellow</textcolor>
+					<align>left</align>
+					<font>font14</font>
+				</control>
+				<control type="fadelabel">
+					<description>Album label</description>
+					<posx>10</posx>
+					<posy>52</posy>
+					<width>300</width>
+					<info>MusicPlayer.Album</info>
+					<align>left</align>
+					<font>font12</font>
+				</control>
+				<control type="fadelabel">
+					<description>time label</description>
+					<posx>10</posx>
+					<posy>75</posy>
+					<width>380</width>
+					<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+					<align>left</align>
+					<font>font12</font>
+				</control>
+				<control type="label">
+					<description>Playlist Pos No</description>
+					<posx>305</posx>
+					<posy>75</posy>
+					<width>200</width>
+					<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+					<visible>!MusicPartyMode.Enabled</visible>
+					<align>right</align>
+					<font>font12</font>
+					<textcolor>green</textcolor>
+				</control>
+				<control type="label">
+					<description>PartyMode Enabled</description>
+					<posx>305</posx>
+					<posy>75</posy>
+					<width>200</width>
+					<label>589</label>
+					<visible>MusicPartyMode.Enabled</visible>
+					<align>right</align>
+					<font>font12</font>
+					<textcolor>green</textcolor>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,126 @@
+<window id="6">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+	</control>
+
+	<control type="group">
+		<control type="button" id="2">
+			<description>View As Icons button</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<label>100</label>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<onup>7</onup>
+			<ondown>3</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<posx>20</posx>
+			<posy>147</posy>
+			<label>103</label>
+			<onleft>60</onleft>
+			<onright>4</onright>
+			<onup>2</onup>
+			<ondown>5</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<posy>157</posy>
+			<label>-</label>
+			<onleft>3</onleft>
+			<onright>50</onright>
+			<onup>2</onup>
+			<ondown>5</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="5">
+			<description>Library</description>
+			<posx>20</posx>
+			<posy>184</posy>
+			<label>457</label>
+			<onclick>XBMC.ReplaceWindow(myvideolibrary)</onclick>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<onup>3</onup>
+			<ondown>7</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="radiobutton" id="7">
+			<description>Stacking</description>
+			<posx>20</posx>
+			<posy>221</posy>
+			<label>346</label>
+			<onleft>60</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>2</ondown>
+			<include>slideleft</include>
+		</control>
+	</control>
+
+	<include>4x3menu-background</include>
+
+	<control type="image">
+		<description>ListItems Thumb BG</description>
+		<posx>10</posx>
+		<posy>370</posy>
+		<width>140</width>
+		<height>140</height>
+		<texture>keyboard-numeric-bg.png</texture>
+		<include>slideleft</include>
+		<include>listitemthumb</include>
+	</control>
+	<control type="image">
+		<description>ListItems Thumb</description>
+		<posx>24</posx>
+		<posy>375</posy>
+		<width>120</width>
+		<height>120</height>
+		<align>center</align>
+		<aspectratio>keep</aspectratio>
+		<info>ListItem.Icon</info>
+		<include>slideleft</include>
+		<include>listitemthumb</include>
+	</control>
+	<control type="image">
+		<description>ListItems Thumb Overlay</description>
+		<posx>10</posx>
+		<posy>370</posy>
+		<width>140</width>
+		<height>140</height>
+		<texture>keyboard-numeric-bg2.png</texture>
+		<include>slideleft</include>
+		<include>listitemthumb</include>
+	</control>
+
+	<include>Common_List</include>
+	<include>Common_Icon</include>
+	<include>Common_BigIcon</include>
+	<include>Common_WrapList</include>
+	<include>WideIcon_Small</include>
+	<include>WideIcon_Big</include>
+
+	<include>4x3slider</include>
+	<include>SpinControl</include>
+	<include>numberoffiles</include>
+
+	<control>
+		<description>Description label</description>
+		<label>3</label>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

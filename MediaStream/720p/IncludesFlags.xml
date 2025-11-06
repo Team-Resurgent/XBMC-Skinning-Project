@@ -1,0 +1,2071 @@
+<includes>
+
+  <include name="VideoFlags">
+    <include>VideoStudioFlags</include>
+    <include>VideoMPAAFlags</include>
+    <include>VideoTVNetworkFlags</include>
+    <include>VideoTVRatingFlags</include>
+  </include>
+
+  <include name="ExtraVideoFlags">
+    <include>VideoResFlags</include>
+    <include>VideoAspectFlags</include>
+    <include>VideoAudioFlags</include>
+    <include>VideoCodecFlags</include>
+  </include>
+
+  <include name="VideoFlagDefault">
+    <aspectratio alignx="center">keep</aspectratio>
+  </include>
+
+  <!-- Movie Studio flags -->
+  <include name="VideoStudioFlagsDims">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>95</width>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoStudioFlags">
+    <control type="group">
+      <visible>Container.Content(movies)</visible>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\20thcenturyfox.png</texture>
+        <visible>substring(ListItem.Studio,Century) | substring(ListItem.Studio,APJAC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\2929.png</texture>
+        <visible>substring(ListItem.Studio,2929)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\57irving.png</texture>
+        <visible>substring(ListItem.Studio,57th and Irving)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\aandm.png</texture>
+        <visible>substring(ListItem.Studio,A and M)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\aardman.png</texture>
+        <visible>substring(ListItem.Studio,Aardman)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\abandon.png</texture>
+        <visible>substring(ListItem.Studio,Abandon)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\alcon.png</texture>
+        <visible>substring(ListItem.Studio,Alcon)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\allianceatlantis.png</texture>
+        <visible>substring(ListItem.Studio,Atlantis)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\alloy.png</texture>
+        <visible>substring(ListItem.Studio,Alloy Entertainment)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\ambience.png</texture>
+        <visible>substring(ListItem.Studio,Ambience)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\ambient.png</texture>
+        <visible>substring(ListItem.Studio,Ambient)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\amblin.png</texture>
+        <visible>substring(ListItem.Studio,Amblin)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\anchorbay.png</texture>
+        <visible>substring(ListItem.Studio,Anchor Bay)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\andell.png</texture>
+        <visible>substring(ListItem.Studio,Andell)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\anonymous.png</texture>
+        <visible>substring(ListItem.Studio,Anonymous Content)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\antena3.png</texture>
+        <visible>substring(ListItem.Studio,Antena 3)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\apollo.png</texture>
+        <visible>substring(ListItem.Studio,Apollo)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\ark.png</texture>
+        <visible>substring(ListItem.Studio,Ark Film Collective)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\artisan.png</texture>
+        <visible>substring(ListItem.Studio,Artisan)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\avnetkerner.png</texture>
+        <visible>substring(ListItem.Studio,Avnet Kerner)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\babylonian.png</texture>
+        <visible>substring(ListItem.Studio,Babylonian)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\badrobot.png</texture>
+        <visible>substring(ListItem.Studio,Bad Robot)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\bandapart.png</texture>
+        <visible>substring(ListItem.Studio,Band Apart)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\bazmark.png</texture>
+        <visible>substring(ListItem.Studio,Bazmark)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>networks\bbc.png</texture>
+        <visible>substring(ListItem.Studio,BBC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\beacon.png</texture>
+        <visible>substring(ListItem.Studio,Beacon)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\bigbeach.png</texture>
+        <visible>substring(ListItem.Studio,Big Beach)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\bigtalk.png</texture>
+        <visible>substring(ListItem.Studio,Big Talk)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\bluesky.png</texture>
+        <visible>substring(ListItem.Studio,Blue Sky)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\bobyari.png</texture>
+        <visible>substring(ListItem.Studio,Bob Yari)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\brightlight.png</texture>
+        <visible>substring(ListItem.Studio,Brightlight)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\brinkfilms.png</texture>
+        <visible>substring(ListItem.Studio,Brink Films)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\bruckheimer.png</texture>
+        <visible>substring(ListItem.Studio,Bruckheimer)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\cannon.png</texture>
+        <visible>substring(ListItem.Studio,Cannon)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\capcom.png</texture>
+        <visible>substring(ListItem.Studio,Capcom)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\carolco.png</texture>
+        <visible>substring(ListItem.Studio,Carolco)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\castel.png</texture>
+        <visible>substring(ListItem.Studio,Castel)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\castlerock.png</texture>
+        <visible>substring(ListItem.Studio,Castle Rock)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\celador.png</texture>
+        <visible>substring(ListItem.Studio,Celador)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\centropolis.png</texture>
+        <visible>substring(ListItem.Studio,Centropolis)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\cheyenne.png</texture>
+        <visible>substring(ListItem.Studio,Cheyenne)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\cnc.png</texture>
+        <visible>substring(ListItem.Studio,CNC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\columbia.png</texture>
+        <visible>substring(ListItem.Studio,Columbia)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\concorde.png</texture>
+        <visible>substring(ListItem.Studio,Concorde Films)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\condemned.png</texture>
+        <visible>substring(ListItem.Studio,Condemned)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\constantin.png</texture>
+        <visible>substring(ListItem.Studio,Constantin)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\corazon.png</texture>
+        <visible>substring(ListItem.Studio,Corazon)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\criterion.png</texture>
+        <visible>substring(ListItem.Studio,Criterion)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\darrenstar.png</texture>
+        <visible>substring(ListItem.Studio,Darren Star)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\darkhorse.png</texture>
+        <visible>substring(ListItem.Studio,Dark Horse)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\davis.png</texture>
+        <visible>substring(ListItem.Studio,Davis Entertainment)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\dc.png</texture>
+        <visible>substring(ListItem.Studio,DC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\destination.png</texture>
+        <visible>substring(ListItem.Studio,Destination)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\dfi.png</texture>
+        <visible>substring(ListItem.Studio,DFI)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\digitalplayground.png</texture>
+        <visible>substring(ListItem.Studio,Digital Playground)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\dimension.png</texture>
+        <visible>substring(ListItem.Studio,Dimension)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\delaurentiis.png</texture>
+        <visible>substring(ListItem.Studio,Dino De Laurentiis)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\disney.png</texture>
+        <visible>substring(ListItem.Studio,Disney)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\dorfilm.png</texture>
+        <visible>substring(ListItem.Studio,Dor Film)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\dreamworks.png</texture>
+        <visible>substring(ListItem.Studio,DreamWorks)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\eldeseo.png</texture>
+        <visible>substring(ListItem.Studio,El Deseo)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\eleven.png</texture>
+        <visible>substring(ListItem.Studio,Eleven)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\emmedia.png</texture>
+        <visible>substring(ListItem.Studio,EM Media)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\endgame.png</texture>
+        <visible>substring(ListItem.Studio,Endgame)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\entertainment.png</texture>
+        <visible>substring(ListItem.Studio,Entertainment Films)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\eurimages.png</texture>
+        <visible>substring(ListItem.Studio,Eurimages)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\europa.png</texture>
+        <visible>substring(ListItem.Studio,Europa)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\excel.png</texture>
+        <visible>substring(ListItem.Studio,Excel)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\figaro.png</texture>
+        <visible>substring(ListItem.Studio,Figaro)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\film4.png</texture>
+        <visible>[substring(ListItem.Studio,Film4) | substring(ListItem.Studio,Film 4) | substring(ListItem.Studio,Film Four)]</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\filmax.png</texture>
+        <visible>substring(ListItem.Studio,Filmax)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\firstlook.png</texture>
+        <visible>substring(ListItem.Studio,First Look)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\filmmedia.png</texture>
+        <visible>substring(ListItem.Studio,Film Media)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\fineline.png</texture>
+        <visible>substring(ListItem.Studio,Fine Line)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\focus.png</texture>
+        <visible>substring(ListItem.Studio,Focus Features)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\fox.png</texture>
+        <visible>[substring(ListItem.Studio,Fox) + !substring(ListItem.Studio,Century) + !substring(ListItem.Studio,Searchlight)]</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\franchise.png</texture>
+        <visible>substring(ListItem.Studio,Franchise)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\ghibli.png</texture>
+        <visible>substring(ListItem.Studio,Ghibli)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\ghosthouse.png</texture>
+        <visible>substring(ListItem.Studio,Ghost House)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\gofilms.png</texture>
+        <visible>substring(ListItem.Studio,Go Films)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\goldcircle.png</texture>
+        <visible>substring(ListItem.Studio,Gold Circle)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\goldcrest.png</texture>
+        <visible>substring(ListItem.Studio,Goldcrest)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\goldenharvest.png</texture>
+        <visible>substring(ListItem.Studio,Golden Harvest)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\gramercy.png</texture>
+        <visible>substring(ListItem.Studio,Gramercy)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\greenestreet.png</texture>
+        <visible>substring(ListItem.Studio,GreeneStreet)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\grosvenorpark.png</texture>
+        <visible>substring(ListItem.Studio,Grosvenor Park)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\gutek.png</texture>
+        <visible>substring(ListItem.Studio,Gutek)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\hagermoss.png</texture>
+        <visible>substring(ListItem.Studio,Hager Moss)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\halestorm.png</texture>
+        <visible>substring(ListItem.Studio,Halestorm)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\handmade.png</texture>
+        <visible>substring(ListItem.Studio,Hand Made)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\hanway.png</texture>
+        <visible>substring(ListItem.Studio,Hanway)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\happymadison.png</texture>
+        <visible>substring(ListItem.Studio,Happy Madison)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\haxan.png</texture>
+        <visible>substring(ListItem.Studio,Haxan)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\hbo.png</texture>
+        <visible>substring(ListItem.Studio,HBO)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\henson.png</texture>
+        <visible>substring(ListItem.Studio,Henson)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\hollywood.png</texture>
+        <visible>substring(ListItem.Studio,Hollywood)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\icon.png</texture>
+        <visible>substring(ListItem.Studio,Icon)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\imagemovers.png</texture>
+        <visible>substring(ListItem.Studio,ImageMovers)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\imaginaryforces.png</texture>
+        <visible>substring(ListItem.Studio,Imaginary Forces)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\imagi.png</texture>
+        <visible>substring(ListItem.Studio,Imagi Studios)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\imagine.png</texture>
+        <visible>substring(ListItem.Studio,Imagine)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\infilm.png</texture>
+        <visible>substring(ListItem.Studio,Infilm)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\infinifilm.png</texture>
+        <visible>substring(ListItem.Studio,infinifilm)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\interactual.png</texture>
+        <visible>substring(ListItem.Studio,interActual)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\itc.png</texture>
+        <visible>stringcompare(ListItem.Studio,ITC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\iti.png</texture>
+        <visible>substring(ListItem.Studio,ITI Film)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\jawa.png</texture>
+        <visible>substring(ListItem.Studio,Jawa)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\kadokawa.png</texture>
+        <visible>substring(ListItem.Studio,Kadokawa)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\kamera.png</texture>
+        <visible>substring(ListItem.Studio,Kamera)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\kennedymarshall.png</texture>
+        <visible>substring(ListItem.Studio,Kennedy/Marshall)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\ladd.png</texture>
+        <visible>substring(ListItem.Studio,Ladd Company)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\lagofilm.png</texture>
+        <visible>substring(ListItem.Studio,Lago Film)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\lakeshore.png</texture>
+        <visible>substring(ListItem.Studio,Lakeshore)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\largo.png</texture>
+        <visible>substring(ListItem.Studio,Largo)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\leftturn.png</texture>
+        <visible>substring(ListItem.Studio,Left Turn)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\legendary.png</texture>
+        <visible>substring(ListItem.Studio,Legendary)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\lightstorm.png</texture>
+        <visible>substring(ListItem.Studio,Lightstorm)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\linsefilm.png</texture>
+        <visible>substring(ListItem.Studio,Linsefilm)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\lionsgate.png</texture>
+        <visible>substring(ListItem.Studio,Lionsgate)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\liveplanet.png</texture>
+        <visible>substring(ListItem.Studio,LivePlanet)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\lizard.png</texture>
+        <visible>substring(ListItem.Studio,Lizard)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\lonestar.png</texture>
+        <visible>substring(ListItem.Studio,Lone Star)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\lucasfilm.png</texture>
+        <visible>substring(ListItem.Studio,Lucasfilm)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mandm.png</texture>
+        <visible>substring(ListItem.Studio,M&apm;M)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\madman.png</texture>
+        <visible>substring(ListItem.Studio,Madman)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\magnolia.png</texture>
+        <visible>substring(ListItem.Studio,Magnolia)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\management360.png</texture>
+        <visible>substring(ListItem.Studio,Management 360)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mandalay.png</texture>
+        <visible>substring(ListItem.Studio,Mandalay)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mandate.png</texture>
+        <visible>substring(ListItem.Studio,Mandate)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\manga.png</texture>
+        <visible>substring(ListItem.Studio,Manga)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\marvel.png</texture>
+        <visible>substring(ListItem.Studio,Marvel)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\maverick.png</texture>
+        <visible>substring(ListItem.Studio,Maverick)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\maya.png</texture>
+        <visible>substring(ListItem.Studio,Maya Entertainment)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mediapro.png</texture>
+        <visible>substring(ListItem.Studio,Mediapro)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mgm.png</texture>
+        <visible>[substring(ListItem.Studio,Mayer) | substring(ListItem.Studio,MGM)]</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mibac.png</texture>
+        <visible>substring(ListItem.Studio,MiBAC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\michaelwhite.png</texture>
+        <visible>substring(ListItem.Studio,Michael White)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\milkshake.png</texture>
+        <visible>substring(ListItem.Studio,Milkshake)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\millennium.png</texture>
+        <visible>substring(ListItem.Studio,Millennium)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mikezoss.png</texture>
+        <visible>substring(ListItem.Studio,Mike Zoss)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mindseye.png</texture>
+        <visible>substring(ListItem.Studio,Minds Eye)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\miramax.png</texture>
+        <visible>[substring(ListItem.Studio,Miramax) + !substring(ListItem.Studio,Universal)]</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mk2.png</texture>
+        <visible>substring(ListItem.Studio,MK2)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\monolith.png</texture>
+        <visible>substring(ListItem.Studio,Monolith)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\morgancreek.png</texture>
+        <visible>[substring(ListItem.Studio,Morgan Creek) | substring(ListItem.Studio,MorganCreek)]</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mosaic.png</texture>
+        <visible>substring(ListItem.Studio,Mosaic)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\mosfilm.png</texture>
+        <visible>substring(ListItem.Studio,Mosfilm)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\myriad.png</texture>
+        <visible>substring(ListItem.Studio,Myriad)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\nala.png</texture>
+        <visible>substring(ListItem.Studio,NALA)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\narodowa.png</texture>
+        <visible>substring(ListItem.Studio,Filmoteka Narodowa)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\newline.png</texture>
+        <visible>substring(ListItem.Studio,New Line)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\newmarket.png</texture>
+        <visible>substring(ListItem.Studio,Newmarket)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\nothing.png</texture>
+        <visible>substring(ListItem.Studio,Nothing)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\nuimage.png</texture>
+        <visible>substring(ListItem.Studio,NUImage)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\oko.png</texture>
+        <visible>substring(ListItem.Studio,Filmowe Oko)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\original.png</texture>
+        <visible>substring(ListItem.Studio,Original)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\orion.png</texture>
+        <visible>substring(ListItem.Studio,Orion)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\overbrook.png</texture>
+        <visible>substring(ListItem.Studio,Overbrook)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\overture.png</texture>
+        <visible>substring(ListItem.Studio,Overture)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\pandora.png</texture>
+        <visible>substring(ListItem.Studio,Pandora)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\paramount.png</texture>
+        <visible>substring(ListItem.Studio,Paramount)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\participant.png</texture>
+        <visible>substring(ListItem.Studio,Participant)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\pathe.png</texture>
+        <visible>substring(ListItem.Studio,Pathe)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\peacearch.png</texture>
+        <visible>substring(ListItem.Studio,Peace Arch)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\pecf.png</texture>
+        <visible>substring(ListItem.Studio,PECF)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\phoenix.png</texture>
+        <visible>substring(ListItem.Studio,Phoenix)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\picturehouse.png</texture>
+        <visible>substring(ListItem.Studio,Picturehouse)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\pixar.png</texture>
+        <visible>substring(ListItem.Studio,Pixar)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\platige.png</texture>
+        <visible>substring(ListItem.Studio,Platige)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\playtone.png</texture>
+        <visible>substring(ListItem.Studio,Playtone)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\polygram.png</texture>
+        <visible>substring(ListItem.Studio,PolyGram)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\potboiler.png</texture>
+        <visible>substring(ListItem.Studio,Potboiler)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\rankin.png</texture>
+        <visible>substring(ListItem.Studio,Rankin)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\redhour.png</texture>
+        <visible>substring(ListItem.Studio,Red Hour)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\redrum.png</texture>
+        <visible>substring(ListItem.Studio,Redrum)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\redwagon.png</texture>
+        <visible>substring(ListItem.Studio,Red Wagon)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\regency.png</texture>
+        <visible>substring(ListItem.Studio,Regency)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\relativity.png</texture>
+        <visible>substring(ListItem.Studio,Relativity)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\revolution.png</texture>
+        <visible>substring(ListItem.Studio,Revolution)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\revolver.png</texture>
+        <visible>substring(ListItem.Studio,Revolver)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\rhombus.png</texture>
+        <visible>substring(ListItem.Studio,Rhombus)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\rkoradio.png</texture>
+        <visible>substring(ListItem.Studio,RKO Radio)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\roadside.png</texture>
+        <visible>substring(ListItem.Studio,Roadside)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\rogue.png</texture>
+        <visible>substring(ListItem.Studio,Rogue)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\saulzaentz.png</texture>
+        <visible>substring(ListItem.Studio,Zaentz)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\scottfree.png</texture>
+        <visible>substring(ListItem.Studio,Scott Free)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\samuelsmedia.png</texture>
+        <visible>substring(ListItem.Studio,Samuels Media)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\screenaustralia.png</texture>
+        <visible>substring(ListItem.Studio,Screen Australia)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\screengems.png</texture>
+        <visible>substring(ListItem.Studio,Screen Gems)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\searchlight.png</texture>
+        <visible>substring(ListItem.Studio,Searchlight)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\semafor.png</texture>
+        <visible>substring(ListItem.Studio,semafor)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\senator.png</texture>
+        <visible>substring(ListItem.Studio,Senator)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\serendipity.png</texture>
+        <visible>substring(ListItem.Studio,Serendipity)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\shoutfactory.png</texture>
+        <visible>substring(ListItem.Studio,Shout)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\sidneykimmel.png</texture>
+        <visible>substring(ListItem.Studio,Kimmel)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\silver.png</texture>
+        <visible>substring(ListItem.Studio,Silver Pictures)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\silvernitrate.png</texture>
+        <visible>substring(ListItem.Studio,Silver Nitrate)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\smc.png</texture>
+        <visible>substring(ListItem.Studio,SMC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\sonyclassics.png</texture>
+        <visible>substring(ListItem.Studio,Sony Pictures Classics)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\squareenix.png</texture>
+        <visible>substring(ListItem.Studio,Square Enix)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\steele.png</texture>
+        <visible>substring(ListItem.Studio,Steele)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\storyline.png</texture>
+        <visible>substring(ListItem.Studio,Storyline)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\summit.png</texture>
+        <visible>substring(ListItem.Studio,Summit)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\sfi.png</texture>
+        <visible>substring(ListItem.Studio,Swedish Film)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\syrena.png</texture>
+        <visible>substring(ListItem.Studio,Syrena)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\telos.png</texture>
+        <visible>substring(ListItem.Studio,Telos)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\thinkfilm.png</texture>
+        <visible>substring(ListItem.Studio,ThinkFilm)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\thisisthat.png</texture>
+        <visible>substring(ListItem.Studio,This Is That)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\tobis.png</texture>
+        <visible>substring(ListItem.Studio,Tobis)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\touchstone.png</texture>
+        <visible>substring(ListItem.Studio,Touchstone)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\tresor.png</texture>
+        <visible>substring(ListItem.Studio,Les Productions du Tresor)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\tristar.png</texture>
+        <visible>substring(ListItem.Studio,TriStar)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\turner.png</texture>
+        <visible>substring(ListItem.Studio,Turner)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\twisted.png</texture>
+        <visible>substring(ListItem.Studio,Twisted)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\unitedartists.png</texture>
+        <visible>substring(ListItem.Studio,Artists)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\ugc.png</texture>
+        <visible>substring(ListItem.Studio,UGC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\universal.png</texture>
+        <visible>substring(ListItem.Studio,Universal)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\viewaskew.png</texture>
+        <visible>substring(ListItem.Studio,View Askew)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\villageroadshow.png</texture>
+        <visible>substring(ListItem.Studio,Village Roadshow)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\walden.png</texture>
+        <visible>substring(ListItem.Studio,Walden)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\warner.png</texture>
+        <visible>substring(ListItem.Studio,Warner) + !substring(ListItem.Studio,Warner Independent)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\warnerindependent.png</texture>
+        <visible>substring(ListItem.Studio,Warner Independent)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\wdr.png</texture>
+        <visible>substring(ListItem.Studio,WDR)</visible>
+      </control>
+  
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\weinstein.png</texture>
+        <visible>substring(ListItem.Studio,Weinstein)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\wfdif.png</texture>
+        <visible>substring(ListItem.Studio,WFDiF)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\whitewater.png</texture>
+        <visible>substring(ListItem.Studio,Whitewater)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\wildbunch.png</texture>
+        <visible>substring(ListItem.Studio,Wild Bunch)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\workingtitle.png</texture>
+        <visible>substring(ListItem.Studio,Working Title)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\y3.png</texture>
+        <visible>substring(ListItem.Studio,Y3)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\yari.png</texture>
+        <visible>substring(ListItem.Studio,Yari Film)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoStudioFlagsDims</include>
+        <texture>studios\zebra.png</texture>
+        <visible>substring(ListItem.Studio,Filmowe Zebra)</visible>
+      </control>
+    </control>
+  </include>
+
+  <!-- MPAA Rating flags -->
+  <include name="VideoMPAAFlagsDims">
+    <posx>115</posx>
+    <posy>12</posy>
+    <height>37</height>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoMPAAFlags">
+    <control type="group">
+      <visible>Container.Content(movies)</visible>
+
+  		<control type="image">
+        <include>VideoMPAAFlagsDims</include>
+  			<texture>mpaa\restricted.png</texture>
+  			<visible>substring(ListItem.MPAA,Rated R)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoMPAAFlagsDims</include>
+  			<texture>mpaa\pg13.png</texture>
+  			<visible>substring(ListItem.MPAA,Rated PG-13)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoMPAAFlagsDims</include>
+  			<texture>mpaa\pg.png</texture>
+  			<visible>substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,Rated PG-13)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoMPAAFlagsDims</include>
+  			<texture>mpaa\nc17.png</texture>
+  			<visible>substring(ListItem.MPAA,Rated NC)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoMPAAFlagsDims</include>
+        <texture>mpaa\general.png</texture>
+  			<visible>substring(ListItem.MPAA,Rated G)</visible>
+  		</control>
+    </control>
+  </include>
+
+  <!-- TV Studio flags -->
+  <include name="VideoTVNetworkFlagsDims">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>95</width>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoTVNetworkFlags">
+    <control type="group">
+      <visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\aande.png</texture>
+        <visible>substring(ListItem.Studio,A&amp;E)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\abc.png</texture>
+        <visible>substring(ListItem.Studio,abc)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\adultswim.png</texture>
+        <visible>substring(ListItem.Studio,adultswim)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\amc.png</texture>
+        <visible>substring(ListItem.Studio,AMC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\animalplanet.png</texture>
+        <visible>substring(ListItem.Studio,Animal Planet)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\ard.png</texture>
+        <visible>substring(ListItem.Studio,ARD)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\arte.png</texture>
+        <visible>substring(ListItem.Studio,arte)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\bbc.png</texture>
+        <visible>substring(ListItem.Studio,BBC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\bet.png</texture>
+        <visible>substring(ListItem.Studio,BET)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\bravo.png</texture>
+        <visible>substring(ListItem.Studio,Bravo)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\canalplus.png</texture>
+        <visible>substring(ListItem.Studio,Canal)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\cartoonnetwork.png</texture>
+        <visible>substring(ListItem.Studio,Cartoon Network)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\cbs.png</texture>
+        <visible>substring(ListItem.Studio,CBS)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\channel4.png</texture>
+        <visible>substring(ListItem.Studio,Channel 4)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\comedycentral.png</texture>
+        <visible>substring(ListItem.Studio,Comedy Central)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\ctv.png</texture>
+        <visible>substring(ListItem.Studio,CTV)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\cw.png</texture>
+        <visible>substring(ListItem.Studio,CW)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\discovery.png</texture>
+        <visible>substring(ListItem.Studio,Discovery)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\disney.png</texture>
+        <visible>substring(ListItem.Studio,Disney)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\entertainment.png</texture>
+        <visible>substring(ListItem.Studio,Entertainment)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\espn.png</texture>
+        <visible>substring(ListItem.Studio,ESPN)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\five.png</texture>
+        <visible>substring(ListItem.Studio,Five)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\foodnetwork.png</texture>
+        <visible>substring(ListItem.Studio,Food Network)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\fox.png</texture>
+        <visible>substring(ListItem.Studio,Fox)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\fuji.png</texture>
+        <visible>substring(ListItem.Studio,Fuji)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\fx.png</texture>
+        <visible>substring(ListItem.Studio,FX)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\hbo.png</texture>
+        <visible>substring(ListItem.Studio,HBO)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\historychannel.png</texture>
+        <visible>substring(ListItem.Studio,History Channel)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\itv.png</texture>
+        <visible>substring(ListItem.Studio,ITV)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\kbs.png</texture>
+        <visible>substring(ListItem.Studio,kbs)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\mtv.png</texture>
+        <visible>substring(ListItem.Studio,MTV)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\natgeo.png</texture>
+        <visible>substring(ListItem.Studio,National Geographic)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\nbc.png</texture>
+        <visible>substring(ListItem.Studio,NBC)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\nickelodeon.png</texture>
+        <visible>substring(ListItem.Studio,Nickelodeon)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\pbs.png</texture>
+        <visible>substring(ListItem.Studio,PBS)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\premiere.png</texture>
+        <visible>substring(ListItem.Studio,Premiere)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\rai.png</texture>
+        <visible>substring(ListItem.Studio,Rai)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\rtl.png</texture>
+        <visible>substring(ListItem.Studio,RTL)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\scifi.png</texture>
+        <visible>substring(ListItem.Studio,SciFi)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\showtime.png</texture>
+        <visible>substring(ListItem.Studio,Showtime)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\sky.png</texture>
+        <visible>substring(ListItem.Studio,Sky)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\space.png</texture>
+        <visible>substring(ListItem.Studio,Space)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\speed.png</texture>
+        <visible>substring(ListItem.Studio,Speed)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\spike.png</texture>
+        <visible>substring(ListItem.Studio,Spike)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\starz.png</texture>
+        <visible>substring(ListItem.Studio,Starz)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\stv.png</texture>
+        <visible>substring(ListItem.Studio,STV)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\tbs.png</texture>
+        <visible>substring(ListItem.Studio,TBS)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\tnt.png</texture>
+        <visible>substring(ListItem.Studio,TNT)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\travelchannel.png</texture>
+        <visible>substring(ListItem.Studio,Travel Channel)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\tv4.png</texture>
+        <visible>substring(ListItem.Studio,TV 4)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\tvnturbo.png</texture>
+        <visible>substring(ListItem.Studio,TVN Turbo)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture background="true">networks\tvp.png</texture>
+        <visible>substring(ListItem.Studio,TVP)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\upn.png</texture>
+        <visible>substring(ListItem.Studio,UPN)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\usanetwork.png</texture>
+        <visible>substring(ListItem.Studio,USA Network)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\versus.png</texture>
+        <visible>substring(ListItem.Studio,Versus)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\vh1.png</texture>
+        <visible>substring(ListItem.Studio,VH1)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\wb.png</texture>
+        <visible>substring(ListItem.Studio,WB)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\wgn.png</texture>
+        <visible>substring(ListItem.Studio,WGN)</visible>
+      </control>
+
+      <control type="image">
+        <include>VideoTVNetworkFlagsDims</include>
+        <texture>networks\zdf.png</texture>
+        <visible>substring(ListItem.Studio,ZDF)</visible>
+      </control>
+    </control>
+  </include>
+
+  <!-- TV Rating Flags -->
+  <include name="VideoTVRatingFlagsDims">
+    <posx>114</posx>
+    <posy>6</posy>
+    <height>48</height>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoTVRatingFlags">
+    <control type="group">
+      <visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+
+  		<control type="image">
+        <include>VideoTVRatingFlagsDims</include>
+        <texture>mpaa\tv-14.png</texture>
+  			<visible>stringcompare(ListItem.MPAA,TV-14)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoTVRatingFlagsDims</include>
+        <texture>mpaa\tv-g.png</texture>
+  			<visible>stringcompare(ListItem.MPAA,TV-G)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoTVRatingFlagsDims</include>
+        <texture>mpaa\tv-ma.png</texture>
+  			<visible>stringcompare(ListItem.MPAA,TV-MA)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoTVRatingFlagsDims</include>
+        <texture>mpaa\tv-pg.png</texture>
+  			<visible>stringcompare(ListItem.MPAA,TV-PG)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoTVRatingFlagsDims</include>
+        <texture>mpaa\tv-y.png</texture>
+  			<visible>stringcompare(ListItem.MPAA,TV-Y)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoTVRatingFlagsDims</include>
+        <texture>mpaa\tv-y.png</texture>
+  			<visible>stringcompare(ListItem.MPAA,TV-Y7)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoTVRatingFlagsDims</include>
+        <texture>mpaa\tv-y.png</texture>
+  			<visible>stringcompare(ListItem.MPAA,TV-Y7 FV)</visible>
+  		</control>
+  	</control>
+  </include>
+
+  <!-- Video Resolution Flags -->
+  <include name="VideoResFlagsDims">
+    <posx>0</posx>
+    <posy>0</posy>
+    <height>48</height>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoResFlags">
+    <control type="group">
+
+<!--
+<control type="image">
+  <include>VideoResFlagsDims</include>
+  <texture>flags\1080.png</texture>
+</control>
+-->
+  		<control type="image">
+        <include>VideoResFlagsDims</include>
+        <texture>$INFO[ListItem.VideoResolution,flags\,.png]</texture>
+  		</control>
+    </control>
+  </include>
+
+  <!-- Video Aspect Flags -->
+  <include name="VideoAspectFlagsDims">
+    <posx>75</posx>
+    <posy>0</posy>
+    <height>48</height>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoAspectFlags">
+    <control type="group">
+
+<!--
+<control type="image">
+  <include>VideoAspectFlagsDims</include>
+  <texture>flags\2.35.png</texture>
+</control>
+-->
+  		<control type="image">
+        <include>VideoAspectFlagsDims</include>
+        <texture>$INFO[ListItem.VideoAspect,flags\,.png]</texture>
+  		</control>
+    </control>
+  </include>
+
+  <!-- Video Codec Flags -->
+  <include name="VideoCodecFlagsDims">
+    <posx>165</posx>
+    <posy>0</posy>
+    <height>48</height>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoCodecFlags">
+    <control type="group">
+  		<control type="image">
+        <include>VideoCodecFlagsDims</include>
+        <texture>flags\h264.png</texture>
+        <visible>stringcompare(ListItem.VideoCodec,avc1)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoCodecFlagsDims</include>
+        <texture>flags\divx.png</texture>
+        <visible>stringcompare(ListItem.VideoCodec,3iv2) | stringcompare(ListItem.VideoCodec,div2) | stringcompare(ListItem.VideoCodec,div3) | stringcompare(ListItem.VideoCodec,dx50)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoCodecFlagsDims</include>
+        <texture>flags\mp4.png</texture>
+        <visible>substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,mpeg-4) | substring(ListItem.VideoCodec,mp4)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoCodecFlagsDims</include>
+        <texture>flags\sv3.png</texture>
+        <visible>stringcompare(ListItem.VideoCodec,svq3)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoCodecFlagsDims</include>
+        <texture>flags\wmv.png</texture>
+        <visible>substring(ListItem.VideoCodec,wvc) | substring(ListItem.VideoCodec,wmv)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoCodecFlagsDims</include>
+        <texture>$INFO[ListItem.VideoCodec,flags\,.png]</texture>
+        <visible>![stringcompare(ListItem.VideoCodec,avc1)]</visible>
+        <visible>![stringcompare(ListItem.VideoCodec,3iv2) | stringcompare(ListItem.VideoCodec,div2) | stringcompare(ListItem.VideoCodec,div3) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
+        <visible>![substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,mpeg-4) | substring(ListItem.VideoCodec,mp4)]</visible>
+        <visible>![stringcompare(ListItem.VideoCodec,svq3)]</visible>
+        <visible>![substring(ListItem.VideoCodec,wvc) | substring(ListItem.VideoCodec,wmv)]</visible>
+  		</control>
+    </control>
+  </include>
+
+  <!-- Video Audio Flags -->
+  <include name="VideoAudioFlagsDims">
+    <posx>240</posx>
+    <posy>0</posy>
+    <height>48</height>
+    <include>VideoFlagDefault</include>
+  </include>
+
+  <include name="VideoAudioFlags">
+    <control type="group">
+  		<control type="image">
+        <include>VideoAudioFlagsDims</include>
+        <texture>flags\aac.png</texture>
+  			<visible>stringcompare(ListItem.AudioCodec,aac)</visible>
+  		</control>
+
+      <control type="group">
+        <description>Dolby</description>
+        <visible>stringcompare(ListItem.AudioCodec,ac3) | stringcompare(ListItem.AudioCodec,ac-3)</visible>
+
+    		<control type="image">
+          <include>VideoAudioFlagsDims</include>
+          <texture>flags\dd20.png</texture>
+    			<visible>stringcompare(ListItem.AudioChannels,2)</visible>
+    		</control>
+
+    		<control type="image">
+          <include>VideoAudioFlagsDims</include>
+          <texture>flags\dd51.png</texture>
+    			<visible>stringcompare(ListItem.AudioChannels,6)</visible>
+    		</control>
+
+    		<control type="image">
+          <include>VideoAudioFlagsDims</include>
+          <texture>flags\dd71.png</texture>
+    			<visible>stringcompare(ListItem.AudioChannels,8)</visible>
+    		</control>
+      </control>
+
+      <control type="group">
+        <description>DTS</description>
+        <visible> stringcompare(ListItem.AudioCodec,dca)  | stringcompare(ListItem.AudioCodec,dts)</visible>
+
+    		<control type="image">
+          <include>VideoAudioFlagsDims</include>
+          <texture>flags\dts51.png</texture>
+    			<visible>stringcompare(ListItem.AudioChannels,6)</visible>
+    		</control>
+
+    		<control type="image">
+          <include>VideoAudioFlagsDims</include>
+          <texture>flags\dts71.png</texture>
+    			<visible>stringcompare(ListItem.AudioChannels,8)</visible>
+    		</control>
+
+    		<control type="image">
+          <include>VideoAudioFlagsDims</include>
+          <texture>flags\dts.png</texture>
+    			<visible>![stringcompare(ListItem.AudioChannels,6) | stringcompare(ListItem.AudioChannels,8)]</visible>
+    		</control>
+  		</control>
+
+  		<control type="image">
+        <include>VideoAudioFlagsDims</include>
+        <texture>flags\flac.png</texture>
+  			<visible>substring(ListItem.AudioCodec,flac)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoAudioFlagsDims</include>
+        <texture>flags\mp3.png</texture>
+  			<visible>stringcompare(ListItem.AudioCodec,mp3)</visible>
+  		</control>
+
+  		<control type="image">
+        <include>VideoAudioFlagsDims</include>
+        <texture>flags\mono.png</texture>
+  			<visible>stringcompare(ListItem.AudioChannels,1) + ![stringcompare(ListItem.AudioCodec,aac) | stringcompare(ListItem.AudioCodec,mp3) | stringcompare(ListItem.AudioCodec,dca) | substring(ListItem.AudioCodec,flac)]</visible>
+  		</control>
+    </control>
+  </include>
+
+</includes>

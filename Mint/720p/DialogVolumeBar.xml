@@ -1,0 +1,42 @@
+<!-- volume bar displayed when using the right thumbstick up and down -->
+<window id="104">
+	
+	<controls>
+	
+		<control type="group">
+			<visible>!Player.Muted</visible>
+			
+			<posx>20</posx>
+			<posy>20</posy>
+
+			<animation effect="slide" start="-340,0" end="0,0" time="100">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-340,0" time="300">WindowClose</animation>
+	
+			<!-- background -->
+			<control type="image">
+			    <texture border="10">bg-dialog.png</texture>
+			    <width>400</width>
+			    <height>60</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- volume icon -->
+			<control type="image">
+				<texture>osd-nomute-nf.png</texture>
+				<width>32</width>
+				<height>32</height>
+				<posx>25</posx>
+				<posy>13</posy>
+			</control>
+			<!-- volume bar -->
+			<control type="progress">
+				<info>Player.Volume</info>
+				<width>312</width>
+				<height>30</height>
+				<posx>78</posx>
+				<posy>15</posy>
+			</control>
+		</control>
+		
+	</controls>
+
+</window>

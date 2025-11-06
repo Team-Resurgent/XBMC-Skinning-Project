@@ -1,0 +1,572 @@
+<window id="2005">
+  <defaultcontrol>-</defaultcontrol>
+
+  <controls>
+    <!-- codec infos -->
+    <control type="group">
+      <posx>100</posx>
+      <posy>0</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-100" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-100" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-100">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-100">Hidden</animation>
+      <visible>Player.ShowCodec</visible>
+
+      <control type="image">
+        <posy>-10</posy>
+        <width>1080</width>
+        <height>136</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="label" id="0">
+        <description>Audio Info</description>
+        <posx>86</posx>
+        <posy>10</posy>
+        <align>right</align>
+        <label>[COLOR=Highlighted]$LOCALIZE[445] [/COLOR] |</label>
+      </control>
+      <control type="label" id="10">
+        <posx>96</posx>
+        <posy>10</posy>
+        <label>-</label>
+        <align>left</align>
+      </control>
+
+      <control type="label" id="0">
+        <description>Video Info</description>
+        <posx>86</posx>
+        <posy>35</posy>
+        <align>right</align>
+        <label>[COLOR=Highlighted]$LOCALIZE[444] [/COLOR] |</label>
+      </control>
+      <control type="label" id="11">
+        <posx>96</posx>
+        <posy>35</posy>
+        <label>-</label>
+        <align>left</align>
+      </control>
+
+      <control type="label" id="0">
+        <description>Misc Info</description>
+        <posx>86</posx>
+        <posy>60</posy>
+        <align>right</align>
+        <label>[COLOR=Highlighted]$LOCALIZE[31005] [/COLOR] |</label>
+      </control>
+      <control type="label" id="12">
+        <description>row 3 label</description>
+        <posx>96</posx>
+        <posy>60</posy>
+        <label>-</label>
+        <align>left</align>
+      </control>
+    </control>
+
+    <control type="group" id="1">
+      <description>Time</description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="-200,-100" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="-200,-100" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-200,-100">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-200,-100">Hidden</animation>
+      <visible>Player.ShowInfo | Player.Paused | Player.Seeking | Player.Forwarding | Player.Rewinding</visible>
+
+      <control type="image" id="1">
+        <width>OSDTimeBGWidth</width>
+        <height>44</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="group" id="1">
+        <posx>OSDTimeBGWidth</posx>
+        <posy>7</posy>
+
+        <control type="label" id="1">
+          <posx>-8</posx>
+          <width>OSDTimeTextWidth</width>
+          <height>34</height>
+          <font>MediumTitleFont</font>
+          <align>right</align>
+          <aligny>center</aligny>
+          <info>System.Time</info>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" id="1">
+      <posx>1165</posx>
+      <posy>491</posy>
+      <animation effect="slide" time="0" delay="0" start="0,0" end="0,75" condition="Skin.HasSetting(UseMinimalVideoOSD)">Conditional</animation>
+      <animation effect="slide" time="0" delay="0" start="0,0" end="0,174" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+      <animation effect="slide" time="300" delay="200" tween="circle" easing="out" start="0,100" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" delay="200" tween="circle" easing="out" start="0,100" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,100">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,100">Hidden</animation>
+      <visible>Player.Paused | Player.Seeking | Player.Forwarding | Player.Rewinding</visible>
+
+      <control type="group" id="1">
+        <visible>Player.Paused</visible>
+
+        <control type="image" id="1">
+          <width>65</width>
+          <height>65</height>
+          <include>OverlayAreaTop</include>
+        </control>
+
+        <control type="image" id="1">
+          <description>Paused image</description>
+          <include>OSDIconDims</include>
+          <texture>osd_pause.png</texture>
+        </control>
+      </control>
+
+      <control type="group" id="1">
+        <posx>-52</posx>
+        <animation effect="slide" time="0" delay="0" start="0,0" end="0,100" condition="[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + !Skin.HasSetting(UseMinimalVideoOSD) + !Window.IsActive(VideoOSD)">Conditional</animation>
+        <visible>Player.Seeking | Player.Forwarding | Player.Rewinding</visible>
+
+        <control type="image" id="1">
+          <width>120</width>
+          <height>65</height>
+          <include>OverlayAreaTop</include>
+        </control>
+  
+        <control type="image" id="1">
+          <description>RW image</description>
+          <include>OSDIconDims</include>
+          <texture>osd_rewind.png</texture>
+          <visible>Player.Rewinding</visible>
+        </control>
+  
+        <control type="image" id="1">
+          <description>FF image</description>
+          <include>OSDIconDims</include>
+          <texture>osd_forward.png</texture>
+          <visible>Player.Forwarding</visible>
+        </control>
+  
+        <control type="group" id="1">
+          <posx>65</posx>
+          <posy>16</posy>
+  
+          <control type="label" id="1">
+            <description>2x FF/Rew</description>
+            <include>OSDSeekLabel</include>
+            <label>2x</label>
+            <visible>Player.Rewinding2x | Player.Forwarding2x</visible>
+          </control>
+
+          <control type="label" id="1">
+            <description>4x FF/Rew</description>
+            <include>OSDSeekLabel</include>
+            <label>4x</label>
+            <visible>Player.Rewinding4x | Player.Forwarding4x</visible>
+          </control>
+  
+          <control type="label" id="1">
+            <description>8x FF/Rew</description>
+            <include>OSDSeekLabel</include>
+            <label>8x</label>
+            <visible>Player.Rewinding8x | Player.Forwarding8x</visible>
+          </control>
+  
+          <control type="label" id="1">
+            <description>16x FF/Rew</description>
+            <include>OSDSeekLabel</include>
+            <label>16x</label>
+            <visible>Player.Rewinding16x | Player.Forwarding16x</visible>
+          </control>
+  
+          <control type="label" id="1">
+            <description>32x FF/Rew</description>
+            <include>OSDSeekLabel</include>
+            <label>32x</label>
+            <visible>Player.Rewinding32x | Player.Forwarding32x</visible>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" id="1">
+      <posx>30</posx>
+      <posy>630</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,100" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,100" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,100">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,100">Hidden</animation>
+      <visible>!Window.IsVisible(SliderDialog) + [[[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + !Window.IsActive(VideoOSD)] | [Skin.HasSetting(UseMinimalVideoOSD) + [Player.ShowInfo | Player.Paused | Window.IsActive(VideoOSD)]]]</visible>
+
+      <control type="image" id="1">
+        <posx>375</posx>
+        <posy>-35</posy>
+        <width>450</width>
+        <height>36</height>
+        <include>OverlayAreaTop</include>
+        <visible>Window.IsVisible(VideoOSD)</visible>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,200" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,200">Hidden</animation>
+      </control>
+
+      <control type="image" id="1">
+        <width>1220</width>
+        <height>100</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="group" id="1">
+        <description>Title</description>
+        <posx>24</posx>
+        <posy>9</posy>
+
+        <control type="group" id="1">
+          <visible>![VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv)]</visible>
+
+          <control type="label" id="1">
+            <width>1172</width>
+            <font>MediumSmallTitleFont</font>
+            <label>$INFO[VideoPlayer.Title]</label>
+          </control>
+        </control>
+
+        <control type="group" id="1">
+          <visible>[VideoPlayer.Content(movies)]</visible>
+
+          <control type="label" id="1">
+            <width>600</width>
+            <font>MediumSmallTitleFont</font>
+            <label>$INFO[VideoPlayer.Title]</label>
+          </control>
+          <control type="label" id="1">
+            <posx>1172</posx>
+            <posy>2</posy>
+            <width>562</width>
+            <font>SmallTitleFont</font>
+            <align>right</align>
+            <label>$INFO[VideoPlayer.Year]</label>
+          </control>
+        </control>
+
+        <control type="group" id="1">
+          <visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv)]</visible>
+
+          <control type="label" id="1">
+            <width>475</width>
+            <font>MediumSmallTitleFont</font>
+            <label>$INFO[VideoPlayer.Title]</label>
+          </control>
+
+          <control type="label" id="1">
+            <posx>481</posx>
+            <posy>2</posy>
+            <width>210</width>
+            <font>SmallTitleFont</font>
+            <align>center</align>
+            <label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ], $INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]</label>
+          </control>
+
+          <control type="label" id="1">
+            <posx>1172</posx>
+            <posy>2</posy>
+            <width>400</width>
+            <font>SmallTitleFont</font>
+            <align>right</align>
+            <label>$INFO[VideoPlayer.TVShowTitle]</label>
+          </control>
+        </control>
+      </control>
+
+      <control type="group" id="1">
+        <description>Progress Bar and Time</description>
+        <posx>18</posx>
+        <posy>35</posy>
+
+        <control type="progress" id="1">
+          <description>Progress Bar</description>
+          <width>1184</width>
+          <info>Player.Progress</info>
+        </control>
+
+        <control type="group" id="1">
+          <posx>8</posx>
+          <posy>23</posy>
+
+          <control type="label" id="1">
+            <description>Elapsed Time Label</description>
+            <info>Player.Time</info>
+            <textcolor>Unfocused</textcolor>
+            <width>90</width>
+            <visible>!Player.Seeking</visible>
+          </control>
+
+          <control type="label" id="1">
+            <description>Seek Time Label</description>
+            <textcolor>Unfocused</textcolor>
+            <info>Player.SeekTime</info>
+            <width>90</width>
+            <visible>Player.Seeking</visible>
+          </control>
+
+          <control type="label" id="1">
+            <description>Chapters Display</description>
+            <posx>90</posx>
+            <width>200</width>
+            <align>left</align>
+            <label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+            <textcolor>Unfocused</textcolor>
+            <visible>Player.ChapterCount</visible>
+          </control>
+
+          <control type="label" id="1">
+            <description>Finish Time Label</description>
+            <posx>434</posx>
+            <width>300</width>
+            <align>center</align>
+            <label>$INFO[Player.FinishTime,$LOCALIZE[31304]: ]</label>
+            <textcolor>Unfocused</textcolor>
+            <visible>!Player.Seeking</visible>
+          </control>
+
+          <control type="label" id="1">
+            <description>Duration Label</description>
+            <posx>1168</posx>
+            <info>Player.Duration</info>
+            <textcolor>Unfocused</textcolor>
+            <align>right</align>
+            <width>300</width>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" id="1">
+      <posx>30</posx>
+      <posy>555</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,200" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,200" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,200">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,200">Hidden</animation>
+      <visible>!Window.IsVisible(SliderDialog) + !Skin.HasSetting(UseMinimalVideoOSD) + [[Player.ShowInfo + Window.IsActive(FullScreenVideo)] | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | Player.Paused]</visible>
+
+      <control type="image" id="1">
+        <width>1220</width>
+        <height>185</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group" id="1">
+        <posy>16</posy>
+
+        <control type="group" id="1">
+          <description>Title</description>
+          <posx>20</posx>
+
+          <control type="group" id="1">
+            <visible>![VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv)]</visible>
+
+            <control type="label" id="1">
+              <include>VideoOSDTitleTextDims</include>
+              <height>86</height>
+              <aligny>center</aligny>
+              <font>MediumSmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Title]</label>
+              <visible>[!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+            <control type="label" id="1">
+              <include>VideoOSDTitleWideTextDims</include>
+              <height>86</height>
+              <aligny>center</aligny>
+              <font>MediumSmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Title]</label>
+              <visible>![!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+          </control>
+
+          <control type="group" id="1">
+            <posy>26</posy>
+            <visible>VideoPlayer.Content(movies)</visible>
+
+            <control type="label" id="1">
+              <include>VideoOSDTitleTextDims</include>
+              <font>MediumSmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Title]</label>
+              <visible>[!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+            <control type="label" id="1">
+              <include>VideoOSDTitleWideTextDims</include>
+              <font>MediumSmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Title]</label>
+              <visible>![!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+
+            <control type="label" id="1">
+              <include>VideoOSDTitleTextDims</include>
+              <posy>22</posy>
+              <font>SmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Year,(,)]</label>
+              <visible>[!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+            <control type="label" id="1">
+              <include>VideoOSDTitleWideTextDims</include>
+              <posy>22</posy>
+              <font>SmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Year,(,)]</label>
+              <visible>![!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+          </control>
+
+          <control type="group" id="1">
+            <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv)</visible>
+
+            <control type="label" id="1">
+              <include>VideoOSDTitleTextDims</include>
+              <font>MediumSmallTitleFont</font>
+              <label>$INFO[VideoPlayer.TVShowTitle]</label>
+              <visible>[!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+            <control type="label" id="1">
+              <include>VideoOSDTitleWideTextDims</include>
+              <font>MediumSmallTitleFont</font>
+              <label>$INFO[VideoPlayer.TVShowTitle]</label>
+              <visible>![!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+
+            <control type="label" id="1">
+              <posy>28</posy>
+              <include>VideoOSDTitleTextDims</include>
+              <font>SmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ], $INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]</label>
+              <visible>[!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+            <control type="label" id="1">
+              <posy>28</posy>
+              <include>VideoOSDTitleWideTextDims</include>
+              <font>SmallTitleFont</font>
+              <label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ], $INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]</label>
+              <visible>![!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+
+            <control type="label" id="1">
+              <posy>52</posy>
+              <include>VideoOSDTitleTextDims</include>
+              <label>$INFO[VideoPlayer.Title]</label>
+              <visible>[!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+            <control type="label" id="1">
+              <posy>52</posy>
+              <include>VideoOSDTitleWideTextDims</include>
+              <label>$INFO[VideoPlayer.Title]</label>
+              <visible>![!Skin.HasSetting(HidePlotInVideoOSD) | Window.IsActive(VideoOSD)]</visible>
+            </control>
+          </control>
+        </control>
+
+        <control type="group" id="1">
+          <description>Plot</description>
+          <posx>440</posx>
+          <visible>!Window.IsActive(VideoOSD) + !Skin.HasSetting(HidePlotInVideoOSD)</visible>
+          <animation effect="slide" time="300" tween="circle" easing="out" start="0,200" end="0,0">Visible</animation>
+          <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,200">Hidden</animation>
+
+          <control type="textbox" id="1">
+            <width>500</width>
+            <height>86</height>
+            <label>$INFO[VideoPlayer.Plot]</label>
+          </control>
+        </control>
+
+        <control type="group" id="1">
+          <description>Progress Bar and Time</description>
+          <posx>14</posx>
+          <posy>92</posy>
+
+          <control type="progress" id="1">
+            <description>Progress Bar</description>
+            <width>936</width>
+            <info>Player.Progress</info>
+          </control>
+
+          <control type="group" id="1">
+            <posx>8</posx>
+            <posy>23</posy>
+
+            <control type="label" id="1">
+              <description>Elapsed Time Label</description>
+              <info>Player.Time</info>
+              <textcolor>Unfocused</textcolor>
+              <width>90</width>
+              <visible>!Player.Seeking</visible>
+            </control>
+
+            <control type="label" id="1">
+              <description>Seek Time Label</description>
+              <textcolor>Unfocused</textcolor>
+              <info>Player.SeekTime</info>
+              <width>90</width>
+              <visible>Player.Seeking</visible>
+            </control>
+
+            <control type="label" id="1">
+              <description>Chapters Display</description>
+              <posx>90</posx>
+              <width>200</width>
+              <align>left</align>
+              <label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+              <textcolor>Unfocused</textcolor>
+              <visible>Player.ChapterCount</visible>
+            </control>
+
+            <control type="label" id="1">
+              <description>Finish Time Label</description>
+              <posx>308</posx>
+              <width>300</width>
+              <align>center</align>
+              <label>$INFO[Player.FinishTime,$LOCALIZE[31304]: ]</label>
+              <textcolor>Unfocused</textcolor>
+              <visible>!Player.Seeking</visible>
+            </control>
+
+            <control type="label" id="1">
+              <description>Duration Label</description>
+              <posx>916</posx>
+              <info>Player.Duration</info>
+              <textcolor>Unfocused</textcolor>
+              <align>right</align>
+              <width>300</width>
+            </control>
+          </control>
+        </control>
+
+        <control type="group" id="1">
+          <description>Thumb</description>
+          <posx>960</posx>
+
+          <control type="image" id="1">
+            <posx>-8</posx>
+            <posy>-8</posy>
+            <width>256</width>
+            <height>159</height>
+            <bordertexture border="14">ThumbShadow2.png</bordertexture>
+            <bordersize>8</bordersize>
+            <aspectratio>keep</aspectratio>
+            <info>VideoPlayer.Cover</info>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <control type="label" id="24">
+      <description>Buffering label</description>
+      <posx>0</posx>
+      <posy>683</posy>
+      <label>15107</label>
+      <font>MediumSmallTitleFont</font>
+      <width>ScreenWidth</width>
+      <align>center</align>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,50" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,50">Hidden</animation>
+    </control>
+
+  </controls>
+</window>

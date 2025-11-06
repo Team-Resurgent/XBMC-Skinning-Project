@@ -1,0 +1,111 @@
+<window>
+  <id>12</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>Settings text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>108</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>Speed label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <posY>150</posY>
+      <label>224</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>Speedselect</description>
+      <type>spincontrol</type>
+      <id>2</id>
+      <posX>530</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>3</onup>
+      <ondown>3</ondown>
+      <onleft>2</onleft>
+      <onright>2</onright>
+    </control>
+
+    <control>
+      <description>Transition time label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <posY>200</posY>
+      <label>225</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>transition select</description>
+      <type>spincontrol</type>
+      <id>3</id>
+      <posX>530</posX>
+      <posY>200</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>2</onup>
+      <ondown>2</ondown>
+      <onleft>3</onleft>
+      <onright>3</onright>
+    </control>
+
+  </controls>
+
+</window>
+

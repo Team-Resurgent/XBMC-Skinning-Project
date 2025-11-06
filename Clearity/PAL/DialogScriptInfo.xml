@@ -1,0 +1,53 @@
+<window type="dialog" id="2004">
+	<defaultcontrol>90</defaultcontrol>
+	<zorder>1</zorder>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>115</posy>
+		<width>595</width>
+		<height>372</height>
+		<texture>Black.png</texture>
+	</control>
+
+	<control type="scrollbar" id="90">
+		<posx>638</posx>
+		<posy>115</posy>
+		<width>20</width>
+		<height>372</height>
+		<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+		<texturesliderbar border="3">scrollbar_bar.png</texturesliderbar>
+		<texturesliderbarfocus border="3">scrollbar_bar_focus.png</texturesliderbarfocus>
+		<textureslidernib>scrollbar_nib.png</textureslidernib>
+		<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+		<onleft>50</onleft>
+		<onright>9000</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<orientation>vertical</orientation>
+	</control>
+
+	<control type="textbox" id="5">
+		<description>textarea</description>
+		<posx>65</posx>
+		<posy>118</posy>
+		<width>575</width>
+		<height>365</height>
+		<pagecontrol>90</pagecontrol>
+	</control>
+
+	<control type="label" id="10">
+		<description>Scripts Output</description>
+		<posx>130</posx>
+		<posy>48</posy>
+		<label>262</label>
+		<font>font14</font>
+		<textcolor>FFB2D4F5</textcolor>
+	</control>
+	<include>Black-Overlay</include>
+
+	</controls>
+</window>

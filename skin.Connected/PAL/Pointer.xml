@@ -1,0 +1,41 @@
+<window id="105">
+	<defaultcontrol>1</defaultcontrol>
+	<controls>
+		<control type="image" id="1">
+			<description>Pointer</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>22</width>
+			<height>21</height>
+			<texture>Pointer.png</texture>
+			<colordiffuse>DefaultTextColor</colordiffuse>
+		</control>
+		<control type="image" id="2">
+			<description>Focus</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>22</width>
+			<height>21</height>
+			<texture>Pointer.png</texture>
+			<colordiffuse>FocusedTextColor</colordiffuse>
+		</control>
+		<control type="image" id="3">
+			<description>Drag</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>22</width>
+			<height>21</height>
+			<texture>Pointer.png</texture>
+			<colordiffuse>SelectedTextColor</colordiffuse>
+		</control>
+		<control type="image" id="4">
+			<description>Click</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>22</width>
+			<height>21</height>
+			<texture>Pointer.png</texture>
+			<colordiffuse>DefaultTextColor</colordiffuse>
+		</control>
+	</controls>
+</window>

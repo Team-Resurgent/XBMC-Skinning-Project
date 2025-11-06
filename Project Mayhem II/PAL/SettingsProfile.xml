@@ -1,0 +1,69 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>background</include>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<posx>453</posx>
+		<posy>310</posy>
+		<width>218</width>
+		<height>240</height>
+		<texture>16x9bg-settings.png</texture>
+		<include>common-icons</include>
+	</control>
+
+	<control type="image" id="1">
+		<description>start logo</description>
+		<posx>55</posx>
+		<posy>35</posy>
+		<height>75</height>
+		<texture>background-settings.png</texture>
+		<include>slide-left</include>
+		<aspectratio align="left">keep</aspectratio>
+	</control>
+
+	<control type="label" id="1">
+		<description>Settings text label</description>
+		<align>right</align> 
+		<posx>660</posx> 
+		<posy>85</posy>
+		<label>13200</label>
+		<font>font04</font>
+		<textcolor>d0ffffff</textcolor>
+		<include>slide-right</include>
+	</control>
+
+	<control type="radiobutton" id="4">
+		<description>enable login screen</description>
+		<posx>50</posx>
+		<posy>120</posy>
+		<onright>2</onright>
+		<onleft>2</onleft>
+		<label>20096</label>
+		<include>slide-left</include>
+	</control>
+
+	<control type="fadelabel" id="3">
+		<description>Last loaded</description>
+		<posx>210</posx>
+		<posy>525</posy>
+		<width>656</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>d0ffffff</textcolor>
+		<include>slide-right</include>
+	</control>
+
+	<control type="listcontrol" id="2">
+		<description>listcontrol</description>
+		<onleft>4</onleft>
+		<onright>2</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<include>slide-right</include>
+	</control>
+
+	</controls>
+</window>

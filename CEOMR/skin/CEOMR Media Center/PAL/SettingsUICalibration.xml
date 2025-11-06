@@ -1,0 +1,55 @@
+<window id="10">
+
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+  <controls>
+    <control type="image" id="1">
+      <description>background image</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <include>ui_calibration</include>
+      <texture>ui_background.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>Blackbar</description>
+      <posx>0</posx>
+      <posy>245</posy>
+      <width>720</width>
+      <height>88</height>
+      <texture>blackbar.png</texture>
+    </control>
+
+     <control type="mover" id="8">
+         <description>left top mover</description>  
+			<posx>0</posx>
+			<posy>0</posy>
+         <texturefocus>calibrate-ui-topleft-focus.png</texturefocus> 
+         <texturenofocus>calibrate-ui-topleft.png</texturenofocus> 
+     </control>
+
+
+     <control type="mover" id="9"> 
+         <description>right bottom mover</description> 
+			<posx>700</posx>
+			<posy>500</posy>
+         <texturefocus>calibrate-ui-bottomright-focus.png</texturefocus> 
+         <texturenofocus>calibrate-ui-bottomright.png</texturenofocus> 
+     </control>
+
+    <control type="label" id="3">
+      <description>coordinates label</description>
+			<posx>0</posx>
+			<posy>275</posy>
+			<width>720</width>
+      <label>5</label>
+      <font>font18</font>
+      <align>center</align>
+    </control>
+
+  </controls>
+
+</window>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: smuto-->
+<!--Email: smuto.promyk@gmail.com-->
+<!--Date of translation: 12/19/2007-->
+<!--$Revision$-->
+<strings>
+  <string id="31001">Wiz Opcje</string>
+  <string id="31002">Wiz Wybór</string>
+  <string id="31003">Menu</string>
+  <string id="31004">Zakładki</string>
+  <string id="31005">Opcje Audio</string>
+  <string id="31006">Opcje Wideo</string>
+  <string id="31007">Wyciszone</string>
+  <string id="31008">...w toku...</string>
+  <string id="31009">Użyj dodatkowych funkcji myszy</string>
+  <string id="31010">Pobierz motywy</string>
+  <string id="31011">Wizualizacja w tle</string>
+  <string id="31012">Filmy w tle</string>
+  <string id="31013">Wersja skóry:</string>
+  <string id="31014">Użyj większych miniaturek dla widoku Kafelki DVD</string>
+  <string id="31900">Motywy dla Basics-101</string>
+  <string id="31901">Pobierz motyw dla Basics-101</string>
+  <string id="31902">Pobieram motyw:</string>
+  <string id="31903">Motyw zainstalowany</string>
+  <string id="31904">Przejdź do ustawień, aby zastosować zmianę.</string>
+  <string id="31905">Pobieranie anulowane</string>
+  <string id="31906">Plik z tym motywem już istnieje</string>
+  <string id="31907">Pobranie ponowne zastąpi istniejący plik</string>
+  <string id="31908">Chcesz pobrać nowy plik ?</string>
+</strings>

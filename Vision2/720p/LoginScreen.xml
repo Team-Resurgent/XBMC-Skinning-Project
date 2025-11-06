@@ -1,0 +1,125 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>256</height>
+				<texture>Barground.png</texture>
+			</control>
+			<control type="wraplist" id="52">
+				<posx>15</posx>
+				<posy>110</posy>
+				<width>1250</width>
+				<height>40</height>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<viewtype label="">list</viewtype>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<itemlayout height="40" width="250">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>3</width>
+						<height>40</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>VeticalLight.png</texture>
+					</control>
+					<control type="label">
+						<posx>125</posx>
+						<posy>0</posy>
+						<width>250</width>
+						<height>40</height>
+						<font>font13</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="250">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>3</width>
+						<height>40</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>VeticalLight.png</texture>
+					</control>
+					<control type="label">
+						<posx>125</posx>
+						<posy>0</posy>
+						<width>250</width>
+						<height>40</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<align>center</align>
+						<selectedcolor>blue</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>256</height>
+				<texture>Barground_Overlay.png</texture>
+			</control>
+			<control type="image">
+				<posx>450</posx>
+				<posy>210</posy>
+				<width>380</width>
+				<height>450</height>
+				<texture border="40">MenuBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>450</posx>
+				<posy>210</posy>
+				<width>380</width>
+				<height>450</height>
+				<texture border="40">MenuFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>485</posx>
+				<posy>360</posy>
+				<width>310</width>
+				<height>265</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture>PV2LogoSmall.png</texture>
+			</control>
+			<control type="image">
+				<posx>495</posx>
+				<posy>290</posy>
+				<width>290</width>
+				<height>250</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<posx>495</posx>
+				<posy>250</posy>
+				<width>290</width>
+				<height>40</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31998][B]$INFO[Container(52).ListItem.Label][/B]$LOCALIZE[31999]</label>
+			</control>
+		</control>
+	</controls>
+</window>

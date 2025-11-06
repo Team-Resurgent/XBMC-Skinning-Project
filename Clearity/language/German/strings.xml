@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <string id="31001">Home Optionen</string>
+  <string id="31002">Media Optionen</string>
+  <string id="31003">Menu Optionen</string>
+  <string id="31004">Andere Optionen</string>
+  <string id="31005">-</string>
+  <string id="31006">-</string>
+  <string id="31007">Persönliche Hintergrund Aktivieren</string>
+  <string id="31008">Persönliche Hintergrund Zurücksetzen</string>
+  <string id="31009">Persönliche Hintergrund Folder Aktivieren</string>
+  <string id="31010">Persönliche Hintergrund Folder Zurücksetzen</string>
+  <string id="31011">Zeit und Datum Aktivieren</string>
+  <string id="31012">Wetter Information Verwenden</string>
+  <string id="31013">Verwenden RSS Feeds</string>
+  <string id="31014">CPU und Speicher Information verwenden</string>
+  <string id="31015">Skin Einstellen Zurücksetzen</string>
+  <string id="31016">-</string>
+  <string id="31017">-</string>
+  <string id="31018">-</string>
+  <string id="31019">-</string>
+
+  <string id="31020">Verwenden Hintergrund Visualisierung</string>
+  <string id="31021">Media Covers Aktivieren</string>
+  <string id="31022">Cover Rotation Aktivieren</string>
+  <string id="31023">"Playlist Anzeigen" nach 30 Seconden Inactiviteit Aktivieren</string>
+  <string id="31024">Media Informationen Anzeigen in WrapListen Aktivieren</string>
+  <string id="31025">Hintergrund Video Aktivieren</string>
+  <string id="31026">-</string>
+  <string id="31027">-</string>
+  <string id="31028">-</string>
+  <string id="31029">-</string>
+
+  <string id="31030">Zeit Indication Aktivieren</string>
+  <string id="31031">Fenster Name Aktivieren</string>
+  <string id="31032">ScrollBars Aktivieren</string>
+  <string id="31033">Hintergrund Panel Aktivieren</string>
+  <string id="31034">Shutdown Menu Pfeile Aktivieren</string>
+  <string id="31032">-</string>
+  <string id="31033">-</string>
+  <string id="31034">-</string>
+  <string id="31035">-</string>
+  <string id="31036">-</string>
+  <string id="31037">-</string>
+  <string id="31038">-</string>
+  <string id="31039">-</string>
+
+  <string id="31040">Verwenden Zoom Transition auf Fenster</string>
+  <string id="31041">Verwenden Flip Transition auf Fenster</string>
+  <string id="31042">Skin Animationen Aktivieren</string>
+  <string id="31043">Hintergrund Animation Aktivieren</string>
+  <string id="31044">-</string>
+  <string id="31045">-</string>
+
+  <string id="31050">Skin Einstellungen</string>
+</strings>

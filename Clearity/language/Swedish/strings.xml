@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="31001">Hem-alternativ</string>
+  <string id="31002">Media-alternativ</string>
+  <string id="31003">Meny-alternativ</string>
+  <string id="31004">Andra alternativ</string>
+  <string id="31005">-</string>
+  <string id="31006">-</string>
+  <string id="31007">Aktivera egen bakgrund</string>
+  <string id="31008">Återställ egen bakgrund</string>
+  <string id="31009">Aktivera egen bakgrund</string>
+  <string id="31010">Återställ egen bakgrundsmapp</string>
+  <string id="31011">Aktivera tid och datum</string>
+  <string id="31012">Aktivera väderinformation</string>
+  <string id="31013">Aktivera RSS-flöden</string>
+  <string id="31014">Aktivera CPU och minnes-status</string>
+  <string id="31015">Återställ skalinställningar</string>
+  <string id="31016">-</string>
+  <string id="31017">-</string>
+  <string id="31018">-</string>
+  <string id="31019">-</string>
+
+  <string id="31020">Aktivera bakgrundsvisualisering</string>
+  <string id="31021">Aktivera mediaomslag</string>
+  <string id="31022">Aktivera roterande omslag</string>
+  <string id="31023">Aktivera "Nu Spelas Info" efter 30 sekunders inaktivitet</string>
+  <string id="31024">Aktivera mediainfo i Wrap List-vyn</string>
+  <string id="31025">Aktivera bakgrundsvideo</string>
+  <string id="31026">-</string>
+  <string id="31027">-</string>
+  <string id="31028">-</string>
+  <string id="31029">-</string>
+
+  <string id="31030">Aktivera tidsindikering</string>
+  <string id="31031">Aktivera fönstertitel</string>
+  <string id="31032">Aktivera rullista</string>
+  <string id="31033">Aktivera bakgrundsmeny-panel</string>
+  <string id="31034">Visa avstängningsmeny-pilar</string>
+  <string id="31035">-</string>
+  <string id="31036">-</string>
+  <string id="31037">-</string>
+  <string id="31038">-</string>
+  <string id="31039">-</string>
+
+  <string id="31040">Använd zoom-övergång på fönster</string>
+  <string id="31041">Använd flippövergång på fönster</string>
+  <string id="31042">Aktivera skalanimationer</string>
+  <string id="31043">Aktivera bakgrundsanimationer</string>
+  <string id="31044">-</string>
+  <string id="31045">-</string>
+
+  <string id="31050">Skalinställningar</string>
+</strings>

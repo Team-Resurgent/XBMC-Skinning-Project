@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <string id="31001">Home Options</string>
+  <string id="31002">Media Options</string>
+  <string id="31003">Menu Options</string>
+  <string id="31004">Other Options</string>
+  <string id="31005">-</string>
+  <string id="31006">-</string>
+  <string id="31007">Enable Custom Background</string>
+  <string id="31008">Reset Custom Background</string>
+  <string id="31009">Enable Custom Background</string>
+  <string id="31010">Reset Custom Background Folder</string>
+  <string id="31011">Enable Time and Date</string>
+  <string id="31012">Enable Weather Information</string>
+  <string id="31013">Enable RSS Feeds</string>
+  <string id="31014">Enable CPU and Memory Stats</string>
+  <string id="31015">Reset Skin Settings</string>
+  <string id="31016">-</string>
+  <string id="31017">-</string>
+  <string id="31018">-</string>
+  <string id="31019">-</string>
+
+  <string id="31020">Enable Background Visualisation</string>
+  <string id="31021">Enable Media Covers</string>
+  <string id="31022">Enable Rotating Covers</string>
+  <string id="31023">Enable "Now Playing Info" after 30 Seconds of Inactivity</string>
+  <string id="31024">Enable Media Information in Wraplists</string>
+  <string id="31025">Enable Background Video</string>
+  <string id="31026">-</string>
+  <string id="31027">-</string>
+  <string id="31028">-</string>
+  <string id="31029">-</string>
+
+  <string id="31030">Enable Time Indication</string>
+  <string id="31031">Enable Window Title</string>
+  <string id="31032">Enable ScrollBars</string>
+  <string id="31033">Enable Menu Background Panel</string>
+  <string id="31034">Show Shutdown Menu Arrows</string>
+  <string id="31035">-</string>
+  <string id="31036">-</string>
+  <string id="31037">-</string>
+  <string id="31038">-</string>
+  <string id="31039">-</string>
+
+  <string id="31040">Use Zoom Transition on Windows</string>
+  <string id="31041">Use Flip Transition on Windows</string>
+  <string id="31042">Enable Skin Animations</string>
+  <string id="31043">Enable Background Animation</string>
+  <string id="31044">-</string>
+  <string id="31045">-</string>
+
+  <string id="31050">Skin Settings</string>
+</strings>

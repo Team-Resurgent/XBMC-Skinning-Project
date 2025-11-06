@@ -1,0 +1,102 @@
+<window id="122">
+	<defaultcontrol>2</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>20</posx>
+		<posy>60</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>Dialog Header</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>315</width>
+			<height>180</height>
+			<texture>dialog_top.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>Dialog Text Area</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>450</width>
+			<height>380</height>
+			<texture>dialog_middle.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>Settings Label</description>
+			<posx>70</posx>
+			<posy>45</posy>
+			<width>420</width>
+			<font>font12</font>
+			<label>-</label>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label" id="3">
+			<description>No Settings Label</description>
+			<posx>70</posx>
+			<posy>45</posy>
+			<width>408</width>
+			<label>-</label>
+			<font>font12</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="list" id="2">
+			<description>Preset List</description>
+			<posx>50</posx>
+			<posy>75</posy>
+			<width>430</width>
+			<height>320</height>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<include>Slide_From_Right_Animation</include>
+			<itemlayout height="32">
+				<control type="image">
+					<width>430</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>4</posy>
+					<width>410</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>430</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>4</posy>
+					<width>410</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

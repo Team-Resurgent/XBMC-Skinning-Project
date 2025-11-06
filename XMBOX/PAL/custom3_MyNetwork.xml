@@ -1,0 +1,227 @@
+<window id="1001">
+	<defaultcontrol>300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+		<!-- background 16x9 -->
+<include>background-image</include>
+
+		<!-- background icons -->
+        <control type="image">
+            <posx>50</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+			<aspectratio>stretch</aspectratio>
+            <texture>bmx-video.png</texture>
+			<colordiffuse>grey2</colordiffuse>
+        </control>
+        <control type="image">
+            <posx>120</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+			<aspectratio>stretch</aspectratio>
+            <texture>bmx-game.png</texture>
+			<colordiffuse>grey2</colordiffuse>
+        </control>
+       <control type="label">
+            <posx>178</posx>
+            <posy>167</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+	    <label>Network</label>
+        </control>
+        <control type="image">
+            <posx>190</posx>
+            <posy>125</posy>
+            <width>45</width>
+            <height>60</height>
+			<aspectratio>stretch</aspectratio>
+            <texture>bmx-network-glow.png</texture>
+        </control>
+        <control type="image">
+            <posx>260</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+			<aspectratio>stretch</aspectratio>
+            <texture>bmx-friends.png</texture>
+			<colordiffuse>grey2</colordiffuse>
+        </control>
+        <control type="image">
+            <posx>330</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+			<aspectratio>stretch</aspectratio>
+            <texture>bmx-scripts.png</texture>
+			<colordiffuse>grey2</colordiffuse>
+        </control>
+        <control type="image">
+            <posx>400</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+			<aspectratio>stretch</aspectratio>
+            <texture>bmx-settings-update.png</texture>
+			<colordiffuse>grey2</colordiffuse>
+        </control>
+
+<!--
+        <control type="image">
+            <posx>470</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-users.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+        <control type="image">
+            <posx>540</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-settings.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+        <control type="image">
+            <posx>610</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-pictures.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+-->
+
+<control type="fixedlist" id="300">
+      <description>fixed list</description>
+      <posx>180</posx>
+      <posy>130</posy>
+      <width>550</width>
+      <height>440</height>
+      <visible>true</visible>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <onleft>512</onleft>
+      <onright>512</onright>
+      <viewtype>list</viewtype>
+      <orientation>vertical</orientation>
+      <pagecontrol>25</pagecontrol>
+      <scrolltime>400</scrolltime>
+      <focusposition>0</focusposition>
+      <itemlayout width="170" height="70">
+        <control type="image">
+            <posx>15</posx>
+            <posy>88</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <info>ListItem.ActualIcon</info>
+	    <colordiffuse>grey2</colordiffuse>
+	    <include>settingpanelslide</include>
+        </control>
+        <control type="label">
+            <posx>85</posx>
+            <posy>105</posy>
+            <width>140</width>
+            <height>140</height>
+            <font>font12</font>
+            <align>left</align>
+            <info>ListItem.Label</info>
+	    <include>settingpanelslide</include>
+        </control>
+     </itemlayout>
+      <focusedlayout height="70" width="270">
+			<control type="image">
+				<posx>05</posx>
+				<posy>80</posy>
+				<width>55</width>
+				<height>70</height>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="85" time="1000" pulse="true" condition="Control.HasFocus(300)">Conditional</animation>
+				<info>ListItem.Thumb</info>
+			</control>
+			<control type="label">
+				<posx>85</posx>
+				<posy>105</posy>
+				<width>240</width>
+				<height>40</height>
+				<font>special13</font>
+				<align>left</align>
+				<info>ListItem.Label</info>
+			<animation effect="fade" start="85" time="1000" pulse="true" condition="Control.HasFocus(300)">Conditional</animation>
+			</control>
+       </focusedlayout>
+  
+  <content>
+
+	  <item>
+		<label>Weather</label>
+		<label2>none</label2>
+		<icon>bmx-network-weather.png</icon>
+		<thumb>bmx-network-weather-glow.png</thumb>
+		<onclick>ActivateWindow(weather)</onclick>
+	  </item>
+	  <item>
+		<label>Remote play</label>
+		<label2>none</label2>
+		<icon>bmx-network-remote.png</icon>
+		<thumb>bmx-network-remote-glow.png</thumb>
+		<onclick>ActivateWindow()</onclick>
+	  </item>
+	  <item>
+		<label>RSS channel</label>
+		<label2>none</label2>
+		<icon>bmx-network-rss.png</icon>
+		<thumb>bmx-network-rss-glow.png</thumb>
+		<onclick>ActivateWindow()</onclick>
+	  </item>
+	  <item>
+		<label>Download manager</label>
+		<label2>none</label2>
+		<icon>bmx-network-download.png</icon>
+		<thumb>bmx-network-download-glow.png</thumb>
+		<onclick>ActivateWindow()</onclick>
+	  </item>
+	  <item>
+		<label>XBMC store</label>
+		<label2>none</label2>
+		<icon>bmx-network-store.png</icon>
+		<thumb>bmx-network-store-glow.png</thumb>
+		<onclick>ActivateWindow()</onclick>
+	  </item>
+  <item>
+    <label>Browser</label>
+    <label2>none</label2>
+    <icon>bmx-browser.png</icon>
+    <thumb>bmx-browser-glow.png</thumb>
+    <onclick>ActivateWindow(webbrowser)</onclick>
+  </item>
+ 
+  </content>
+
+</control>
+
+   <control type="button" id="512">
+	<description>power button</description>
+	<posx>665</posx>
+	<posy>500</posy>
+	<width>46</width>
+	<height>64</height>
+	<label>-</label>
+	<font>font14</font>
+      <onfocus>SetFocus(300)</onfocus>
+      <onfocus>ReplaceWindow(home)</onfocus>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+   </control>
+</controls>
+</window>

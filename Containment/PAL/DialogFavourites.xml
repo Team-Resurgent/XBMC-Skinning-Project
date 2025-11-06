@@ -1,0 +1,77 @@
+<window type="dialog" id="105">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<controls>
+		<include>Dialog-Container</include>
+		<control type="group">
+		<include>dialog-slide</include>
+		<control type="list" id="450">
+			<posx>10</posx>
+			<posy>250</posy>
+			<width>380</width>
+			<height>226</height>
+			<onleft>1</onleft>
+			<onright>10</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<scrolltime>200</scrolltime>
+			<visible>!Skin.HasSetting(fav-list)</visible>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-nofocus-text</textcolor>
+					<selectedcolor>selected-nofocus-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>380</width>
+					<height>32</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>line.png</texture>
+					<colordiffuse>object-color</colordiffuse>
+					<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(50)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>32</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>main-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<info>ListItem.Label</info>
+					<scroll>true></scroll>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<width>115</width>
+			<height>115</height>
+			<posx>10</posx>
+			<posy>110</posy>
+			<info>ListItem.Icon</info>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<width>115</width>
+			<height>115</height>
+			<posx>10</posx>
+			<posy>225</posy>
+			<info>ListItem.Icon</info>
+			<texture flipy="true" diffuse="fade2.png" />
+			<aspectratio>keep</aspectratio>
+		</control>
+	</control>
+		<include>Dialog-Shutters</include>
+	</controls>
+</window>

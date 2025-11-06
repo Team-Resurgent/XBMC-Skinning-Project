@@ -1,0 +1,105 @@
+<controls>
+	<control>
+		<description>default image</description>
+		<type>image</type>
+		<id>1</id>
+	</control>
+	<control>
+		<description>default label</description>
+		<type>label</type>
+		<id>1</id>
+	</control>
+	<control>
+		<description>default spinbutton</description>
+		<type>spinbutton</type>
+		<id>1</id>
+	</control>
+	<control>
+		<description>default button</description>
+		<type>button</type>
+		<id>1</id>
+	</control>
+	<control>
+		<description>default buttonm</description>
+		<type>buttonM</type>
+		<id>10</id>
+	</control> 
+ 	<control>
+		<description>default togglebutton</description>
+		<type>togglebutton</type>
+		<id>4</id>
+	</control>
+	<control>
+		<description>default listcontrol</description>
+		<type>listcontrol</type>
+		<id>10</id>
+		<suffix>|</suffix>
+	</control>
+	<control>
+		<description>default listcontrolex</description>
+		<type>listcontrolex</type>
+		<id>10</id>
+		<suffix>|</suffix>
+	</control>
+	<control>
+		<description>default rss control</description>
+		<type>rss</type>
+		<id>1</id>
+	</control>
+	<control>
+		<description>default ram (recently added media) control</description>
+		<type>ram</type>
+		<id>1</id>
+	</control>
+	<control>
+		<description>default slider control</description>
+		<type>slider</type>
+		<id>1</id>
+	</control>
+	<control>
+		<description>default thumbnail panel</description>
+		<type>thumbnailpanel</type>
+		<id>11</id>
+	</control>
+	<control>
+		<description>default fadelabel</description>
+		<type>fadelabel</type>
+		<id>5</id>
+	</control>
+	<control>
+		<description>default textarea</description>
+		<type>textbox</type>
+		<id>4</id>
+	</control>
+	<control>
+		<description>default progress control</description>
+		<type>progress</type>
+		<id>20</id>
+	</control>
+	<control>
+		<description>default spin control</description>
+		<type>spincontrol</type>
+		<id>2</id>
+
+	</control>
+	<control>
+		<description>default checkmark</description>
+		<type>checkmark</type>
+		<id>4</id>
+	</control>	
+	<control>
+		<description>default radio button</description>
+		<type>radiobutton</type>
+		<id>4</id>
+	</control>
+   	<control>
+      		<description>default select button</description>
+      		<type>selectbutton</type>
+      		<id>6</id>
+    	</control>
+    	<control>
+		<description>default slider control</description>
+		<type>slider</type>
+		<id>1</id>
+   	 </control>	
+</controls>

@@ -1,0 +1,216 @@
+<window id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<include>dialog-effect</include> 
+	<zorder>true</zorder>
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+	</control>
+
+	<control type="group">
+		<control type="button" id="5">
+			<description>Tracks/Review</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<label>182</label>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>10</onup>
+			<ondown>6</ondown>
+			<font>font13</font>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="6">
+			<description>Refresh</description>
+			<posx>20</posx>
+			<posy>147</posy>
+			<label>184</label>
+			<font>font13</font>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>5</onup>
+			<ondown>10</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="10">
+			<description>Get Thumb</description>
+			<posx>20</posx>
+			<posy>184</posy>
+			<label>13405</label>
+			<font>font13</font>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>6</onup>
+			<ondown>5</ondown>
+			<include>slideleft</include>
+		</control>
+	</control>
+
+	<include>16x9menu-background</include>
+
+	<control type="fadelabel" id="21">
+		<description>Artist value</description>
+		<posx>370</posx>
+		<posy>120</posy>
+		<width>285</width>
+		<label>-</label>
+		<font>special12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="fadelabel" id="20">
+		<description>Album value</description>
+		<posx>370</posx>
+		<posy>145</posy>
+		<width>285</width>
+		<label>-</label>
+		<font>special13</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="label" id="1">
+		<description>Year</description>
+		<posx>370</posx>
+		<posy>180</posy>
+		<label>$LOCALIZE[562]:</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="label" id="1">
+		<description>Rating</description>
+		<posx>370</posx>
+		<posy>205</posy>
+		<label>$LOCALIZE[563]:</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="label" id="1">
+		<description>Genre</description>
+		<posx>370</posx>
+		<posy>230</posy>
+		<label>$LOCALIZE[515]:</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="label" id="1">
+		<description>Tones</description>
+		<posx>370</posx>
+		<posy>255</posy>
+		<label>$LOCALIZE[175]:</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="label" id="1">
+		<description>Styles</description>
+		<posx>370</posx>
+		<posy>280</posy>
+		<label>$LOCALIZE[176]:</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="fadelabel" id="22">
+		<description>year value</description>
+		<width>195</width>
+		<posx>460</posx>
+		<posy>180</posy>
+		<label>-</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="fadelabel" id="23">
+		<description>Rating value</description>
+		<width>195</width>
+		<posx>460</posx>
+		<posy>205</posy>
+		<label>-</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="fadelabel" id="24">
+		<description>Genre value</description>
+		<width>195</width>
+		<posx>460</posx>
+		<posy>230</posy>
+		<label>-</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="fadelabel" id="25">
+		<description>Tones value</description>
+		<posx>460</posx>
+		<posy>255</posy>
+		<width>195</width>
+		<label>-</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="fadelabel" id="26">
+		<description>Styles value</description>
+		<width>195</width>
+		<posx>460</posx>
+		<posy>280</posy>
+		<label>-</label>
+		<font>font12</font>
+		<include>slideright</include>
+	</control>
+
+	<control type="image" id="3">
+		<description>Cover image</description>
+		<posx>220</posx>
+		<posy>120</posy>
+		<width>145</width>
+		<height>188</height>
+		<texture>-</texture>
+		<aspectratio>keep</aspectratio>
+		<include>slideright</include>
+	</control>
+
+	<control type="image">
+		<description>separator image</description>
+		<posx>211</posx>
+		<posy>310</posy>
+		<width>450</width>
+		<height>5</height>
+		<texture>separator.png</texture>
+		<include>slideright</include>
+	</control>
+
+	<control type="textbox" id="4">
+		<description>textarea</description>
+		<posx>220</posx>
+		<posy>320</posy>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<onup>5</onup>
+		<ondown>5</ondown>
+		<spinposx>410</spinposx>
+		<spinposy>205</spinposy>
+		<include>slideright</include>
+	</control>
+
+	<include>16x9slider</include>
+
+	<control>
+		<description>Description label</description>
+		<label>10523</label>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

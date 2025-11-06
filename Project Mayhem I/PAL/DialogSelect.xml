@@ -1,0 +1,52 @@
+﻿<window id="2000">
+	<defaultcontrol>3</defaultcontrol>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background2.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>number of files text label</description>
+			<posx>210</posx>
+			<posy>520</posy>
+			<label>-</label>
+			<font>font14</font>
+			<textcolor>ffb2d4f5</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="4">
+			<description>heading text label</description>
+			<posx>280</posx>
+			<posy>60</posy>
+			<label>181</label>
+			<font>font14</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="listcontrol" id="3">
+			<description>listcontrol</description>
+			<posx>211</posx>
+			<posy>121</posy>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="button" id="5">
+			<description>imdb</description>
+			<posx>60</posx>
+			<posy>120</posy>
+			<label>368</label>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+	</controls>
+</window>

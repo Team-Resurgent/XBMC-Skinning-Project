@@ -1,0 +1,64 @@
+<!-- TODO -->
+<window id="2008">
+
+	<defaultcontrol>450</defaultcontrol>
+
+	<animation effect="slide" time="150" start="0,-150" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="slide" time="150" end="0,-150" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+
+	<controls>
+	
+		<control type="list" id="450">
+			<viewtype label="535">list</viewtype>
+			<width>330</width>
+			<height>100</height>
+			<posx>360</posx>
+			<posy>20</posy>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<itemlayout width="30">
+				<control type="image">
+					<texture>$INFO[ListItem.Icon]</texture>
+					<width>40</width>
+					<height>40</height>
+					<posy>5</posy>
+				</control>
+			</itemlayout>
+			<focusedlayout width="40">
+				<control type="image">
+					<texture>$INFO[ListItem.Icon]</texture>
+					<width>40</width>
+					<height>40</height>
+					<posx>5</posx>
+					<posy>5</posy>
+					<animation effect="zoom" end="0,0,50,50" time="150">focus</animation>
+				</control>
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<width>60</width>
+					<height>22</height>
+					<posx>25</posx>
+					<posy>48</posy>
+					<font>dialog</font>
+					<textcolor>type-dialog-dark</textcolor>
+					<align>center</align>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Label]</label>
+			<height>22</height>
+			<posx>680</posx>
+			<posy>25</posy>
+			<font>dialog</font>
+			<textcolor>type-dialog-dark</textcolor>
+			<align>right</align>
+		</control>
+	
+	</controls>
+	
+</window>

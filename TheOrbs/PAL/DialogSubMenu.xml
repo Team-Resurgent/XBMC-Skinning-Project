@@ -1,0 +1,439 @@
+﻿<window id="105">
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<defaultcontrol>1124</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>10</posy>
+	</coordinates>
+	<controls>
+		<!-- control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>35</posx>
+      <posy>6</posy>
+      <width>255</width>
+      <height>250</height>
+      <texture>shutter.png</texture>
+  <visible>!player.hasmedia</visible> 
+    </control>
+
+    <control>
+      <description>label</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>60</posy>
+      <width>220</width>
+      <label>-</label>
+			<label>$LOCALIZE[150]: $INFO[Network.IPAddress]</label>
+      <align>center</align>
+      <font>font13</font>
+      <textcolor>grey-text</textcolor>
+      <colordiffuse>20ffffff</colordiffuse>
+  <visible>!player.hasmedia</visible> 
+    </control>
+
+
+
+    <control>
+      <description>label</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>90</posy>
+      <width>220</width>
+      <label>-</label>
+      <info>system.fanspeed</info>
+      <align>center</align>
+      <font>font13</font>
+      <textcolor>grey-text</textcolor>
+  <visible>!player.hasmedia</visible> 
+    </control>
+
+    <control>
+      <description>label</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>110</posy>
+      <width>220</width>
+      <label>-</label>
+      <info>system.cputemperature</info>
+      <align>center</align>
+      <font>font13</font>
+      <textcolor>grey-text</textcolor>
+  <visible>!player.hasmedia</visible> 
+    </control>
+
+    <control>
+      <description>label</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>130</posy>
+      <width>220</width>
+      <label>-</label>
+      <info>system.gputemperature</info>
+      <align>center</align>
+      <font>font13</font>
+      <textcolor>grey-text</textcolor>
+  <visible>!player.hasmedia</visible> 
+    </control> 
+
+    <control>
+      <description>label</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>160</posy>
+      <width>220</width>
+      <label>6</label>
+      <align>center</align>
+      <font>font13</font>
+      <textcolor>grey-text</textcolor>
+  <visible>!player.hasmedia</visible> 
+    </control> 
+
+    <control>
+      <description>label</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>180</posy>
+      <width>220</width>
+      <label>-</label>
+      <info>system.buildversion</info>
+      <align>center</align>
+      <font>font13</font>
+      <textcolor>grey-text</textcolor>
+  <visible>!player.hasmedia</visible> 
+    </control>  
+
+    <control>
+      <description>label</description>
+      <type>label</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>200</posy>
+      <width>220</width>
+      <label>-</label>
+      <info>system.builddate</info>
+      <align>center</align>
+      <font>font13</font>
+      <textcolor>grey-text</textcolor>
+  <visible>!player.hasmedia</visible> 
+    </control -->
+		<!--  to add another button to the submenu, just put in your hyperlink,  !-->
+		<!--  give it the desired label and set visible to yes!                  !-->
+		<!--  make sure you start from the bottom... scroll down!                !-->
+		<control type="button" id="1123">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>q:\scripts\-.py</onclick>
+			<label>-</label>
+			<posx>30</posx>
+			<posy>110</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1123</onleft>
+			<onright>1123</onright>
+			<onup>12</onup>
+			<ondown>1122</ondown>
+			<align>center</align>
+			<textoffsety>-1</textoffsety>
+		</control>
+		<control type="button" id="1122">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>q:\scripts\-.py</onclick>
+			<label>-</label>
+			<posx>30</posx>
+			<posy>130</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1122</onleft>
+			<onright>1122</onright>
+			<onup>1123</onup>
+			<ondown>1121</ondown>
+			<align>center</align>
+			<textoffsety>-1</textoffsety>
+		</control>
+		<control type="button" id="1121">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>q:\scripts\-.py</onclick>
+			<label>-</label>
+			<posx>30</posx>
+			<posy>150</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1121</onleft>
+			<onright>1121</onright>
+			<onup>1122</onup>
+			<ondown>1120</ondown>
+			<align>center</align>
+			<textoffsety>-1</textoffsety>
+		</control>
+		<control type="button" id="1120">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>q:\scripts\-.py</onclick>
+			<label>-</label>
+			<posx>30</posx>
+			<posy>170</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1120</onleft>
+			<onright>1120</onright>
+			<onup>1121</onup>
+			<ondown>1119</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+		</control>
+		<control type="button" id="1119">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>q:\scripts\-.py</onclick>
+			<label>-</label>
+			<posx>30</posx>
+			<posy>190</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1119</onleft>
+			<onright>1119</onright>
+			<onup>1120</onup>
+			<ondown>1118</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+		</control>
+		<control type="button" id="1118">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>q:\scripts\-.py</onclick>
+			<label>-</label>
+			<posx>30</posx>
+			<posy>210</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1118</onleft>
+			<onright>1118</onright>
+			<onup>1119</onup>
+			<ondown>1117</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+		</control>
+		<control type="button" id="1117">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>q:\scripts\-.py</onclick>
+			<label>-</label>
+			<posx>30</posx>
+			<posy>230</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1117</onleft>
+			<onright>1117</onright>
+			<onup>1118</onup>
+			<ondown>1116</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+		</control>
+		<control type="button" id="1116">
+			<description>submenu button</description>
+			<visible>no</visible>
+			<onclick>ActivateWindow(35)</onclick>
+			<label>r.a.m.</label>
+			<posx>30</posx>
+			<posy>250</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font101</font>
+			<onleft>1116</onleft>
+			<onright>1116</onright>
+			<onup>1117</onup>
+			<ondown>1115</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+		</control>
+		<!--  start from here going up, if you want to add new buttons           !-->
+		<!--  to link direct to a script,xbe/audio/video file use (eg):          !-->
+		<!--  <onclick>f:\emulators\scummvmx\default.xbe</onclick>               !-->
+		<!--  see the webradio button as example.                                !-->
+		<!--  to link to a xbmc screen use <onclick>ActivateWindow(windowid)</onclick>       !-->
+		<!--  see system info button below as example.                           !-->
+		<control type="button" id="1124">
+			<description>scripts button</description>
+			<posx>80</posx>
+			<posy>280</posy>
+			<width>180</width>
+			<height>37</height>
+			<pulseonselect>false</pulseonselect>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>ddffffff</textcolor>
+			<colordiffuse>ffffffff</colordiffuse>
+			<animation effect="slide" time="300" start="0,228" acceleration="-1">WindowOpen</animation>
+			<animation effect="slide" time="300" end="0,228" acceleration="1">WindowClose</animation>
+			<onclick>ActivateWindow(20)</onclick>
+			<label>247</label>
+			<font>font14</font>
+			<onleft>1124</onleft>
+			<onright>1124</onright>
+			<onup>1115</onup>
+			<ondown>1125</ondown>
+			<align>left</align>
+			<aligny>center</aligny>
+		</control>
+		<control type="button" id="1125">
+			<description>submenu button</description>
+			<visible>yes</visible>
+			<onclick>q:\scripts\quicktimebrowser137mod\quicktimebrowser.py</onclick>
+			<label>Movie Trailers</label>
+			<posx>80</posx>
+			<posy>318</posy>
+			<width>180</width>
+			<height>37</height>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="slide" time="300" start="0,190" acceleration="-1">WindowOpen</animation>
+			<animation effect="slide" time="300" end="0,190" acceleration="1">WindowClose</animation>
+			<textoffsetx>30</textoffsetx>
+			<font>font14</font>
+			<onleft>1125</onleft>
+			<onright>1125</onright>
+			<onup>1124</onup>
+			<ondown>1111</ondown>
+			<align>left</align>
+			<aligny>center</aligny>
+			<disabledcolor>00000000</disabledcolor>
+		</control>
+		<control type="button" id="1111">
+			<description>submenu button</description>
+			<visible>yes</visible>
+			<onclick>q:\scripts\kmlbrowse.py</onclick>
+			<label>Web Radio</label>
+			<posx>80</posx>
+			<posy>356</posy>
+			<width>180</width>
+			<height>37</height>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="slide" time="300" start="0,152" acceleration="-1">WindowOpen</animation>
+			<animation effect="slide" time="300" end="0,152" acceleration="1">WindowClose</animation>
+			<textoffsetx>30</textoffsetx>
+			<font>font14</font>
+			<onleft>1111</onleft>
+			<onright>1111</onright>
+			<onup>1125</onup>
+			<ondown>1112</ondown>
+			<align>left</align>
+			<aligny>center</aligny>
+			<disabledcolor>00000000</disabledcolor>
+		</control>
+		<control type="button" id="1112">
+			<description>submenu button</description>
+			<visible>yes</visible>
+			<onclick>q:\scripts\launchbrowser\launchbrowser.py</onclick>
+			<label>Music Videos</label>
+			<posx>80</posx>
+			<posy>394</posy>
+			<width>180</width>
+			<height>37</height>
+			<textoffsetx>30</textoffsetx>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="slide" time="300" start="0,114" acceleration="-1">WindowOpen</animation>
+			<animation effect="slide" time="300" end="0,114" acceleration="1">WindowClose</animation>
+			<font>font14</font>
+			<onleft>1112</onleft>
+			<onright>1112</onright>
+			<onup>1111</onup>
+			<ondown>1113</ondown>
+			<align>left</align>
+			<aligny>center</aligny>
+			<disabledcolor>00000000</disabledcolor>
+		</control>
+		<control type="button" id="1113">
+			<description>submenu button</description>
+			<visible>yes</visible>
+			<onclick>q:\scripts\ooba\ooba.py</onclick>
+			<label>Ooba Browser</label>
+			<posx>80</posx>
+			<posy>432</posy>
+			<width>180</width>
+			<height>37</height>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="slide" time="300" start="0,76" acceleration="-1">WindowOpen</animation>
+			<animation effect="slide" time="300" end="0,76" acceleration="1">WindowClose</animation>
+			<textoffsetx>30</textoffsetx>
+			<font>font14</font>
+			<onleft>1113</onleft>
+			<onright>1113</onright>
+			<onup>1112</onup>
+			<ondown>1114</ondown>
+			<align>left</align>
+			<aligny>center</aligny>
+			<disabledcolor>00000000</disabledcolor>
+		</control>
+		<control type="button" id="1114">
+			<description>submenu button</description>
+			<visible>yes</visible>
+			<onclick>q:\scripts\xboxtorrents-sky\xboxtorrents.py</onclick>
+			<label>Xbox Torrents</label>
+			<posx>80</posx>
+			<posy>470</posy>
+			<width>180</width>
+			<height>37</height>
+			<textoffsetx>30</textoffsetx>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="slide" time="300" start="0,38" acceleration="-1">WindowOpen</animation>
+			<animation effect="slide" time="300" end="0,38" acceleration="1">WindowClose</animation>
+			<font>font14</font>
+			<onleft>1114</onleft>
+			<onright>1114</onright>
+			<onup>1113</onup>
+			<ondown>1115</ondown>
+			<align>left</align>
+			<aligny>center</aligny>
+		</control>
+		<control type="button" id="1115">
+			<description>submenu button</description>
+			<visible>yes</visible>
+			<onclick>q:\scripts\Restartkaidddwrt.py</onclick>
+			<label>Restart Kai</label>
+			<posx>80</posx>
+			<posy>508</posy>
+			<width>180</width>
+			<height>37</height>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="slide" time="300" start="0,0" acceleration="-1">WindowOpen</animation>
+			<animation effect="slide" time="300" end="0,0" acceleration="1">WindowClose</animation>
+			<textoffsetx>30</textoffsetx>
+			<font>font14</font>
+			<onleft>1115</onleft>
+			<onright>1115</onright>
+			<onup>1114</onup>
+			<ondown>1124</ondown>
+			<align>left</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- control>
+      <description>orb image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>15</posx>
+      <posy>-30</posy>
+      <width>311</width>
+      <height>307</height>
+      <texture>top-orb.png</texture>
+      <colordiffuse>ffffffff</colordiffuse>
+  <visible>!player.hasmedia</visible> 
+    </control -->
+	</controls>
+</window> 

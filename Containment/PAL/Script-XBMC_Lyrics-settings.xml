@@ -1,0 +1,586 @@
+﻿<window>
+	<defaultcontrol>201</defaultcontrol>
+	<controls>
+		<!-- Start Menu Background -->
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>480</width>
+			<height>32</height>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture>dialog-context-end.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>70</posy>
+			<width>480</width>
+			<height>390</height>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture>dialog-context-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>460</posy>
+			<width>480</width>
+			<height>32</height>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture flipy="true">dialog-context-end.png</texture>
+		</control>
+		<control type="image">
+			<description>separator</description>
+			<posx>5</posx>
+			<posy>90</posy>
+			<width>470</width>
+			<height>5</height>
+			<colordiffuse>object-color</colordiffuse>
+			<texture>line-horizontal.png</texture>
+		</control>
+		<!-- End Menu Background -->
+		<!-- labels -->
+		<!-- ** Required ** Do not change id or type -->
+		<control type="label" id="20">
+			<description>Title Label</description>
+			<posx>20</posx>
+			<posy>55</posy>
+			<width>280</width>
+			<align>left</align>
+			<font>font14</font>
+			<textcolor>main-text</textcolor>
+			<label>-</label>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="label" id="30">
+			<description>Version Label</description>
+			<posx>465</posx>
+			<posy>55</posy>
+			<width>150</width>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>main-text</textcolor>
+			<label>-</label>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="spincontrol" id="900">
+			<description>page label</description>
+			<posx>438</posx>
+			<posy>338</posy>
+			<subtype>page</subtype>
+			<showonepage>true</showonepage>
+			<visible>false</visible>
+		</control>
+		<!-- ** Required ** Do not change id's or type's -->
+		<control type="grouplist" id="9000">
+			<posx>20</posx>
+			<posy>110</posy>
+			<width>440</width>
+			<height>286</height>
+			<itemgap>2</itemgap>
+			<pagecontrol>900</pagecontrol>
+			<control type="group">
+				<height>32</height>
+				<control type="button" id="201">
+					<description>Setting1 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>object-color</colordiffuse>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>2000</onup>
+					<ondown>202</ondown>
+				</control>
+				<control type="button" id="221">
+					<description>Setting1 Value</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+			</control>
+			<control type="group">
+				<height>32</height>
+				<control type="button" id="202">
+					<description>Setting2 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>object-color</colordiffuse>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>201</onup>
+					<ondown>203</ondown>
+				</control>
+				<control type="checkmark" id="222">
+					<description>Setting2 Value</description>
+					<posx>410</posx>
+					<posy>5</posy>
+					<width>50</width>
+					<height>32</height>
+					<align>left</align>
+					<label>-</label>
+					<font>font13</font>
+					<colordiffuse>object-color</colordiffuse>
+					<texturecheckmark>checkbox-fo.png</texturecheckmark>
+					<texturecheckmarknofocus>checkbox-nf.png</texturecheckmarknofocus>
+				</control>
+			</control>
+			<control type="group">
+				<height>32</height>
+				<control type="button" id="203">
+					<description>Setting3 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>object-color</colordiffuse>
+					<onleft>9000</onleft>
+					<onright>2000</onright>
+					<onup>202</onup>
+					<ondown>204</ondown>
+				</control>
+				<control type="button" id="223">
+					<description>Setting3 Value</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+			</control>
+			<control type="group">
+				<height>32</height>
+				<control type="button" id="204">
+					<description>Setting4 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>object-color</colordiffuse>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>203</onup>
+					<ondown>205</ondown>
+				</control>
+				<control type="checkmark" id="224">
+					<description>Setting4 Value</description>
+					<posx>410</posx>
+					<posy>5</posy>
+					<width>50</width>
+					<height>32</height>
+					<align>left</align>
+					<label>-</label>
+					<font>font13</font>
+					<colordiffuse>object-color</colordiffuse>
+					<texturecheckmark>checkbox-fo.png</texturecheckmark>
+					<texturecheckmarknofocus>checkbox-nf.png</texturecheckmarknofocus>
+				</control>
+			</control>
+			<control type="group">
+				<height>32</height>
+				<control type="button" id="205">
+					<description>Setting5 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>object-color</colordiffuse>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>204</onup>
+					<ondown>2000</ondown>
+				</control>
+				<control type="checkmark" id="225">
+					<description>Setting5 Value</description>
+					<posx>410</posx>
+					<posy>5</posy>
+					<width>50</width>
+					<height>32</height>
+					<align>left</align>
+					<label>-</label>
+					<font>font13</font>
+					<colordiffuse>object-color</colordiffuse>
+					<texturecheckmark>checkbox-fo.png</texturecheckmark>
+					<texturecheckmarknofocus>checkbox-nf.png</texturecheckmarknofocus>
+				</control>
+			</control>
+			<control type="group">
+				<visible>false</visible>
+				<height>32</height>
+				<control type="button" id="206">
+					<description>Setting6 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<onleft>2000</onleft>
+					<onright>2000</onright>
+					<onup>205</onup>
+					<ondown>207</ondown>
+				</control>
+				<control type="button" id="226">
+					<description>Setting6 Value</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>false</visible>
+				<height>32</height>
+				<control type="button" id="207">
+					<description>Setting7 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<onleft>2000</onleft>
+					<onright>2000</onright>
+					<onup>206</onup>
+					<ondown>208</ondown>
+				</control>
+				<control type="button" id="227">
+					<description>Setting7 Value</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>false</visible>
+				<height>32</height>
+				<control type="button" id="208">
+					<description>Setting8 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<onleft>2000</onleft>
+					<onright>2000</onright>
+					<onup>207</onup>
+					<ondown>209</ondown>
+				</control>
+				<control type="button" id="228">
+					<description>Setting8 Value</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>false</visible>
+				<height>32</height>
+				<control type="button" id="209">
+					<description>Setting9 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<onleft>2000</onleft>
+					<onright>2000</onright>
+					<onup>208</onup>
+					<ondown>210</ondown>
+				</control>
+				<control type="button" id="229">
+					<description>Setting9 Value</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>false</visible>
+				<height>32</height>
+				<control type="button" id="210">
+					<description>Setting10 Button</description>
+					<width>440</width>
+					<height>32</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<onleft>2000</onleft>
+					<onright>2000</onright>
+					<onup>209</onup>
+					<ondown>211</ondown>
+				</control>
+				<control type="button" id="230">
+					<description>Setting10 Value</description>
+					<width>440</width>
+					<height>32</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>false</visible>
+				<height>32</height>
+				<control type="button" id="211">
+					<description>Setting11 Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus>line.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<onleft>2000</onleft>
+					<onright>2000</onright>
+					<onup>210</onup>
+					<ondown>201</ondown>
+				</control>
+				<control type="checkmark" id="231">
+					<description>Setting11 Value</description>
+					<posx>320</posx>
+					<posy>5</posy>
+					<width>50</width>
+					<height>32</height>
+					<align>left</align>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>ffffffff</textcolor>
+					<texturecheckmark>checkbox-fo.png</texturecheckmark>
+					<texturecheckmarknofocus>checkbox-nf.png</texturecheckmarknofocus>
+					<markwidth>16</markwidth>
+					<markheight>20</markheight>
+					<disabledcolor>00d0d0d0</disabledcolor>
+					<shadowcolor>00000000</shadowcolor>
+				</control>
+			</control>
+		</control>
+		<!-- ** Required ** Do not change id's or type's -->
+		<control type="group" id="2000">
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<control type="button" id="250">
+				<description>Ok Button</description>
+				<posx>20</posx>
+				<posy>450</posy>
+				<width>90</width>
+				<height>32</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>-</label>
+				<font>font10</font>
+				<textoffsetx>17</textoffsetx>
+				<texturenofocus>button.png</texturenofocus>
+				<texturefocus>button.png</texturefocus>
+				<onleft>252</onleft>
+				<onright>251</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="button" id="251">
+				<description>Cancel Button</description>
+				<posx>120</posx>
+				<posy>450</posy>
+				<width>90</width>
+				<height>32</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>-</label>
+				<font>font10</font>
+				<textoffsetx>17</textoffsetx>
+				<texturenofocus>button.png</texturenofocus>
+				<texturefocus>button.png</texturefocus>
+				<onleft>250</onleft>
+				<onright>252</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="button" id="252">
+				<description>Update Button</description>
+				<posx>220</posx>
+				<posy>450</posy>
+				<width>90</width>
+				<height>32</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>-</label>
+				<font>font10</font>
+				<textoffsetx>17</textoffsetx>
+				<texturenofocus>button.png</texturenofocus>
+				<texturefocus>button.png</texturefocus>
+				<onleft>251</onleft>
+				<onright>250</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<enable>System.InternetState</enable>
+			</control>
+			<control type="button" id="253">
+				<description>Credits Button</description>
+				<posx>340</posx>
+				<posy>165</posy>
+				<width>90</width>
+				<height>32</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<texturenofocus>keyboard-btn-backspace.png</texturenofocus>
+				<texturefocus>keyboard-btn-backspace-focus.png</texturefocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>252</onup>
+				<ondown>250</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

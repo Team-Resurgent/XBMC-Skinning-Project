@@ -1,0 +1,128 @@
+<window id="1">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Slider_Glow_Common</include>
+		<control type="group">
+			<include>Fade_List_FocusUnfocus_Animation</include>
+			<include>CommonListView</include>
+			<include>CommonListView2</include>
+			<include>CommonThumbSmall</include>
+			<include>CommonThumbBig</include>
+			<include>WideIcon_Small</include>
+			<include>WideIcon_Big</include>
+		</control>
+		<include>AllCommonPageControls</include>
+		<control type="group" id="9000">
+			<description>Sidebar group</description>
+			<posx>-160</posx>
+			<animation effect="slide" time="100" start="160,0">unfocus</animation>
+			<animation effect="slide" time="100" end="160,0">focus</animation>
+			<control type="image">
+				<description>Sidebar Back image</description>
+				<posx>-145</posx>
+				<posy>0</posy>
+				<width>425</width>
+				<height>577</height>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="button" id="2">
+				<description>view as icons button</description>
+				<posy>120</posy>
+				<label>100</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>99</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="3">
+				<description>sort by button</description>
+				<posy>150</posy>
+				<label>103</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>sort asc</description>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="button" id="5">
+				<description>gsm button</description>
+				<posy>180</posy>
+				<label>Game Saves</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>ActivateWindow(35)</onclick>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>99</ondown>
+			</control>
+			<control type="button" id="99">
+				<description>online gaming button</description>
+				<posy>210</posy>
+				<label>998</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>ActivateWindow(XLinkKai)</onclick>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>2</ondown>
+			</control>
+			<include>SlideBarClock</include>
+			<include>SlideBarWeather</include>
+		</control>
+		<control type="image">
+			<description>Top Bar BACK</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>105</height>
+			<texture>TBGames.png</texture>
+		</control>
+		<control type="image">
+			<description>folder image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>106</height>
+			<aspectratio align="right">keep</aspectratio>
+			<info>container.folderthumb</info>
+		</control>
+		<control type="image">
+			<description>Top Bar FRONT</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>116</height>
+			<texture>Topbar_Front.png</texture>
+		</control>
+		<control type="label">
+			<description>my programs text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>0</label>
+			<font>font20</font>
+			<visible>!Skin.HasSetting(No_Title_Text)</visible>
+		</control>
+		<include>MusicNowPlayingDisplay</include>
+		<include>Number_of_Files_Count</include>
+	</controls>
+</window>

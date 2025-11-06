@@ -1,0 +1,135 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>90</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>40</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>42</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>20096</label>
+				<font>font16b</font>
+			</control>
+			<control type="fixedlist" id="52">
+				<posx>240</posx>
+				<posy>100</posy>
+				<width>800</width>
+				<height>620</height>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<viewtype label="$LOCALIZE[535] 2">list</viewtype>
+				<focusposition>1</focusposition>
+				<scrolltime>200</scrolltime>
+				<orientation>vertical</orientation>
+				<itemlayout height="91" width="800">
+					<control type="image">
+						<posx>150</posx>
+						<posy>5</posy>
+						<width>76</width>
+						<height>76</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="image">
+						<posx>210</posx>
+						<posy>49</posy>
+						<width>32</width>
+						<height>32</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<aspectratio>keep</aspectratio>
+						<info>Listitem.Overlay</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>5</posy>
+						<width>315</width>
+						<height>35</height>
+						<font>font16</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>45</posy>
+						<width>315</width>
+						<height>35</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<textcolor>white2</textcolor>
+						<align>left</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="91" width="800">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>800</width>
+						<height>86</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(52)</visible>
+						<texture>ListItem_Focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>150</posx>
+						<posy>5</posy>
+						<width>76</width>
+						<height>76</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="image">
+						<posx>210</posx>
+						<posy>49</posy>
+						<width>32</width>
+						<height>32</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<aspectratio>keep</aspectratio>
+						<info>Listitem.Overlay</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>5</posy>
+						<width>315</width>
+						<height>35</height>
+						<font>font16</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>235</posx>
+						<posy>45</posy>
+						<width>315</width>
+						<height>35</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<textcolor>white2</textcolor>
+						<align>left</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>

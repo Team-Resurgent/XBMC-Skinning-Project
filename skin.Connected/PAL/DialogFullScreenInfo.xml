@@ -1,0 +1,204 @@
+<window type="dialog" id="142">
+ <defaultcontrol always="true">1</defaultcontrol>
+	<controls>
+    
+    <!-- Videos Info -->
+    <control type="group">
+      <posx>300</posx>
+      <posy>15</posy>
+      <include>SlideFromRight</include>
+      <include>NowPlayingBack</include>
+      <visible>!Window.IsVisible(123) + !Window.IsVisible(124) + !Window.IsVisible(125)</visible>
+
+      <!-- Common Info -->
+      <control type="image">
+        <description>Header Back</description>
+        <width>400</width>
+        <height>45</height>
+        <align>left</align>
+        <texture>ButtonNF.png</texture>
+      </control>
+      <control type="label" id="1">
+        <description>Current Time Label</description>
+        <posx>390</posx>
+        <width>100</width>
+        <height>45</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[System.Time]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+      <control type="image" id="1">
+        <description>Media Cover Image</description>
+        <posx>10</posx>
+        <posy>55</posy>
+        <width>85</width>
+        <height>85</height>
+        <texture>DefaultVideoCover.png</texture>
+        <info>VideoPlayer.Cover</info>
+        <aspectratio align="left" aligny="top">keep</aspectratio>
+        <bordertexture border="14">ButtonNF.png</bordertexture>
+        <bordersize>5</bordersize>
+      </control>
+      <control type="progress" id="1">
+        <description>Progressbar</description>
+        <posx>105</posx>
+        <posy>127</posy>
+        <width>125</width>
+        <info>Player.Progress</info>
+      </control>
+      <control type="label" id="1">
+        <description>Time Remaining</description>
+        <posx>390</posx>
+        <posy>115</posy>
+        <width>200</width>
+        <height>30</height>
+        <align>right</align>
+        <label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ]</label>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <scroll>true</scroll>
+      </control>
+
+      <!-- General Video Info -->
+      <control type="label" id="401">
+        <description>Header Label</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>270</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[VideoPlayer.Title] [COLOR=FocusedTextColor]$INFO[VideoPlayer.Year][/COLOR]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>!videoplayer.content(movies) + !videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
+      </control>
+
+      <!-- Movie Info -->
+      <control type="label" id="401">
+        <description>Header Label</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>270</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[VideoPlayer.Title] [COLOR=FocusedTextColor]$INFO[VideoPlayer.Year][/COLOR]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>videoplayer.content(movies)</visible>
+      </control>
+      <control type="label" id="1">
+        <description>Genre</description>
+        <posx>105</posx>
+        <posy>55</posy>
+        <width>285</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$INFO[VideoPlayer.Genre]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <visible>videoplayer.content(movies)</visible>
+      </control>
+      <control type="label" id="1">
+        <description>Director</description>
+        <posx>105</posx>
+        <posy>85</posy>
+        <width>300</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$INFO[VideoPlayer.Director]</label>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <scroll>true</scroll>
+        <visible>videoplayer.content(movies)</visible>
+      </control>
+
+      <!-- Episode Info -->
+      <control type="label" id="401">
+        <description>Header Label</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>270</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[VideoPlayer.TVShowTitle] [COLOR=FocusedTextColor]$INFO[VideoPlayer.Year][/COLOR]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>videoplayer.content(episodes)</visible>
+      </control>
+      <control type="label" id="1">
+        <description>Title</description>
+        <posx>105</posx>
+        <posy>55</posy>
+        <width>285</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$INFO[VideoPlayer.Title]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <visible>videoplayer.content(episodes)</visible>
+      </control>
+      <control type="label" id="1">
+        <description>Season and Episode</description>
+        <posx>105</posx>
+        <posy>85</posy>
+        <width>300</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$LOCALIZE[20373]: $INFO[VideoPlayer.Season] $LOCALIZE[20359]: $INFO[VideoPlayer.Episode]</label>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <scroll>true</scroll>
+        <visible>videoplayer.content(episodes)</visible>
+      </control>
+
+      <!-- Music Videos Info -->
+      <control type="label" id="401">
+        <description>Header Label</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>270</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[VideoPlayer.Artist] [COLOR=FocusedTextColor]$INFO[VideoPlayer.Year][/COLOR]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>videoplayer.content(musicvideos)</visible>
+      </control>
+      <control type="label" id="1">
+        <description>Title</description>
+        <posx>105</posx>
+        <posy>55</posy>
+        <width>285</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$INFO[VideoPlayer.Title]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <visible>videoplayer.content(musicvideos)</visible>
+      </control>
+      <control type="label" id="1">
+        <description>Album</description>
+        <posx>105</posx>
+        <posy>85</posy>
+        <width>300</width>
+        <height>30</height>
+        <align>left</align>
+        <label>$INFO[VideoPlayer.Album]</label>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <scroll>true</scroll>
+        <visible>videoplayer.content(musicvideos)</visible>
+      </control>
+    </control>
+    
+	</controls>
+</window>

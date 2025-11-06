@@ -1,0 +1,319 @@
+<window id="2003">
+	<defaultcontrol>90</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<controls>
+		<include>CommonBackground_FullscreenDialogs</include>
+		<control type="group">
+			<include>Fade_List_FocusUnfocus_Animation</include>
+			<control type="label">
+				<description>director txt</description>
+				<posx>70</posx>
+				<posy>110</posy>
+				<label>$LOCALIZE[20339]:</label>
+			</control>
+			<control type="label">
+				<description>writing credits txt</description>
+				<posx>70</posx>
+				<posy>135</posy>
+				<label>$LOCALIZE[20417]:</label>
+			</control>
+			<control type="label">
+				<description>genre txt</description>
+				<posx>70</posx>
+				<posy>160</posy>
+				<label>$LOCALIZE[515]:</label>
+			</control>
+			<control type="label">
+				<description>year</description>
+				<posx>70</posx>
+				<posy>185</posy>
+				<label>$LOCALIZE[562]:</label>
+			</control>
+			<control type="label">
+				<description>tagline txt</description>
+				<posx>70</posx>
+				<posy>210</posy>
+				<label>$LOCALIZE[202]:</label>
+			</control>
+			<control type="label">
+				<description>plotoutline txt</description>
+				<posx>70</posx>
+				<posy>235</posy>
+				<label>$LOCALIZE[203]:</label>
+			</control>
+			<control type="label">
+				<description>rating txt</description>
+				<posx>70</posx>
+				<posy>260</posy>
+				<label>$LOCALIZE[563]:</label>
+			</control>
+			<control type="label">
+				<description>runtime txt</description>
+				<posx>70</posx>
+				<posy>285</posy>
+				<label>$LOCALIZE[2050]:</label>
+			</control>
+			<control type="label" id="21">
+				<description>director value</description>
+				<posx>190</posx>
+				<posy>110</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="label" id="22">
+				<description>writing credits value</description>
+				<posx>190</posx>
+				<posy>135</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="label" id="23">
+				<description>genre value</description>
+				<posx>190</posx>
+				<posy>160</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="label" id="24">
+				<description>year value</description>
+				<posx>190</posx>
+				<posy>185</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="fadelabel" id="25">
+				<description>tagline value</description>
+				<posx>190</posx>
+				<posy>210</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="fadelabel" id="26">
+				<description>plotoutline value</description>
+				<posx>190</posx>
+				<posy>235</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="label" id="30">
+				<description>rating and votes value</description>
+				<posx>190</posx>
+				<posy>260</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="label" id="31">
+				<description>runtime value</description>
+				<posx>190</posx>
+				<posy>285</posy>
+				<width>290</width>
+				<label>-</label>
+			</control>
+			<control type="textbox" id="4">
+				<description>textarea</description>
+				<posx>70</posx>
+				<posy>320</posy>
+				<width>410</width>
+				<height>230</height>
+				<pagecontrol>90</pagecontrol>
+				<onleft>5</onleft>
+				<onright>90</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="list" id="50">
+				<posx>50</posx>
+				<posy>320</posy>
+				<width>470</width>
+				<height>210</height>
+				<onleft>9000</onleft>
+				<onright>90</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>90</pagecontrol>
+				<itemlayout height="32">
+					<control type="label">
+						<posx>20</posx>
+						<posy>4</posy>
+						<width>370</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50">
+					<control type="image">
+						<width>470</width>
+						<height>46</height>
+						<posx>0</posx>
+						<posy>2</posy>
+						<texture>ListItem_Focus.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>8</posy>
+						<width>370</width>
+						<height>22</height>
+						<font>font22</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image" id="3">
+				<description>Cover Image</description>
+				<posx>490</posx>
+				<posy>130</posy>
+				<width>200</width>
+				<height>300</height>
+				<texture>-</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="group" id="9002">
+				<posx>590</posx>
+				<posy>510</posy>
+				<control type="image">
+					<description>Scroller Highlight</description>
+					<posx>-100</posx>
+					<posy>-25</posy>
+					<width>200</width>
+					<height>60</height>
+					<texture>Scroller_Focus.png</texture>
+				</control>
+				<control type="spincontrol" id="90">
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<showonepage>true</showonepage>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9000">
+			<description>Sidebar group</description>
+			<posx>-160</posx>
+			<animation effect="slide" time="100" start="160,0">unfocus</animation>
+			<animation effect="slide" time="100" end="160,0">focus</animation>
+			<control type="image">
+				<description>Sidebar Glow image</description>
+				<posx>200</posx>
+				<posy>0</posy>
+				<width>77</width>
+				<height>577</height>
+				<texture>BlueGlow.png</texture>
+			</control>
+			<control type="image">
+				<description>Sidebar Back image</description>
+				<posx>-145</posx>
+				<posy>0</posy>
+				<width>425</width>
+				<height>577</height>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="button" id="5">
+				<description>Cast - Description button</description>
+				<posy>120</posy>
+				<label>206</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>10</onup>
+				<ondown>6</ondown>
+			</control>
+			<control type="button" id="6">
+				<description>refresh</description>
+				<posy>150</posy>
+				<label>184</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>font20</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>8</ondown>
+			</control>
+			<control type="button" id="8">
+				<description>Play</description>
+				<posy>180</posy>
+				<label>208</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>9</ondown>
+			</control>
+			<control type="button" id="9">
+				<description>Resume</description>
+				<posy>210</posy>
+				<label>13404</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onup>8</onup>
+				<ondown>10</ondown>
+			</control>
+			<control type="button" id="10">
+				<description>Get Thumb</description>
+				<posy>240</posy>
+				<label>13405</label>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9</onup>
+				<ondown>5</ondown>
+			</control>
+			<include>SlideBarClock</include>
+			<include>SlideBarWeather</include>
+		</control>
+		<control type="image">
+			<description>Top Bar BACK</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>105</height>
+			<texture>TBVideos.png</texture>
+		</control>
+		<control type="image">
+			<description>folder image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>106</height>
+			<aspectratio align="right">keep</aspectratio>
+			<info>container.folderthumb</info>
+		</control>
+		<control type="image">
+			<description>Top Bar FRONT</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>116</height>
+			<texture>Topbar_Front.png</texture>
+		</control>
+		<control type="label" id="20">
+			<description>Main Heading text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>3</label>
+			<font>font20</font>
+		</control>
+	</controls>
+</window>

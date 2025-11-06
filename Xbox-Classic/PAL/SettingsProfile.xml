@@ -1,0 +1,182 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="image">
+			<posx>460</posx>
+			<posy>350</posy>
+			<height>320</height>
+			<width>300</width>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<texture>home-settings.png</texture>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<include>XBMC_Logo_Image</include>
+		<control type="label">
+			<description>my programs text label</description>
+			<posx>242</posx>
+			<posy>70</posy>
+			<label>13200</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="group">
+			<posx>45</posx>
+			<include>Slide_From_Left_Animation</include>
+			<control type="image">
+				<description>panel</description>
+				<posx>0</posx>
+				<posy>115</posy>
+				<height>250</height>
+				<width>150</width>
+				<texture>panel.png</texture>
+			</control>
+			<control type="image">
+				<description>Middle panel Bar</description>
+				<posx>0</posx>
+				<posy>190</posy>
+				<height>20</height>
+				<width>150</width>
+				<texture>middle-bar.png</texture>
+			</control>
+			<control type="radiobutton" id="4">
+				<description>use logon</description>
+				<posx>5</posx>
+				<posy>120</posy>
+				<label>20096</label>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+		<control type="fadelabel" id="3">
+			<description>last loaded</description>
+			<posx>210</posx>
+			<posy>525</posy>
+			<width>656</width>
+			<label>$LOCALIZE[13204] $INFO[system.profilename]</label>
+			<font>font13</font>
+			<textcolor>green</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="list" id="2">
+			<posx>211</posx>
+			<posy>121</posy>
+			<width>440</width>
+			<height>260</height>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<include>Slide_From_Right_Animation</include>
+			<itemlayout height="33">
+				<control type="image">
+					<width>440</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>18</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>31</posx>
+					<posy>4</posy>
+					<width>420</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>430</posx>
+					<posy>4</posy>
+					<width>380</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="33">
+				<control type="image">
+					<width>440</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<width>440</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>1</posy>
+					<texture>list-nofocus.png</texture>
+					<visible>!Control.HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>18</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>31</posx>
+					<posy>4</posy>
+					<width>420</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>430</posx>
+					<posy>4</posy>
+					<width>380</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>right</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

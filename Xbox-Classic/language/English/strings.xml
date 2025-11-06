@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<!-- !!!!!!!!!!  DONT TRANSLATE THE TEXT $INFO[System.FreeSpace(E)] IN INCLUDE 1006 !!!!!!!! -->
+<strings>
+	<string id="31001">-</string>
+	<string id="31002">Disable Skin Animation</string>
+	<string id="31003">Use Visualisation for Background</string>
+	<string id="31004">Show big icon in list View Mode</string>
+	<string id="31005">Show Audio Now Playing on Home Screen</string>
+	<string id="31006">XBOX GAME SAVES</string>
+	<string id="31007">Total Free Space $INFO[System.FreeSpace(E)]</string>
+	<string id="31008">Dual RSS Feeds in Home - (Restart Required)</string>
+	<string id="31009">Show Cover Art in Full Screen Music info</string>
+	<string id="31010">Show Cover Art in Full Screen Video info</string>
+	<string id="31011">Watched Overlays on Video Library Thumbs</string>
+	<string id="31012">Submenu Button goes to Scripts Window</string>
+	<string id="31013">Change Skin Script Options</string>
+
+	<string id="31014">Skin Script Options</string>
+	<string id="31015">Enable button in Weather</string>
+	<string id="31016">Enable button in Video Files</string>
+	<string id="31017">Show Lyrics button in Music OSD</string>
+	<string id="31018">Button Label :</string>
+	<string id="31019">Script Path :</string>
+
+	<string id="31020">Settings</string>
+	<string id="31021">Change the skin</string>
+	<string id="31022">Adjust sound settings</string>
+	<string id="31023">Calibrate screen size</string>
+	<string id="31024">Choose a screensaver</string>
+	<string id="31025">Edit network settings</string>
+	<string id="31026">Check drive space</string>
+</strings>

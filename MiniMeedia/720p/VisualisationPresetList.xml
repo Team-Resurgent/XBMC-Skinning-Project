@@ -1,0 +1,120 @@
+<window id="122">
+  <defaultcontrol>2</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <include>HorizWideDialogPos</include>
+      <include>VideoOSDSlideLeft</include>
+
+      <control type="image">
+        <description>Background Image</description>
+        <posx>-20</posx>
+        <include>HorizWideDialogBGDims</include>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="label">
+        <description>Current label</description>
+        <posy>14</posy>
+        <width>HorizWideDialogTextWidth</width>
+        <aligny>bottom</aligny>
+        <label>$LOCALIZE[31401]</label>
+        <font>MediumDefaultFont</font>
+      </control>
+      <control type="label">
+        <description>Visualisation label</description>
+        <posy>38</posy>
+        <width>HorizWideDialogTextWidth</width>
+        <aligny>top</aligny>
+        <label>$LOCALIZE[250]</label>
+        <font>TitleFont</font>
+      </control>
+
+      <control type="label">
+        <description>heading label</description>
+        <posy>90</posy>
+        <width>HorizWideDialogTextWidth</width>
+        <label>$INFO[Visualisation.Name]</label>
+        <font>MediumDefaultFont</font>
+      </control>
+
+      <control type="label" id="4">
+        <description>No presets label</description>
+        <posx>20</posx>
+        <posy>140</posy>
+        <width>HorizWideDialogTextWidth</width>
+        <label>13389</label>
+        <align>center</align>
+      </control>
+
+      <control type="label">
+        <description>Change label</description>
+        <posy>134</posy>
+        <width>HorizWideDialogTextWidth</width>
+        <aligny>bottom</aligny>
+        <label>$LOCALIZE[31226]</label>
+        <font>MediumDefaultFont</font>
+        <visible>!Control.IsVisible(4)</visible>
+      </control>
+      <control type="label">
+        <description>Presets label</description>
+        <posy>158</posy>
+        <width>HorizWideDialogTextWidth</width>
+        <aligny>top</aligny>
+        <label>$LOCALIZE[31227]</label>
+        <font>TitleFont</font>
+        <visible>!Control.IsVisible(4)</visible>
+      </control>
+
+      <control type="group">
+        <posy>220</posy>
+        <visible>!Control.IsVisible(4)</visible>
+
+        <control type="list" id="2">
+          <posx>-12</posx>
+          <width>HorizWideDialogTextWidth</width>
+          <height>470</height>
+          <onleft>-</onleft>
+          <onright>60</onright>
+          <onup>2</onup>
+          <ondown>2</ondown>
+          <pagecontrol>60</pagecontrol>
+
+          <itemlayout width="HorizWideDialogTextWidth" height="34">
+            <control type="label">
+              <posx>12</posx>
+              <width>HorizWideDialogTextWidth</width>
+              <label>$INFO[ListItem.Label]</label>
+              <textcolor>Unfocused</textcolor>
+            </control>
+          </itemlayout>
+
+          <focusedlayout width="HorizWideDialogTextWidth" height="34">
+            <control type="image">
+              <width>HorizWideDialogTextWidth</width>
+              <height>34</height>
+              <texture border="3">black_rounded.png</texture>
+            </control>
+
+            <control type="label">
+              <posx>12</posx>
+              <width>HorizWideDialogTextWidth</width>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+          </focusedlayout>
+        </control>
+
+        <control type="scrollbar" id="60">
+          <posx>HorizWideDialogTextWidth</posx>
+          <posy>0</posy>
+          <height>475</height>
+          <onleft>2</onleft>
+          <onright>2</onright>
+          <showonepage>false</showonepage>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

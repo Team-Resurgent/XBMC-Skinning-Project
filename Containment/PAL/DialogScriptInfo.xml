@@ -1,0 +1,29 @@
+<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Dialog-Container</include>
+		<control type="group">
+			<include>dialog-slide</include>
+			<control type="label" id="10">
+				<description>Window Heading</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<width>365</width>
+				<label>262</label>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="textbox" id="5">
+				<description>textarea</description>
+				<posx>5</posx>
+				<posy>140</posy>
+				<width>365</width>
+				<height>356</height>
+				<spinposx>340</spinposx>
+				<spinposy>311</spinposy>
+			</control>
+		</control>
+		<include>Dialog-Shutters</include>
+	</controls>
+</window>

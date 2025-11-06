@@ -1,0 +1,19 @@
+<window>
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+	<include>background</include>
+
+	<control type="button" id="5">
+		<description>ReplaceWindow Trigger</description>
+		<posx>35</posx>
+		<posy>235</posy>
+		<font>special15</font>
+		<onfocus>ReplaceWindow(Home)</onfocus>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<include>startup-trigger</include>
+	</control>
+
+	</controls>
+</window>

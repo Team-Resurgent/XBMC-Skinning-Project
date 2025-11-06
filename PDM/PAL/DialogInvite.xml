@@ -1,0 +1,108 @@
+<window type="102">
+	<defaultcontrol>30</defaultcontrol>
+	<include>dialog-effect</include> 
+	<controls>
+
+	<control type="image">
+		<description>bg focus black</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>color-black.png</texture>
+	</control>
+
+	<control type="image">
+		<description>Dialog Background</description>
+		<posx>137</posx>
+		<posy>177</posy>
+		<width>425</width>
+		<height>290</height>
+		<texture>dialog-invite.png</texture>
+	</control>
+
+	<control type="label" id="1">
+		<description>Send Invitation Heading</description>
+		<posx>190</posx>
+		<posy>191</posy>
+		<label>15054</label>
+		<font>special13</font>
+	</control>
+
+	<control type="label" id="1">
+		<description>Choose Game</description>
+		<posx>190</posx>
+		<posy>240</posy>
+		<label>15055</label>
+		<font>font12</font>
+	</control>
+
+	<control type="spincontrol" id="30">
+		<description>Games Spin Control</description>
+		<font>font12</font>
+		<posx>215</posx>
+		<posy>275</posy>
+		<align>left</align>
+		<onleft>30</onleft>
+		<onright>30</onright>
+		<onup>10</onup>
+		<ondown>20</ondown>
+	</control>
+
+	<control type="label" id="4">
+		<description>Enter Message</description>
+		<posx>190</posx>
+		<posy>310</posy>
+		<label>15056</label>
+		<font>font12</font>
+	</control>
+
+	<control type="button" id="20">
+		<description>Message Field</description>
+		<posx>190</posx>
+		<posy>340</posy>
+		<width>330</width>
+		<label>15060</label>
+		<font>font12</font>
+		<texturefocus>button-focus-dialog.png</texturefocus>
+		<texturenofocus>button-nofocus-dialog.png</texturenofocus>
+		<onleft>20</onleft>
+		<onright>20</onright>
+		<onup>30</onup>
+		<ondown>10</ondown>
+	</control>
+
+	<control type="button" id="10">
+		<description>Send button</description>
+		<posx>360</posx>
+		<posy>385</posy>
+		<width>75</width>
+		<height>35</height>
+		<label>15057</label>
+		<texturefocus>button-focus-dialog.png</texturefocus>
+		<texturenofocus>button-nofocus-dialog.png</texturenofocus>
+		<align>center</align>
+		<onleft>10</onleft>
+		<onright>11</onright>
+		<onup>20</onup>
+		<ondown>30</ondown>
+	</control>
+
+	<control type="button" id="11">
+		<description>Cancel button</description>
+		<posx>445</posx>
+		<posy>385</posy>
+		<width>75</width>
+		<height>35</height>
+		<label>222</label>
+		<texturefocus>button-focus-dialog.png</texturefocus>
+		<texturenofocus>button-nofocus-dialog.png</texturenofocus>
+		<align>center</align>
+		<onleft>10</onleft>
+		<onright>11</onright>
+		<onup>20</onup>
+		<ondown>30</ondown>
+	</control>
+
+	</controls>
+</window>

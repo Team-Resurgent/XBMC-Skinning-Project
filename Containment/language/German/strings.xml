@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+<!-- Start Home Labels -->
+	<string id="31001">Musik</string>
+	<string id="31002">Programme</string>
+	<string id="31003">Video</string>
+	<string id="31004">Fotos</string>
+	<string id="31005">Einstellungen</string>
+<!-- End Home Labels -->
+
+<!-- Start Music Labels -->
+	<string id="31006">Ganze Musik</string>
+	<string id="31007">Voting</string>
+<!-- End Music Labels -->
+
+<!-- Start Shutdown Labels -->
+	<string id="31008">Master-Modus</string>
+	<string id="31009">Textur Farbe</string>
+	<string id="31010">Schrift Farbe</string>
+	<string id="31011">XBOX Neustarten</string>
+	<string id="31012">XBMC Neustarten</string>
+	<string id="31013">Favoriten</string>
+<!-- End Shutdown Labels -->
+
+<!-- Start Settings Labels -->
+	<string id="31014">Hintergrund Optionen</string>
+	<string id="31015">Verwende Hintergrund</string>
+	<string id="31016">Wähle Eigenen Hintergrund</string>
+	<string id="31017">Setzte Hintergrund zurück</string>
+	<string id="31018">Hintergrund-Animations Ordner wählen</string>
+	<string id="31019">Setzte Hintergrund-Animation zurück</string>
+	<string id="31020">Verwende RSS Feed im Startfenster</string>
+	<string id="31021">Information</string>
+	<string id="31022">Medien</string>
+	<string id="31023">System</string>
+	<string id="31024">Skin</string>
+	<string id="31025">Hintergrund</string>
+	<string id="31026">Ausschalten</string>
+	<string id="31027">Dateimanager</string>
+	<string id="31028">Skripte</string>
+	<string id="31029">Wetter</string>
+	<string id="31030">Spilstände</string>
+	<string id="31031">Verw. Gesehene/Nichtges. Overlays</string>
+	<string id="31032">Deaktiviere Media Overlays</string>
+	<string id="31033">Deaktiviere Home Icon Animation</string>
+	<string id="31034">Verwende Startup Playlist</string>
+	<string id="31035">Aktiviere Taste Start Media Timeout</string>
+	<string id="31036">Aktiviere Grosse Icon Labels</string>
+	<string id="31037">Wähle Playlist</string>
+	<string id="31038">Start Fenster</string>
+	<string id="31039">Deaktiviere Start-Tasten Label</string>
+	<string id="31040">Aktivieren Wrap View Label</string>
+	<string id="31041">Verwende Containment Spalsh Screen</string>
+	<string id="31042">Download Containment Themes</string>
+<!-- End Settings Labels -->
+
+<!-- Misc. Labels -->
+	<string id="31043">Start Bibliothek</string>
+	<string id="31044">Ende Bibliothek</string>
+	<string id="31045">Ton aus</string>
+</strings>

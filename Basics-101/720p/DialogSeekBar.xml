@@ -1,0 +1,218 @@
+<window id="115">
+	<defaultcontrol>1</defaultcontrol>
+	<include>dialogeffect</include>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<coordinates>
+		<system>1</system>
+		<posx>470</posx>
+		<posy>15</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>340</width>
+			<height>60</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image">
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>330</width>
+			<height>50</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<!-- playstate images -->
+		<control type="image" id="0">
+			<description>Play image</description>
+			<align>right</align>
+			<posx>285</posx>
+			<posy>10</posy>
+			<height>40</height>
+			<width>40</width>
+			<visible>Player.Playing</visible>
+			<texture>mediacontrol-play.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>Pause image</description>
+			<align>right</align>
+			<posx>285</posx>
+			<posy>10</posy>
+			<height>40</height>
+			<width>40</width>
+			<visible>Player.Paused</visible>
+			<texture>mediacontrol-pause.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>FF image</description>
+			<align>right</align>
+			<posx>285</posx>
+			<posy>5</posy>
+			<height>30</height>
+			<width>30</width>
+			<visible>Player.Forwarding</visible>
+			<texture>forward.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>RW image</description>
+			<align>right</align>
+			<posx>285</posx>
+			<posy>5</posy>
+			<height>30</height>
+			<width>30</width>
+			<visible>Player.Rewinding</visible>
+			<texture>rewind.png</texture>
+		</control>
+		<control type="label">
+			<description>FF-RW x2 Label</description>
+			<posx>270</posx>
+			<posy>27</posy>
+			<width>60</width>
+			<align>center</align>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<label>x2</label>
+			<visible>Player.Forwarding2x | Player.Rewinding2x</visible>
+		</control>
+		<control type="label">
+			<description>FF-RW x4 Label</description>
+			<posx>270</posx>
+			<posy>27</posy>
+			<width>60</width>
+			<align>center</align>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<label>x4</label>
+			<visible>Player.Forwarding4x | Player.Rewinding4x</visible>
+		</control>
+		<control type="label">
+			<description>FF-RW x8 Label</description>
+			<posx>270</posx>
+			<posy>27</posy>
+			<width>60</width>
+			<align>center</align>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<label>x8</label>
+			<visible>Player.Forwarding8x | Player.Rewinding8x</visible>
+		</control>
+		<control type="label">
+			<description>FF-RW x16 Label</description>
+			<posx>270</posx>
+			<posy>27</posy>
+			<width>60</width>
+			<align>center</align>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<label>x16</label>
+			<visible>Player.Forwarding16x | Player.Rewinding16x</visible>
+		</control>
+		<control type="label">
+			<description>FF-RW x32 Label</description>
+			<posx>270</posx>
+			<posy>27</posy>
+			<width>60</width>
+			<align>center</align>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<label>x32</label>
+			<visible>Player.Forwarding32x | Player.Rewinding32x</visible>
+		</control>
+		<!-- progressbar dialog -->
+		<control type="label" id="22">
+			<description>Elapsed Time Label</description>
+			<posx>130</posx>
+			<posy>8</posy>
+			<font>font13</font>
+			<align>right</align>
+			<info>Player.Time</info>
+			<width>110</width>
+			<height>16</height>
+			<visible>!Player.Seeking</visible>
+		</control>
+		<control type="label" id="22">
+			<description>Seek Time Label</description>
+			<posx>130</posx>
+			<posy>8</posy>
+			<font>font13</font>
+			<align>right</align>
+			<info>Player.SeekTime</info>
+			<width>110</width>
+			<height>16</height>
+			<visible>Player.Seeking</visible>
+		</control>
+		<control type="label" id="0">
+			<description>Duration Label</description>
+			<posx>135</posx>
+			<posy>8</posy>
+			<label>$INFO[Player.Duration,/ ]</label>
+			<font>font13</font>
+			<align>left</align>
+			<width>130</width>
+			<height>16</height>
+		</control>
+		<control type="progress" id="23">
+			<description>Progressbar</description>
+			<posx>20</posx>
+			<posy>40</posy>
+			<width>245</width>
+			<height>8</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture border="2">progress_middle.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>true</visible>
+		</control>
+		<control type="slider" id="401">
+			<description>Seek Slider</description>
+			<posx>20</posx>
+			<posy>38</posy>
+			<width>245</width>
+			<height>12</height>
+			<texturesliderbar>seekslider.png</texturesliderbar>
+			<textureslidernib>slider_nibFO.png</textureslidernib>
+			<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+			<visible>true</visible>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+		<control type="group">
+			<visible>player.chaptercount</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>65</posy>
+				<width>340</width>
+				<height>40</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="6">dialog_background.png</texture>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>70</posy>
+				<width>330</width>
+				<height>30</height>
+				<colordiffuse>EFFFFFFF</colordiffuse>
+				<texture>menu_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="label">
+				<description>Chapter Pos No</description>
+				<posx>15</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<height>30</height>
+				<font>font12</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
+			</control>
+		</control>
+	</controls>
+</window>

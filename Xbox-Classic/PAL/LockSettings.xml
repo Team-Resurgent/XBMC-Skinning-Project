@@ -1,0 +1,157 @@
+<window id="131">
+	<defaultcontrol>1</defaultcontrol>
+	<visible>Window.IsActive(131)</visible>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>140</posx>
+		<posy>140</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<posx>-50</posx>
+			<posy>-50</posy>
+			<include>Dialog_Background</include>
+		</control>
+		<control type="group">
+			<include>Dialog_Content_Animation</include>
+			<control type="label" id="2">
+				<description>Heading Label</description>
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>420</width>
+				<align>left</align>
+				<label>-</label>
+				<font>font14</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="3">
+				<description>No Settings Label</description>
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>420</width>
+				<align>left</align>
+				<label>12016</label>
+				<font>font14</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="spincontrol" id="60">
+				<description>Next page button</description>
+				<posx>420</posx>
+				<posy>295</posy>
+				<subtype>page</subtype>
+				<showonepage>false</showonepage>
+				<font>font12</font>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>5</posx>
+				<posy>35</posy>
+				<width>460</width>
+				<height>265</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+			</control>
+			<control type="button" id="28">
+				<description>Ok Button</description>
+				<posx>120</posx>
+				<posy>305</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+				<onup>30</onup>
+				<onleft>29</onleft>
+				<onright>29</onright>
+				<ondown>30</ondown>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel Button</description>
+				<posx>250</posx>
+				<posy>305</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+				<onup>30</onup>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<ondown>30</ondown>
+			</control>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>29</height>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<font>font12</font>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<textureradiofocus>settings-check-box.png</textureradiofocus>
+			<textureradionofocus>settings-check-boxNF.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>25</height>
+			<width>200</width>
+			<textcolor>white</textcolor>
+			<disabledcolor>60d0d0d0</disabledcolor>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<sliderwidth>100</sliderwidth>
+			<sliderheight>12</sliderheight>
+			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+			<textureslidernib>osd-osd_slider_nibfo.png</textureslidernib>
+			<textureslidernibfocus>osd-osd_slider_nibfo.png</textureslidernibfocus>
+			<font>font10</font>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>5</height>
+			<texture>kai-divider.png</texture>
+		</control>
+	</controls>
+</window>

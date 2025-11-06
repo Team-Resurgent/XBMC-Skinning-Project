@@ -1,0 +1,209 @@
+<window id="115">
+<defaultcontrol>1</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<visible>!Window.IsActive(121) + !Window.IsActive(122) + !Window.IsActive(123) + !Window.IsActive(124) + !Window.IsActive(125) + !Window.IsActive(145) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+
+<controls>
+	
+	<control type="group">
+    <posx>395</posx>
+    <posy>15</posy>
+    <include>OptionBack1-2</include>
+    <include>SlideFromRight</include>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>304</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="1">
+      <description>Playing Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>380</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[31061]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <visible>Player.Playing</visible>
+    </control>
+    <control type="label" id="1">
+      <description>Paused Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>380</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[112]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <visible>Player.Paused</visible>
+    </control>
+    <control type="label" id="1">
+      <description>Rewinding Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>380</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[31062]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <visible>Player.Rewinding</visible>
+    </control>
+    <control type="label" id="1">
+      <description>Forwarding Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>380</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[31063]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <visible>Player.Forwarding</visible>
+    </control>
+    
+		<control type="label" id="1">
+			<description>Elapsed Time Label</description>
+			<posx>10</posx>
+			<posy>50</posy>
+			<font>18BdFont</font>
+			<label>$INFO[Player.Time] | $INFO[Player.Duration]</label>
+			<textcolor>DefaultTextColor</textcolor>
+			<width>280</width>
+			<height>25</height>
+			<align>center</align>
+      <aligny>center</aligny>
+			<visible>!Player.Seeking</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Seek Time Label</description>
+			<posx>10</posx>
+			<posy>50</posy>
+			<font>16BdFont</font>
+			<textcolor>DefaultTextColor</textcolor>
+			<label>$INFO[Player.SeekTime] | $INFO[Player.Duration]</label>
+			<width>280</width>
+			<height>25</height>
+			<align>center</align>
+      <aligny>center</aligny>
+			<visible>Player.Seeking</visible>
+		</control>
+		<control type="progress" id="23">
+			<description>Progressbar</description>
+      <posx>10</posx>
+      <posy>85</posy>
+      <width>280</width>
+      <info>Player.Progress</info>
+		</control>
+    <control type="slider" id="401">
+      <description>Seekbar</description>
+      <posx>10</posx>
+      <posy>85</posy>
+      <width>280</width>
+      <height>13</height>
+      <texturesliderbar>ProgressBackSmall.png</texturesliderbar>
+      <textureslidernib>ScrollBarSeek.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarSeek.png</textureslidernibfocus>
+    </control>
+
+    <control type="label" id="1">
+      <description>Music Next Label</description>
+      <posx>10</posx>
+      <posy>100</posy>
+      <font>14BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
+      <width>280</width>
+      <height>25</height>
+      <scroll>true</scroll>
+      <align>center</align>
+      <aligny>center</aligny>
+      <visible>!IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+    </control>
+	</control>
+  
+  <control type="group">
+    <description>Seek Status</description>
+    <posx>690</posx>
+    <posy>15</posy>
+    <include>SlideFromRight</include>
+    <control type="label" id="1">
+      <description>2x Forward Label</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <font>22BdFont</font>
+      <textcolor>SelectedTextColor</textcolor>
+      <label>2X</label>
+      <width>60</width>
+      <height>45</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <visible>Player.Forwarding2x | Player.Rewinding2x</visible>
+    </control>
+    <control type="label" id="1">
+      <description>4x Forward Label</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <font>22BdFont</font>
+      <textcolor>SelectedTextColor</textcolor>
+      <label>4X</label>
+      <width>60</width>
+      <height>45</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <visible>Player.Forwarding4x | Player.Rewinding4x</visible>
+    </control>
+    <control type="label" id="1">
+      <description>8x Forward Label</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <font>22BdFont</font>
+      <textcolor>SelectedTextColor</textcolor>
+      <label>8X</label>
+      <width>60</width>
+      <height>45</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <visible>Player.Forwarding8x | Player.Rewinding8x</visible>
+    </control>
+    <control type="label" id="1">
+      <description>16x Forward Label</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <font>22BdFont</font>
+      <textcolor>SelectedTextColor</textcolor>
+      <label>16X</label>
+      <width>60</width>
+      <height>45</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <visible>Player.Forwarding16x | Player.Rewinding16x</visible>
+    </control>
+    <control type="label" id="1">
+      <description>32x Forward Label</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <font>22BdFont</font>
+      <textcolor>SelectedTextColor</textcolor>
+      <label>32X</label>
+      <width>60</width>
+      <height>45</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <visible>Player.Forwarding32x | Player.Rewinding32x</visible>
+    </control>
+  </control>
+	
+</controls>
+</window>

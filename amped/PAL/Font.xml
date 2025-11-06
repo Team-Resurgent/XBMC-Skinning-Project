@@ -1,0 +1,176 @@
+<fonts>
+	<fontset id="Default" unicode="true">
+		<font>
+			<name>font13</name>
+			<filename>TCM.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>TCM.ttf</filename>
+			<size>14</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font14_NoBold</name>
+			<filename>TCM.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>TCM.ttf</filename>
+			<size>16</size>
+			<bold>true</bold>
+		</font>
+		<font>
+			<name>font18</name>
+			<filename>TCM.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>font20</name>
+			<filename>TCM.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>font22</name>
+			<filename>TCM.ttf</filename>
+			<size>22</size>
+		</font>
+    <font>
+      <name>fntHeader</name>
+      <filename>TCM.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>fntLED_Large</name>
+      <filename>LCDM2L__.ttf</filename>
+      <size>26</size>
+    </font>
+
+  </fontset>
+  
+  
+  
+	<fontset id="Default_Big" unicode="true">
+		<font>
+			<name>font13</name>
+			<filename>TCM.ttf</filename>
+			<size>15</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>TCM.ttf</filename>
+			<size>16</size>
+			<style>bold</style>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font14_NoBold</name>
+			<filename>TCM.ttf</filename>
+			<size>16</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>TCM.ttf</filename>
+			<size>18</size>
+			<bold>true</bold>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font18</name>
+			<filename>TCM.ttf</filename>
+			<size>20</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font20</name>
+			<filename>TCM.ttf</filename>
+			<size>22</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font22</name>
+			<filename>TCM.ttf</filename>
+			<size>24</size>
+			<aspect>1.2</aspect>
+		</font>
+    <font>
+      <name>fntHeader</name>
+      <filename>TCM.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>fntLED_Large</name>
+      <filename>LCDM2L__.ttf</filename>
+      <size>26</size>
+    </font>
+
+  </fontset>
+
+  
+
+
+  <fontset id="Arial" unicode="true">
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>13</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>Arial.ttf</filename>
+			<size>14</size>
+			<style>bold</style>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font14_NoBold</name>
+			<filename>Arial.ttf</filename>
+			<size>14</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>Arial.ttf</filename>
+			<size>16</size>
+			<bold>true</bold>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font18</name>
+			<filename>Arial.ttf</filename>
+			<size>18</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font20</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+			<aspect>1.2</aspect>
+		</font>
+		<font>
+			<name>font22</name>
+			<filename>Arial.ttf</filename>
+			<size>22</size>
+			<aspect>1.2</aspect>
+		</font>
+    <font>
+      <name>fntHeader</name>
+      <filename>TCM.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>fntLED_Large</name>
+      <filename>LCDM2L__.ttf</filename>
+      <size>26</size>
+    </font>
+
+  </fontset>
+</fonts>

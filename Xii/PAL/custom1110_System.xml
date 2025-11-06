@@ -1,0 +1,101 @@
+<window id="1110">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-blackbase.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>xii logo image</description>
+			<posx>609</posx>
+			<posy>40</posy>
+			<width>66</width>
+			<height>36</height>
+			<texture>logo-xii-grey.png</texture>
+		</control>
+
+		<control type="group" id="9000">
+			<control type="button" id="4">
+				<description>Back button</description>
+				<posx>35</posx>
+				<posy>465</posy>
+				<width>316</width>
+				<height>79</height>
+				<include>backlabel</include>
+				<font>font28</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<include>textcolorblack</include>
+				<onclick>ActivateWindow(0)</onclick>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<texturefocus>button-big-focus.png</texturefocus>
+				<texturenofocus>button-big-nofocus.png</texturenofocus>				
+				<include>homebuttonanimation</include>
+			</control>
+		</control>
+		
+		<control type="group" id="9001">	
+    	<animation effect="zoom"  end="-100,100,10,10" time="300">WindowClose</animation>	
+  		<animation effect="fade" time="300">WindowOpen</animation>
+			<control type="button" id="2">
+  			<description>Memory</description>
+  			<font>font28</font>
+  			<posx>75</posx>
+  			<posy>155</posy>
+  			<width>275</width>
+  			<height>233</height>
+  			<texturefocus>button-memory.png</texturefocus>
+  			<texturenofocus>button-memory.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+  			<textoffsety>175</textoffsety>
+				<include>textcolorblack</include>
+  			<include>memorylabel</include>
+  			<align>center</align>
+  			<onclick>ActivateWindow(1111)</onclick>
+  			<onleft>3</onleft>
+  			<onright>3</onright>
+  			<onup>9000</onup>
+  			<ondown>9000</ondown>
+    		<animation effect="zoom"  end="35,135,325,275" time="200">Focus</animation>
+  		</control>
+  		<control type="button" id="3">
+  			<description>Settings</description>
+  			<font>font28</font>
+  			<posx>370</posx>
+  			<posy>155</posy>
+  			<width>275</width>
+  			<height>233</height>
+  			<texturefocus>button-settings.png</texturefocus>
+  			<texturenofocus>button-settings.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+  			<textoffsety>175</textoffsety>
+				<include>textcolorblack</include>
+  			<label>5</label>
+  			<align>center</align>
+  			<onclick>ActivateWindow(4)</onclick>
+  			<onleft>2</onleft>
+  			<onright>2</onright>
+  			<onup>9000</onup>
+  			<ondown>9000</ondown>
+    		<animation effect="zoom"  end="370,135,325,275" time="200">Focus</animation>
+  		</control>
+		</control>
+		<control type="image" id="0">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+			<visible>Window.Next(0)</visible>
+		</control>		
+	</controls>
+</window>

@@ -1,0 +1,75 @@
+﻿<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<include>shutdown-ani</include>
+	<controls>
+		<control type="image">
+			<description>top</description>
+			<posx>165</posx>
+			<posy>205</posy>
+			<width>390</width>
+			<height>30</height>
+			<texture>context2-top.png</texture>
+		</control>
+		<control type="image">
+			<description>middle</description>
+			<posx>165</posx>
+			<posy>235</posy>
+			<width>390</width>
+			<height>130</height>
+			<texture>context2-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>bottom</description>
+			<posx>165</posx>
+			<posy>365</posy>
+			<width>390</width>
+			<height>30</height>
+			<texture>context2-bottom.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>dialog Heading</description>
+			<posx>190</posx>
+			<posy>218</posy>
+			<label>-</label>
+			<font>special13</font>
+			<textcolor>DDced8da</textcolor>
+		</control>
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<posx>190</posx>
+			<posy>260</posy>
+			<label>-</label>
+			<font>font10</font>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posx>190</posx>
+			<posy>280</posy>
+			<label>-</label>
+			<font>font10</font>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posx>190</posx>
+			<posy>300</posy>
+			<label>-</label>
+			<font>font10</font>
+		</control>
+		<control type="button" id="10">
+			<description>OK button</description>
+			<posx>325</posx>
+			<posy>330</posy>
+			<width>77</width>
+			<height>32</height>
+			<label>186</label>
+			<font>font10</font>
+			<align>center</align>
+			<texturenofocus>button2-alpha.png</texturenofocus>
+			<texturefocus>button2.png</texturefocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+		</control>
+	</controls>
+</window>

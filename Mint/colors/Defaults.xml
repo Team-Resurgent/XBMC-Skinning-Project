@@ -1,0 +1,85 @@
+<colors>
+
+	<color name="white">ffffffff</color>
+	<color name="black">ff000000</color>
+	<color name="selected">ff222a19</color>
+	<color name="dimmed">35ffffff</color>
+	<color name="disabled">ff222a19</color>
+	
+	<!-- type -->
+	<color name="type-dialog">ffffffff</color>
+	<color name="type-dialog-dark">ff6c7762</color>
+	<color name="type-dialog-header">ff9fb76e</color>
+	<color name="type-info">ffffffff</color>
+	<color name="type-info-dark">ff8e8e8e</color>
+	<color name="type-info-header">ffa0c786</color>
+	
+	<color name="type-button">ffffffff</color>
+	<color name="type-button-dark">ff8e8e8e</color>
+	
+	<color name="type-keyboard">ffffffff</color>
+	<color name="type-keyboard-dark">ff8e8e8e</color>
+	<color name="type-keyboard-heading">ffa0c786</color>
+	
+	<color name="type-videoosd">ffa0c786</color>
+	<color name="type-videoosd-dark">ff2e2e2e</color>
+	<color name="type-musicosd">ffa0c786</color>
+	<color name="type-musicosd-dark">ff506343</color>
+	
+	<color name="type-rss">ff2e2e2e</color>
+	<color name="type-rss-heading">ffffffff</color>
+	<color name="type-rss-title">ffa0c786</color>
+	
+	<color name="type-menu">ffa1ba70</color>
+	<color name="type-menu-dark">ff5d6f44</color>
+	
+	<color name="type-video">ffffffff</color>
+	<color name="type-video-dark">ff8e8e8e</color>
+
+	<color name="type-scrollbar">ff4c5844</color>
+	
+	<color name="type-content">ffffffff</color>
+	<color name="type-content-dark">ff8e8e8e</color>
+	
+	<color name="type-listitem">ffffffff</color>
+	<color name="type-listitem-dark">ff6c7762</color>
+	<color name="type-listitem-header">ff9fb76e</color>
+	
+	<color name="type-context">ffffffff</color>
+	<color name="type-context-dark">ff8e8e8e</color>
+
+	<color name="type-selected">ffa0c786</color>
+	
+	<color name="type-header">ff222a19</color>
+	<color name="type-header-dark">ff222a19</color>
+	
+	<color name="type-sidebar">ffc3df86</color>
+	<color name="type-sidebar-dark">ff3b4a2e</color>
+	
+	<color name="type-settings">ffffffff</color>
+	<color name="type-settings-dark">ff6c7762</color>
+	
+	<color name="header">ffa0c786</color>
+	<color name="header-dark">ff506343</color>
+	<color name="sidebar">ffa0c786</color>
+	<color name="sidebar-dark">ff506343</color>
+	<color name="content">ffffffff</color>
+	<color name="content-dark">ff8e8e8e</color>
+	<color name="album">ffffffff</color>
+	<color name="album-dark">ff8e8e8e</color>
+	<color name="album-selected">ffa0c786</color>
+	<color name="weather">ffffffff</color>
+	<color name="weather-dark">ff8e8e8e</color>
+	<color name="overlay">aa8e8e8e</color>
+	<color name="bg-dimmed">65ffffff</color>
+	<color name="overlay-bg">e5ffffff</color>
+	<color name="overlay-home">cc8e8e8e</color>
+	<color name="overlay-dark">cc8e8e8e</color>
+	<color name="dialog">eeffffff</color>
+	<color name="overlay-icon">dd4e4e4e</color>
+	<color name="panel">ee000000</color>
+	
+	<color name="overlay-label">ff506343</color>
+	<color name="overlay-infolabel">ff666666</color>
+	<color name="overlay-time">ff666666</color>
+</colors>

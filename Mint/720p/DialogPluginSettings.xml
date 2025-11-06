@@ -1,0 +1,112 @@
+<!-- used in plugin settings (scraper settings) -->
+<window id="10140">
+
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+	
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+
+		<control type="group">
+	
+			<posx>320</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>640</width>
+				<height>540</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label" id="20">
+				<width>600</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+			
+			<control type="grouplist" id="2">
+				<width>560</width>
+				<height>400</height>
+				<posx>20</posx>
+				<posy>60</posy>
+				<itemgap>5</itemgap>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+			</control>
+			<control type="button" id="3">
+				<include>settings-button</include>
+			</control>
+			<control type="radiobutton" id="4">
+				<include>settings-button</include>
+			</control>
+			<control type="spincontrolex" id="5">
+				<include>settings-button</include>
+			</control>
+			<!-- separator -->
+			<control type="image" id="6">
+				<texture>listitem-back-nf.png</texture>
+				<width>600</width>
+				<height>5</height>
+			</control>
+			<!-- scrollbar -->
+			<control type="group">
+				<posx>590</posx>
+				<posy>60</posy>
+				<control type="image">
+					<texture>container-back-nf.png</texture>
+					<width>30</width>
+					<height>400</height>
+				</control>
+				<control type="scrollbar" id="60">
+					<width>30</width>
+					<height>400</height>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+				</control>
+			</control>
+		
+			<!-- defaults button -->
+			<control type="button" id="12">
+				<label>Defaults</label>
+				<posx>20</posx>
+				<posy>480</posy>
+				<onleft>10</onleft>
+				<onright>11</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+			<!-- cancel button -->
+			<control type="button" id="11">
+				<label>Cancel</label>
+				<posx>310</posx>
+				<posy>480</posy>
+				<onleft>12</onleft>
+				<onright>10</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+			<!-- ok button -->
+			<control type="button" id="10">
+				<label>Ok</label>
+				<posx>470</posx>
+				<posy>480</posy>
+				<onleft>11</onleft>
+				<onright>12</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+		</control>
+		
+	</controls>
+</window>

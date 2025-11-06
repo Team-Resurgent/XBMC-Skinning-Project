@@ -1,0 +1,75 @@
+<window>
+  <id>11</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>videowindow</description>
+      <type>videowindow</type>
+      <id>12</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+    </control>
+
+    <control>
+      <description>rectangle image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>275</posY>
+      <width>720</width>
+      <height>40</height>
+      <texture>bluebar.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>a0ffffff</colordiffuse>
+    </control>
+
+    <control>
+      <description>coordinates label</description>
+      <type>label</type>
+      <id>2</id>
+      <posX>200</posX>
+      <posY>280</posY>
+      <label>5</label>
+      <font>font14</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>top left logo</description>
+      <type>image</type>
+      <id>10</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <texture>calibrate-topleft.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      <colordiffuse>FFFFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>right bottom logo</description>
+      <type>image</type>
+      <id>11</id>
+      <posX>700</posX>
+      <posY>500</posY>
+      <texture>calibrate-bottomright.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      <colordiffuse>FFFFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>OSD Y Offset logo</description>
+      <type>image</type>
+      <id>12</id>
+      <posX>200</posX>
+      <posY>500</posY>
+      <texture>calibrate-subtitles.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+      <colordiffuse>FFFFFFFF</colordiffuse>
+    </control>
+
+  </controls>
+
+</window>
+

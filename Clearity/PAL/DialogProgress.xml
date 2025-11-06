@@ -1,0 +1,103 @@
+<window id="101">
+	<defaultcontrol>10</defaultcontrol>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+		<include>FX-ShutDownMenu</include>
+	</control>
+	<control type="label" id="2">
+		<description>Line 2</description>
+		<posx>135</posx>
+		<posy>240</posy>
+		<width>450</width>
+		<haspath>yes</haspath>
+		<label>-</label>
+		<font>font12</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>center</align>
+		<include>DialogInfo</include>
+	</control>
+	<control type="label" id="3">
+		<description>Line 3</description>
+		<posx>135</posx>
+		<posy>260</posy>
+		<width>450</width>
+		<haspath>yes</haspath>
+		<label>-</label>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>center</align>
+		<include>DialogInfo</include>
+	</control>
+	<control type="label" id="4">
+		<description>Line 4</description>
+		<posx>135</posx>
+		<posy>280</posy>
+		<width>450</width>
+		<haspath>yes</haspath>
+		<label>-</label>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>center</align>
+		<include>DialogInfo</include>
+	</control>
+	<control type="progress" id="20">
+		<description>Progressbar</description>
+		<posx>188</posx>
+		<posy>360</posy>
+		<width>350</width>
+		<height>8</height>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid2.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture border="10,0,10,0">Progress-Overlay.png</overlaytexture>
+		<include>DialogInfo</include>
+	</control>
+	<control type="button" id="10">
+		<description>Cancel Button</description>
+		<posx>570</posx>
+		<posy>500</posy>
+		<width>80</width>
+		<height>32</height>
+		<label>222</label>
+		<texturefocus>Button-Home2.png</texturefocus>
+		<texturenofocus>Button-List.png</texturenofocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<onup>10</onup>
+		<ondown>10</ondown>
+		<onleft>10</onleft>
+		<onright>10</onright>
+		<shadowcolor>black</shadowcolor>
+		<include>DialogInfo</include>
+		<include>Home-Visible</include>
+	</control>
+	<include>Black-Special</include>
+	<include>Lines-Special</include>
+
+	<control type="label" id="1">
+		<description>Heading Label</description>
+		<posx>160</posx>
+		<posy>145</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>center</align>
+		<label>-</label>
+		<font>special16</font>
+		<include>dialogheadingcolor</include>
+		<include>FX-ShutDownMenu</include>
+	</control>
+
+	<include>Black-Overlay</include>
+	</controls>
+</window>

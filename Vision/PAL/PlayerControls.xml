@@ -1,0 +1,106 @@
+<window type="dialog" id="114">
+	<defaultcontrol>401</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	<coordinates>
+		<system>0</system>
+		<posx>20</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="0">
+			<posx>-20</posx>
+			<posy>0</posy>
+			<height>36</height>
+			<width>460</width>
+			<texture>playercontrols_background.png</texture>
+		</control>
+		<control type="button" id="400">
+			<posx>72</posx>
+			<posy>0</posy>
+			<width>36</width>
+			<height>36</height>
+			<label>-</label>
+			<texturefocus>TB_Stop-FO.png</texturefocus>
+			<texturenofocus>TB_Stop-UN.png</texturenofocus>
+			<onleft>404</onleft>
+			<onright>401</onright>
+			<onup>400</onup>
+			<ondown>400</ondown>
+			<onclick>xbmc.playercontrol(stop)</onclick>
+		</control>
+		<control type="togglebutton" id="401">
+			<posx>108</posx>
+			<posy>0</posy>
+			<width>36</width>
+			<height>36</height>
+			<label>-</label>
+			<texturefocus>TB_Pause-FO.png</texturefocus>
+			<texturenofocus>TB_Pause-UN.png</texturenofocus>
+			<usealttexture>Player.Paused</usealttexture>
+			<alttexturefocus>TB_Play-FO.png</alttexturefocus>
+			<alttexturenofocus>TB_Play-UN.png</alttexturenofocus>
+			<onleft>400</onleft>
+			<onright>405</onright>
+			<onup>401</onup>
+			<ondown>401</ondown>
+			<onclick>xbmc.playercontrol(play)</onclick>
+		</control>
+		<control type="button" id="402">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>36</width>
+			<height>36</height>
+			<label>-</label>
+			<texturefocus>TB_Previous-FO.png</texturefocus>
+			<texturenofocus>TB_Previous-UN.png</texturenofocus>
+			<onright>404</onright>
+			<onleft>403</onleft>
+			<onclick>xbmc.playercontrol(previous)</onclick>
+			<onup>402</onup>
+			<ondown>402</ondown>
+		</control>
+		<control type="button" id="403">
+			<posx>180</posx>
+			<posy>0</posy>
+			<width>36</width>
+			<height>36</height>
+			<label>-</label>
+			<texturefocus>TB_Next-FO.png</texturefocus>
+			<texturenofocus>TB_Next-UN.png</texturenofocus>
+			<onleft>405</onleft>
+			<onright>402</onright>
+			<onup>403</onup>
+			<ondown>403</ondown>
+			<onclick>xbmc.playercontrol(next)</onclick>
+		</control>
+		<control type="button" id="404">
+			<posx>36</posx>
+			<posy>0</posy>
+			<width>36</width>
+			<height>36</height>
+			<label>-</label>
+			<texturefocus>TB_Rewind-FO.png</texturefocus>
+			<texturenofocus>TB_Rewind-UN.png</texturenofocus>
+			<onleft>402</onleft>
+			<onright>400</onright>
+			<onclick>xbmc.playercontrol(rewind)</onclick>
+			<onup>404</onup>
+			<ondown>404</ondown>
+		</control>
+		<control type="button" id="405">
+			<posx>144</posx>
+			<posy>0</posy>
+			<width>36</width>
+			<height>36</height>
+			<label>-</label>
+			<texturefocus>TB_FastForward-FO.png</texturefocus>
+			<texturenofocus>TB_FastForward-UN.png</texturenofocus>
+			<onleft>401</onleft>
+			<onright>403</onright>
+			<onup>405</onup>
+			<ondown>405</ondown>
+			<onclick>xbmc.playercontrol(forward)</onclick>
+		</control>
+	</controls>
+</window>

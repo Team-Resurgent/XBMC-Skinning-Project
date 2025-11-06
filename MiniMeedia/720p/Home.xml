@@ -1,0 +1,934 @@
+<window id="0">
+  <allowoverlay>no</allowoverlay>
+  <defaultcontrol always="true">299</defaultcontrol>
+
+  <controls>
+
+    <control type="multiimage">
+      <description>Background image</description>
+      <imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
+      <include>HomeBackgroundImage</include>
+    </control>
+
+    <include>DateAndTime</include>
+
+    <control type="group">
+      <description>Weather</description>
+      <posx>820</posx>
+      <posy>-10</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="500,-100" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="500,-100" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="500,-100">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="500,-100">Hidden</animation>
+      <visible>Weather.IsFetched + !Skin.HasSetting(HideWeatherOnHome)</visible>
+
+      <control type="image">
+        <width>310</width>
+        <height>44</height>
+        <include>OverlayAreaLeft</include>
+      </control>
+      <control type="image">
+        <posx>310</posx>
+        <width>160</width>
+        <height>44</height>
+        <include>OverlayAreaCenter</include>
+      </control>
+      <control type="image">
+        <posx>310</posx>
+        <posy>44</posy>
+        <width>160</width>
+        <height>20</height>
+        <include>OverlayAreaBottom</include>
+      </control>
+
+      <control type="image">
+        <description>Weather image</description>
+        <posx>398</posx>
+        <posy>10</posy>
+        <width>HomeWeatherImageWidth</width>
+        <height>HomeWeatherImageWidth</height>
+        <aspectratio>keep</aspectratio>
+        <info>Weather.Conditions</info>
+        <visible>!Skin.HasSetting(UseAnimatedWeather)</visible>
+      </control>
+
+      <control type="multiimage">
+        <description>Animated Weather image</description>
+        <posx>398</posx>
+        <posy>10</posy>
+        <width>HomeWeatherImageWidth</width>
+        <height>HomeWeatherImageWidth</height>
+        <aspectratio>keep</aspectratio>
+        <imagepath>$INFO[Skin.String(CustomWeatherBGFolder)]\icon\$INFO[Weather.FanartCode]</imagepath>
+        <timeperimage>100</timeperimage>
+        <randomize>false</randomize>
+        <fadetime>0</fadetime>
+        <visible>Skin.HasSetting(UseAnimatedWeather)</visible>
+      </control>
+
+      <control type="group">
+        <posy>7</posy>
+
+        <control type="label">
+          <font>SmallDefaultFont</font>
+          <include>HomeWeatherConditionsText</include>
+          <visible>!Skin.HasSetting(ShowLargerClock)</visible>
+        </control>
+        <control type="label">
+          <include>HomeWeatherConditionsText</include>
+          <visible>Skin.HasSetting(ShowLargerClock)</visible>
+        </control>
+
+        <control type="label">
+          <font>SmallDefaultFont</font>
+          <include>HomeWeatherTemperatureText</include>
+          <visible>!Skin.HasSetting(ShowLargerClock)</visible>
+        </control>
+        <control type="label">
+          <include>HomeWeatherTemperatureText</include>
+          <visible>Skin.HasSetting(ShowLargerClock)</visible>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" id="301">
+      <control type="group">
+        <description>Sub Menus</description>
+        <posx>-370</posx>
+        <posy>590</posy>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,0" end="600,0">Focus</animation>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="600,0" end="0,0">Unfocus</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-600,0" condition="[Window.Next(7)]">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-300,100" condition="![Window.Next(7)]">WindowClose</animation>
+
+        <control type="image">
+          <include>HomeMainMenuBGDims</include>
+          <include>OverlayArea</include>
+        </control>
+
+        <control type="group">
+          <description>Navigation indicators</description>
+          <posx>HomeMainMenuBGWidth</posx>
+          <visible>[Control.HasFocus(401)] | [Control.HasFocus(402)]</visible>
+
+          <control type="image">
+            <description>Submenu arrow</description>
+            <posx>-10</posx>
+            <posy>62</posy>
+            <width>6</width>
+            <height>12</height>
+            <texture>arrow_right.png</texture>
+            <colordiffuse>CCFFFFFF</colordiffuse>
+          </control>
+        </control>
+
+        <control type="wraplist" id="401">
+          <description>Movies Submenu</description>
+          <onup>401</onup>
+          <ondown>401</ondown>
+          <onright>SetFocus(460)</onright>
+          <include>HomeSubmenuWrapList</include>
+          <visible>Container(300).HasFocus(9)</visible>
+
+          <content>
+<!--
+            <item id="1">
+              <description>Browse Button</description>
+              <label>$LOCALIZE[1024]</label>
+              <onclick>XBMC.ActivateWindow(24)</onclick>
+            </item>
+-->
+            <item id="9">
+              <description>Settings Button</description>
+              <label>$LOCALIZE[5]</label>
+              <onclick>XBMC.ActivateWindow(17)</onclick>
+            </item>
+            <item id="7">
+              <description>Recently Added</description>
+              <label>$LOCALIZE[31022]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,recentlyaddedmovies,return)</onclick>
+            </item>
+<!--
+            <item id="10">
+              <description>Latest Movies</description>
+              <label>$LOCALIZE[31023] $LOCALIZE[342]</label>
+              <onclick>SetFocus(450)</onclick>
+              <visible>!Skin.HasSetting(HideLatestVideos)</visible>
+            </item>
+-->
+            <item id="2">
+              <description>By Genre</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[515]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,moviegenres,return)</onclick>
+            </item>
+            <item id="3">
+              <description>By Year</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[345]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,movieyears,return)</onclick>
+            </item>
+            <item id="4">
+              <description>By Actor</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[20337]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,movieactors,return)</onclick>
+            </item>
+            <item id="5">
+              <description>By Director</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[20339]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,moviedirectors,return)</onclick>
+            </item>
+            <item id="6">
+              <description>By Studio</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[572]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,moviestudios,return)</onclick>
+            </item>
+            <item id="8">
+              <description>Video Plugins</description>
+              <label>$LOCALIZE[1037]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,plugins,return)</onclick>
+            </item>
+          </content>
+        </control>
+
+        <control type="wraplist" id="402">
+          <description>TV Shows Submenu</description>
+          <onup>402</onup>
+          <ondown>402</ondown>
+          <onright>SetFocus(461)</onright>
+          <include>HomeSubmenuWrapList</include>
+          <visible>Container(300).HasFocus(8)</visible>
+
+          <content>
+<!--
+            <item id="1">
+              <description>Browse Button</description>
+              <label>$LOCALIZE[1024]</label>
+              <onclick>XBMC.ActivateWindow(24)</onclick>
+            </item>
+-->
+            <item id="7">
+              <description>Settings Button</description>
+              <label>$LOCALIZE[5]</label>
+              <onclick>XBMC.ActivateWindow(17)</onclick>
+            </item>
+            <item id="5">
+              <description>Recently Added</description>
+              <label>$LOCALIZE[31022]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,recentlyaddedepisodes,return)</onclick>
+            </item>
+<!--
+            <item id="8">
+              <description>Latest Episodes</description>
+              <label>$LOCALIZE[31023] $LOCALIZE[20360]</label>
+              <onclick>SetFocus(451)</onclick>
+              <visible>!Skin.HasSetting(HideLatestVideos)</visible>
+            </item>
+-->
+            <item id="2">
+              <description>By Genre</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[515]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowgenres,return)</onclick>
+            </item>
+            <item id="3">
+              <description>By Year</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[345]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowyears,return)</onclick>
+            </item>
+            <item id="4">
+              <description>By Actor</description>
+              <label>$LOCALIZE[31021] $LOCALIZE[20337]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowactors,return)</onclick>
+            </item>
+            <item id="6">
+              <description>Video Plugins</description>
+              <label>$LOCALIZE[1037]</label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,plugins,return)</onclick>
+            </item>
+          </content>
+        </control>
+  
+        <control type="wraplist" id="403">
+          <description>Videos Submenu</description>
+          <onup>403</onup>
+          <ondown>403</ondown>
+          <visible>Container(300).HasFocus(1)</visible>
+          <include>HomeSubmenuWrapList</include>
+
+          <content>
+            <item id="6">
+              <description>Settings Button</description>
+              <label> $LOCALIZE[5] </label>
+              <onclick>XBMC.ActivateWindow(17)</onclick>
+            </item>
+            <item id="1">
+              <description>Browse Button</description>
+              <label> $LOCALIZE[1024] </label>
+              <onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
+            </item>
+            <item id="2">
+              <description>Movies Button</description>
+              <label> $LOCALIZE[342] </label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,movies,return)</onclick>
+            </item>
+            <item id="3">
+              <description>TV Shows Button</description>
+              <label> $LOCALIZE[20343] </label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshows,return)</onclick>
+            </item>
+            <item id="5">
+              <description>Playlists</description>
+              <label> $LOCALIZE[136] </label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,playlists,return)</onclick>
+            </item>
+          </content>
+        </control>
+  
+        <control type="wraplist" id="404">
+          <description>Music Side Menu</description>
+          <onup>404</onup>
+          <ondown>404</ondown>
+          <visible>Container(300).HasFocus(2)</visible>
+          <include>HomeSubmenuWrapList</include>
+
+          <content>
+            <item id="4">
+              <description>Settings Button</description>
+              <label> $LOCALIZE[5] </label>
+              <onclick>XBMC.ActivateWindow(15)</onclick>
+            </item>
+            <item id="2">
+              <description>Playlists</description>
+              <label> $LOCALIZE[136] </label>
+              <onclick>XBMC.ActivateWindow(MyMusicLibrary,playlists)</onclick>
+            </item>
+            <item id="1">
+              <description>Browse Button</description>
+              <label> $LOCALIZE[1024] </label>
+              <onclick>XBMC.ActivateWindow(5)</onclick>
+            </item>
+            <item id="3">
+              <description>Music Videos</description>
+              <label> $LOCALIZE[20389] </label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,musicvideos,return)</onclick>
+            </item>
+          </content>
+        </control>
+  
+        <control type="wraplist" id="405">
+          <description>Pictures Side Menu</description>
+          <onup>405</onup>
+          <ondown>405</ondown>
+          <visible>Container(300).HasFocus(3)</visible>
+          <include>HomeSubmenuWrapList</include>
+  
+          <content>
+            <item id="1">
+              <description>Browse Button</description>
+              <label> $LOCALIZE[1024] </label>
+              <onclick>XBMC.ActivateWindow(2)</onclick>
+            </item>
+            <item id="2">
+              <description>Settings Button</description>
+              <label> $LOCALIZE[5] </label>
+              <onclick>XBMC.ActivateWindow(12)</onclick>
+            </item>
+          </content>
+        </control>
+  
+        <control type="wraplist" id="406">
+          <description>Programs Side Menu</description>
+          <onup>406</onup>
+          <ondown>406</ondown>
+          <visible>Container(300).HasFocus(4)</visible>
+          <include>HomeSubmenuWrapList</include>
+  
+          <content>
+            <item id="1">
+              <description>Browse Button</description>
+              <label> $LOCALIZE[1024] </label>
+              <onclick>XBMC.ActivateWindow(1)</onclick>
+            </item>
+            <item id="2">
+              <description>Games Button</description>
+              <label> $LOCALIZE[15016] </label>
+              <onclick>XBMC.ActivateWindow(1,Games)</onclick>
+            </item>
+            <item id="3">
+              <description>Settings Button</description>
+              <label> $LOCALIZE[5] </label>
+              <onclick>XBMC.ActivateWindow(13)</onclick>
+            </item>
+          </content>
+        </control>
+  
+        <control type="wraplist" id="407">
+          <description>Weather Side Menu</description>
+          <onup>407</onup>
+          <ondown>407</ondown>
+          <visible>Container(300).HasFocus(5)</visible>
+          <include>HomeSubmenuWrapList</include>
+  
+          <content>
+            <item id="1">
+              <description>Check Button</description>
+              <label> $LOCALIZE[31015] </label>
+              <onclick>XBMC.ActivateWindow(2600)</onclick>
+            </item>
+            <item id="2">
+              <description>Settings Button</description>
+              <label> $LOCALIZE[5] </label>
+              <onclick>XBMC.ActivateWindow(14)</onclick>
+            </item>
+          </content>
+        </control>
+  
+        <control type="wraplist" id="408">
+          <description>System Side Menu</description>
+          <onup>408</onup>
+          <ondown>408</ondown>
+          <visible>Container(300).HasFocus(6)</visible>
+          <include>HomeSubmenuWrapList</include>
+  
+          <content>
+            <item id="4">
+              <description>Favorites Button</description>
+              <label> $LOCALIZE[1036] </label>
+              <onclick>SetFocus(300)</onclick>
+              <onclick>XBMC.ActivateWindow(Favourites)</onclick>
+            </item>
+            <item id="5">
+              <description>Info Button</description>
+              <label> $LOCALIZE[31001] </label>
+              <onclick>XBMC.ActivateWindow(7)</onclick>
+            </item>
+            <item id="1">
+              <description>Settings Button</description>
+              <label> $LOCALIZE[5] </label>
+              <onclick>XBMC.ActivateWindow(Settings)</onclick>
+            </item>
+            <item id="2">
+              <description>Scripts Button</description>
+              <label> $LOCALIZE[247] </label>
+              <onclick>XBMC.ActivateWindow(20)</onclick>
+            </item>
+            <item id="3">
+              <description>File Manager Button</description>
+              <label> $LOCALIZE[31000] </label>
+              <onclick>XBMC.ActivateWindow(3)</onclick>
+            </item>
+          </content>
+        </control>
+  
+        <control type="wraplist" id="409">
+          <description>Power Side Menu</description>
+          <onup>409</onup>
+          <ondown>409</ondown>
+          <visible>Container(300).HasFocus(7)</visible>
+          <include>HomeSubmenuWrapList</include>
+  
+          <content>
+            <item id="1">
+              <description>Shutdown Button</description>
+              <label> $LOCALIZE[13005] </label>
+              <onclick>XBMC.Shutdown()</onclick>
+            </item>
+            <item id="2">
+              <description>Reset Button</description>
+              <label> $LOCALIZE[31002] </label>
+              <onclick>XBMC.Reset()</onclick>
+            </item>
+            <item id="3">
+              <description>Restart Button</description>
+              <label> $LOCALIZE[13313] XBMC</label>
+              <onclick>XBMC.RestartApp()</onclick>
+            </item>
+            <item id="4">
+              <description>Reload Skin Button</description>
+              <label> $LOCALIZE[20183] </label>
+              <onclick>XBMC.ReloadSkin()</onclick>
+            </item>
+            <item id="5">
+              <description>Dashboard Button</description>
+              <label> $LOCALIZE[13006] </label>
+              <onclick>XBMC.Dashboard()</onclick>
+              <visible>System.Platform.Xbox</visible>
+            </item>
+            <item id="6">
+              <description>Suspend</description>
+              <label> $LOCALIZE[13011] </label>
+              <onclick>XBMC.Suspend()</onclick>
+              <visible>!System.Platform.Xbox</visible>
+            </item>
+            <item id="7">
+              <description>Hibernate</description>
+              <label> $LOCALIZE[13010] </label>
+              <onclick>XBMC.Hibernate()</onclick>
+              <visible>!System.Platform.Xbox</visible>
+            </item>
+            <item id="8">
+              <description>Logout Button</description>
+              <label> $LOCALIZE[20126] </label>
+              <onclick>System.LogOff</onclick>
+              <visible>System.HasLoginScreen</visible>
+            </item>
+          </content>
+        </control>
+      </control>
+    </control>
+
+    <control type="group">
+      <description>Main Menu</description>
+      <include>HomeMainMenuPos</include>
+
+      <animation effect="slide" time="300" tween="circle" easing="out" start="-300,100" end="0,0" condition="![Window.Previous(Settings.xml) | Window.Previous(7) | Window.Previous(1001)]">WindowOpen</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="-35,0" end="0,0" condition="[Window.Previous(Settings.xml) | Window.Previous(7) | Window.Previous(1001)]">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="-300,100" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-300,100" condition="![Window.Next(Settings.xml) | Window.Next(7) | Window.Next(1001)]">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-300,100">Hidden</animation>
+
+      <control type="group">
+        <posy>30</posy>
+
+        <control type="group">
+          <description>Main Menu replacement labels</description>
+          <visible>ControlGroup(301).HasFocus() | Control.HasFocus(450) | Control.HasFocus(451)</visible>
+
+          <control type="label">
+            <info>Container(300).ListItem(0).Label2</info>
+            <include>HomeMainMenuSubLabel</include>
+          </control>
+          <control type="label">
+            <info>Container(300).ListItem(0).Label</info>
+            <include>HomeMainMenuMainLabel</include>
+          </control>
+        </control>
+      </control>
+
+      <include>HomeMainMenuBG</include>
+
+      <control type="wraplist" id="300">
+        <description>Main Menu</description>
+        <include>HomeMainMenuWrapList</include>
+        <visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
+
+        <content>
+          <item id="2">
+            <description>My Music Button</description>
+            <label>$LOCALIZE[2]</label>
+            <label2>$LOCALIZE[31012]</label2>
+            <thumb>$INFO[Skin.String(CustomMusicBGFolder)]</thumb>
+            <visible>!Skin.HasSetting(HideMusic)</visible>
+            <onclick>XBMC.ActivateWindow(5)</onclick>
+          </item>
+          <item id="9">
+            <description>My Movies Button</description>
+            <label>$LOCALIZE[342]</label>
+            <label2>$LOCALIZE[31009]</label2>
+            <thumb>$INFO[Skin.String(CustomMoviesBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+            <visible>!Skin.HasSetting(HideMovies)</visible>
+          </item>
+          <item id="8">
+            <description>My TV Shows Button</description>
+            <label>$LOCALIZE[20343]</label>
+            <label2>$LOCALIZE[31010]</label2>
+            <thumb>$INFO[Skin.String(CustomTVShowsBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+            <visible>!Skin.HasSetting(HideTVShows)</visible>
+          </item>
+          <item id="3">
+            <description>My Pics Button</description>
+            <label>$LOCALIZE[1]</label>
+            <label2>$LOCALIZE[31013]</label2>
+            <thumb>$INFO[Skin.String(CustomPicturesBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(2)</onclick>
+            <visible>!Skin.HasSetting(HidePictures)</visible>
+          </item>
+          <item id="7">
+            <description>Power Button</description>
+            <label>$LOCALIZE[31007]</label>
+            <label2>$LOCALIZE[31017]</label2>
+            <thumb>$INFO[Skin.String(CustomPowerBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(ShutdownMenu)</onclick>
+            <visible>!Skin.HasSetting(HidePower)</visible>
+          </item>
+          <item id="6">
+            <description>My System Menu</description>
+            <label>$LOCALIZE[13000]</label>
+            <label2>$LOCALIZE[31016]</label2>
+            <thumb>$INFO[Skin.String(CustomSystemBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(Settings)</onclick>
+            <visible>!Skin.HasSetting(HideSystem)</visible>
+          </item>
+          <item id="5">
+            <description>My Weather Button</description>
+            <label>$LOCALIZE[8]</label>
+            <label2>$LOCALIZE[31020]</label2>
+            <thumb>$INFO[Skin.String(CustomWeatherBGFolder)]$INFO[Weather.FanartCode]</thumb>
+            <onclick>XBMC.ActivateWindow(2600)</onclick>
+            <visible>!Skin.HasSetting(HideWeather) + !Skin.HasSetting(HideWeatherFanart)</visible>
+          </item>
+          <item id="5">
+            <description>My Weather Button</description>
+            <label>$LOCALIZE[8]</label>
+            <label2>$LOCALIZE[31020]</label2>
+            <thumb>$INFO[Skin.String(CustomWeatherBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(2600)</onclick>
+            <visible>!Skin.HasSetting(HideWeather) + Skin.HasSetting(HideWeatherFanart)</visible>
+          </item>
+          <item id="4">
+            <description>My Programs Menu</description>
+            <label>$LOCALIZE[0]</label>
+            <label2>$LOCALIZE[31014]</label2>
+            <thumb>$INFO[Skin.String(CustomProgramsBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(1)</onclick>
+            <visible>!Skin.HasSetting(HidePrograms)</visible>
+          </item>
+          <item id="10">
+            <description>DVD Button</description>
+            <label>DVD</label>
+            <label2>$LOCALIZE[31019]</label2>
+            <thumb>$INFO[Skin.String(CustomDVDBGFolder)]</thumb>
+            <visible>System.HasMediadvd + !Skin.HasSetting(HideDVD)</visible>
+            <onclick>XBMC.PlayDVD</onclick>
+          </item>
+          <item id="1">
+            <description>My Videos Button</description>
+            <label>$LOCALIZE[3]</label>
+            <label2>$LOCALIZE[31011]</label2>
+            <thumb>$INFO[Skin.String(CustomVideosBGFolder)]</thumb>
+            <onclick>XBMC.ActivateWindow(24)</onclick>
+            <visible>!Skin.HasSetting(HideVideos)</visible>
+          </item>
+        </content>
+      </control>
+
+      <include>HomeMainMenuNavIndics</include>
+    </control>
+
+    <control type="button" id="299">
+      <description>Run Recently added</description>
+      <posx>-20</posx>
+      <posy>-20</posy>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>RunScript(special://skin/scripts/latest/latest.py)</onfocus>
+      <onfocus>SetFocus(300)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>!Skin.HasSetting(HideLatestVideos)</visible>
+    </control>
+    <control type="button" id="299">
+      <description>Run Recently added</description>
+      <posx>-20</posx>
+      <posy>-20</posy>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>SetFocus(300)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>Skin.HasSetting(HideLatestVideos)</visible>
+    </control>
+
+    <control type="group">
+      <posx>1040</posx>
+      <posy>73</posy>
+      <visible>!Skin.HasSetting(HideLatestVideos)</visible>
+
+      <control type="group" id="460">
+        <description>Latest Movies</description>
+        <animation effect="slide" time="800" delay="1000" tween="circle" easing="out" start="360,0" end="0,0">WindowOpen</animation>
+        <animation effect="slide" time="800" delay="1000" tween="circle" easing="out" start="360,0" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="360,0">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="360,0">Hidden</animation>
+        <visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
+        <visible>Container(300).HasFocus(9)</visible>
+
+        <include>LatestMediaBG</include>
+
+        <control type="label">
+          <font>SmallTitleFont</font>
+          <textcolor>Selected</textcolor>
+          <label>$LOCALIZE[31023] $LOCALIZE[342]</label>
+        </control>
+
+        <control type="list" id="450">
+          <onup>450</onup>
+          <ondown>450</ondown>
+          <include>LatestMediaList</include>
+
+          <itemlayout width="236" height="38">
+            <control type="label">
+              <posx>4</posx>
+              <width>228</width>
+              <font>SmallTitleFont</font>
+              <info>ListItem.Label</info>
+              <textcolor>UnfocusedLight</textcolor>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <posy>16</posy>
+              <width>228</width>
+              <font>SmallTitle2Font</font>
+              <info>ListItem.Label2</info>
+              <textcolor>UnfocusedLight</textcolor>
+            </control>
+          </itemlayout>
+
+          <focusedlayout width="236" height="46">
+            <control type="label">
+              <posx>4</posx>
+              <width>228</width>
+              <font>MediumTitleFont</font>
+              <info>ListItem.Label</info>
+              <textcolor>UnfocusedLight</textcolor>
+              <animation effect="fade" start="100" end="0" time="100" delay="200" reversible="false">Focus</animation>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <posy>22</posy>
+              <width>228</width>
+              <font>MediumSmallTitle2Font</font>
+              <info>ListItem.Label2</info>
+              <textcolor>UnfocusedLight</textcolor>
+              <animation effect="fade" start="100" end="0" time="100" delay="200" reversible="false">Focus</animation>
+            </control>
+            <control type="image">
+              <width>236</width>
+              <height>42</height>
+              <include>OverlayArea</include>
+              <animation effect="slide" start="0,-42" end="0,0" time="200" reversible="false" tween="quadratic" easing="out" condition="Container(450).OnNext">Focus</animation>
+              <animation effect="slide" start="0,42" end="0,0" time="200" reversible="false"  tween="quadratic" easing="out" condition="Container(450).OnPrevious">Focus</animation>
+              <visible>Control.HasFocus(450)</visible>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <width>228</width>
+              <font>MediumTitleFont</font>
+              <info>ListItem.Label</info>
+              <animation effect="fade" start="0" end="100" time="100" delay="200" reversible="false" condition="[Container(450).OnNext | Container(450).OnPrevious]">Focus</animation>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <posy>22</posy>
+              <width>228</width>
+              <font>MediumSmallTitle2Font</font>
+              <textcolor>Highlighted</textcolor>
+              <info>ListItem.Label2</info>
+              <animation effect="fade" start="0" end="100" time="100" delay="200" reversible="false" condition="[Container(450).OnNext | Container(450).OnPrevious]">Focus</animation>
+            </control>
+          </focusedlayout>
+
+          <content>
+            <item id="1">
+              <label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
+              <label2>$INFO[Window.Property(LatestMovie.1.Year)]$INFO[Window.Property(LatestMovie.1.RunningTime), (,)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
+            </item>
+            <item id="2">
+              <label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
+              <label2>$INFO[Window.Property(LatestMovie.2.Year)]$INFO[Window.Property(LatestMovie.2.RunningTime), (,)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestMovie.2.Fanart)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
+            </item>
+            <item id="3">
+              <label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
+              <label2>$INFO[Window.Property(LatestMovie.3.Year)]$INFO[Window.Property(LatestMovie.3.RunningTime), (,)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestMovie.3.Fanart)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
+            </item>
+            <item id="4">
+              <label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
+              <label2>$INFO[Window.Property(LatestMovie.4.Year)]$INFO[Window.Property(LatestMovie.4.RunningTime), (,)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestMovie.4.Fanart)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
+            </item>
+          </content>
+        </control>
+
+        <control type="image">
+          <info>Container(450).ListItem.Thumb</info>
+          <include>LatestMediaThumb</include>
+        </control>
+
+        <control type="image">
+          <description>Indicator arrow</description>
+          <include>LatestMediaIndicArrow</include>
+          <visible>Control.HasFocus(450)</visible>
+        </control>
+      </control>
+
+      <control type="group" id="461">
+        <description>Latest Episodes</description>
+        <animation effect="slide" time="800" delay="1000" tween="circle" easing="out" start="300,0" end="0,0">WindowOpen</animation>
+        <animation effect="slide" time="800" delay="1000" tween="circle" easing="out" start="300,0" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="300,0">WindowClose</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="300,0">Hidden</animation>
+        <visible>!IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+        <visible>Container(300).HasFocus(8)</visible>
+
+        <include>LatestMediaBG</include>
+
+        <control type="label">
+          <font>SmallTitleFont</font>
+          <textcolor>Selected</textcolor>
+          <label>$LOCALIZE[31023] $LOCALIZE[20360]</label>
+        </control>
+
+        <control type="list" id="451">
+          <height>160</height>
+          <onup>451</onup>
+          <ondown>451</ondown>
+          <include>LatestMediaList</include>
+
+          <itemlayout width="236" height="38">
+            <control type="label">
+              <posx>4</posx>
+              <width>228</width>
+              <font>SmallTitle2Font</font>
+              <textcolor>UnfocusedLight</textcolor>
+              <info>ListItem.Label2</info>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <width>228</width>
+              <posy>14</posy>
+              <font>SmallTitleFont</font>
+              <textcolor>UnfocusedLight</textcolor>
+              <info>ListItem.Label</info>
+            </control>
+          </itemlayout>
+
+          <focusedlayout width="236" height="46">
+            <control type="label">
+              <posx>4</posx>
+              <posy>2</posy>
+              <width>228</width>
+              <font>MediumSmallTitle2Font</font>
+              <textcolor>UnfocusedLight</textcolor>
+              <info>ListItem.Label2</info>
+              <animation effect="fade" start="100" end="0" time="100" delay="200" reversible="false">Focus</animation>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <posy>18</posy>
+              <width>228</width>
+              <font>MediumTitleFont</font>
+              <textcolor>UnfocusedLight</textcolor>
+              <info>ListItem.Label</info>
+              <animation effect="fade" start="100" end="0" time="100" delay="200" reversible="false">Focus</animation>
+            </control>
+            <control type="image">
+              <width>236</width>
+              <height>44</height>
+              <include>OverlayArea</include>
+              <animation effect="slide" start="0,-42" end="0,0" time="200" reversible="false" tween="quadratic" easing="out" condition="Container(451).OnNext">Focus</animation>
+              <animation effect="slide" start="0,42" end="0,0" time="200" reversible="false"  tween="quadratic" easing="out" condition="Container(451).OnPrevious">Focus</animation>
+              <visible>Control.HasFocus(451)</visible>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <posy>2</posy>
+              <width>228</width>
+              <font>MediumSmallTitle2Font</font>
+              <textcolor>Highlighted</textcolor>
+              <info>ListItem.Label2</info>
+              <animation effect="fade" start="0" end="100" time="100" delay="200" reversible="false" condition="[Container(451).OnNext | Container(451).OnPrevious]">Focus</animation>
+            </control>
+            <control type="label">
+              <posx>4</posx>
+              <posy>18</posy>
+              <width>228</width>
+              <font>MediumTitleFont</font>
+              <info>ListItem.Label</info>
+              <animation effect="fade" start="0" end="100" time="100" delay="200" reversible="false" condition="[Container(451).OnNext | Container(451).OnPrevious]">Focus</animation>
+            </control>
+          </focusedlayout>
+
+          <content>
+            <item id="1">
+              <label>$INFO[Window.Property(LatestEpisode.1.EpisodeNo)] - $INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
+              <label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestEpisode.1.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+            </item>
+            <item id="2">
+              <label>$INFO[Window.Property(LatestEpisode.2.EpisodeNo)] - $INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
+              <label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestEpisode.2.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
+            </item>
+            <item id="3">
+              <label>$INFO[Window.Property(LatestEpisode.3.EpisodeNo)] - $INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
+              <label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestEpisode.3.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
+            </item>
+            <item id="4">
+              <label>$INFO[Window.Property(LatestEpisode.4.EpisodeNo)] - $INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
+              <label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)]</label2>
+              <onclick>PlayMedia($INFO[Window.Property(LatestEpisode.4.Path)])</onclick>
+              <thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
+            </item>
+          </content>
+        </control>
+
+        <control type="image">
+          <info>Container(451).ListItem.Thumb</info>
+          <include>LatestMediaThumb</include>
+        </control>
+
+        <control type="image">
+          <description>Indicator arrow</description>
+          <include>LatestMediaIndicArrow</include>
+          <visible>Control.HasFocus(451)</visible>
+        </control>
+      </control>
+    </control>
+
+    <control type="group">
+      <description>RSS</description>
+      <posx>350</posx>
+      <posy>682</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,0" end="250,0" reversible="false" condition="[Control.HasFocus(401) | Control.HasFocus(402) | Control.HasFocus(403) | Control.HasFocus(404) | Control.HasFocus(405) | Control.HasFocus(406) | Control.HasFocus(407) | Control.HasFocus(408) | Control.HasFocus(409) | [Control.HasFocus(460) + !Container(401).HasFocus(10)] | [Control.HasFocus(461) + !Container(402).HasFocus(8)]]">Conditional</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="250,0" end="0,0" reversible="false" condition="![Control.HasFocus(401) | Control.HasFocus(402) | Control.HasFocus(403) | Control.HasFocus(404) | Control.HasFocus(405) | Control.HasFocus(406) | Control.HasFocus(407) | Control.HasFocus(408) | Control.HasFocus(409) | [Control.HasFocus(460) + !Container(401).HasFocus(10)] | [Control.HasFocus(461) + !Container(402).HasFocus(8)]]">Conditional</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,120" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="700,120" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,120">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,120">Hidden</animation>
+      <visible>System.GetBool(LookAndFeel.EnableRSSFeeds) + System.HasNetwork</visible>
+      <include>HideWhenLowerDialogActive</include>
+
+      <control type="image">
+        <description>Panel background</description>
+        <posx>-10</posx>
+        <posy>0</posy>
+        <width>950</width>
+        <height>50</height>
+        <include>OverlayArea</include>
+      </control>
+
+      <control type="rss">
+        <description>RSS Feed</description>
+        <posy>10</posy>
+      </control>
+    </control>
+
+    <include>MusicNowPlaying</include>
+    <include>VideoOverlayUI</include>
+
+  </controls>
+</window>
+

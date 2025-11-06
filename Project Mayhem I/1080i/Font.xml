@@ -1,0 +1,43 @@
+<fonts>
+	<fontset id="Default" unicode="true">
+		<font>
+			<name>font13</name>
+			<filename>Prototype.ttf</filename>
+			<size>37</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>Prototype.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>font64</name>
+			<filename>common-font64.xpr</filename>
+		</font>
+		<font>
+			<name>font15</name>
+			<filename>Prototype.ttf</filename>
+			<size>35</size>
+		</font>
+		<font>
+			<name>font10</name>
+			<filename>Prototype.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>font12</name>
+			<filename>Prototype.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>fontKB</name>
+			<filename>Prototype.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>font101</name>
+			<filename>Prototype.ttf</filename>
+			<size>34</size>
+		</font>
+	</fontset>
+</fonts>

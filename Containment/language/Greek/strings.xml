@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+<!-- Start Home Labels -->
+	<string id="31001">Μουσική</string>
+	<string id="31002">Εφαρμογές</string>
+	<string id="31003">Βίντεο</string>
+	<string id="31004">Φωτογραφίες</string>
+	<string id="31005">Ρυθμίσεις</string>
+<!-- End Home Labels -->
+
+<!-- Start Music Labels -->
+	<string id="31006">Όλη η μουσική</string>
+	<string id="31007">Αξιολόγηση</string>
+<!-- End Music Labels -->
+
+<!-- Start Shutdown Labels -->
+	<string id="31008">Κύρια λειτουργία</string>
+	<string id="31009">Υφή χρώματος</string>
+	<string id="31010">Χρώμα γραμματοσειράς</string>
+	<string id="31011">Επανεκκίνηση XBOX</string>
+	<string id="31012">Επανεκκίνηση XBMC</string>
+	<string id="31013">Αγαπημένα</string>
+<!-- End Shutdown Labels -->
+
+<!-- Start Settings Labels -->
+	<string id="31014">Επιλογές υπόβαθρου</string>
+	<string id="31015">Χρήση υπόβαθρου</string>
+	<string id="31016">Επιλογή προσαρμοσμένου υπόβαθρου</string>
+	<string id="31017">Ανάταξη προσαρμοσμένου υπόβαθρου</string>
+	<string id="31018">Επιλογή φακέλου κινούμενου υπόβαθρού</string>
+	<string id="31019">Ανάταξη κινούμενου υπόβαθρού</string>
+	<string id="31020">Ενεργοποίηση ροών τίτλων ειδήσεων (RSS) ατην αρχική οθόνη</string>
+	<string id="31021">Πληροφορίες</string>
+	<string id="31022">Πολυμέσα </string>
+	<string id="31023">Σύστημα</string>
+	<string id="31024">Κέλυφος </string>
+	<string id="31025">Υπόβαθρο</string>
+	<string id="31026">Τερματισμός</string>
+	<string id="31027">Διαχείριση αρχείων</string>
+	<string id="31028">Scripts</string>
+	<string id="31029">Καιρός</string>
+	<string id="31030">Αποθηκευμένα παιχνίδια</string>
+	<string id="31031">Χρήση επικαλύψεων πολυμέσων σε αυτά που έχουν ή δεν έχουν θεαθεί</string>
+	<string id="31032">Απενεργοποίηση επικαλύψεων πολυμέσων</string>
+	<string id="31033">Απενεργοποίηση κινούμενης εικόνας από την αρχική οθόνη</string>
+	<string id="31034">Ενεργοποίηση της λίστας αναπαραγωγής κατά την εκκίνηση</string>
+	<string id="31035">Απενεργοποίηση πλήκτρου λήξης χρόνου πολυμέσων</string>
+	<string id="31036">Ενεργοποίηση ετικετών στις ευρείες εικόνες</string>
+	<string id="31037">Επιλογή λίστας αναπαραγωγής</string>
+	<string id="31038">Οθόνη εκκίνησης</string>
+	<string id="31039">Απενεργοποίηση ετικετών πλήκτρων από την αρχική οθόνη</string>
+	<string id="31040">Απενεργοποίηση αναδίπλωσης ετικετών προβολής</string>
+	<string id="31041">Χρήση οθόνη εκκίνησης Containment</string>
+	<string id="31042">Λήψη κελυφών Containment</string>
+<!-- End Settings Labels -->
+
+<!-- Start Misc. Labels -->
+	<string id="31043">Είσοδος στη συλλογή</string>
+	<string id="31044">Έξοδος από τη συλλογή</string>
+	<string id="31045">Σίγαση</string>
+<!-- End Misc. Labels-->
+
+<!-- Start Script Labels -->
+	<string id="31046">Διαφημιστικά ταινιών</string>
+	<string id="31047">Κελύφη Containment</string>
+	<string id="31048">Το κέλυφος εγκαταστάθηκε</string>
+	<string id="31049">Το κέλυφος υπάρχει ήδη.</string>
+	<string id="31050">Δεν βρέθηκαν νέα κελύφη.</string>
+	<string id="31051">Λήψη κελύφους:</string>
+	<string id="31052">Η λήψη ολοκληρώθηκε</string>
+	<string id="31053">Η λήψη ακυρώθηκε</string>
+	<string id="31054">Η λήψη απορρίφθηκε</string>
+	<string id="31055">Πηγαίνετε στις Ρυθμίσεις - Εξατομίκευση για την εφαρμογή του κελύφους.</string>
+	<string id="31056">Αδυναμία λήψης κελύφους από το διακομιστή.</string>
+	<string id="31057">Αδυναμία σύνδεσης με το διακομιστή.</string>
+	<string id="31058">Ελέγξτε τις ρυθμίσεις της σύνδεσης και προσπαθήστε ξανά.</string>
+<!-- End Script Labels -->
+</strings>

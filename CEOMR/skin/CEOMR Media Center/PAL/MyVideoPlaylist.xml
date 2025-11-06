@@ -1,0 +1,169 @@
+<window id="28">
+
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>defaultVideoBig.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="12">
+      <description>number of files text label</description>
+      <include>logo</include>
+      <posx>210</posx>
+      <posy>525</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="14">
+      <description>playlist text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>136</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+<control type="group" id="9000">
+    
+    <control type="button" id="9052">
+      <description>help button</description>
+      <include>logo</include>
+
+	<visible>Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)</visible>
+
+      <posx>212</posx>
+      <posy>82</posy>
+      <width>30</width>
+      <height>30</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(1052)</onclick>
+      <texturefocus>help-focus.png</texturefocus>
+      <texturenofocus>help-nofocus.png</texturenofocus>
+      <onleft>2</onleft>
+      <onright>50</onright>
+      <onup>22</onup>
+      <ondown>2</ondown>
+      <align>center</align>
+    </control>
+    
+      <control type="button" id="2">
+        <description>View As Icons button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>120</posy>
+        <label>100</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>9052</onup>
+        <ondown>20</ondown>
+      </control>
+
+      <control type="radiobutton" id="20">
+        <description>Shuffle button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>157</posy>
+        <label>191</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>2</onup>
+        <ondown>26</ondown>
+      </control>
+
+      <control type="button" id="26">
+        <description>Repeat button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>194</posy>
+        <label>486</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>20</onup>
+        <ondown>27</ondown>
+      </control>
+
+      <control type="radiobutton" id="27">
+        <description>Repeat one button</description>
+	<visible>false</visible>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>231</posy>
+        <label>487</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>26</onup>
+        <ondown>21</ondown>
+      </control>
+
+      <control type="button" id="21">
+        <description>Save button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>268</posy>
+        <label>190</label>
+        <font>font13</font>
+        <onup>27</onup>
+        <ondown>22</ondown>
+        <onleft>50</onleft>
+        <onright>50</onright>
+      </control>
+
+      <control type="button" id="22">
+        <description>Clear button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>305</posy>
+        <label>192</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>21</onup>
+        <ondown>9052</ondown>
+      </control>
+
+</control>
+		<include>OldListViewCommons</include>
+		<include>VideoViewCommons</include>
+		<include>AllViewCommonThumbSmall</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>AllViewCommonPageControls</include>
+  </controls>
+
+</window>

@@ -1,0 +1,221 @@
+<window>
+  <id>9</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+        <control>
+            <description>background image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>720</width>
+            <height>576</height>
+            <texture>background.png</texture>
+        </control>
+        <control>
+            <description>left menu</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>300</width>
+            <height>576</height>
+            <texture>menu.png</texture>
+        </control>
+        <control>
+            <description>BBmini</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>165</posX>
+            <posY>70</posY>
+            <width>80</width>
+            <height>43</height>
+            <texture>BB_logo.png</texture>
+        </control>
+    		<control>
+      		<description>title image</description>
+      		<type>image</type>
+      		<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>200</width>
+			<height>150</height>
+			<texture>title-settings.png</texture>
+    		</control>  
+
+ 
+    <control>
+      <description>Screen text label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>250</posX>
+      <posY>80</posY>
+      <label>131</label>
+      <font>font18</font>
+    </control>
+    
+    <control>
+      <description>UI Calibration button</description>
+      <type>button</type>
+      <id>2</id>
+      <posX>35</posX>
+      <posY>150</posY>
+      <width>170</width>
+      <label>213</label>
+      <hyperlink>10</hyperlink>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>11</onup>
+      <ondown>3</ondown>
+    </control>
+
+    <control>
+      <description>Screen Calibration button</description>
+      <type>button</type>
+      <id>3</id>
+      <posX>35</posX>
+      <posY>186</posY>
+      <width>170</width>
+      <label>214</label>
+      <hyperlink>11</hyperlink>
+      <onleft>3</onleft>
+      <onright>3</onright>
+      <onup>2</onup>
+      <ondown>4</ondown>
+    </control>
+
+    <control>
+      <description>Soften button</description>
+      <type>radiobutton</type>
+      <id>4</id>
+      <posX>35</posX>
+      <posY>222</posY>
+      <width>170</width>
+      <label>215</label>
+      <onleft>4</onleft>
+      <onright>4</onright>
+      <onup>3</onup>
+      <ondown>5</ondown>
+    </control>
+
+    <control>
+      <description>Zoom button</description>
+      <type>radiobutton</type>
+      <id>5</id>
+      <posX>35</posX>
+      <posY>258</posY>
+      <width>170</width>
+      <label>216</label>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>4</onup>
+      <ondown>6</ondown>
+    </control>
+
+    <control>
+      <description>Stretch button</description>
+      <type>radiobutton</type>
+      <id>6</id>
+      <posX>35</posX>
+      <posY>294</posY>
+      <width>170</width>
+      <label>217</label>
+      <onleft>6</onleft>
+      <onright>6</onright>
+      <onup>5</onup>
+      <ondown>7</ondown>
+    </control>
+
+    <control>
+      <description>Filters button</description>
+      <type>button</type>
+      <id>7</id>
+      <posX>35</posX>
+      <posY>330</posY>
+      <width>170</width>
+      <label>230</label>
+      <hyperlink>13</hyperlink>
+      <onleft>7</onleft>
+      <onright>7</onright>
+      <onup>6</onup>
+      <ondown>8</ondown>
+    </control>
+
+    <control>
+      <description>Subtitle button</description>
+      <type>button</type>
+      <id>8</id>
+      <posX>35</posX>
+      <posY>366</posY>
+      <width>170</width>
+      <label>287</label>
+      <hyperlink>15</hyperlink>
+      <onleft>8</onleft>
+      <onright>8</onright>
+      <onup>7</onup>
+      <ondown>9</ondown>
+    </control>
+
+    <control>
+      <description>Frame Rate Conversions button</description>
+      <type>radiobutton</type>
+      <id>9</id>
+      <posX>35</posX>
+      <posY>402</posY>
+      <width>170</width>
+      <label>336</label>
+      <onup>8</onup>
+      <ondown>10</ondown>
+    </control>
+
+    <control>
+      <description>Screensaver Button</description>
+      <type>button</type>
+      <id>10</id>
+      <posX>35</posX>
+      <posY>438</posY>
+      <width>170</width>
+      <label>360</label>
+      <hyperlink>16</hyperlink>
+	<onleft>10</onleft>
+	<onright>10</onright>
+	<onup>9</onup>
+	<ondown>11</ondown>
+    </control>
+
+    <control>
+	<description>OSD Button</description>
+	<type>button</type>
+	<id>11</id>
+	<posX>35</posX>
+	<posY>474</posY>
+      <width>170</width>
+	<label>478</label>
+	<hyperlink>18</hyperlink>
+	<onleft>11</onleft>
+	<onright>11</onright>
+	<onup>10</onup>
+	<ondown>2</ondown>
+    </control>
+
+    <control>
+	<description>video rectangle</description>
+	<type>image</type>
+	<id>0</id>
+	<posX>269</posX>
+	<posY>185</posY>
+	<width>403</width>
+	<height>252</height>
+	<texture>rectangle_video.png</texture>
+    </control>      
+    <control>
+	<description>video windowlogo</description>
+	<type>videowindow</type>
+	<id>1</id>
+	<posX>270</posX>
+	<posY>186</posY>
+	<width>400</width>
+	<height>250</height>
+    </control>
+  </controls>
+</window>

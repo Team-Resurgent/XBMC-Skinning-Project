@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!--  strings 31000 thru 31999 reserved for skins  -->
+
+ <strings>
+  <string id="31000">浏览</string>
+  <string id="31001">视频</string>
+  <string id="31002">音乐</string>
+  <string id="31003">图片</string>
+  <string id="31004">程序</string>
+  <string id="31005">天气</string>
+  <string id="31006">系统</string>
+  <string id="31007">开/关</string>
+  <string id="31008">剧集</string>
+  <string id="31011">观看您的</string>
+  <string id="31012">聆听您的</string>
+  <string id="31013">翻阅您的</string>
+  <string id="31014">运行您的</string>
+  <string id="31015">查看</string>
+  <string id="31016">配置您的</string> 
+  <string id="31017">电源</string> 
+  <string id="31018">菜单</string> 
+  <string id="31019">播放您的</string> 
+  <string id="31020">选项</string>
+  <string id="31021">季</string> 
+  <string id="31022">隐藏</string>
+  <string id="31023">排序</string> 
+  <string id="31024">排序方向</string>
+  <string id="31025">升序</string> 
+  <string id="31026">降序</string> 
+  <string id="31027">开始</string> 
+  <string id="31028">完成</string>
+  <string id="31029">编剧</string> 
+  <string id="31030">音轨号</string> 
+  <string id="31031">启用</string> 
+  <string id="31032">乐器</string> 
+  <string id="31033">最近更新</string>
+  <string id="31034">系统版本</string>
+  <string id="31035">空闲内存</string>
+  <string id="31036">网络地址</string>
+  <string id="31037">硬盘容量</string>
+  <string id="31038">选择您的</string>
+  <string id="31039">收藏夹</string>
+  <string id="31040">修改</string>
+  <string id="31041">编辑</string>
+  <string id="31042">图片</string>
+  <string id="31043">查看您的</string>
+  <string id="31044">按</string>
+  <string id="31045">最新添加</string>
+  <string id="31046">歌词脚本目录</string>
+  <string id="31047">最新</string>
+  <string id="31048">隐藏最新媒体</string>
+
+<!--  Programs  -->
+  <string id="31051">游戏</string>
+  <string id="31052">模拟器</string>
+  <string id="31053">程序</string>
+
+<!--  System  -->
+  <string id="31060">系统设置</string>
+  <string id="31061">脚本程序</string>
+  <string id="31062">文件管理</string>
+  <string id="31063">我的收藏</string>
+  <string id="31064">用户配置</string>
+  <string id="31065">系统信息</string>
+  <string id="31066">刷新</string>
+  <string id="31067">关于您的</string>
+
+<!--  Power  -->
+  <string id="31071">关机</string>
+  <string id="31072">重启系统</string>
+  <string id="31073">重启XBMC</string>
+  <string id="31074">原厂系统</string>
+  <string id="31075">刷新皮肤</string>
+
+<!--  Video  -->
+  <string id="31111">电影</string>
+  <string id="31112">剧集</string> 
+  <string id="31113">剪辑</string> 
+  <string id="31114">集:</string> 
+  <string id="31115">无</string> 
+  <string id="31116">电影片名</string>
+  <string id="31117">略缩图</string> 
+  <string id="31118">同人画</string> 
+  <string id="31119">摘要</string> 
+  <string id="31120">评分</string>
+  <string id="31121">影片信息</string>
+  <string id="31122">首映</string>
+  <string id="31123">分级</string>
+  <string id="31124">集</string> 
+  <string id="31125">电影院</string> 
+  <string id="31126">剧集信息</string>
+  <string id="31127">分集信息</string>
+  <string id="31128">结束于</string>
+
+<!--  Music  -->
+  <string id="31220">正在播放</string>
+  <string id="31221">之前播放</string>
+  <string id="31222">即将播放</string>
+  <string id="31223">显示歌词</string>
+  <string id="31224">选项菜单</string>
+  <string id="31225">评分</string>
+  <string id="31226">更改</string>
+  <string id="31227">您的设置</string>
+  <string id="31228">歌词</string>
+
+<!--  Settings  --> 
+  <string id="31601">界面</string> 
+  <string id="31602">网络</string>
+  <string id="31603">皮肤</string> 
+  <string id="31604">常用</string> 
+  <string id="31605">首页</string> 
+  <string id="31606">更改您的设置</string>
+  <string id="31607">当前</string> 
+  <string id="31608">来源</string> 
+  <string id="31609">目的</string> 
+  <string id="31620">菜单</string> 
+  <string id="31621">禁用</string> 
+  <string id="31622">启用</string> 
+  <string id="31623">背景</string>
+  <string id="31624">选择</string>
+  <string id="31625">使用默认</string>
+  <string id="31650">隐藏预设</string>
+  <string id="31651">启用自定义背景</string>
+  <string id="31652">启用</string>
+  <string id="31653">视图</string>
+  <string id="31654">在文件管理中隐藏缩略图</string>
+  <string id="31655">剧集视图显示季封面</string>
+  <string id="31656">背景</string>
+  <string id="31657">图片</string>
+  <string id="31658">文件夹</string>
+  <string id="31659">重置</string>
+  <string id="31660">在首页启用自定义背景</string>
+  <string id="31661">Apple电影预告片</string>
+  <string id="31662">隐藏桌面时钟</string>
+  <string id="31663">显示文件总数</string>
+  <string id="31664">浏览媒体文件时隐藏滚动条</string>
+  <string id="31665">隐藏 已观看/未观看 图标</string>
+  <string id="31666">将首页选项移至首页中间</string>
+  <string id="31667">MediaStream</string>
+  <string id="31668">显示大时钟</string>
+  <string id="31669">首页显示天气信息</string>
+  <string id="31670">显示同人画</string>
+  <string id="31671">隐藏视频OSD中剧情介绍</string>
+  <string id="31672">隐藏信息</string>
+  <string id="31673">文件视图</string>
+  <string id="31674">隐藏同人画</string>
+  <string id="31675">在电影视图</string>
+  <string id="31676">在媒体预览时</string>
+  <string id="31677">在剧集列表</string>
+  <string id="31678">显示季缩略图</string>
+  <string id="31679">隐藏面板流视图详细资料</string>
+  <string id="31680">隐藏列表视图缩略图</string>
+  <string id="31681">在文件模式</string>
+  <string id="31682">在电视墙视图</string>
+  <string id="31683">在电视视图</string>
+  <string id="31684">隐藏自定义背景</string>
+  <string id="31685">显示动画效果</string>
+  <string id="31686">显示水平音乐视觉效果</string>
+  <string id="31687">在视频视图</string>
+  <string id="31688">在音乐视图</string>
+  <string id="31689">在图片视图</string>
+  <string id="31690">隐藏无缩略图项目图标</string>
+  <string id="31691">剧集流动封面视图使用低覆盖模式</string>
+  <string id="31692">隐藏封面墙视图详细资料</string>
+  <string id="31693">隐藏选项菜单略缩图</string>
+  <string id="31694">显示正在播放界面于左侧</string>
+  <string id="31695">时钟显示上午/下午</string>
+
+<!--  Options Menu  -->
+  <string id="31701">设置</string>
+  <string id="31702">封面展示</string>
+  <string id="31703">季</string>
+  <string id="31704">照片</string> 
+  <string id="31705">凸面</string> 
+  <string id="31706">集缩略图</string> 
+  <string id="31707">媒体预览</string> 
+  <string id="31708">媒体列表</string> 
+  <string id="31709">凹面</string>
+  <string id="31710">显示</string> 
+  <string id="31711">信息列表</string>
+  <string id="31712">图片流</string>
+  <string id="31713">设置选项</string>
+  <string id="31714">封面墙</string>
+  <string id="31715">面板流</string>
+  <string id="31716">流动封面</string>
+  <string id="31717">选项菜单</string>
+  <string id="31718">媒体预览2</string>
+
+<!--  Credits  -->
+  <string id="31800">制作组</string>
+  <string id="31801">欢迎使用</string>
+  <string id="31802">您的媒体....[COLOR Highlighted]您的[/COLOR]选择</string>
+  <string id="31803"></string>
+  <string id="31804">MediaStream是为流行的多媒体系统XBMC开发的新界面，该项目由新成立的“剃刀鱼小组（Team RazorFish）”创建。这个新界面为“高清”一代的要求而设计和优化，力求做到外观和功能相结合、风格和内容相统一。该皮肤界面也为这个已经广为流行的媒体平台带来了全新的体验。</string>
+  <string id="31805">注意</string>
+  <string id="31806">请确认您使用的是最新版的XBMC。推荐使用最新的XBMC开发版，同时下载皮肤的完整安装包。</string>
+  <string id="31807">皮肤制作</string>
+  <string id="31808">这个项目是许多人共同合作的成果。他们是：skunkmonkee, manturafs, justmed, timdog82001, wir3d, syphon, jmarshall, jezz_x, blittan, mikebeecham, grrowl, modplug, nuka1195和aenima99x。特别致谢emilio（别名thedeViL），没有他也就没有这个项目。当然还要感谢你，我们的XBMC社区... 没有你我们的工作也就没有意义... 继续努力吧，你们是最棒的！！！</string>
+  <string id="31809">特别致谢：整个XBMC开发团队，XBMC和XBOX-SCENE论坛的维护者</string>
+  <string id="31810">点“OK”继续</string>
+  <string id="31811">提示：本信息只显示一次。</string>
+
+<!--  Profiles  -->
+  <string id="31900">登录为</string>
+  <string id="31901">修改您的</string>
+  <string id="31902">用户配置</string>
+  <string id="31903">用户配置名称</string>
+  <string id="31904">用户配置图片</string>
+</strings>

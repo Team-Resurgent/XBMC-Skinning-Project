@@ -1,0 +1,242 @@
+<window id="7">
+	<defaultcontrol>95</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>225</width>
+				<height>576</height>
+				<onclick>-</onclick>
+				<texture>Side_Slideout.png</texture>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>88</posy>
+				<control type="button" id="95">
+					<description>Button Default Values</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<include>ButtonCommonValues</include>
+					<label>13278</label>
+					<onleft>95</onleft>
+					<onright>95</onright>
+					<onup>98</onup>
+					<ondown>94</ondown>
+				</control>
+				<control type="button" id="94">
+					<description>Button Storage</description>
+					<posx>0</posx>
+					<posy>36</posy>
+					<include>ButtonCommonValues</include>
+					<label>13277</label>
+					<onleft>94</onleft>
+					<onright>94</onright>
+					<onup>95</onup>
+					<ondown>92</ondown>
+				</control>
+				<control type="button" id="92">
+					<description>Button HDD</description>
+					<posx>0</posx>
+					<posy>72</posy>
+					<include>ButtonCommonValues</include>
+					<label>13275</label>
+					<onleft>92</onleft>
+					<onright>92</onright>
+					<onup>94</onup>
+					<ondown>93</ondown>
+				</control>
+				<control type="button" id="93">
+					<description>Button DVD</description>
+					<posx>0</posx>
+					<posy>108</posy>
+					<include>ButtonCommonValues</include>
+					<label>13276</label>
+					<onleft>93</onleft>
+					<onright>93</onright>
+					<onup>92</onup>
+					<ondown>96</ondown>
+				</control>
+				<control type="button" id="96">
+					<description>Button Network</description>
+					<posx>0</posx>
+					<posy>144</posy>
+					<include>ButtonCommonValues</include>
+					<label>13279</label>
+					<onleft>96</onleft>
+					<onright>96</onright>
+					<onup>93</onup>
+					<ondown>97</ondown>
+				</control>
+				<control type="button" id="97">
+					<description>Button Video</description>
+					<posx>0</posx>
+					<posy>180</posy>
+					<include>ButtonCommonValues</include>
+					<label>13280</label>
+					<onleft>97</onleft>
+					<onright>97</onright>
+					<onup>96</onup>
+					<ondown>98</ondown>
+				</control>
+				<control type="button" id="98">
+					<description>Button Hardware</description>
+					<posx>0</posx>
+					<posy>216</posy>
+					<include>ButtonCommonValues</include>
+					<label>13281</label>
+					<onleft>98</onleft>
+					<onright>98</onright>
+					<onup>97</onup>
+					<ondown>95</ondown>
+				</control>
+			</control>
+			<control type="group">
+				<posx>211</posx>
+				<posy>88</posy>
+				<control type="label" id="2">
+					<description>Label 2</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="3">
+					<description>Label 3</description>
+					<posx>0</posx>
+					<posy>32</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="4">
+					<description>Label 4</description>
+					<posx>0</posx>
+					<posy>64</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="5">
+					<description>Label 5</description>
+					<posx>0</posx>
+					<posy>96</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="6">
+					<description>Label 6</description>
+					<posx>0</posx>
+					<posy>128</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="7">
+					<description>Label 7</description>
+					<posx>0</posx>
+					<posy>160</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="8">
+					<description>Label 8</description>
+					<posx>0</posx>
+					<posy>192</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="9">
+					<description>Label 9</description>
+					<posx>0</posx>
+					<posy>224</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="10">
+					<description>Label 10</description>
+					<posx>0</posx>
+					<posy>256</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="11">
+					<description>Label 11</description>
+					<posx>0</posx>
+					<posy>288</posy>
+					<width>487</width>
+					<label>-</label>
+					<font>font13</font>
+				</control>
+				<control type="label" id="52">
+					<description>XBMC XBE BUILD Version</description>
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>487</width>
+					<label>144</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font13</font>
+				</control>
+				<control type="label" id="53">
+					<description>Mplayer DLL Version</description>
+					<posx>0</posx>
+					<posy>384</posy>
+					<width>487</width>
+					<label>144</label>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font13</font>
+				</control>
+				<control type="label">
+					<description>Skin Revision</description>
+					<posx>0</posx>
+					<posy>416</posy>
+					<width>487</width>
+					<include>Revision</include>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font13</font>
+				</control>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>72</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>23</posx>
+				<posy>16</posy>
+				<width>338</width>
+				<height>34</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>130</label>
+				<font>font16b</font>
+			</control>
+			<control type="label" id="40">
+				<description>filter text label</description>
+				<posx>23</posx>
+				<posy>60</posy>
+				<label>-</label>
+				<font>font14</font>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+	</controls>
+</window>

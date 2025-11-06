@@ -1,0 +1,23 @@
+<fonts>
+<fontset id="default" unicode="true">
+  
+	<font>
+		<name>Large</name>
+		<filename>Arial.ttf</filename>
+		<size>36</size>
+	</font>
+	<font>
+		<name>Small</name>
+		<filename>Arial.ttf</filename>
+		<size>14</size>
+	</font>
+  
+  <!-- Required for system -->
+  <font>
+    <name>font13</name>
+    <filename>Arial.ttf</filename>
+    <size>14</size>
+  </font>
+  
+</fontset>
+</fonts>

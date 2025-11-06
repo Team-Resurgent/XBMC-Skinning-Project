@@ -1,0 +1,467 @@
+<window id="0">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="group">
+			<animation effect="fade" time="200" end="0" reversible="false">WindowClose</animation>
+			<control type="visualisation">
+				<description>visualisation</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>576</height>
+				<visible>Player.HasAudio</visible>
+				<animation effect="fade" time="100">WindowOpen</animation>
+			</control>
+			<control type="videowindow">
+				<description>video preview window</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>576</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="fade" time="100">WindowOpen</animation>
+			</control>
+		</control>
+		<control type="image">
+			<description>custom background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(Custom_Background)</info>
+			<visible>!Player.HasMedia</visible>
+			<animation effect="fade" delay="0" time="100" start="0">visible</animation>
+			<animation effect="fade" delay="0" time="100" end="0">hidden</animation>
+		</control>
+		<control type="image">
+			<description>Media Overlay Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background4.png</texture>
+		</control>
+		<include>HomePageWeather</include>
+		<include>HomeMediaInfo</include>
+		<!-- Begin Main menu and Images -->
+		<control type="group">
+			<posx>183</posx>
+			<posy>300</posy>
+			<control type="group">
+				<animation effect="rotate" time="200" start="0" end="90" center="183,70" condition="Control.HasFocus(3)">Conditional</animation>
+				<animation effect="slide" time="200" end="60,0" condition="Control.HasFocus(3)">Conditional</animation>
+				<control type="image">
+					<description>Slider Shadow</description>
+					<posx>-15</posx>
+					<posy>0</posy>
+					<width>385</width>
+					<height>165</height>
+					<texture>Slider_Shadow.png</texture>
+					<animation effect="slide" time="200" end="160,0" condition="Control.HasFocus(302)">Conditional</animation>
+					<animation effect="slide" time="200" end="-160,0" condition="Control.HasFocus(301)">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>Slider</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>355</width>
+					<height>132</height>
+					<texture>Slider.png</texture>
+					<animation effect="slide" time="200" end="100,0" condition="Control.HasFocus(302)">Conditional</animation>
+					<animation effect="slide" time="200" end="-100,0" condition="Control.HasFocus(301)">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>Slider_Reflection_Right</description>
+					<posx>92</posx>
+					<posy>0</posy>
+					<width>186</width>
+					<height>121</height>
+					<texture>Slider_Reflection_Right.png</texture>
+					<animation effect="slide" time="200" end="145,0" condition="Control.HasFocus(302)">Conditional</animation>
+					<animation effect="slide" time="200" end="-60,0" condition="Control.HasFocus(301)">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>Slider_Reflection_left</description>
+					<posx>78</posx>
+					<posy>8</posy>
+					<width>186</width>
+					<height>121</height>
+					<texture>Slider_Reflection_Left.png</texture>
+					<animation effect="slide" time="200" end="60,0" condition="Control.HasFocus(302)">Conditional</animation>
+					<animation effect="slide" time="200" end="-145,0" condition="Control.HasFocus(301)">Conditional</animation>
+				</control>
+				<control type="group">
+					<animation effect="slide" time="200" end="100,0" condition="Control.HasFocus(302)">Conditional</animation>
+					<animation effect="slide" time="200" end="-100,0" condition="Control.HasFocus(301)">Conditional</animation>
+					<animation effect="fade" time="200" start="100" end="0" condition="Control.HasFocus(3)">Conditional</animation>
+					<control type="image">
+						<description>Arrow Left</description>
+						<posx>5</posx>
+						<posy>60</posy>
+						<width>15</width>
+						<height>15</height>
+						<texture>Arrow_Left.png</texture>
+					</control>
+					<control type="label">
+						<description>Games label</description>
+						<posx>15</posx>
+						<posy>67</posy>
+						<align>center</align>
+						<label>31002</label>
+						<font>font14</font>
+						<angle>90</angle>
+					</control>
+					<control type="image">
+						<description>Active Menu Image</description>
+						<posx>185</posx>
+						<posy>40</posy>
+						<width>140</width>
+						<height>45</height>
+						<texture>Streak_left.png</texture>
+						<visible>Control.HasFocus(301)</visible>
+						<animation effect="fade" time="200" start="0" end="100">Visible</animation>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="slide" time="200" end="100,0" condition="Control.HasFocus(302)">Conditional</animation>
+					<animation effect="slide" time="200" end="-100,0" condition="Control.HasFocus(301)">Conditional</animation>
+					<animation effect="fade" time="200" start="100" end="0" condition="Control.HasFocus(3)">Conditional</animation>
+					<control type="image">
+						<description>Arrow Right</description>
+						<posx>335</posx>
+						<posy>60</posy>
+						<width>15</width>
+						<height>15</height>
+						<texture>Arrow_Right.png</texture>
+					</control>
+					<control type="label">
+						<description>Media label</description>
+						<posx>340</posx>
+						<posy>67</posy>
+						<align>center</align>
+						<label>31001</label>
+						<font>font14</font>
+						<angle>270</angle>
+					</control>
+					<control type="image">
+						<description>Active Menu Image</description>
+						<posx>30</posx>
+						<posy>40</posy>
+						<width>140</width>
+						<height>45</height>
+						<texture>Streak_Right.png</texture>
+						<visible>Control.HasFocus(302)</visible>
+						<animation effect="fade" time="200" start="0" end="100">Visible</animation>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="slide" time="200" end="170,0" condition="Control.HasFocus(302)">Conditional</animation>
+				<animation effect="slide" time="200" end="-170,0" condition="Control.HasFocus(301)">Conditional</animation>
+				<control type="image">
+					<posx>70</posx>
+					<posy>-5</posy>
+					<width>215</width>
+					<height>145</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="home_button_diffuse.png" />
+					<info>Container(301).ListItem(0).ActualIcon</info>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>Control.HasFocus(301)</visible>
+				</control>
+				<control type="image">
+					<posx>70</posx>
+					<posy>-5</posy>
+					<width>215</width>
+					<height>145</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="home_button_diffuse.png" />
+					<info>Container(302).ListItem(0).ActualIcon</info>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>Control.HasFocus(302)</visible>
+				</control>
+				<control type="image">
+					<posx>70</posx>
+					<posy>-5</posy>
+					<width>215</width>
+					<height>145</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="home_button_diffuse.png" />
+					<info>Container(3).ListItem(0).ActualIcon</info>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>Control.HasFocus(3)</visible>
+				</control>
+				<control type="image">
+					<description>Music Cover</description>
+					<posx>128</posx>
+					<posy>18</posy>
+					<width>100</width>
+					<height>99</height>
+					<info>MusicPlayer.Cover</info>
+					<visible>Player.HasAudio</visible>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<visible>!Window.IsActive(Favourites) + !Control.HasFocus(301) + !Control.HasFocus(302) + !Control.HasFocus(3)</visible>
+				</control>
+				<control type="button" id="2">
+					<description>Main Home Button</description>
+					<posx>70</posx>
+					<posy>-5</posy>
+					<width>215</width>
+					<height>145</height>
+					<texturefocus>home_button.png</texturefocus>
+					<texturenofocus>home_button.png</texturenofocus>
+					<label>-</label>
+					<pulseonselect>no</pulseonselect>
+					<onclick>XBMC.ActivateWindow(ShutdownMenu)</onclick>
+					<onleft>301</onleft>
+					<onright>302</onright>
+					<onup>4</onup>
+					<ondown>3</ondown>
+				</control>
+				<control type="label">
+					<description>Time label</description>
+					<posx>178</posx>
+					<posy>65</posy>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>System.Time</info>
+					<font>font20</font>
+					<visible>!Player.HasAudio</visible>
+					<include>textcolor-blue</include>
+					<visible>!Window.IsActive(Favourites)</visible>
+					<visible>!Control.HasFocus(301) + !Control.HasFocus(302) + !Control.HasFocus(3)</visible>
+				</control>
+			</control>
+			<!-- Begin Media menu -->
+			<control type="wraplist" id="302">
+				<posx>145</posx>
+				<posy>27</posy>
+				<height>72</height>
+				<width>130</width>
+				<onup>302</onup>
+				<ondown>302</ondown>
+				<onleft>2</onleft>
+				<onright>302</onright>
+				<focusposition>1</focusposition>
+				<visible allowhiddenfocus="true">Control.HasFocus(302)</visible>
+				<animation effect="fade" delay="200" time="100" start="0" end="100">visible</animation>
+				<itemlayout height="24">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>130</width>
+						<height>24</height>
+						<info>ListItem.label</info>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font18</font>
+						<include>textcolor-grey</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="24">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>130</width>
+						<height>24</height>
+						<info>ListItem.label</info>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font18</font>
+						<include>textcolor-white</include>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<icon>MyVideo_Icon.png</icon>
+						<label>1212</label>
+						<onclick>ActivateWindow(MyVideos)</onclick>
+					</item>
+					<item>
+						<icon>MyMusic_Icon.png</icon>
+						<label>1211</label>
+						<onclick>ActivateWindow(MyMusic)</onclick>
+					</item>
+					<item>
+						<icon>MyPictures_Icon.png</icon>
+						<label>1213</label>
+						<onclick>ActivateWindow(MyPictures)</onclick>
+					</item>
+				</content>
+			</control>
+			<!-- End Media menu -->
+			<!-- Begin Games menu -->
+			<control type="wraplist" id="301">
+				<posx>80</posx>
+				<posy>27</posy>
+				<height>72</height>
+				<width>130</width>
+				<onup>301</onup>
+				<ondown>301</ondown>
+				<onleft>301</onleft>
+				<onright>2</onright>
+				<focusposition>1</focusposition>
+				<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
+				<animation effect="fade" delay="200" time="100" start="0" end="100">visible</animation>
+				<itemlayout height="24">
+					<control type="label">
+						<posx>130</posx>
+						<posy>0</posy>
+						<width>130</width>
+						<height>24</height>
+						<info>ListItem.label</info>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font18</font>
+						<include>textcolor-grey</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="24">
+					<control type="label">
+						<posx>130</posx>
+						<posy>0</posy>
+						<width>130</width>
+						<height>24</height>
+						<info>ListItem.label</info>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font18</font>
+						<include>textcolor-white</include>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<icon>MyGames_Icon.png</icon>
+						<label>15016</label>
+						<onclick>ActivateWindow(1,Games)</onclick>
+					</item>
+					<item>
+						<icon>MyApps.png</icon>
+						<label>350</label>
+						<onclick>ActivateWindow(1,Programs)</onclick>
+					</item>
+					<item>
+						<icon>MyEmulators.png</icon>
+						<label>31003</label>
+						<onclick>ActivateWindow(1,Emulators)</onclick>
+					</item>
+				</content>
+			</control>
+			<!-- End Games menu -->
+		</control>
+		<!-- Begin System menu -->
+		<control type="list" id="3">
+			<posx>298</posx>
+			<posy>150</posy>
+			<height>125</height>
+			<width>130</width>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<visible allowhiddenfocus="true">Control.HasFocus(3)</visible>
+			<animation effect="fade" delay="200" time="100" start="0" end="100">visible</animation>
+			<itemlayout height="24">
+				<control type="label">
+					<posx>65</posx>
+					<posy>0</posy>
+					<width>130</width>
+					<height>24</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font18</font>
+					<include>textcolor-grey</include>
+				</control>
+			</itemlayout>
+			<focusedlayout height="24">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>130</width>
+					<height>24</height>
+					<texture>Home_Select.png</texture>
+				</control>
+				<control type="label">
+					<posx>65</posx>
+					<posy>0</posy>
+					<width>130</width>
+					<height>24</height>
+					<info>ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font18</font>
+					<include>textcolor-white</include>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+				 	<icon>MyFiles_Icon.png</icon>
+					<label>7</label>
+					<onclick>ActivateWindow(MyFiles)</onclick>
+				</item>
+				<item>
+					<icon>MyWeather_Icon.png</icon>
+					<label>8</label>
+					<onclick>ActivateWindow(Weather)</onclick>
+				</item>
+				<item>
+					<icon>MySettings_Icon.png</icon>
+					<label>5</label>
+					<onclick>ActivateWindow(Settings)</onclick>
+				</item>
+				<item>
+					<icon>MyScripts_Icon.png</icon>
+					<label>247</label>
+					<onclick>ActivateWindow(scripts)</onclick>
+				</item>
+				<item>
+				 	<icon>PlayDisc_Icon.png</icon>
+					<label>31004</label>
+					<onclick>XBMC.PlayDVD</onclick>
+					<visible>System.HasMediaDVD</visible>
+				</item>
+			</content>
+		</control>
+		<!-- End System menu -->
+		<control type="button" id="4">
+			<description>Invisible Favourites Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1</width>
+			<height>1</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<pulseonselect>no</pulseonselect>
+			<onfocus>SetFocus(2)</onfocus>
+			<onfocus>XBMC.ActivateWindow(Favourites)</onfocus>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+		</control>
+		<!-- End Main menu and Images -->
+		<control type="rss" id="1">
+			<description>rss feed</description>
+			<posx>0</posx>
+			<posy>520</posy>
+			<width>720</width>
+			<font>font14</font>
+			<urlset>1</urlset>
+			<include>textcolor-rsstitle</include>
+			<include>textcolor-rssheadline</include>
+			<include>textcolor-blue</include>
+			<visible>![Player.HasMedia + Skin.HasSetting(HomeRSS)]</visible>
+		</control>
+	</controls>
+</window>    

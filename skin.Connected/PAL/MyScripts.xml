@@ -1,0 +1,122 @@
+<window id="20">
+<defaultcontrol always="true">51</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<controls>
+
+<include>Backgrounds</include>
+
+  <control type="group">
+    <visible>Control.IsVisible(54)</visible>
+    <control type="group">
+      <posy>330</posy>
+      <include>DefaultFade</include>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>247</height>
+        <texture>Black.png</texture>
+        <aspectratio>stretch</aspectratio>
+        <include>MediaBackFade</include>
+      </control>
+      <control type="label">
+        <posx>25</posx>
+        <width>670</width>
+        <height>35</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Title]</label>
+        <font>20BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+      <control type="label">
+        <posx>25</posx>
+        <width>670</width>
+        <height>30</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label]</label>
+        <font>20BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>IsEmpty(ListItem.Title)</visible>
+      </control>
+      <control type="label">
+        <posx>695</posx>
+        <width>670</width>
+        <height>30</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label2]</label>
+        <font>20BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+    </control>
+  </control>
+
+  <control type="group">
+    <include>List</include>
+    <include>BigList</include>
+    <include>Icons</include>
+    <include>Fanart</include>
+
+    <control type="image">
+      <description>Scripts Window Image</description>
+      <posx>-15</posx>
+      <posy>510</posy>
+      <width>80</width>
+      <height>80</height>
+      <aspectratio align="left">keep</aspectratio>
+      <texture>HomeScripts.png</texture>
+      <include>ContentImageFade</include>
+    </control>
+    <control type="label">
+      <description>Scripts Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[247]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+    </control>
+    <control type="label" id="12">
+      <description>Number of files label</description>
+      <posx>695</posx>
+      <posy>515</posy>
+      <width>200</width>
+      <height>80</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+    </control>
+
+    <control type="group" id="9000">
+      <posx>208</posx>
+      <posy>180</posy>
+      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
+
+      <control type="group">
+        <include>OptionBack2-4</include>
+        <visible>ControlGroup(9001).HasFocus</visible>
+      </control>
+      <control type="group">
+        <include>OptionBack2-2</include>
+        <visible>ControlGroup(9002).HasFocus</visible>
+      </control>
+
+      <include>DefaultViewOptions</include>
+      
+    </control>
+  </control>
+  <include>NowPlaying</include>
+    
+</controls>
+</window>

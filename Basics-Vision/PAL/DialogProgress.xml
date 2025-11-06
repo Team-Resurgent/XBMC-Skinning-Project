@@ -1,0 +1,103 @@
+<window id="101">
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>23</posx>
+		<posy>176</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>-5</posy>
+			<width>675</width>
+			<height>225</height>
+			<texture border="0,45,0,10">Dialog.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Heading label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<font>font16</font>
+			<label>13406</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="group">
+			<posx>113</posx>
+			<posy>44</posy>
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<label>-</label>
+				<align>center</align>
+				<font>font13</font>
+			</control>
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>0</posx>
+				<posy>28</posy>
+				<width>450</width>
+				<label>-</label>
+				<align>center</align>
+				<font>font13</font>
+				<haspath>yes</haspath>
+			</control>
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>0</posx>
+				<posy>56</posy>
+				<width>450</width>
+				<label>-</label>
+				<align>center</align>
+				<font>font13</font>
+				<haspath>yes</haspath>
+			</control>
+			<control type="progress" id="20">
+				<description>Progressbar</description>
+				<posx>39</posx>
+				<posy>88</posy>
+				<width>371</width>
+				<height>8</height>
+				<visible>true</visible>
+				<texturebg border="2">progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">progress_middle.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>450</width>
+				<label>$INFO[System.Progressbar]% - $LOCALIZE[31017]</label>
+				<align>center</align>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Control.IsVisible(20)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>Cancel button</description>
+				<posx>155</posx>
+				<posy>128</posy>
+				<width>141</width>
+				<height>32</height>
+				<label>222</label>
+				<font>font13</font>
+				<align>center</align>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

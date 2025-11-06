@@ -1,0 +1,298 @@
+<window>
+	<id>0</id>
+	<defaultcontrol>300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>background</include>
+
+	<control type="group">
+	<control type="buttonscroller" id="300">
+	<description>Home Buttons</description>
+	<posx>55</posx>
+	<posy>110</posy>
+	<width>150</width>
+	<height>35</height>
+	<buttongap>3</buttongap>
+	<numbuttons>7</numbuttons>
+	<orientation>vertical</orientation>
+	<align>right</align>
+	<aligny>center</aligny>
+	<movement>0</movement>
+	<defaultbutton>4</defaultbutton>
+	<wraparound>yes</wraparound>
+	<smoothscrolling>yes</smoothscrolling>
+	<alpha>100</alpha>
+	<font>font14</font>
+	<onleft>100</onleft>
+	<onright>99</onright>
+	<onup>300</onup>
+	<ondown>300</ondown>
+	<textoffsetx>9</textoffsetx>
+	<texturefocus>homebutton-focus.png</texturefocus>
+	<texturenofocus>-</texturenofocus>
+	<include>textcolorwhite</include>
+	<include>startup-effect</include>
+	<animation effect="fade" start="0" end="100" condition="!Skin.HasSetting(animation)" time="300">WindowOpen</animation> 
+	<buttons>
+	<button id="1">
+		<description>My Programs</description>
+		<label>0</label>
+		<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+		<icon>102</icon>
+	</button>
+	<button id="2">
+		<description>My Files</description>
+		<label>7</label>
+		<onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+		<icon>106</icon>
+	</button>
+	<button id="3">
+		<description>My Pictures</description>
+		<label>1</label>
+		<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+		<icon>104</icon>
+	</button>
+	<button id="4">
+		<description>My Music</description>
+		<label>2</label>
+		<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+		<icon>103</icon>
+	</button>
+	<button id="5">
+		<description>My Videos</description>
+		<label>3</label>
+		<onclick>XBMC.ActivateWindow(MyVideos)</onclick>
+		<icon>105</icon>
+	</button>
+	<button id="6">
+		<description>Weather</description>
+		<label>8</label>
+		<onclick>XBMC.ActivateWindow(Weather)</onclick>
+		<icon>107</icon>
+	</button>
+	<button id="7">
+		<description>Settings</description>
+		<label>5</label>
+		<onclick>XBMC.ActivateWindow(Settings)</onclick>
+		<icon>109</icon>
+	</button>
+	<button id="8">
+		<description>Favorites</description>
+		<label>Favorites</label>
+		<onclick>XBMC.ActivateWindow(134)</onclick>
+		<icon>103</icon>
+	</button>
+	</buttons>
+	</control>
+	</control>
+
+	<!-- Home Icons -->
+	<control type="image">
+		<posx>210</posx>
+		<posy>0</posy>
+		<width>512</width>
+		<height>576</height>
+		<texture>home-myPrograms.png</texture>
+		<include>home-icons</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>[Buttonscroller.HasFocus(1) | Control.HasFocus(99)]</visible>
+	</control>
+	<control type="image">
+		<posx>210</posx>
+		<posy>0</posy>
+		<width>512</width>
+		<height>576</height>
+		<texture>home-myfiles.png</texture>
+		<include>home-icons</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>Buttonscroller.HasFocus(2)</visible>
+	</control>
+	<control type="image">
+		<posx>210</posx>
+		<posy>0</posy>
+		<width>512</width>
+		<height>576</height>
+		<texture>home-mypictures.png</texture>
+		<include>home-icons</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>Buttonscroller.HasFocus(3)</visible>
+	</control>
+	<control type="image">
+		<posx>210</posx>
+		<posy>0</posy>
+		<width>512</width>
+		<height>576</height>
+		<texture>home-mymusic.png</texture>
+		<include>home-icons</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>Buttonscroller.HasFocus(4) | Buttonscroller.HasFocus(8)</visible>
+	</control>
+	<control type="image">
+		<posx>210</posx>
+		<posy>0</posy>
+		<width>512</width>
+		<height>576</height>
+		<texture>home-myvideos.png</texture>
+		<include>home-icons</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>Buttonscroller.HasFocus(5)</visible>
+	</control>
+	<control type="image">
+		<posx>210</posx>
+		<posy>0</posy>
+		<width>512</width>
+		<height>576</height>
+		<texture>home-myweather.png</texture>
+		<include>home-icons</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>Buttonscroller.HasFocus(6)</visible>
+	</control>
+	<control type="image">
+		<posx>210</posx>
+		<posy>0</posy>
+		<width>512</width>
+		<height>576</height>
+		<texture>home-settings.png</texture>
+		<include>home-icons</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>[Buttonscroller.HasFocus(7) | Control.HasFocus(100)]</visible>
+	</control>
+
+	<!-- Time/Date -->
+	<control type="label" id="200">
+		<description>date label</description>
+		<posx>630</posx>
+		<posy>510</posy>
+		<label>date</label>
+		<info>System.Date</info>
+		<align>right</align>
+		<font>font10</font>
+		<include>textcolorlightgrey</include>
+		<visible>!System.KaiConnected + !Skin.HasSetting(time-date)</visible>
+	</control>
+	<control type="label" id="201">
+		<description>time label</description>
+		<posx>630</posx>
+		<posy>495</posy>
+		<label>time</label>
+		<info>System.Time</info>
+		<align>right</align>
+		<font>font10</font>
+		<textcolor>60ffffff</textcolor>
+		<visible>!System.KaiConnected + !Skin.HasSetting(time-date)</visible>
+	</control>
+
+	<control type="label" id="200">
+		<description>date label 2</description>
+		<posx>590</posx>
+		<posy>510</posy>
+		<label>date</label>
+		<info>System.Date</info>
+		<align>right</align>
+		<font>font10</font>
+		<include>textcolorlightgrey</include>
+		<visible>System.KaiConnected + !Skin.HasSetting(time-date)</visible>
+	</control>
+	<control type="label" id="201">
+		<description>time label 2</description>
+		<posx>590</posx>
+		<posy>495</posy>
+		<label>time</label>
+		<info>System.Time</info>
+		<align>right</align>
+		<font>font10</font>
+		<textcolor>60ffffff</textcolor>
+		<visible>System.KaiConnected + !Skin.HasSetting(time-date)</visible>
+	</control>
+
+	<!-- Home Sub Buttons -->
+	<control type="button" id="99">
+		<description>submenu xlink button</description>
+		<posx>595</posx>
+		<posy>490</posy>
+		<width>36</width>
+		<height>41</height>
+		<font>font10</font>
+		<label>-</label>
+		<align>right</align>
+		<texturefocus>home-sub-kai-focus.png</texturefocus>
+		<texturenofocus>home-sub-kai-nofocus.png</texturenofocus>
+		<onclick>XBMC.ActivateWindow(XlinkKai)</onclick>
+		<onleft>300</onleft>
+		<onright>100</onright>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<include>textcolorlightgrey</include>
+		<include>startup-effect</include>
+		<visible allowhiddenfocus="false">System.KaiConnected</visible>
+		<animation effect="zoom" start="100" end="110" center="auto" acceleration="-2.8" condition="!Skin.HasSetting(animation)" time="300">Focus</animation>
+		<animation effect="zoom" start="110" end="100" center="auto" acceleration="-2.8" condition="!Skin.HasSetting(animation)" time="300">Unfocus</animation>
+	</control>
+
+	<control type="button" id="100">
+		<description>submenu button</description>
+		<posx>635</posx>
+		<posy>490</posy>
+		<width>36</width>
+		<height>41</height>
+		<onclick>XBMC.ActivateWindow(105)</onclick>
+		<texturefocus>home-sub-focus.png</texturefocus>
+		<texturenofocus>home-sub-nofocus.png</texturenofocus>
+		<label>-</label>
+		<onleft>99</onleft>
+		<onright>300</onright>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<include>startup-effect</include>
+		<animation effect="zoom" start="100" end="110" center="auto" acceleration="-2.8" condition="!Skin.HasSetting(animation)" time="300">Focus</animation>
+		<animation effect="zoom" start="110" end="100" center="auto" acceleration="-2.8" condition="!Skin.HasSetting(animation)" time="300">Unfocus</animation>
+	</control>
+
+	<!-- RSS Feeds -->
+	<control type="rss" id="1">
+		<description>rss feed</description>
+		<posx>0</posx>
+		<posy>35</posy>
+		<width>720</width>
+		<font>font13</font>
+		<urlset>1</urlset>
+		<include>textcolorlightgrey</include>
+		<titlecolor>d0ffffff</titlecolor>
+		<headlinecolor>d0ffffff</headlinecolor>
+		<visible>Skin.HasSetting(rss-feeds)</visible>
+	</control>
+
+	<!-- Weather Info Labels -->
+	<control type="image"> 
+		<description>Weather Conditions</description> 
+		<posx>60</posx>
+		<posy>460</posy>
+		<width>96</width>
+		<height>96</height>
+		<info>Weather.Conditions</info> 
+		<include>startup-effect</include>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>Weather.IsFetched</visible>
+		<visible>Skin.HasSetting(weather)</visible>
+		<visible>![Skin.HasSetting(media-cover) + Player.HasMedia]</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">Visible</animation>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="100">Hidden</animation>
+	</control> 
+
+	<control type="label"> 
+		<description>Weather Temperature</description> 
+		<posx>160</posx>
+		<posy>500</posy>
+		<info>Weather.Temperature</info> 
+		<font>font10</font> 
+		<align>left</align>
+		<include>startup-effect</include>
+		<visible>Weather.IsFetched</visible>
+		<visible>Skin.HasSetting(weather)</visible>
+		<visible>![Skin.HasSetting(media-cover) + Player.HasMedia]</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">Visible</animation>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="100">Hidden</animation>
+	</control>
+
+	</controls>
+</window>

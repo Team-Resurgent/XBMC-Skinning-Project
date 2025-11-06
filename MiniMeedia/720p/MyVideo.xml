@@ -1,0 +1,14 @@
+<window id="6">
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+  <controls>
+
+    <include>CommonScreenBackground</include>
+
+    <include>CommonScreenViews</include>
+
+    <include>CommonScreenForeground</include>
+
+  </controls>
+</window>

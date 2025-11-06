@@ -1,0 +1,46 @@
+<window>
+  <id>104</id>
+  <defaultcontrol>401</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <posX>0</posX>
+    <posY>0</posY>
+  </coordinates>
+  <controls>
+    <control>
+      <description>Popup Volume Dialog Background</description>
+      <type>image</type>
+      <id>400</id>
+      <posX>390</posX>
+      <posY>390</posY>
+      <width>360</width>
+      <height>39</height>
+      <texture>volumebar.png</texture>
+    </control>
+    <control>
+      <description>Volume Slider</description>
+      <type>slider</type>
+      <id>401</id>
+      <posX>480</posX>
+      <posY>400</posY>
+      <textureSliderBar>osd_slider_bg.png</textureSliderBar>
+      <textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
+      <textureSliderNibFocus>
+      osd_slider_nibFO.png</textureSliderNibFocus>
+      <onup>401</onup>
+      <ondown>401</ondown>
+      <onleft>401</onleft>
+      <onright>401</onright>
+    </control>
+    <control>
+      <description>Volume Label</description>
+      <type>label</type>
+      <id>402</id>
+      <posX>465</posX>
+      <posY>399</posY>
+      <align>right</align>
+      <width>70</width>
+      <height>16</height>
+    </control>
+  </controls>
+</window>

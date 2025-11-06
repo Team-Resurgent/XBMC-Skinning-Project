@@ -1,0 +1,37 @@
+﻿<window id="100">
+  <defaultcontrol always="true">10</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <include>ProgressDialogPos</include>
+
+      <include>ProgressDialogBG</include>
+
+      <control type="group">
+        <posx>20</posx>
+        <posy>24</posy>
+
+        <include>ConfirmDialogControls</include>
+
+        <control type="grouplist">
+          <orientation>horizontal</orientation>
+          <itemgap>10</itemgap>
+          <include>DialogYesNoButtonPos</include>
+
+          <control type="button" id="10">
+            <description>No Button</description>
+            <label>$LOCALIZE[106]</label>
+          </control>
+
+          <control type="button" id="11">
+            <description>Yes Button</description>
+            <label>$LOCALIZE[107]</label>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+
+</window>

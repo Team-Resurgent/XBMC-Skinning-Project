@@ -1,0 +1,599 @@
+<window id="0">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<control type="group">
+				<visible>Skin.HasSetting(Alternate_Home)</visible>
+				<control type="wraplist" id="2">
+					<posx>-88</posx>
+					<posy>145</posy>
+					<height>461</height>
+					<width>810</width>
+					<onup>ActivateWindow(Favourites)</onup>
+					<ondown>ActivateWindow(ShutdownMenu)</ondown>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<focusposition>2</focusposition>
+					<orientation>horizontal</orientation>
+					<hitrect x="272" y="145" w="180" h="200" />
+					<itemlayout height="461" width="180">
+					<include>Window_OpenClose_Animation</include>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>178</width>
+							<height>200</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="5">folder-unfocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>10</posy>
+							<width>168</width>
+							<height>180</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>$INFO[ListItem.ActualIcon]</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>200</posy>
+							<width>178</width>
+							<height>200</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="5" flipy="true" diffuse="diffuse_mirror2.png">folder-unfocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>210</posy>
+							<width>168</width>
+							<height>180</height>
+							<aspectratio>stretch</aspectratio>
+							<texture flipy="true" diffuse="diffuse_mirror3.png">$INFO[ListItem.ActualIcon]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout height="461" width="180">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>178</width>
+							<height>200</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="5">folder-focus.png</texture>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>10</posy>
+							<width>168</width>
+							<height>180</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>$INFO[ListItem.ActualIcon]</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>200</posy>
+							<width>178</width>
+							<height>200</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="5" flipy="true" diffuse="diffuse_mirror2.png">folder-focus.png</texture>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>210</posy>
+							<width>168</width>
+							<height>180</height>
+							<aspectratio>stretch</aspectratio>
+							<texture flipy="true" diffuse="diffuse_mirror3.png">$INFO[ListItem.ActualIcon]</texture>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<icon>icon_scripts.png</icon>
+							<label>247</label>
+							<onclick>ActivateWindow(scripts)</onclick>
+						</item>
+						<item>
+							<icon>icon_music.png</icon>
+							<label>1211</label>
+							<onclick>ActivateWindow(MyMusic)</onclick>
+						</item>
+						<item>
+							<icon>icon_video.png</icon>
+							<label>1212</label>
+							<onclick>ActivateWindow(MyVideos)</onclick>
+						</item>
+						<item>
+							<icon>icon_pics.png</icon>
+							<label>1213</label>
+							<onclick>ActivateWindow(MyPictures)</onclick>
+						</item>
+						<item>
+							<icon>icon_apps.png</icon>
+							<label>0</label>
+							<onclick>ActivateWindow(MyPrograms)</onclick>
+							<visible>!System.Platform.Linux</visible>
+						</item>
+						<item>
+							<icon>icon_files.png</icon>
+							<label>7</label>
+							<onclick>ActivateWindow(MyFiles)</onclick>
+						</item>
+						<item>
+							<icon>icon_weather.png</icon>
+							<label>8</label>
+							<onclick>ActivateWindow(Weather)</onclick>
+						</item>
+						<item>
+							<icon>icon_settings.png</icon>
+							<label>5</label>
+							<onclick>ActivateWindow(Settings)</onclick>
+						</item>
+						<item>
+							<icon>icon_disc.png</icon>
+							<label>31016</label>
+							<onclick>XBMC.PlayDVD</onclick>
+							<visible>System.HasMediaDVD</visible>
+						</item>
+					</content>
+				</control>
+				<control type="image">
+					<description>background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<height>576</height>
+					<texture diffuse="background_diffuse.png">background.png</texture>
+					<visible>!Skin.String(Custom_Background)</visible>
+				</control>
+				<control type="image">
+					<description>background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<height>576</height>
+					<texture diffuse="background_diffuse.png">$INFO[Skin.String(Custom_Background)]</texture>
+					<visible>Skin.String(Custom_Background)</visible>
+				</control>
+				<control type="button" id="11">
+					<posx>302</posx>
+					<posy>347</posy>
+					<width>48</width>
+					<height>48</height>
+					<label>-</label>
+					<texturefocus>Nav_Left.png</texturefocus>
+					<texturenofocus>Nav_Left.png</texturenofocus>
+					<onleft>601</onleft>
+					<onright>401</onright>
+					<onup>400</onup>
+					<ondown>400</ondown>
+					<onclick>Control.Move(2,-1)</onclick>
+					<visible>system.getbool(lookandfeel.enablemouse)</visible>
+				</control>
+				<control type="button" id="12">
+					<posx>370</posx>
+					<posy>347</posy>
+					<width>48</width>
+					<height>48</height>
+					<label>-</label>
+					<texturefocus>Nav_Right.png</texturefocus>
+					<texturenofocus>Nav_Right.png</texturenofocus>
+					<onleft>601</onleft>
+					<onright>401</onright>
+					<onup>400</onup>
+					<ondown>400</ondown>
+					<onclick>Control.Move(2,1)</onclick>
+					<visible>system.getbool(lookandfeel.enablemouse)</visible>
+				</control>
+				<control type="image">
+					<description>background image</description>
+					<posx>56</posx>
+					<posy>390</posy>
+					<width>608</width>
+					<height>64</height>
+					<texture border="0,15,0,15">osd_panel.png</texture>
+				</control>
+				<control type="label">
+					<posx>56</posx>
+					<posy>390</posy>
+					<width>608</width>
+					<height>64</height>
+					<info>Container(2).ListItem.label</info>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<textcolor>white2</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<include>Window_OpenClose_Animation</include>
+				<visible>!Skin.HasSetting(Alternate_Home)</visible>
+				<posx>170</posx>
+				<posy>280</posy>
+				<animation effect="slide" time="150" end="0,80" condition="[Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)] | Window.IsVisible(Favourites)">Conditional</animation>
+				<control type="group">
+					<animation effect="slide" time="150" end="73,0" condition="Control.HasFocus(302)">Conditional</animation>
+					<animation effect="slide" time="150" end="-73,0" condition="Control.HasFocus(301)">Conditional</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>144</height>
+						<texture>Slider.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>48</posy>
+						<width>380</width>
+						<height>144</height>
+						<texture>Slider_Shadow.png</texture>
+						<animation effect="slide" time="150" end="39,0" condition="Control.HasFocus(302)">Conditional</animation>
+						<animation effect="slide" time="150" end="-39,0" condition="Control.HasFocus(301)">Conditional</animation>
+						<animation effect="slide" time="150" end="0,24" condition="[Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)] | Window.IsVisible(Favourites)">Conditional</animation>
+					</control>
+					<control type="image">
+						<description>Arrow Right</description>
+						<posx>361</posx>
+						<posy>60</posy>
+						<width>11</width>
+						<height>24</height>
+						<texture>Arrow_Right.png</texture>
+					</control>
+					<control type="label">
+						<description>Media label</description>
+						<posx>316</posx>
+						<posy>72</posy>
+						<width>101</width>
+						<height>12</height>
+						<align>center</align>
+						<label>[UPPERCASE]media[/UPPERCASE]</label>
+						<font>font12</font>
+						<angle>270</angle>
+					</control>
+					<control type="image">
+						<description>Arrow Left</description>
+						<posx>8</posx>
+						<posy>60</posy>
+						<width>11</width>
+						<height>24</height>
+						<texture>Arrow_Left.png</texture>
+					</control>
+					<control type="label">
+						<description>System label</description>
+						<posx>-37</posx>
+						<posy>72</posy>
+						<width>101</width>
+						<height>12</height>
+						<align>center</align>
+						<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
+						<font>font12</font>
+						<angle>90</angle>
+					</control>
+				</control>
+				<control type="image">
+					<posx>-38</posx>
+					<posy>54</posy>
+					<width>160</width>
+					<height>35</height>
+					<texture>Slider_focus_left.png</texture>
+					<visible>Control.HasFocus(301)</visible>
+					<animation effect="fade" delay="150" time="100" start="0" end="100">visible</animation>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>54</posy>
+					<width>160</width>
+					<height>35</height>
+					<texture>Slider_focus_right.png</texture>
+					<visible>Control.HasFocus(302)</visible>
+					<animation effect="fade" delay="150" time="100" start="0" end="100">visible</animation>
+				</control>
+				<control type="image">
+					<posx>147</posx>
+					<posy>25</posy>
+					<width>86</width>
+					<height>94</height>
+					<texture>$INFO[Container(302).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(302) + !Player.HasAudio + !Player.HasVideo</visible>
+					<animation effect="fade" delay="150" time="100" start="0" end="100">visible</animation>
+				</control>
+				<control type="image">
+					<posx>147</posx>
+					<posy>25</posy>
+					<width>86</width>
+					<height>94</height>
+					<texture>$INFO[Container(301).ListItem.ActualIcon]</texture>
+					<visible>Control.HasFocus(301) + !Player.HasAudio + !Player.HasVideo</visible>
+					<animation effect="fade" delay="150" time="100" start="0" end="100">visible</animation>
+				</control>
+				<control type="image">
+					<description>Now Playing Music Cover</description>
+					<posx>142</posx>
+					<posy>20</posy>
+					<width>96</width>
+					<height>104</height>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<texture diffuse="Slider_button_Diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+				</control>
+				<control type="image">
+					<description>Now Playing Video Cover</description>
+					<posx>142</posx>
+					<posy>20</posy>
+					<width>96</width>
+					<height>104</height>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<texture diffuse="Slider_button_Diffuse.png">$INFO[VideoPlayer.Cover]</texture>
+				</control>
+				<control type="button" id="2">
+					<posx>122</posx>
+					<posy>0</posy>
+					<width>136</width>
+					<height>144</height>
+					<texturefocus>Slider_button.png</texturefocus>
+					<texturenofocus>Slider_button.png</texturenofocus>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<onup>ActivateWindow(Favourites)</onup>
+					<ondown>2</ondown>
+					<onleft>301</onleft>
+					<onright>302</onright>
+				</control>
+				<control type="label">
+					<description>Optional Time Label</description>
+					<posx>141</posx>
+					<posy>25</posy>
+					<width>100</width>
+					<height>94</height>
+					<label>$INFO[System.Time]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16thin</font>
+					<textcolor>red</textcolor>
+					<include>VisibleFadeEffect</include>
+					<visible>Skin.HasSetting(TimeInCircle) + !Control.HasFocus(302) + !Control.HasFocus(301) + !Player.HasAudio + !Player.HasVideo</visible>
+				</control>
+				<!-- Begin Media menu -->
+				<control type="wraplist" id="302">
+					<posx>265</posx>
+					<posy>18</posy>
+					<height>106</height>
+					<width>141</width>
+					<onup>302</onup>
+					<ondown>302</ondown>
+					<onleft>2</onleft>
+					<onright>302</onright>
+					<focusposition>1</focusposition>
+					<visible allowhiddenfocus="true">Control.HasFocus(302)</visible>
+					<animation effect="fade" delay="150" time="100" start="0" end="100">visible</animation>
+					<itemlayout height="35">
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>124</width>
+							<height>35</height>
+							<info>ListItem.label</info>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font16</font>
+							<textcolor>grey</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="35">
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>124</width>
+							<height>35</height>
+							<info>ListItem.label</info>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font16b</font>
+							<textcolor>white</textcolor>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<icon>icon_music.png</icon>
+							<label>1211</label>
+							<onclick>ActivateWindow(MyMusic)</onclick>
+						</item>
+						<item>
+							<icon>icon_video.png</icon>
+							<label>1212</label>
+							<onclick>ActivateWindow(MyVideos)</onclick>
+						</item>
+						<item>
+							<icon>icon_pics.png</icon>
+							<label>1213</label>
+							<onclick>ActivateWindow(MyPictures)</onclick>
+						</item>
+						<item>
+							<icon>icon_apps.png</icon>
+							<label>0</label>
+							<onclick>ActivateWindow(MyPrograms)</onclick>
+							<visible>!System.Platform.Linux</visible>
+						</item>
+						<item>
+							<icon>icon_scripts.png</icon>
+							<label>247</label>
+							<onclick>ActivateWindow(scripts)</onclick>
+						</item>
+					</content>
+				</control>
+				<!-- End Media menu -->
+				<!-- Begin System menu -->
+				<control type="wraplist" id="301">
+					<posx>-40</posx>
+					<posy>18</posy>
+					<height>106</height>
+					<width>170</width>
+					<onup>301</onup>
+					<ondown>301</ondown>
+					<onleft>301</onleft>
+					<onright>2</onright>
+					<focusposition>1</focusposition>
+					<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
+					<animation effect="fade" delay="150" time="100" start="0" end="100">visible</animation>
+					<itemlayout height="35">
+						<control type="label">
+							<posx>155</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>35</height>
+							<info>ListItem.label</info>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font16</font>
+							<textcolor>grey</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="35">
+						<control type="label">
+							<posx>155</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>35</height>
+							<info>ListItem.label</info>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font16b</font>
+							<textcolor>white</textcolor>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<icon>icon_files.png</icon>
+							<label>7</label>
+							<onclick>ActivateWindow(MyFiles)</onclick>
+						</item>
+						<item>
+							<icon>icon_weather.png</icon>
+							<label>8</label>
+							<onclick>ActivateWindow(Weather)</onclick>
+						</item>
+						<item>
+							<icon>icon_settings.png</icon>
+							<label>5</label>
+							<onclick>ActivateWindow(Settings)</onclick>
+						</item>
+						<item>
+							<icon>icon_disc.png</icon>
+							<label>31016</label>
+							<onclick>XBMC.PlayDVD</onclick>
+							<visible>System.HasMediaDVD</visible>
+						</item>
+					</content>
+				</control>
+				<!-- End System menu -->
+			</control>
+			<control type="group">
+				<include>Window_OpenClose_Animation</include>
+				<visible>!Window.IsVisible(DialogMusicScan.xml) + !Window.IsVisible(DialogVideoScan.xml)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<height>32</height>
+					<texture>ListItem_Focus.png</texture>
+				</control>
+				<control type="label">
+					<description>Time label</description>
+					<posx>360</posx>
+					<posy>16</posy>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[System.Date] [COLOR=red]-[/COLOR] $INFO[System.Time]</label>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<visible>!Skin.HasSetting(TimeInCircle) | Skin.HasSetting(Alternate_Home) | Player.HasMedia</visible>
+				</control>
+				<control type="label">
+					<description>Time label</description>
+					<posx>360</posx>
+					<posy>16</posy>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[System.Date]</label>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<visible>Skin.HasSetting(TimeInCircle) + !Skin.HasSetting(Alternate_Home) + !Player.HasMedia</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Now Playing title</description>
+					<posx>10</posx>
+					<posy>34</posy>
+					<width>700</width>
+					<height>24</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,, - ]$INFO[VideoPlayer.Title]</label>
+					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>Player.HasVideo</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Now Playing title</description>
+					<posx>10</posx>
+					<posy>34</posy>
+					<width>700</width>
+					<height>24</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album,, - ]$INFO[MusicPlayer.Title]</label>
+					<font>font13</font>
+					<scroll>true</scroll>
+					<visible>Player.HasAudio</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Now Playing Times</description>
+					<posx>0</posx>
+					<posy>60</posy>
+					<width>720</width>
+					<height>24</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[Player.Time,, - ]$INFO[Player.Duration]</label>
+					<font>font13</font>
+					<visible>Player.HasMedia</visible>
+				</control>
+			</control>
+			<control type="image">
+				<posx>169r</posx>
+				<posy>520</posy>
+				<width>169</width>
+				<height>35</height>
+				<texture>Slider_focus_left.png</texture>
+				<include>Window_OpenClose_Animation</include>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>520</posy>
+				<width>169</width>
+				<height>35</height>
+				<texture>Slider_focus_right.png</texture>
+				<include>Window_OpenClose_Animation</include>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="rss">
+				<description>rss feed</description>
+				<posx>0</posx>
+				<posy>524</posy>
+				<width>720</width>
+				<font>15</font>
+				<urlset>1</urlset>
+				<textcolor>red</textcolor>
+				<titlecolor>red</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

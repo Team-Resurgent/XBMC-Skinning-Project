@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <string id="31001">Options Vis</string>
+  <string id="31002">Sélection Vis</string>
+  <string id="31003">Menu</string>
+  <string id="31004">Signets</string>
+  <string id="31005">Options Audio</string>
+  <string id="31006">Options Vidéo</string>
+  <string id="31007">Son coupé</string>
+  <string id="31008">...En cours...</string>
+  <string id="31009">Utiliser le mode avancé de la souris</string>
+  <string id="31010">Télécharger des thèmes supplémentaire</string>
+  <string id="31011">Activer les Visualisations en fond</string>
+  <string id="31012">Activer les Vidéos en fond</string>
+
+  <string id="31900">Thèmes Basics-101</string>
+  <string id="31901">Télécharger Thèmes Basics-101</string>
+  <string id="31902">Téléchargement du Thème:</string>
+  <string id="31903">Thème Installé</string>
+  <string id="31904">Appliquez le thème dans les paramètres de l'interface.</string>
+  <string id="31905">Téléchargement annulé</string>
+</strings>

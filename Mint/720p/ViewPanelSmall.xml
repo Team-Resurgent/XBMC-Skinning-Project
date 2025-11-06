@@ -1,0 +1,91 @@
+<!-- 
+USE: For displaying categories. A folder containing other folders.
+-->
+<includes>
+
+	<include name="ViewPanelSmall">
+			
+		<control type="group">
+				
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<visible>Control.IsVisible(53)</visible>
+				<texture>white2x2.png</texture>
+				<width>1280</width>
+				<height>640</height>
+				<colordiffuse>ff20281b</colordiffuse>
+			</control>
+			<!-- list container -->
+			<control type="panel" id="53">
+			
+				<viewtype label="Panel Small">icon</viewtype>
+				<width>1280</width>
+				<height>600</height>
+				<posx>20</posx>
+				<posy>25</posy>
+				<onup>53</onup>
+				<ondown>53</ondown>
+				<onleft></onleft>
+				<onright>9000</onright>
+				
+				<itemlayout height="80" width="420">
+					<control type="image">
+						<texture border="16">default_icon_back.png</texture>
+						<width>400</width>
+						<height>80</height>
+						<colordiffuse>overlay-icon</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>40</width>
+						<height>40</height>
+						<posx>20</posx>
+						<posy>20</posy>
+						<colordiffuse>overlay-icon</colordiffuse>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>230</width>
+						<height>40</height>
+						<posx>80</posx>
+						<posy>20</posy>
+						<font>content</font>
+						<textcolor>content-dark</textcolor>
+						<selectedcolor>content-selected</selectedcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="420">
+					<control type="image">
+						<texture border="16">default_icon_back.png</texture>
+						<width>400</width>
+						<height>80</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>40</width>
+						<height>40</height>
+						<posx>20</posx>
+						<posy>20</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>230</width>
+						<height>40</height>
+						<posx>80</posx>
+						<posy>20</posy>
+						<font>content</font>
+						<textcolor>content</textcolor>
+						<selectedcolor>content-selected</selectedcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</focusedlayout>
+			</control>
+			
+		</control>
+				
+	</include>
+
+</includes>

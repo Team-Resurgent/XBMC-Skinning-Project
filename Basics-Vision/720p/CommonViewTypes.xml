@@ -1,0 +1,777 @@
+<includes>
+	<include name="OldListViewCommons">
+		<control type="panel" id="50">
+			<posx>20</posx>
+			<posy>85</posy>
+			<width>1195</width>
+			<height>550</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<hitrect x="25" y="85" w="615" h="550" />
+			<itemlayout height="42" width="615">
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>38</width>
+					<height>38</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>0</posy>
+					<width>520</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>630</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<textcolor>white</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="42" width="615">
+				<control type="image">
+					<posx>-30</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>42</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>Control.HasFocus(50)</visible>
+					<texture>ListItem_Focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>38</width>
+					<height>38</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>0</posy>
+					<width>520</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>630</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<textcolor>white</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<posx>690</posx>
+			<posy>85</posy>
+			<visible>Control.IsVisible(50)</visible>
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>525</width>
+				<height>500</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>Listitem.Icon</info>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>520</posy>
+				<width>525</width>
+				<height>500</height>
+				<info>Listitem.Icon</info>
+				<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+				<aspectratio aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>480</posx>
+				<posy>465</posy>
+				<width>64</width>
+				<height>64</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>keep</aspectratio>
+				<info>Listitem.Overlay</info>
+			</control>
+		</control>
+	</include>
+	<include name="OldListViewFullCommons">
+		<control type="panel" id="51">
+			<posx>20</posx>
+			<posy>85</posy>
+			<width>1260</width>
+			<height>550</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="537">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="42" width="1260">
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>38</width>
+					<height>38</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>0</posy>
+					<width>1120</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>1220</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<textcolor>white</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="42" width="1260">
+				<control type="image">
+					<posx>-30</posx>
+					<posy>0</posy>
+					<width>1320</width>
+					<height>42</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>Control.HasFocus(51)</visible>
+					<texture>ListItem_Focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>38</width>
+					<height>38</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>0</posy>
+					<width>1120</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>1220</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>42</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<textcolor>white</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="AllViewCommonThumbSmall">
+		<control type="panel" id="52">
+			<visible>!Container.Content(TVShows)</visible>
+			<posx>50</posx>
+			<posy>85</posy>
+			<width>1188</width>
+			<height>549</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">icon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<orientation>vertical</orientation>
+			<itemlayout condition="!Skin.HasSetting(FullIcons)" height="183" width="198">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>190</width>
+					<height>145</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>120</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>99</posx>
+					<posy>150</posy>
+					<width>180</width>
+					<height>22</height>
+					<font>font13</font>
+					<textcolor>white2</textcolor>
+					<selectedcolor>red</selectedcolor>
+					<align>center</align>
+					<shadowcolor>black</shadowcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="!Skin.HasSetting(FullIcons)" height="183" width="198">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>198</width>
+					<height>153</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>120</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>-10</posx>
+					<posy>153</posy>
+					<width>218</width>
+					<height>30</height>
+					<visible>Control.HasFocus(52)</visible>
+					<texture>folder-focus2.png</texture>
+				</control>
+				<control type="label">
+					<posx>99</posx>
+					<posy>150</posy>
+					<width>180</width>
+					<height>22</height>
+					<font>font13</font>
+					<selectedcolor>red</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="Skin.HasSetting(FullIcons)" height="183" width="198">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>190</width>
+					<height>175</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>150</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Skin.HasSetting(FullIcons)" height="183" width="198">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>198</width>
+					<height>183</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>150</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(52) + Skin.HasSetting(FullIcons)</visible>
+			<control type="image">
+				<posx>265</posx>
+				<posy>650</posy>
+				<width>750</width>
+				<height>44</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>ListItem_Focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>315</posx>
+				<posy>650</posy>
+				<width>650</width>
+				<height>44</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	<include name="AllViewCommonThumbBig">
+		<control type="panel" id="53">
+			<visible>!Container.Content(TVShows)</visible>
+			<posx>50</posx>
+			<posy>85</posy>
+			<width>1188</width>
+			<height>550</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="538">icon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<orientation>vertical</orientation>
+			<itemlayout condition="!Skin.HasSetting(FullIcons)" height="275" width="295">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>287</width>
+					<height>220</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>190</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>147</posx>
+					<posy>235</posy>
+					<width>285</width>
+					<height>22</height>
+					<font>font13</font>
+					<textcolor>white2</textcolor>
+					<selectedcolor>red</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="!Skin.HasSetting(FullIcons)" height="275" width="295">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>295</width>
+					<height>228</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>190</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>-10</posx>
+					<posy>235</posy>
+					<width>315</width>
+					<height>35</height>
+					<texture>folder-focus2.png</texture>
+				</control>
+				<control type="label">
+					<posx>147</posx>
+					<posy>235</posy>
+					<width>285</width>
+					<height>22</height>
+					<font>font13</font>
+					<selectedcolor>red</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="Skin.HasSetting(FullIcons)" height="275" width="295">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>287</width>
+					<height>267</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>230</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Skin.HasSetting(FullIcons)" height="275" width="295">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>295</width>
+					<height>275</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>230</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(53) + Skin.HasSetting(FullIcons)</visible>
+			<control type="image">
+				<posx>265</posx>
+				<posy>650</posy>
+				<width>750</width>
+				<height>44</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>ListItem_Focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>315</posx>
+				<posy>650</posy>
+				<width>650</width>
+				<height>44</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	<include name="DVDThumbView">
+		<control type="panel" id="54">
+			<visible>Container.Content(Movies) | Window.IsVisible(Videofiles)</visible>
+			<posx>50</posx>
+			<posy>85</posy>
+			<width>1190</width>
+			<height>550</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>54</onup>
+			<ondown>54</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="542">icon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<orientation>vertical</orientation>
+			<itemlayout condition="!Skin.HasSetting(FullIcons)" height="275" width="198">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>190</width>
+					<height>232</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>210</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>99</posx>
+					<posy>240</posy>
+					<width>180</width>
+					<height>22</height>
+					<font>font13</font>
+					<selectedcolor>red</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="!Skin.HasSetting(FullIcons)"height="275" width="198">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>198</width>
+					<height>240</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>210</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+				<control type="image">
+					<posx>-10</posx>
+					<posy>240</posy>
+					<width>218</width>
+					<height>35</height>
+					<texture>folder-focus2.png</texture>
+				</control>
+				<control type="label">
+					<posx>99</posx>
+					<posy>240</posy>
+					<width>180</width>
+					<height>22</height>
+					<font>font13</font>
+					<selectedcolor>red</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="Skin.HasSetting(FullIcons)" height="275" width="198">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>190</width>
+					<height>267</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>240</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Skin.HasSetting(FullIcons)" height="275" width="198">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>198</width>
+					<height>275</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>153</posx>
+					<posy>240</posy>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<info>Listitem.Overlay</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(54) + Skin.HasSetting(FullIcons)</visible>
+			<control type="image">
+				<posx>265</posx>
+				<posy>650</posy>
+				<width>750</width>
+				<height>44</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>ListItem_Focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>315</posx>
+				<posy>650</posy>
+				<width>650</width>
+				<height>44</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	<include name="WideIconViewCommons">
+		<control type="panel" id="59">
+			<visible>Container.Content(TVShows) | Window.IsVisible(Videofiles) | Window.IsVisible(Programs)</visible>
+			<posx>20</posx>
+			<posy>87</posy>
+			<width>1240</width>
+			<height>549</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>59</onup>
+			<ondown>59</ondown>
+			<viewtype label="$LOCALIZE[539] $LOCALIZE[536]">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<orientation>vertical</orientation>
+			<itemlayout condition="!Skin.HasSetting(FullIcons)" height="183" width="620">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>612</width>
+					<height>140</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>297</posx>
+					<posy>152</posy>
+					<width>570</width>
+					<height>25</height>
+					<font>font13</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white2</textcolor>
+					<selectedcolor>red</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="!Skin.HasSetting(FullIcons)" height="183" width="620">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>620</width>
+					<height>148</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>-10</posx>
+					<posy>148</posy>
+					<width>640</width>
+					<height>35</height>
+					<texture>folder-focus2.png</texture>
+				</control>
+				<control type="label">
+					<posx>297</posx>
+					<posy>152</posy>
+					<width>570</width>
+					<height>25</height>
+					<font>font13</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<selectedcolor>red</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="Skin.HasSetting(FullIcons)" height="137" width="620">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>612</width>
+					<height>129</height>
+					<info>ListItem.Icon</info>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Skin.HasSetting(FullIcons)" height="137" width="620">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>620</width>
+					<height>137</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(59) + Skin.HasSetting(FullIcons)</visible>
+			<control type="image">
+				<posx>265</posx>
+				<posy>650</posy>
+				<width>750</width>
+				<height>44</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>ListItem_Focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>315</posx>
+				<posy>650</posy>
+				<width>650</width>
+				<height>44</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	<include name="AllViewCommonPageControls">
+		<control type="group">
+			<posx>300r</posx>
+			<posy>650</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>44</height>
+				<texture>Slider_focus_left.png</texture>
+			</control>
+			<control type="spincontrol" id="60">
+				<description>Next page button</description>
+				<posx>220</posx>
+				<posy>10</posy>
+				<subtype>page</subtype>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<ondown>60</ondown>
+				<onup>50</onup>
+				<textcolor>red</textcolor>
+				<showonepage>true</showonepage>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,247 @@
+﻿<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>shutdown-ani</include>
+	<coordinates>
+		<system>1</system>
+		<posx>80</posx>
+		<posy>110</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>top</description>
+			<posx>-15</posx>
+			<posy>-15</posy>
+			<width>560</width>
+			<height>30</height>
+			<texture>context2-top.png</texture>
+		</control>
+		<control type="image">
+			<description>middle</description>
+			<posx>-15</posx>
+			<posy>15</posy>
+			<width>560</width>
+			<height>360</height>
+			<texture>context2-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>bottom</description>
+			<posx>-15</posx>
+			<posy>375</posy>
+			<width>560</width>
+			<height>30</height>
+			<texture>context2-bottom.png</texture>
+		</control>
+		<control type="label" id="411">
+			<description>heading label</description>
+			<posx>10</posx>
+			<posy>-2</posy>
+			<width>420</width>
+			<align>left</align>
+			<font>special13</font>
+			<label>1023</label>
+			<textcolor>button-text</textcolor>
+		</control>
+		<control type="label" id="412">
+			<description>path label control</description>
+			<posx>40</posx>
+			<posy>35</posy>
+			<width>440</width>
+			<align>left</align>
+			<font>font12</font>
+			<haspath>true</haspath>
+			<textcolor>button-text</textcolor>
+		</control>
+
+		<control type="list" id="450">
+			<posx>10</posx>
+			<posy>70</posy>
+			<width>400</width>
+			<height>300</height>
+			<onleft>413</onleft>
+			<onright>24</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<include></include>
+			<scrolltime>1</scrolltime>
+			<viewtype label="List">List</viewtype>
+			<pagecontrol>24</pagecontrol>
+			<itemlayout height="30">
+				<control type="label">
+					<posx>10</posx>
+					<posy>-</posy>
+					<width>380</width>
+					<height>30</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30">
+				<control type="image">
+					<width>400</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>default-button.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>-</posy>
+					<width>380</width>
+					<height>30</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<description>list item icon</description>
+			<posx>450</posx>
+			<posy>250</posy>
+			<width>80</width>
+			<height>80</height>
+			<info>ListItem.Icon</info>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.IsVisible(450)</visible>
+		</control>
+
+
+
+		<control type="panel" id="451">
+			<posx>10</posx>
+			<posy>70</posy>
+			<width>400</width>
+			<height>300</height>
+			<onleft>413</onleft>
+			<onright>24</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>24</pagecontrol>
+			<itemlayout height="100" width="100">
+				<control type="image">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>94</width>
+					<height>94</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>99FFFFFF</colordiffuse>
+				</control>
+			</itemlayout>
+			<focusedlayout height="100" width="100">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>white-block.png</texture>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>94</width>
+					<height>94</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="button">
+			<posx>410</posx>
+			<posy>70</posy>
+			<width>10</width>
+			<height>10</height>
+			<onclick>PageUp(24)</onclick>
+			<texturefocus>scrollbar-arrow-up.png</texturefocus>
+			<texturenofocus>scrollbar-arrow-up-nofocus.png</texturenofocus>
+			<visible>Control.IsVisible(24)</visible>
+		</control>
+		<control type="button">
+			<posx>410</posx>
+			<posy>360</posy>
+			<width>10</width>
+			<height>10</height>
+			<onclick>PageDown(24)</onclick>
+			<texturefocus>scrollbar-arrow-down.png</texturefocus>
+			<texturenofocus>scrollbar-arrow-down-nofocus.png</texturenofocus>
+			<visible>Control.IsVisible(24)</visible>
+		</control>
+		<control type="scrollbar" id="24">
+			<posx>410</posx>
+			<posy>80</posy>
+			<width>10</width>
+			<height>280</height>
+			<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+			<texturesliderbar>scrollbar_bar.png</texturesliderbar>
+			<texturesliderbarfocus>scrollbar_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>-</textureslidernibfocus>
+			<onleft>450</onleft>
+			<onright>413</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="group">
+			<control type="button" id="413">
+				<description>OK button</description>
+				<posx>450</posx>
+				<posy>70</posy>
+				<width>80</width>
+				<height>40</height>
+				<align>center</align>
+				<label>186</label>
+				<font>font10</font>
+				<texturenofocus>button2-alpha.png</texturenofocus>
+				<texturefocus>button2.png</texturefocus>
+				<onleft>24</onleft>
+				<onright>450</onright>
+				<onup>415</onup>
+				<ondown>414</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="414">
+				<description>Cancel button</description>
+				<posx>450</posx>
+				<posy>125</posy>
+				<width>80</width>
+				<height>40</height>
+				<align>center</align>
+				<label>222</label>
+				<font>font10</font>
+				<texturenofocus>button2-alpha.png</texturenofocus>
+				<texturefocus>button2.png</texturefocus>
+				<onleft>24</onleft>
+				<onright>450</onright>
+				<onup>413</onup>
+				<ondown>415</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="415">
+				<description>Create folder button</description>
+				<posx>450</posx>
+				<posy>180</posy>
+				<width>80</width>
+				<height>40</height>
+				<align>center</align>
+				<label>119</label>
+				<font>font10</font>
+				<texturenofocus>button2-alpha.png</texturenofocus>
+				<texturefocus>button2.png</texturefocus>
+				<onleft>24</onleft>
+				<onright>450</onright>
+				<onup>414</onup>
+				<ondown>413</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,674 @@
+<window id="50">
+
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+
+		<!-- backgrounds -->
+		<include>bg-system</include>
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>e5ffffff</colordiffuse>
+		</control>
+
+		<!-- settings panel -->
+		<control type="image">
+			<texture border="12">container-back-nf.png</texture>
+			<width>300</width>
+			<height>600</height>
+			<posx>40</posx>
+			<posy>80</posy>
+		</control>
+		<control type="grouplist" id="9000">
+			<width>270</width>
+			<height>450</height>
+			<posx>50</posx>
+			<posy>90</posy>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>9001</onleft>
+			<onright>9001</onright>
+			<control type="button" id="101">
+				<label>General</label>
+				<include>type-sidebar</include>
+			</control>
+			<control type="button" id="102">
+				<label>Backgrounds</label>
+				<include>type-sidebar</include>
+			</control>
+			<control type="button" id="103">
+				<label>Scripts</label>
+				<include>type-sidebar</include>
+			</control>
+		</control>
+		
+		<!-- content panel -->
+		<control type="image">
+			<texture border="12">container-back-nf.png</texture>
+			<width>830</width>
+			<height>600</height>
+			<posx>360</posx>
+			<posy>80</posy>
+		</control>
+		<!-- general settings -->
+		<control type="grouplist" id="9001">
+			<visible>ControlGroup(9000).HasFocus(101)</visible>
+			<width>810</width>
+			<height>580</height>
+			<posx>370</posx>
+			<posy>90</posy>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<pagecontrol>60</pagecontrol>
+			<itemgap>5</itemgap>
+			
+			<control type="radiobutton" id="9101">
+				<label>Use Remote</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(useremote)</selected>
+				<onclick>Skin.ToggleSetting(useremote)</onclick>
+			</control>
+			<control type="radiobutton" id="9102">
+				<label>Show RSS</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(showrss)</selected>
+				<onclick>Skin.ToggleSetting(showrss)</onclick>
+			</control>
+			<control type="radiobutton" id="9103">
+				<label>Show video overlay as background</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-video)</selected>
+				<onclick>Skin.ToggleSetting(bg-video)</onclick>
+			</control>			
+			<control type="radiobutton" id="9104">
+				<label>Show visualisation overlay as background</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-vis)</selected>
+				<onclick>Skin.ToggleSetting(bg-vis)</onclick>
+			</control>			
+			<control type="radiobutton" id="9105">
+				<label>Debug mode.</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(debug)</selected>
+				<onclick>Skin.ToggleSetting(debug)</onclick>
+			</control>			
+			<control type="radiobutton" id="9106">
+				<label>Fade main menu.</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(fademain)</selected>
+				<onclick>Skin.ToggleSetting(fademain)</onclick>
+			</control>			
+		</control>
+	
+		<!-- background settings -->
+		<control type="grouplist" id="9001">
+			<visible>ControlGroup(9000).HasFocus(102)</visible>
+			<width>810</width>
+			<height>580</height>
+			<posx>370</posx>
+			<posy>90</posy>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<pagecontrol>60</pagecontrol>
+			<itemgap>5</itemgap>
+			
+			<control type="label">
+				<label>General</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9324">
+				<label>Show backgrounds in media windows</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-media)</selected>
+				<onclick>Skin.ToggleSetting(bg-media)</onclick>
+			</control>			
+			
+			<control type="label" id="9325">
+				<label>Movies</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9300">
+				<label>Set custom movie background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-movies)</selected>
+				<onclick>Skin.SetImage(bg-movies)</onclick>
+				<onclick>Skin.Reset(bg-movies-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9301">
+				<label>Use movies background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-movies-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-movies-ss)</onclick>
+				<onclick>Skin.Reset(bg-movies)</onclick>
+			</control>
+			<control type="button" id="9302">
+				<label>Reset to default movie background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-movies)</onclick>
+				<onclick>Skin.Reset(bg-movies-ss)</onclick>
+			</control>
+			
+			<control type="label" id="9326">
+				<label>TV</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9303">
+				<label>Set custom tv background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-tv)</selected>
+				<onclick>Skin.SetImage(bg-tv)</onclick>
+				<onclick>Skin.Reset(bg-tv-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9304">
+				<label>Use tv background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-tv-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-tv-ss)</onclick>
+				<onclick>Skin.Reset(bg-tv)</onclick>
+			</control>
+			<control type="button" id="9305">
+				<label>Reset to default tv background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-tv)</onclick>
+				<onclick>Skin.Reset(bg-tv-ss)</onclick>
+			</control>
+			
+			<control type="label" id="9327">
+				<label>Games</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9306">
+				<label>Set custom games background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-games)</selected>
+				<onclick>Skin.SetImage(bg-games)</onclick>
+				<onclick>Skin.Reset(bg-games-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9307">
+				<label>Use games background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-games-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-games-ss)</onclick>
+				<onclick>Skin.Reset(bg-games)</onclick>
+			</control>
+			<control type="button" id="9308">
+				<label>Reset to default games background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-games)</onclick>
+				<onclick>Skin.Reset(bg-games-ss)</onclick>
+			</control>
+			
+			<control type="label" id="9328">
+				<label>Arcade</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9309">
+				<label>Set custom arcade background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-arcade)</selected>
+				<onclick>Skin.SetImage(bg-arcade)</onclick>
+				<onclick>Skin.Reset(bg-arcade-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9310">
+				<label>Use arcade background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-arcade-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-arcade-ss)</onclick>
+				<onclick>Skin.Reset(bg-arcade)</onclick>
+			</control>
+			<control type="button" id="9311">
+				<label>Reset to default arcade background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-arcade)</onclick>
+				<onclick>Skin.Reset(bg-arcade-ss)</onclick>
+			</control>
+			
+			<control type="label" id="9329">
+				<label>Music</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9312">
+				<label>Set custom music background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-music)</selected>
+				<onclick>Skin.SetImage(bg-music)</onclick>
+				<onclick>Skin.Reset(bg-music-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9313">
+				<label>Use music background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-music-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-music-ss)</onclick>
+				<onclick>Skin.Reset(bg-music)</onclick>
+			</control>
+			<control type="button" id="9314">
+				<label>Reset to default music background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-music)</onclick>
+				<onclick>Skin.Reset(bg-music-ss)</onclick>
+			</control>
+			
+			<control type="label" id="9330">
+				<label>Pictures</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9315">
+				<label>Set pictures background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-pictures)</selected>
+				<onclick>Skin.SetImage(bg-pictures)</onclick>
+				<onclick>Skin.Reset(bg-pictures-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9316">
+				<label>Use pictures background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-pictures-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-pictures-ss)</onclick>
+				<onclick>Skin.Reset(bg-music)</onclick>
+			</control>
+			<control type="button" id="9317">
+				<label>Reset to default pictures background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-pictures)</onclick>
+				<onclick>Skin.Reset(bg-pictures-ss)</onclick>
+			</control>
+			
+			<control type="label" id="9331">
+				<label>Weather</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9318">
+				<label>Set weather background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-weather)</selected>
+				<onclick>Skin.SetImage(bg-weather)</onclick>
+				<onclick>Skin.Reset(bg-weather-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9319">
+				<label>Use weather background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-weather-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-weather-ss)</onclick>
+				<onclick>Skin.Reset(bg-weather)</onclick>
+			</control>
+			<control type="button" id="9320">
+				<label>Reset to default weather background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-weather)</onclick>
+				<onclick>Skin.Reset(bg-weather-ss)</onclick>
+			</control>
+			
+			<control type="label" id="9332">
+				<label>System</label>
+				<include>settings-header</include>
+			</control>
+			<control type="radiobutton" id="9321">
+				<label>Set system background</label>
+				<include>settings-button</include>
+				<selected>Skin.String(bg-system)</selected>
+				<onclick>Skin.SetImage(bg-system)</onclick>
+				<onclick>Skin.Reset(bg-system-ss)</onclick>
+			</control>
+			<control type="radiobutton" id="9322">
+				<label>Use system background slideshow</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(bg-system-ss)</selected>
+				<onclick>Skin.ToggleSetting(bg-system-ss)</onclick>
+				<onclick>Skin.Reset(bg-system)</onclick>
+			</control>
+			<control type="button" id="9323">
+				<label>Reset to default system background</label>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(bg-system)</onclick>
+				<onclick>Skin.Reset(bg-system-ss)</onclick>
+			</control>
+		</control>
+
+		<!-- script settings -->
+		<control type="grouplist" id="9001">
+			<visible>ControlGroup(9000).HasFocus(103)</visible>
+			<width>810</width>
+			<height>580</height>
+			<posx>370</posx>
+			<posy>90</posy>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<usecontrolcoords>true</usecontrolcoords>
+			<pagecontrol>60</pagecontrol>
+			<itemgap>5</itemgap>
+				
+			<control type="radiobutton" id="9200">
+				<label>Use Movies Scripts</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(usemoviescripts)</selected>
+				<onclick>Skin.ToggleSetting(usemoviescripts)</onclick>
+			</control>
+			<control type="button" id="9201">
+				<visible>Skin.HasSetting(usemoviescripts)</visible>
+				<label>Set Script One: $INFO[Skin.String(moviescript1name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(moviescript1name)</onclick>
+				<onclick>Skin.SetFile(moviescript1path)</onclick>
+				<onclick>Skin.SetBool(moviescript1)</onclick>
+			</control>
+			<control type="button" id="9218">
+				<visible>Control.IsVisible(9201) + Skin.HasSetting(moviescript1)</visible>
+				<label>Clear Script One</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(moviescript1name)</onclick>
+				<onclick>Skin.Reset(moviescript1path)</onclick>
+				<onclick>Skin.Reset(moviescript1)</onclick>
+			</control>
+			<control type="button" id="9202">
+				<visible>Skin.HasSetting(usemoviescripts)</visible>
+				<visible>Skin.HasSetting(moviescript1) | Skin.HasSetting(moviescript2)</visible>
+				<label>Set Script Two: $INFO[Skin.String(moviescript2name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(moviescript2name)</onclick>
+				<onclick>Skin.SetFile(moviescript2path)</onclick>
+				<onclick>Skin.SetBool(moviescript2)</onclick>
+			</control>
+			<control type="button" id="9219">
+				<visible>Control.IsVisible(9202) + Skin.HasSetting(moviescript2)</visible>
+				<label>Clear Script Two</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(moviescript2name)</onclick>
+				<onclick>Skin.Reset(moviescript2path)</onclick>
+				<onclick>Skin.Reset(moviescript2)</onclick>
+			</control>
+
+			<control type="radiobutton" id="9203">
+				<label>Use TV Scripts</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(usetvscripts)</selected>
+				<onclick>Skin.ToggleSetting(usetvscripts)</onclick>
+			</control>
+			<control type="button" id="9204">
+				<visible>Skin.HasSetting(usetvscripts)</visible>
+				<label>Set Script One: $INFO[Skin.String(tvscript1name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(tvscript1name)</onclick>
+				<onclick>Skin.SetFile(tvscript1path)</onclick>
+				<onclick>Skin.SetBool(tvscript1)</onclick>
+			</control>
+			<control type="button" id="9220">
+				<visible>Control.IsVisible(9204) + Skin.HasSetting(tvscript1)</visible>
+				<label>Clear Script One</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(tvscript1name)</onclick>
+				<onclick>Skin.Reset(tvscript1path)</onclick>
+				<onclick>Skin.Reset(tvscript1)</onclick>
+			</control>
+			<control type="button" id="9205">
+				<visible>Skin.HasSetting(usetvscripts)</visible>
+				<visible>Skin.HasSetting(tvscript1) | Skin.HasSetting(tvscript2)</visible>
+				<label>Set Script Two: $INFO[Skin.String(tvscript2name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(tvscript2name)</onclick>
+				<onclick>Skin.SetFile(tvscript2path)</onclick>
+				<onclick>Skin.SetBool(tvscript2)</onclick>
+			</control>
+			<control type="button" id="9221">
+				<visible>Control.IsVisible(9205) + Skin.HasSetting(tvscript2)</visible>
+				<label>Clear Script Two</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(tvscript2name)</onclick>
+				<onclick>Skin.Reset(tvscript2path)</onclick>
+				<onclick>Skin.Reset(tvscript2)</onclick>
+			</control>
+
+			<control type="radiobutton" id="9206">
+				<label>Use Game Scripts</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(usegamescripts)</selected>
+				<onclick>Skin.ToggleSetting(usegamescripts)</onclick>
+			</control>
+			<control type="button" id="9207">
+				<visible>Skin.HasSetting(usegamescripts)</visible>
+				<label>Set Script One: $INFO[Skin.String(gamescript1name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(gamescript1name)</onclick>
+				<onclick>Skin.SetFile(gamescript1path)</onclick>
+				<onclick>Skin.SetBool(gamescript1)</onclick>
+			</control>
+			<control type="button" id="9222">
+				<visible>Control.IsVisible(9207) + Skin.HasSetting(gamescript1)</visible>
+				<label>Clear Script One</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(gamescript1name)</onclick>
+				<onclick>Skin.Reset(gamescript1path)</onclick>
+				<onclick>Skin.Reset(gamescript1)</onclick>
+			</control>
+			<control type="button" id="9208">
+				<visible>Skin.HasSetting(usegamescripts)</visible>
+				<visible>Skin.HasSetting(gamescript1) | Skin.HasSetting(gamescript2)</visible>
+				<label>Set Script Two: $INFO[Skin.String(gamescript2name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(gamescript2name)</onclick>
+				<onclick>Skin.SetFile(gamescript2path)</onclick>
+				<onclick>Skin.SetBool(gamescript2)</onclick>
+			</control>
+			<control type="button" id="9223">
+				<visible>Control.IsVisible(9208) + Skin.HasSetting(gamescript2)</visible>
+				<label>Clear Script Two</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(gamescript2name)</onclick>
+				<onclick>Skin.Reset(gamescript2path)</onclick>
+				<onclick>Skin.Reset(gamescript2)</onclick>
+			</control>
+
+			<control type="radiobutton" id="9209">
+				<label>Use Music Scripts</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(usemusicscripts)</selected>
+				<onclick>Skin.ToggleSetting(usemusicscripts)</onclick>
+			</control>
+			<control type="button" id="9210">
+				<visible>Skin.HasSetting(usemusicscripts)</visible>
+				<label>Set Script One: $INFO[Skin.String(musicscript1name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(musicscript1name)</onclick>
+				<onclick>Skin.SetFile(musicscript1path)</onclick>
+				<onclick>Skin.SetBool(musicscript1)</onclick>
+			</control>
+			<control type="button" id="9224">
+				<visible>Control.IsVisible(9210) + Skin.HasSetting(musicscript1)</visible>
+				<label>Clear Script One</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(musicscript1name)</onclick>
+				<onclick>Skin.Reset(musicscript1path)</onclick>
+				<onclick>Skin.Reset(musicscript1)</onclick>
+			</control>
+			<control type="button" id="9211">
+				<visible>Skin.HasSetting(usemusicscripts)</visible>
+				<visible>Skin.HasSetting(musicscript1) | Skin.HasSetting(musicscript2)</visible>
+				<label>Set Script Two: $INFO[Skin.String(musicscript2name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(musicscript2name)</onclick>
+				<onclick>Skin.SetFile(musicscript2path)</onclick>
+				<onclick>Skin.SetBool(musicscript2)</onclick>
+			</control>
+			<control type="button" id="9225">
+				<visible>Control.IsVisible(9211) + Skin.HasSetting(musicscript2)</visible>
+				<label>Clear Script Two</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(musicscript2name)</onclick>
+				<onclick>Skin.Reset(musicscript2path)</onclick>
+				<onclick>Skin.Reset(musicscript2)</onclick>
+			</control>
+
+			<control type="radiobutton" id="9212">
+				<label>Use Picture Scripts</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(usepicscripts)</selected>
+				<onclick>Skin.ToggleSetting(usepicscripts)</onclick>
+			</control>
+			<control type="button" id="9213">
+				<visible>Skin.HasSetting(usepicscripts)</visible>
+				<label>Set Script One: $INFO[Skin.String(picscript1name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(picscript1name)</onclick>
+				<onclick>Skin.SetFile(picscript1path)</onclick>
+				<onclick>Skin.SetBool(picscript1)</onclick>
+			</control>
+			<control type="button" id="9226">
+				<visible>Control.IsVisible(9213) + Skin.HasSetting(picscript1)</visible>
+				<label>Clear Script One</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(picscript1name)</onclick>
+				<onclick>Skin.Reset(picscript1path)</onclick>
+				<onclick>Skin.Reset(picscript1)</onclick>
+			</control>
+			<control type="button" id="9214">
+				<visible>Skin.HasSetting(usepicscripts)</visible>
+				<visible>Skin.HasSetting(picscript1) | Skin.HasSetting(picscript2)</visible>
+				<label>Set Script Two: $INFO[Skin.String(picscript2name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(picscript2name)</onclick>
+				<onclick>Skin.SetFile(picscript2path)</onclick>
+				<onclick>Skin.SetBool(picscript2)</onclick>
+			</control>
+			<control type="button" id="9227">
+				<visible>Control.IsVisible(9214) + Skin.HasSetting(picscript2)</visible>
+				<label>Clear Script Two</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(picscript2name)</onclick>
+				<onclick>Skin.Reset(picscript2path)</onclick>
+				<onclick>Skin.Reset(picscript2)</onclick>
+			</control>
+
+			<control type="radiobutton" id="9215">
+				<label>Use Weather Scripts</label>
+				<include>settings-button</include>
+				<selected>Skin.HasSetting(useweatherscripts)</selected>
+				<onclick>Skin.ToggleSetting(useweatherscripts)</onclick>
+			</control>
+			<control type="button" id="9216">
+				<visible>Skin.HasSetting(useweatherscripts)</visible>
+				<label>Set Script One: $INFO[Skin.String(weatherscript1name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(weatherscript1name)</onclick>
+				<onclick>Skin.SetFile(weatherscript1path)</onclick>
+				<onclick>Skin.SetBool(weatherscript1)</onclick>
+			</control>
+			<control type="button" id="9228">
+				<visible>Control.IsVisible(9216) + Skin.HasSetting(weatherscript1)</visible>
+				<label>Clear Script One</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(weatherscript1name)</onclick>
+				<onclick>Skin.Reset(weatherscript1path)</onclick>
+				<onclick>Skin.Reset(weatherscript1)</onclick>
+			</control>
+			<control type="button" id="9217">
+				<visible>Skin.HasSetting(useweatherscripts)</visible>
+				<visible>Skin.HasSetting(weatherscript1) | Skin.HasSetting(weatherscript2)</visible>
+				<label>Set Script Two: $INFO[Skin.String(weatherscript2name)]</label>
+				<posx>20</posx>
+				<include>settings-button</include>
+				<onclick>Skin.SetString(weatherscript2name)</onclick>
+				<onclick>Skin.SetFile(weatherscript2path)</onclick>
+				<onclick>Skin.SetBool(weatherscript2)</onclick>
+			</control>
+			<control type="button" id="9229">
+				<visible>Control.IsVisible(9217) + Skin.HasSetting(weatherscript2)</visible>
+				<label>Clear Script Two</label>
+				<posx>40</posx>
+				<include>settings-button</include>
+				<onclick>Skin.Reset(weatherscript2name)</onclick>
+				<onclick>Skin.Reset(weatherscript2path)</onclick>
+				<onclick>Skin.Reset(weatherscript2)</onclick>
+			</control>
+		</control>
+		<!-- scrollbar -->
+		<control type="group">
+			<posx>1210</posx>
+			<posy>80</posy>
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>30</width>
+				<height>600</height>
+			</control>
+			<control type="scrollbar" id="60">
+				<width>30</width>
+				<height>600</height>
+				<onleft>9001</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+			</control>
+		</control>
+
+		<!-- header -->
+		<control type="group">
+
+			<!-- background 
+			<control type="image">
+				<texture>mint2x2.png</texture>
+				<width>1280</width>
+				<height>80</height>
+			</control>-->
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+				<label>Skin Settings</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, |]  $INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>					
+
+	</controls>
+
+</window>

@@ -1,0 +1,14 @@
+<window id="56">
+<defaultcontrol always="true">-</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+  
+  <control type="label">
+    <include>DialogID</include>
+    <label>CustomSettings.xml</label>
+  </control>
+  
+</controls>
+  
+</window>

@@ -1,0 +1,76 @@
+<window id="104">
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="progress">
+		<posx>128</posx>
+		<posy>506</posy>
+		<width>262</width>
+		<height>10</height>
+		<info>Player.Volume</info>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture>-</overlaytexture>
+		<include>Volume-Rotate</include>
+	</control>
+	<control type="slider">
+		<posx>125</posx>
+		<posy>500</posy>
+		<width>259</width>
+		<height>2</height>
+		<info>Player.Volume</info>
+		<texturesliderbar>Seekslider.png</texturesliderbar>
+		<textureslidernib>-</textureslidernib>
+		<textureslidernibFocus>-</textureslidernibFocus>
+		<include>Volume-Rotate</include>
+	</control>
+	<control type="label">
+		<description>Volume dB</description>
+		<posx>660</posx>
+		<posy>80</posy>
+		<width>70</width>
+		<height>30</height>
+		<font>font13</font>
+		<shadowcolor>black</shadowcolor>
+		<info>Player.Volume</info>
+		<align>right</align>
+		<visible>!Window.IsActive(home) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation)</visible>
+	</control>
+	<control type="label">
+		<description>Volume dB</description>
+		<posx>696</posx>
+		<posy>106</posy>
+		<width>70</width>
+		<height>30</height>
+		<font>menubutton</font>
+		<shadowcolor>black</shadowcolor>
+		<angle>270</angle>
+		<info>Player.Volume</info>
+		<align>right</align>
+		<visible>Window.IsActive(home) | Window.IsActive(FullscreenVideo) | Window.IsActive(visualisation)</visible>
+	</control>
+	<control type="image">
+		<posx>680</posx>
+		<posy>105</posy>
+		<texture>Holder_Volume_Top.png</texture>
+		<width>19</width>
+		<height>100</height>
+		<colordiffuse>99ffffff</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>680</posx>
+		<posy>396</posy>
+		<texture>Holder_Volume_Bottom.png</texture>
+		<width>19</width>
+		<height>100</height>
+		<colordiffuse>99ffffff</colordiffuse>
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,117 @@
+<window id="500">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="label">
+				<description>Title label</description>
+				<posx>50</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>10517</label>
+				<font>font40</font>
+			</control>
+			<include>OldListViewCommons</include>
+			<include>MusicSongsMediaInfo1</include>
+			<include>NewListViewCommons</include>
+			<include>AllViewCommonThumbSmall</include>
+			<include>AllViewCommonThumbBig</include>
+			<include>AllViewCommonPageControls</include>
+			<include>Common_File_Count</include>
+			<control type="group" id="9001">
+				<posx>-345</posx>
+				<posy>0</posy>
+				<animation effect="slide" time="150" end="345,0" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>720</height>
+					<onclick>-</onclick>
+					<hitrect x="0" y="0" w="360" h="720" />
+					<texturefocus>Side_Slideout.png</texturefocus>
+					<texturenofocus>Side_Slideout.png</texturenofocus>
+				</control>
+				<control type="group" id="9000">
+					<posx>25</posx>
+					<posy>140</posy>
+					<control type="button" id="2000">
+						<description>View As button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>ButtonCommonValues</include>
+						<label>$LOCALIZE[31015] $INFO[Container.ViewMode]</label>
+						<onclick>ActivateWindow(1112)</onclick>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>22</onup>
+						<ondown>20</ondown>
+					</control>
+					<control type="radiobutton" id="20">
+						<description>Shuffle button</description>
+						<posx>0</posx>
+						<posy>45</posy>
+						<include>ButtonCommonValues</include>
+						<label>191</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>2000</onup>
+						<ondown>26</ondown>
+					</control>
+					<control type="button" id="26">
+						<description>Repeat button</description>
+						<posx>0</posx>
+						<posy>90</posy>
+						<include>ButtonCommonValues</include>
+						<label>194</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>20</onup>
+						<ondown>21</ondown>
+					</control>
+					<control type="button" id="21">
+						<description>Save button</description>
+						<posx>0</posx>
+						<posy>135</posy>
+						<include>ButtonCommonValues</include>
+						<label>190</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>26</onup>
+						<ondown>22</ondown>
+					</control>
+					<control type="button" id="22">
+						<description>Clear button</description>
+						<posx>0</posx>
+						<posy>180</posy>
+						<include>ButtonCommonValues</include>
+						<label>192</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>21</onup>
+						<ondown>2000</ondown>
+					</control>
+				</control>
+			</control>
+			<control type="button" id="9004">
+				<posx>342</posx>
+				<posy>0</posy>
+				<width>595</width>
+				<height>3</height>
+				<onclick>-</onclick>
+				<onfocus>ActivateWindow(1112)</onfocus>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<visible>Skin.HasSetting(UseAdvancedMouse)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

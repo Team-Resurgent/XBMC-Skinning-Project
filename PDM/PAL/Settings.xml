@@ -1,0 +1,988 @@
+<window id="4">
+	<defaultcontrol>300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+		<visible>Skin.HasSetting(menu-panel)</visible>
+	</control>
+
+	<!-- Default Theme -->
+
+	<control type="image">
+		<description>Background Panel image</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>407</height>
+		<texture>background-settings.png</texture>
+		<include>color-preset</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>!Skin.HasSetting(Settings-menu) | Skin.HasTheme(Default)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>-12</posx>
+		<posy>108</posy>
+		<width>732</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<aspectratio>scale</aspectratio>
+		<include>color-animation</include>
+		<visible>!Skin.HasSetting(menu-animation)</visible>
+		<visible>!Skin.HasSetting(Settings-menu) | Skin.HasTheme(Default)</visible>
+	</control>
+
+	<!-- X Theme -->
+
+	<control type="image">
+		<description>Background Panel image</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>407</height>
+		<texture>background-settings.png</texture>
+		<include>color-preset-theme</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>!Skin.HasSetting(Settings-menu) + Skin.HasTheme(X)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>-12</posx>
+		<posy>108</posy>
+		<width>732</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<aspectratio>scale</aspectratio>
+		<include>color-animation-theme</include>
+		<visible>!Skin.HasSetting(menu-animation)</visible>
+		<visible>!Skin.HasSetting(Settings-menu) + Skin.HasTheme(X)</visible>
+	</control>
+
+	<control type="image">
+		<description>Background Panel Overlayer</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>407</height>
+		<texture>keyboard-numeric-overlay2.png</texture>
+		<include>menu-overlay</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+	</control>
+
+	<!-- Settings ButtonScroller -->
+
+	<control type="group">
+	<control type="buttonscroller" id="300">
+        <description>Home Buttons</description>
+        <posx>-700</posx>
+        <posy>130</posy>
+        <width>300</width>
+        <height>300</height>
+        <buttongap>2</buttongap>
+        <numbuttons>15</numbuttons>
+        <orientation>horizontal</orientation>
+        <align>center</align>
+        <aligny>center</aligny>
+        <movement>0</movement>
+        <defaultbutton>3</defaultbutton>
+        <wraparound>yes</wraparound>
+        <smoothscrolling>yes</smoothscrolling>
+        <alpha>80</alpha>
+        <textoffsetx>10</textoffsetx>
+        <textoffsety>2</textoffsety>
+        <onup>300</onup>
+        <ondown>300</ondown>
+        <visible>!Skin.HasSetting(Settings-menu)</visible>
+        <animation effect="slide" start="720,0" end="0,0" acceleration="-1.0" time="200">WindowOpen</animation>
+        <buttons>
+        <button id="1">
+		<description>Appearance</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(19)</onclick>
+		<texturefocus>settings-appearance-focus.png</texturefocus>
+		<texturenofocus>settings-appearance-nofocus.png</texturenofocus>
+	</button>
+        <button id="2">
+		<description>My Videos</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(17)</onclick>
+		<texturefocus>settings-videos-focus.png</texturefocus>
+		<texturenofocus>settings-videos-nofocus.png</texturenofocus>
+        </button>
+        <button id="3">
+		<description>My Music</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(15)</onclick>
+		<texturefocus>settings-music-focus.png</texturefocus>
+		<texturenofocus>settings-music-nofocus.png</texturenofocus>
+        </button>
+        <button id="4">
+		<description>My Pictures</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(12)</onclick>
+		<texturefocus>settings-pictures-focus.png</texturefocus>
+		<texturenofocus>settings-pictures-nofocus.png</texturenofocus>
+        </button>
+        <button id="5">
+		<description>My Programs</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(13)</onclick>
+		<texturefocus>settings-programs-focus.png</texturefocus>
+		<texturenofocus>settings-programs-nofocus.png</texturenofocus>
+        </button>
+        <button id="6">
+		<description>My Weather</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(14)</onclick>
+		<texturefocus>settings-weather-focus.png</texturefocus>
+		<texturenofocus>settings-weather-nofocus.png</texturenofocus>
+        </button>
+        <button id="7">
+		<description>Network</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(18)</onclick>
+		<texturefocus>settings-network-focus.png</texturefocus>
+		<texturenofocus>settings-network-nofocus.png</texturenofocus>
+        </button>
+        <button id="8">
+		<description>System</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(16)</onclick>
+		<texturefocus>settings-system-focus.png</texturefocus>
+		<texturenofocus>settings-system-nofocus.png</texturenofocus>
+        </button>
+        <button id="9">
+		<description>Profiles</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(34)</onclick>
+		<texturefocus>settings-profile-focus.png</texturefocus>
+		<texturenofocus>settings-profile-nofocus.png</texturenofocus>
+        </button>
+        <button id="10">
+		<description>About XBMC</description>
+		<label></label>
+		<onclick>XBMC.Credits()</onclick>
+		<texturefocus>settings-AboutXBMC-focus.png</texturefocus>
+		<texturenofocus>settings-AboutXBMC-nofocus.png</texturenofocus>
+        </button>
+        <button id="11">
+		<description>PDM Options</description>
+		<label></label>
+		<onclick>XBMC.ActivateWindow(56)</onclick>
+		<texturefocus>settings-more-focus.png</texturefocus>
+		<texturenofocus>settings-more-nofocus.png</texturenofocus>
+        </button>
+        </buttons>
+	</control>
+	</control>
+
+	<!-- Settings Back/Suffix -->
+
+	<control type="image">
+		<description>Info Background</description>
+		<posx>0</posx>
+		<posy>450</posy>
+		<width>720</width>
+		<height>45</height>
+		<texture>sub-background-label2.png</texture>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+	</control>
+	<control type="label">
+		<description>Info Suffix</description>
+		<posx>360</posx>
+		<posy>466</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<label>|</label>
+		<font>special14</font>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>Control.HasFocus(300)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- Appearance Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>480</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(1)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info  label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20120</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(1)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- My Videos Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>3</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(2)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20121</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(2)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- My Music Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>2</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(3)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20122</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(3)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- My Pictures Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>1</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(4)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20123</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(4)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- My Programs Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>0</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(5)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20124</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(5)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- My Weather Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>8</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(6)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20127</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(6)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- Network Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>705</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(7)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20128</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(7)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- System Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>13000</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(8)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20129</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(8)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- Profiles Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>13200</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(9)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20130</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(9)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- About XBMC Icon -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>482</label>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(10)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20131</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(10)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- My PDM Options Info -->
+
+	<control type="label">
+		<description>BIG-Info label</description>
+		<posx>350</posx>
+		<posy>470</posy>
+		<align>right</align>
+		<aligny>center</aligny>
+		<include>20125</include>
+		<font>nasa-big</font>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(11)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+	<control type="label">
+		<description>Small-Info label</description>
+		<posx>372</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>20126</include>
+		<font>font10</font>
+		<fontcolor>90ffffff</fontcolor>
+		<include>settings-labels</include>
+		<visible>!Skin.HasSetting(Settings-menu)</visible>
+		<visible>ButtonScroller.HasFocus(11)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</control>
+
+	<!-- Settings Layout II -->
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+	</control>
+
+	<control type="group">
+		<control type="button" id="101">
+			<description>Reload Skin</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<label>20183</label>
+			<font>font13</font>
+			<align>left</align>
+			<texture>button-focus.png</texture>
+			<onclick>XBMC.ReloadSkin()</onclick>
+			<onfocus></onfocus>
+			<width>150</width>
+			<height>35</height>
+			<onleft>8</onleft>
+			<onright>300</onright>
+			<onup>102</onup>
+			<ondown>102</ondown>
+			<include>slideleft</include>
+			<visible>Skin.HasSetting(Settings-menu)</visible>
+		</control>
+
+		<control type="button" id="102">
+			<description>-</description>
+			<posx>20</posx>
+			<posy>147</posy>
+			<font>font13</font>
+			<align>left</align>
+			<texture>button-focus.png</texture>
+			<onclick>-</onclick>
+			<onfocus></onfocus>
+			<width>150</width>
+			<height>35</height>
+			<onleft>8</onleft>
+			<onright>300</onright>
+			<onup>101</onup>
+			<ondown>101</ondown>
+			<include>slideleft</include>
+			<visible>Skin.HasSetting(Settings-menu)</visible>
+			<visible>no</visible>
+		</control>
+	</control>
+
+	<!-- Default Theme -->
+
+	<control type="image">
+		<description>Background Right-Panel</description>
+		<posx>161</posx>
+		<posy>108</posy>
+		<width>559</width>
+		<height>407</height>
+		<texture>background-panel-right.png</texture>
+		<include>color-preset</include>
+		<include>slideright</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>Skin.HasSetting(menu-animation)</visible>
+		<visible>Skin.HasSetting(Settings-menu) | Skin.HasTheme(Default)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>161</posx>
+		<posy>108</posy>
+		<width>559</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<include>slideright</include>
+		<include>color-animation</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>!Skin.HasSetting(menu-animation)</visible>
+		<visible>Skin.HasSetting(Settings-menu) | Skin.HasTheme(Default)</visible>
+	</control>
+
+	<!-- X Theme -->
+
+	<control type="image">
+		<description>Background Right-Panel</description>
+		<posx>161</posx>
+		<posy>108</posy>
+		<width>559</width>
+		<height>407</height>
+		<texture>background-panel-right.png</texture>
+		<include>color-preset-theme</include>
+		<include>slideright</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>Skin.HasSetting(menu-animation)</visible>
+		<visible>Skin.HasSetting(Settings-menu) + Skin.HasTheme(X)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>161</posx>
+		<posy>108</posy>
+		<width>559</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<include>slideright</include>
+		<include>color-animation-theme</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>!Skin.HasSetting(menu-animation)</visible>
+		<visible>Skin.HasSetting(Settings-menu) + Skin.HasTheme(X)</visible>
+	</control>
+
+	<control type="image">
+		<description>Background Animation Shadow</description>
+		<posx>161</posx>
+		<posy>108</posy>
+		<width>559</width>
+		<height>407</height>
+		<texture>shader-animation.png</texture>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<visible>[!Skin.HasSetting(menu-animation) | Skin.HasSetting(menu-panel)]</visible>
+	</control>
+	<control type="image">
+		<description>Background Panel Overlayer</description>
+		<posx>122</posx>
+		<posy>104</posy>
+		<width>605</width>
+		<height>407</height>
+		<texture>keyboard-numeric-overlay.png</texture>
+		<include>menu-overlay</include>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+	</control>
+
+	<control type="button" id="300">
+		<description>My Videos</description>
+		<posx>215</posx>
+		<posy>115</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-videos-focus.png</texturefocus>
+		<texturenofocus>settings-videos-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>3</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(17)</onclick>
+		<onleft>101</onleft>
+		<onright>7</onright>
+		<onup>200</onup>
+		<ondown>10</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="7">
+		<description>My Music</description>
+		<posx>315</posx>
+		<posy>115</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-music-focus.png</texturefocus>
+		<texturenofocus>settings-music-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>2</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(15)</onclick>
+		<onleft>300</onleft>
+		<onright>9</onright>
+		<onup>201</onup>
+		<ondown>2</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="9">
+		<description>My Pictures</description>
+		<posx>415</posx>
+		<posy>115</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-pictures-focus.png</texturefocus>
+		<texturenofocus>settings-pictures-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>1</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(12)</onclick>
+		<onleft>7</onleft>
+		<onright>8</onright>
+		<onup>202</onup>
+		<ondown>4</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="8">
+		<description>My Programs</description>
+		<posx>515</posx>
+		<posy>115</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-programs-focus.png</texturefocus>
+		<texturenofocus>settings-programs-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>0</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(13)</onclick>
+		<onleft>9</onleft>
+		<onright>101</onright>
+		<onup>203</onup>
+		<ondown>3</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="10">
+		<description>My Weather</description>
+		<posx>215</posx>
+		<posy>260</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-weather-focus.png</texturefocus>
+		<texturenofocus>settings-weather-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>8</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(14)</onclick>
+		<onleft>101</onleft>
+		<onright>2</onright>
+		<onup>300</onup>
+		<ondown>200</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="2">
+		<description>Network</description>
+		<posx>315</posx>
+		<posy>260</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-network-focus.png</texturefocus>
+		<texturenofocus>settings-network-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>705</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(18)</onclick>
+		<onleft>10</onleft>
+		<onright>4</onright>
+		<onup>7</onup>
+		<ondown>201</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="4">
+		<description>System</description>
+		<posx>415</posx>
+		<posy>260</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-system-focus.png</texturefocus>
+		<texturenofocus>settings-system-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>13000</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(16)</onclick>
+		<onleft>2</onleft>
+		<onright>3</onright>
+		<onup>9</onup>
+		<ondown>202</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="3">
+		<description>Appearance</description>
+		<posx>515</posx>
+		<posy>260</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-appearance-focus.png</texturefocus>
+		<texturenofocus>settings-appearance-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>480</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(19)</onclick>
+		<onleft>4</onleft>
+		<onright>101</onright>
+		<onup>8</onup>
+		<ondown>203</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="200">
+		<description>Profiles</description>
+		<posx>215</posx>
+		<posy>405</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-Profile-focus.png</texturefocus>
+		<texturenofocus>settings-Profile-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>13200</label>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(34)</onclick>
+		<onleft>101</onleft>
+		<onright>201</onright>
+		<onup>10</onup>
+		<ondown>300</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="201">
+		<description>About XBMC</description>
+		<posx>315</posx>
+		<posy>405</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-AboutXBMC-focus.png</texturefocus>
+		<texturenofocus>settings-AboutXBMC-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>482</label>
+		<align>center</align>
+		<onclick>XBMC.Credits()</onclick>
+		<onleft>200</onleft>
+		<onright>202</onright>
+		<onup>2</onup>
+		<ondown>7</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="202">
+		<description>PDM Skin Options Button</description>
+		<posx>415</posx>
+		<posy>405</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-more-focus.png</texturefocus>
+		<texturenofocus>settings-more-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<include>20125</include>
+		<align>center</align>
+		<onclick>XBMC.ActivateWindow(56)</onclick>
+		<onleft>201</onleft>
+		<onright>203</onright>
+		<onup>4</onup>
+		<ondown>9</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="button" id="203">
+		<description>AlarmClock</description>
+		<posx>515</posx>
+		<posy>405</posy>
+		<width>85</width>
+		<height>85</height>
+		<aspectratio>scale</aspectratio>
+		<texturefocus>settings-AlarmClock-focus.png</texturefocus>
+		<texturenofocus>settings-AlarmClock-nofocus.png</texturenofocus>
+		<font>font10</font>
+		<aligny>top</aligny>
+		<textoffsety>85</textoffsety>
+		<label>13208</label>
+		<align>center</align>
+		<onclick>XBMC.AlarmClock()</onclick>
+		<onleft>202</onleft>
+		<onright>101</onright>
+		<onup>3</onup>
+		<ondown>8</ondown>
+		<include>slideright</include>
+		<visible>Skin.HasSetting(Settings-menu)</visible>
+		<animation effect="fade" condition="!Skin.HasSetting(animation)" time="200">WindowOpen</animation>
+	</control>
+
+	<include>4x3slider</include>
+
+	<control>
+		<description>Description label</description>
+		<label>10507</label>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

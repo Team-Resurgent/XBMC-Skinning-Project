@@ -1,0 +1,32 @@
+<window id="113">
+
+	<controls>
+
+		<control type="group">
+			<visible>Player.Muted</visible>
+			
+			<posx>20</posx>
+			<posy>20</posy>
+		
+			<animation effect="slide" start="0,0" end="-124,0" time="300">WindowClose</animation>
+		
+			<!-- background -->
+			<control type="image">
+			    <texture border="12">bg-dialog.png</texture>
+			    <width>50</width>
+			    <height>50</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- mute bug -->
+			<control type="image">
+				<texture>osd-mute-nf.png</texture>
+				<width>32</width>
+				<height>32</height>
+				<posx>10</posx>
+				<posy>10</posy>
+			</control>
+		</control>
+		
+	</controls>
+
+</window>

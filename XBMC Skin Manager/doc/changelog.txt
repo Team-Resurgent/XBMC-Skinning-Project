@@ -1,0 +1,84 @@
+Changelog:
+    0.71 :
+        - Fixed Vista compatibility
+    0.7 :
+        - support for local XBMC versions
+        - Linux XBMCtex support
+        - Better debug messages
+        - Changed : build scrpt extention is not necessary and automatically completed depending on current OS
+        - Support for skins without build script (using svn export function)
+        - The windows are now vertically scrolled (usefull for screens with low vertical resolution screens like 720p/WXGA)
+        - SVN files operations are logged in verbose mode
+        - all source files converted into UTF8
+    0.61 :
+        - Root/administator privileges are no more required (thx to JoeUser38)
+        - "Download/Update" checkbox is never grayed
+        - If Internet test fails, SVN synchro is skipped
+    0.6 :
+        - Completely rewritten from scratch (lots of little adds, changes and bugfixes)
+        - XML compatibiliy with 0.5x is broken
+        - removed : XML tag langfolder (replaced by choicefolder type 2)
+        - added : XML tag choicefolder (2 variants), buildfolder
+        - changed : now real skin directory is auto-detected (even if skin name and directory are named differently). So now [BUILDdir] macro always works.
+        - Language files use same XML pattern as XBMC (thx to Nuka1195 for parser)
+        - Anonymous stats are sent about skins downloads (a stats page will appear soon)
+
+    0.51 :
+        - L'application ne freeze plus pendant les opérations
+        - Il est possible de réinitialiser à distances le skin utlisé par XBMC (en cas de skin incompatible)
+        - Suppoer des fichiers .BAT avec des arguments
+        - Fixé : bug lors de la mise à jour : le xml était téléchargé à chaque fois
+        - Fixé : bug lors de l'envoi d'un skin non construit
+        - Changé : si la connexion à Internet réussit mais pas celle au SVN, seuls les skins SVN sont concernés
+        - Passage à WxPython 2.8.6.1 Unicode
+        - Passage à PySVN 1.5.2 (SVN v1.4.5)
+
+    0.5:
+        - Téléchargment de skins externes au SVN (par HTTP)
+        - Possibilité de faire des scripts d'upload personnalisés
+        - Le fichier de construction n'est plus obligé de s'appeler 'build.bat' (précisé dnas le fichier xml)
+        - Amélioration de la boite de changelog
+        - Amélioration du liveupdate : le fichier distant n'est téléchargé qu'en cas d'update
+        - L'application réagit mieux pendant les opérations
+        - Changé : gestion des erreurs : lorsqu'une erreur se produit sur un skin, celui ci n'est plus traité
+                   mais les opérations pour les autres skins continuent
+        - Fixé : quelques strings étaient manquants dans english.lng
+        - Fixé : quelques problèmes de GUI
+        - Passage à WxPython 2.8.6.0 Unicode
+    0.4:
+        - LiveUpdate via un fichier xml qui contient des infos relatives à la contruction spécifique de certains skins
+        - Interface en WxPython
+        - La fonction relocate buggait avec les espaces (PM I & PM II)
+        - Réécriture de la partie config (fichier ini)
+        - Réécriture de la partie FTP
+        - La config est enregistrée lorsque une opération est lancée
+          (en attendant que je trouve comment on fait pour enregistrer à la sortie avec Wx)
+    0.3d:
+        - Changement de l'adresse du serveur SVN (les checkouts déja présents sont déménagés autmatiquement)
+        - L'adresse du serveur SVN est maintenant stockée dans le fichier ini
+    0.3c:
+        - Correction des problèmes de timeout FTP
+    0.3b:
+        - Correction des problèmes FTP avec plusieurs dash
+    0.3:
+        - Vérifie si le dash utilisé est XBMC (si oui, un message d'avertissement est affiché)
+        - Mode 'offline' qui permet d'utiliser le script sans être connecté à Internet
+        - Refonte de l'interface
+        - Possibilité de scinder les processus (MaJ, build, upload)
+        - Amélioration de la gestion des contenus annexes
+        - Internationalisation (français + anglais)
+        - Meilleure détection de XBMC
+        - Problèmes résolus avec PMI & PMII (bug avec les espaces)
+    0.2:
+        - Client SVN (via PySVN) : les skins sont automatiquemnt téléchagés et mis à jour
+        - Nettoyage du code
+        - Meilleure gestion des fichiers annexes (splash screen, scripts python, interfaces web)
+        - Les paramètres sont enregistrés automatiquement à la sortie
+        - Lors de l'initlalisation de la connexion FTP, le programma vérifie que le dossier de XBMC est correct
+        - Correction des problèmes de géométrie des fenêtres
+    0.1:
+        release initiale
+Todo:
+    - Améliorer la gesion des exceptions
+    - Gestionnaire de sessions
+    - Utilisation des commandes FTP 'site'

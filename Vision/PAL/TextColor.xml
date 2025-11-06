@@ -1,0 +1,12 @@
+<includes>
+	<include name="shadow-black"><shadowcolor>black</shadowcolor></include>
+	<include name="textcolor-disabled"><disabledcolor>disabled</disabledcolor></include>
+	<include name="textcolor-white"><textcolor>white</textcolor></include>
+	<include name="textcolor-grey"><textcolor>grey</textcolor></include>
+	<include name="textcolor-selected"><selectedcolor>blue</selectedcolor></include>
+	<include name="focustextcolor-blue"><focusedcolor>blue</focusedcolor></include>
+	<include name="textcolor-blue"><textcolor>blue</textcolor></include>
+	<include name="textcolor-rsstitle"><titlecolor>blue</titlecolor></include>
+	<include name="textcolor-rssheadline"><headlinecolor>white</headlinecolor></include>
+	<include name="textcolor-spincontrol"><spincolor>white</spincolor></include>
+</includes>

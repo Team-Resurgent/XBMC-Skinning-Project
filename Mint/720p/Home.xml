@@ -1,0 +1,158 @@
+<!-- window name: home -->
+<window id="0">
+
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+	
+		<!-- background -->
+		<include>bg-home</include>
+		
+		<control type="group">
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+			<posx>600</posx>
+			<posy>120</posy>
+			<animation effect="fade" start="100" end="70" time="1000" condition="System.IdleTime(7) + Skin.HasSetting(fademain)">Conditional</animation>
+			<animation effect="fade" start="70" end="100" time="1000" condition="!System.IdleTime(7) + Skin.HasSetting(fademain)">Conditional</animation>
+			<!-- background -->
+			<control type="image">
+				<texture>blacks.png</texture>
+				<width>400</width>
+				<height>480</height>
+				<colordiffuse>overlay-home</colordiffuse>
+			</control>
+			<!-- main menu -->
+			<control type="grouplist" id="9000">
+				<height>480</height>
+				<posx>-120</posx>
+				<posy>40</posy>
+				
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				
+				<control type="button" id="101">
+					<label>movies</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(currenttitle,Movies)</onclick>
+					<onclick>Skin.SetBool(movies)</onclick>
+					<onclick>Skin.Reset(tv)</onclick>
+					<onclick>ActivateWindow(MyVideos,Movies)</onclick>
+				</control>
+				<control type="button" id="102">
+					<label>tv</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(currenttitle,TV)</onclick>
+					<onclick>Skin.SetBool(tv)</onclick>
+					<onclick>Skin.Reset(movies)</onclick>
+					<onclick>ActivateWindow(MyVideos,TV Shows)</onclick>
+				</control>
+				<control type="button" id="103">
+					<label>games</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(currenttitle,Games)</onclick>
+					<onclick>Skin.SetBool(games)</onclick>
+					<onclick>Skin.Reset(arcade)</onclick>
+					<onclick>ActivateWindow(MyPrograms,Games)</onclick>
+				</control>
+				<control type="button" id="104">
+					<label>arcade</label>
+					<include>type-menu</include>
+					<onclick>Skin.SetString(currenttitle,Arcade)</onclick>
+					<onclick>Skin.SetBool(arcade)</onclick>
+					<onclick>Skin.Reset(games)</onclick>
+					<onclick>ActivateWindow(MyPrograms,Arcade)</onclick>
+				</control>
+				<control type="button" id="105">
+					<label>music</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(MyMusic)</onclick>
+				</control>
+				<control type="button" id="106">
+					<label>pictures</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(MyPictures)</onclick>
+				</control>
+				<control type="button" id="107">
+					<label>weather</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(Weather)</onclick>
+				</control>
+				<control type="button" id="108">
+					<visible>Skin.HasSetting(useremote)</visible>
+					<label>system</label>
+					<include>type-menu</include>
+					<onclick>ActivateWindow(shutdownmenu)</onclick>
+				</control>
+			</control>
+					
+		</control>
+	
+		<!-- header -->
+		<control type="group">
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+			<control type="image">
+			    <texture>black.png</texture>
+			    <width>1280</width>
+			    <height>80</height>
+			    <colordiffuse>overlay-home</colordiffuse>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+			    <label>$INFO[Weather.Temperature,, : ]$INFO[System.Time]</label>
+			    <width>320</width>
+			    <height>80</height>
+			    <posx>1240</posx>
+			    <font>header</font>
+			    <textcolor>header-dark</textcolor>
+			    <align>right</align>
+			</control>
+		</control>
+		
+		<!-- footer -->
+		<control type="group">
+
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+			<posy>640</posy>
+
+			<control type="image">
+			    <texture>black.png</texture>
+			    <width>1280</width>
+			    <height>80</height>
+			    <colordiffuse>overlay-home</colordiffuse>
+			</control>
+			<control type="rss">
+				<visible>Skin.HasSetting(showrss)</visible>
+				<width>920</width>
+				<height>80</height>
+				<posx>40</posx>
+				<posy>20</posy>
+				<font>rss</font>
+				<textcolor>type-rss</textcolor>
+				<titlecolor>type-rss-title</titlecolor>
+				<headlinecolor>type-rss-headline</headlinecolor>
+				<aligny>center</aligny>
+				<urlset>1</urlset>
+			</control>
+			<control type="group">
+				<posx>1012</posx>
+				<!-- mint logo -->
+				<control type="image">
+					<texture>mint-logo.png</texture>
+					<width>48</width>
+					<height>48</height>
+					<posx>180</posx>
+					<posy>10</posy>
+				</control>
+				<!-- xbmc logo -->
+				<control type="image">
+					<texture>xbmc-logo.png</texture>
+					<width>160</width>
+					<height>48</height>
+					<posy>15</posy>
+				</control>
+			</control>
+		</control>
+	 		
+	</controls>
+</window>

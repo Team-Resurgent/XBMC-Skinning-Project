@@ -1,0 +1,108 @@
+<window id="2006">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+		</control>
+<!-- Codec and Viz  -->
+		<control type="group">
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+			<control type="image">
+				<description>RSS Drop Down Container</description>
+				<posx>-10</posx>
+				<posy>0</posy>
+				<width>740</width>
+				<height>40</height>
+				<texture>dropdown.png</texture>
+				<animation effect="fade" start="0" time="125" condition="![Window.Previous(2005) | Window.Previous(2006) | Window.Previous(startup)]">WindowOpen</animation>
+				<animation effect="fade" end="0" time="50">WindowClose</animation>
+			</control>
+			<control type="label">
+				<description>Codecinfo</description>
+				<posx>30</posx>
+				<posy>5</posy>
+				<width>660</width>
+				<label>$INFO[musicplayer.Codec,Audio Codec: ,] $INFO[musicplayer.Channels, - Channels: ] - $INFO[musicplayer.Bitrate,Bitrate:,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz] - $LOCALIZE[250] - $INFO[Visualisation.Name] --> </label>
+				<align>left</align>
+				<font>font12</font>
+				<scroll>true</scroll>
+			</control>
+		</control>
+<!-- Album -->
+		<control type="group">
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+			<control type="image">
+				<description>bottom shutter</description>
+				<posx>0</posx>
+				<posy>476</posy>
+				<width>720</width>
+				<height>300</height>
+				<texture>shutter-bottom.png</texture>
+			</control>
+			<control type="image">
+				<description>Album Thumb</description>
+				<posx>10</posx>
+				<posy>476</posy>
+				<width>100</width>
+				<height>100</height>
+				<info>MusicPlayer.Cover</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="fadelabel">
+				<description>Artist and Album Labels</description>
+				<posx>115</posx>
+				<posy>550</posy>
+				<width>605</width>
+				<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Album]</label>
+				<align>left</align>
+				<font>font14</font>
+			</control>
+			<control type="fadelabel">
+				<description>Song Title</description>
+				<posx>115</posx>
+				<posy>530</posy>
+				<width>380</width>
+				<info>MusicPlayer.Title</info>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="label">
+				<description>Playlist Pos No</description>
+				<posx>115</posx>
+				<posy>510</posy>
+				<width>200</width>
+				<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554] ]$INFO[musicplayer.Playlistlength, / ]</label>
+				<visible>!MusicPartyMode.Enabled</visible>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="label">
+				<description>PartyMode Enabled</description>
+				<posx>115</posx>
+				<posy>510</posy>
+				<width>200</width>
+				<label>589</label>
+				<visible>MusicPartyMode.Enabled</visible>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="fadelabel">
+				<description>time label</description>
+				<posx>115</posx>
+				<posy>490</posy>
+				<width>380</width>
+				<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+		</control>
+	</controls>
+</window>

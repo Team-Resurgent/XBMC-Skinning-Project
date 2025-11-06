@@ -1,0 +1,50 @@
+﻿<window id="107">
+	<defaultcontrol>402</defaultcontrol>
+	<animation effect="slide" time="250" start="0,150" end="0,0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="slide" time="250" end="0,150" start="0,0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>210</posx>
+		<posy>470</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>popup kai toast dialog background</description>
+			<posx>0</posx>
+			<posy>-2</posy>
+			<width>300</width>
+			<height>102</height>
+			<texture>toast-panel-bg.png</texture>
+		</control>
+		<control type="image" id="400">
+			<description>avatar</description>
+			<posx>20</posx>
+			<posy>25</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>buddy-online.png</texture>
+		</control>
+		<control type="label" id="401">
+			<description>Description Button</description>
+			<posx>75</posx>
+			<posy>24</posy>
+			<width>190</width>
+			<label>-</label>
+			<font>font15</font>
+			<align>center</align>
+			<scroll>true</scroll>
+			<textcolor>green</textcolor>
+		</control>
+		<control type="label" id="402">
+			<description>Description Button</description>
+			<posx>75</posx>
+			<posy>41</posy>
+			<width>190</width>
+			<label>-</label>
+			<font>font15</font>
+			<align>center</align>
+			<scroll>true</scroll>
+			<textcolor>green</textcolor>
+		</control>
+	</controls>
+</window>

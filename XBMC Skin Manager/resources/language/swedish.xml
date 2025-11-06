@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: blittan-->
+<!--Email: blittan@xbmc.org-->
+<!--Date of translation: 04/16/2009-->
+<!--$Revision$-->
+<strings>
+  <string id="0">Swedish</string>
+  <string id="1">XBMC Skalhanterare v%s</string>
+  <string id="2">B</string>
+  <string id="3">%d/%m/%Y %I:%M %p</string>
+  <string id="1000">Startar...</string>
+  <string id="1001">Uppstart börjar...</string>
+  <string id="1002">Testar Internetanslutning...</string>
+  <string id="1003">Uppgraderar XML fil...</string>
+  <string id="1004">Kontaktar SVN server...</string>
+  <string id="1005">Uppstart slutar..</string>
+  <string id="2000">Skal</string>
+  <string id="2001">Välj skalen du vill arbeta på</string>
+  <string id="2002">Konfiguration</string>
+  <string id="2003">Program och xbox relaterade val</string>
+  <string id="2004">Skalcustomiseringar</string>
+  <string id="2005">Speciella val för somliga skal</string>
+  <string id="2006">Operationer</string>
+  <string id="2007">Starta och övervaka operationer</string>
+  <string id="2008">SVN Skal</string>
+  <string id="2009">HTTP Skal</string>
+  <string id="2010">Skalnamn</string>
+  <string id="2011">Revision</string>
+  <string id="2012">Version</string>
+  <string id="2013">Ändringslogg</string>
+  <string id="2014">Visa ändringar sedan din sista uppdatering</string>
+  <string id="2015">Information</string>
+  <string id="2016">Visa information om detta skal (skärmdump, ändringslogg...)</string>
+  <string id="2017">Xbox konfiguration</string>
+  <string id="2018">Adress:</string>
+  <string id="2019">Användare:</string>
+  <string id="2020">Lösenord:</string>
+  <string id="2021">XBMC sökväg:</string>
+  <string id="2022">Uppgifter</string>
+  <string id="2023">Ladda ner/Uppdatera</string>
+  <string id="2024">Bygg/Packa upp</string>
+  <string id="2025">Installera</string>
+  <string id="2026">Rensa temporära mappar</string>
+  <string id="2027">Språk:</string>
+  <string id="2028">Starta</string>
+  <string id="2029">Återställ skalinställningar</string>
+  <string id="2030">Nuvarande uppgift : %s %s</string>
+  <string id="2031">väntar...</string>
+  <string id="2032">testar FTP-anslutning</string>
+  <string id="2033">laddar ner</string>
+  <string id="2034">uppdaterar</string>
+  <string id="2035">bygger</string>
+  <string id="2036">packar upp</string>
+  <string id="2037">installerar</string>
+  <string id="2038">rensar</string>
+  <string id="2039">Diverse val</string>
+  <string id="2041">Återställ standard</string>
+  <string id="2042">Behåll XPR filer</string>
+  <string id="2043">Ta bort permanent</string>
+  <string id="2044">Denna åtgärd kan återställa nuvarande skal till PM3.
+Det måste användas om du försökte använda
+ett skal som inte är kompatibelt med din XBMC version.</string>
+  <string id="2045">Gör det !</string>
+  <string id="2046">Lokalt läge</string>
+  <string id="2047">Välj detta om du använder en lokal XBMC installation.
+Fyll i endast den lokala XBMC sökvägen, alla andra parametrar ignoreras.</string>
+  <string id="2048">okänd</string>
+  <string id="3000">Installera Splash Screen</string>
+  <string id="3001">Installera Python skript</string>
+  <string id="3002">Installera webbgränsssnitt</string>
+  <string id="3003">Build typ : </string>
+  <string id="3004">Texturdefination : </string>
+  <string id="4000">Inget skal valt</string>
+  <string id="4001">Välj minst ett skal.</string>
+  <string id="4002">XBMC är nuvarande manysystem</string>
+  <string id="4003">Det verkar som att XBMC är ditt nuvarande menysystem.
+Det är inte rekommenderat att uppdatera skal under dessa omständigheter.
+Speciellt om du försöker uppdatera ditt nuvarande skal.
+Vill du fortsätta ändå?</string>
+  <string id="4004">Uppdatering är tillgänglig</string>
+  <string id="4005">XBMC Skalhanterare v %s är tillgänglig.
+Detta är meddelandet</string>
+  <string id="4006">Gå till hemsida</string>
+  <string id="4007">av %s</string>
+  <string id="4008">Senaste version : %s</string>
+  <string id="4009">Lokal version : %s</string>
+  <string id="4010">Filstorlek : %s</string>
+  <string id="4011">Diverse informationer :</string>
+  <string id="4012">Visa skärmdump</string>
+  <string id="4013">Internet länkar :</string>
+  <string id="4014">Stäng</string>
+  <string id="4015">Ändringslogg %s</string>
+  <string id="4016">Från revision %s till revision %s</string>
+  <string id="4017">Datum</string>
+  <string id="4018">Författare</string>
+  <string id="4019">Noteringar</string>
+  <string id="4020">Laddar ner...</string>
+  <string id="4021">Fjärrfils-kontroll</string>
+  <string id="4022">Download in progress : %s/%s</string>
+  <string id="4023">Remote file unavailable</string>
+  <string id="4024">Nedladdningsfel</string>
+  <string id="4025">Skärmdump : %s</string>
+  <string id="4026">Är du säker ?</string>
+  <string id="4027">Do you really want to reset settings ?</string>
+  <string id="4028">Reset finished</string>
+  <string id="4029">Reset successfully finished.
+Restart XBMC for changes takes effect.</string>
+  <string id="4030">Unable to locate XBMC</string>
+  <string id="4031">XBMC has not been located on provided folder.
+Are you sure that %s is correct ?</string>
+  <string id="4032">Omstart krävs</string>
+  <string id="4033">Please restart XBMC Skin Manager 
+for changes takes effect.</string>
+  <string id="4034">Bulid script missed</string>
+  <string id="4035">No build script has been found for %s.
+Would you want to use skin as is (with plain textures files) ?
+(Result not guarantied !)</string>
+  <string id="4036">In progress...</string>
+  <string id="4037">Gathering changelog...</string>
+  <string id="5000">r|Errors occurred:</string>
+  <string id="5001">ri|Unable to connect to Internet</string>
+  <string id="5002">ri|Unable to reach SVN server</string>
+  <string id="5003">ri|Unable to read XML file</string>
+  <string id="5005">Connecting...</string>
+  <string id="5006">gi|FTP connection succeeded</string>
+  <string id="5007">ri|FTP connection failed</string>
+  <string id="5008">gi|XBMC installation located</string>
+  <string id="5010">Downloading skins...</string>
+  <string id="5011">gi|%s downloading finished (%s/%s)</string>
+  <string id="5012">gi|No update for %s (%s/%s)</string>
+  <string id="5013">ri|Unable to download SVN skins</string>
+  <string id="5014">ri|Failed to download %s</string>
+  <string id="5015">Building Skins...</string>
+  <string id="5016">gi|%s building finished (%s/%s)</string>
+  <string id="5017">ri|Unable to build %s (build script missed)</string>
+  <string id="5018">ri|Unable to extract skin %s (missed or corrupt archive)</string>
+  <string id="5019">Installing skins...</string>
+  <string id="5020">gi|%s installed (%s/%s)</string>
+  <string id="5021">ri|Unable to install %s (build folder missed)</string>
+  <string id="5022">ri|%s installation failed</string>
+  <string id="5023">ri|Unable to create %s folder</string>
+  <string id="5024">ri|Unable to install %s</string>
+  <string id="5025">ri|Unable to download %s</string>
+  <string id="5026">Deleting temporary folders...</string>
+  <string id="5027">gi|%s's build folder deleted (%s/%s)</string>
+  <string id="5028">ri|Unable to delete %s's build folder (folder missed)</string>
+  <string id="5029">ri|Unable to delete %s's build folder (unknown error)</string>
+  <string id="5030">c|---FINISHED---</string>
+  <string id="5031">Canceled by user</string>
+  <string id="5032">ri|The skin %s is not processed (%s/%s)</string>
+  <string id="5033">ri|Unable to download HTTP skins</string>
+  <string id="5034">gi|%s deleted (%s/%s)</string>
+  <string id="5035">ri|Unable to delete %s (folder missed)</string>
+  <string id="5036">ri|Unable to delete %s (unknown error)</string>
+  <string id="5037">Resetting settings...</string>
+  <string id="5038">r|Error while resetting settings</string>
+  <string id="5039">ri|XBMC path must be absolute (ex : "/E/XBMC")</string>
+  <string id="5040">ri|Unable to create tempoary folder : %s already exists !</string>
+  <string id="5041">ri|Unable to locate UserData folder.</string>
+  <string id="5042">ri|Unable to build skins (%s is not a supported platform)</string>
+</strings>

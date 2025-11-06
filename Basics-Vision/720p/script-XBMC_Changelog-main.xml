@@ -1,0 +1,98 @@
+<window id="3000">
+	<defaultcontrol>90</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>90</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label" id="10">
+				<description>Title label</description>
+				<posx>40</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>42</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>XBMC Changelog</label>
+				<font>font16b</font>
+			</control>
+			<include>Common_Now_Playing</include>
+			<control type="label" id="6">
+				<description>Date Label</description>
+				<posx>20</posx>
+				<posy>70</posy>
+				<width>450</width>
+				<label>XBMC Changelog</label>
+				<font>font13</font>
+				<align>right</align>
+				<visible>false</visible>
+			</control>
+			<control type="label" id="4">
+				<description>header label</description>
+				<posx>50</posx>
+				<posy>110</posy>
+				<width>610</width>
+				<visible>false</visible>
+			</control>
+			<control type="image">
+				<description>Background image</description>
+				<posx>30</posx>
+				<posy>85</posy>
+				<width>615</width>
+				<height>550</height>
+				<texture border="10,10,0,10">Info_Panel.png</texture>
+			</control>
+			<control type="image">
+				<description>Background image</description>
+				<posx>645</posx>
+				<posy>85</posy>
+				<width>615</width>
+				<height>550</height>
+				<texture flipx="true" border="0,10,10,10">Info_Panel.png</texture>
+			</control>
+			<control type="textbox" id="5">
+				<description>textarea</description>
+				<posx>45</posx>
+				<posy>95</posy>
+				<width>1175</width>
+				<height>530</height>
+				<pagecontrol>90</pagecontrol>
+				<include>white</include>
+				<font>font13</font>
+			</control>
+			<control type="group">
+				<posx>300r</posx>
+				<posy>650</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>44</height>
+					<texture>Slider_focus_left.png</texture>
+				</control>
+				<control type="spincontrol" id="90">
+					<description>Next page button</description>
+					<posx>220</posx>
+					<posy>10</posy>
+					<subtype>page</subtype>
+					<font>font13</font>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<ondown>90</ondown>
+					<onup>90</onup>
+					<textcolor>red</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

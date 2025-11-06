@@ -1,0 +1,45 @@
+<window id="110">
+	<defaultcontrol>0</defaultcontrol>
+	<controls>
+		<include>Dialog-Container</include>
+		<control type="group">
+		<include>media-slide</include>
+			<control type="label" id="1">
+				<description>dialog heading</description>
+				<posx>5</posx>
+				<posy>120</posy>
+				<label>0</label>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>5</posx>
+				<posy>170</posy>
+				<width>385</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>0</label>
+				<font>font13</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>5</posx>
+				<posy>230</posy>
+				<width>385</width>
+				<label>0</label>
+				<font>font13</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>5</posx>
+				<posy>260</posy>
+				<label>0</label>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+		</control>
+		<include>Dialog-Shutters</include>
+	</controls>
+</window>

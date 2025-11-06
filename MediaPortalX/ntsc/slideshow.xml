@@ -1,0 +1,65 @@
+<window>
+  <id>2007</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>bar image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>46</posY>
+      <width>720</width>
+      <height>42</height>
+      <texture>bar.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+    <control>
+      <description>row 1 label</description>
+      <type>label</type>
+      <id>10</id>
+      <posX>100</posX>
+      <posY>50</posY>
+      <label>-</label>
+      <align>left</align>
+      <font>font13</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>row 2 label</description>
+      <type>label</type>
+      <id>11</id>
+      <posX>100</posX>
+      <posY>67</posY>
+      <label>-</label>
+      <align>left</align>
+      <font>font13</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>row 2 extra label</description>
+      <type>label</type>
+      <id>12</id>
+      <posX>250</posX>
+      <posY>67</posY>
+      <label>-</label>
+      <align>left</align>
+      <font>font13</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>pause image</description>
+      <type>image</type>
+      <id>13</id>
+      <align>right</align>
+      <posX>500</posX>
+      <posY>40</posY>
+      <width>119</width>
+      <height>46</height>
+      <visible>no</visible>
+      <texture>video-pause.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+  </controls>
+</window>

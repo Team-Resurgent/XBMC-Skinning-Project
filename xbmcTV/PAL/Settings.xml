@@ -1,0 +1,148 @@
+<window id="4">
+	<defaultcontrol always="false">3</defaultcontrol>
+	<previouswindow>ShutdownMenu</previouswindow>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>background</include>
+		<include>xtv-box</include>
+
+		<control type="group">
+			<control type="button" id="3">
+				<description>Appearance</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>90</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>480</label>
+				<onclick>ActivateWindow(AppearanceSettings)</onclick>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>4</onup>
+				<ondown>6</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="6">
+				<description>My Videos</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>129</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>3</label>
+				<onclick>ActivateWindow(MyVideosSettings)</onclick>
+				<onleft>6</onleft>
+				<onright>6</onright>
+				<onup>3</onup>
+				<ondown>8</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="8">
+				<description>My Programs</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>168</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>0</label>
+				<onclick>ActivateWindow(MyProgramsSettings)</onclick>
+				<onleft>8</onleft>
+				<onright>8</onright>
+				<onup>6</onup>
+				<ondown>7</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="7">
+				<description>My Music</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>207</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>2</label>
+				<onclick>ActivateWindow(MyMusicSettings)</onclick>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<onup>8</onup>
+				<ondown>9</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="9">
+				<description>My Pictures</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>246</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>1</label>
+				<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+				<onleft>9</onleft>
+				<onright>9</onright>
+				<onup>7</onup>
+				<ondown>10</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="10">
+				<description>My Weather</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>285</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>8</label>
+				<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>9</onup>
+				<ondown>2</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="2">
+				<description>Network</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>324</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>705</label>
+				<onclick>ActivateWindow(NetworkSettings)</onclick>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>10</onup>
+				<ondown>4</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="button" id="4">
+				<description>System</description>
+				<font>font13</font>
+				<posx>405</posx>
+				<posy>363</posy>
+				<width>285</width>
+				<height>40</height>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>13000</label>
+				<onclick>ActivateWindow(SystemSettings)</onclick>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>3</ondown>
+				<textcolor>button-text</textcolor>
+			</control>
+		</control>
+	</controls>
+</window> 

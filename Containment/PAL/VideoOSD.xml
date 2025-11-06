@@ -1,0 +1,472 @@
+<window id="2901">
+	<defaultcontrol>211</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>194</posx>
+		<posy>480</posy>
+	</coordinates>
+	<controls>
+<!-- Osd Background -->
+		<control type="image">
+			<description>underlay left</description>
+			<posx>2</posx>
+			<posy>5</posy>
+			<width>20</width>
+			<height>45</height>
+			<texture>dropdown-end.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>underlay middle</description>
+			<posx>22</posx>
+			<posy>5</posy>
+			<width>299</width>
+			<height>45</height>
+			<texture>dropdown-mid.png</texture>
+		</control>
+		<control type="image">
+			<description>underlay right</description>
+			<posx>314</posx>
+			<posy>5</posy>
+			<width>20</width>
+			<height>45</height>
+			<texture flipx="true">dropdown-end.png</texture>
+		</control>
+<!-- Previous Button -->
+		<control type="button" id="212">
+			<description>Previous button</description>
+			<posx>20</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+			<onleft>219</onleft>
+			<onright>214</onright>
+			<onup>212</onup>
+			<ondown>212</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Previous nf button</description>
+			<posx>20</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-previous.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(212)</visible>
+		</control>
+		<control type="image">
+			<description>Previous fo button</description>
+			<posx>20</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-previous.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(212)</visible>
+		</control>
+<!-- Rewind Button -->
+		<control type="button" id="214">
+			<description>Rewind button</description>
+			<posx>47</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			<onleft>212</onleft>
+			<onright>210</onright>
+			<onup>214</onup>
+			<ondown>214</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Rewind nf button</description>
+			<posx>47</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-rewind.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(214)</visible>
+		</control>
+		<control type="image">
+			<description>Rewind fo button</description>
+			<posx>47</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-rewind.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(214)</visible>
+		</control>
+<-- Stop button -->
+		<control type="button" id="210">
+			<description>Stop button</description>
+			<posx>74</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
+			<onleft>214</onleft>
+			<onright>211</onright>
+			<onup>210</onup>
+			<ondown>210</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Stop nf button</description>
+			<posx>74</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-stop.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(210)</visible>
+		</control>
+		<control type="image">
+			<description>Stop fo button</description>
+			<posx>74</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-stop.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(210)</visible>
+		</control>
+<!-- Play/Pause -->
+		<control type="button" id="211">
+			<description>Play/Pause button</description>
+			<posx>101</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<onleft>210</onleft>
+			<onright>215</onright>
+			<onup>211</onup>
+			<ondown>211</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Play nf button</description>
+			<posx>101</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-play.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(211) + [Player.Rewinding | Player.Paused | Player.Forwarding]</visible>
+		</control>
+		<control type="image">
+			<description>Play fo button</description>
+			<posx>101</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-play.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(211) + [Player.Rewinding | Player.Paused | Player.Forwarding]</visible>
+		</control>
+		<control type="image">
+			<description>Pause nf button</description>
+			<posx>101</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-pause.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(211) + Player.Playing</visible>
+		</control>
+		<control type="image">
+			<description>Pause fo button</description>
+			<posx>101</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-pause.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(211) + Player.Playing</visible>
+		</control>
+<!-- Fast Forward Button -->
+		<control type="button" id="215">
+			<description> Fast Forward button</description>
+			<posx>128</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+			<onleft>211</onleft>
+			<onright>213</onright>
+			<onup>215</onup>
+			<ondown>215</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Fast Forward nf button</description>
+			<posx>128</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-ff.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(215)</visible>
+		</control>
+		<control type="image">
+			<description>Fast Forward fo button</description>
+			<posx>128</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-ff.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(215)</visible>
+		</control>
+<!-- Next Button -->
+		<control type="button" id="213">
+			<description>Next button</description>
+			<posx>155</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+			<onleft>215</onleft>
+			<onright>216</onright>
+			<onup>213</onup>
+			<ondown>213</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Next nf button</description>
+			<posx>155</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-next.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(213)</visible>
+		</control>
+		<control type="image">
+			<description>Next fo button</description>
+			<posx>155</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-next.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(213)</visible>
+		</control>
+<!-- Audio Settings Button -->
+		<control type="button" id="216">
+			<description>Audio Settings button</description>
+			<posx>182</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(124)</onclick>
+			<onleft>213</onleft>
+			<onright>217</onright>
+			<onup>216</onup>
+			<ondown>216</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Audio Settings nf button</description>
+			<posx>182</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-audio.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(216)</visible>
+		</control>
+		<control type="image">
+			<description>Audio Settings fo button</description>
+			<posx>182</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-audio.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(216)</visible>
+		</control>
+<!-- Video Settings -->
+		<control type="button" id="217">
+			<description>Video Settings button</description>
+			<posx>209</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(123)</onclick>
+			<onleft>216</onleft>
+			<onright>918</onright>
+			<onup>217</onup>
+			<ondown>217</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Video Settings nf button</description>
+			<posx>209</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-video.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(217)</visible>
+		</control>
+		<control type="image">
+			<description>Video Settings fo button</description>
+			<posx>209</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-video.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(217)</visible>
+		</control>
+<!-- Playlist Button -->
+		<control type="button" id="918">
+			<description>Playlist button</description>
+			<posx>236</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(myvideoplaylist)</onclick>
+			<onleft>217</onleft>
+			<onright>218</onright>
+			<onup>918</onup>
+			<ondown>918</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Playlist nf button</description>
+			<posx>236</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-playlist.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(918)</visible>
+		</control>
+		<control type="image">
+			<description>Playlist fo button</description>
+			<posx>236</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-playlist.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(918)</visible>
+		</control>
+<!-- Bookmarks Button -->
+		<control type="button" id="218">
+			<description>BookMarks button</description>
+			<posx>263</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(125)</onclick>
+			<onleft>918</onleft>
+			<onright>219</onright>
+			<onup>218</onup>
+			<ondown>218</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>Bookmarks nf button</description>
+			<posx>263</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-bookmarks.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(218)</visible>
+		</control>
+		<control type="image">
+			<description>Bookmarks fo button</description>
+			<posx>263</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-bookmarks.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(218)</visible>
+		</control>
+<!-- DVD Menu Button -->
+		<control type="button" id="219">
+			<description>DVD Menu button</description>
+			<posx>290</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texturefocus>osd-button-1.png</texturefocus>
+			<texturenofocus>osd-button-1.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			<onleft>218</onleft>
+			<onright>212</onright>
+			<onup>219</onup>
+			<ondown>219</ondown>
+			<font>-</font>
+			<label>-</label>
+			<visible>VideoPlayer.HasMenu</visible>
+		</control>
+		<control type="image">
+			<description>DVD Menu button image(no dvd)</description>
+			<posx>290</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-button-1.png</texture>
+			<visible>!VideoPlayer.HasMenu</visible>
+		</control>
+		<control type="image">
+			<description>DVD Menu nf button</description>
+			<posx>290</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-dvd.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<visible>!Control.HasFocus(2198)</visible>
+		</control>
+		<control type="image">
+			<description>DVD Menu fo button</description>
+			<posx>290</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>27</height>
+			<texture>osd-dvd.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Control.HasFocus(219)</visible>
+		</control>
+	</controls>
+</window>

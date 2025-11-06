@@ -1,0 +1,7 @@
+<colors>
+	<color name="black">dd000000</color>
+	<color name="white">ffffffff</color>
+	<color name="red">ff3b82e2</color>
+	<color name="grey">60ffffff</color>
+	<color name="disabled">60d0d0d0</color>
+</colors>

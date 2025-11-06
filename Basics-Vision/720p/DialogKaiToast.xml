@@ -1,0 +1,51 @@
+<window id="107">
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>0</system>
+		<posx>920</posx>
+		<posy>5</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>popup volume dialog background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>360</width>
+			<height>64</height>
+			<texture>volume-panel-bg.png</texture>
+		</control>
+		<control type="image" id="400">
+			<description>Icon</description>
+			<posx>280</posx>
+			<posy>6</posy>
+			<width>52</width>
+			<height>52</height>
+			<aspectratio>keep</aspectratio>
+			<texture>defaultAlbumCover.png</texture>
+		</control>
+		<control type="label" id="401">
+			<description>Label 1</description>
+			<posx>270</posx>
+			<posy>5</posy>
+			<width>290</width>
+			<height>30</height>
+			<label>-</label>
+			<scroll>true</scroll>
+			<font>font12</font>
+			<align>right</align>
+			<aligny>center</aligny>
+		</control>
+		<control type="label" id="402">
+			<description>Label 2</description>
+			<posx>270</posx>
+			<posy>25</posy>
+			<width>290</width>
+			<height>30</height>
+			<label>-</label>
+			<font>font12</font>
+			<scroll>true</scroll>
+			<align>right</align>
+			<aligny>center</aligny>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,169 @@
+<window>
+	<defaultcontrol>1001</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="997">
+			<description>Context Menu Background Top</description>
+			<posx>0</posx>
+			<posy>-32</posy>
+			<width>450</width>
+			<height>32</height>
+			<texture>context_menu_top.png</texture>
+		</control>
+		<control type="image" id="998">
+			<description>Context Menu Background Middle</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>450</width>
+			<texture>context_menu_middle.png</texture>
+		</control>
+		<control type="image" id="999">
+			<description>Context Menu Background Bottom</description>
+			<posx>0</posx>
+			<width>450</width>
+			<height>32</height>
+			<texture>context_menu_bottom.png</texture>
+		</control>
+		<!-- ** Required ** Do not change <description> or <type> -->
+		<control type="button" id="1001">
+			<description>Context Menu Button1</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1001</onleft>
+			<onright>1001</onright>
+			<onup>1008</onup>
+			<ondown>1002</ondown>
+		</control>
+		<control type="button" id="1002">
+			<description>Context Menu Button2</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1002</onleft>
+			<onright>1002</onright>
+			<onup>1001</onup>
+			<ondown>1003</ondown>
+		</control>
+		<control type="button" id="1003">
+			<description>Context Menu Button3</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1003</onleft>
+			<onright>1003</onright>
+			<onup>1002</onup>
+			<ondown>1004</ondown>
+		</control>
+		<control type="button" id="1004">
+			<description>Context Menu Button4</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1004</onleft>
+			<onright>1004</onright>
+			<onup>1003</onup>
+			<ondown>1005</ondown>
+		</control>
+		<control type="button" id="1005">
+			<description>Context Menu Button5</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1005</onleft>
+			<onright>1005</onright>
+			<onup>1004</onup>
+			<ondown>1006</ondown>
+		</control>
+		<control type="button" id="1006">
+			<description>Context Menu Button6</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1006</onleft>
+			<onright>1006</onright>
+			<onup>1005</onup>
+			<ondown>1007</ondown>
+		</control>
+		<control type="button" id="1007">
+			<description>Context Menu Button7</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1007</onleft>
+			<onright>1007</onright>
+			<onup>1006</onup>
+			<ondown>1008</ondown>
+		</control>
+		<control type="button" id="1008">
+			<description>Context Menu Button8</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>44</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>1008</onleft>
+			<onright>1008</onright>
+			<onup>1007</onup>
+			<ondown>1001</ondown>
+		</control>
+	</controls>
+</window>

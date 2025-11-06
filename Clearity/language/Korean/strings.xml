@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+  <string id="31001">처음화면 옵션</string>
+  <string id="31002">미디어 옵션</string>
+  <string id="31003">메뉴 옵션</string>
+  <string id="31004">기타 옵션</string>
+  <string id="31005">-</string>
+  <string id="31006">-</string>
+  <string id="31007">사용자 배경화면 활성화</string>
+  <string id="31008">사용자 배경화면 초기화</string>
+  <string id="31009">사용자 배경화면 활성화</string>
+  <string id="31010">사용자 배경화면 폴더 초기화</string>
+  <string id="31011">시간과 날짜 보기</string>
+  <string id="31012">날씨 정보 보기</string>
+  <string id="31013">RSS 피드 보기</string>
+  <string id="31014">CPU 와 메모리 상태 보기</string>
+  <string id="31015">스킨 설정 초기화</string>
+  <string id="31016">-</string>
+  <string id="31017">-</string>
+  <string id="31018">-</string>
+  <string id="31019">-</string>
+
+  <string id="31020">음악 시간화 보기</string>
+  <string id="31021">미디어 표지 보기</string>
+  <string id="31022">표지 바꿔가며 보기</string>
+  <string id="31023">30초 동안 활동이 없으면 "지금 재생 정보" 보기</string>
+  <string id="31024">랩리스트로 보기에서 미디어 정보 보기</string>
+  <string id="31025">비디오 배경 활성화</string>
+  <string id="31026">-</string>
+  <string id="31027">-</string>
+  <string id="31028">-</string>
+  <string id="31029">-</string>
+
+  <string id="31030">시간 표시 보기</string>
+  <string id="31031">윈도우 제목 보기</string>
+  <string id="31032">스크롤바 활성화</string>
+  <string id="31033">배경 패널 메뉴 활성화</string>
+  <string id="31034">종료 메뉴 화살표 보기</string>
+  <string id="31035">-</string>
+  <string id="31036">-</string>
+  <string id="31037">-</string>
+  <string id="31038">-</string>
+  <string id="31039">-</string>
+
+  <string id="31040">윈도우에서 확대 화면전환 사용</string>
+  <string id="31041">윈도우에서 플립 화면전환 사용</string>
+  <string id="31042">스킨 애니메이션 사용</string>
+  <string id="31043">배경 애니메이션 사용</string>
+  <string id="31044">-</string>
+  <string id="31045">-</string>
+
+  <string id="31050">스킨 설정</string>
+</strings>

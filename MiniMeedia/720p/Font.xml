@@ -1,0 +1,728 @@
+<fonts>
+  <fontset id="Default" unicode="true">
+
+    <!-- Default fonts -->
+    <font>
+      <name>XLargeDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>32</size>
+    </font>
+
+    <font>
+      <name>LargeDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>MediumDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>DefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>SmallDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>SmallerDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>14</size>
+    </font>
+
+    <!-- Title fonts -->
+    <font>
+      <name>LargeTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>30</size>
+    </font>
+
+    <font>
+      <name>MediumLargeTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>TitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>Title2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>MediumTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>MediumTitle2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitle2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>SmallTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>SmallTitle2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>SmallTinyTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>12</size>
+    </font>
+
+    <font>
+      <name>TinyTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>8</size>
+    </font>
+
+    <!-- font13 needs to be kept to show debug info etc -->
+    <font>
+      <name>font13</name>
+      <filename>Default.ttf</filename>
+      <size>18</size>
+    </font>
+
+  </fontset>
+
+  <fontset id="Larger" unicode="true">
+
+    <!-- Default fonts -->
+    <font>
+      <name>XLargeDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>36</size>
+    </font>
+
+    <font>
+      <name>LargeDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>MediumDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>DefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>SmallDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>SmallerDefaultFont</name>
+      <filename>Default.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <!-- Title fonts -->
+    <font>
+      <name>LargeTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>34</size>
+    </font>
+
+    <font>
+      <name>MediumLargeTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>32</size>
+    </font>
+
+    <font>
+      <name>TitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>Title2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>MediumTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>25</size>
+    </font>
+
+    <font>
+      <name>MediumTitle2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>25</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitle2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>SmallTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>SmallTitle2Font</name>
+      <filename>Title2.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>SmallTinyTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>TinyTitleFont</name>
+      <filename>Title.ttf</filename>
+      <size>12</size>
+    </font>
+
+    <!-- font13 needs to be kept to show debug info etc -->
+    <font>
+      <name>font13</name>
+      <filename>Default.ttf</filename>
+      <size>22</size>
+    </font>
+
+  </fontset>
+
+  <fontset id="Arial" unicode="true">
+
+    <!-- Default fonts -->
+    <font>
+      <name>XLargeDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>32</size>
+    </font>
+
+    <font>
+      <name>LargeDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>MediumDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>DefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>SmallDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>SmallerDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>14</size>
+    </font>
+
+    <!-- Title fonts -->
+    <font>
+      <name>LargeTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>30</size>
+    </font>
+
+    <font>
+      <name>MediumLargeTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>TitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>Title2Font</name>
+      <filename>arial.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>MediumTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>MediumTitle2Font</name>
+      <filename>arial.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitle2Font</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>SmallTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>SmallTitle2Font</name>
+      <filename>arial.ttf</filename>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>SmallTinyTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>12</size>
+    </font>
+
+    <font>
+      <name>TinyTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>8</size>
+    </font>
+
+    <!-- font13 needs to be kept to show debug info etc -->
+    <font>
+      <name>font13</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+    </font>
+
+  </fontset>
+
+  <fontset id="ArialLarger" unicode="true">
+
+    <!-- Default fonts -->
+    <font>
+      <name>XLargeDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>36</size>
+    </font>
+
+    <font>
+      <name>LargeDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>MediumDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>DefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>SmallDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>SmallerDefaultFont</name>
+      <filename>arial.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <!-- Title fonts -->
+    <font>
+      <name>LargeTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>34</size>
+    </font>
+
+    <font>
+      <name>MediumLargeTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>32</size>
+    </font>
+
+    <font>
+      <name>TitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>Title2Font</name>
+      <filename>arial.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>MediumTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>25</size>
+    </font>
+
+    <font>
+      <name>MediumTitle2Font</name>
+      <filename>arial.ttf</filename>
+      <size>25</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitle2Font</name>
+      <filename>arial.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>SmallTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>SmallTitle2Font</name>
+      <filename>arial.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>SmallTinyTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>TinyTitleFont</name>
+      <filename>arial.ttf</filename>
+      <size>12</size>
+    </font>
+
+    <!-- font13 needs to be kept to show debug info etc -->
+    <font>
+      <name>font13</name>
+      <filename>arial.ttf</filename>
+      <size>22</size>
+    </font>
+
+  </fontset>
+
+  <fontset id="Alt Default" unicode="true">
+
+    <!-- Default fonts -->
+    <font>
+      <name>XLargeDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>32</size>
+    </font>
+
+    <font>
+      <name>LargeDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>MediumDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>DefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>SmallDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>SmallerDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>14</size>
+    </font>
+
+    <!-- Title fonts -->
+    <font>
+      <name>LargeTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>30</size>
+    </font>
+
+    <font>
+      <name>MediumLargeTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>TitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>Title2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>MediumTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>MediumTitle2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitle2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>SmallTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>SmallTitle2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>SmallTinyTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>12</size>
+    </font>
+
+    <font>
+      <name>TinyTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>8</size>
+    </font>
+
+    <!-- font13 needs to be kept to show debug info etc -->
+    <font>
+      <name>font13</name>
+      <filename>Default2.ttf</filename>
+      <size>18</size>
+    </font>
+
+  </fontset>
+
+  <fontset id="Alt Larger" unicode="true">
+
+    <!-- Default fonts -->
+    <font>
+      <name>XLargeDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>36</size>
+    </font>
+
+    <font>
+      <name>LargeDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>MediumDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>24</size>
+    </font>
+
+    <font>
+      <name>DefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>SmallDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>SmallerDefaultFont</name>
+      <filename>Default2.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <!-- Title fonts -->
+    <font>
+      <name>LargeTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>34</size>
+    </font>
+
+    <font>
+      <name>MediumLargeTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>32</size>
+    </font>
+
+    <font>
+      <name>TitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>Title2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>MediumTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>25</size>
+    </font>
+
+    <font>
+      <name>MediumTitle2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>25</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>MediumSmallTitle2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>SmallTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>SmallTitle2Font</name>
+      <filename>Title3.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>SmallTinyTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>TinyTitleFont</name>
+      <filename>Title3.ttf</filename>
+      <size>12</size>
+    </font>
+
+    <!-- font13 needs to be kept to show debug info etc -->
+    <font>
+      <name>font13</name>
+      <filename>Default2.ttf</filename>
+      <size>22</size>
+    </font>
+
+  </fontset>
+
+</fonts>

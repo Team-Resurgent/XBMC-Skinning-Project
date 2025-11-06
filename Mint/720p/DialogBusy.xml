@@ -1,0 +1,34 @@
+<window id="136">
+
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+
+	<controls>
+	
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+
+		<!-- busy anim -->
+		<control type="multiimage">
+			<imagepath>loading</imagepath>
+			<width>128</width>
+			<height>128</height>
+			<posx>576</posx>
+			<posy>296</posy>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+			<colordiffuse>70ffffff</colordiffuse>
+		</control>
+		<!-- mint logo -->
+		<control type="image">
+			<texture>mint-logo.png</texture>
+			<width>48</width>
+			<height>48</height>
+			<posx>1212</posx>
+			<posy>652</posy>
+			<colordiffuse>50ffffff</colordiffuse>
+		</control>
+		
+	</controls>
+	
+</window>

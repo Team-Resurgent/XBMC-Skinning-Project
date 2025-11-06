@@ -1,0 +1,55 @@
+<window id="133">
+	<defaultcontrol>402</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>72</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label" id="401">
+				<description>Caption Label</description>
+				<posx>23</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>24</height>
+				<font>font10</font>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="402">
+				<description>Current Directory Label</description>
+				<posx>23</posx>
+				<posy>20</posy>
+				<width>450</width>
+				<height>24</height>
+				<aligny>center</aligny>
+				<haspath>yes</haspath>
+				<font>font12</font>
+			</control>
+			<control type="progress" id="403">
+				<description>progress control</description>
+				<posx>23</posx>
+				<posy>44</posy>
+				<width>264</width>
+				<height>4</height>
+			</control>
+			<control type="progress" id="404">
+				<description>progress control</description>
+				<posx>23</posx>
+				<posy>52</posy>
+				<width>264</width>
+				<height>4</height>
+			</control>
+		</control>
+	</controls>
+</window>

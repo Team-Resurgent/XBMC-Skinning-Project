@@ -1,0 +1,152 @@
+<window id="108">
+	<defaultcontrol>3101</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>140</posx>
+		<posy>140</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<posx>-50</posx>
+			<posy>-50</posy>
+			<include>Dialog_Background</include>
+		</control>
+		<control type="group">
+			<include>Dialog_Content_Animation</include>
+			<control type="label" id="3100">
+				<description>Heading Label</description>
+				<posx>10</posx>
+				<posy>-2</posy>
+				<width>420</width>
+				<align>left</align>
+				<label>15049</label>
+				<font>font14</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="radiobutton" id="3101">
+				<description>hosting type radiobutton</description>
+				<posx>5</posx>
+				<posy>35</posy>
+				<height>32</height>
+				<width>460</width>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textureradiofocus>settings-check-box.png</textureradiofocus>
+				<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+				<label>15050</label>
+				<onleft>3101</onleft>
+				<onright>3101</onright>
+				<onup>3108</onup>
+				<ondown>3103</ondown>
+			</control>
+			<control type="spincontrolex" id="3103">
+				<description>default spincontrolex</description>
+				<posx>5</posx>
+				<posy>72</posy>
+				<width>460</width>
+				<height>32</height>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textureup>scroll-up.png</textureup>
+				<texturedown>scroll-down.png</texturedown>
+				<textureupfocus>scroll-up-focus.png</textureupfocus>
+				<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+				<font>font13</font>
+				<label>15051</label>
+				<textcolor>white</textcolor>
+				<colordiffuse>ffffffff</colordiffuse>
+				<disabledcolor>60d0d0d0</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<onleft>3103</onleft>
+				<onright>3103</onright>
+				<onup>3101</onup>
+				<ondown>3105</ondown>
+			</control>
+			<control type="label" id="3104">
+				<description>Password Label</description>
+				<posx>10</posx>
+				<posy>113</posy>
+				<width>420</width>
+				<font>font12</font>
+				<label>15052</label>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="button" id="3105">
+				<description>Password Button</description>
+				<posx>5</posx>
+				<posy>140</posy>
+				<width>460</width>
+				<font>font12</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textoffsetx>12</textoffsetx>
+				<textwidth>380</textwidth>
+				<aligny>center</aligny>
+				<label>-</label>
+				<onleft>3105</onleft>
+				<onright>3105</onright>
+				<onup>3103</onup>
+				<ondown>3107</ondown>
+			</control>
+			<control type="label" id="3106">
+				<description>Description Label</description>
+				<posx>10</posx>
+				<posy>187</posy>
+				<width>420</width>
+				<font>font12</font>
+				<label>15053</label>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="button" id="3107">
+				<description>Description Button</description>
+				<posx>5</posx>
+				<posy>214</posy>
+				<width>460</width>
+				<font>font12</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textoffsetx>12</textoffsetx>
+				<textwidth>380</textwidth>
+				<aligny>center</aligny>
+				<label>-</label>
+				<onleft>3107</onleft>
+				<onright>3107</onright>
+				<onup>3105</onup>
+				<ondown>3108</ondown>
+			</control>
+			<control type="button" id="3108">
+				<description>Ok Button</description>
+				<posx>120</posx>
+				<posy>305</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+				<onleft>3108</onleft>
+				<onright>3109</onright>
+				<onup>3107</onup>
+				<ondown>3101</ondown>
+			</control>
+			<control type="button" id="3109">
+				<description>Cancel Button</description>
+				<posx>250</posx>
+				<posy>305</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+				<onleft>3108</onleft>
+				<onright>3109</onright>
+				<onup>3107</onup>
+				<ondown>3101</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

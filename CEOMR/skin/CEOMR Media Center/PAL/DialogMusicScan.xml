@@ -1,0 +1,62 @@
+<window id="112">
+
+  <defaultcontrol>402</defaultcontrol>
+
+   <animation effect="fade" time="200">WindowOpen</animation> 
+   <animation effect="fade" time="200">WindowClose</animation>
+
+  <coordinates>
+    <system>1</system>
+    <posx>170</posx>
+    <posy>35</posy>
+  </coordinates>
+
+  <controls>
+    <control type="image" id="1">
+      <description>Popup Music Scan Dialog Background</description>
+      <posx>-170</posx>
+      <posy>-35</posy>
+      <width>720</width>
+      <height>120</height>
+      <texture>background_dialog.png</texture>
+    </control>
+
+     <control type="label" id="401">
+      <description>Caption Label</description>
+      <posx>75</posx>
+      <posy>20</posy>
+      <font>font12</font>
+      <align>center</align>
+      <width>250</width>
+      <height>20</height>
+    </control>
+
+    <control type="label" id="402">
+      <description>Current Directory Label</description>
+      <posx>60</posx>
+      <posy>45</posy>
+      <haspath>yes</haspath>
+      <font>font10</font>
+      <onleft>402</onleft>
+      <onright>402</onright>
+      <onup>402</onup>
+      <ondown>402</ondown>
+    </control>
+
+    <control type="progress" id="403">
+       <description>progress control</description>
+       <posx>60</posx> 
+       <posy>64</posy> 
+       <width>291</width> 
+       <height>10</height> 
+         <texturebg>progress_mid.png</texturebg> 
+         <midtexture>progress_mid_over.png</midtexture>
+         <lefttexture>-</lefttexture>
+         <righttexture>-</righttexture>
+         <overlaytexture>-</overlaytexture>
+     </control>
+
+  </controls>
+
+</window>
+

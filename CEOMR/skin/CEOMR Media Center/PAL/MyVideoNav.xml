@@ -1,0 +1,213 @@
+<window id="25">
+
+  <defaultcontrol>99</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>defaultVideoBig.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="12">
+      <description>number of files text label</description>
+      <include>logo</include>
+      <posx>210</posx>
+      <posy>525</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>My Movies/Title text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>20314</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="label" id="100">
+      <description>genre text label</description>
+      <include>logo</include>
+      <align>right</align>
+      <posx>660</posx>
+      <posy>55</posy>
+      <label>3</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+<control type="group" id="9000">
+    
+    <control type="button" id="9052">
+      <description>help button</description>
+      <include>logo</include>
+
+	<visible>Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)</visible>
+
+      <posx>212</posx>
+      <posy>82</posy>
+      <width>30</width>
+      <height>30</height>
+      <label>-</label>
+      <onclick>XBMC.ActivateWindow(1052)</onclick>
+      <texturefocus>help-focus.png</texturefocus>
+      <texturenofocus>help-nofocus.png</texturenofocus>
+      <onleft>2</onleft>
+      <onright>50</onright>
+      <onup>11</onup>
+      <ondown>2</ondown>
+      <align>center</align>
+    </control>
+    
+      <control type="button" id="2">
+        <description>View As Icons button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>120</posy>
+        <label>100</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>9052</onup>
+        <ondown>3</ondown>
+      </control>
+
+      <control type="button" id="3">
+        <description>Sort by button</description>
+      <include>button</include>
+      <width>120</width>
+        <posx>60</posx>
+        <posy>157</posy>
+        <label>103</label>
+        <onleft>50</onleft>
+        <onright>4</onright>
+        <onup>2</onup>
+        <ondown>99</ondown>
+      </control>
+
+      <control type="togglebutton" id="4">
+        <description>Sort asc</description>
+    <animation effect="slide" time="400" start="-200,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="slide" time="150" start="0,0" end="-200,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+        <label>-</label>
+        <onleft>3</onleft>
+        <onright>50</onright>
+        <onup>2</onup>
+        <ondown>2</ondown>
+      </control>
+
+      <control type="radiobutton" id="99">
+        <description>Library button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>194</posy>
+        <label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+	<onclick>ReplaceWindow(myvideofiles)</onclick>
+	<onclick>SetFocus(99)</onclick>
+	<selected>Window.IsVisible(myvideolibrary)</selected>
+	<font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>3</onup>
+        <ondown>10</ondown>
+      </control>
+
+      <control type="button" id="10">
+        <description>Show Button</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>231</posy>
+        <label>-</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>99</onup>
+        <ondown>6</ondown>
+      </control>
+
+      <control type="button" id="6">
+        <description>Play DVD</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>268</posy>
+        <label>341</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>10</onup>
+        <ondown>19</ondown>
+      </control>
+
+      <control type="radiobutton" id="19">
+        <description>Filter</description>
+        <visible>System.HasNetwork</visible>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>342</posy>
+        <label>587</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>6</onup>
+        <ondown>11</ondown>
+      </control>
+
+                       <control type="radiobutton" id="11">
+				<description>Unlock Shares</description>
+      				<include>button</include>
+				<posx>60</posx>
+				<posy>379</posy>
+				<label>20336</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onclick>xbmc.mastermode</onclick>
+				<selected>system.ismaster</selected>
+				<visible>system.haslocks</visible>
+				<onup>19</onup>
+				<ondown>9052</ondown>
+			</control>
+
+</control>
+		<include>OldListViewCommons</include>
+		<include>VideoLibraryList2View</include>
+		<include>VideoViewCommons_BigList</include>
+		<include>AllViewCommonThumbSmall</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>VideoDVDThumbLarge</include>
+		<include>VideoDVDWrapView</include>
+		<include>VideoLibraryWideIcon_Small</include>
+		<include>WideIcon_Big</include>
+		<include>AllViewCommonPageControls</include>
+  </controls>
+
+</window>

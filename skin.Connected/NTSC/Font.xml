@@ -1,0 +1,123 @@
+<fonts>
+<fontset id="default" unicode="true">
+	<font>
+		<name>50BdFont</name>
+		<filename>DINBd.ttf</filename>
+		<size>50</size>
+	</font>
+	<font>
+		<name>40BdFont</name>
+		<filename>DINBd.ttf</filename>
+		<size>40</size>
+	</font>
+	<font>
+		<name>28BdFont</name>
+		<filename>DINBd.ttf</filename>
+		<size>28</size>
+	</font>
+	<font>
+		<name>26BdFont</name>
+		<filename>DINBd.ttf</filename>
+		<size>26</size>
+	</font>
+	<font>
+		<name>22BdFont</name>
+		<filename>DINBd.ttf</filename>
+		<size>22</size>
+	</font>
+	<font>
+		<name>20BdFont</name>
+		<filename>DINBd.ttf</filename>
+		<size>20</size>
+	</font>
+	<font>
+		<name>18BdFont</name>
+		<filename>DINBd.ttf</filename>
+		<size>18</size>
+	</font>
+  <font>
+    <name>16BdFont</name>
+    <filename>DINBd.ttf</filename>
+    <size>16</size>
+  </font>
+  <font>
+    <name>14BdFont</name>
+    <filename>DINBd.ttf</filename>
+    <size>14</size>
+  </font>
+  
+<!-- Required for system -->  
+	<font>
+		<name>font13</name>
+		<filename>DINBd.ttf</filename>
+		<size>18</size>
+	</font>
+	
+</fontset>
+  
+<fontset id="Arial" unicode="true">
+  <font>
+    <name>50BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>50</size>
+  </font>
+  <font>
+    <name>40BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>40</size>
+  </font>
+  <font>
+    <name>28BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>28</size>
+  </font>
+  <font>
+    <name>26BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>26</size>
+  </font>
+  <font>
+    <name>22BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>22</size>
+  </font>
+  <font>
+    <name>20BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>20</size>
+  </font>
+  <font>
+    <name>18BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>18</size>
+  </font>
+  <font>
+    <name>16BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>16</size>
+  </font>
+  <font>
+    <name>14BdFont</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>14</size>
+  </font>
+
+  <!-- Required for system -->
+  <font>
+    <name>font13</name>
+    <filename>Arial.ttf</filename>
+    <style>bold</style>
+    <size>18</size>
+  </font>
+
+</fontset>
+</fonts>

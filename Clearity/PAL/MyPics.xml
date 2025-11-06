@@ -1,0 +1,132 @@
+<window id="2">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel</include>
+	<include>Menu-Time</include>
+	<include>Window-Files</include>
+
+	<control>
+		<description>Title Label</description>
+		<label>1</label>
+		<include>Window-Title</include>
+	</control>
+
+	<control type="group">
+		<control type="button" id="2">
+			<description>View As button</description>
+			<posx>58</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>110</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onleft>9</onleft>
+			<onright>3</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<posx>168</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>103</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onleft>2</onleft>
+			<onright>4</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<posx>265</posx>
+			<posy>90</posy>
+			<label>-</label>
+			<onleft>3</onleft>
+			<onright>6</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<include>FX-Button</include>
+		</control>
+		<control type="button" id="6">
+			<description>SlideShow button</description>
+			<posx>278</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>108</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onleft>3</onleft>
+			<onright>7</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+		<control type="button" id="7">
+			<description>recursive slideshow</description>
+			<posx>388</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>361</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onleft>6</onleft>
+			<onright>9</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+		<control type="radiobutton" id="9">
+			<description>Randomize button</description>
+			<posx>498</posx>
+			<posy>80</posy>
+			<height>30</height>
+			<width>110</width>
+			<label>13319</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<onleft>7</onleft>
+			<onright>2</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<include>focusedcolor</include>
+			<include>FX-Button</include>
+		</control>
+	</control>
+
+	<include>Common_List</include>
+	<include>Common_List_X</include>
+	<include>Pictures_BigList</include>
+	<include>Common_Icon</include>
+	<include>Pictures_Icon2</include>
+	<include>Common_BigIcon</include>
+	<include>Pictures_BigIcon2</include>
+	<include>Common_3D_Cover_I</include>
+
+	<include>Black-Overlay</include>
+	<include>Lines</include>
+	</controls>
+</window>

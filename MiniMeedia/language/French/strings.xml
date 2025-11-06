@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!-- strings 31000 thru 31999 reserved for skins -->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">Gestionnaire de fichiers</string>
+  <string id="31001">Infos</string>
+  <string id="31002">Reinitialiser</string>
+  <string id="31003">Analyser</string>
+  <string id="31004">Changer</string>
+  <string id="31005">Divers</string>
+  <string id="31006">Visualisations</string>
+  <string id="31007">On/Off</string>
+  <string id="31008">Sans classification</string>
+  <string id="31009">Voir vos</string> <!-- used for Movies -->
+  <string id="31010">Voir vos</string> <!-- used for TV Shows -->
+  <string id="31011">Voir vos</string> <!-- used for Videos -->
+  <string id="31012">Ecouter votre/string>
+  <string id="31013">Voir vos</string>
+  <string id="31014">Utiliser vos</string>
+  <string id="31015">Consulter la</string>
+  <string id="31016">Configurer le</string>
+  <string id="31017">Power</string>
+  <string id="31018">Infos de base</string>
+  <string id="31019">Jouer le</string>
+  <string id="31020">Afficher la</string>
+  <string id="31021">Par</string>
+  <string id="31022">Ajoute recemment</string>
+  <string id="31023">Dernier</string>
+  <string id="31024">Page</string>
+  <string id="31025">Eléments</string>
+
+    <!-- Options Menu -->
+  <string id="31100">Poster Info</string>
+  <string id="31101">Trier par</string>
+  <string id="31102">Options</string>
+  <string id="31103">Vitrine</string>
+  <string id="31104">Afficher une grande horloge</string>
+  <string id="31105">Cascade</string>
+  <string id="31106">Exhibition</string>
+  <string id="31107">Liste basse</string>
+  <string id="31108">Exposition</string>
+  <string id="31109">Liste haute</string>
+  
+  <!-- Settings -->
+  <string id="31200">Voir l'intrigue</string>
+  <string id="31201">Modifie recemment</string>
+  <string id="31202">Dossier de fonds d'ecran</string>
+  <string id="31203">Fonds d'ecran</string>
+  <string id="31204">Menu Options</string>
+  <string id="31205">Cacher</string>
+  <string id="31206">Horloge</string>
+  <string id="31207">Cacher la meteo sur Home</string>
+  <string id="31208">Desactiver</string>
+  <string id="31209">Configurer les parametres pour</string>
+  <string id="31210">Menu</string>
+  <string id="31211">Cacher l'intrigue dans l'OSD Videos</string>
+  <string id="31212">Cacher la surimpression Vu</string>
+  <string id="31213">Cacher la vignette</string>
+  <string id="31214">Afficher la Review</string>
+  <string id="31215">Afficher le type de contenu</string>
+  <string id="31216">Cacher le nombre de Medias</string>
+  <string id="31217">Utiliser des vignettes Portrait pour les series TV</string>
+  <string id="31218">Afficher un OSD Video minimal</string>
+  <string id="31219">Cacher le fond d'ecran White Noise</string>
+  <string id="31220">Utiliser Icones Météo Animées</string>
+  <string id="31221">Cacher les dernières vidéos</string>
+
+  <!-- Video -->
+  <string id="31300">N/A</string>
+  <string id="31301">Vignette</string>
+  <string id="31302">Fanart</string>
+  <string id="31303">Saisons</string>
+  <string id="31304">Heure approximative de fin</string>
+  
+  <!-- Music -->
+  <string id="31400">Termine</string>
+  <string id="31401">Actuel</string>
+  <string id="31402">Selectionner Visualisation</string>
+  <string id="31403">Presets de visualisations</string>
+  <string id="31404">Parametres de visualisations</string>
+  <string id="31405">Paroles</string>
+  <string id="31406">Selectionner le chemin des paroles</string>
+  <string id="31407">Ouvrir la playlist</string>
+  <string id="31408">Sauver la playlist</string> 
+  <string id="31409">Fermer la playlist</string> 
+  <string id="31410">Fichiers musicaux système</string> 
+  <string id="31411">Playlist actuelle</string>
+
+  <!-- Dialogs -->
+  <string id="31500">Selectionner Profil</string>
+  <string id="31501">Muet</string>
+  <string id="31502">Creer</string>
+  <string id="31503">Codec</string>
+
+</strings>

@@ -1,0 +1,55 @@
+<window id="11">
+	<defaultcontrol>8</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Background</include>
+		<control type="mover" id="8">
+			<description>top left mover</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texturefocus>calibrate-topleft-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="mover" id="9">
+			<description>right bottom mover</description>
+			<posx>700</posx>
+			<posy>500</posy>
+			<texturefocus>calibrate-bottomright-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="mover" id="10">
+			<description>subtitle position mover</description>
+			<posx>200</posx>
+			<posy>500</posy>
+			<texturefocus>calibrate-subtitles-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="resize" id="11">
+			<description>pixel aspect ratio box</description>
+			<posx>0</posx>
+			<posy>270</posy>
+			<width>288</width>
+			<height>288</height>
+			<texturefocus>calibrate-pixelratio-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="label" id="2">
+			<description>coordinates label</description>
+			<posx>360</posx>
+			<posy>460</posy>
+			<label>-</label>
+			<align>center</align>
+			<font>font14</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label" id="3">
+			<description>help information</description>
+			<posx>360</posx>
+			<posy>480</posy>
+			<label>-</label>
+			<align>center</align>
+			<font>font14</font>
+			<include>textcolor-white</include>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,147 @@
+<window>
+  <id>27</id>
+  <defaultcontrol>12</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>Settings text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>447</label>
+      <font>font14</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>Autorun DVD-Video</description>
+      <type>checkmark</type>
+      <id>12</id>
+      <posX>208</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <label>240</label>
+      <onup>18</onup>
+      <ondown>13</ondown>
+    </control>
+
+    <control>
+      <description>Autorun VCD/SVCD</description>
+      <type>checkmark</type>
+      <id>13</id>
+      <posX>208</posX>
+      <posY>190</posY>
+      <font>font13</font>
+      <label>241</label>
+      <onup>12</onup>
+      <ondown>14</ondown>
+    </control>
+
+    <control>
+      <description>Autorun Audio CD</description>
+      <type>checkmark</type>
+      <id>14</id>
+      <posX>208</posX>
+      <posY>230</posY>
+      <font>font13</font>
+      <label>242</label>
+      <onup>13</onup>
+      <ondown>15</ondown>
+    </control>
+
+    <control>
+      <description>Autorun XBOX Games</description>
+      <type>checkmark</type>
+      <id>15</id>
+      <posX>208</posX>
+      <posY>270</posY>
+      <font>font13</font>
+      <label>243</label>
+      <onup>14</onup>
+      <ondown>16</ondown>
+    </control>
+
+    <control>
+      <description>Autorun Video</description>
+      <type>checkmark</type>
+      <id>16</id>
+      <posX>208</posX>
+      <posY>310</posY>
+      <font>font13</font>
+      <label>244</label>
+      <onup>15</onup>
+      <ondown>17</ondown>
+    </control>
+
+    <control>
+      <description>Autorun Music</description>
+      <type>checkmark</type>
+      <id>17</id>
+      <posX>208</posX>
+      <posY>350</posY>
+      <font>font13</font>
+      <label>245</label>
+      <onup>16</onup>
+      <ondown>18</ondown>
+    </control>
+
+    <control>
+      <description>Autorun Pictures</description>
+      <type>checkmark</type>
+      <id>18</id>
+      <posX>208</posX>
+      <posY>390</posY>
+      <font>font13</font>
+      <label>246</label>
+      <onup>17</onup>
+      <ondown>12</ondown>
+    </control>
+
+  </controls>
+
+</window>
+

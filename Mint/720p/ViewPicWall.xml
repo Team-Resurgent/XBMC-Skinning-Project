@@ -1,0 +1,68 @@
+<!-- 
+USE: For displaying a multiple pictures in a asthetically pleasing way.
+FROM: Modified code by Jezz_X.
+-->
+<includes>
+
+	<include name="ViewPicWall">
+
+		<control type="group">
+		
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<visible>Control.IsVisible(59)</visible>
+				<texture>black2x2.png</texture>
+				<width>1280</width>
+				<height>640</height>
+			</control>
+			<!-- list container -->
+			<control type="panel" id="59">
+				<viewtype label="Picture Wall">icon</viewtype>
+				<width>1280</width>
+				<height>640</height>
+				<onup>58</onup>
+				<ondown>58</ondown>
+				<onleft></onleft>
+				<onright>9000</onright>
+				<itemlayout height="160" width="160">
+					<control type="image">
+						<info>ListItem.Icon</info>
+						<width>160</width>
+						<height>160</height>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>overlay-icon</colordiffuse>
+					</control>
+				</itemlayout>
+				<focusedlayout height="160" width="160">
+					<control type="image">
+						<info>ListItem.Icon</info>
+						<width>160</width>
+						<height>160</height>
+						<aspectratio>scale</aspectratio>
+						<!-- first row -->
+						<animation effect="zoom" end="-40,0,240,240" time="300" condition="Container.Row(0) + ![Container.Column(0) | Container.Column(7)]">focus</animation>
+						<animation effect="zoom" end="0,0,240,240" time="300" condition="Container.Position(0)">focus</animation>
+						<animation effect="zoom" end="-80,0,240,240" time="300" condition="Container.Position(7)">focus</animation>
+						<!-- second row -->
+						<animation effect="zoom" end="-40,-40,240,240" time="300" condition="Container.Row(1) + ![Container.Column(0) | Container.Column(7)]">focus</animation>
+						<animation effect="zoom" end="0,-40,240,240" time="300" condition="Container.Position(8)">focus</animation>
+						<animation effect="zoom" end="-80,-40,240,240" time="300" condition="Container.Position(15)">focus</animation>
+						<!-- third row -->
+						<animation effect="zoom" end="-40,-40,240,240" time="300" condition="Container.Row(2) + ![Container.Column(0) | Container.Column(7)]">focus</animation>
+						<animation effect="zoom" end="0,-40,240,240" time="300" condition="Container.Position(16)">focus</animation>
+						<animation effect="zoom" end="-80,-40,240,240" time="300" condition="Container.Position(23)">focus</animation>
+						<!-- fourth row -->
+						<animation effect="zoom" end="-40,-80,240,240" time="300" condition="Container.Row(3) + ![Container.Column(0) | Container.Column(7)]">focus</animation>
+						<animation effect="zoom" end="0,-80,240,240" time="300" condition="Container.Position(24)">focus</animation>
+						<animation effect="zoom" end="-80,-80,240,240" time="300" condition="Container.Position(31)">focus</animation>
+					</control>
+				</focusedlayout>
+			</control>
+			
+		</control>
+		
+	</include>
+	
+</includes>

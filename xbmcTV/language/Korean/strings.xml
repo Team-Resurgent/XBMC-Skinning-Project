@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+	<!-- Start home strings -->
+	<string id="31001">영화</string>
+	<string id="31002">프로그램</string>
+	<string id="31003">음악</string>
+	<string id="31004">사진</string>
+	<string id="31005">기상정보</string>
+	<string id="31006">파일</string>
+	<string id="31007">스크립트</string>
+	<string id="31008">설정</string>
+	<string id="31009">디스크 재생</string>
+	<string id="31010">TV 쇼</string>
+	<string id="31015">시스템</string>
+	<string id="31016">파일탐색기</string>
+	<string id="31017">스크립트</string>
+	<string id="31018">게임세이브</string>
+	<string id="31019">프로필</string>
+	<string id="31020">스킨설정</string>
+	<string id="31021">xTV 대하여</string>
+	<string id="31022">전원 메뉴</string>
+	<string id="31023">시스템 정보</string>
+	<string id="31100">제목</string>
+	<string id="31101">플러그인</string>
+	<string id="31102">최근에 추가된</string>
+	<string id="31103">예고편</string>
+	<string id="31104">최근에 재생된</string>
+	<string id="31105">에뮬레이터</string>
+	<string id="31106">XBMC 재시작</string>
+	<string id="31107">재시작</string>
+	<string id="31108">로그 오프</string>
+	<string id="31109">시스템 정보 백업</string>
+	<string id="31110">프로파일</string>
+	<string id="31111">처음 화면</string>
+	<string id="31112">배경화면</string>
+	<string id="31113">게임</string>
+	<string id="31114">애플 영화 예고편</string>
+	<string id="31115">XBOX 종료</string>
+	<string id="31116">XBMC 나가기</string>
+	<string id="31117">테트리스</string>
+	<!-- End home strings -->
+
+	<!-- Start video strings -->
+	<string id="31011">영화 예고편</string>
+	<string id="31012">비디오 재생목록</string>
+	<string id="31013">앨범 재생목록</string>
+	<string id="31099">음악가 상세정보</string>
+	<string id="31091">영화 상세정보</string>
+	<string id="31092">출시일</string>
+	<string id="31093">배우</string>
+	<!-- End video strings -->
+
+	<!-- Start programs strings -->
+	<string id="31013">게임세이브</string>
+	<!-- End programs strings -->
+
+	<!-- Start music strings -->
+	<string id="31014">CDDB</string>
+	<string id="31081">재생목록 편집기</string>
+	<string id="31082">노래 정보</string>
+	<string id="31083">평점</string>
+	<!-- End music strings -->
+
+	<!-- Begin skin settings strings -->
+	<string id="31024">스크롤바 사용</string>
+	<string id="31025">미디어 오버레이 사용</string>
+	<string id="31026">재생한 항목 오버레이 사용</string>
+	<string id="31027">현재재생중 화면 사용</string>
+	<string id="31028">글꼴색상 변경</string>
+	<string id="31029">비쥬얼 스타일 현재재생중 사용</string>
+	<string id="31030">사용자 바탕화면 선택</string>
+	<string id="31031">사용자 바탕화면 리셋</string>
+	<string id="31032">백그라운드 비쥬얼효과 표시</string>
+	<string id="31033">Video Files Window In Background At Startup</string>
+	<string id="31068">정보</string>
+	<string id="31069">테마 다운로드</string>
+	<string id="31070">일반적 옵션</string>
+	<string id="31071">바탕화면 옵션</string>
+	<string id="31072">첫화면 옵션</string>
+	<string id="31073">목록 기울기 아이콘 표시</string>
+	<string id="31074">"보기" 모드 잠금</string>
+	<string id="31075">시작하면서 재생목록 사용</string>
+	<string id="31076">재생목록 선택</string>
+	<string id="31077">시작시 배경에 비디오 라이브러리 윈도우 보이기</string>
+	<string id="31078">시작시 배경에 음악 파일 윈도우 보이기</string>
+	<string id="31079">시작시 배경에 음악 라이브러리 윈도우 보이기</string>
+	<string id="31080">자동 스크롤 사용</string>
+	<string id="31084">라이브러리에서 팬아트 보기</string>
+	<string id="31085">시작시 배경에 사진 윈도우 보이기</string>
+	<string id="31086">시작시 배경에 프로그램 윈도우 보이기</string>
+	<!-- End skin settings strings -->
+
+	<!-- Start progress strings -->
+	<string id="31034">설정</string>
+	<string id="31035">비디오</string>
+	<string id="31036">오디오</string>
+	<string id="31037">북마크</string>
+	<string id="31038">가사</string>
+	<string id="31039">프리셋</string>
+	<string id="31040">비쥬얼</string>
+	<string id="31041">재생목록</string>
+	<string id="31042">정지</string>
+	<string id="31043">일시정지</string>
+	<string id="31044">재생</string>
+	<string id="31045">일시정지중</string>
+	<string id="31046">재생중</string>
+	<string id="31047">DVD 메뉴</string>
+	<string id="31048">녹음</string>
+	<string id="31049">녹음중</string>
+	<string id="31050">|-건너뛰기</string>
+	<string id="31051">건너뛰기-|</string>
+	<string id="31052">되감기</string>
+	<string id="31053">되감기-2x</string>
+	<string id="31054">되감기-4x</string>
+	<string id="31055">되감기-8x</string>
+	<string id="31056">되감기-16x</string>
+	<string id="31057">되감기-32x</string>
+	<string id="31058">빨리감기</string>
+	<string id="31059">빨리감기-2x</string>
+	<string id="31060">빨리감기-4x</string>
+	<string id="31061">빨리감기-8x</string>
+	<string id="31062">빨리감기-16x</string>
+	<string id="31063">빨리감기-32x</string>
+	<!-- End progress strings -->
+
+	<!-- Begin weather strings -->
+	<string id="31064">높음</string>
+	<string id="31065">낮음</string>
+	<!-- End weather strings -->
+
+	<!-- Begin Misc. strings -->
+	<string id="31066">음소거</string>
+	<string id="31067">즐겨찾기</string>
+	<string id="31090">XBMC 나감</string>
+	<string id="31092">잠자기</string>
+	<string id="31094">상영등급</string>
+	<!-- End Misc. strings -->
+</strings>

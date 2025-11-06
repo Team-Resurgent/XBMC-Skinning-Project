@@ -1,0 +1,52 @@
+<window id="107">
+<allowoverlay>no</allowoverlay>
+<zorder>2</zorder>
+	
+<coordinates>
+	<system>1</system>
+	<posx>400</posx>
+	<posy>15</posy>
+</coordinates>
+
+<include>DefaultFade</include>
+  
+<controls>
+
+  <control type="group">
+    <include>OptionBack1-1</include>
+    <control type="image">
+      <description>Header Back</description>
+      <width>304</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="401">
+      <description>Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>284</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    
+    <control type="label" id="402">
+      <description>Label</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>284</width>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <label>-</label>
+      <align>left</align>
+      <aligny>center</aligny>
+    </control>
+	</control>
+	
+</controls>
+	
+</window>

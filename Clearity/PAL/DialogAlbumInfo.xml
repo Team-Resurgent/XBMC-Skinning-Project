@@ -1,0 +1,200 @@
+<window type="dialog" id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>1</zorder>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>115</posy>
+		<width>595</width>
+		<height>372</height>
+		<texture>Black.png</texture>
+	</control>
+
+	<control type="label" id="20">
+		<description>Album Title</description>
+		<posx>190</posx>
+		<posy>115</posy>
+		<label>-</label>
+		<font>special16</font>
+	</control>
+
+	<control type="image" id="3">
+		<description>Cover Image</description>
+		<type>image</type>
+		<id>3</id>
+		<posx>67</posx>
+		<posy>118</posy>
+		<width>112</width>
+		<height>150</height>
+		<texture>-</texture>
+	</control>
+
+	<control type="textbox" id="4">
+		<description>Textarea</description>
+		<posx>185</posx>
+		<posy>278</posy>
+		<width>450</width>
+		<height>220</height>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<onup>5</onup>
+		<ondown>5</ondown>
+		<spinposx>415</spinposx>
+		<spinposy>225</spinposy>
+	</control>
+
+	<control type="group">
+		<control type="button" id="5">
+		<description>Tracks/Review</description>
+		<posx>67</posx>
+		<posy>278</posy>
+		<width>112</width>
+		<height>32</height>
+		<label>182</label>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>10</onup>
+		<ondown>6</ondown>
+		<font>font12</font>
+		<align>center</align>
+		</control>
+
+		<control type="button" id="6">
+		<description>Refresh</description>
+		<posx>67</posx>
+		<posy>314</posy>
+		<width>112</width>
+		<height>32</height>
+		<label>184</label>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>5</onup>
+		<ondown>10</ondown>
+		<font>font12</font>
+		<align>center</align>
+		</control>
+
+		<control type="button" id="10">
+		<description>Get Thumb</description>
+		<posx>67</posx>
+		<posy>351</posy>
+		<width>112</width>
+		<height>32</height>
+		<label>13405</label>
+		<font>font12</font>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>6</onup>
+		<ondown>5</ondown>
+		<font>font12</font>
+		<align>center</align>
+		</control>
+	</control>
+
+	<control type="image" id="11">
+		<description>separator image</description>
+		<posx>67</posx>
+		<posy>272</posy>
+		<width>580</width>
+		<height>2</height>
+		<texture>Separator.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+	</control>
+
+	<control type="label" id="1">
+		<description>Artist</description>
+		<posx>190</posx>
+		<posy>150</posy>
+		<label>$LOCALIZE[557]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="21">
+		<description>Artist value</description>
+		<posx>250</posx>
+		<posy>150</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Date of Release</description>
+		<posx>190</posx>
+		<posy>170</posy>
+		<label>$LOCALIZE[562]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="22">
+		<description>Date of Release value</description>
+		<posx>250</posx>
+		<posy>170</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Rating</description>
+		<posx>190</posx>
+		<posy>190</posy>
+		<label>$LOCALIZE[563]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="23">
+		<description>Rating value</description>
+		<posx>250</posx>
+		<posy>190</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Genre</description>
+		<posx>190</posx>
+		<posy>210</posy>
+		<label>$LOCALIZE[515]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="24">
+		<description>Genre value</description>
+		<posx>250</posx>
+		<posy>210</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Styles</description>
+		<posx>190</posx>
+		<posy>230</posy>
+		<label>$LOCALIZE[176]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="26">
+		<description>Styles value</description>
+		<posx>250</posx>
+		<posy>230</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+	<include>Black-Overlay</include>
+
+	</controls>
+</window>

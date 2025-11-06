@@ -1,0 +1,81 @@
+<window id="2000">
+  <defaultcontrol>3</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <include>SelectionDialogPos</include>
+
+      <include>SelectionDialogBG</include>
+
+      <control type="group">
+        <posx>10</posx>
+        <posy>24</posy>
+
+        <control type="label" id="1">
+          <description>Heading</description>
+          <label>$LOCALIZE[1023]</label>
+          <include>SelectionDialogTitle</include>
+        </control>
+
+        <control type="group">
+          <include>SelectionDialogControlsPos</include>
+
+          <control type="scrollbar" id="61">
+            <onup>61</onup>
+            <ondown>61</ondown>
+            <onright>3</onright>
+            <height>230</height>
+          </control>
+
+          <control type="group">
+            <posx>30</posx>
+
+            <control type="list" id="3">
+              <width>SelectionDialogShortTextWidth</width>
+              <height>230</height>
+              <onleft>61</onleft>
+              <onright>5</onright>
+              <onup>3</onup>
+              <ondown>3</ondown>
+              <pagecontrol>61</pagecontrol>
+              <scrolltime>200</scrolltime>
+
+              <itemlayout height="28">
+                <control type="label">
+                  <width>SelectionDialogShortTextWidth</width>
+                  <info>ListItem.Label</info>
+                  <textcolor>Unfocused</textcolor>
+                </control>
+              </itemlayout>
+
+              <focusedlayout height="28">
+                <control type="label">
+                  <width>SelectionDialogShortTextWidth</width>
+                  <info>ListItem.Label</info>
+                  <textcolor>Unfocused</textcolor>
+                  <visible>!Control.HasFocus(3)</visible>
+                </control>
+                <control type="label">
+                  <width>SelectionDialogShortTextWidth</width>
+                  <info>ListItem.Label</info>
+                  <textcolor>Focused</textcolor>
+                  <visible>Control.HasFocus(3)</visible>
+                </control>
+              </focusedlayout>
+            </control>
+
+            <control type="button" id="5">
+              <description>Manual Button</description>
+              <posx>SelectionDialogButtonPosX</posx>
+              <label>$LOCALIZE[368]</label>
+              <onleft>3</onleft>
+              <include>DialogButton</include>
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

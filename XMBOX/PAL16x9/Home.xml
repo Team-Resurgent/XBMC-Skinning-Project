@@ -1,0 +1,169 @@
+<window id="0">
+	<defaultcontrol>300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<!-- background 16x9 -->
+
+<include>background-image</include>
+
+<control type="fixedlist" id="300">
+      <description>fixed list</description>
+      <posx>40</posx>
+      <posy>45</posy>
+      <width>620</width>
+      <height>450</height>
+      <visible>true</visible>
+      <onup>300</onup>
+      <ondown>Select</ondown>
+      <onleft>1</onleft>
+      <onright>1</onright>
+      <viewtype>list</viewtype>
+      <orientation>horizontal</orientation>
+      <pagecontrol>25</pagecontrol>
+      <scrolltime>400</scrolltime>
+      <focusposition>2</focusposition>
+      <itemlayout width="70" height="70">
+        <control type="image">
+            <posx>10</posx>
+            <posy>88</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <info>ListItem.ActualIcon</info>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+     </itemlayout>
+      <focusedlayout height="60" width="70">
+        <control type="image">
+            <posx>10</posx>
+            <posy>80</posy>
+            <width>45</width>
+            <height>60</height>
+	    <aspectratio>stretch</aspectratio>
+	    <animation effect="fade" start="85" time="1000" pulse="true" condition="Control.HasFocus(300)">Conditional</animation>
+            <info>ListItem.Thumb</info>
+        </control>
+        <control type="label">
+            <posx>33</posx>
+            <posy>122</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+            <info>ListItem.Label</info>
+	    <animation effect="fade" start="85" time="1000" pulse="true" condition="Control.HasFocus(300)">Conditional</animation>
+        </control>
+       </focusedlayout>
+<content>
+  <item>
+    <label>Users</label>
+    <label2>none</label2>
+    <icon>bmx-users.png</icon>
+    <thumb>bmx-users-glow.png</thumb>
+    <onclick>ActivateWindow(29)</onclick>
+  </item>
+  <item>
+    <label>5</label>
+    <label2>none</label2>
+    <icon>bmx-settings.png</icon>
+    <thumb>bmx-settings-glow.png</thumb>
+    <onclick>ActivateWindow(settings)</onclick>
+  </item>
+  <item>
+    <label>1</label>
+    <label2>none</label2>
+    <icon>bmx-pictures.png</icon>
+    <thumb>bmx-pictures-glow.png</thumb>
+    <onclick>ActivateWindow(mypictures)</onclick>
+  </item>
+  <item>
+    <label>2</label>
+    <label2>none</label2>
+    <icon>bmx-music.png</icon>
+    <thumb>bmx-music-glow.png</thumb>
+    <onclick>ActivateWindow(MyMusicFiles)</onclick>
+  </item>
+  <item>
+    <label>3</label>
+    <label2>none</label2>
+    <icon>bmx-video.png</icon>
+    <thumb>bmx-video-glow.png</thumb>
+    <onclick>ActivateWindow(MyVideoFiles,50)</onclick>
+  </item>
+  <item>
+    <label>10506</label>
+    <label2>none</label2>
+    <icon>bmx-game.png</icon>
+    <thumb>bmx-game-glow.png</thumb>
+    <onclick>ActivateWindow(MyPrograms)</onclick>
+  </item>
+  <item>
+    <label>Network</label>
+    <label2>none</label2>
+    <icon>bmx-network.png</icon>
+    <thumb>bmx-network-glow.png</thumb>
+    <onclick>ActivateWindow(1001)</onclick>
+  </item>
+  <item>
+    <label>Xlink Kai</label>
+    <label2>none</label2>
+    <icon>bmx-friends.png</icon>
+    <thumb>bmx-friends-glow.png</thumb>
+    <onclick>ActivateWindow(xlinkkai)</onclick>
+  </item>
+  <item>
+    <label>247</label>
+    <label2>none</label2>
+    <icon>bmx-scripts.png</icon>
+    <thumb>bmx-scripts-glow.png</thumb>
+    <onclick>ActivateWindow(scripts)</onclick>
+  </item>
+  <item>
+    <label>Power Menu</label>
+    <label2>none</label2>
+    <icon>bmx-settings-update.png</icon>
+    <thumb>bmx-settings-update-glow.png</thumb>
+    <onclick>ActivateWindow(1086)</onclick>
+  </item>
+</content>
+</control>
+
+		<control type="button" id="95">
+			<description>dvd-rom launch button</description>
+			<posx>10</posx>
+			<posy>516</posy>
+            		<width>38</width>
+            		<height>50</height>
+	    		<aspectratio>stretch</aspectratio>
+			<label>Play DVD</label>
+			<texturefocus>media-dvd-glow.png</texturefocus>
+			<texturenofocus>media-dvd.png</texturenofocus>
+			<font>font12</font>
+			<textoffsetx>35</textoffsetx>
+			<shadowcolor>ff000000</shadowcolor>
+			<visible>System.HasMediaDVD</visible> 
+			<onclick>XBMC.PlayDVD()</onclick>
+			<onleft>300</onleft>
+			<onright>300</onright>
+			<onup>300</onup>
+			<ondown>95</ondown>
+			<animation effect="fade" start="65" time="600" pulse="true"condition="Control.HasFocus(95)">Conditional</animation>
+		</control>
+
+   <control type="button" id="512">
+	<description>return to home hidden button</description>
+	<posx>665</posx>
+	<posy>500</posy>
+	<width>46</width>
+	<height>64</height>
+	<label>-</label>
+	<font>font14</font>
+	<onfocus>SetFocus(300)</onfocus>
+	<onfocus>ReplaceWindow(home)</onfocus>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+   </control>
+
+	</controls>
+</window>

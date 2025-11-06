@@ -1,0 +1,11 @@
+<skin>
+  <version>1.22</version>
+  <defaultresolution>ntsc</defaultresolution>
+  <defaultresolutionwide>ntsc16x9</defaultresolutionwide>
+  <credits>
+    <skinname>MediaPortalX</skinname>
+    <name>pin87a (XBMC)</name>
+    <name>Samsonite (Media Portal)</name>
+    <name>MrMario64 (Media Portal)</name>
+  </credits>
+</skin>

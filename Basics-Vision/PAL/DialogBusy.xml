@@ -1,0 +1,40 @@
+<window id="136">
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<coordinates>
+		<system>0</system>
+		<posx>518</posx>
+		<posy>4</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>popup volume dialog background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>203</width>
+			<height>51</height>
+			<texture>volume-panel-bg.png</texture>
+		</control>
+		<control type="multiimage">
+			<description>Busy animation</description>
+			<posx>124</posx>
+			<posy>7</posy>
+			<width>59</width>
+			<height>42</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="label">
+			<description>Busy label</description>
+			<posx>113</posx>
+			<posy>4</posy>
+			<width>169</width>
+			<height>43</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>31008</label>
+			<font>font13</font>
+		</control>
+	</controls>
+</window>

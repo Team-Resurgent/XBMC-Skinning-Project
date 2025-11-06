@@ -1,0 +1,606 @@
+<includes>
+	<include name="VideoLibrary_Info1">
+		<control type="list" id="51">
+			<posx>0</posx>
+			<posy>110</posy>
+			<width>720</width>
+			<height>402</height>
+			<onleft>9000</onleft>
+			<onright>9002</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="$LOCALIZE[544]">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="label">
+					<posx>50</posx>
+					<posy>4</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font18</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="image">
+					<width>370</width>
+					<height>46</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>ListItem_Focus.png</texture>
+					<visible>Control.HasFocus(51)</visible>
+				</control>
+				<control type="label">
+					<posx>50</posx>
+					<posy>8</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font22</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(51) + [!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Episodes) + !Container.Content(MusicVideos)]</visible>
+			<control type="image">
+				<posx>360</posx>
+				<posy>120</posy>
+				<width>320</width>
+				<height>400</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>520</posy>
+				<width>320</width>
+				<height>400</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<info>ListItem.Icon</info>
+				<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+			</control>
+			<control type="image">
+				<posx>610</posx>
+				<posy>480</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Overlay</info>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(51) + Container.Content(Movies)</visible>
+			<control type="group">
+				<visible>[System.IdleTime(1) + Control.HasFocus(51)]</visible>
+				<animation effect="fade" time="150" delay="0" start="0" end="100">Visible</animation>
+				<control type="image">
+					<description>ListItem Thumb Background</description>
+					<posx>350</posx>
+					<posy>90</posy>
+					<width>400</width>
+					<height>220</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="label">
+					<posx>370</posx>
+					<posy>120</posy>
+					<width>330</width>
+					<height>20</height>
+					<font>font20</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<info>ListItem.Title</info>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>145</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[20339]:</label>
+				</control>
+				<control type="fadelabel">
+					<posx>465</posx>
+					<posy>165</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Director]</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>190</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[515]:</label>
+				</control>
+				<control type="fadelabel">
+					<posx>465</posx>
+					<posy>210</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>235</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[562]:</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>255</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Year]</label>
+				</control>
+				<control type="label">
+					<posx>700</posx>
+					<posy>235</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>right</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[563]:</label>
+				</control>
+				<control type="label">
+					<posx>700</posx>
+					<posy>255</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>right</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Rating]</label>
+				</control>
+				<control type="image">
+					<description>ListItem Thumb Background</description>
+					<posx>350</posx>
+					<posy>280</posy>
+					<width>400</width>
+					<height>270</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="textbox">
+					<description>textarea</description>
+					<posx>370</posx>
+					<posy>310</posy>
+					<width>325</width>
+					<height>210</height>
+					<pagecontrol>99999999</pagecontrol>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>120</posy>
+				<width>320</width>
+				<height>400</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Icon</info>
+				<animation effect="zoom" time="150" delay="0" start="360,120,320,400" end="365,150,95,125" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>520</posy>
+				<width>320</width>
+				<height>400</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<info>ListItem.Icon</info>
+				<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+				<animation effect="zoom" time="150" delay="0" start="360,520,320,400" end="365,275,95,125" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+				<animation effect="fade" time="150" delay="0" start="100" end="0" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+			<control type="image">
+				<posx>610</posx>
+				<posy>480</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Overlay</info>
+				<animation effect="zoom" time="150" delay="0" start="610,480,48,48" end="425,250,32,32" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(51) + Container.Content(MusicVideos)</visible>
+			<control type="group">
+				<visible>[System.IdleTime(1) + Control.HasFocus(51)]</visible>
+				<animation effect="fade" time="150" delay="0" start="0" end="100">Visible</animation>
+				<control type="image">
+					<description>ListItem Thumb Background</description>
+					<posx>350</posx>
+					<posy>90</posy>
+					<width>400</width>
+					<height>220</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="label">
+					<posx>370</posx>
+					<posy>120</posy>
+					<width>330</width>
+					<height>20</height>
+					<font>font20</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<info>ListItem.Title</info>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>145</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[557]:</label>
+				</control>
+				<control type="fadelabel">
+					<posx>465</posx>
+					<posy>165</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Artist]</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>190</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[558]:</label>
+				</control>
+				<control type="fadelabel">
+					<posx>465</posx>
+					<posy>210</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Album]</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>235</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[515]:</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>255</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="image">
+					<description>ListItem Thumb Background</description>
+					<posx>350</posx>
+					<posy>280</posy>
+					<width>400</width>
+					<height>270</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="textbox">
+					<description>textarea</description>
+					<posx>370</posx>
+					<posy>310</posy>
+					<width>325</width>
+					<height>210</height>
+					<pagecontrol>99999999</pagecontrol>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>120</posy>
+				<width>320</width>
+				<height>400</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Icon</info>
+				<animation effect="zoom" time="150" delay="0" start="360,120,320,400" end="365,150,95,125" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>520</posy>
+				<width>320</width>
+				<height>400</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<info>ListItem.Icon</info>
+				<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+				<animation effect="zoom" time="150" delay="0" start="360,520,320,400" end="365,275,95,125" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+				<animation effect="fade" time="150" delay="0" start="100" end="0" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+			<control type="image">
+				<posx>610</posx>
+				<posy>480</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Overlay</info>
+				<animation effect="zoom" time="150" delay="0" start="610,480,48,48" end="425,250,32,32" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(51) + Container.Content(Episodes)</visible>
+			<control type="group">
+				<visible>[System.IdleTime(1) + Control.HasFocus(51)]</visible>
+				<animation effect="fade" time="150" delay="0" start="0" end="100">Visible</animation>
+				<control type="image">
+					<description>ListItem Thumb Background</description>
+					<posx>350</posx>
+					<posy>90</posy>
+					<width>400</width>
+					<height>220</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="label">
+					<posx>370</posx>
+					<posy>120</posy>
+					<width>330</width>
+					<height>20</height>
+					<font>font20</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<info>ListItem.Title</info>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>145</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[20364]:</label>
+				</control>
+				<control type="fadelabel">
+					<posx>465</posx>
+					<posy>165</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>190</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[20373]:</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>210</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Season]</label>
+				</control>
+				<control type="label">
+					<posx>550</posx>
+					<posy>190</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[20359]:</label>
+				</control>
+				<control type="label">
+					<posx>550</posx>
+					<posy>210</posy>
+					<width>115</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Episode]</label>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>235</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-blue</include>
+					<label>$LOCALIZE[20416]:</label>
+				</control>
+				<control type="fadelabel">
+					<posx>465</posx>
+					<posy>255</posy>
+					<width>235</width>
+					<height>20</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligy>center</aligy>
+					<include>textcolor-white</include>
+					<label>$INFO[ListItem.Premiered]</label>
+				</control>
+				<control type="image">
+					<description>ListItem Thumb Background</description>
+					<posx>350</posx>
+					<posy>280</posy>
+					<width>400</width>
+					<height>270</height>
+					<texture>Panel_Audio.png</texture>
+				</control>
+				<control type="textbox">
+					<description>textarea</description>
+					<posx>370</posx>
+					<posy>310</posy>
+					<width>325</width>
+					<height>210</height>
+					<pagecontrol>99999999</pagecontrol>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>120</posy>
+				<width>320</width>
+				<height>320</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Icon</info>
+				<animation effect="zoom" time="150" delay="0" start="360,120,320,320" end="365,150,95,95" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>440</posy>
+				<width>320</width>
+				<height>320</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<info>ListItem.Icon</info>
+				<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+				<animation effect="zoom" time="150" delay="0" start="360,440,320,320" end="365,145,95,95" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+				<animation effect="fade" time="150" delay="0" start="100" end="0" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+			<control type="image">
+				<posx>610</posx>
+				<posy>480</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<info>ListItem.Overlay</info>
+				<animation effect="zoom" time="150" delay="0" start="610,480,48,48" end="425,250,32,32" condition="[System.IdleTime(1) + Control.HasFocus(51)]">conditional</animation>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(51) + Container.Content(TVShows)</visible>
+			<control type="image">
+				<description>ListItem Thumb Background</description>
+				<posx>350</posx>
+				<posy>90</posy>
+				<width>400</width>
+				<height>220</height>
+				<texture>Panel_Audio.png</texture>
+			</control>
+			<control type="label">
+				<posx>370</posx>
+				<posy>120</posy>
+				<width>330</width>
+				<height>20</height>
+				<font>font20</font>
+				<align>left</align>
+				<aligy>center</aligy>
+				<include>textcolor-white</include>
+				<info>ListItem.Title</info>
+			</control>
+			<control type="image">
+				<posx>370</posx>
+				<posy>150</posy>
+				<width>330</width>
+				<height>90</height>
+				<aspectratio>stretch</aspectratio>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="label">
+				<posx>370</posx>
+				<posy>250</posy>
+				<width>235</width>
+				<height>20</height>
+				<font>font18</font>
+				<align>left</align>
+				<aligy>center</aligy>
+				<include>textcolor-blue</include>
+				<label>$LOCALIZE[20360]:</label>
+			</control>
+			<control type="label">
+				<posx>450</posx>
+				<posy>250</posy>
+				<width>235</width>
+				<height>20</height>
+				<font>font18</font>
+				<align>left</align>
+				<aligy>center</aligy>
+				<include>textcolor-white</include>
+				<label>$INFO[ListItem.Episode]</label>
+			</control>
+			<control type="image">
+				<description>ListItem Thumb Background</description>
+				<posx>350</posx>
+				<posy>280</posy>
+				<width>400</width>
+				<height>270</height>
+				<texture>Panel_Audio.png</texture>
+			</control>
+			<control type="textbox">
+				<description>textarea</description>
+				<posx>370</posx>
+				<posy>310</posy>
+				<width>325</width>
+				<height>210</height>
+				<pagecontrol>99999999</pagecontrol>
+				<label>$INFO[ListItem.Plot]</label>
+			</control>
+		</control>
+	</include>
+</includes>

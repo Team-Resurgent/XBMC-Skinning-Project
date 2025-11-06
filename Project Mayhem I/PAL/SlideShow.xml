@@ -1,0 +1,59 @@
+﻿<window id="2007">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="image" id="1">
+			<description>bar image</description>
+			<posx>0</posx>
+			<posy>55</posy>
+			<width>720</width>
+			<height>50</height>
+			<texture>bluebar.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>20ffffff</colordiffuse>
+			<visible>Player.ShowCodec</visible>
+		</control>
+		<control type="label" id="10">
+			<description>row 1 label</description>
+			<posx>100</posx>
+			<posy>60</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<visible>Player.ShowCodec</visible>
+		</control>
+		<control type="label" id="11">
+			<description>row 2 label</description>
+			<posx>100</posx>
+			<posy>80</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<visible>Player.ShowCodec</visible>
+		</control>
+		<control type="label" id="12">
+			<description>row 2 extra label</description>
+			<posx>250</posx>
+			<posy>80</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<visible>Player.ShowCodec</visible>
+		</control>
+		<control type="image" id="13">
+			<description>pause image</description>
+			<align>right</align>
+			<posx>580</posx>
+			<posy>25</posy>
+			<height>64</height>
+			<width>128</width>
+			<visible>no</visible>
+			<texture>video-pause.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>Player.ShowCodec</visible>
+		</control>
+	</controls>
+</window>

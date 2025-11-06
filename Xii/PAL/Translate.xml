@@ -1,0 +1,106 @@
+<includes>
+
+<!-- Start global includes -->
+	<include name="500"><label>List</label></include>
+	<include name="501"><label>List 2</label></include>
+	<include name="502"><label>Icons</label></include>
+	<include name="503"><label>Icons 2</label></include>
+	<include name="503a"><label>Icons 3</label></include>
+	<include name="504"><label>Wide</label></include>
+	<include name="505"><label>Wide 2</label></include>
+	<include name="506"><label>Wrap</label></include>
+	<include name="507"><label>Wrap 2</label></include>
+	<include name="510"><label>Sort</label></include>
+	<include name="511"><label>Stacking</label></include>
+	<include name="512"><label>Show All</label></include>
+	<include name="513"><label>IMDB</label></include>
+	<include name="514"><label>Search</label></include>
+	<include name="515"><label>Unlock</label></include>
+	<include name="516"><label>Party</label></include>
+<!-- End global includes -->
+
+<!-- Start home includes -->
+	<include name="homemenulabel"><label>Xii Menu</label></include>
+	<include name="system"><label>Xii Options</label></include>
+	<include name="button10"><label>Reload Skin</label></include>
+	<include name="button11"><label>News</label></include>
+	<include name="button12"><label>Shop</label></include>
+	<include name="button13"><label>Power</label></include>
+<!-- End home includes -->
+
+<!-- Start shutdown includes -->
+	<include name="info"><label>Info</label></include>
+	<include name="dash"><label>Dash</label></include>
+	<include name="login"><label>No login</label></include>
+<!-- End shutdown includes -->
+
+<!-- Start system includes -->
+	<include name="backlabel"><label>Back</label></include>
+	<include name="menulabel"><label>Menu</label></include>
+	<include name="memorylabel"><label>Data Management</label></include>
+	<include name="filelabel"><label>File Manager</label></include>
+	<include name="4a"><label>Xii System Settings 1</label></include>
+	<include name="4b"><label>Xii System Settings 2</label></include>
+	<include name="4c"><label>Xii System Settings 3</label></include>
+	<include name="4d"><label>About Xii</label></include>
+	<include name="4e"><label>Scripts</label></include>
+	<include name="4f"><label>Gamesaves</label></include>
+	<include name="4g"><label>Profiles</label></include>
+	<include name="4h"><label>Skin Settings</label></include>
+	<include name="4i"><label>Channels</label></include>
+	<include name="4j"><label>Power Menu</label></include>		
+<!-- End system includes -->
+
+<!-- Start channel includes -->
+	<include name="channel10"><label>Channel 10</label></include>
+	<include name="channel11"><label>Channel 11</label></include>
+	<include name="channel12"><label>Channel 12</label></include>
+	<include name="channel13"><label>Channel 13</label></include>
+	<include name="chanenable10"><label>Enable Channel 10</label></include>
+	<include name="chanenable11"><label>Enable Channel 11</label></include>
+	<include name="chanenable12"><label>Enable Channel 12</label></include>
+	<include name="chanenable13"><label>Enable Channel 13</label></include>
+	<include name="chanimage"><label>Set channel image</label></include>
+	<include name="chanlabel"><label>Set channel label</label></include>
+	<include name="chanscript"><label>Set script path</label></include>
+	<include name="chanxbe"><label>Set .xbe path</label></include>
+	<include name="chanor"><label>OR</label></include>
+<!-- End channel includes -->
+
+<!-- Start video includes -->
+	<include name="10101"><label>AllVideos</label></include>
+	<include name="10102"><label>Movie Trailers</label></include>
+	<include name="10103"><label>Video Playlist</label></include>
+	<include name="10104"><label>Movie Information</label></include>
+<!-- End video includes -->
+
+<!-- Start programs includes -->
+	<include name="10201"><label>Gamesaves</label></include>
+<!-- End programs includes -->
+
+<!-- Start music includes -->
+	<include name="10301"><label>AllMusic</label></include>
+	<include name="10302"><label>Music Playlist</label></include>
+<!-- End music includes -->
+
+<!-- Start weather includes -->
+	<include name="weather01"><label>Today</label></include>
+<!-- End weather includes -->
+
+<!-- Begin skin settings includes -->
+	<include name="90001"><label>Enable Home Weather Overlay</label></include>
+	<include name="90002"><label>Disable Wide Icon Labels</label></include>
+	<include name="90003"><label>Set Home Title</label></include>
+	<include name="90004"><label>-</label></include>
+<!-- End skin settings includes -->
+
+<!-- Start progress includes -->
+	<include name="2x"><label>2x</label></include>
+	<include name="4x"><label>4x</label></include>
+	<include name="8x"><label>8x</label></include>
+	<include name="16x"><label>16x</label></include>
+	<include name="32x"><label>32x</label></include>
+<!-- End progress includes -->
+
+</includes>
+

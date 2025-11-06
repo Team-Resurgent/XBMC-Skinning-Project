@@ -1,0 +1,87 @@
+<window id="1059">
+        <type>buttonMenu</type>
+
+
+   <animation effect="fade" time="200">WindowOpen</animation> 
+   <animation effect="fade" time="200">WindowClose</animation>
+
+  <defaultcontrol always="true">24</defaultcontrol>
+
+<controls>
+
+	   <control type="image" id="1">
+	      <posx>0</posx>
+      	      <posy>0</posy>
+	      <width>720</width>
+              <height>576</height>
+              <texture>background_dialog.png</texture>
+           </control>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>180</posx>
+        <posy>250</posy>
+      <width>436</width>
+      <height>170</height>
+      <texture>dialog-popup.png</texture>
+    </control>
+
+    <control type="label" id="1">
+      <description>dialog Heading</description>
+      <posx>220</posx>
+      <posy>252</posy>
+        	<include>19000</include>
+      <haspath>yes</haspath>
+      <width>400</width>
+      <font>font13</font>
+      <include>textcolordialog</include>
+    </control>
+
+			<control type="radiobutton" id="24">
+				<description>Enable Playlist Toggle</description>
+				<posx>220</posx>
+				<posy>290</posy>
+				<width>350</width>
+				<label>21398</label>
+				<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+				<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>22</onup>
+				<ondown>25</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="25">
+				<description>Startup Playlist Path</description>
+				<posx>235</posx>
+				<posy>330</posy>
+				<width>370</width>
+				<label>15311</label>
+				<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>24</onup>
+				<ondown>20</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+			</control>
+			<control type="label">
+				<description>Startup Playlist Path label</description>
+				<posx>285</posx>
+				<posy>346</posy>
+				<width>300</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<info>Skin.String(Startup_Playlist_Path)</info>
+				<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+			</control>
+
+
+</controls>
+
+</window>

@@ -1,0 +1,18 @@
+<colors>
+	<color name="black">dd000000</color>
+	<color name="black2">50000000</color>
+	<color name="white">FFffffff</color>
+	<color name="white2">70ffffff</color>
+	<color name="white3">DDced8da</color>
+	<color name="white4">90ffffff</color>
+	<color name="white5">90cbcbcb</color>
+	<color name="white6">60ffffff</color>
+	<color name="grey">60ffffff</color>
+	<color name="grey2">d0ffffff</color>
+	<color name="grey3">90cbcbcb</color>
+	<color name="orange">FFff9600</color>
+
+	<color name="disabled">40ffffff</color>
+	<color name="selected">FFff9600</color>
+	<color name="rss">FFD2FF00</color>
+</colors>

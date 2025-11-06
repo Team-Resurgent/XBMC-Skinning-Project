@@ -1,0 +1,368 @@
+<window id="25">
+<defaultcontrol always="true">51</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<controls>
+
+  <control type="group">
+  <include>Backgrounds</include>
+  </control>
+  
+  <control type="group">
+    <visible>Control.IsVisible(54)</visible>
+    <control type="largeimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <aspectratio>scale</aspectratio>
+      <info>ListItem.Property(fanart_image)</info>
+      <fadetime>400</fadetime>
+    </control>
+    <control type="largeimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <aspectratio>scale</aspectratio>
+      <info>Fanart.Image</info>
+      <fadetime>400</fadetime>
+    </control>
+    <control type="group">
+      <posy>330</posy>
+      <include>DefaultFade</include>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>247</height>
+        <texture>Black.png</texture>
+        <aspectratio>stretch</aspectratio>
+        <include>MediaBackFade</include>
+      </control>
+      <control type="label">
+        <posx>25</posx>
+        <width>670</width>
+        <height>35</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Title]</label>
+        <font>20BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+      <control type="label">
+        <posx>25</posx>
+        <width>670</width>
+        <height>30</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label]</label>
+        <font>20BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>IsEmpty(ListItem.Title)</visible>
+      </control>
+      <control type="label">
+        <posx>695</posx>
+        <width>670</width>
+        <height>30</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label2]</label>
+        <font>20BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+    </control>
+  </control>
+  
+  <control type="group">
+    <include>List</include>
+    <include>BigList</include>
+    <include>Icons</include>
+    <include>Fanart</include>
+    
+    <include>MediaFlagImages</include>
+
+    <control type="image">
+      <description>Videos Library Window Image</description>
+      <posx>-15</posx>
+      <posy>510</posy>
+      <width>80</width>
+      <height>80</height>
+      <aspectratio align="left">keep</aspectratio>
+      <texture>HomeVideosThumb.png</texture>
+      <include>ContentImageFade</include>
+    </control>
+    <control type="label">
+      <description>Videos Library Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[20314]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+      <visible>!container.content(movies) + !container.content(tvshows) + !container.content(seasons) + !container.content(episodes) + !container.content(musicvideos)</visible>
+    </control>
+    <control type="label">
+      <description>Movies Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[342]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+      <visible>container.content(movies)</visible>
+    </control>
+    <control type="label">
+      <description>TV Shows Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[20343]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+      <visible>container.content(tvshows)</visible>
+    </control>
+    <control type="label">
+      <description>Seasons Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[31014]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+      <visible>container.content(seasons)</visible>
+    </control>
+    <control type="label">
+      <description>Episodes Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[20360]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+      <visible>container.content(episodes)</visible>
+    </control>
+    <control type="label">
+      <description>Music Videos Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[20389]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+      <visible>container.content(musicvideos)</visible>
+    </control>
+    <control type="label" id="12">
+      <description>Number of files label</description>
+      <posx>695</posx>
+      <posy>515</posy>
+      <width>200</width>
+      <height>80</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+    </control>
+    <control type="label" id="18">
+      <description>No Info Scanned Label</description>
+      <posx>0</posx>
+      <posy>263</posy>
+      <width>720</width>
+      <height>50</height>
+      <align>center</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>ContentTextFade</include>
+    </control>
+
+    <control type="group" id="9000">
+      <posx>208</posx>
+      <posy>158</posy>
+      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
+
+      <control type="group">
+        <include>OptionBack3-4</include>
+        <visible>ControlGroup(9001).HasFocus</visible>
+      </control>
+      <control type="group">
+        <include>OptionBack3-2</include>
+        <visible>ControlGroup(9002).HasFocus</visible>
+      </control>
+      <control type="group">
+        <include>OptionBack3-3</include>
+        <visible>ControlGroup(9003).HasFocus</visible>
+      </control>
+      
+      <include>DefaultViewOptions</include>
+      
+      <control type="group" id="9003">
+        <posx>0</posx>
+        <posy>215</posy>
+        <animation effect="slide" time="100" end="0,-60" condition="ControlGroup(9002).HasFocus">Conditional</animation>
+        <animation effect="slide" time="100" end="0,-125" condition="ControlGroup(9003).HasFocus">Conditional</animation>
+        <control type="button" id="2021">
+          <description>Library Header</description>
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>304</width>
+          <height>45</height>
+          <align>left</align>
+          <label>-</label>
+          <font>22BdFont</font>
+          <focusedcolor>DefaultTextColor</focusedcolor>
+          <texturefocus>ButtonNF.png</texturefocus>
+          <texturenofocus>ButtonNF.png</texturenofocus>
+          <textoffsetx>35</textoffsetx>
+          <onfocus>SetFocus(99)</onfocus>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>-</onup>
+          <ondown>-</ondown>
+        </control>
+        <control type="label">
+          <description>Library Header Label</description>
+          <posx>35</posx>
+          <posy>0</posy>
+          <width>268</width>
+          <height>45</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31027]</label>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <visible>ControlGroup(9003).HasFocus</visible>
+        </control>
+        <control type="label">
+          <description>Library Header Label</description>
+          <posx>35</posx>
+          <posy>0</posy>
+          <width>268</width>
+          <height>45</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31027]</label>
+          <font>22BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <visible>!ControlGroup(9003).HasFocus</visible>
+        </control>
+
+        <control type="group">
+          <animation effect="fade" time="10" delay="120" end="100" condition="ControlGroup(9003).HasFocus">Conditional</animation>
+          <control type="radiobutton" id="99">
+            <description>Library button</description>
+            <posx>0</posx>
+            <posy>45</posy>
+            <height>30</height>
+            <width>270</width>
+            <font>18BdFont</font>
+            <label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textoffsetx>45</textoffsetx>
+            <onclick>replacewindow(MyVideoFiles)</onclick>
+            <selected>window.isvisible(myvideolibrary)</selected>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>2011</onup>
+            <ondown>8</ondown>
+            <visible>ControlGroup(9003).HasFocus + !Container.SortDirection(None)</visible>
+          </control>
+          <control type="radiobutton" id="99">
+            <description>Library button</description>
+            <posx>0</posx>
+            <posy>45</posy>
+            <height>30</height>
+            <width>270</width>
+            <font>18BdFont</font>
+            <label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textoffsetx>45</textoffsetx>
+            <onclick>replacewindow(MyVideoFiles)</onclick>
+            <selected>window.isvisible(myvideolibrary)</selected>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>2001</onup>
+            <ondown>8</ondown>
+            <visible>ControlGroup(9003).HasFocus + Container.SortDirection(None)</visible>
+          </control>
+          <control type="button" id="8">
+            <description>Search button</description>
+            <posx>0</posx>
+            <posy>75</posy>
+            <width>285</width>
+            <height>30</height>
+            <align>left</align>
+            <label>$LOCALIZE[137] $LOCALIZE[14022]</label>
+            <font>18BdFont</font>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textoffsetx>45</textoffsetx>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>99</onup>
+            <ondown>14</ondown>
+            <visible>ControlGroup(9003).HasFocus</visible>
+          </control>
+          <control type="radiobutton" id="14">
+            <description>Watched button</description>
+            <posx>0</posx>
+            <posy>105</posy>
+            <height>30</height>
+            <width>270</width>
+            <font>18BdFont</font>
+            <label>$LOCALIZE[31025]</label>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textoffsetx>45</textoffsetx>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>8</onup>
+            <ondown>2001</ondown>
+            <visible>ControlGroup(9003).HasFocus</visible>
+          </control>
+        </control>
+      </control>
+
+    </control>
+  </control>
+  
+  <include>NowPlaying</include>
+  
+</controls>
+</window>

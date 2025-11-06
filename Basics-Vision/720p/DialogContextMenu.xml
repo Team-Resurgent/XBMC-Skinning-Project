@@ -1,0 +1,46 @@
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="997">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-32</posy>
+			<width>450</width>
+			<height>32</height>
+			<texture>context_menu_top.png</texture>
+		</control>
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>450</width>
+			<texture>context_menu_middle.png</texture>
+		</control>
+		<control type="image" id="998">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<width>450</width>
+			<height>32</height>
+			<texture>context_menu_bottom.png</texture>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>40</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>red</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+	</controls>
+</window>

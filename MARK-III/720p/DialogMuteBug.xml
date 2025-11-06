@@ -1,0 +1,29 @@
+<window id="113">
+	<defaultcontrol>-</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>540</posx>
+		<posy>15</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>200</width>
+			<height>35</height>
+			<texture border="10">barground2.png</texture>
+			<colordiffuse>ccFFFFFF</colordiffuse>
+		</control>
+		<control type="label" id="0">
+			<description>Label</description>
+			<posx>10</posx>
+			<posy>0</posy>
+			<width>180</width>
+			<height>35</height>
+			<label>31036</label>
+			<font>font11</font>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+	</controls>
+</window>

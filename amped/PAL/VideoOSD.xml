@@ -1,0 +1,282 @@
+<window id="2901">
+  <defaultcontrol always="true">202</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	
+	<controls>
+	<control type="group">
+    <posx>180</posx>
+	  <posy>485</posy>
+
+    
+    <!--Player Images-->
+		
+    <control type="image">
+			<description>Media Overlay Image</description>
+			<width>400</width>
+			<height>75</height>
+			<texture>osd-player.png</texture>
+		</control>
+		
+		<control type="image">
+      <posx>310</posx>
+      <posy>-85</posy>
+			<description>Media Overlay Image</description>
+			<width>75</width>
+			<height>94</height>
+			<texture>osd-popup.png</texture>
+      <visible>control.HasFocus(206) | control.HasFocus(207)</visible>
+    </control>
+
+   <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-rw_on.png</texture>
+      <visible>Control.HasFocus(200)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-rw_off.png</texture>
+      <visible>!Control.HasFocus(200)</visible>
+    </control>
+
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-rwSkip_on.png</texture>
+      <visible>Control.HasFocus(201)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-rwSkip_off.png</texture>
+      <visible>!Control.HasFocus(201)</visible>
+    </control>
+
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-pause_on.png</texture>
+      <visible>Control.HasFocus(202)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-pause_off.png</texture>
+      <visible>!Control.HasFocus(202)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-play_on.png</texture>
+      <visible>Player.Paused</visible>
+    </control>
+
+
+
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-stop_on.png</texture>
+      <visible>Control.HasFocus(203)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-stop_off.png</texture>
+      <visible>!Control.HasFocus(203)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-ffSkip_on.png</texture>
+      <visible>Control.HasFocus(204)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-ffskip_off.png</texture>
+      <visible>!Control.HasFocus(204)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-ff_on.png</texture>
+      <visible>Control.HasFocus(205)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-ff_off.png</texture>
+      <visible>!Control.HasFocus(205)</visible>
+    </control>
+    
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-options_on.png</texture>
+      <visible>Control.HasFocus(206) | Control.HasFocus(207)</visible>
+    </control>
+    <control type="image">
+      <width>400</width>
+      <height>75</height>
+      <texture>OSD-options_off.png</texture>
+      <visible>!Control.HasFocus(206) + !Control.HasFocus(207) </visible>
+    </control>
+
+
+    <!-- Player Controls -->
+    <control id="200">
+        <visible>true</visible>
+		    <type>button</type>
+        <id>200</id>
+        <width>400</width>
+        <height>75</height>
+        <texturefocus>OSD-rw_off.png</texturefocus>
+        <texturenofocus>OSD-rw_on.png</texturenofocus>
+        <onfocus>-</onfocus>
+        <onclick>XBMC.PlayerControl(Rewind)</onclick>
+        <onleft>200</onleft>
+        <onright>201</onright>
+        <onup>200</onup>
+        <ondown>200</ondown>
+      </control>
+      
+      <control id="201">
+	      <type>button</type>
+        <id>201</id>
+        <width>400</width>
+        <height>75</height>
+        <texturefocus>OSD-rwSkip_off.png</texturefocus>
+        <texturenofocus>OSD-rwSkip_on.png</texturenofocus>
+        <onfocus>-</onfocus>
+        <onclick>XBMC.PlayerControl(Previous)</onclick>
+        <onleft>200</onleft>
+        <onright>202</onright>
+        <onup>201</onup>
+        <ondown>201</ondown>
+      </control>
+      
+      <control id="202">
+		    <type>button</type>
+        <id>202</id>
+        <width>400</width>
+        <height>75</height>
+        <texturefocus>OSD-pause_off.png</texturefocus>
+        <texturenofocus>OSD-pause_on.png</texturenofocus>
+        <onfocus>-</onfocus>
+        <onclick>XBMC.PlayerControl(Play)</onclick>
+        <onleft>201</onleft>
+        <onright>203</onright>
+        <onup>202</onup>
+        <ondown>202</ondown>
+      </control>
+      
+      <control id="203">
+		    <type>button</type>
+        <id>203</id>
+        <width>400</width>
+        <height>75</height>
+        <texturefocus>OSD-stop_off.png</texturefocus>
+        <texturenofocus>OSD-stop_on.png</texturenofocus>
+        <onfocus>-</onfocus>
+        <onclick>XBMC.PlayerControl(Stop)</onclick>
+        <onleft>202</onleft>
+        <onright>204</onright>
+        <onup>203</onup>
+        <ondown>203</ondown>
+      </control>
+
+	<control id="204">
+		    <type>button</type>
+        <id>204</id>
+        <width>400</width>
+        <height>75</height>
+        <texturefocus>OSD-ffSkip_off.png</texturefocus>
+        <texturenofocus>OSD-ffSkip_on.png</texturenofocus>
+        <onfocus>-</onfocus>
+        <onclick>XBMC.PlayerControl(Next)</onclick>
+        <onleft>203</onleft>
+        <onright>205</onright>
+        <onup>204</onup>
+        <ondown>204</ondown>
+      </control>
+      
+      <control id="205">
+		    <type>button</type>
+        <id>205</id>
+        <width>400</width>
+        <height>75</height>
+        <texturefocus>OSD-ff_off.png</texturefocus>
+        <texturenofocus>OSD-ff_on.png</texturenofocus>
+        <onfocus>-</onfocus>
+        <onclick>XBMC.PlayerControl(Forward)</onclick>
+        <onleft>204</onleft>
+        <onright>206</onright>
+        <onup>205</onup>
+        <ondown>205</ondown>
+      </control>
+
+   <control id="206">
+	      <type>button</type>
+        <id>206</id>
+        <width>400</width>
+        <height>75</height>
+        <texturefocus>OSD-options_off.png</texturefocus>
+        <texturenofocus>OSD-options_on.png</texturenofocus>
+        <onfocus>-</onfocus>
+        <onleft>205</onleft>
+        <onright>206</onright>
+        <onup>207</onup>
+        <ondown>206</ondown>
+      </control>
+    
+     
+	  <control type="buttonscroller" id="207">
+      <visible>control.HasFocus(206) | control.HasFocus(207)</visible>
+      <posx>315</posx>
+      <posy>-75</posy>
+        <description>Player Buttons control</description>
+				<font>font12</font>
+				<include>textcolor-grey</include>
+				<focusedcolor>ff009933</focusedcolor>
+				<onleft>205</onleft>
+				<onright>207</onright>
+				<numbuttons>5</numbuttons>
+				<buttongap>14</buttongap>
+				<orientation>vertical</orientation>
+				<defaultbutton>4</defaultbutton>
+				<movement>0</movement>
+				<alpha>1</alpha>
+				<wraparound>false</wraparound>
+				<smoothscrolling>true</smoothscrolling>
+        <onup>207</onup>
+				<buttons>
+					<button id="1">
+						<label>OSD Video</label>
+						<onclick>XBMC.ActivateWindow(OSDVideoSettings)</onclick>
+					</button>
+					<button id="2">
+						<label>OSD Audio</label>
+						<onclick>XBMC.ActivateWindow(OSDAudioSettings)</onclick>
+					</button>
+					<button id="3">
+						<label>BookMarks</label>
+						<onclick>XBMC.ActivateWindow(VideoBookmarks)</onclick>
+					</button>
+					<button id="4">
+						<label>Play Lists</label>
+						<onclick>XBMC.ActivateWindow(MyVideoPlaylist)</onclick>
+					</button>
+					
+					<button id="5">
+						<label>DVD Menu</label>
+						<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+						<visible>!VideoPlayer.HasMenu</visible>
+					</button>
+				</buttons>	  
+			</control>
+ 
+		</control>
+	</controls>
+</window>

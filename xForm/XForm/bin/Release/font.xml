@@ -1,0 +1,44 @@
+<fonts>
+  <fontset id="Latin 1">
+  <font>
+    <name>18</name>
+    <filename>common-font18.xpr</filename>
+  </font>
+
+  <font>
+    <name>13</name>
+    <filename>common-font13.xpr</filename>
+  </font>
+
+  <font>
+    <name>14</name>
+    <filename>common-font14.xpr</filename>
+  </font>
+
+  <font>
+    <name>64</name>
+    <filename>common-font64.xpr</filename>
+  </font>
+
+  <font>
+    <name>8</name>
+    <filename>matrix8.xpr</filename>
+  </font>
+
+  <font>
+    <name>15</name>
+    <filename>common-font15.xpr</filename>
+  </font>
+
+  <font>
+    <name>12</name>
+    <filename>common-font12.xpr</filename>
+  </font>
+
+  <font>
+    <name>10</name>
+    <filename>common-font10.xpr</filename>
+  </font>
+   </fontset>
+</fonts>
+

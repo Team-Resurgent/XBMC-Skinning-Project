@@ -1,0 +1,749 @@
+<window id="2600">
+
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>weather-small.png</texture>
+      
+    </control>
+
+    <control type="label" id="1">
+      <description>Weather text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>8</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="button" id="2">
+      <description>Refresh Button</description>
+      <include>button</include>
+      <posx>60</posx>
+      <posy>120</posy>
+      <width>135</width>
+      <height>35</height>
+      <texturenofocus>button-nofocus.png</texturenofocus>
+      <label>184</label>
+      <font>font13</font>
+      <onleft>3</onleft>
+      <onright>3</onright>
+      <onup>4</onup>
+      <ondown>4</ondown>
+      <align>center</align>
+    </control>
+
+    <control type="button" id="4">
+      <description>Settings Button</description>
+      <include>button</include>
+      <posx>60</posx>
+      <posy>160</posy>
+      <width>135</width>
+      <height>35</height>
+      <texturenofocus>button-nofocus.png</texturenofocus>
+      <label>5</label>
+      <font>font13</font>
+      <onleft>3</onleft>
+      <onright>3</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+      <align>center</align>
+      <onclick>ActivateWindow(MyWeatherSettings)</onclick>
+    </control>
+
+    <control type="image" id="101">
+      <description>logo image</description>
+      <include>control</include>
+      <posx>50</posx>
+      <posy>510</posy>
+      <width>50</width>
+      <height>50</height>
+      <texture>TWClogo_64px.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>logo image</description>
+      <include>control</include>
+      <posx>202</posx>
+      <posy>127</posy>
+      <width>500</width>
+      <height>180</height>
+      <texture>bar.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>logo image</description>
+      <include>control</include>
+      <posx>100</posx>
+      <posy>315</posy>
+      <width>135</width>
+      <height>310</height>
+      <texture>bar.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>logo image</description>
+      <include>control</include>
+      <posx>245</posx>
+      <posy>315</posy>
+      <width>135</width>
+      <height>300</height>
+      <texture>bar.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>logo image</description>
+      <include>control</include>
+      <posx>390</posx>
+      <posy>315</posy>
+      <width>135</width>
+      <height>300</height>
+      <texture>bar.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>logo image</description>
+      <include>control</include>
+      <posx>535</posx>
+      <posy>315</posy>
+      <width>135</width>
+      <height>300</height>
+      <texture>bar.png</texture>
+    </control>
+
+    <control type="selectbutton" id="3">
+      <description>weather location select</description>
+      <include>control</include>
+      <align>left</align>
+      <width>250</width>
+      <height>25</height>
+      <posx>210</posx>
+      <posy>60</posy>
+      <font>font18</font>
+      <reverse>yes</reverse>
+    <texturefocus>button-focus-weather.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+      <texturebg>-</texturebg>
+      <onup>2</onup>
+      <ondown>2</ondown>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <textoffsetx>20</textoffsetx>
+      <disabledcolor>ddffffff</disabledcolor>
+    </control>
+
+    <control type="label" id="223">
+      <description>current temp static label</description>
+      <include>control</include>
+      <posx>210</posx>
+      <posy>140</posy>
+      <label>Temp</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="224">
+      <description>current feels like static label</description>
+      <include>control</include>
+      <posx>210</posx>
+      <posy>165</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="225">
+      <description>current UV Index static label</description>
+      <include>control</include>
+      <posx>210</posx>
+      <posy>240</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="226">
+      <description>current wind static label</description>
+      <include>control</include>
+      <posx>210</posx>
+      <posy>265</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="227">
+      <description>current dew static label</description>
+      <include>control</include>
+      <posx>210</posx>
+      <posy>190</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="228">
+      <description>current humidity static label</description>
+      <include>control</include>
+      <posx>210</posx>
+      <posy>215</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="11">
+      <description>update time label</description>
+      <include>control</include>
+      <posx>210</posx>
+      <posy>93</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="image" id="21">
+      <description>current weather icon</description>
+      <include>control</include>
+      <posx>530</posx>
+      <posy>140</posy>
+      <height>128</height>
+      <width>128</width>
+      <texture>background-myweather.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+
+    </control>
+
+    <control type="label" id="22">
+      <description>current condition label</description>
+      <include>control</include>
+      <posx>425</posx>
+      <posy>140</posy>
+      <label>-</label>
+      <font>font10</font>
+      <width>120</width>
+      <wrapmultiline>true</wrapmultiline>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="23">
+      <description>current temp label</description>
+      <include>control</include>
+      <posx>335</posx>
+      <posy>140</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="24">
+      <description>current feels like label</description>
+      <include>control</include>
+      <posx>335</posx>
+      <posy>165</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="25">
+      <description>current UV Index label</description>
+      <include>control</include>
+      <posx>335</posx>
+      <posy>240</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="26">
+      <description>current wind label</description>
+      <include>control</include>
+      <posx>335</posx>
+      <posy>265</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="27">
+      <description>current dew label</description>
+      <include>control</include>
+      <posx>335</posx>
+      <posy>190</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="28">
+      <description>current humidity label</description>
+      <include>control</include>
+      <posx>335</posx>
+      <posy>215</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="31">
+      <description>day 0 label</description>
+      <include>control</include>
+      <posx>110</posx>
+      <posy>330</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="32">
+      <description>day 0 Hi label</description>
+      <include>control</include>
+      <posx>120</posx>
+      <posy>358</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="33">
+      <description>day 0 low label</description>
+      <include>control</include>
+      <posx>120</posx>
+      <posy>380</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="34">
+      <description>day 0 general weather label</description>
+      <include>control</include>
+      <posx>110</posx>
+      <posy>500</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+      <wrapmultiline>true</wrapmultiline>
+      <width>125</width>
+    </control>
+
+    <control type="image" id="35">
+      <description>day 0 icon</description>
+      <include>control</include>
+      <posx>130</posx>
+      <posy>410</posy>
+      <height>64</height>
+      <width>64</width>
+      <texture>background-myweather.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+
+    </control>
+
+    <control type="label" id="41">
+      <description>day 1 label</description>
+      <include>control</include>
+      <posx>255</posx>
+      <posy>330</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="42">
+      <description>day 1 Hi label</description>
+      <include>control</include>
+      <posx>265</posx>
+      <posy>358</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="43">
+      <description>day 1 low label</description>
+      <include>control</include>
+      <posx>265</posx>
+      <posy>380</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="44">
+      <description>day 1 general weather label</description>
+      <include>control</include>
+      <posx>255</posx>
+      <posy>500</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+      <wrapmultiline>true</wrapmultiline>
+      <width>125</width>
+    </control>
+
+    <control type="image" id="45">
+      <description>day 1 icon</description>
+      <include>control</include>
+      <posx>275</posx>
+      <posy>410</posy>
+      <height>64</height>
+      <width>64</width>
+      <texture>background-myweather.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+
+    </control>
+
+    <control type="label" id="51">
+      <description>day 2 label</description>
+      <include>control</include>
+      <posx>400</posx>
+      <posy>330</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="52">
+      <description>day 2 Hi label</description>
+      <include>control</include>
+      <posx>410</posx>
+      <posy>358</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="53">
+      <description>day 2 low label</description>
+      <include>control</include>
+      <posx>410</posx>
+      <posy>380</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="54">
+      <description>day 2 general weather label</description>
+      <include>control</include>
+      <posx>400</posx>
+      <posy>500</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+      <wrapmultiline>true</wrapmultiline>
+      <width>125</width>
+    </control>
+
+    <control type="image" id="55">
+      <description>day 2 icon</description>
+      <include>control</include>
+      <posx>420</posx>
+      <posy>410</posy>
+      <height>64</height>
+      <width>64</width>
+      <texture>background-myweather.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+
+    </control>
+
+    <control type="label" id="61">
+      <description>day 3 label</description>
+      <include>control</include>
+      <posx>545</posx>
+      <posy>330</posy>
+      <label>-</label>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="62">
+      <description>day 3 Hi label</description>
+      <include>control</include>
+      <posx>555</posx>
+      <posy>358</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="63">
+      <description>day 3 low label</description>
+      <include>control</include>
+      <posx>555</posx>
+      <posy>380</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="64">
+      <description>day 3 general weather label</description>
+      <include>control</include>
+      <posx>545</posx>
+      <posy>500</posy>
+      <label>-</label>
+      <font>font10</font>
+      <include>textcolorwhite</include>
+      <wrapmultiline>true</wrapmultiline>
+      <width>125</width>
+    </control>
+
+    <control type="image" id="65">
+      <description>day 3 icon</description>
+      <include>control</include>
+      <posx>565</posx>
+      <posy>410</posy>
+      <height>64</height>
+      <width>64</width>
+      <texture>background-myweather.png</texture>
+      <colorkey>FFFF00FF</colorkey>
+    </control>
+
+    <control type="image" id="1">
+      <description>image</description>
+      <include>button</include>
+      <posx>60</posx>
+      <posy>210</posy>
+      <width>60</width>
+      <height>66</height>
+      <info>MusicPlayer.Cover</info>
+      <visible>Player.HasMedia</visible>
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>Artist label</description>
+      <include>button</include>
+      <posx>60</posx>
+      <posy>278</posy>
+      <width>130</width>
+      <info>MusicPlayer.Artist</info>
+      <info>MusicPlayer.Title</info>
+      <info>MusicPlayer.Album</info>
+      <align>left</align>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+      <visible>Player.HasMedia</visible>
+    </control>
+
+    <control type="label" id="1">
+      <description>Time label</description>
+      <include>button</include>
+      <posx>130</posx>
+      <posy>250</posy>
+      <info>MusicPlayer.Time</info>
+      <align>left</align>
+      <font>font10</font>
+      <include>textcolorlightgrey</include>
+      <visible>Player.HasMedia</visible>
+    </control>
+
+    <control type="videowindow" id="1">
+      <description>video preview window</description>
+      <include>button</include>
+      <posx>60</posx>
+      <posy>210</posy>
+      <width>60</width>
+      <height>66</height>
+      <visible>Player.HasMedia</visible>
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>video info label</description>
+      <include>button</include>
+      <width>130</width>
+      <posx>60</posx>
+      <posy>278</posy>
+      <info>VideoPlayer.Title</info> 
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+      <visible>Player.HasMedia</visible>
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>video info label</description>
+      <include>button</include>
+      <width>100</width>
+      <posx>125</posx>
+      <posy>250</posy>
+      <info>VideoPlayer.Time</info>
+      <font>font13</font>
+      <include>textcolorlightgrey</include>
+      <visible>Player.HasMedia</visible>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Playing</visible>
+      <description>play logo</description>
+      <include>button</include>
+      <posx>130</posx>
+      <posy>207</posy>
+      <width>35</width>
+      <height>30</height>
+      <texture>music-play.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Paused</visible>
+      <description>Pause logo</description>
+      <include>button</include>
+      <posx>120</posx>
+      <posy>207</posy>
+      <height>30</height>
+      <texture>music-pause.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding2x</visible>
+      <description>FF logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-forward-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding4x</visible>
+      <description>FF logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-forward-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding8x</visible>
+      <description>FF logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-forward-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding16x</visible>
+      <description>FF logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-forward-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding32x</visible>
+      <description>FF logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-forward-32.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding2x</visible>
+      <description>RW logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-rewind-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding4x</visible>
+      <description>RW logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-rewind-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding8x</visible>
+      <description>RW logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-rewind-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding16x</visible>
+      <description>RW logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-rewind-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding32x</visible>
+      <description>RW logo</description>
+      <include>button</include>
+      <posx>117</posx>
+      <posy>207</posy>
+      <height>35</height>
+      <texture>music-rewind-32.png</texture>
+    </control>
+
+       <control type="progress" id="2300">
+         <description>progressbar</description>
+	 <visible>Player.HasMedia</visible>
+      <include>button</include>
+         <animation effect="fade" time="400">VisibleChange</animation>
+         <posx>60</posx> 
+         <posy>303</posy> 
+         <width>130</width> 
+         <height>7</height> 
+         <info>Player.Progress</info> 
+         <texturebg>progress_mid.png</texturebg> 
+         <midtexture>progress_mid_over.png</midtexture>
+         <lefttexture>-</lefttexture>
+         <righttexture>-</righttexture>
+         <overlaytexture>-</overlaytexture>
+       </control>
+
+  </controls>
+
+</window>

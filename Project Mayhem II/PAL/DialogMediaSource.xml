@@ -1,0 +1,155 @@
+<window id="129">
+	<defaultcontrol>10</defaultcontrol>
+	<include>dialog-effect</include>
+	<coordinates>
+	<system>1</system>
+	<posx>155</posx>
+	<posy>194</posy>
+	</coordinates>
+	<controls>
+
+	<control type="image" id="0">
+		<posx>-300</posx>
+		<posy>-300</posy>
+		<width>1300</width>
+		<height>1300</height>
+		<texture>black.png</texture>
+		<include>black</include>
+	</control>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<posx>-40</posx>
+		<posy>-15</posy>
+		<width>465</width>
+		<height>255</height>
+		<texture>dialog-invite.png</texture>
+	</control>
+
+	<control type="label" id="2">
+		<description>Heading Label</description>
+		<posx>10</posx>
+		<posy>-2</posy>
+		<width>420</width>
+		<align>left</align>
+		<label>-</label>
+		<font>special13</font>
+		<textcolor>DDced8da</textcolor>
+	</control>
+
+	<control type="label" id="0">
+		<description>path Label</description>
+		<posx>10</posx>
+		<posy>35</posy>
+		<width>420</width>
+		<align>left</align>
+		<font>font12</font>
+		<label>1021</label>
+	</control>
+
+	<control type="button" id="10">
+		<description>Path Button</description>
+		<posx>10</posx>
+		<posy>60</posy>
+		<width>320</width>
+		<height>32</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<textwidth>300</textwidth>
+		<aligny>center</aligny>
+		<texturefocus>input-focus.png</texturefocus>
+		<texturenofocus>input-nofocus.png</texturenofocus>
+		<label>-</label>
+		<onup>18</onup>
+		<onleft>11</onleft>
+		<onright>11</onright>
+		<ondown>12</ondown>
+	</control>
+
+	<control type="button" id="11">
+		<description>Browse Button</description>
+		<posx>333</posx>
+		<posy>60</posy>
+		<width>77</width>
+		<height>32</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<label>1024</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturenofocus>keyboard-btn.png</texturenofocus>
+		<texturefocus>keyboard-btn-focus.png</texturefocus>
+		<onup>18</onup>
+		<onleft>10</onleft>
+		<onright>10</onright>
+		<ondown>12</ondown>
+	</control>
+
+	<control type="label" id="0">
+		<description>Name Label</description>
+		<posx>10</posx>
+		<posy>105</posy>
+		<width>420</width>
+		<font>font12</font>
+		<label>1022</label>
+	</control>
+
+	<control type="button" id="12">
+		<description>Name Button</description>
+		<posx>10</posx>
+		<posy>130</posy>
+		<width>400</width>
+		<height>32</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<textwidth>380</textwidth>
+		<aligny>center</aligny>
+		<texturefocus>input-focus.png</texturefocus>
+		<texturenofocus>input-nofocus.png</texturenofocus>
+		<label>-</label>
+		<onup>10</onup>
+		<onleft>12</onleft>
+		<onright>12</onright>
+		<ondown>19</ondown>
+	</control>
+
+	<control type="button" id="18">
+		<description>Ok Button</description>
+		<posx>253</posx>
+		<posy>175</posy>
+		<width>77</width>
+		<height>32</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturenofocus>keyboard-btn.png</texturenofocus>
+		<texturefocus>keyboard-btn-focus.png</texturefocus>
+		<label>186</label>
+		<onup>12</onup>
+		<onleft>19</onleft>
+		<onright>19</onright>
+		<ondown>10</ondown>
+	</control>
+
+	<control type="button" id="19">
+		<description>Cancel Button</description>
+		<posx>333</posx>
+		<posy>175</posy>
+		<width>77</width>
+		<height>32</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturenofocus>keyboard-btn.png</texturenofocus>
+		<texturefocus>keyboard-btn-focus.png</texturefocus>
+		<label>222</label>
+		<onup>12</onup>
+		<onleft>18</onleft>
+		<onright>18</onright>
+		<ondown>10</ondown>
+	</control>
+
+	</controls>
+</window>

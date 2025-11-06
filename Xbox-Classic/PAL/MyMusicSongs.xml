@@ -1,0 +1,243 @@
+<window id="501">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<include>IPodGirl_Image</include>
+		<include>XBMC_Logo_Image</include>
+		<control type="label">
+			<description>my Music text label</description>
+			<posx>242</posx>
+			<posy>70</posy>
+			<label>2</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="label" id="12">
+			<description>number of files text label</description>
+			<posx>225</posx>
+			<posy>525</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>yellow</textcolor>
+			<include>Slide_From_Right_Animation</include>
+			<animation effect="slide" time="150" start="0,0" end="370,0" delay="0" condition="Control.IsVisible(54)">Conditional</animation>
+		</control>
+		<!-- -->
+		<control type="button" id="2001">
+			<description>Dummy Up Down transitions Buttons</description>
+			<posx>5</posx>
+			<posy>120</posy>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(50)</onfocus>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>6</onup>
+			<ondown>3</ondown>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+		<control type="button" id="2002">
+			<description>Dummy left right transitions Buttons</description>
+			<posx>5</posx>
+			<posy>120</posy>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(50)</onfocus>
+			<onleft>6</onleft>
+			<onright>3</onright>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<visible>!Control.IsVisible(54)</visible>
+		</control>
+		<control type="group" id="9000">
+			<include>Slide_From_Left_Animation</include>
+			<posx>45</posx>
+			<control type="image">
+				<description>panel</description>
+				<posx>0</posx>
+				<posy>115</posy>
+				<height>250</height>
+				<width>150</width>
+				<texture>panel.png</texture>
+				<visible>!Control.IsVisible(54)</visible>
+			</control>
+			<control type="image">
+				<description>panel</description>
+				<posx>0</posx>
+				<posy>115</posy>
+				<height>45</height>
+				<width>630</width>
+				<texture>panel.png</texture>
+				<visible>Control.IsVisible(54)</visible>
+			</control>
+			<control type="image">
+				<description>Middle panel Bar</description>
+				<posx>0</posx>
+				<posy>190</posy>
+				<height>20</height>
+				<width>150</width>
+				<texture>middle-bar.png</texture>
+				<visible>!Control.IsVisible(54)</visible>
+			</control>
+			<control type="image">
+				<description>Fake Button 2 Back image</description>
+				<posx>5</posx>
+				<posy>120</posy>
+				<width>140</width>
+				<height>33</height>
+				<texture>button-nofocus.png</texture>
+				<visible>Control.IsVisible(54)</visible>
+			</control>
+			<control type="button" id="2">
+				<description>view as icons button</description>
+				<posx>5</posx>
+				<posy>120</posy>
+				<label>100</label>
+				<font>font13</font>
+				<onleft>2002</onleft>
+				<onright>2002</onright>
+				<onup>2001</onup>
+				<ondown>2001</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="3">
+				<description>sort by button</description>
+				<posx>5</posx>
+				<posy>157</posy>
+				<label>103</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+				<texturenofocus>-</texturenofocus>
+				<visible>!Control.IsVisible(54)</visible>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>sort asc</description>
+				<posx>130</posx>
+				<posy>167</posy>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+				<visible>!Control.IsVisible(54)</visible>
+			</control>
+			<control type="button" id="3">
+				<description>sort by button</description>
+				<posx>155</posx>
+				<posy>120</posy>
+				<label>103</label>
+				<font>font13</font>
+				<onleft>2</onleft>
+				<onright>4</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<visible>Control.IsVisible(54)</visible>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>sort asc</description>
+				<posx>275</posx>
+				<posy>130</posy>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>99</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<visible>Control.IsVisible(54)</visible>
+			</control>
+			<control type="radiobutton" id="99">
+				<description>Library button</description>
+				<posx>5</posx>
+				<posy>214</posy>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<font>font13</font>
+				<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+				<onclick>SetFocus(99)</onclick>
+				<selected>Window.IsVisible(mymusiclibrary)</selected>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>6</ondown>
+				<visible>!Control.IsVisible(54)</visible>
+			</control>
+			<control type="radiobutton" id="99">
+				<description>Library button</description>
+				<posx>335</posx>
+				<posy>120</posy>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<font>font13</font>
+				<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+				<onclick>SetFocus(99)</onclick>
+				<selected>Window.IsVisible(mymusiclibrary)</selected>
+				<onleft>4</onleft>
+				<onright>6</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<visible>Control.IsVisible(54)</visible>
+			</control>
+			<control type="radiobutton" id="6">
+				<description>Randomize button</description>
+				<posx>5</posx>
+				<posy>251</posy>
+				<label>13319</label>
+				<onclick>XBMC.PlayerControl(Random)</onclick>
+				<selected>Playlist.IsRandom</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>99</onup>
+				<ondown>2</ondown>
+				<texturenofocus>-</texturenofocus>
+				<visible>!Control.IsVisible(54)</visible>
+			</control>
+			<control type="radiobutton" id="6">
+				<description>Randomize button</description>
+				<posx>485</posx>
+				<posy>120</posy>
+				<label>13319</label>
+				<onclick>XBMC.PlayerControl(Random)</onclick>
+				<selected>Playlist.IsRandom</selected>
+				<onleft>99</onleft>
+				<onright>2</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<visible>Control.IsVisible(54)</visible>
+			</control>
+		</control>
+		
+		<include>ListItemIcon</include>
+		<include>OldCommonListView</include>
+		<include>MusicCommonListView</include>
+		<include>3D_Cover_View</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>AllViewCommonThumbSmall</include>
+		<include>MusicCoverViewLarge</include>
+		<include>MusicViewCommon_BigList</include>
+		<include>AllCommonPageControls</include>
+		<include>Fake_Music_Overlay</include>
+	</controls>
+</window>

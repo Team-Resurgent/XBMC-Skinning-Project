@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!--  strings 31000 thru 31999 reserved for skins  -->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">Admin. de Archivos</string>
+  <string id="31001">Info</string>
+  <string id="31002">Reiniciar</string>
+  <string id="31003">Analizar</string>
+  <string id="31004">Cambiar</string>
+  <string id="31005">Misc</string>
+  <string id="31006">Visual</string>
+  <string id="31007">Encender/Apagar</string>
+  <string id="31008">Sin Clasificar</string>
+  <string id="31009">Mirar tus</string> <!-- usado para Peliculas -->
+  <string id="31010">Mirar tus</string> <!-- usado para Series -->
+  <string id="31011">Mirar tus</string> <!-- usado para Videos -->
+  <string id="31012">Escucha tu</string>
+  <string id="31013">Ver tus</string>
+  <string id="31014">Usa tus</string>
+  <string id="31015">Analiza</string>
+  <string id="31016">Configurar</string>
+  <string id="31017">Energia</string>
+  <string id="31018">Informacion Basica</string>
+  <string id="31019">Reproducir el</string>
+  <string id="31020">Analiza el</string>
+  <string id="31021">Por</string>
+  <string id="31022">Agregado Recientemente</string>
+  <string id="31023">Últimos</string>
+  <string id="31024">Página</string>
+  <string id="31025">Items</string>
+
+  <!-- Options Menu -->
+  <string id="31100">Info. del Cartel</string>
+  <string id="31101">Ordenar Por</string>
+  <string id="31102">Opciones de Configuracion</string>
+  <string id="31103">Mostrador</string>
+  <string id="31104">Ver Reloj Grande</string>
+  <string id="31105">Cascada</string>
+  <string id="31106">Exhibicion</string>
+  <string id="31107">Lista Corta</string>
+  <string id="31108">Exposicion</string>
+  <string id="31109">Lista Grande</string>
+
+  <!-- Settings -->
+  <string id="31200">Mostrar Sinopsis</string>
+  <string id="31201">Ultimo Actualizado</string>
+  <string id="31202">Carpeta de Fondo</string>
+  <string id="31203">Fondos</string>
+  <string id="31204">Menu de Opciones</string>
+  <string id="31205">Ocultar</string>
+  <string id="31206">Reloj</string>
+  <string id="31207">Ocultar Tiempo en Inicio</string>
+  <string id="31208">Deshabilitar</string>
+  <string id="31209">Configurar Ajustes para</string>
+  <string id="31210">Menu</string>
+  <string id="31211">Ocultar sinopsis cuando se muestre Video</string>
+  <string id="31212">Ocultar Superposicion de Vistas</string>
+  <string id="31213">Ocultar Miniatura</string>
+  <string id="31214">Ver Critica</string>
+  <string id="31215">Ver Tipo Contenido</string>
+  <string id="31216">Ocultar Contador</string>
+  <string id="31217">Usar Retrato en Miniatura para TV</string>
+  <string id="31218">Mostrar OSD Video Minimalista</string>
+  <string id="31219">Ocultar Fondo de Ruido Blanco</string>
+  <string id="31220">Usar Miniaturas de Meteorologia Animadas</string>
+  <string id="31221">Ocultar los últimos videos</string>
+
+  <!-- Video -->
+  <string id="31300">N/D</string>
+  <string id="31301">Miniatura</string>
+  <string id="31302">Fanart</string>
+  <string id="31303">Temporadas</string>
+  <string id="31304">Tiempo Aprox de final.</string>
+
+  <!-- Music -->
+  <string id="31400">Terminado</string>
+  <string id="31401">Actual</string>
+  <string id="31402">Seleccionar Visualizacion</string>
+  <string id="31403">Visualizaciones Preestablecidas</string>
+  <string id="31404">Ajustes de Visualizacion</string>
+  <string id="31405">Letras</string>
+  <string id="31406">Establecer Ubicacion de Letras</string>
+  <string id="31407">Abrir playlist</string>
+  <string id="31408">Salvar playlist</string> 
+  <string id="31409">Cerrar playlist</string> 
+  <string id="31410">Ficheros de música del sistema</string> 
+  <string id="31411">Playlist actual</string>
+
+  <!-- Dialogs -->
+  <string id="31500">Elegir Perfil</string>
+  <string id="31501">Silenciado</string>
+  <string id="31502">Crear</string>
+  <string id="31503">Codec</string>
+
+</strings>

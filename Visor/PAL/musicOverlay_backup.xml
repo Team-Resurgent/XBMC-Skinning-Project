@@ -1,0 +1,110 @@
+ <window>
+  <id>2004</id> 
+  <defaultcontrol>2</defaultcontrol> 
+ <controls>
+
+<control>
+			<description>Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>486</posY>
+			<width>720</width>
+			<height>90</height>
+			<texture>overlay.png</texture>
+		</control>
+
+
+<control>
+  <description>music rectangle</description> 
+  <type>image</type> 
+  <id>0</id> 
+  <posX>60</posX> 
+  <posY>436</posY> 
+  <width>104</width> 
+  <height>104</height> 
+  <texture>blue_rectangle_music.png</texture> 
+  </control>
+
+
+ <control>
+  <description>video rectangle</description> 
+  <type>image</type> 
+  <id>1</id> 
+  <posX>60</posX> 
+  <posY>436</posY> 
+  <width>104</width> 
+  <height>104</height> 
+  <texture>music.jpg</texture> 
+ </control>
+
+
+ <control>
+  <description>play time label</description> 
+  <type>label</type> 
+  <id>2</id> 
+  <posX>560</posX> 
+  <posY>510</posY> 
+  <label>-</label> 
+  <align>left</align> 
+  <font>font16</font> 
+  <textcolor>FFB2D4F5</textcolor> 
+  </control>
+ <control>
+  <description>play logo</description> 
+  <type>image</type> 
+  <id>3</id> 
+  <posX>180</posX> 
+  <posY>507</posY> 
+  <width>30</width> 
+  <height>30</height> 
+  <texture>music-play.png</texture> 
+  <colorkey>0</colorkey> 
+  <colordiffuse>ffffffff</colordiffuse> 
+  </control>
+ <control>
+  <description>Pause logo</description> 
+  <type>image</type> 
+  <id>4</id> 
+  <posX>180</posX> 
+  <posY>507</posY> 
+  <width>30</width> 
+  <height>30</height> 
+  <texture>music-pause.png</texture> 
+  <colorkey>0</colorkey> 
+  <colordiffuse>ffffffff</colordiffuse> 
+  </control>
+ <control>
+  <description>FF logo</description> 
+  <type>image</type> 
+  <id>7</id> 
+  <posX>180</posX> 
+  <posY>507</posY> 
+  <width>30</width> 
+  <height>30</height> 
+  <texture>music-forward.png</texture> 
+  </control>
+ <control>
+  <description>RW logo</description> 
+  <type>image</type> 
+  <id>8</id> 
+  <posX>180</posX> 
+  <posY>507</posY> 
+  <width>30</width> 
+  <height>30</height> 
+  <texture>music-rewind.png</texture> 
+  </control>
+ <control>
+  <description>album/artist/genre etc info label</description> 
+  <type>fadelabel</type> 
+  <id>5</id> 
+  <posX>240</posX> 
+  <posY>510</posY> 
+  <width>300</width> 
+  <height>40</height>
+  <align>left</align> 
+  <font>font16</font> 
+  <textcolor>FFB2D4F5</textcolor> 
+  </control>
+  </controls>
+  </window>

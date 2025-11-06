@@ -1,0 +1,241 @@
+<window type="buttonmenu" id="111">
+	<defaultcontrol>2</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>230</posy>
+	</coordinates>
+	<controls>
+		<!-- Without master lock -->
+		<control type="image" id="0">
+			<posx>-300</posx>
+			<posy>-300</posy>
+			<width>1320</width>
+			<height>1176</height>
+			<colordiffuse>CCFFFFFF</colordiffuse>
+			<texture>black.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>108</height>
+			<texture>SM_Back.png</texture>
+		</control>
+		<control type="group">
+			<animation effect="slide" time="0" end="-30,0" condition="System.HasLocks">Conditional</animation>
+			<control type="group">
+				<animation effect="slide" time="0" end="-30,0" condition="System.HasLoginScreen">Conditional</animation>
+				<control type="button" id="1">
+					<description>system info button</description>
+					<posx>240</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Info_Sel.png</texturefocus>
+					<texturenofocus>SM_Info.png</texturenofocus>
+					<onclick>XBMC.ActivateWindow(7)</onclick>
+					<onleft>6</onleft>
+					<onright>2</onright>
+					<onup>1</onup>
+					<ondown>1</ondown>
+					<font>-</font>
+					<label>130</label>
+				</control>
+				<control type="button" id="2">
+					<description>shutdown button</description>
+					<posx>300</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Shutdown_Sel.png</texturefocus>
+					<texturenofocus>SM_Shutdown.png</texturenofocus>
+					<onclick>xbmc.shutdown()</onclick>
+					<onleft>1</onleft>
+					<onright>3</onright>
+					<onup>201</onup>
+					<ondown>205</ondown>
+					<font>-</font>
+					<label>13005</label>
+				</control>
+				<control type="button" id="201">
+					<description>30min ShutdownTimer button</description>
+					<posx>300</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Shutdown_Sel.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),30)</onclick>
+					<onleft>1</onleft>
+					<onright>3</onright>
+					<onup>202</onup>
+					<ondown>2</ondown>
+					<font>-</font>
+					<label>20147</label>
+				</control>
+				<control type="button" id="202">
+					<description>60min ShutdownTimer button</description>
+					<posx>300</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Shutdown_Sel.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),60)</onclick>
+					<onleft>1</onleft>
+					<onright>3</onright>
+					<onup>203</onup>
+					<ondown>201</ondown>
+					<font>-</font>
+					<label>20148</label>
+				</control>
+				<control type="button" id="203">
+					<description>120min ShutdownTimer button</description>
+					<posx>300</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Shutdown_Sel.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),120)</onclick>
+					<onleft>1</onleft>
+					<onright>3</onright>
+					<onup>204</onup>
+					<ondown>202</ondown>
+					<font>-</font>
+					<label>20149</label>
+				</control>
+				<control type="button" id="204">
+					<description>Custom ShutdownTimer button</description>
+					<posx>300</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Shutdown_Sel.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown())</onclick>
+					<onleft>1</onleft>
+					<onright>3</onright>
+					<onup>205</onup>
+					<ondown>203</ondown>
+					<font>-</font>
+					<label>20150</label>
+				</control>
+				<control type="button" id="205">
+					<description>Cancel ShutdownTimer button</description>
+					<posx>300</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Shutdown_Sel.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					<onleft>1</onleft>
+					<onright>3</onright>
+					<onup>2</onup>
+					<ondown>204</ondown>
+					<font>-</font>
+					<label>20151</label>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+				</control>
+				<control type="button" id="3">
+					<description>dashboard button</description>
+					<posx>360</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Dash_Sel.png</texturefocus>
+					<texturenofocus>SM_Dash.png</texturenofocus>
+					<onclick>xbmc.dashboard()</onclick>
+					<onleft>2</onleft>
+					<onright>4</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<font>-</font>
+					<label>13006</label>
+				</control>
+				<control type="button" id="4">
+					<description>reboot button</description>
+					<posx>420</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Restart_Sel.png</texturefocus>
+					<texturenofocus>SM_Restart.png</texturenofocus>
+					<onclick>xbmc.Reset()</onclick>
+					<onleft>3</onleft>
+					<onright>5</onright>
+					<onup>104</onup>
+					<ondown>104</ondown>
+					<font>-</font>
+					<label>13313</label>
+				</control>
+				<control type="button" id="104">
+					<description>restart xbmc button</description>
+					<posx>420</posx>
+					<posy>15</posy>
+					<width>60</width>
+					<height>65</height>
+					<texturefocus>SM_Restart_Sel.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>xbmc.RestartApp()</onclick>
+					<onleft>3</onleft>
+					<onright>5</onright>
+					<onup>4</onup>
+					<ondown>4</ondown>
+					<font>-</font>
+					<label>$LOCALIZE[13313] XBMC</label>
+				</control>
+				<control type="label" id="3100">
+					<description>label control</description>
+					<posx>230</posx>
+					<posy>35</posy>
+					<height>20</height>
+					<align>right</align>
+					<font>font18</font>
+				</control>
+			</control>
+			<control type="button" id="5">
+				<description>logoff button</description>
+				<posx>450</posx>
+				<posy>15</posy>
+				<width>60</width>
+				<height>65</height>
+				<texturefocus>SM_Logoff_Sel.png</texturefocus>
+				<texturenofocus>SM_Logoff.png</texturenofocus>
+				<onclick>system.logoff</onclick>
+				<onleft>4</onleft>
+				<onright>6</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<font>-</font>
+				<label>20126</label>
+				<visible>System.HasLoginScreen</visible>
+			</control>
+		</control>
+		<control type="togglebutton" id="6">
+			<description>Master Lock button</description>
+			<animation effect="slide" time="0" end="30,0" condition="System.HasLoginScreen">Conditional</animation>
+			<posx>450</posx>
+			<posy>15</posy>
+			<width>60</width>
+			<height>65</height>
+			<texturefocus>SM_Masterlock_Sel.png</texturefocus>
+			<texturenofocus>SM_Masterlock.png</texturenofocus>
+			<alttexturefocus>SM_NoMasterlock_Sel.png</alttexturefocus>
+			<alttexturenofocus>SM_NoMasterlock.png</alttexturenofocus>
+			<onclick>xbmc.mastermode</onclick>
+			<font>-</font>
+			<label>20045</label>
+			<altlabel>20046</altlabel>
+			<usealttexture>System.IsMaster</usealttexture>
+			<onleft>5</onleft>
+			<onright>1</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<visible>System.HasLocks</visible>
+		</control>
+	</controls>
+</window>

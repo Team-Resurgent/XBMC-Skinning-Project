@@ -1,0 +1,350 @@
+private Boolean AddSpinButton(XSpinButtonCollection xb, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xb.Count; i++)
+			{
+				if (xb[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xb[i].Description);
+					xwriter.WriteElementString ("type","spinbutton");
+					xwriter.WriteElementString ("id",Convert.ToString(xb[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xb[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xb[i].Ypos));
+					xwriter.WriteElementString ("width",Convert.ToString(xb[i].XWidth));
+					xwriter.WriteElementString ("height",Convert.ToString(xb[i].YHieght));
+					xwriter.WriteElementString ("label", getLabel.GetValueFromLabel(xb[i].Labeltext));
+					xwriter.WriteElementString ("font",xb[i].Font);
+					xwriter.WriteElementString ("hyperlink",Convert.ToString(xb[i].Hyperlink));
+					xwriter.WriteElementString ("textureUpFocus",Path.GetFileName(xb[i].Picture["textureUpFocus"].Path));
+					xwriter.WriteElementString ("textureDownFocus",Path.GetFileName(xb[i].Picture["textureDownFocus"].Path));
+					xwriter.WriteElementString ("textureFocus",Path.GetFileName(xb[i].Picture["textureFocus"].Path));
+					xwriter.WriteElementString ("textureNoFocus",Path.GetFileName(xb[i].Picture["textureNoFocus"].Path));
+					xwriter.WriteElementString ("textcolor",xb[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("colorkey",xb[i].XColor["colorkey"].Color);
+					xwriter.WriteElementString ("disabledcolor",xb[i].XColor["disabledcolor"].Color);
+					xwriter.WriteElementString ("onleft",Convert.ToString(xb[i].Left));
+					xwriter.WriteElementString ("onright",Convert.ToString(xb[i].Right));
+					xwriter.WriteElementString ("onup",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("ondown",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("textOffsetX",Convert.ToString(xb[i].XOffset));
+					xwriter.WriteElementString ("textOffsetY",Convert.ToString(xb[i].YOffset));
+					xwriter.WriteEndElement();
+
+					for (int j = 0; j < xb[i].Picture.Count; j++)
+					{
+						if (xb[i].Picture[j].Path == projectpath + @"media\" + Path.GetFileName(xb[i].Picture[j].Path))
+						{}
+						else
+						{
+							try{File.Copy(xb[i].Picture[j].Path,projectpath + @"Media\" + Path.GetFileName(xb[i].Picture[j].Path),true);}
+							catch(System.IO.IOException){return(false);}
+						}
+					}
+				}
+			}	
+			return (true);
+		}
+
+		private Boolean AddButtonM(XButtonMCollection xb, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xb.Count; i++)
+			{
+				if (xb[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xb[i].Description);
+					xwriter.WriteElementString ("type","buttonM");
+					xwriter.WriteElementString ("id",Convert.ToString(xb[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xb[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xb[i].Ypos));
+					xwriter.WriteElementString ("width",Convert.ToString(xb[i].XWidth));
+					xwriter.WriteElementString ("height",Convert.ToString(xb[i].YHieght));
+					xwriter.WriteElementString ("label", getLabel.GetValueFromLabel(xb[i].Labeltext));
+					xwriter.WriteElementString ("font",xb[i].Font);
+					xwriter.WriteElementString ("hyperlink",Convert.ToString(xb[i].Hyperlink));
+					xwriter.WriteElementString ("textureFocus",Path.GetFileName(xb[i].Picture["textureFocus"].Path));
+					xwriter.WriteElementString ("textureNoFocus",Path.GetFileName(xb[i].Picture["textureNoFocus"].Path));
+					xwriter.WriteElementString ("bitmaps",xb[i].Picture.Count.ToString());
+					xwriter.WriteElementString ("textcolor",xb[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("colorkey",xb[i].XColor["colorkey"].Color);
+					xwriter.WriteElementString ("disabledcolor",xb[i].XColor["disabledcolor"].Color);
+					xwriter.WriteElementString ("onleft",Convert.ToString(xb[i].Left));
+					xwriter.WriteElementString ("onright",Convert.ToString(xb[i].Right));
+					xwriter.WriteElementString ("onup",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("ondown",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("textOffsetX",Convert.ToString(xb[i].XOffset));
+					xwriter.WriteElementString ("textOffsetY",Convert.ToString(xb[i].YOffset));
+					xwriter.WriteEndElement();
+
+					for (int j = 0; j < xb[i].Picture.Count; j++)
+					{
+						if (xb[i].Picture[j].Path == projectpath + @"media\" + Path.GetFileName(xb[i].Picture[j].Path))
+						{}
+						else
+						{
+							try{File.Copy(xb[i].Picture[j].Path,projectpath + @"Media\" + Path.GetFileName(xb[i].Picture[j].Path),true);}
+							catch(System.IO.IOException){return(false);}
+						}
+					}
+				}	
+			}
+			return (true);
+		}
+
+		private Boolean AddButtonT(XButtonTCollection xb, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xb.Count; i++)
+			{
+				if (xb[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xb[i].Description);
+					xwriter.WriteElementString ("type","togglebutton");
+					xwriter.WriteElementString ("id",Convert.ToString(xb[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xb[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xb[i].Ypos));
+					xwriter.WriteElementString ("width",Convert.ToString(xb[i].XWidth));
+					xwriter.WriteElementString ("height",Convert.ToString(xb[i].YHieght));
+					xwriter.WriteElementString ("label", getLabel.GetValueFromLabel(xb[i].Labeltext));
+					xwriter.WriteElementString ("font",xb[i].Font);
+					xwriter.WriteElementString ("hyperlink",Convert.ToString(xb[i].Hyperlink));
+					xwriter.WriteElementString ("textureFocus",Path.GetFileName(xb[i].Picture["textureFocus"].Path));
+					xwriter.WriteElementString ("textureNoFocus",Path.GetFileName(xb[i].Picture["textureNoFocus"].Path));
+					xwriter.WriteElementString ("AltTextureFocus",Path.GetFileName(xb[i].Picture["AltTextureFocus"].Path));
+					xwriter.WriteElementString ("AltTextureNoFocus",Path.GetFileName(xb[i].Picture["AltTextureNoFocus"].Path));
+					xwriter.WriteElementString ("textcolor",xb[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("colorkey",xb[i].XColor["colorkey"].Color);
+					xwriter.WriteElementString ("disabledcolor",xb[i].XColor["disabledcolor"].Color);
+					xwriter.WriteElementString ("onleft",Convert.ToString(xb[i].Left));
+					xwriter.WriteElementString ("onright",Convert.ToString(xb[i].Right));
+					xwriter.WriteElementString ("onup",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("ondown",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("textOffsetX",Convert.ToString(xb[i].XOffset));
+					xwriter.WriteElementString ("textOffsetY",Convert.ToString(xb[i].YOffset));
+					xwriter.WriteEndElement();
+
+					for (int j = 0; j < xb[i].Picture.Count; j++)
+					{
+						if (xb[i].Picture[j].Path == projectpath + @"media\" + Path.GetFileName(xb[i].Picture[j].Path))
+						{}
+						else
+						{
+							try{File.Copy(xb[i].Picture[j].Path,projectpath + @"Media\" + Path.GetFileName(xb[i].Picture[j].Path),true);}
+							catch(System.IO.IOException){return(false);}
+						}
+					}
+				}
+			}	
+			return (true);
+		}
+
+
+private Boolean AddRam(XRamCollection xb, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xb.Count; i++)
+			{
+				if (xb[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xb[i].Description);
+					xwriter.WriteElementString ("type","ram");
+					xwriter.WriteElementString ("id",Convert.ToString(xb[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xb[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xb[i].Ypos));
+					xwriter.WriteElementString ("width",Convert.ToString(xb[i].XWidth));
+					xwriter.WriteElementString ("height",Convert.ToString(xb[i].YHieght));
+					xwriter.WriteElementString ("label", getLabel.GetValueFromLabel(xb[i].Labeltext));
+					xwriter.WriteElementString ("font",xb[i].Font);
+					xwriter.WriteElementString ("gfxThumbDefault",Path.GetFileName(xb[i].Picture[0].Path));
+					xwriter.WriteElementString ("gfxThumbWidth",xb[i].Picture[0].Picwidth.ToString());
+					xwriter.WriteElementString ("gfxThumbHeight",xb[i].Picture[0].Pichieght.ToString());
+					xwriter.WriteElementString ("gfxThumbSpaceX",xb[i].Picture[0].Spacex.ToString());
+					xwriter.WriteElementString ("gfxThumbSpaceY",xb[i].Picture[0].Spacey.ToString());
+					xwriter.WriteElementString ("textSpaceY",xb[i].YOffset.ToString());
+					xwriter.WriteElementString ("textSpaceX",xb[i].XOffset.ToString());
+					xwriter.WriteElementString ("titlecolor",xb[i].XColor["titlecolor"].Color);
+					xwriter.WriteElementString ("textcolor",xb[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("selectedColor",xb[i].XColor["selectedColor"].Color);
+					xwriter.WriteEndElement();
+
+					for (int j = 0; j < xb[i].Picture.Count; j++)
+					{
+						if (xb[i].Picture[j].Path == projectpath + @"media\" + Path.GetFileName(xb[i].Picture[j].Path))
+						{}
+						else
+						{
+							try{File.Copy(xb[i].Picture[j].Path,projectpath + @"Media\" + Path.GetFileName(xb[i].Picture[j].Path),true);}
+							catch(System.IO.IOException){return(false);}
+						}
+					}
+				}
+			}	
+			return (true);
+		}
+
+		private Boolean AddSlider(XSliderCollection xl, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xl.Count; i++)
+			{
+				if (xl[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xl[i].Description);
+					xwriter.WriteElementString ("type","slider");
+					xwriter.WriteElementString ("id",Convert.ToString(xl[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xl[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xl[i].Ypos));
+					xwriter.WriteElementString ("width",Convert.ToString(xl[i].XWidth));
+					xwriter.WriteElementString ("height",Convert.ToString(xl[i].YHieght));
+					xwriter.WriteElementString ("label", getLabel.GetValueFromLabel(xl[i].Labeltext));
+					xwriter.WriteElementString ("font",xl[i].Font);
+					xwriter.WriteElementString ("textcolor",xl[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("disabledcolor",xl[i].XColor["disabledcolor"].Color);
+					xwriter.WriteElementString ("controlOffsetX",Convert.ToString(xl[i].XOffset));
+					xwriter.WriteElementString ("controlOffsetX",Convert.ToString(xl[i].YOffset));
+
+					xwriter.WriteEndElement();
+				}	
+			}
+			return (true);
+		}
+
+
+private Boolean AddTextArea(XtextAreaCollection xb, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xb.Count; i++)
+			{
+				if (xb[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xb[i].Description);
+					xwriter.WriteElementString ("type","textbox");
+					xwriter.WriteElementString ("id",Convert.ToString(xb[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xb[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xb[i].Ypos));
+					xwriter.WriteElementString ("width",Convert.ToString(xb[i].XWidth));
+					xwriter.WriteElementString ("height",Convert.ToString(xb[i].YHieght));
+					xwriter.WriteElementString ("spinWidth",Convert.ToString(xb[i].Picture["textureUp"].Picwidth));
+					xwriter.WriteElementString ("spinHeight",Convert.ToString(xb[i].Picture["textureUp"].Pichieght));
+					xwriter.WriteElementString ("spinPosX",Convert.ToString(xb[i].Picture["textureUp"].Picxpos));
+					xwriter.WriteElementString ("spinPosY",Convert.ToString(xb[i].Picture["textureUp"].Picypos));
+					xwriter.WriteElementString ("label", getLabel.GetValueFromLabel(xb[i].Labeltext));
+					xwriter.WriteElementString ("font",xb[i].Font);
+					xwriter.WriteElementString ("hyperlink",Convert.ToString(xb[i].Hyperlink));
+					xwriter.WriteElementString ("textureUp",Path.GetFileName(xb[i].Picture["textureUp"].Path));
+					xwriter.WriteElementString ("textureDown",Path.GetFileName(xb[i].Picture["textureDown"].Path));
+					xwriter.WriteElementString ("textureUpFocus",Path.GetFileName(xb[i].Picture["textureUpFocus"].Path));
+					xwriter.WriteElementString ("textureDownFocus",Path.GetFileName(xb[i].Picture["textureDownFocus"].Path));
+					xwriter.WriteElementString ("textureFocus",Path.GetFileName(xb[i].Picture["textureFocus"].Path));
+					xwriter.WriteElementString ("textureNoFocus",Path.GetFileName(xb[i].Picture["textureNoFocus"].Path));
+					xwriter.WriteElementString ("image",Path.GetFileName(xb[i].Picture["image"].Path));
+					//				xwriter.WriteElementString ("selectedColor",xb[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("textcolor",xb[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("colordiffuse",xb[i].XColor["colordiffuse"].Color);
+					xwriter.WriteElementString ("spinColor",xb[i].XColor["spinColor"].Color);
+					xwriter.WriteElementString ("onleft",Convert.ToString(xb[i].Left));
+					xwriter.WriteElementString ("onright",Convert.ToString(xb[i].Right));
+					xwriter.WriteElementString ("onup",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("ondown",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("textOffsetX",Convert.ToString(xb[i].XOffset));
+					xwriter.WriteElementString ("textOffsetY",Convert.ToString(xb[i].YOffset));
+					xwriter.WriteEndElement();
+
+					for (int j = 0; j < xb[i].Picture.Count; j++)
+					{
+						if (xb[i].Picture[j].Path == projectpath + @"media\" + Path.GetFileName(xb[i].Picture[j].Path))
+						{}
+						else
+						{
+							try{File.Copy(xb[i].Picture[j].Path,projectpath + @"Media\" + Path.GetFileName(xb[i].Picture[j].Path),true);}
+							catch(System.IO.IOException){return(false);}
+						}
+					}
+				}	
+			}
+			return (true);
+		}
+
+		private Boolean AddProgress(XProgressCollection xb, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xb.Count; i++)
+			{
+				if (xb[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xb[i].Description);
+					xwriter.WriteElementString ("type","proress");
+					xwriter.WriteElementString ("id",Convert.ToString(xb[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xb[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xb[i].Ypos));
+					//				xwriter.WriteElementString ("width",Convert.ToString(xb[i].XWidth));
+					//				xwriter.WriteElementString ("height",Convert.ToString(xb[i].YHieght));
+					xwriter.WriteElementString ("texturebg",Path.GetFileName(xb[i].Picture["texturebg"].Path));
+					xwriter.WriteElementString ("lefttexture",Path.GetFileName(xb[i].Picture["lefttexture"].Path));
+					xwriter.WriteElementString ("midtexture",Path.GetFileName(xb[i].Picture["midtexture"].Path));
+					xwriter.WriteElementString ("righttexture",Path.GetFileName(xb[i].Picture["righttexture"].Path));
+					//				xwriter.WriteElementString ("selectedColor",xb[i].XColor["textcolor"].Color);
+					//				xwriter.WriteElementString ("textcolor",xb[i].XColor["textcolor"].Color);
+					//				xwriter.WriteElementString ("colordiffuse",xb[i].XColor["colordiffuse"].Color);
+					xwriter.WriteEndElement();
+
+					for (int j = 0; j < xb[i].Picture.Count; j++)
+					{
+						if (xb[i].Picture[j].Path == projectpath + @"media\" + Path.GetFileName(xb[i].Picture[j].Path))
+						{}
+						else
+						{
+							try{File.Copy(xb[i].Picture[j].Path,projectpath + @"Media\" + Path.GetFileName(xb[i].Picture[j].Path),true);}
+							catch(System.IO.IOException){return(false);}
+						}
+					}
+				}
+			}	
+			return (true);
+		}
+
+private Boolean AddRadio(XRadioCollection xb, XmlTextWriter xwriter, String projectpath)
+		{
+			for (int i = 0 ; i < xb.Count; i++)
+			{
+				if (xb[i].Save)
+				{
+					xwriter.WriteStartElement ("Control");
+					xwriter.WriteElementString ("description",xb[i].Description);
+					xwriter.WriteElementString ("type","radiobutton");
+					xwriter.WriteElementString ("id",Convert.ToString(xb[i].ID));
+					xwriter.WriteElementString ("posX",Convert.ToString(xb[i].Xpos));
+					xwriter.WriteElementString ("posY",Convert.ToString(xb[i].Ypos));
+					xwriter.WriteElementString ("width",Convert.ToString(xb[i].XWidth));
+					xwriter.WriteElementString ("height",Convert.ToString(xb[i].YHieght));;
+					xwriter.WriteElementString ("label", getLabel.GetValueFromLabel(xb[i].Labeltext));
+					xwriter.WriteElementString ("font",xb[i].Font);
+					xwriter.WriteElementString ("textureRadioFocus",Path.GetFileName(xb[i].Picture["textureRadioFocus"].Path));
+					xwriter.WriteElementString ("textureRadioNoFocus",Path.GetFileName(xb[i].Picture["textureRadioNoFocus"].Path));
+					xwriter.WriteElementString ("textureFocus",Path.GetFileName(xb[i].Picture["textureFocus"].Path));
+					xwriter.WriteElementString ("textureNoFocus",Path.GetFileName(xb[i].Picture["textureNoFocus"].Path));
+					xwriter.WriteElementString ("textcolor",xb[i].XColor["textcolor"].Color);
+					xwriter.WriteElementString ("disabledcolor",xb[i].XColor["disabledcolor"].Color);
+					xwriter.WriteElementString ("colordiffuse",xb[i].XColor["colordiffuse"].Color);
+					xwriter.WriteElementString ("onleft",Convert.ToString(xb[i].Left));
+					xwriter.WriteElementString ("onright",Convert.ToString(xb[i].Right));
+					xwriter.WriteElementString ("onup",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("ondown",Convert.ToString(xb[i].Up));
+					xwriter.WriteElementString ("textOffsetX",Convert.ToString(xb[i].XOffset));
+					xwriter.WriteElementString ("textOffsetY",Convert.ToString(xb[i].YOffset));
+					xwriter.WriteEndElement();
+
+					for (int j = 0; j < xb[i].Picture.Count; j++)
+					{
+						if (xb[i].Picture[j].Path == projectpath + @"media\" + Path.GetFileName(xb[i].Picture[j].Path))
+						{}
+						else
+						{
+							try{File.Copy(xb[i].Picture[j].Path,projectpath + @"Media\" + Path.GetFileName(xb[i].Picture[j].Path),true);}
+							catch(System.IO.IOException){return(false);}
+						}
+					}
+				}
+			}
+			return (true);
+		}

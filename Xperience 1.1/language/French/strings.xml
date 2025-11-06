@@ -1,0 +1,379 @@
+<strings>
+<!-- 
+to add a label into an xml add this inside the label tags
+$LOCALIZE[*****]
+
+To create new lines use [CR] instead of a space. ie: Example[CR]to see if this worked.
+-->
+		<!-- Custom_Settings.xml -->
+		<string id="31100">OPTIONS</string>
+		<string id="31101">Général</string>
+		<string id="31102">Média</string>
+		<string id="31103">Avancé</string>
+		<string id="31104">FONDS D'ÉCRAN</string>
+		<string id="31105">PANNEAUX</string>
+		<string id="31106">À PROPOS</string>
+		<string id="31107">ADDONS</string>
+		<string id="31112">Fichier:</string>
+		<string id="31113">Dossier:</string>
+		<string id="31114">[COLOR=blue]&gt;&gt;[/COLOR]</string>
+		<string id="31115">[COLOR=red]&gt;&gt;[/COLOR]</string>
+		<string id="31116">Activer l'addon XBMC Subtitles</string>
+		<string id="31117">Position du RSS</string>
+		<string id="31118">Haut</string>
+		<string id="31119">Milieu</string>
+		<string id="31120">Bas</string>
+		<string id="31121">Désactiver le texte/icône 'Options' dans Vues des médias</string>
+		<string id="31122">Désactiver le changement de vue</string>
+		<string id="31123">Activer les vignettes HD pour Info (uniquement pour PHOTOS)</string>
+		<string id="31124">Activer les vignettes HD pour Info Film (aucun répertorié)</string>
+		<string id="31125">Activer les vignettes HD pour Info Film (répertoriés)</string>
+		<string id="31126">Désactiver les fanarts sur l'ensemble du thème</string>
+		<string id="31127">Script récemment ajouté</string>
+		<string id="31128">Mise à jour [COLOR=blue]UNE FOIS[/COLOR] au lancement de XBMC</string>
+		<string id="31129">Mise à jour si [COLOR=blue]HAUT[/COLOR] est appuyé (Accueil)</string>
+		<string id="31130">Activer Visionné/Non visionné + Collection Overlays</string>
+		<string id="31131">Animations</string>
+		<string id="31132">Désactiver le logo</string>
+		<string id="31133">Désactiver les vaguelettes</string>
+		<string id="31134">Désactiver le starburst</string>
+		<string id="31135">Activer le logo statique</string>
+		<string id="31136">Logo Météo</string>
+		<string id="31137">Logo météo animé</string>
+		<string id="31138">Logo météo statique</string>
+		<string id="31139">Activer le logo personnalisé</string>
+		<string id="31140">Logo animé:</string>
+		<string id="31141">Logo statique:</string>
+		<string id="31142">Activer les icônes météo animées dans la fenêtre Météo</string>
+		<string id="31143">Afficher l'heure</string>
+		<string id="31144">Choisissez un arrière-plan</string>
+		<string id="31145">Choisissez une couleur de scène</string>
+		<string id="31146">Choisissez une image diffuse personnalisée</string>
+		<string id="31147">Réinitialiser</string>
+		<string id="31148">Désactiver des panneaux</string>
+		<string id="31149">Désactiver 'Films'</string>
+		<string id="31150">Désactiver 'Séries TV'</string>
+		<string id="31151">Désactiver 'Musique'</string>
+		<string id="31152">Désactiver 'Photos'</string>
+		<string id="31153">Désactiver 'Programmes'</string>
+		<string id="31154">Désactiver 'Météo'</string>
+		<string id="31155">Activer des panneaux</string>
+		<string id="31156">Activer 'Fichiers vidéo'</string>
+		<string id="31160">Activer 'Vidéos musicales'</string>
+		<string id="31161">Activer 'Fichiers musicaux'</string>
+		<string id="31162">Activer 'Addons'</string>
+		<string id="31163">Activer 'XBMC Live'</string>
+		<string id="31164">Activer 'Lecture en cours'</string>
+		<string id="31165">Personnaliser les icônes des panneaux (Accueil)</string>
+		<string id="31166">Séries TV</string>
+		<string id="31167">Fichiers vidéo</string>
+		<string id="31168">Musique</string>
+		<string id="31169">Vidéos musicales</string>
+		<string id="31170">Fichiers musicaux</string>
+		<string id="31171">Photos</string>
+		<string id="31172">Programmes</string>
+		<string id="31173">Addons</string>
+		<string id="31174">XBMC Live</string>
+		<string id="31175">Météo</string>
+		<string id="31176">Réglages</string>
+		<string id="31177">Lecture en cours</string>
+		<string id="31178">Animation des icônes des panneaux (Accueil)</string>
+		<string id="31179">Activer l'inversion du bouton Lire / Pause</string>
+
+		<!-- Xperience_Music-View.XML -->
+		<string id="31200">LECTURE EN COURS:</string>
+		
+		<!-- DialogAlbumInfo.XML AND DialogVideoInfo.XML -->
+		<string id="31211">Style:</string>
+		<string id="31212">Sonorité:</string>
+		<string id="31213">Sortie:</string>
+		<string id="31214">PISTES</string>
+		<string id="31215">DISCOGRAPHIE</string>
+		<string id="31216">AFFICHE</string>
+		<string id="31217">FANART</string>
+		<string id="31218">ACTUALISER</string>
+		<string id="31219">RÉALISÉ:</string>
+		<string id="31220">ÉCRIT:</string>
+		<string id="31221">Visionné:</string>
+		<string id="31222">Non visionné:</string>
+		<string id="31223">ANNÉE:</string>
+		<string id="31224">GENRE:</string>
+		<string id="31225">Diffusé le:</string>
+		<string id="31226">LIRE</string>
+		<string id="31227">CASTING</string>
+		<string id="31228">BANDE ANNONCE</string>
+
+		<!-- DialogButtonMenu.xml -->
+		<string id="31251">Infos système</string>
+		<string id="31252">Déconnexion</string>
+		<string id="31253">Quitter XBMC</string>
+		<string id="31254">Gestionnaire de fichiers</string>
+		<string id="31255">Relancer XBMC</string>
+		<string id="31258">Éteindre</string>
+		<string id="31259">Mettre en veille</string>
+		<string id="31260">Hiberner</string>
+		<string id="31261">Redémarrer</string>
+		<string id="31262">Éjecter/Charger</string>
+		<string id="31264">Connecté en tant que</string>
+		
+		<!-- DialogFileStacking.XML -->
+		<string id="31270">Fichiers empilés</string>
+
+		<!-- DialogSeekBar.xml -->
+		<string id="31271">Heure:</string>
+		<string id="31272">Fin:</string>	
+		<string id="31273">EN PAUSE</string>		
+		<string id="31274">RETOUR RAPIDE:</string>
+		<string id="31275">AVANCE RAPIDE:</string>
+		
+		<!-- DialogMusicScan.xml -->
+		<string id="31280">Identification:</string>
+		
+		<!-- DialogMuteBug.xml -->
+		<string id="31281">VOLUME MUET</string>	
+
+		<!-- DialogPictureInfo.xml -->
+		<string id="31284">Picture Info</string>		
+		
+		<!-- DialogSongInfo.xml -->
+		<string id="31290">Album:</string>			
+		<string id="31291">Genre:</string>
+		<string id="31292">Année:</string>
+		<string id="31293">Piste:</string>
+		<string id="31294">Note:</string>
+		<string id="31295">Nom du fichier:</string>
+		
+		<!-- DialogVolumeBar.xml -->
+		<string id="31298">Volume</string>
+		
+		<!-- FileBrowser.xml -->
+		<string id="31299">CRÉER DOSSIER</string>		
+		
+		<!-- Include_Guide-Interface.xml -->
+		<string id="31300">INFOS SYSTÈME</string>
+		<string id="31301">NAVIGATION RAPIDE</string>
+		<string id="31302">TEAM BLACKBOLT</string>
+		<string id="31303">LECTURE EN COURS</string>
+
+		<!-- Include_Home-NPaying.xml -->
+		<string id="31307">AUCUNE LECTURE EN COURS</string>
+		<string id="31308">Réalisé</string>
+		<string id="31309">Année</string>
+		<string id="31310">Durée</string>
+		<string id="31311">Artiste</string>
+		<string id="31312">Album</string>
+		<string id="31313">Chanson</string>
+		<string id="31314">Time</string>
+		<string id="31315">Titre</string>
+		
+		<!-- Includes_Home.xml -->
+		<string id="31001">FILMS</string>
+		<string id="31002">SÉRIES TV</string>
+		<string id="31003">MUSIQUE</string>
+		<string id="31004">PHOTOS</string>
+		<string id="31005">PROGRAMMES</string>
+		<string id="31006">MÉTÉO</string>
+		<string id="31007">RÉGLAGES</string>
+		<string id="31008">QUITTER</string>
+		<string id="31009">FAVORIS</string>
+		<string id="31010">ADDONS</string>
+		<string id="31011">JEUX</string>
+		<string id="31012">MARKETPLACE</string>
+		<string id="31013">LECTURE</string>
+		<string id="31014">VIDÉOS MUSICALES</string>
+		<string id="31015">FICHIERS VIDÉOS</string>
+		<string id="31016">FICHIERS DE MUSIQUE</string>
+		<string id="31017">VUE</string>
+		<string id="31034">VISITER LE</string>
+		<string id="31035">MAINTENANT</string>
+		<string id="31041">REGARDER VOS</string>
+		<string id="31043">ÉCOUTER VOTRE</string>
+		<string id="31044">VOIR VOS</string>
+		<string id="31045">PARCOURIR VOS</string>
+		<string id="31046">PRÉVISIONS</string>
+		<string id="31047">MODIFIER LES</string>
+		<string id="31049">LIRE LES INFOS MÉDIA DEPUIS LES FICHIERS</string>
+		<string id="31050">MISE À JOUR DE LA MÉDIATHÈQUE</string>
+		
+		<!-- Include_Categories-Recently-Added.xml -->
+		<string id="31051">Films récemment ajoutés</string>
+		<string id="31052">Séries TV récemment ajoutées</string>
+		<string id="31053">Musique récemment ajoutées</string>
+		
+		<!-- Includes_Window-Contents.xml -->
+		<string id="31320">OPTIONS</string>
+		<string id="31321">Utilisez HAUT ou BAS pour naviguer dans les options.</string>
+		<string id="31322">DÉFILEMENT</string>
+		
+		<!-- LoginScreen.xml -->	
+		<string id="31330">IDENTIFICATION</string>
+		
+		<!-- MyVideoNav.xml, MyMusicNav.xml so on -->
+		<string id="31331">Vue Options spécifiques</string>
+		<string id="31332">Mix de soirée</string>
+
+		<!-- Includes_Settings.xml -->
+		<string id="31431">RÉGLER LES DIFFÉRENTES OPTIONS POUR VOTRE MÉDIATHÈQUE VIDÉO[CR]TELLES QUE LES SOUS-TITRES, LES SCRAPERS,…</string>
+		<string id="31432">RÉGLER LES DIFFÉRENTES OPTIONS POUR VOTRE MÉDIATHÈQUE AUDIO[CR]TELLES QUE LES ANIMATIONS, LES RADIO INTERNET,…</string>
+		<string id="31433">RÉGLER LES DIFFÉRENTES OPTIONS DU MODULE PHOTOS TELLES QUE[CR]L'AFFICHAGE, LES EFFETS, LES TAGS,...</string>
+		<string id="31434">AVEC XBMC VOUS POUVEZ AVOIR DIFFÉRENTS PROFILS[CR]AINSI QU'UN ÉCRAN DE CONNEXION POUR Y ACCÉDER.</string>
+		<string id="31435">OBTENIR LA MÉTÉO N'A JAMAIS AUSSI SIMPLE AVEC XBMC[CR]SAISISSEZ VOTRE LIEU ET LES RÉGLAGES RÉGIONAUX ICI.</string>
+		<string id="31436">PARAMÈTRES RÉSEAU POUR INTERNET, SMB, SERVEURS[CR]ET ÉGALEMENT UPNP.</string>
+		<string id="31437">LES OPTIONS D'INTERFACE SUR XBMC VOUS PERMETTENT DE CHANGER UN PEU TOUT[CR]DEPUIS L'HABILLAGE OU LE THÈME EN PASSANT PAR LA LANGUE ET LES RSS.</string>
+		<string id="31438">PERSONNALISER VOTRE XPERIENCE AVEC DIFFÉRENTS FONDS, PANNEAUX[CR]D'AUTRES ÉLÉMENTS DU THÈME ET BIEN PLUS ENCORE.</string>
+		<string id="31439">RÉGLER ET CONSULTER LES INFORMATIONS DU MATÉRIEL EST TRÈS SIMPLE[CR]GRÂCE AUX OPTIONS DE GESTION DES PÉRIPHÉRIQUES.</string>		
+		
+		<!-- MyMusicPlaylistEditor.xml -->
+		<string id="31340">SYSTÈME DES FICHIERS DE MUSIQUE</string>		
+		<string id="31341">PLAYLISTE EN COURS</string>		
+		<string id="31342">Album</string>		
+		<string id="31343">Piste</string>		
+		<string id="31344">Temps</string>		
+		<string id="31345">Éléments - Page</string>		
+		<string id="31346">Ouvrir Playlist</string>		
+		<string id="31347">Sauver Playlist</string>		
+		<string id="31348">Vider/Fermer Playlist</string>				
+		
+		<!-- MyWeather.xml -->
+		<string id="31350">VOS CONDITIONS MÉTÉOROLOGIQUE</string>		
+		<string id="31351">TEMP</string>		
+		<string id="31352">FEELS LIKE</string>		
+		<string id="31353">DEW POINT</string>		
+		<string id="31354">HUMIDITÉ</string>		
+		<string id="31355">INDICE UV</string>		
+		<string id="31356">VENT</string>		
+		<string id="31357">MAX</string>		
+		<string id="31358">MIN</string>				
+		
+		<!-- PlayerControls.xml -->
+		<string id="31360">FILMS</string>
+		<string id="31361">SÉRIES TV</string>
+		<string id="31362">MUSIQUE</string>
+		<string id="31363">PHOTOS</string>
+		<string id="31364">RÉGLAGES</string>
+		<string id="31365">QUITTER</string>
+		<string id="31366">Bienvenue sur XBMC!</string>
+		<string id="31367">Merci d'avoir choisi Xperience comme thème par défaut!</string>
+		<string id="31368">Films:[CR]Ce bouton chargera votre médiathèque de films.</string>
+		<string id="31369">Séries TV:[CR]Ce bouton chargera votre médiathèque de séries TV.</string>
+		<string id="31370">Musique:[CR]Ce bouton chargera votre médiathèque musicale.</string>
+		<string id="31371">Photos:[CR]Ce bouton afficher la collection de photos.</string>
+		<string id="31372">Réglages:[CR]Ce bouton affichera la page des réglages.</string>
+		<string id="31373">Quitter:[CR]Ce bouton affichera la fenêtre de fermeture.</string>		
+		
+		<!-- Settings.xml -->
+		<string id="31021">VIDÉOS</string>
+		<string id="31022">AUDIO</string>
+		<string id="31023">PHOTOS</string>
+		<string id="31024">PROFILS</string>
+		<string id="31025">MÉTÉO</string>
+		<string id="31026">RÉSEAU</string>
+		<string id="31027">APPARENCE</string>
+		<string id="31028">PERSONNALISATION</string>
+		<string id="31029">SYSTÈME</string>
+
+		<!-- VideoOSD.xml -->
+		<string id="31380">RÉALISATEUR</string>
+		<string id="31381">ÉCRIT PAR</string>
+		<string id="31382">DURÉE</string>
+		<string id="31383">NOTE</string>
+		<string id="31384">GENRE</string>
+		<string id="31385">STUDIO</string>
+
+		<!-- VideoOSDBookmarks.xml -->
+		<string id="31388">CRÉER DES SIGNETS</string>		
+		<string id="31389">VIDER LES SIGNETS</string>		
+		
+		<!-- Xperience_Views -->
+		<string id="31390">Réalisé par</string>		
+		<string id="31391">Écrit par</string>		
+		<string id="31392">Genre</string>		
+		<string id="31393">Pas de résumé</string>		
+		<string id="31394">Épisodes non visionnés</string>		
+		<string id="31395">Diffusé</string>		
+		<string id="31396">Runtime</string>
+		<string id="31397">GENRE</string>		
+		<string id="31398">RÉALISATEUR</string>		
+		<string id="31399">Année</string>		
+		<string id="31400">Visionnés</string>		
+		<string id="31401">Non visionnés</string>		
+		<string id="31402">Saison</string>		
+		<string id="31403">Épisode</string>
+		<string id="31404">Épisodes</string>
+		
+		<!-- Now Wached Overlays -->
+		<string id="31411">Non visionné</string>
+
+		<!-- Debug Info -->
+		<string id="31991">Debug Info</string>
+		<string id="31992">Memory = </string>
+		<string id="31993">Build Date = </string>
+		<string id="31994">FPS = </string>
+		<string id="31995">Window = </string>
+		<string id="31996">Control = </string>
+		<string id="31997">Current View = </string>
+		<string id="31998">Enable Grid Overlay</string>
+		<string id="31999">Enable Screen Info</string>
+		<string id="32000">Activer XML Labels</string>
+
+		<!-- ========================================================================= -->
+		<!-- New entries after tranlations this is here so its easier to see whats new. -->
+		<!-- ========================================================================= -->
+		
+		<!-- Custom_Settings.xml -->
+		<string id="31412">Extensions pour Film.* &amp; poster.* (.tbn ou .jpg)</string>
+		<string id="31180">Basculer en plein écran (lecture d'un média)</string>
+		<string id="31418">Activer les animations/vidéos en arrière plan</string>
+		<string id="31181">Désactiver 'DVD'</string>
+		<string id="31157">Activer le panneau personnalisé</string>
+		<string id="31158">[COLOR=greyblue]Entrez le nom du dossier[/COLOR]</string>
+		<string id="31159">Icône personnalisée:</string>
+		<string id="31182">Panneaux favoris personnalisés</string>
+		<string id="31421">Nom personnalisé:</string>
+		<string id="31422">Type d'addons ex. Vidéo, Musique:</string>
+		<string id="31423">24=Vidéo / 501=Musique / 1=Programmes / 2=Photos / 2600=Météo:</string>
+		<string id="31424">Afficher le ProfilTag ([COLOR=greyblue]Totaux de médiathèque[/COLOR]) sur la page d'accueil</string>
+		<string id="31183">Afficher "Pause" pendant le diaporama photo</string>
+		
+		<!-- DialogAlbumInfo.XML AND DialogVideoInfo.XML -->
+		<string id="31229">DURÉE:</string>
+		<string id="31230">TITRE:</string>
+		<string id="31405">ARTISTE</string>
+		<string id="31231">ÉPISODE:</string>
+		<string id="31425">SAISON:</string>
+		<string id="31232">RÉSUMÉ</string>
+		<string id="31233">Minutes</string>
+		
+		
+		<!-- Includes_Settings.xml -->
+		<string id="31413">ACTIVER OU DÉSACTIVER DES FONCTIONNALITÉS OPTIONNELLES POUR XPERIENCE, COMME LES FANARTS, LES ANIMATIONS ET LES ADDONS.</string>
+		<string id="31427">GÉREZ VOS ADDONS OU EXPLOREZ ET INSTALLEZ EN DE NOUVEAUX DEPUIS XBMC.ORG</string>
+
+		<!-- Addon Labels -->
+		<string id="31428">QUITTER</string>
+		<string id="31440">XBMC SUBTITLES</string>
+				
+		<!-- Script Path -->
+		<string id="31430">Destination:</string>
+
+		<!-- Xperience_Views.xnl -->
+		<string id="31426">DURÉE</string>
+		
+		<!-- Xperience_Views -->
+		<string id="31414">Collection</string>
+		<string id="31416">N/A</string>
+		
+		<!-- MyVideoNav.xml, MyMusicNav.xml so on -->
+		<string id="31415">Options générales</string>	
+		
+		<!-- Includes_Debug.xml -->
+		<string id="31417">Nom du XML chargé:</string>
+		
+		<!-- Include_Categories-Recently-Added.xml -->
+		<string id="31420">ADDONS</string>
+		
+		<!-- custom_DialogFavourites.xml -->
+		<string id="31450">Favori personnalisé</string>
+
+		
+</strings>

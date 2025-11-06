@@ -1,0 +1,216 @@
+<window id="115">
+	<defaultcontrol>1</defaultcontrol>
+	<include>seekbar</include>
+	<controls>
+
+	<control type="image">
+		<description>pause image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Paused</visible>
+		<texture>SlideBar-video-pause.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>2x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Forwarding2x</visible>
+		<texture>SlideBar-video-2x.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>4x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Forwarding4x</visible>
+		<texture>SlideBar-video-4x.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>8x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Forwarding8x</visible>
+		<texture>SlideBar-video-8x.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>16x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Forwarding16x</visible>
+		<texture>SlideBar-video-16x.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>32x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Forwarding32x</visible>
+		<texture>SlideBar-video-32x.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>-2x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Rewinding2x</visible>
+		<texture>SlideBar-video-2xr.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>-4x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Rewinding4x</visible>
+		<texture>SlideBar-video-4xr.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>-8x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Rewinding8x</visible>
+		<texture>SlideBar-video-8xr.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>-16x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Rewinding16x</visible>
+		<texture>SlideBar-video-16xr.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<control type="image">
+		<description>-32x image</description>
+		<align>right</align>
+		<posx>291</posx>
+		<posy>88</posy>
+		<height>65</height>
+		<width>150</width>
+		<visible>Player.Rewinding32x</visible>
+		<texture>SlideBar-video-32xr.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+	</control>
+
+	<!-- progressbar dialog -->
+
+	<control type="image" id="23">
+		<description>Popup Seek Dialog Background</description>
+		<posx>370</posx>
+		<posy>94</posy>
+		<width>350</width>
+		<height>60</height>
+		<texture>SlideBar.png</texture>
+	</control>
+
+	<control type="label" id="22">
+		<description>Elapsed Time Label</description>
+		<posx>470</posx>
+		<posy>117</posy>
+		<font>font10</font>
+		<align>right</align>
+		<info>Player.Time</info>
+		<width>100</width>
+		<height>16</height>
+		<visible>!Player.Seeking</visible>
+	</control>
+
+	<control type="label" id="22">
+		<description>Seek Time Label</description>
+		<posx>470</posx>
+		<posy>117</posy>
+		<font>font10</font>
+		<align>right</align>
+		<info>Player.SeekTime</info>
+		<width>100</width>
+		<height>16</height>
+		<visible>Player.Seeking</visible>
+	</control>
+
+	<control type="progress" id="23">
+		<description>Progressbar</description>
+		<posx>490</posx>
+		<posy>119</posy>
+		<width>200</width>
+		<height>8</height>
+		<info>Player.Progress</info>
+		<texturebg>progress_back.png</texturebg>
+		<lefttexture>progress_left.png</lefttexture>
+		<midtexture>progress_mid-green.png</midtexture>
+		<righttexture>progress_right.png</righttexture>
+		<overlaytexture>progress_over.png</overlaytexture>
+		<visible>true</visible>
+	</control>
+
+	<control type="slider" id="401">
+		<description>Seek Slider</description>
+		<posx>490</posx>
+		<posy>118</posy>
+		<width>200</width>
+		<height>8</height>
+		<texturesliderbar>seekslider.png</texturesliderbar>
+		<textureslidernib>slider_nibFO.png</textureslidernib>
+		<textureslidernibFocus>slider_nibFO.png</textureslidernibFocus>
+		<visible>true</visible>
+		<onup>1</onup>
+		<ondown>1</ondown>
+		<onleft>1</onleft>
+		<onright>1</onright>
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,112 @@
+<includes>
+
+  <include name="HomeSlideAnimation">
+    <animation type="WindowOpen">
+      <effect type="slide" tween="quadratic" start="-600" time="1400" reversible="false"/>
+      <effect type="fade" end="100" time="700" reversible="false"/>
+    </animation>
+    <animation type="WindowClose">
+      <effect type="slide" tween="quadratic" end="-600" time="1400" reversible="false"/>
+      <effect type="fade" end="0" time="700" reversible="false"/>
+    </animation>
+  </include>
+  
+  <include name="SettingsFade">
+    <animation effect="fade" time="300" end="100" condition="Window.Previous(home)">WindowOpen</animation>
+    <animation effect="fade" time="300" end="0" condition="Window.Next(home)">WindowClose</animation>
+  </include>
+
+  <include name="DefaultFade">
+    <animation effect="fade" end="100" time="300">WindowOpen</animation>
+    <animation effect="fade" end="0" time="300">WindowClose</animation>
+    <animation effect="fade" end="100" time="300">Visible</animation>
+    <animation effect="fade" end="0" time="300" >Hidden</animation>
+  </include>
+  
+  <include name="SortLetterFade">
+    <animation effect="fade" end="100" time="300" delay="400">Visible</animation>
+    <animation effect="fade" end="0" time="300">Hidden</animation>
+  </include>
+
+  <include name="MediaViewAnimation">
+    <animation type="WindowOpen" reversible="false">
+      <effect type="slide" tween="quadratic" start="100" time="400"/>
+      <effect type="fade" start="0" time="400"/>
+    </animation>
+    <animation type="Visible" reversible="false">
+      <effect type="slide" tween="quadratic" start="100" time="400"/>
+      <effect type="fade" start="0" time="400"/>
+    </animation>
+    <animation type="WindowClose" reversible="false">
+      <effect type="fade" end="0" time="300"/>
+    </animation>
+  </include>
+  
+  <include name="MediaFlagFade">
+    <animation effect="fade" delay="0" end="60" time="0">WindowOpen</animation>
+    <animation effect="fade" delay="0" start="60" end="0" time="0">WindowClose</animation>
+    <animation effect="fade" delay="0" end="60" time="0">Visible</animation>
+    <animation effect="fade" delay="0" start="60" end="0" time="0">Hidden</animation>
+  </include>
+
+  <include name="MediaBackFade">
+    <animation effect="fade" delay="0" end="80" time="0">WindowOpen</animation>
+    <animation effect="fade" delay="0" start="80" end="0" time="0">WindowClose</animation>
+    <animation effect="fade" delay="0" end="80" time="0">Visible</animation>
+    <animation effect="fade" delay="0" start="80" end="0" time="0">Hidden</animation>
+  </include>
+
+  <include name="HomeSubMenuFade">
+    <animation effect="fade" time="300" end="100">WindowOpen</animation>
+    <animation effect="fade" time="0" end="0" condition="!Window.Next(52)">WindowClose</animation>
+    <animation effect="fade" time="0" end="0" condition="Window.Next(52)">WindowClose</animation>
+  </include>
+
+  <include name="ButtonMenuFade">
+    <animation effect="fade" time="300" end="100" condition="Window.Previous(52)">WindowOpen</animation>
+    <animation effect="fade" time="300" end="0" condition="Window.Next(home)">WindowClose</animation>
+  </include>
+
+  <include name="ContentImageFade">
+    <animation effect="fade" start="0" end="20" time="100">WindowOpen</animation>
+    <animation effect="fade" start="20" end="0" time="200">WindowClose</animation>
+    <animation effect="fade" start="0" end="20" time="100">Visible</animation>
+    <animation effect="fade" start="20" end="0" time="200">Hidden</animation>
+  </include>
+
+  <include name="ContentTextFade">
+    <animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
+    <animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+    <animation effect="fade" start="0" end="100" time="100">Visible</animation>
+    <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
+  </include>
+
+  <include name="WindowOverlayFade">
+    <animation effect="fade" delay="0" end="90" time="150">WindowOpen</animation>
+    <animation effect="fade" delay="0" start="90" end="0" time="150">WindowClose</animation>
+    <animation effect="fade" delay="0" end="90" time="150">Visible</animation>
+    <animation effect="fade" delay="0" start="90" end="0" time="150">Hidden</animation>
+  </include>
+
+  <include name="SlideFromRight">
+    <animation effect="slide" delay="400" time="600" tween="circle" start="650,0" end="0,0">WindowOpen</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,0" end="650,0">WindowClose</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="650,0" end="0,0">Visible</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,0" end="650,0">Hidden</animation>
+  </include>
+
+  <include name="SlideFromTop">
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,-710" end="0,0">WindowOpen</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,0" end="0,-710">WindowClose</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,-710" end="0,0">Visible</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,0" end="0,-710">Hidden</animation>
+  </include>
+
+  <include name="SlideFromBottom">
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,590" end="0,0">WindowOpen</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,0" end="0,590">WindowClose</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,590" end="0,0">Visible</animation>
+    <animation effect="slide" delay="400" time="600" tween="circle" start="0,0" end="0,590">Hidden</animation>
+  </include>
+  
+</includes>

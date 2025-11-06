@@ -1,0 +1,31 @@
+<window id="6">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>OldListViewCommons</include>
+		<include>VideoViewCommons</include>
+		<include>AllViewCommonThumbSmall</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>VideoDVDThumbLarge</include>
+		<include>VideoDVDWrapView</include>
+		<include>WideIcon_Small</include>
+		<include>WideIcon_Big</include>
+		
+		<include>AllViewCommonPageControls</include>
+		
+	<control type="image">
+		<description>Makes a "dimming" effect for the menus</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>480</height>
+		<texture>black.png</texture>
+		<visible>ControlGroup(9000).HasFocus(0) | ControlGroup(1001).HasFocus(0) | ControlGroup(1002).HasFocus(0)</visible>
+	</control>
+	
+	<include>menu_videolibrary_view</include>
+	<include>menu_videolibrary_font</include>
+	<include>menu_videolibrary_main</include>
+	
+	</controls>
+</window>

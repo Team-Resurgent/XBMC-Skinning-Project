@@ -1,0 +1,125 @@
+<window id="126">
+	<defaultcontrol alwyays="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>110</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsActive(VirtualKeyboard)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="!Skin.HasSetting(animated)">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="200" condition="!Skin.HasSetting(animated)">Visible</animation>
+			<control type="image">
+				<posx>-300</posx>
+				<posy>-300</posy>
+				<width>1320</width>
+				<height>1176</height>
+				<texture>black.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>520</width>
+				<height>350</height>
+				<texture border="0,35,0,10">Dialog.png</texture>
+			</control>
+			<control type="label" id="411">
+				<description>Title Label</description>
+				<posx>60</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<align>center</align>
+				<font>font22</font>
+				<label>20067</label>
+			</control>
+			<control type="label" id="412">
+				<description>Title Label</description>
+				<posx>60</posx>
+				<posy>30</posy>
+				<width>400</width>
+				<align>center</align>
+				<font>font18</font>
+				<haspath>true</haspath>
+			</control>
+			<control type="listcontrol" id="450">
+				<description>listcontrol</description>
+				<posx>20</posx>
+				<posy>60</posy>
+				<width>385</width>
+				<height>300</height>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<spacebetweenitems>3</spacebetweenitems>
+				<onleft>9002</onleft>
+				<onright>9002</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+			</control>
+			<control type="thumbnailpanel" id="451">
+				<description>thumbnailpanel</description>
+				<posx>40</posx>
+				<posy>60</posy>
+				<width>400</width>
+				<height>300</height>
+				<onleft>9002</onleft>
+				<onright>9002</onright>
+				<onup>451</onup>
+				<ondown>451</ondown>
+			</control>
+			<control type="group" id="9002">
+				<control type="button" id="413">
+					<description>OK button</description>
+					<posx>400</posx>
+					<posy>60</posy>
+					<height>30</height>
+					<width>130</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>186</label>
+					<texturefocus>Dialog_Button_Focus.png</texturefocus>
+					<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>415</onup>
+					<ondown>414</ondown>
+				</control>
+				<control type="button" id="414">
+					<description>Cancel button</description>
+					<posx>400</posx>
+					<posy>95</posy>
+					<height>30</height>
+					<width>130</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>222</label>
+					<texturefocus>Dialog_Button_Focus.png</texturefocus>
+					<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>413</onup>
+					<ondown>415</ondown>
+				</control>
+				<control type="button" id="415">
+					<description>Create folder button</description>
+					<posx>400</posx>
+					<posy>130</posy>
+					<height>30</height>
+					<width>130</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>119</label>
+					<texturefocus>Dialog_Button_Focus.png</texturefocus>
+					<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>414</onup>
+					<ondown>413</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

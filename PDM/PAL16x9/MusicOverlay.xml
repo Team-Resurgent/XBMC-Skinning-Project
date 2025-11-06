@@ -1,0 +1,103 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+
+	<control type="image">
+		<description>Music BG</description>
+		<posx>14</posx>
+		<posy>323</posy>
+		<width>127</width>
+		<height>185</height>
+		<texture>keyboard-numeric-bg.png</texture>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(56) + !Window.IsActive(2700)</visible>
+		<visible>!Window.IsActive(AppearanceSettings) + !Window.IsActive(MyVideosSettings)</visible>
+		<visible>!Window.IsActive(MyMusicSettings) + !Window.IsActive(SystemSettings)</visible>
+		<visible>Player.HasAudio + !Skin.HasSetting(music-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="image">
+		<description>Music Cover</description>
+		<posx>28</posx>
+		<posy>332</posy>
+		<width>108</width>
+		<height>157</height>
+		<texture>defaultAlbumCover.png</texture>
+		<info>MusicPlayer.Cover</info>
+		<aspectratio>stretch</aspectratio>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(56) + !Window.IsActive(2700)</visible>
+		<visible>!Window.IsActive(AppearanceSettings) + !Window.IsActive(MyVideosSettings)</visible>
+		<visible>!Window.IsActive(MyMusicSettings) + !Window.IsActive(SystemSettings)</visible>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="image">
+		<description>Music BG Overlay</description>
+		<posx>14</posx>
+		<posy>323</posy>
+		<width>127</width>
+		<height>185</height>
+		<texture>keyboard-numeric-bg2.png</texture>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(56) + !Window.IsActive(2700)</visible>
+		<visible>!Window.IsActive(AppearanceSettings) + !Window.IsActive(MyVideosSettings)</visible>
+		<visible>!Window.IsActive(MyMusicSettings) + !Window.IsActive(SystemSettings)</visible>
+		<visible>Player.HasAudio + !Skin.HasSetting(music-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="label">
+		<description>Play Time Label</description>
+		<posx>58</posx>
+		<posy>523</posy>
+		<label>-</label>
+		<info>MusicPlayer.Time</info>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>      
+
+	<control type="label">
+		<description>Music Left-Suffix</description>
+		<posx>100</posx>
+		<posy>522</posy>
+		<label>[</label>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	<control type="label">
+		<description>Album/Artist/Genre Infos</description>
+		<width>305</width>
+		<posx>110</posx>
+		<posy>523</posy>
+		<include>musicoverlay-label</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="1000">VisibleChange</animation>
+	</control>
+
+	<control type="label">
+		<description>Music Right-Suffix</description>
+		<posx>420</posx>
+		<posy>522</posy>
+		<label>]</label>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	</controls>
+</window>

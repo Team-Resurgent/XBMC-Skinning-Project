@@ -1,0 +1,275 @@
+<includes>
+	<include file="defaults.xml" />
+	<include file="CommonViewTypes.xml" />
+	<include file="CommonLibraryViewTypes.xml" />
+	<include file="revision.xml" />
+	
+	<include name="Window_OpenClose_Animation">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="dialogeffect">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+	</include>
+	<include name="ButtonCommonValues">
+		<height>40</height>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus>button-focus.png</texturefocus>
+		<texturenofocus>button-nofocus.png</texturenofocus>
+	</include>
+	<include name="Common_Background">
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasVideo + !Skin.HasSetting(Back_Video)</visible>
+		</control>
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasAudio + !Skin.HasSetting(Back_Vis)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>background.png</texture>
+			<animation effect="fade" start="100" end="70" time="0" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
+			<animation effect="fade" start="100" end="85" time="0" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+		</control>
+		<control type="label">
+			<description>Date label</description>
+			<posx>1230</posx>
+			<posy>20</posy>
+			<width>600</width>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[system.date]</label>
+			<font>font13</font>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>1230</posx>
+			<posy>45</posy>
+			<width>600</width>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[system.time]</label>
+			<font>font13</font>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="button">
+			<posx>1225</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<height>720</height>
+			<onclick>-</onclick>
+			<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+			<hitrect x="1275" y="0" w="5" h="720" />
+			<visible>!Window.IsVisible(filestackingdialog) + !Window.IsVisible(shutdownmenu) + Skin.HasSetting(UseAdvancedMouse)</visible>
+			<texturefocus flipx="true">Side_Slideout.png</texturefocus>
+			<texturenofocus flipx="true">Side_Slideout.png</texturenofocus>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="image">
+			<posx>1225</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<height>720</height>
+			<visible>!Window.IsVisible(filestackingdialog) + !Window.IsVisible(shutdownmenu) + !Skin.HasSetting(UseAdvancedMouse)</visible>
+			<texture flipx="true">Side_Slideout.png</texture>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="button">
+			<posx>342</posx>
+			<posy>717</posy>
+			<width>595</width>
+			<height>3</height>
+			<onclick>-</onclick>
+			<onfocus>ActivateWindow(PlayerControls)</onfocus>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<visible>Player.HasMedia + Skin.HasSetting(UseAdvancedMouse)</visible>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<include>Common_Now_Playing</include>
+	</include>
+	<include name="Common_Fullscreen_Dialog_Background">
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="label">
+			<description>Date label</description>
+			<posx>1230</posx>
+			<posy>20</posy>
+			<width>600</width>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[system.date]</label>
+			<font>font13</font>
+		</control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>1230</posx>
+			<posy>45</posy>
+			<width>600</width>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[system.time]</label>
+			<font>font13</font>
+		</control>
+		<control type="button">
+			<posx>1225</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<height>720</height>
+			<onclick>-</onclick>
+			<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+			<hitrect x="1275" y="0" w="5" h="720" />
+			<visible>!Window.IsVisible(filestackingdialog) + !Window.IsVisible(shutdownmenu) + Skin.HasSetting(UseAdvancedMouse)</visible>
+			<texturefocus flipx="true">Side_Slideout.png</texturefocus>
+			<texturenofocus flipx="true">Side_Slideout.png</texturenofocus>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="image">
+			<posx>1225</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<height>720</height>
+			<visible>!Window.IsVisible(filestackingdialog) + !Window.IsVisible(shutdownmenu) + !Skin.HasSetting(UseAdvancedMouse)</visible>
+			<texture flipx="true">Side_Slideout.png</texture>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="button">
+			<posx>342</posx>
+			<posy>717</posy>
+			<width>595</width>
+			<height>3</height>
+			<onclick>-</onclick>
+			<onfocus>ActivateWindow(PlayerControls)</onfocus>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<visible>Player.HasMedia + Skin.HasSetting(UseAdvancedMouse)</visible>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<include>Common_Now_Playing</include>
+	</include>
+	<include name="Common_File_Count">
+		<control type="label" id="12">
+			<description>number of files text label</description>
+			<posx>1230</posx>
+			<posy>645</posy>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+	</include>
+	<include name="Common_Now_Playing">
+		<control type="group">
+			<posx>50</posx>
+			<posy>640</posy>
+			<include>Window_OpenClose_Animation</include>
+			<visible>!Window.IsVisible(Home) + !Window.IsVisible(FileManager) + !Window.IsVisible(MyMusicPlaylistEditor) + !Window.IsVisible(script-Apple_Movie_Trailers-search.xml)</visible>
+			<control type="image">
+				<description>Media Cover</description>
+				<posx>-3</posx>
+				<posy>-3</posy>
+				<width>71</width>
+				<height>71</height>
+				<aspectratio>keep</aspectratio>
+				<info>VideoPlayer.Cover</info>
+				<visible>Player.HasVideo</visible>
+				<bordertexture>button-focus.png</bordertexture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="image">
+				<description>Media Cover</description>
+				<posx>-3</posx>
+				<posy>-3</posy>
+				<width>71</width>
+				<height>71</height>
+				<aspectratio>keep</aspectratio>
+				<info>MusicPlayer.Cover</info>
+				<visible>Player.HasAudio</visible>
+				<bordertexture>button-focus.png</bordertexture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Now Playing title</description>
+				<posx>75</posx>
+				<posy>5</posy>
+				<width>940</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<info>VideoPlayer.Title</info>
+				<font>font13</font>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Now Playing title</description>
+				<posx>75</posx>
+				<posy>5</posy>
+				<width>940</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album,, - ]$INFO[MusicPlayer.Title]</label>
+				<font>font13</font> 
+				<scroll>false</scroll> 
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Now Playing Times</description>
+				<posx>75</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Player.Time,, - ]$INFO[Player.Duration]</label>
+				<font>font13</font> 
+				<visible>Player.HasMedia</visible>
+			</control>
+		</control>
+	</include>
+</includes>

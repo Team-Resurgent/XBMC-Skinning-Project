@@ -1,0 +1,76 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+	</control>
+
+	<control type="group">
+		<control type="radiobutton" id="4">
+			<description>Enable Loginscreen</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<label>20096</label>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="5">
+			<description>-</description>
+			<posx>20</posx>
+			<posy>147</posy>
+			<onclick></onclick>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<label>-</label>
+			<include>slideleft</include>
+			<visible>no</visible>
+		</control>
+	</control>
+
+	<include>4x3menu-background</include>
+
+	<control type="fadelabel" id="3">
+		<description>Last loaded</description>
+		<posx>207</posx>
+		<posy>74</posy>
+		<width>300</width>
+		<align>right</align>
+		<label>$LOCALIZE[13204] $INFO[system.profilename]</label>
+		<font>special13</font>
+		<textcolor>80ffffff</textcolor>
+		<include>slideright</include>
+		<visible>!Window.IsActive(130) + !Skin.HasSetting(sysstatsbarmenu)</visible>
+	</control>
+
+	<control type="listcontrol" id="2">
+		<description>Listcontrol</description>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<include>slideright</include>
+		<visible>![Window.IsActive(127) | Window.IsActive(106) |  Window.IsActive(130)]</visible>
+	</control>
+
+	<include>4x3slider</include>
+
+	<control>
+		<description>Description label</description>
+		<label>10507</label>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

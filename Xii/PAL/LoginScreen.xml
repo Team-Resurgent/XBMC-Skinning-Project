@@ -1,0 +1,117 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<visible>!Window.IsActive(130)</visible>
+	<controls>
+		<control type="image">
+			<description>Background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-startup.png</texture>
+		</control>
+
+		<control type="group">
+			<posy>20</posy>
+			<include>contentpanelslide</include>
+			<control type="image" id="1">
+				<description>Profile background</description>
+				<posx>137</posx>
+				<posy>71</posy>
+				<width>446</width>
+				<height>406</height>
+				<texture>dialog-panelprofile.png</texture>
+			</control>
+			<control type="label" id="2">
+				<description>Heading Label</description>
+				<posx>165</posx>
+				<posy>98</posy>
+				<width>420</width>
+				<align>left</align>
+				<label>-</label>
+				<font>special13</font>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="label" id="3">
+				<description>Profile Count Label</description>
+				<posx>545</posx>
+				<posy>98</posy>
+				<width>420</width>
+				<align>right</align>
+				<label>-</label>
+				<font>special13</font>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="listcontrol" id="52">
+				<description>Big listcontrol</description>
+				<posx>165</posx>
+				<posy>140</posy>
+				<width>400</width>
+				<height>300</height>
+				<spinwidth>16</spinwidth>
+				<spinheight>16</spinheight>
+				<spincolor>ffffffff</spincolor>
+				<spinfont>font10</spinfont>
+				<spinposx>365</spinposx>
+				<spinposy>275</spinposy>
+				<textureup>scroll-up.png</textureup>
+				<texturedown>scroll-down.png</texturedown>
+				<textureupfocus>scroll-up-focus.png</textureupfocus>
+				<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+				<texturefocus border="0,0,0,20">blue-rectangle.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>special13</font>
+				<font2>font13</font2>
+				<include>listselectedcolor</include>
+				<include>textcolorlightgrey</include>
+				<selectedcolor2>FFFFffff</selectedcolor2>
+				<textcolor2>d0ffffff</textcolor2>
+				<suffix>|</suffix>
+				<textxoff>10</textxoff>
+				<textyoff>5</textyoff>
+				<textxoff2>390</textxoff2>
+				<textyoff2>55</textyoff2>
+				<aligny>top</aligny>
+				<itemwidth>70</itemwidth>
+				<itemheight>70</itemheight>
+				<spacebetweenitems>10</spacebetweenitems>
+				<textureheight>80</textureheight>
+				<onleft>98</onleft>
+				<onright>98</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+			</control>
+		</control>
+		<control type="button" id="98">
+			<description>Power button</description>
+			<posx>330</posx>
+			<posy>481</posy>
+			<width>60</width>
+			<height>60</height>
+			<onclick>ActivateWindow(ShutdownMenu)</onclick>
+			<texturefocus>icon-power-focus.png</texturefocus>
+			<texturenofocus>icon-power.png</texturenofocus>
+			<label>-</label>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<include>contentpanelslide</include>
+			<animation effect="zoom" end="324,475,72,72" time="250">Focus</animation>
+		</control>
+		<control type="image" id="0">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control>
+	</controls>
+</window>

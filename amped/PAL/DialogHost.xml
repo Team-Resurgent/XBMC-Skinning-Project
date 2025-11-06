@@ -1,0 +1,165 @@
+<window id="108">
+	<defaultcontrol>3101</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>140</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsActive(VirtualKeyboard)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="!Skin.HasSetting(animated)">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="200" condition="!Skin.HasSetting(animated)">Visible</animation>
+			<control type="image">
+				<posx>-300</posx>
+				<posy>-300</posy>
+				<width>1320</width>
+				<height>1176</height>
+				<texture>black.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>520</width>
+				<height>275</height>
+				<texture border="0,35,0,10">Dialog.png</texture>
+			</control>
+			<control type="label" id="3100">
+				<description>Title Label</description>
+				<posx>60</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<align>center</align>
+				<font>font22</font>
+				<label>15049</label>
+			</control>
+			<control type="radiobutton" id="3101">
+				<description>hosting type radiobutton</description>
+				<posx>60</posx>
+				<posy>35</posy>
+				<width>400</width>
+				<label>15050</label>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>ListItem_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onleft>3101</onleft>
+				<onright>3101</onright>
+				<onup>3108</onup>
+				<ondown>3103</ondown>
+			</control>
+			<control type="label" id="3102">
+				<posx>70</posx>
+				<posy>82</posy>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+				<description>player limit label</description>
+				<label>15051</label>
+			</control>
+			<control type="spincontrolex" id="3103">
+				<description>player limit spin control</description>
+				<posx>60</posx>
+				<posy>75</posy>
+				<width>400</width>
+				<texturefocus>ListItem_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onleft>3103</onleft>
+				<onright>3103</onright>
+				<onup>3101</onup>
+				<ondown>3105</ondown>
+				<font>font16</font>
+				<reverse>yes</reverse>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+			</control>
+			<control type="label" id="3104">
+				<posx>70</posx>
+				<posy>122</posy>
+				<description>password label</description>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+        <label>15052</label>
+			</control>
+			<control type="button" id="3105">
+				<description>password button</description>
+				<posx>60</posx>
+				<posy>115</posy>
+				<width>400</width>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>ListItem_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onleft>3105</onleft>
+				<onright>3105</onright>
+				<onup>3103</onup>
+				<ondown>3107</ondown>
+				<label>-</label>
+			</control>
+			<control type="label" id="3106">
+				<posx>60</posx>
+				<posy>155</posy>
+				<width>400</width>
+				<align>center</align>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+				<description>description label</description>
+				<label>15053</label>
+			</control>
+			<control type="button" id="3107">
+				<posx>60</posx>
+				<posy>180</posy>
+				<width>400</width>
+				<align>left</align>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>ListItem_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onleft>3107</onleft>
+				<onright>3107</onright>
+				<onup>3105</onup>
+				<ondown>3108</ondown>
+			</control>
+			<control type="button" id="3108">
+				<description>Ok Button</description>
+				<posx>120</posx>
+				<posy>235</posy>
+				<height>25</height>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+				<texturefocus>ListItem_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onleft>3109</onleft>
+				<onright>3109</onright>
+				<onup>3107</onup>
+				<ondown>3101</ondown>
+			</control>
+			<control type="button" id="3109">
+				<description>Cancel Button</description>
+				<posx>250</posx>
+				<posy>235</posy>
+				<height>25</height>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+        <include>textcolor-dialog</include>
+        <include>textcolor-selected</include>
+				<texturefocus>ListItem_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onleft>3108</onleft>
+				<onright>3108</onright>
+				<onup>3107</onup>
+				<ondown>3101</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

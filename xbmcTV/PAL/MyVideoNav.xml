@@ -1,0 +1,383 @@
+﻿<window id="25">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>ShutdownMenu</previouswindow>
+	<controls>
+		<include>background</include>
+		<!-- Movie Info -->
+		<control type="group">
+			<animation effect="fade" start="0" delay="100">Visible</animation>
+			<visible>!Window.IsActive(ShutdownMenu) + Control.IsVisible(50) + System.IdleTime(2) + Container.Content(Movies)</visible>
+			<control type="label">
+				<description>Movie label</description>
+				<posx>45</posx>
+				<posy>320</posy>
+				<width>310</width>
+				<height>200</height>
+				<label fallback="416">$INFO[ListItem.Title]</label>
+				<scroll>true</scroll>
+				<font>font11</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="image">
+				<description>seperator</description>
+				<posx>45</posx>
+				<posy>340</posy>
+				<width>310</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="label">
+				<description>Director label</description>
+				<posx>95</posx>
+				<posy>345</posy>
+				<width>80</width>
+				<label>$LOCALIZE[20339]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Director value</description>
+				<posx>98</posx>
+				<posy>345</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.Director]</label>
+				<scroll>true</scroll>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Genre label</description>
+				<posx>95</posx>
+				<posy>360</posy>
+				<width>80</width>
+				<label>$LOCALIZE[515]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Genre value</description>
+				<posx>98</posx>
+				<posy>360</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.Genre]</label>
+				<scroll>true</scroll>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Year label</description>
+				<posx>95</posx>
+				<posy>375</posy>
+				<width>80</width>
+				<label>$LOCALIZE[345]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Year value</description>
+				<posx>98</posx>
+				<posy>375</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.Year]</label>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Rating label</description>
+				<posx>95</posx>
+				<posy>390</posy>
+				<width>80</width>
+				<label>$LOCALIZE[563]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Rating value</description>
+				<posx>98</posx>
+				<posy>390</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.RatingandVotes]</label>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="label">
+				<description>MPAA label</description>
+				<posx>95</posx>
+				<posy>405</posy>
+				<width>80</width>
+				<label>$LOCALIZE[31094]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>MPAA value</description>
+				<posx>98</posx>
+				<posy>405</posy>
+				<width>255</width>
+				<scroll>true</scroll>
+				<label fallback="416">$INFO[ListItem.MPAA]</label>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="image">
+				<description>seperator</description>
+				<posx>45</posx>
+				<posy>425</posy>
+				<width>310</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="textbox">
+				<description>Movie Plot</description>
+				<posx>45</posx>
+				<posy>435</posy>
+				<width>310</width>
+				<height>95</height>
+				<font>font10</font>
+				<include>AutoScroll2x</include>
+				<label fallback="416">$INFO[ListItem.Plot]</label>
+			</control>
+			<control type="image">
+				<description>seperator</description>
+				<posx>45</posx>
+				<posy>535</posy>
+				<width>310</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+			</control>
+		</control>
+		<!-- TV Show Info -->
+		<control type="group">
+			<animation effect="fade" start="0" delay="100">Visible</animation>
+			<visible>!Window.IsActive(ShutdownMenu) + Control.IsVisible(50) + System.IdleTime(2) + [Container.Content(TVShows) | Container.Content(Episodes)]</visible>
+			<control type="label">
+				<description>TV Show label</description>
+				<posx>45</posx>
+				<posy>320</posy>
+				<width>310</width>
+				<height>200</height>
+				<label fallback="416">$INFO[ListItem.Title]</label>
+				<scroll>true</scroll>
+				<font>font11</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="image">
+				<description>seperator</description>
+				<posx>45</posx>
+				<posy>340</posy>
+				<width>310</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="label">
+				<description>Director label</description>
+				<posx>95</posx>
+				<posy>345</posy>
+				<width>80</width>
+				<label>$LOCALIZE[20339]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Director value</description>
+				<posx>98</posx>
+				<posy>345</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.Director]</label>
+				<scroll>true</scroll>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Genre label</description>
+				<posx>95</posx>
+				<posy>360</posy>
+				<width>80</width>
+				<label>$LOCALIZE[515]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Genre value</description>
+				<posx>98</posx>
+				<posy>360</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.Genre]</label>
+				<scroll>true</scroll>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Year label</description>
+				<posx>95</posx>
+				<posy>375</posy>
+				<width>80</width>
+				<label>$LOCALIZE[345]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Year value</description>
+				<posx>98</posx>
+				<posy>375</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.Year]</label>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Rating label</description>
+				<posx>95</posx>
+				<posy>390</posy>
+				<width>80</width>
+				<label>$LOCALIZE[563]:</label>
+				<font>font10</font>
+				<align>right</align>
+				<textcolor>grey-text</textcolor>
+			</control>
+			<control type="label">
+				<description>Rating value</description>
+				<posx>98</posx>
+				<posy>390</posy>
+				<width>255</width>
+				<label fallback="416">$INFO[ListItem.Rating]</label>
+				<font>font10</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			<control type="image">
+				<description>seperator</description>
+				<posx>45</posx>
+				<posy>410</posy>
+				<width>310</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="textbox">
+				<description>Movie Plot</description>
+				<posx>45</posx>
+				<posy>420</posy>
+				<width>310</width>
+				<height>95</height>
+				<font>font10</font>
+				<include>AutoScroll2x</include>
+				<label fallback="416">$INFO[ListItem.Plot]</label>
+			</control>
+			<control type="image">
+				<description>seperator</description>
+				<posx>45</posx>
+				<posy>520</posy>
+				<width>310</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+			</control>
+		</control>
+		<include>ListView</include>
+		<include>BigListView</include>
+		<include>VideoIconView</include>
+		<include>VideoWrapList</include>
+		<include>WideIconView</include>
+		<include>BigWideView</include>
+		<include>Coverflow</include>
+		<include>PageControl</include>
+		<include>TallPageControl</include>
+		<control type="group" id="9001">
+			<include>Slide-In</include>
+			<control type="group" id="9000">
+				<posx>11</posx>
+				<posy>0</posy>
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posy>5</posy>
+					<label>100</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>11</onup>
+					<ondown>3</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>50</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>4</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<posx>177</posx>
+					<posy>65</posy>
+					<label>-</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+				</control>
+				<control type="radiobutton" id="5">
+					<description>Library button</description>
+					<posy>95</posy>
+					<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+					<onclick>ReplaceWindow(myvideofiles)</onclick>
+					<selected>Window.IsVisible(myvideolibrary)</selected>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>10</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="10">
+					<description>Show Button</description>
+					<posy>140</posy>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>8</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="8">
+					<description>Search Button</description>
+					<posy>185</posy>
+					<label>137</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>10</onup>
+					<ondown>9</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="9">
+					<description>IMDB Button</description>
+					<posy>230</posy>
+					<label>368</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>8</onup>
+					<ondown>11</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="11">
+					<description>Movie Trailers</description>
+					<posy>275</posy>
+					<label>31011</label>
+					<onclick>XBMC.RunScript(Q:\Scripts\Apple Movie Trailers\default.py)</onclick>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>2</ondown>
+					<include>Media-Button</include>
+				</control>
+				<include>Media-Info</include>
+			</control>
+		</control>
+	</controls>
+</window>

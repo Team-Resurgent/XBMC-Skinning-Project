@@ -1,0 +1,67 @@
+<window>
+  <id>110</id>
+  <defaultcontrol>0</defaultcontrol>
+  <controls>
+    <control>
+      <description>dialog body</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>155</posX>
+      <posY>217</posY>
+      <width>406</width>
+      <height>180</height>
+      <texture>dialog-popup.png</texture>
+    </control>
+    <control>
+      <description>dialog header</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>155</posX>
+      <posY>217</posY>
+      <width>406</width>
+      <height>25</height>
+      <texture>dialog-header.png</texture>
+    </control>
+    <control>
+      <description>dialog Heading</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>190</posX>
+      <posY>220</posY>
+      <width>190</width>
+      <label>12325</label>
+      <font>font13</font>
+      <textcolor>FF000000</textcolor>
+    </control>
+    <control>
+      <description>dialog line 1</description>
+      <type>label</type>
+      <id>2</id>
+      <posX>220</posX>
+      <posY>260</posY>
+      <width>190</width>
+      <label>12330</label>
+      <font>font10</font>
+    </control>
+    <control>
+      <description>dialog line 2</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>220</posX>
+      <posY>280</posY>
+      <width>190</width>
+      <label>12331</label>
+      <font>font10</font>
+    </control>
+    <control>
+      <description>dialog line 3</description>
+      <type>label</type>
+      <id>4</id>
+      <posX>220</posX>
+      <posY>310</posY>
+      <width>190</width>
+      <label>12323</label>
+      <font>font10</font>
+    </control>
+  </controls>
+</window>

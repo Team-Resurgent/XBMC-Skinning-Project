@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Date of translation: 05/20/2009-->
+<!--$Revision$-->
+<!--Based on english strings version 204-->
+<strings>
+  <!-- Home / General -->
+  <string id="31000">מנהל קבצים</string>
+  <string id="31001">מידע</string>
+  <string id="31002">איפוס</string>
+  <string id="31003">ניתוח</string>
+  <string id="31004">שינוי</string>
+  <string id="31005">כל מיני</string>
+  <string id="31006">ויזואלי</string>
+  <string id="31007">מופעל\מכובה</string>
+  <string id="31008">לא מדורג</string>
+  <string id="31009">צפה ב</string>  <!-- used for Movies -->
+  <string id="31010">צפה ב</string>  <!-- used for TV Shows -->
+  <string id="31011">צפה ב</string>  <!-- used for Videos -->
+  <string id="31012">שמע ל</string>
+  <string id="31013">עיין ב</string>
+  <string id="31014">השתמש ב</string>
+  <string id="31015">בדוק</string>
+  <string id="31016">הגדר את</string>
+  <string id="31017">הפעלה</string>
+  <string id="31018"></string>
+  <string id="31019">נגן את ה</string>
+  <string id="31020">בדוק את ה</string>
+  <string id="31021">של</string>
+  <string id="31022">נוספו לאחרונה</string>
+  <string id="31023">Latest</string>
+  <string id="31024">Page</string>
+  <string id="31025">Items</string>
+
+  <!-- Options Menu -->
+  <string id="31100">מידע פוסטר</string>
+  <string id="31101">מיין לפי</string>
+  <string id="31102">אפשרויות הגדרות</string>
+  <string id="31103">Showcase</string>
+  <string id="31104">הראה שעון גדול</string>
+  <string id="31105">Waterfall</string>
+  <string id="31106">Exhibit</string>
+  <string id="31107">Low List</string>
+  <string id="31108">Exposure</string>
+  <string id="31109">High List</string>
+
+  <!-- Settings -->
+  <string id="31200">הראה עלילה</string>
+  <string id="31201">רעינון אחרון</string>
+  <string id="31202">תיקיית רקעים</string>
+  <string id="31203">רקעים</string>
+  <string id="31204">תפריט אפשרויות</string>
+  <string id="31205">הסתר</string>
+  <string id="31206">שעון</string>
+  <string id="31207">הסתר מזג אוויר בדף הבית</string>
+  <string id="31208">בטל</string>
+  <string id="31209">שנה הגדרות של</string>
+  <string id="31210">תפריט</string>
+  <string id="31211">הסתר עלילה ב OSD של הוידאו</string>
+  <string id="31212">הסתר סימון ניצפה</string>
+  <string id="31213">הסתר צלמית</string>
+  <string id="31214">הראה ביקורות</string>
+  <string id="31215">הראה סוג תוכן</string>
+  <string id="31216">הסתר ספירת מדיה</string>
+  <string id="31217">השתמש בצלמיות פורטרט לסדרות</string>
+  <string id="31218">הראה OSD מינימלי של וידאו</string>
+  <string id="31219">הסתר רקע רעש לבן</string>
+  <string id="31220">Use Animated Weather Thumbs</string>
+  <string id="31221">Hide Latest Videos</string>
+
+  <!-- Video -->
+  <string id="31300">לא זמין</string>
+  <string id="31301">צלמית</string>
+  <string id="31302">Fanart</string>
+  <string id="31303">עונות</string>
+  <string id="31304">שעת סיום מוערכת</string>
+
+  <!-- Music -->
+  <string id="31400">הסתיים</string>
+  <string id="31401">נוכחי</string>
+  <string id="31402">בחר ויזואלזציה</string>
+  <string id="31403">סוגי ויזואלזציה</string>
+  <string id="31404">הגדרות ויזואלזציה</string>
+  <string id="31405">מילים</string>
+  <string id="31406">הגדר נתיב למילים</string>
+  <string id="31407">Open playlist</string>
+  <string id="31408">Save playlist</string>
+  <string id="31409">Close playlist</string>
+  <string id="31410">System music files</string>
+  <string id="31411">Current playlist</string>
+
+  <!-- Dialogs -->
+  <string id="31500">בחר פרופיל</string>
+  <string id="31501">מושתק</string>
+  <string id="31502">צור</string>
+  <string id="31503">Codec</string>
+
+</strings>

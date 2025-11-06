@@ -1,0 +1,67 @@
+﻿<!-- un-lock dialog -->
+<window id="110">
+
+	<defaultcontrol>0</defaultcontrol>
+
+	<controls>
+
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+
+		<control type="group">
+		
+			<posx>165</posx>
+			<posy>205</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>480</width>
+				<height>160</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label">
+				<label>Locked</label>
+				<width>440</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+			<!-- line 1 -->
+			<control type="label" id="2">
+				<label>12330</label>
+				<width>440</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>60</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+			</control>
+			<!-- line 2 -->
+			<control type="label">
+				<label>Press Back to cancel</label>
+				<width>440</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>80</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+			</control>
+			<!-- line 3 -->
+			<control type="label" id="4">
+				<label>12323</label>
+				<width>440</width>
+				<height>20</height>
+				<posx>20</posx>
+				<posy>120</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+			</control>
+		</control>
+		
+	</controls>
+	
+</window>

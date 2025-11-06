@@ -1,0 +1,17 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <version>2.1</version>
+  
+  <!-- amount to zoom skin to remove overscan compensation -->
+  <zoom>1</zoom>
+  
+  <credits>
+    <skinname>XMBOX</skinname>
+    <name>MacGyver & Blaize</name>
+    <name>We would like to thank:</name>
+    <name>Mathias [ChokeManiac] Mahling</name>
+    <name>Jonathan Marshall - Julien [modhack] Cingoz</name>
+    <name>Christian Granqvist - Steven [Blackbolt] Weir</name>
+  </credits>
+</skin>

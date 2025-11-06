@@ -1,0 +1,255 @@
+<window id="1086">
+	<defaultcontrol>300</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+		<!-- background 16x9 -->
+		<include>background2</include>
+        <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>720</width>
+            <height>576</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>popup.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+	    <include>labelfade</include>
+        </control>
+		<!-- Upper images -->
+
+
+        <control type="image">
+        <posx>0</posx>
+        <posy>90</posy>
+        <width>1000</width>
+	<height>2</height>
+        <texture>bmx-line.png</texture>
+	<include>panelslideup</include>
+        </control>
+
+
+        <control type="image">
+            <posx>50</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-friends.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+	<include>negsettingssubslide</include>
+        </control>
+
+        <control type="image">
+            <posx>120</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-scripts.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+	<include>negsettingssubslide</include>
+        </control>
+
+       <control type="label">
+            <posx>178</posx>
+            <posy>167</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+	    <label>Power Menu</label>
+	<include>negsettingssubslide</include>
+        </control>
+
+        <control type="image">
+            <posx>190</posx>
+            <posy>125</posy>
+            <width>45</width>
+            <height>60</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-settings-update-glow.png</texture>
+	<include>negsettingssubslide</include>
+        </control>
+
+
+
+		<control type="image" id="0">
+			<posx>20</posx>
+			<posy>45</posy>
+			<width>35</width>
+			<height>50</height>
+			<texture>bmx-settings-sub-glow.png</texture> 
+	<include>panelslideup</include> 
+		</control>
+		<control type="label" id="1">
+			<description>dialog Heading</description>
+			<posx>50</posx>
+			<posy>60</posy>
+			<label>Shutdown Menu</label>
+			<font>special13</font>
+	<include>panelslideup</include>
+		</control>
+
+
+
+
+
+
+<control type="list" id="300">
+	<description>list</description>
+	<posx>260</posx>
+	<posy>80</posy>
+	<width>550</width>
+	<height>440</height>
+	<visible>true</visible>
+	<animation effect="slide" time="220" start="550,0" end="0,0" acceleration="-1.1">WindowOpen</animation>
+	<animation effect="slide" time="220" start="0,0" end="550,0" acceleration="-1.1">WindowClose</animation>
+	<onup>300</onup>
+	<ondown>300</ondown>
+	<onleft>512</onleft>
+	<onright>512</onright>
+	<orientation>vertical</orientation>
+	<itemlayout width="170" height="50">
+		<control type="label">
+			<posx>85</posx>
+			<posy>105</posy>
+			<width>140</width>
+			<height>40</height>
+			<font>font12</font>
+			<align>center</align>
+			<info>ListItem.Label</info>
+        	</control>
+	</itemlayout>
+	<focusedlayout height="50" width="270">
+		<control type="label">
+			<posx>85</posx>
+			<posy>105</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special13</font>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<shadowcolor>ffffffff</shadowcolor>
+			<animation effect="fade" start="20" time="600" pulse="true" >Focus</animation>
+		</control>
+	</focusedlayout>
+  <content>
+	  <item>
+		<label>Shutdown XBOX</label>
+		<label2>none</label2>
+		<icon>bmx-network-download.png</icon>
+		<thumb>bmx-network-download-glow.png</thumb>
+		<onclick>XBMC.ShutDown</onclick>
+	  </item>
+	  <item>
+		<label>Reboot XBOX</label>
+		<label2>none</label2>
+		<icon>bmx-settings-update.png</icon>
+		<thumb>bmx-settings-update-glow.png</thumb>
+		<onclick>XBMC.Reboot</onclick>
+	  </item>
+	  <item>
+		<label>Reset XBOX</label>
+		<label2>none</label2>
+		<icon>bmx-settings-update.png</icon>
+		<thumb>bmx-settings-update-glow.png</thumb>
+		<onclick>XBMC.Reset</onclick>
+	  </item>
+	  <item>
+		<label>Restart XBMC</label>
+		<label2>none</label2>
+		<icon>bmx-settings-update.png</icon>
+		<thumb>bmx-settings-update-glow.png</thumb>
+		<onclick>XBMC.RestartApp</onclick>
+	  </item>
+	  <item>
+		<label>Run Dashboard</label>
+		<label2>none</label2>
+		<icon>bmx-network-remote.png</icon>
+		<thumb>bmx-network-remote-glow.png</thumb>
+		<onclick>XBMC.Dashboard</onclick>
+	  </item>
+
+ 
+  </content>
+
+
+</control>
+
+
+
+
+   <control type="button" id="512">
+	<description>power button</description>
+	<posx>665</posx>
+	<posy>500</posy>
+	<width>46</width>
+	<height>64</height>
+	<label>-</label>
+	<font>font14</font>
+      <onfocus>SetFocus(300)</onfocus>
+      <onfocus>ReplaceWindow(home)</onfocus>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+   </control>
+
+
+		<!-- Bottom images -->
+        <control type="image">
+			<posx>0</posx>
+			<posy>480</posy>
+			<width>1000</width>
+			<height>2</height>
+			<texture>bmx-line.png</texture>
+	<include>panelslidedown</include>
+        </control>
+
+        <control type="label">
+			<posx>140</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special13</font>
+			<align>left</align>
+			<label>A</label>
+	<include>panelslidedown</include>
+        </control>
+
+
+
+        <control type="label">
+			<posx>160</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special12</font>
+			<align>left</align>
+			<label>Accept</label>
+	<include>panelslidedown</include>
+        </control>
+
+        <control type="label">
+			<posx>510</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special13</font>
+			<align>left</align>
+			<label>B</label>
+	<include>panelslidedown</include>
+        </control>
+        <control type="label">
+			<posx>530</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special12</font>
+			<align>left</align>
+			<label>Cancel</label>
+	<include>panelslidedown</include>
+        </control>
+
+
+</controls>
+</window>

@@ -1,0 +1,53 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+
+	<control type="image" id="0">
+		<description>video rectangle</description>
+		<type>image</type>
+		<id>0</id>
+		<posx>60</posx>
+		<posy>380</posy>
+		<width>140</width>
+		<height>118</height>
+		<texture>blue_rectangle_video.png</texture>
+		<colorkey>0</colorkey>
+		<colordiffuse>ffffffff</colordiffuse>
+		<visible>Player.HasMedia + Skin.HasSetting(media-cover)</visible>
+	</control>
+
+	<control type="videowindow" id="1">
+		<description>video preview window</description>
+		<posx>67</posx>
+		<posy>385</posy>
+		<width>140</width>
+		<height>118</height>
+		<visible>Player.HasMedia + Skin.HasSetting(media-cover)</visible>
+	</control>
+
+	<control type="label" id="0">
+		<description>play time label</description>
+		<posx>67</posx>
+		<posy>500</posy>
+		<label>-</label>
+		<info>VideoPlayer.Time</info>
+		<align>left</align>
+		<font>font13</font>
+		<visible>Player.HasMedia + Skin.HasSetting(media-cover)</visible>
+	</control>
+
+	<control type="fadelabel" id="0">
+		<description>album/artist/genre etc info label</description>
+		<width>130</width>
+		<posx>67</posx>
+		<posy>525</posy>
+		<font>font10</font>
+		<info>VideoPlayer.Title</info>
+		<info>VideoPlayer.Year</info>
+		<info>VideoPlayer.Director</info>
+		<info>VideoPlayer.Genre</info>
+		<visible>Player.HasMedia + Skin.HasSetting(media-cover)</visible>
+	</control>
+
+	</controls>
+</window>

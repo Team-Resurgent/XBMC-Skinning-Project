@@ -1,0 +1,123 @@
+<window id="3">
+  <defaultcontrol always="true">20</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+    <include>DateAndTime</include>
+
+    <control type="group">
+      <posx>-10</posx>
+      <posy>240</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,600" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,600" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,600">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,600">Hidden</animation>
+
+      <!-- Left File Manager -->
+      <control type="group" id="201">
+        <posx>30</posx>
+
+        <include>FileMgrOverlayArea</include>
+
+        <control type="label" id="101">
+          <description>Current Directory</description>
+          <include>FileMgrDirectoryLabel</include>
+        </control>
+
+        <control type="group">
+          <posy>FileMgrFilesListYOffset</posy>
+
+          <control type="list" id="20">
+            <description>Files list</description>
+            <posy>188</posy>
+            <onright>21</onright>
+            <onup>20</onup>
+            <ondown>20</ondown>
+            <onleft>Skin.ToggleSetting(HideMusicNowPlayingInfo)</onleft>
+            <pagecontrol>101</pagecontrol>
+            <include>FileMgrFilesList</include>
+
+            <focusedlayout height="FileMgrFileItemHeight">
+              <control type="image">
+                <include>FileMgrFileItemFocusImage</include>
+                <visible>Control.HasFocus(20)</visible>
+              </control>
+
+              <include>FileMgrFileItemFocusText</include>
+            </focusedlayout>
+          </control>
+        </control>
+        
+        <control type="group">
+          <posx>-28</posx>
+
+          <control type="scrollbar" id="101">
+            <posx>FileMgrDirectoryWidth</posx>
+            <posy>42</posy>
+            <height>388</height>
+          </control>
+        </control>
+
+        <control type="label" id="12">
+          <description>No. of Files</description>
+          <include>FileMgrFilesCount</include>
+        </control>
+
+        <control type="group">
+          <visible>!Control.HasFocus(20)</visible>
+
+          <include>FileMgrOverlayArea</include>
+        </control>
+      </control>
+
+      <!-- Right File Manager -->
+      <control type="group" id="202">
+        <posx>768</posx>
+
+        <include>FileMgrOverlayArea</include>
+
+        <control type="label" id="102">
+          <description>Current Directory</description>
+          <include>FileMgrDirectoryLabel</include>
+        </control>
+
+        <control type="group">
+          <posy>FileMgrFilesListYOffset</posy>
+
+          <control type="list" id="21">
+            <description>Files list</description>
+            <onleft>20</onleft>
+            <onup>21</onup>
+            <ondown>21</ondown>
+            <include>FileMgrFilesList</include>
+
+            <focusedlayout height="FileMgrFileItemHeight">
+              <control type="image">
+                <include>FileMgrFileItemFocusImage</include>
+                <visible>Control.HasFocus(21)</visible>
+              </control>
+
+              <include>FileMgrFileItemFocusText</include>
+            </focusedlayout>
+          </control>
+        </control>
+
+        <control type="label" id="13">
+          <description>No. of Files</description>
+          <include>FileMgrFilesCount</include>
+        </control>
+
+        <control type="group">
+          <visible>!Control.HasFocus(21)</visible>
+
+          <include>FileMgrOverlayArea</include>
+        </control>
+      </control>
+    </control>
+
+    <include>MusicNowPlaying</include>
+
+  </controls>
+</window>

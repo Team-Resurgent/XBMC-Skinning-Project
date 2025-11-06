@@ -1,0 +1,95 @@
+<window id="35">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>background</include>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<posx>453</posx>
+		<posy>310</posy>
+		<width>218</width>
+		<height>240</height>
+		<texture>16x9bg-myprograms.png</texture>
+		<include>common-icons</include>
+	</control>
+
+	<control type="image" id="1">
+		<description>applications logo</description>
+		<posx>55</posx>
+		<posy>33</posy>
+		<height>83</height>
+		<texture>background-myprograms.png</texture>
+		<include>slide-left</include>
+		<aspectratio align="left">keep</aspectratio>
+	</control>
+
+	<control type="label" id="0">
+		<description>my gameSaves text label</description>
+		<align>right</align> 
+		<posx>660</posx> 
+		<posy>85</posy>
+		<label>20315</label>
+		<font>font14</font>
+		<textcolor>d0ffffff</textcolor>
+		<include>slide-right</include>
+	</control>
+
+	<control type="label" id="12">
+		<description>number of files text label</description>
+		<posx>210</posx>
+		<posy>525</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>d0ffffff</textcolor>
+		<include>slide-right</include>
+	</control>
+
+	<control type="group">
+		<control type="button" id="2">
+			<description>View As Icons button</description>
+			<posx>60</posx>
+			<posy>120</posy>
+			<label>100</label>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<include>slide-left</include>
+		</control>
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<posx>60</posx>
+			<posy>157</posy>
+			<label>103</label>
+			<onleft>50</onleft>
+			<onright>4</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<include>slide-left</include>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<label>-</label>
+			<onleft>3</onleft>
+			<onright>50</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<include>slide-left</include>
+		</control>
+	</control>
+
+	<control type="image">
+		<description>ListItems Icons</description>
+		<posx>67</posx>
+		<posy>375</posy>
+		<width>120</width>
+		<height>120</height>
+		<info>ListItem.Icon</info>
+		<include>listitem-icon</include>
+		<include>slide-left</include>
+	</control>
+	<include>Common_List</include>
+
+	</controls>
+</window>

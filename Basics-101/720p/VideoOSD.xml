@@ -1,0 +1,236 @@
+<window id="2901">
+	<defaultcontrol always="true">402</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>245</posx>
+		<posy>595</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>790</width>
+			<height>115</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image" id="0">
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>780</width>
+			<height>105</height>
+			<colordiffuse>CCFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="group" id="9000">
+			<control type="button" id="400">
+				<posx>10</posx>
+				<posy>20</posy>
+				<width>150</width>
+				<height>40</height>
+				<label>-</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>405</onleft>
+				<onright>401</onright>
+				<onup>600</onup>
+				<ondown>600</ondown>
+				<onclick>XBMC.PlayerControl(Previous)</onclick>
+			</control>
+			<control type="image">
+				<posx>75</posx>
+				<posy>30</posy>
+				<width>20</width>
+				<height>20</height>
+				<texture>mediacontrol-skipback.png</texture>
+			</control>
+			<control type="button" id="401">
+				<posx>165</posx>
+				<posy>20</posy>
+				<width>150</width>
+				<height>40</height>
+				<label>-</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>400</onleft>
+				<onright>402</onright>
+				<onup>601</onup>
+				<ondown>601</ondown>
+				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			</control>
+			<control type="image">
+				<posx>230</posx>
+				<posy>30</posy>
+				<width>20</width>
+				<height>20</height>
+				<texture>mediacontrol-rewind.png</texture>
+			</control>
+			<control type="button" id="402">
+				<posx>320</posx>
+				<posy>10</posy>
+				<width>150</width>
+				<height>50</height>
+				<label>-</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>401</onleft>
+				<onright>404</onright>
+				<onup>403</onup>
+				<ondown>403</ondown>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+			</control>
+			<control type="image">
+				<posx>379</posx>
+				<posy>19</posy>
+				<width>32</width>
+				<height>32</height>
+				<visible>!Player.Paused</visible>
+				<texture>mediacontrol-play.png</texture>
+			</control>
+			<control type="image">
+				<posx>379</posx>
+				<posy>19</posy>
+				<width>32</width>
+				<height>32</height>
+				<visible>Player.Paused</visible>
+				<texture>mediacontrol-pause.png</texture>
+			</control>
+			<control type="button" id="403">
+				<posx>320</posx>
+				<posy>65</posy>
+				<width>150</width>
+				<height>40</height>
+				<label>-</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>601</onleft>
+				<onright>602</onright>
+				<onup>402</onup>
+				<ondown>402</ondown>
+				<onclick>XBMC.PlayerControl(Stop)</onclick>
+			</control>
+			<control type="image">
+				<posx>381</posx>
+				<posy>71</posy>
+				<width>28</width>
+				<height>28</height>
+				<texture>mediacontrol-stop.png</texture>
+			</control>
+			<control type="button" id="404">
+				<posx>475</posx>
+				<posy>20</posy>
+				<width>150</width>
+				<height>40</height>
+				<label>-</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+				<onleft>402</onleft>
+				<onright>405</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+			</control>
+			<control type="image">
+				<posx>540</posx>
+				<posy>30</posy>
+				<width>20</width>
+				<height>20</height>
+				<texture>mediacontrol-fastforward.png</texture>
+			</control>
+			<control type="button" id="405">
+				<posx>630</posx>
+				<posy>20</posy>
+				<width>150</width>
+				<height>40</height>
+				<label>-</label>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Next)</onclick>
+				<onleft>404</onleft>
+				<onright>400</onright>
+				<onup>603</onup>
+				<ondown>603</ondown>
+			</control>
+			<control type="image">
+				<posx>695</posx>
+				<posy>30</posy>
+				<width>20</width>
+				<height>20</height>
+				<texture>mediacontrol-skipforward.png</texture>
+			</control>
+		</control>
+		<control type="button" id="600">
+			<description>DVD menu button</description>
+			<posx>10</posx>
+			<posy>65</posy>
+			<width>150</width>
+			<height>30</height>
+			<font>font12</font>
+			<label>31003</label>
+			<align>center</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			<enable>VideoPlayer.HasMenu</enable>
+			<pulseonselect>no</pulseonselect>
+			<onleft>603</onleft>
+			<onright>601</onright>
+			<onup>400</onup>
+			<ondown>400</ondown>
+		</control>
+		<control type="button" id="601">
+			<description>Bookmarks Menu</description>
+			<posx>165</posx>
+			<posy>65</posy>
+			<width>150</width>
+			<height>30</height>
+			<label>31004</label>
+			<font>font12</font>
+			<align>center</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(125)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>600</onleft>
+			<onright>403</onright>
+			<onup>401</onup>
+			<ondown>401</ondown>
+		</control>
+		<control type="button" id="602">
+			<description>Audio Menu</description>
+			<posx>475</posx>
+			<posy>65</posy>
+			<width>150</width>
+			<height>30</height>
+			<label>31005</label>
+			<font>font12</font>
+			<align>center</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(124)</onclick>
+			<onleft>403</onleft>
+			<onright>603</onright>
+			<onup>404</onup>
+			<ondown>404</ondown>
+		</control>
+		<control type="button" id="603">
+			<description>Video Menu</description>
+			<posx>630</posx>
+			<posy>65</posy>
+			<width>150</width>
+			<height>30</height>
+			<label>31006</label>
+			<font>font12</font>
+			<align>center</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(123)</onclick>
+			<onleft>602</onleft>
+			<onright>600</onright>
+			<onup>405</onup>
+			<ondown>405</ondown>
+		</control>
+	</controls>
+</window>

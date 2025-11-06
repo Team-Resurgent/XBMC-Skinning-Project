@@ -1,0 +1,32 @@
+<window id="136">
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>63</posx>
+			<posy>115</posy>
+			<width>595</width>
+			<height>372</height>
+			<texture>Black-Special.png</texture>
+			<visible>!Window.IsActive(home)</visible>
+			<animation effect="fade" time="200" start="0" end="100">WindowOpen</animation>
+			<animation effect="fade" time="100" start="100" end="0">WindowClose</animation>
+		</control>
+		<control type="multiimage">
+			<description>Busy animation</description>
+			<posx>260</posx>
+			<posy>188</posy>
+			<width>200</width>
+			<height>200</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+		</control>
+	</controls>
+</window>

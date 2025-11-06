@@ -1,0 +1,240 @@
+<window id="0">
+	<defaultcontrol>900</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- backgrounds -->
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>keep</aspectratio>
+			<imagepath>bg_games</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(3) + [!Container(900).OnNext + !Container(900).OnPrevious]</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>keep</aspectratio>
+			<imagepath>bg_pictures</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(4) + [!Container(900).OnNext + !Container(900).OnPrevious]</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>keep</aspectratio>
+			<imagepath>bg_movies</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(5) + [!Container(900).OnNext + !Container(900).OnPrevious]</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>keep</aspectratio>
+			<imagepath>../../../userdata/thumbnails/video/fanart</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(6) + [!Container(900).OnNext + !Container(900).OnPrevious]</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>keep</aspectratio>
+			<imagepath>bg_music</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<visible>Container(900).HasFocus(7) + [!Container(900).OnNext + !Container(900).OnPrevious]</visible>
+			<animation effect="fade" time="500" delay="200" start="0" end="100">visible</animation>
+		</control>
+		<control type="image">
+			<description>Fanart Border</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>border.png</texture>
+		</control>
+		<!-- weather Info -->
+		<control type="group">
+			<posx>715</posx>
+			<posy>20</posy>
+			<control type="image">
+				<description>Weather Nav Strip</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>541</width>
+				<height>32</height>
+				<texture border="3">panel.png</texture>
+			</control>
+			<control type="image">
+				<description>Weather image</description>
+				<posx>500</posx>
+				<posy>0</posy>
+				<width>64</width>
+				<height>74</height>
+				<aspectratio>keep</aspectratio>
+				<info>Weather.Conditions</info>
+			</control>
+			<control type="label">
+				<description>conditions Label</description>
+				<width>520</width>
+				<posx>10</posx>
+				<posy>2</posy>
+				<label>[B]$INFO[Weather.Conditions] - $LOCALIZE[143] $INFO[Weather.Temperature][/B]</label>
+				<align>left</align>
+				<font>font22</font>
+			</control>
+		</control>
+		<!-- labels -->
+		<control type="group">
+			<posx>25</posx>
+			<posy>20</posy>
+			<control type="image">
+				<description>Weather Nav Strip</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>133</width>
+				<height>32</height>
+				<texture border="3">panel.png</texture>
+			</control>
+			<control type="label">
+				<description>date label</description>
+				<posx>10</posx>
+				<posy>2</posy>
+				<label>$INFO[System.Time]</label>
+				<align>left</align>
+				<font>font22</font>
+			</control>
+		</control>
+		<!-- main buttons -->
+		<control type="group" id="9001">
+			<posx>25</posx>
+			<posy>665</posy>
+			<control type="image">
+				<description>Main menu strip</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1235</width>
+				<height>32</height>
+				<texture border="2">panel.png</texture>
+			</control>
+			<control type="list" id="900">
+			<posx>5</posx>
+			<posy>0</posy>
+			<height>32</height>
+			<width>1225</width>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>900</onleft>
+			<onright>900</onright>
+			<viewtype>list</viewtype>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<scrolltime>200</scrolltime>
+			<itemlayout width="160" height="32">
+				<control type="label">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>160</width>
+					<height>32</height>
+					<label>[B][UPPERCASE]$INFO[ListItem.Label][/UPPERCASE][/B]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font22</font>
+					<textcolor>FFFFFFFF</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="160" height="32">
+				<control type="image">
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>191</width>
+					<height>28</height>
+					<texture>list_highlight_short.png</texture>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>160</width>
+					<height>32</height>
+					<label>[B][UPPERCASE]$INFO[ListItem.Label][/UPPERCASE][/B]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font22</font>
+					<textcolor>FF000000</textcolor>
+					<focusedcolor>FF000000</focusedcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Weather</description>
+					<label>Weather</label>
+					<onclick>XBMC.ActivateWindow(MyWeather)</onclick>
+				</item>
+				<item id="2">
+					<description>Scripts</description>
+					<label>Scripts</label>
+					<onclick>XBMC.ActivateWindow(20)</onclick>
+				</item>
+				<item id="3">
+					<description>Games</description>
+					<label>Games</label>
+					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+				</item>
+				<item id="4">
+					<description>Pictures</description>
+					<label>Pictures</label>
+					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+				</item>
+				<item id="5">
+					<description>Movies</description>
+					<label>Movies</label>
+					<onclick>ActivateWindow(MyVideoLibrary,videodb://1/2/)</onclick>
+				</item>
+				<item id="6">
+					<description>TV Shows</description>
+					<label>TV Shows</label>
+					<onclick>ActivateWindow(MyVideoLibrary,videodb://2/2/)</onclick>
+				</item>
+				<item id="7">
+					<description>My Music</description>
+					<label>Music</label>
+					<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+				</item>
+				<item id="8">
+					<description>Settings</description>
+					<label>Settings</label>
+					<onclick>ActivateWindow(4)</onclick>
+				</item>
+				<item id="9">
+					<description>File Manager</description>
+					<label>Files</label>
+					<onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+				</item>
+			</content>
+		</control>
+		</control>
+	</controls>
+</window>

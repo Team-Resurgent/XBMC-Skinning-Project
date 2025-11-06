@@ -1,0 +1,631 @@
+<window id="4">
+	<defaultcontrol always="false">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Background</include>
+		<include>Container</include>
+		<control type="group" id="1">
+			<include>media-slide</include>
+			<control type="button" id="2">
+				<description>Information button</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<label>31021</label>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<onup>8</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="3">
+				<description>Media Settings button</description>
+				<posx>5</posx>
+				<posy>147</posy>
+				<label>31022</label>
+				<onleft>200</onleft>
+				<onright>200</onright>
+				<onup>2</onup>
+				<ondown>4</ondown>
+			</control>
+			<control type="button" id="4">
+				<description>System Settings button</description>
+				<posx>5</posx>
+				<posy>184</posy>
+				<label>31023</label>
+				<onleft>300</onleft>
+				<onright>300</onright>
+				<onup>3</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="button" id="5">
+				<description>Skin Settings button</description>
+				<posx>5</posx>
+				<posy>221</posy>
+				<label>31024</label>
+				<onleft>400</onleft>
+				<onright>400</onright>
+				<onup>4</onup>
+				<ondown>6</ondown>
+			</control>
+			<control type="button" id="6">
+				<description>Background Options Button</description>
+				<posx>5</posx>
+				<posy>258</posy>
+				<label>31025</label>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<onup>5</onup>
+				<ondown>7</ondown>
+			</control>
+			<control type="button" id="7">
+				<description>Home Window Options button</description>
+				<posx>5</posx>
+				<posy>295</posy>
+				<label>31038</label>
+				<onleft>600</onleft>
+				<onright>600</onright>
+				<onup>6</onup>
+				<ondown>8</ondown>
+			</control>
+			<control type="button" id="8">
+				<description>Shutdown Options button</description>
+				<posx>5</posx>
+				<posy>332</posy>
+				<label>31026</label>
+				<onleft>700</onleft>
+				<onright>700</onright>
+				<onup>7</onup>
+				<ondown>2</ondown>
+			</control>
+		</control>
+		<control type="grouplist" id="100">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>556</height>
+			<itemgap>5</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<animation effect="fade" start="0" delay="225" time="200">WindowOpen</animation>
+			<visible>Control.HasFocus(2) | ControlGroup(100).HasFocus()</visible>
+			<control type="button" id="10">
+				<description>File Manager button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31027</label>
+				<onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="11">
+				<description>Scripts Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31028</label>
+				<font>font13</font>
+				<onclick>XBMC.ActivateWindow(20)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="13">
+				<description>Weather Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31029</label>
+				<font>font13</font>
+				<onclick>XBMC.ActivateWindow(Weather)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="14">
+				<description>Game Saves Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31030</label>
+				<font>font13</font>
+				<onclick>XBMC.ActivateWindow(35)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="15">
+				<description>Profiles</description>
+				<width>500</width>
+				<height>30</height>
+				<label>13200</label>
+				<font>font13</font>
+				<onclick>XBMC.ActivateWindow(34)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="16">
+				<description>About XBMC</description>
+				<width>500</width>
+				<height>30</height>
+				<label>482</label>
+				<onclick>XBMC.Credits</onclick>
+				<font>font13</font>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="17">
+				<description>System Info</description>
+				<width>500</width>
+				<height>30</height>
+				<label>130</label>
+				<onclick>ActivateWindow(7)</onclick>
+				<font>font13</font>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+
+		<control type="grouplist" id="200">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>556</height>
+			<itemgap>5</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>200</onup>
+			<ondown>200</ondown>
+			<animation effect="fade" start="0" delay="225" time="200">WindowOpen</animation>
+			<visible>Control.HasFocus(3) | ControlGroup(200).HasFocus()</visible>
+			<control type="button" id="20">
+				<description>my videos</description>
+				<width>500</width>
+				<height>30</height>
+				<label>3</label>
+				<onclick>XBMC.ActivateWindow(17)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="21">
+				<description>my music</description>
+				<width>500</width>
+				<height>30</height>
+				<label>2</label>
+				<onclick>XBMC.ActivateWindow(15)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="22">
+				<description>my pictures</description>
+				<width>500</width>
+				<height>30</height>
+				<label>1</label>
+				<onclick>XBMC.ActivateWindow(12)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="23">
+				<description>my programs</description>
+				<width>500</width>
+				<height>30</height>
+				<label>0</label>
+				<onclick>XBMC.ActivateWindow(13)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+
+		<control type="grouplist" id="300">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>556</height>
+			<itemgap>5</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<animation effect="fade" start="0" delay="225" time="200">WindowOpen</animation>
+			<visible>Control.HasFocus(4) | ControlGroup(300).HasFocus()</visible>
+			<control type="button" id="30">
+				<description>Appearence Settings button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>480</label>
+				<onclick>XBMC.ActivateWindow(19)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="31">
+				<description>System Settings button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>13000</label>
+				<onclick>XBMC.ActivateWindow(16)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="32">
+				<description>Network Settings button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>705</label>
+				<onclick>XBMC.ActivateWindow(18)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="33">
+				<description>weather Settings button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>8</label>
+				<onclick>XBMC.ActivateWindow(14)</onclick>
+				<font>font13</font>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+
+		<control type="grouplist" id="400">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>556</height>
+			<itemgap>5</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>400</onup>
+			<ondown>400</ondown>
+			<animation effect="fade" start="0" delay="225" time="200">WindowOpen</animation>
+			<visible>Control.HasFocus(5) | ControlGroup(400).HasFocus()</visible>
+			<control type="button" id="40">
+				<description>Undefined</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31009</label>
+				<onclick></onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>false</visible>
+			</control>
+			<control type="button" id="41">
+				<description>Undefined</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31010</label>
+				<onclick></onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>false</visible>
+			</control>
+			<control type="radiobutton" id="42">
+				<description>Use Watched\Unwatched Overlays</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31031</label>
+				<onclick>Skin.ToggleSetting(watched)</onclick>
+				<selected>Skin.HasSetting(watched)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="43">
+				<description>Use Media Overlays</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31032</label>
+				<onclick>Skin.ToggleSetting(overlay)</onclick>
+				<selected>Skin.HasSetting(overlay)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="44">
+				<description>Use Wide Icon Labels</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31036</label>
+				<onclick>Skin.ToggleSetting(wide-labels)</onclick>
+				<selected>Skin.HasSetting(wide-labels)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="45">
+				<description>Use Wrap Labels</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31040</label>
+				<onclick>Skin.ToggleSetting(wrap-labels)</onclick>
+				<selected>Skin.HasSetting(wrap-labels)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="46">
+				<description>Use Containment Splash</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31041</label>
+				<onclick>RunScript(Q:\skin\Containment\extras\switchsplash.py)</onclick>
+				<selected>Skin.HasSetting(customSplash)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="47">
+				<description>Use Startup Playlist</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31034</label>
+				<onclick>Skin.ToggleSetting(startup-playlist)</onclick>
+				<selected>Skin.HasSetting(startup-playlist)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="48">
+				<description>Choose Startup Playlist</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31037</label>
+				<onclick>Skin.SetFile(playlist,.m3u,Q:\UserData\playlists\music)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>Skin.HasSetting(startup-playlist)</visible>
+			</control>
+		</control>
+
+		<control type="grouplist" id="500">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>556</height>
+			<itemgap>5</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>500</onup>
+			<ondown>500</ondown>
+			<animation effect="fade" start="0" delay="225" time="200">WindowOpen</animation>
+			<visible>Control.HasFocus(6) | ControlGroup(500).HasFocus()</visible>
+			<control type="radiobutton" id="50">
+				<description>Use Background button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31015</label>
+				<onclick>Skin.ToggleSetting(no-background)</onclick>
+				<selected>!Skin.HasSetting(no-background)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="51">
+				<description>Set Custom Background Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31016</label>
+				<onclick>Skin.SetImage(custom-background)</onclick>
+				<onclick>SetFocus(53)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>!Skin.String(custom-background)</visible>
+			</control>
+			<control type="button" id="52">
+				<description>Reset Custom Background Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31017</label>
+				<onclick>Skin.Reset(custom-background)</onclick>
+				<onclick>SetFocus(51)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>Skin.String(custom-background)</visible>
+			</control>
+			<control type="button" id="53">
+				<description>Set Custom Background Animation Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31018</label>
+				<onclick>Skin.SetPath(custom-ani)</onclick>
+				<onclick>SetFocus(51)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>!Skin.String(custom-ani)</visible>
+			</control>
+			<control type="button" id="54">
+				<description>Reset Custom Background Animation Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31019</label>
+				<onclick>Skin.Reset(custom-ani)</onclick>
+				<onclick>SetFocus(53)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>Skin.String(custom-ani)</visible>
+			</control>
+			<control type="button" id="55">
+				<description>Download Themes</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31042</label>
+				<onclick>RunScript(Q:\skin\Containment\extras\Containment_Themes.py)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+
+		<control type="grouplist" id="600">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>556</height>
+			<itemgap>5</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>600</onup>
+			<ondown>600</ondown>
+			<animation effect="fade" start="0" delay="225" time="200">WindowOpen</animation>
+			<visible>Control.HasFocus(7) | ControlGroup(600).HasFocus()</visible>
+			<control type="radiobutton" id="60">
+				<description>RSS Toggle button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31020</label>
+				<onclick>Skin.ToggleSetting(rss)</onclick>
+				<selected>!Skin.HasSetting(rss)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="61">
+				<description>Use Home Icon Ani</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31033</label>
+				<onclick>Skin.ToggleSetting(home-ani)</onclick>
+				<selected>Skin.HasSetting(home-ani)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="62">
+				<description>Home Media Timeout button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31035</label>
+				<onclick>Skin.ToggleSetting(home-timeout)</onclick>
+				<selected>Skin.HasSetting(home-timeout)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="63">
+				<description>Use Home Button Labels</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31039</label>
+				<onclick>Skin.ToggleSetting(home-label)</onclick>
+				<selected>Skin.HasSetting(home-label)</selected>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+
+		<control type="grouplist" id="700">
+			<posx>200</posx>
+			<posy>110</posy>
+			<width>500</width>
+			<height>556</height>
+			<itemgap>5</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>700</onup>
+			<ondown>700</ondown>
+			<animation effect="fade" start="0" delay="225" time="200">WindowOpen</animation>
+			<visible>Control.HasFocus(8) | ControlGroup(700).HasFocus()</visible>
+			<control type="button" id="60">
+				<description>Dashboard Button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>13006</label>
+				<onclick>xbmc.dashboard()</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="61">
+				<description>Shutdown button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>13005</label>
+				<onclick>xbmc.shutdown()</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="62">
+				<description>Reset xbox button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31011</label>
+				<onclick>XBMC.Reset()</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="63">
+				<description>Reset xbmc button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>31012</label>
+				<onclick>xbmc.RestartApp()</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="64">
+				<description>System Info button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>130</label>
+				<onclick>XBMC.ActivateWindow(7)</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="65">
+				<description>Logon/off button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>20126</label>
+				<onclick>system.logoff</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>System.LoggedOn + System.HasLoginScreen</visible>
+			</control>
+			<control type="button" id="66">
+				<description>Master mode button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>Enter Mastermode</label>
+				<onclick>xbmc.mastermode</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>System.LoggedOn + System.HasLocks + !System.IsMaster</visible>
+			</control>
+			<control type="button" id="66">
+				<description>Master mode button</description>
+				<width>500</width>
+				<height>30</height>
+				<label>Exit Mastermode</label>
+				<onclick>xbmc.mastermode</onclick>
+				<colordiffuse>object-color</colordiffuse>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<visible>System.LoggedOn + System.HasLocks + System.IsMaster</visible>
+			</control>
+		</control>
+		<include>Shutters</include>
+	</controls>
+</window>                              

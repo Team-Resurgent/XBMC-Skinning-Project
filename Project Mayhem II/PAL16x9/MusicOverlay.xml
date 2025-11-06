@@ -1,0 +1,43 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+
+	<control type="image" id="0">
+		<description>music cover</description>
+		<posx>67</posx>
+		<posy>375</posy>
+		<width>90</width>
+		<height>120</height>
+		<texture>defaultAlbumCover.png</texture>
+		<info>MusicPlayer.Cover</info>
+		<include>media-cover</include>
+		<visible>Player.HasAudio + Skin.HasSetting(media-cover)</visible>
+	</control>
+
+	<control type="label" id="0">
+		<description>play time label</description>
+		<posx>67</posx>
+		<posy>500</posy>
+		<label>-</label>
+		<info>MusicPlayer.Time</info>
+		<align>left</align>
+		<font>font13</font>
+		<visible>Player.HasAudio + Skin.HasSetting(media-cover)</visible>
+	</control>
+
+	<control type="fadelabel" id="0">
+		<description>album/artist/genre etc info label</description>
+		<width>130</width>
+		<posx>67</posx>
+		<posy>525</posy>
+		<font>font10</font>
+		<info>MusicPlayer.Artist</info>
+		<info>MusicPlayer.Title</info>
+		<info>MusicPlayer.Album</info>
+		<info>MusicPlayer.Year</info>
+		<textcolor>FFffffff</textcolor>
+		<visible>Player.HasAudio + Skin.HasSetting(media-cover)</visible>
+	</control>
+
+	</controls>
+</window>

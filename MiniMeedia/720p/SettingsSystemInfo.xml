@@ -1,0 +1,262 @@
+<window id="7">
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+    <include>DateAndTime</include>
+
+    <!-- Categories -->
+    <control type="group">
+      <posx>HomeSubMenuBGOffset</posx>
+      <include>HomeMainMenuPos</include>
+
+      <animation effect="slide" time="300" tween="circle" easing="out" start="-600,0" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="-600,0">WindowClose</animation>
+
+      <include>HomeMainMenuBG</include>
+
+      <control type="wraplist" id="9000">
+        <description>Categories Menu</description>
+        <include>HomeMainMenuWrapList</include>
+
+        <content>
+          <item id="106">
+            <description>Hardware</description>
+            <label>13281</label>
+            <label2>$LOCALIZE[31003]</label2>
+            <onclick>SendClick(7,98)</onclick>
+          </item>
+
+          <item id="100">
+            <description>Basic Info</description>
+            <label>31018</label>
+            <label2>$LOCALIZE[31003]</label2>
+            <onclick>SendClick(7,95)</onclick>
+          </item>
+
+          <item id="101">
+            <description>Storage</description>
+            <label>13277</label>
+            <label2>$LOCALIZE[31003]</label2>
+            <onclick>SendClick(7,94)</onclick>
+          </item>
+
+          <item id="102">
+            <description>HDD</description>
+            <label>13275</label>
+            <label2>$LOCALIZE[31003]</label2>
+            <visible>System.Platform.Xbox</visible>
+            <onclick>SendClick(7,92)</onclick>
+          </item>
+
+          <item id="103">
+            <description>DVD</description>
+            <label>13276</label>
+            <label2>$LOCALIZE[31003]</label2>
+            <visible>System.Platform.Xbox</visible>
+            <onclick>SendClick(7,93)</onclick>
+          </item>
+
+          <item id="104">
+            <description>Network</description>
+            <label>13279</label>
+            <label2>$LOCALIZE[31003]</label2>
+            <onclick>SendClick(7,96)</onclick>
+          </item>
+
+          <item id="105">
+            <description>Video</description>
+            <label>13280</label>
+            <label2>$LOCALIZE[31003]</label2>
+            <onclick>SendClick(7,97)</onclick>
+          </item>
+        </content>
+      </control>
+
+      <control type="grouplist">
+        <description>Categories Menu</description>
+
+				<control type="button" id="95">
+					<description>Basic Info</description>
+					<include>SystemInfoCategoryButton</include>
+				</control>
+
+				<control type="button" id="94">
+					<description>Button Storage</description>
+					<include>SystemInfoCategoryButton</include>
+				</control>
+
+				<control type="button" id="92">
+					<description>Button HDD</description>
+					<include>SystemInfoCategoryButton</include>
+					<visible>System.Platform.Xbox</visible>
+				</control>
+
+				<control type="button" id="93">
+					<description>Button DVD</description>
+					<include>SystemInfoCategoryButton</include>
+					<visible>System.Platform.Xbox</visible>
+				</control>
+
+				<control type="button" id="96">
+					<description>Button Network</description>
+					<include>SystemInfoCategoryButton</include>
+				</control>
+
+				<control type="button" id="97">
+					<description>Button Video</description>
+					<include>SystemInfoCategoryButton</include>
+				</control>
+
+				<control type="button" id="98">
+					<description>Button Hardware</description>
+					<include>SystemInfoCategoryButton</include>
+				</control>
+			</control>
+
+    </control>
+
+    <control type="group">
+      <description>Settings Menu Text (from Home)</description>
+      <include>HomeMainMenuPos</include>
+
+      <control type="group">
+        <posx>-35</posx>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="35,0" end="0,0" reversible="false" condition="!Window.Previous(SettingsCategory.xml)">WindowOpen</animation>
+
+        <control type="group">
+          <posy>30</posy>
+
+          <control type="label">
+            <label> $LOCALIZE[31013] </label>
+            <include>HomeMainMenuSubLabel</include>
+          </control>
+          <control type="label">
+            <label> $LOCALIZE[130] </label>
+            <include>DialogTextColors</include>
+            <include>HomeMainMenuMainLabel</include>
+          </control>
+        </control>
+
+        <include>HomeMainMenuBG</include>
+      </control>
+    </control>
+
+    <!-- Information area -->
+    <control type="group" id="200">
+      <description>Control Area</description>
+      <posx>460</posx>
+      <posy>220</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,1000" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,1000">WindowClose</animation>
+
+      <control type="image">
+        <width>800</width>
+        <height>510</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posx>20</posx>
+        <posy>10</posy>
+
+  			<control type="label" id="40">
+  				<description>Title</description>
+  				<font>MediumTitleFont</font>
+          <textcolor>Selected</textcolor>
+          <include>SystemInfoLabel</include>
+  			</control>
+
+        <control type="grouplist">
+          <posy>34</posy>
+          <height>480</height>
+
+  				<control type="label" id="2">
+  					<description>Label 2</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="3">
+  					<description>Label 3</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="4">
+  					<description>Label 4</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="5">
+  					<description>Label 5</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="6">
+  					<description>Label 6</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="7">
+  					<description>Label 7</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="8">
+  					<description>Label 8</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="9">
+  					<description>Label 9</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="10">
+  					<description>Label 10</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+  
+  				<control type="label" id="11">
+  					<description>Label 11</description>
+            <include>SystemInfoLabel</include>
+  				</control>
+        </control>
+
+        <!-- Misc Info -->
+        <control type="group">
+          <description>Misc Info</description>
+          <posy>438</posy>
+
+          <control type="label" id="52">
+            <description>xbmc_xbe_build_version</description>
+            <include>SystemInfoStaticLabel</include>
+            <label>144</label>
+          </control>
+
+<!--
+          <control type="label" id="53">
+            <description>mplayer_dll_version</description>
+            <posy>18</posy>
+            <include>SystemInfoStaticLabel</include>
+            <label>144</label>
+          </control>
+-->
+
+          <control type="label" id="53">
+            <description>skin version</description>
+            <posy>18</posy>
+            <textcolor>Selected</textcolor>
+            <include>SystemInfoStaticLabel</include>
+            <include>Revision</include>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <include>MusicNowPlaying</include>
+    <include>VideoOverlayUI</include>
+
+  </controls>
+</window>

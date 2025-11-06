@@ -1,0 +1,88 @@
+﻿<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<include>Fade_Window_OpenClose_Animation</include>
+	<controls>
+		<control type="label">
+			<description>big play time label</description>
+			<posx>40</posx>
+			<posy>465</posy>
+			<info>VideoPlayer.Time</info>
+			<font>font64</font>
+			<textcolor>0a7c92ff</textcolor>
+		</control>
+		<control type="videowindow">
+			<description>video preview window</description>
+			<posx>70</posx>
+			<posy>389</posy>
+			<width>125</width>
+			<height>102</height>
+		</control>
+		<control type="image">
+			<description>video rectangle</description>
+			<posx>0</posx>
+			<posy>375</posy>
+			<width>207</width>
+			<height>185</height>
+			<texture>monitor.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>ffffffff</colordiffuse>
+		</control>
+		<control type="label">
+			<description>play time label</description>
+			<posx>83</posx>
+			<posy>508</posy>
+			<info>VideoPlayer.Time</info>
+			<align>left</align>
+			<font>font15</font>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+		<control type="image">
+			<description>play logo</description>
+			<posx>168</posx>
+			<posy>500</posy>
+			<width>9</width>
+			<height>7</height>
+			<texture>overlay-play.gif</texture>
+			<colorkey>0</colorkey>
+			<visible>Player.Playing</visible>
+		</control>
+		<control type="image">
+			<description>pause logo</description>
+			<posx>167</posx>
+			<posy>500</posy>
+			<width>9</width>
+			<height>7</height>
+			<texture>overlay-pause.gif</texture>
+			<visible>Player.Paused</visible>
+		</control>
+		<control type="image">
+			<description>ff logo</description>
+			<posx>168</posx>
+			<posy>500</posy>
+			<width>9</width>
+			<height>7</height>
+			<texture>overlay-ff.gif</texture>
+			<visible>Player.Forwarding</visible>
+		</control>
+		<control type="image">
+			<description>rw logo</description>
+			<posx>168</posx>
+			<posy>500</posy>
+			<width>9</width>
+			<height>7</height>
+			<texture>overlay-rw.gif</texture>
+			<visible>Player.Rewinding </visible>
+		</control>
+		<control type="fadelabel">
+			<description>album/artist/genre etc info label</description>
+			<posx>65</posx>
+			<posy>525</posy>
+			<width>130</width>
+			<height>30</height>
+			<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year, | ]$INFO[VideoPlayer.Director, | ]$INFO[VideoPlayer.Genre, | ]</label>
+			<align>left</align>
+			<font>font13</font>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+	</controls>
+</window>

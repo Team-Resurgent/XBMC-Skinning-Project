@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!-- strings 31000 thru 31999 reserved for skins -->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">Bestands Beheer</string>
+  <string id="31001">Info</string> 
+  <string id="31002">Reset</string> 
+  <string id="31003">Analyze</string> 
+  <string id="31004">Verander</string> 
+  <string id="31005">Misc</string> 
+  <string id="31006">Visual</string> 
+  <string id="31007">On/Off</string> 
+  <string id="31008">Niet Gewaardeerd</string> 
+  <string id="31009">Kijk naar</string> <!-- used for Movies -->
+  <string id="31010">Kijk naar</string> <!-- used for TV Shows -->
+  <string id="31011">Kijk naar</string> <!-- used for Videos -->
+  <string id="31012">Luister naar</string> 
+  <string id="31013">Bekijk je</string> 
+  <string id="31014">Gebruik je</string>
+  <string id="31015">Controleer</string> 
+  <string id="31016">Configureer de</string> 
+  <string id="31017">Power</string> 
+  <string id="31018">Basic Info</string>
+  <string id="31019">Speel de</string>
+  <string id="31020">Controleer de</string> 
+  <string id="31021">Op</string> 
+  <string id="31022">Recent toegevoegd</string>
+  <string id="31023">Nieuwste</string>
+  <string id="31024">Pagina</string>
+  <string id="31025">Items</string>
+
+  <!-- Options Menu -->
+  <string id="31100">Poster Info</string>
+  <string id="31101">Sorteer op</string>
+  <string id="31102">Setup Opties</string>
+  <string id="31103">Showcase</string>
+  <string id="31104">Laat grotere klok zien</string>
+  <string id="31105">Waterfall</string>
+  <string id="31106">Exhibit</string>
+  <string id="31107">Lage Lijst</string>
+  <string id="31108">Exposure</string>
+  <string id="31109">Hoge Lijst</string>
+  
+  <!-- Settings -->
+  <string id="31200">Laat Plot zien</string>
+  <string id="31201">Laatst ververst</string>
+  <string id="31202">Achtergrond Map</string>
+  <string id="31203">Achtergronden</string>
+  <string id="31204">Opties Menu</string>
+  <string id="31205">Verberg</string>
+  <string id="31206">Klok</string>
+  <string id="31207">Verberg het weer op Home</string>
+  <string id="31208">Disable</string>
+  <string id="31209">Configureer instellingen voor</string>
+  <string id="31210">Menu</string>
+  <string id="31211">Verberg Plot in Video OSD</string>
+  <string id="31212">Verberg Bekeken Overlay</string>
+  <string id="31213">Verberg Thumb</string>
+  <string id="31214">Laat Review zien</string>
+  <string id="31215">Laat Content Type zien</string>
+  <string id="31216">Verberg Media Teller</string>
+  <string id="31217">Gebruik Portrait Thumbs voor TV</string>
+  <string id="31218">Laat Minimal Video OSD zien</string>
+  <string id="31219">Verberg Ruis Achtergrond</string>
+  <string id="31220">Gebruik geanimeerde weer iconen</string>
+  <string id="31221">Verberg Recente Videos</string>
+  
+  <!-- Video -->
+  <string id="31300">N/A</string>
+  <string id="31301">Thumb</string>
+  <string id="31302">Fanart</string>
+  <string id="31303">Seizoen</string>
+  <string id="31304">Tijd tot Einde</string>
+  
+  <!-- Music -->
+  <string id="31400">Afgelopen</string>
+  <string id="31401">Huidig</string>
+  <string id="31402">Selecteer Visualisation</string>
+  <string id="31403">Visualisation Presets</string>
+  <string id="31404">Visualisation Settings</string>
+  <string id="31405">Songteksten</string>
+  <string id="31406">Stel Songteksten pad in</string>
+  <string id="31407">Open playlist</string>
+  <string id="31408">Save playlist</string>
+  <string id="31409">Sluit playlist</string>
+  <string id="31410">Systeem muziek bestanden</string>
+  <string id="31411">Huidige playlist</string>
+    
+  <!-- Dialogs -->
+  <string id="31500">Selecteer Profiel</string>
+  <string id="31501">Gedempt</string>
+  <string id="31502">Maak</string>
+  <string id="31503">Codec</string>
+
+</strings>

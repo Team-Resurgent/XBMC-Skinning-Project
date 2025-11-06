@@ -1,0 +1,17 @@
+This skin is based on the MediaPortal skin "MCE" created by Samsonite and MrMario64.
+Many of the textures used in this skin were created by Samsonite for the MediaPortal skin.
+http://mediaportal.sourceforge.net/
+
+Some icons from the default XBMC skin (Project Mayhem), the Nuvola Icon set, and the Crystal Icon set were also used.
+
+Project Mayhem:
+http://xbmc.sf.net
+http://www.chokemaniac.net/
+
+Nuvola:
+http://www.icon-king.com/
+
+Crystal:
+http://www.everaldo.com/
+
+

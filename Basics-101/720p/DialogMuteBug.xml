@@ -1,0 +1,38 @@
+<window id="113">
+	<defaultcontrol>-</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>510</posx>
+		<posy>15</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>260</width>
+			<height>40</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image">
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>250</width>
+			<height>30</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="label" id="0">
+			<description>Label</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>240</width>
+			<height>30</height>
+			<label>31007</label>
+			<font>font13</font>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+	</controls>
+</window>

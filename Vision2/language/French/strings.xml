@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <!-- 31000 to 31009 reseved for home buttons -->
+  <string id="31000">Jouer</string>
+  <string id="31001">Regarder</string>
+  <string id="31002">Ecouter</string>
+  <string id="31003">Voir</string>
+  <string id="31004">Réglages</string>
+  <string id="31005">Consulter</string>
+  <string id="31006">Quitter</string>
+  <string id="31007">Exécuter</string>
+  <string id="31008"></string>
+  <string id="31009"></string>
+  <!-- 31010 to 31019 reseved for home buttons Label 2-->
+  <string id="31010">jeux &amp; émulateurs</string>
+  <string id="31011">films,séries &amp; clips</string>
+  <string id="31012">musiques &amp; CD audio</string>
+  <string id="31013">photos &amp; images</string>
+  <string id="31014">paramètres &amp; options</string>
+  <string id="31015">prévisions météos</string>
+  <string id="31016">éteindre &amp; redémarrer</string>
+  <string id="31017">scripts &amp; plugins</string>
+  <string id="31018"></string>
+  <string id="31019"></string>
+
+  <string id="31020">Emulateurs</string>
+  <string id="31021">Fichiers Vidéos</string>
+  <string id="31022">Fichiers Musicaux</string>
+  <string id="31023">Fichiers Images</string>
+  <string id="31024">Page</string>
+  <string id="31025">Objet</string>
+  <string id="31026">Film Strip</string>
+
+  <string id="31027">POSTER[CR]SAISON[CR]NON[CR]DISPONIBLE</string>
+  <string id="31028">IMAGE[CR]ÉPISODE[CR]NON[CR]DISPONIBLE</string>
+  <string id="31029">POCHETTE[CR]ALBUM[CR]NON[CR]DISPONIBLE</string>
+  <string id="31030">IMAGE[CR]ARTISTE[CR]NON[CR]DISPONIBLE</string>
+
+  <string id="31031">Série TV Actuel[CR]Image Fanart[CR][CR]Cliquer pour Changer</string>
+  <string id="31032">LECTURE</string>
+  <string id="31033">PAUSE</string>
+  <string id="31034">AVANCE RAPIDE</string>
+  <string id="31035">RETOUR RAPIDE</string>
+  <string id="31036">VOLUME COUPÉ</string>
+  <string id="31037">Dernier connecté:</string>
+  
+  <!-- Skin Settings labels -->
+  <string id="31100">Utiliser la transparence sur l'arrière plan</string>
+  <string id="31101">Afficher les vidéos arrière-plan</string>
+  <string id="31102">Afficher les visualisations arrière-plan</string>
+  <string id="31103">Afficher les fonds d'écran spécifique de l'accueil</string>
+  <string id="31104">Enlever le controle des pages depuis la liste des médias</string>
+  <string id="31105">Enlever les liens paramètres du sous menu de l'accueil</string>
+  <string id="31106">Afficher la météo sur la page d'accueil</string>
+  <string id="31107">Prevent Media Window Menu Focus</string>
+</strings>

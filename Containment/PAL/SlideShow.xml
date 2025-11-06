@@ -1,0 +1,52 @@
+﻿<window id="2007">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>top shutter</description>
+			<posx>0</posx>
+			<posy>-200</posy>
+			<width>720</width>
+			<height>300</height>
+			<texture>shutter-top.png</texture>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+		<control type="label" id="10">
+			<description>row 1 label</description>
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>720</width>
+			<label>-</label>
+			<align>center</align>
+			<font>font13</font>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+		<control type="label" id="11">
+			<description>row 2 label</description>
+			<posx>0</posx>
+			<posy>30</posy>
+			<width>720</width>
+			<label>-</label>
+			<align>center</align>
+			<font>font13</font>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+		<control type="label" id="12">
+			<description>row 3 label</description>
+			<posx>0</posx>
+			<posy>50</posy>
+			<width>720</width>
+			<label>-</label>
+			<align>center</align>
+			<font>font13</font>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+	</controls>
+</window>

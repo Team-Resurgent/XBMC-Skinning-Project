@@ -1,0 +1,202 @@
+<window id="2901">
+	<defaultcontrol>211</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>120</posx>
+		<posy>480</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>panel</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>320</width>
+			<height>76</height>
+			<texture border="70,0,40,0">OSD_Panel_Left.png</texture>
+			<visible>yes</visible>
+		</control>
+		<control type="image" id="1">
+			<description>panel</description>
+			<posx>268</posx>
+			<posy>0</posy>
+			<width>245</width>
+			<height>76</height>
+			<texture border="50,0,60,0">OSD_Panel_Right.png</texture>
+			<visible>yes</visible>
+		</control>
+		<control type="button" id="210">
+			<description>Stop button</description>
+			<posx>65</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_stopFO.png</texturefocus>
+			<texturenofocus>osd_button_stopNF.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
+			<onleft>219</onleft>
+			<onright>211</onright>
+			<onup>210</onup>
+			<ondown>210</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="togglebutton" id="211">
+			<description>Play / Pause button</description>
+			<posx>102</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_playFO.png</texturefocus>
+			<texturenofocus>osd_button_playNF.png</texturenofocus>
+			<alttexturefocus>osd_button_pauseFO.png</alttexturefocus>
+			<alttexturenofocus>osd_button_pauseNF.png</alttexturenofocus>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<onleft>210</onleft>
+			<onright>212</onright>
+			<onup>211</onup>
+			<ondown>211</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="button" id="212">
+			<description>Prev Track button</description>
+			<posx>139</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_prevFO.png</texturefocus>
+			<texturenofocus>osd_button_prevNF.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+			<onleft>211</onleft>
+			<onright>213</onright>
+			<onup>212</onup>
+			<ondown>212</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="button" id="213">
+			<description>Next Track button</description>
+			<posx>176</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_nextFO.png</texturefocus>
+			<texturenofocus>osd_button_nextNF.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+			<onleft>212</onleft>
+			<onright>214</onright>
+			<onup>213</onup>
+			<ondown>213</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="button" id="214">
+			<description>Rewind button</description>
+			<posx>213</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_rwFO.png</texturefocus>
+			<texturenofocus>osd_button_rwNF.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			<onleft>213</onleft>
+			<onright>215</onright>
+			<onup>214</onup>
+			<ondown>214</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="button" id="215">
+			<description> Fast Forward button</description>
+			<posx>250</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_ffFO.png</texturefocus>
+			<texturenofocus>osd_button_ffNF.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+			<onleft>214</onleft>
+			<onright>216</onright>
+			<onup>215</onup>
+			<ondown>215</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="button" id="216">
+			<description>Audio Settings button</description>
+			<posx>310</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_audioFO.png</texturefocus>
+			<texturenofocus>osd_button_audioNF.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(124)</onclick>
+			<onleft>215</onleft>
+			<onright>217</onright>
+			<onup>216</onup>
+			<ondown>216</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="button" id="217">
+			<description>Video Settings button</description>
+			<posx>347</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_videoFO.png</texturefocus>
+			<texturenofocus>osd_button_videoNF.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(123)</onclick>
+			<onleft>216</onleft>
+			<onright>218</onright>
+			<onup>217</onup>
+			<ondown>217</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="button" id="218">
+			<description>BookMarks button</description>
+			<posx>384</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_bookmarksFO.png</texturefocus>
+			<texturenofocus>osd_button_bookmarksNF.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(125)</onclick>
+			<onleft>217</onleft>
+			<onright>219</onright>
+			<onup>218</onup>
+			<ondown>218</ondown>
+			<font>-</font>
+			<label>-</label>
+		</control>
+		<control type="image">
+			<description>DVD Menu button Fake</description>
+			<posx>421</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texture>osd_button_dvdNF.png</texture>
+			<colordiffuse>44FFFFFF</colordiffuse>
+			<visible>!VideoPlayer.HasMenu</visible>
+		</control>
+		<control type="button" id="219">
+			<description>DVD Menu button</description>
+			<posx>421</posx>
+			<posy>18</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>osd_button_dvdFO.png</texturefocus>
+			<texturenofocus>osd_button_dvdNF.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			<onleft>218</onleft>
+			<onright>210</onright>
+			<onup>219</onup>
+			<ondown>218</ondown>
+			<font>-</font>
+			<label>-</label>
+			<visible>VideoPlayer.HasMenu</visible>
+		</control>
+	</controls>
+</window>

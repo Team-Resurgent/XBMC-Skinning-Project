@@ -1,0 +1,928 @@
+<includes>
+
+<!-- Lists ======================================= -->
+
+<include name="Common_List">
+	<control type="list" id="50">
+		<viewtype label="$LOCALIZE[535] 1">list</viewtype>
+		<posx>70</posx>
+		<posy>125</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<include>common-FX</include>
+		<itemlayout height="27">
+			<control type="image">
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>16</width>
+				<height>16</height>
+				<info>ListItem.Icon</info>
+				<colordiffuse>70ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label</info>
+				<visible>!Container.Sort(SongRating)</visible>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+				<visible>!Container.Sort(SongRating)</visible>
+			</control>
+			<control type="image" id="1">
+				<description>Song Rating Image</description>
+				<height>21</height>
+				<width>121</width>
+				<posx>450</posx>
+				<posy>0</posy>
+				<info>listitem.rating</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipx="true" />
+				<visible>Container.Sort(SongRating)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="40">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>40</height>
+				<texture border="50,0,50,0">Button-List-Fade-Focus.png</texture>
+				<visible>Control.HasFocus(50)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>40</height>
+				<texture border="50,0,50,0">Button-List-Fade-NoFocus.png</texture>
+				<visible>!Control.HasFocus(50)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>3</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="label">
+				<posx>45</posx>
+				<posy>8</posy>
+				<width>370</width>
+				<height>16</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+				<visible>!Container.Sort(SongRating)</visible>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>8</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font18</font>
+				<align>right</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+				<visible>!Container.Sort(SongRating)</visible>
+			</control>
+			<control type="image" id="1">
+				<description>Song Rating Image</description>
+				<height>21</height>
+				<width>121</width>
+				<posx>450</posx>
+				<posy>8</posy>
+				<info>listitem.rating</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipx="true" />
+				<visible>Container.Sort(SongRating)</visible>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Common_BigList">
+	<control type="list" id="51">
+		<viewtype label="$LOCALIZE[535] 2">biglist</viewtype>
+		<posx>70</posx>
+		<posy>125</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>51</onup>
+		<ondown>51</ondown>
+		<include>common-FX</include>
+		<itemlayout height="90">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>90</height>
+				<texture>Button-List-Fade-NoFocus.png</texture>
+				<colordiffuse>70ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>3</posx>
+				<posy>7</posy>
+				<width>75</width>
+				<height>75</height>
+				<info>ListItem.Icon</info>
+				<colordiffuse>70ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>32</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Year</info>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>52</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Genre</info>
+			</control>
+			<control type="image" id="1">
+				<description>Song Rating Image</description>
+				<height>21</height>
+				<width>121</width>
+				<posx>460</posx>
+				<posy>52</posy>
+				<info>listitem.rating</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipx="true" /> 
+			</control>
+		</itemlayout>
+		<focusedlayout height="90">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>90</height>
+				<texture>Button-List-Fade-Focus.png</texture>
+				<visible>Control.HasFocus(51)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>90</height>
+				<texture>Button-List-Fade-NoFocus.png</texture>
+				<visible>!Control.HasFocus(51)</visible>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>80</height>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>8</posy>
+				<width>370</width>
+				<height>16</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>8</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font18</font>
+				<align>right</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>32</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Year</info>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>52</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Genre</info>
+			</control>
+			<control type="image" id="1">
+				<description>Song Rating Image</description>
+				<height>21</height>
+				<width>121</width>
+				<posx>460</posx>
+				<posy>52</posy>
+				<info>listitem.rating</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipx="true" /> 
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Pictures_BigList">
+	<control type="list" id="51">
+		<viewtype label="$LOCALIZE[535] 2">biglist</viewtype>
+		<posx>70</posx>
+		<posy>125</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>51</onup>
+		<ondown>51</ondown>
+		<include>common-FX</include>
+		<itemlayout height="90">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>90</height>
+				<texture>Button-List-NoFocus.png</texture>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>3</posx>
+				<posy>5</posy>
+				<width>75</width>
+				<height>75</height>
+				<info>ListItem.Icon</info>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>85</posx>
+				<posy>5</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>5</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+			<control type="label">
+				<posx>85</posx>
+				<posy>32</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Year</info>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>52</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Genre</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="90">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>90</height>
+				<texture>Button-List-Wide.png</texture>
+				<visible>Control.HasFocus(51)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>90</height>
+				<texture>Button-List-NoFocus.png</texture>
+				<visible>!Control.HasFocus(51)</visible>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>80</height>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="label">
+				<posx>85</posx>
+				<posy>8</posy>
+				<width>370</width>
+				<height>16</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>560</posx>
+				<posy>8</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font18</font>
+				<align>right</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+			<control type="label">
+				<posx>85</posx>
+				<posy>32</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Year</info>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>52</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor2</include>
+				<info>ListItem.Genre</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Common_List_X">
+	<control type="list" id="59">
+		<viewtype label="$LOCALIZE[535] X">list</viewtype>
+		<posx>45</posx>
+		<posy>125</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>59</onup>
+		<ondown>59</ondown>
+		<include>common-FX</include>
+		<itemlayout height="27">
+			<control type="label">
+				<posx>25</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label</info>
+				<visible>!Container.Sort(SongRating)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="40">
+			<control type="label">
+				<posx>25</posx>
+				<posy>8</posy>
+				<width>370</width>
+				<height>16</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+				<visible>!Container.Sort(SongRating)</visible>
+			</control>
+ 		</focusedlayout>
+	</control>
+
+	<control type="image">
+		<description>Rotating ListItem</description>
+		<posx>400</posx>
+		<posy>150</posy>
+		<width>200</width>
+		<height>200</height>
+		<info>ListItem.Icon</info>
+		<aspectratio aligny="bottom">keep</aspectratio>
+		<aspectratio>keep</aspectratio>
+		<include>common-fade-quick</include>
+		<animation effect="rotatey" center="500" start="0" end="-360" time="5000" loop="true" condition="true">Conditional</animation>
+		<visible>Control.IsVisible(59) + !Skin.HasSetting(Cover-Rotate)</visible>
+	</control>
+	<control type="image">
+		<description>Rotating ListItem Reflection</description>
+		<posx>400</posx>
+		<posy>350</posy>
+		<width>200</width>
+		<height>200</height>
+		<texture flipy="true" diffuse="Thumb_Mask.png" /> 
+		<aspectratio aligny="top">keep</aspectratio>
+		<info>ListItem.Icon</info>
+		<aspectratio>keep</aspectratio>
+		<include>common-fade-quick</include>
+		<animation effect="rotatey" center="500" start="0" end="-360" time="5000" loop="true" condition="true">Conditional</animation>
+		<visible>Control.IsVisible(59) + !Skin.HasSetting(Cover-Rotate)</visible>
+	</control>
+
+	<control type="image">
+		<description>Static ListItem</description>
+		<posx>400</posx>
+		<posy>150</posy>
+		<width>200</width>
+		<height>200</height>
+		<info>ListItem.Icon</info>
+		<aspectratio aligny="bottom">keep</aspectratio>
+		<aspectratio>keep</aspectratio>
+		<include>common-fade-quick</include>
+		<animation effect="rotatey" center="500" start="0" end="35" time="0" condition="true">Conditional</animation>
+		<visible>Control.IsVisible(59) + Skin.HasSetting(Cover-Rotate)</visible>
+	</control>
+	<control type="image">
+		<description>Static ListItem Reflection</description>
+		<posx>400</posx>
+		<posy>350</posy>
+		<width>200</width>
+		<height>200</height>
+		<texture flipy="true" diffuse="Thumb_Mask.png" /> 
+		<aspectratio aligny="top">keep</aspectratio>
+		<info>ListItem.Icon</info>
+		<aspectratio>keep</aspectratio>
+		<include>common-fade-quick</include>
+		<animation effect="rotatey" center="500" start="0" end="35" time="0" condition="true">Conditional</animation>
+		<visible>Control.IsVisible(59) + Skin.HasSetting(Cover-Rotate)</visible>
+	</control>
+</include>
+
+<!-- Icon Panels ================================= -->
+
+<include name="Common_Icon">
+	<control type="panel" id="52">
+		<viewtype label="$LOCALIZE[536] 1">icon</viewtype>
+		<posx>70</posx>
+		<posy>122</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>52</onup>
+		<ondown>52</ondown>
+		<include>common-FX</include>
+		<itemlayout height="135" width="80">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>110</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>110</posy>
+				<width>72</width>
+				<height>16</height>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="135" width="80">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>110</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>3</posx>
+				<posy>0</posy>
+				<width>74</width>
+				<height>110</height>
+				<texture>Folder-Focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>110</posy>
+				<width>72</width>
+				<height>16</height>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Common_Icon2">
+	<control type="panel" id="53">
+		<viewtype label="$LOCALIZE[536] 2">icon</viewtype>
+		<posx>70</posx>
+		<posy>122</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>53</onup>
+		<ondown>53</ondown>
+		<include>common-FX</include>
+		<itemlayout height="125" width="80">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>110</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+		</itemlayout>
+		<focusedlayout height="125" width="80">
+			<control type="image">
+				<posx>1</posx>
+				<posy>-1</posy>
+				<width>78</width>
+				<height>111</height>
+				<texture>Background.png</texture>
+				<colordiffuse>80ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>110</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<animation effect="zoom" end="4,-1,72,112" time="250" condition="!Skin.HasSetting(Animate)">Focus</animation>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Pictures_Icon2">
+	<control type="panel" id="53">
+		<viewtype label="$LOCALIZE[536] 2">icon</viewtype>
+		<posx>70</posx>
+		<posy>122</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>53</onup>
+		<ondown>53</ondown>
+		<include>common-FX</include>
+		<itemlayout height="124" width="80">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>110</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+		</itemlayout>
+		<focusedlayout height="124" width="80">
+			<control type="image">
+				<posx>1</posx>
+				<posy>12</posy>
+				<width>78</width>
+				<height>85</height>
+				<texture>Background.png</texture>
+				<colordiffuse>80ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>110</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<animation effect="zoom" end="4,-1,72,112" time="250" condition="!Skin.HasSetting(Animate)">Focus</animation>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Common_BigIcon">
+	<control type="panel" id="54">
+		<viewtype label="$LOCALIZE[536] 3">bigicon</viewtype>
+		<posx>75</posx>
+		<posy>122</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>54</onup>
+		<ondown>54</ondown>
+		<include>common-FX</include>
+		<itemlayout height="180" width="140">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>160</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>65</posx>
+				<posy>160</posy>
+				<width>115</width>
+				<height>16</height>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="180" width="140">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>160</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>3</posx>
+				<posy>0</posy>
+				<width>124</width>
+				<height>160</height>
+				<texture>Folder-Focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>65</posx>
+				<posy>160</posy>
+				<width>115</width>
+				<height>16</height>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+	<include>Common_ScrollBar</include>
+	<include>Common_SpinControl</include>
+</include>
+
+<include name="Common_BigIcon2">
+	<control type="panel" id="55">
+		<viewtype label="$LOCALIZE[536] 4">bigicon</viewtype>
+		<posx>75</posx>
+		<posy>122</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>55</onup>
+		<ondown>55</ondown>
+		<include>common-FX</include>
+		<itemlayout height="180" width="140">
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>120</width>
+				<height>160</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+		</itemlayout>
+		<focusedlayout height="180" width="140">
+			<control type="image">
+				<posx>3</posx>
+				<posy>0</posy>
+				<width>124</width>
+				<height>170</height>
+				<texture>Background.png</texture>
+				<colordiffuse>80ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>120</width>
+				<height>160</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<animation effect="zoom" end="4,4,122,162" time="250" condition="!Skin.HasSetting(Animate)">Focus</animation>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Pictures_BigIcon2">
+	<control type="panel" id="55">
+		<viewtype label="$LOCALIZE[536] 4">bigicon</viewtype>
+		<posx>75</posx>
+		<posy>122</posy>
+		<width>570</width>
+		<height>360</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>2</onleft>
+		<onright>90</onright>
+		<onup>55</onup>
+		<ondown>55</ondown>
+		<include>common-FX</include>
+		<itemlayout height="180" width="140">
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>120</width>
+				<height>160</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+		</itemlayout>
+		<focusedlayout height="180" width="140">
+			<control type="image">
+				<posx>0</posx>
+				<posy>10</posy>
+				<width>130</width>
+				<height>150</height>
+				<texture>Background.png</texture>
+				<colordiffuse>80ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>120</width>
+				<height>160</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<animation effect="zoom" end="4,4,122,162" time="250" condition="!Skin.HasSetting(Animate)">Focus</animation>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<!-- ScrollBars/SpinControls ===================== -->
+
+<include name="Common_ScrollBar">
+	<control type="scrollbar" id="90">
+		<posx>638</posx>
+		<posy>115</posy>
+		<width>20</width>
+		<height>372</height>
+		<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+		<texturesliderbar border="3">scrollbar_bar.png</texturesliderbar>
+		<texturesliderbarfocus border="3">scrollbar_bar_focus.png</texturesliderbarfocus>
+		<textureslidernib>scrollbar_nib.png</textureslidernib>
+		<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<orientation>vertical</orientation>
+		<include>FX-Button</include>
+		<visible>!Control.IsVisible(56) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59)</visible>
+		<visible>!Skin.HasSetting(UseScrollBars)</visible>
+	</control>
+</include>
+
+<include name="Common_SpinControl">
+	<control type="spincontrol" id="90">
+		<posx>610</posx>
+		<posy>500</posy>
+		<subtype>page</subtype>
+		<font>font13</font>
+		<textcolor>d0ffffff</textcolor>
+		<showonepage>false</showonepage>
+		<onleft>50</onleft>
+		<onright>9000</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<include>common-fade</include>
+		<include>FX-Button</include>
+		<include>Common-Visible</include>
+		<visible>Skin.HasSetting(UseScrollBars)</visible>
+	</control>
+</include>
+</includes>

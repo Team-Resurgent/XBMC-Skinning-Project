@@ -1,0 +1,45 @@
+<window>
+  <id>2004</id>
+  <defaultcontrol>5</defaultcontrol>
+  <controls>
+    		<control>
+      		<description>background image</description>
+      		<type>image</type>
+      		<id>1</id>
+      		<posX>0</posX>
+      		<posY>0</posY>
+      		<width>720</width>
+      		<height>576</height>
+      		<texture>background.png</texture>
+    		</control>
+    		<control>
+      		<description>Scripts Output</description>
+     	 		<type>label</type>
+      		<id>10</id>
+      		<posX>250</posX>
+      		<posY>66</posY>
+      		<label>262</label>
+      		<font>font18</font>
+    		</control>
+
+    		<control>
+      		<description>Textarea</description>
+      		<type>textbox</type>
+      		<id>5</id>
+			<posX>45</posX>
+			<posY>150</posY>
+			<width>620</width>
+			<height>400</height>
+     		</control>
+	<control>
+		<description>title image</description>
+		<type>image</type>
+		<id>1</id>
+		<posX>0</posX>
+		<posY>0</posY>
+		<width>200</width>
+		<height>150</height>
+		<texture>title-info.png</texture>
+	</control>  
+  </controls>
+</window>

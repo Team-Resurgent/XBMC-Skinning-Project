@@ -1,0 +1,239 @@
+<window>
+  <id>32</id>
+  <defaultcontrol>6</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>Settings text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>13000</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>HDD Spindown:</description>
+      <type>label</type>
+      <id>5</id>
+      <posX>208</posX>
+      <posY>150</posY>
+      <label>229</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>HDD Spindown select</description>
+      <type>spincontrol</type>
+      <id>6</id>
+      <posX>565</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onleft>6</onleft>
+      <onright>6</onright>
+      <onup>18</onup>
+      <ondown>8</ondown>
+    </control>
+
+    <control>
+      <description>Enable HD AutoSpindown label</description>
+      <type>label</type>
+      <id>7</id>
+      <posX>208</posX>
+      <posY>200</posY>
+      <label>13001</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>HD AutoSpindown options</description>
+      <type>spincontrol</type>
+      <id>8</id>
+      <posX>565</posX>
+      <posY>200</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>6</onup>
+      <ondown>10</ondown>
+      <onleft>8</onleft>
+      <onright>8</onright>
+    </control>
+
+    <control>
+      <description>HD AutoSpindown fileduration label</description>
+      <type>label</type>
+      <id>9</id>
+      <posX>218</posX>
+      <posY>250</posY>
+      <label>13004</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>HD AutoSpindown fileduration</description>
+      <type>spincontrol</type>
+      <id>10</id>
+      <posX>565</posX>
+      <posY>250</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>8</onup>
+      <ondown>12</ondown>
+      <onleft>10</onleft>
+      <onright>10</onright>
+    </control>
+
+    <control>
+      <description>HD AutoSpindown delay label</description>
+      <type>label</type>
+      <id>11</id>
+      <posX>218</posX>
+      <posY>300</posY>
+      <label>13003</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>HD AutoSpindown Delay</description>
+      <type>spincontrol</type>
+      <id>12</id>
+      <posX>565</posX>
+      <posY>300</posY>
+      <reverse>yes</reverse>
+      <onup>10</onup>
+      <ondown>14</ondown>
+      <onleft>12</onleft>
+      <onright>12</onright>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>Screensaver shutdown label</description>
+      <type>label</type>
+      <id>13</id>
+      <posX>208</posX>
+      <posY>350</posY>
+      <label>357</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>Shutdown time select</description>
+      <type>spincontrol</type>
+      <id>14</id>
+      <posX>565</posX>
+      <posY>350</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>12</onup>
+      <ondown>15</ondown>
+      <onleft>14</onleft>
+      <onright>14</onright>
+    </control>
+
+    <control>
+      <description>Auto temperature control</description>
+      <type>checkmark</type>
+      <id>15</id>
+      <posX>208</posX>
+      <posY>400</posY>
+      <font>font13</font>
+      <label>13301</label>
+      <onup>14</onup>
+      <ondown>17</ondown>
+      <onleft>15</onleft>
+      <onright>16</onright>
+    </control>
+
+    <control>
+      <description>target temperature</description>
+      <type>spincontrol</type>
+      <id>16</id>
+      <posX>565</posX>
+      <posY>400</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>14</onup>
+      <ondown>18</ondown>
+      <onleft>15</onleft>
+      <onright>16</onright>
+    </control>
+
+    <control>
+      <description>fanspeed checkmark</description>
+      <type>checkmark</type>
+      <id>17</id>
+      <posX>208</posX>
+      <posY>450</posY>
+      <label>13302</label>
+      <font>font13</font>
+      <onup>15</onup>
+      <ondown>6</ondown>
+      <onleft>17</onleft>
+      <onright>18</onright>
+    </control>
+
+    <control>
+      <description>fanspeed</description>
+      <type>spincontrol</type>
+      <id>18</id>
+      <posX>565</posX>
+      <posY>450</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>16</onup>
+      <ondown>6</ondown>
+      <onleft>17</onleft>
+      <onright>18</onright>
+    </control>
+
+  </controls>
+
+</window>
+

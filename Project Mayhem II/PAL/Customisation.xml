@@ -1,0 +1,241 @@
+<window id="56">
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>dialog-effect-special</include>
+	<type>dialog</type>
+	<controls>
+
+	<control type="image" id="1">
+		<description>Filemanager background</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel_bg.png</texture>
+		<visible>!Window.IsActive(126)</visible>
+		<animation effect="fade" time="400">Hidden</animation>
+	</control>
+	<control type="image" id="1">
+		<description>Background image</description>
+		<posx>250</posx>
+		<posy>70</posy>
+		<width>218</width>
+		<height>40</height>
+		<texture>header-settings.png</texture>
+		<aspectratio>keep</aspectratio>
+		<visible>!Window.IsActive(126)</visible>
+		<animation effect="fade" time="400">Hidden</animation>
+	</control>
+
+	<control type="group">
+		<control type="radiobutton" id="10">
+			<description>Media cover switch</description>
+			<posx>100</posx>
+			<posy>150</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31001</label>
+			<selected>Skin.HasSetting(media-cover)</selected>	
+			<onclick>Skin.ToggleSetting(media-cover)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>25</onup>
+			<ondown>11</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="11">
+			<description>Visualisation switch</description>
+			<posx>100</posx>
+			<posy>181</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31002</label>
+			<selected>Skin.HasSetting(visualisation)</selected>
+			<onclick>Skin.ToggleSetting(visualisation)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>10</onup>
+			<ondown>12</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="12">
+			<description>RSS feeds switch</description>
+			<posx>100</posx>
+			<posy>212</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31003</label>
+			<selected>Skin.HasSetting(rss-feeds)</selected>
+			<onclick>Skin.ToggleSetting(rss-feeds)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>11</onup>
+			<ondown>13</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="13">
+			<description>Weather switch</description>
+			<posx>100</posx>
+			<posy>243</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31004</label>
+			<selected>Skin.HasSetting(weather)</selected>
+			<onclick>Skin.ToggleSetting(weather)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>12</onup>
+			<ondown>14</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="14">
+			<description>Listitem switch</description>
+			<posx>100</posx>
+			<posy>274</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31005</label>
+			<selected>Skin.HasSetting(listitem)</selected>
+			<onclick>Skin.ToggleSetting(listitem)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>13</onup>
+			<ondown>15</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="15">
+			<description>Custom background switch</description>
+			<posx>100</posx>
+			<posy>305</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31006</label>
+			<selected>Skin.String(custom-background)</selected>
+			<onclick>Skin.SetImage(custom-background)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>14</onup>
+			<ondown>16</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="16">
+			<description>Animation switch</description>
+			<posx>100</posx>
+			<posy>336</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31007</label>
+			<selected>!Skin.HasSetting(animation)</selected>
+			<onclick>Skin.ToggleSetting(animation)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>15</onup>
+			<ondown>17</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="17">
+			<description>Time/Date switch</description>
+			<posx>100</posx>
+			<posy>367</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31008</label>
+			<selected>!Skin.HasSetting(time-date)</selected>
+			<onclick>Skin.ToggleSetting(time-date)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>16</onup>
+			<ondown>18</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="radiobutton" id="18">
+			<description>Default BG switch</description>
+			<posx>100</posx>
+			<posy>404</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<label>31009</label>
+			<selected>!Skin.HasSetting(D-Background)</selected>
+			<onclick>Skin.ToggleSetting(D-Background)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>17</onup>
+			<ondown>25</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+		<control type="button" id="25">
+			<description>Reset switch</description>
+			<posx>100</posx>
+			<posy>460</posy>
+			<height>29</height>
+			<width>520</width>
+			<font>font12</font>
+			<textoffsetx>10</textoffsetx>
+			<label>31010</label>
+			<onclick>Skin.ResetSettings</onclick>
+			<onclick>XBMC.Notification(PM2 Message,Settings back to Default.)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<onleft>8</onleft>
+			<onright>8</onright>
+			<onup>18</onup>
+			<ondown>10</ondown>
+			<visible>!Window.IsActive(126)</visible>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+	</control>
+	<control type="image" id="1">
+		<description>Background overlay</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel.png</texture>
+		<visible>!Window.IsActive(126)</visible>
+		<animation effect="fade" time="400">Hidden</animation>
+	</control>
+
+	</controls>
+</window>

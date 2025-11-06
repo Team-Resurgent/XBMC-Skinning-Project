@@ -1,0 +1,9 @@
+<!-- !!!!!!!!!!  DONT TRANSLATE THE TEXT $INFO[System.FreeSpace(E)] IN INCLUDE 1006 !!!!!!!!! -->
+
+<includes>
+	<include name="1000"><label>Show Weather Widget in Sidebar</label></include>
+	<include name="1001"><label>Show Clock Widget in Sidebar</label></include>
+	<include name="1002"><label>Disable Video in  media Background</label></include>
+	<include name="1003"><label>Disable Visualisation in media Background</label></include>
+	<include name="1004"><label>Disable Alpha Blending on Wide Icons</label></include>
+</includes>

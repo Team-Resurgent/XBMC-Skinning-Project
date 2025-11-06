@@ -1,0 +1,68 @@
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<origin x="63" y="135">true</origin>
+	</coordinates>
+	<include>common-fade</include>
+	<controls>
+
+	<!-- Big Context Menu -->
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>0</posx>
+		<posy>-20</posy>
+		<width>595</width>
+		<height>370</height>
+		<texture>Black.png</texture>
+		<colordiffuse>FF000000</colordiffuse>
+		<visible>!Window.IsActive(home)</visible>
+	</control>
+	<control type="button" id="1000">
+		<description>button template</description>
+		<posx>10</posx>
+		<posy>0</posy>
+		<width>580</width>
+		<height>30</height>
+		<texturefocus>Button-List-Fade-Focus.png</texturefocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font14</font>
+		<shadowcolor>black</shadowcolor>
+		<include>focusedcolor</include>
+		<visible>!Window.IsActive(home)</visible>
+		<animation effect="slide" start="0,0" end="0,20" time="0" condition="!Window.IsActive(home)">conditional</animation>
+	</control>
+
+	<!-- Small Context Menu -->
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>0</posx>
+		<posy>55</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="button" id="1000">
+		<description>button template</description>
+		<posx>10</posx>
+		<posy>0</posy>
+		<width>580</width>
+		<height>30</height>
+		<texturefocus>Button-List-Fade-Focus.png</texturefocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font14</font>
+		<shadowcolor>black</shadowcolor>
+		<include>focusedcolor</include>
+		<visible>Window.IsActive(home)</visible>
+		<animation effect="slide" start="0,0" end="0,100" time="0" condition="Window.IsActive(home)">conditional</animation>
+	</control>
+
+	</controls>
+</window>

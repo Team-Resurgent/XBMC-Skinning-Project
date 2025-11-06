@@ -1,0 +1,373 @@
+<window type="dialog" id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel</include>
+	<include>Menu-Time</include>
+
+	<control>
+		<description>Title Label</description>
+		<label>7</label>
+		<include>Window-Title</include>
+	</control>
+
+	<control type="group">
+		<include>common-FX</include>
+
+		<control type="fadelabel" id="101">
+			<description>Current Directory text label left</description>
+			<align>left</align>
+			<posx>90</posx>
+			<posy>80</posy>
+			<width>270</width>
+			<font>font13</font>
+			<textcolor>white5</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Common-Visible</include>
+		</control>
+		<control type="fadelabel" id="102">
+			<description>Current Directory text label right</description>
+			<align>left</align>
+			<posx>380</posx>
+			<posy>80</posy>
+			<width>270</width>
+			<font>font13</font>
+			<textcolor>white5</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Common-Visible</include>
+		</control>
+
+		<control type="label" id="12">
+			<description>Number of Files Left</description>
+			<posx>90</posx>
+			<posy>500</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>white5</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Common-Visible</include>
+		</control>
+		<control type="label" id="13">
+			<description>Number of Files Right</description>
+			<posx>380</posx>
+			<posy>500</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>white5</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Common-Visible</include>
+		</control>
+
+		<control type="list" id="20">
+			<posx>70</posx>
+			<posy>120</posy>
+			<width>290</width>
+			<height>360</height>
+			<onleft>21</onleft>
+			<onright>21</onright>
+			<onup>20</onup>
+			<ondown>20</ondown>
+			<selectedcolor>FFFF9600</selectedcolor>
+			<include>focusedcolor2</include>
+			<itemlayout height="27">
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>16</width>
+					<height>16</height>
+					<info>ListItem.Icon</info>
+					<colordiffuse>90ffffff</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>2</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font13</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>280</posx>
+					<posy>2</posy>
+					<height>16</height>
+					<width>100</width>
+					<align>right</align>
+					<font>font13</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<width>290</width>
+					<height>40</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="50,0,50,0">Button-List-Fade-Focus.png</texture>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="image">
+					<width>290</width>
+					<height>40</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="50,0,50,0">Button-List-Fade-NoFocus.png</texture>
+					<visible>!Control.HasFocus(20)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Icon</info>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Icon</info>
+					<colordiffuse>90ffffff</colordiffuse>
+					<visible>!Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>8</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>8</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font18</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>280</posx>
+					<posy>8</posy>
+					<height>16</height>
+					<width>100</width>
+					<align>right</align>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label2</info>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>280</posx>
+					<posy>8</posy>
+					<height>16</height>
+					<width>100</width>
+					<align>right</align>
+					<font>font18</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label2</info>
+					<visible>!Control.HasFocus(20)</visible>
+				</control>
+	 		</focusedlayout>
+		</control>
+		<control type="image">
+			<description>Left File list Background</description>
+			<posx>66</posx>
+			<posy>115</posy>
+			<width>298</width>
+			<height>370</height>
+			<texture>Button-MyFiles.png</texture>
+			<colordiffuse>40ffffff</colordiffuse>
+			<visible>Control.HasFocus(20)</visible>
+			<animation effect="fade" time="100">Focus</animation>
+			<animation effect="fade" time="100">Unfocus</animation>
+		</control>
+
+		<control type="list" id="21">
+			<posx>360</posx>
+			<posy>120</posy>
+			<width>290</width>
+			<height>360</height>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
+			<selectedcolor>FFFF9600</selectedcolor>
+			<include>focusedcolor2</include>
+			<itemlayout height="27">
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>16</width>
+					<height>16</height>
+					<info>ListItem.Icon</info>
+					<colordiffuse>90ffffff</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>2</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font13</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>280</posx>
+					<posy>2</posy>
+					<height>16</height>
+					<width>100</width>
+					<align>right</align>
+					<font>font13</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<width>290</width>
+					<height>40</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="50,0,50,0">Button-List-Fade-Focus.png</texture>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="image">
+					<width>290</width>
+					<height>40</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="50,0,50,0">Button-List-Fade-NoFocus.png</texture>
+					<visible>!Control.HasFocus(21)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Icon</info>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Icon</info>
+					<colordiffuse>90ffffff</colordiffuse>
+					<visible>!Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>8</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>8</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font18</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>280</posx>
+					<posy>8</posy>
+					<height>16</height>
+					<width>100</width>
+					<align>right</align>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label2</info>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>280</posx>
+					<posy>8</posy>
+					<height>16</height>
+					<width>100</width>
+					<align>right</align>
+					<font>font18</font>
+					<textcolor>white2</textcolor>
+					<shadowcolor>black2</shadowcolor>
+					<include>selectedcolor</include>
+					<scroll>true</scroll>
+					<scrolltime>300</scrolltime>
+					<info>ListItem.Label2</info>
+					<visible>!Control.HasFocus(21)</visible>
+				</control>
+	 		</focusedlayout>
+		</control>
+		<control type="image">
+			<description>Right File list Background</description>
+			<posx>356</posx>
+			<posy>115</posy>
+			<width>298</width>
+			<height>370</height>
+			<texture>Button-MyFiles.png</texture>
+			<colordiffuse>40ffffff</colordiffuse>
+			<visible>Control.HasFocus(21)</visible>
+			<animation effect="fade" time="100">Focus</animation>
+			<animation effect="fade" time="100">Unfocus</animation>
+		</control>
+	</control>
+
+	<include>Black-Overlay</include>
+	<include>Lines</include>
+	</controls>
+</window>

@@ -1,0 +1,115 @@
+<window id="502">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel</include>
+	<include>Menu-Time</include>
+	<include>Window-Files</include>
+
+	<control>
+		<description>Title Label</description>
+		<label>10516</label>
+		<include>Window-Title</include>
+	</control>
+
+	<control type="grouplist">
+		<buttongap>0</buttongap>
+		<posx>58</posx>
+		<posy>80</posy>
+		<width>550</width>
+		<height>30</height>
+		<onup>51</onup>
+		<ondown>51</ondown>
+		<scrollspeed>2</scrollspeed>
+		<orientation>horizontal</orientation>
+		<include>FX-Button</include>
+
+		<control type="button" id="2">
+			<description>View As button</description>
+			<height>30</height>
+			<width>110</width>
+			<label>100</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<include>focusedcolor</include>
+		</control>
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<height>30</height>
+			<width>110</width>
+			<label>103</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<include>focusedcolor</include>
+		</control>
+		<!-- <control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<posx>265</posx>
+			<posy>90</posy>
+			<label>-</label>
+		</control> -->
+		<control type="button" id="5">
+			<description>My Music</description>
+			<height>30</height>
+			<width>110</width>
+			<label>2</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(mymusicfiles)</onclick>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<include>focusedcolor</include>
+		</control>
+		<control type="button" id="8">
+			<description>Search button</description>
+			<height>30</height>
+			<width>110</width>
+			<label>137</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<include>focusedcolor</include>
+		</control>
+		<control type="radiobutton" id="16">
+			<description>Party Mode button</description>
+			<height>30</height>
+			<width>110</width>
+			<label>589</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<include>focusedcolor</include>
+		</control>
+		<control type="button" id="17">
+			<description>Allmusic</description>
+			<height>30</height>
+			<width>110</width>
+			<label>Allmusic</label>
+			<texturefocus>Button-Menu.png</texturefocus>
+			<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+			<font>menubutton</font>
+			<shadowcolor>black</shadowcolor>
+			<include>focusedcolor</include>
+		</control>
+	</control>
+
+	<include>Common_List</include>
+	<include>Common_List_X</include>
+	<include>Common_BigList</include>
+	<include>Common_Icon</include>
+	<include>Common_Icon2</include>
+	<include>Common_BigIcon</include>
+	<include>Common_BigIcon2</include>
+	<include>Common_3D_Cover_I</include>
+
+	<include>Black-Overlay</include>
+	<include>Lines</include>
+	</controls>
+</window>

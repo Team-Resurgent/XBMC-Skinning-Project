@@ -1,0 +1,99 @@
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<animation effect="slide" start="380,0" end="0,0" time="400">WindowOpen</animation>
+	<animation effect="slide" end="380,0" start="0,0" time="400" delay="200">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>820</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>720</height>
+			<texture>DVDViewRight.png</texture>
+		</control>
+		<control type="label">
+			<posx>950</posx>
+			<posy>20</posy>
+			<width>320</width>
+			<height>30</height>
+			<font>font18</font>
+			<textcolor>white</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31998][B]$LOCALIZE[1036][/B]$LOCALIZE[31999]</label>
+		</control>
+		<control type="image">
+			<posx>950</posx>
+			<posy>60</posy>
+			<width>330</width>
+			<height>8</height>
+			<texture>StreakBlueFull.png</texture>
+		</control>
+		<control type="image">
+			<posx>420</posx>
+			<posy>10</posy>
+			<width>440</width>
+			<height>700</height>
+			<texture>$INFO[Container(450).ListItem.Thumb]</texture>
+			<aspectratio align="right" aligny="middle">keep</aspectratio>
+			<bordertexture border="40">ThumbBack.png</bordertexture>
+			<bordersize>40</bordersize>
+			<animation effect="fade" time="200" delay="400">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control type="list" id="450">
+			<posx>940</posx>
+			<posy>80</posy>
+			<width>330</width>
+			<height>540</height>
+			<font>font101</font>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<itemlayout height="25" width="330">
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>314</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25" width="375">
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>15</width>
+					<height>15</height>
+					<texture>Dot.png</texture>
+				</control>
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>314</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

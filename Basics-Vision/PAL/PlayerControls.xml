@@ -1,0 +1,191 @@
+<window type="dialog" id="114">
+	<defaultcontrol always="true">402</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>156</posx>
+		<posy>520</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>Media Overlay Image</description>
+			<posx>-56</posx>
+			<posy>0</posy>
+			<width>520</width>
+			<height>35</height>
+			<texture>volume-panel-bg.png</texture>
+		</control>
+		<control type="radiobutton" id="600">
+			<description>Random button</description>
+			<posx>10</posx>
+			<posy>8</posy>
+			<width>110</width>
+			<height>20</height>
+			<font>font12</font>
+			<label>590</label>
+			<focusedcolor>red</focusedcolor>
+			<align>left</align>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.PlayerControl(Random)</onclick>
+			<selected>Playlist.IsRandom</selected>
+			<pulseonselect>no</pulseonselect>
+			<onleft>601</onleft>
+			<onright>400</onright>
+			<onup>600</onup>
+			<ondown>600</ondown>
+			<animation effect="zoom" end="110" center="auto" time="100">focus</animation>
+			<animation effect="zoom" start="110" center="auto" time="100">unfocus</animation>
+			<visible>!Player.HasVideo</visible>
+		</control>
+		<control type="button" id="601">
+			<description>Repeat Menu</description>
+			<posx>280</posx>
+			<posy>8</posy>
+			<width>110</width>
+			<height>20</height>
+			<label>$LOCALIZE[486]: $INFO[Playlist.Repeat]</label>
+			<focusedcolor>red</focusedcolor>
+			<font>font12</font>
+			<align>left</align>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.PlayerControl(Repeat)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>405</onleft>
+			<onright>600</onright>
+			<onup>601</onup>
+			<ondown>601</ondown>
+			<animation effect="zoom" end="110" center="auto" time="100">focus</animation>
+			<animation effect="zoom" start="110" center="auto" time="100">unfocus</animation>
+			<visible>!Player.HasVideo</visible>
+		</control>
+		<control type="group" id="9000">
+			<posx>129</posx>
+			<posy>8</posy>
+			<control type="button" id="400">
+				<posx>-2</posx>
+				<posy>0</posy>
+				<width>18</width>
+				<height>20</height>
+				<label>-</label>
+				<texturefocus>mediacontrol-skipback.png</texturefocus>
+				<texturenofocus>mediacontrol-skipback.png</texturenofocus>
+				<onleft>600</onleft>
+				<onright>401</onright>
+				<onup>400</onup>
+				<ondown>400</ondown>
+				<onclick>XBMC.PlayerControl(Previous)</onclick>
+			</control>
+			<control type="button" id="401">
+				<posx>32</posx>
+				<posy>0</posy>
+				<width>18</width>
+				<height>20</height>
+				<label>-</label>
+				<texturefocus>mediacontrol-rewind.png</texturefocus>
+				<texturenofocus>mediacontrol-rewind.png</texturenofocus>
+				<onleft>400</onleft>
+				<onright>402</onright>
+				<onup>401</onup>
+				<ondown>401</ondown>
+				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			</control>
+			<control type="togglebutton" id="402">
+				<posx>65</posx>
+				<posy>-2</posy>
+				<width>23</width>
+				<height>24</height>
+				<label>-</label>
+				<alttexturefocus>mediacontrol-play.png</alttexturefocus>
+				<alttexturenofocus>mediacontrol-play.png</alttexturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<texturefocus>mediacontrol-pause.png</texturefocus>
+				<texturenofocus>mediacontrol-pause.png</texturenofocus>
+				<onleft>401</onleft>
+				<onright>404</onright>
+				<onup>403</onup>
+				<ondown>403</ondown>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<visible allowhiddenfocus="true">!Control.IsVisible(403)</visible>
+			</control>
+			<control type="button" id="403">
+				<posx>65</posx>
+				<posy>-2</posy>
+				<width>23</width>
+				<height>24</height>
+				<label>-</label>
+				<texturefocus>mediacontrol-stop.png</texturefocus>
+				<texturenofocus>mediacontrol-stop.png</texturenofocus>
+				<onleft>401</onleft>
+				<onright>404</onright>
+				<onup>402</onup>
+				<ondown>402</ondown>
+				<onclick>XBMC.PlayerControl(Stop)</onclick>
+				<visible allowhiddenfocus="true">Control.HasFocus(403)</visible>
+			</control>
+			<control type="button" id="404">
+				<posx>99</posx>
+				<posy>0</posy>
+				<width>18</width>
+				<height>20</height>
+				<label>-</label>
+				<texturefocus>mediacontrol-fastforward.png</texturefocus>
+				<texturenofocus>mediacontrol-fastforward.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+				<onleft>402</onleft>
+				<onright>405</onright>
+				<onup>404</onup>
+				<ondown>404</ondown>
+			</control>
+			<control type="button" id="405">
+				<posx>133</posx>
+				<posy>0</posy>
+				<width>18</width>
+				<height>20</height>
+				<label>-</label>
+				<texturefocus>mediacontrol-skipforward.png</texturefocus>
+				<texturenofocus>mediacontrol-skipforward.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Next)</onclick>
+				<onleft>404</onleft>
+				<onright>601</onright>
+				<onup>405</onup>
+				<ondown>405</ondown>
+			</control>
+			<control type="image">
+				<posx>65</posx>
+				<posy>-22</posy>
+				<width>22</width>
+				<height>13</height>
+				<texture>Arrow_Up.png</texture>
+				<visible>Control.HasFocus(402) | Control.HasFocus(403)</visible>
+				<animation effect="fade" time="100">VisibleChange</animation>
+			</control>
+			<control type="image">
+				<posx>65</posx>
+				<posy>30</posy>
+				<width>22</width>
+				<height>13</height>
+				<texture>Arrow_Down.png</texture>
+				<visible>Control.HasFocus(402) | Control.HasFocus(403)</visible>
+				<animation effect="fade" time="100">VisibleChange</animation>
+			</control>
+			<control type="image">
+				<description>Chrome Button Guy</description>
+				<posx>54</posx>
+				<posy>-14</posy>
+				<width>44</width>
+				<height>48</height>
+				<aspectratio>keep</aspectratio>
+				<texture>OSD_Button.png</texture>
+				<visible>ControlGroup(9000).HasFocus</visible>
+				<animation effect="fade" time="100">VisibleChange</animation>
+				<animation effect="slide" end="-68,0" time="100" condition="Control.HasFocus(400) | Control.HasFocus(600)">Conditional</animation>
+				<animation effect="slide" end="-34,0" time="100" condition="Control.HasFocus(401)">Conditional</animation>
+				<animation effect="slide" end="31,0" time="100" condition="Control.HasFocus(404)">Conditional</animation>
+				<animation effect="slide" end="65,0" time="100" condition="Control.HasFocus(405) | Control.HasFocus(601)">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>

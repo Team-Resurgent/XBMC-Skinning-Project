@@ -1,0 +1,1046 @@
+<includes>
+	<include name="CommonRootView">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<control type="image">
+				<posx>250</posx>
+				<posy>80</posy>
+				<width>780</width>
+				<height>560</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>250</posx>
+				<posy>80</posy>
+				<width>780</width>
+				<height>560</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>285</posx>
+				<posy>185</posy>
+				<width>705</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="group">
+				<posx>930</posx>
+				<posy>575</posy>
+				<visible>!Skin.HasSetting(No_PageCounts)</visible>
+				<control type="label">
+					<description>Item Count Label</description>
+					<posx>-635</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025]</label>
+				</control>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="50">
+			<animation effect="slide" time="0" end="0,70" condition="true">Conditional</animation>
+			<posx>285</posx>
+			<posy>135</posy>
+			<width>705</width>
+			<height>360</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="30" width="705">
+				<control type="label">
+					<posx>352</posx>
+					<posy>0</posy>
+					<width>705</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30" width="705">
+				<control type="label">
+					<posx>352</posx>
+					<posy>0</posy>
+					<width>705</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="VideoFilesDVDView">
+		<control type="group">
+			<visible>Control.IsVisible(51)</visible>
+			<control type="image">
+				<posx>155</posx>
+				<posy>0</posy>
+				<width>515</width>
+				<height>720</height>
+				<aspectratio>scale</aspectratio>
+				<info>Listitem.thumb</info>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>275</width>
+				<height>720</height>
+				<texture border="0,0,270,0">DVDViewLeft.png</texture>
+				<include>OverlayMediaPlayingFadeEffect</include>
+			</control>
+			<control type="image">
+				<posx>550</posx>
+				<posy>0</posy>
+				<width>735</width>
+				<height>720</height>
+				<texture border="500,0,0,0">DVDViewRight.png</texture>
+				<include>OverlayMediaPlayingFadeEffect</include>
+			</control>
+			<control type="group">
+				<posx>1210</posx>
+				<posy>685</posy>
+				<visible>!Skin.HasSetting(No_PageCounts)</visible>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="51">
+			<posx>680</posx>
+			<posy>20</posy>
+			<width>575</width>
+			<height>650</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="$LOCALIZE[543] $LOCALIZE[535]">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="25" width="575">
+				<control type="label">
+					<posx>358</posx>
+					<posy>0</posy>
+					<width>358</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>376</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25" width="575">
+				<control type="image">
+					<posx>360</posx>
+					<posy>5</posy>
+					<width>15</width>
+					<height>15</height>
+					<texture>Dot.png</texture>
+				</control>
+				<control type="label">
+					<posx>358</posx>
+					<posy>0</posy>
+					<width>358</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				<control type="label">
+					<posx>376</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label2][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="MusicFilesCoverView">
+		<control type="group">
+			<visible>Control.IsVisible(51)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>700</width>
+				<height>30</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31998][B]$INFO[ListItem.Label][/B]$LOCALIZE[31999]</label>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>60</posy>
+				<width>720</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="image">
+				<posx>120</posx>
+				<posy>100</posy>
+				<width>500</width>
+				<height>500</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture>$INFO[ListItem.Thumb]</texture>
+			</control>
+			<control type="image">
+				<posx>120</posx>
+				<posy>600</posy>
+				<width>500</width>
+				<height>500</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Thumb]</texture>
+			</control>
+			<control type="image">
+				<posx>80</posx>
+				<posy>600</posy>
+				<width>580</width>
+				<height>64</height>
+				<texture>HorizontalGlowHome.png</texture>
+				<visible>!IsEmpty(ListItem.Thumb)</visible>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<posy>100</posy>
+				<visible>IsEmpty(Listitem.Thumb)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>500</height>
+					<texture border="3">NoCover_1.png</texture>
+				</control>
+				<control type="image">
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>450</width>
+					<height>450</height>
+					<aspectratio>keep</aspectratio>
+					<texture>NoCover_2.png</texture>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>500</height>
+					<font>font25</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>31029</label>
+				</control>
+			</control>
+			<control type="image">
+				<posx>640</posx>
+				<posy>0</posy>
+				<width>640</width>
+				<height>720</height>
+				<include>OverlayMediaPlayingFadeEffect</include>
+				<texture border="500,0,0,0">DVDViewRight.png</texture>
+			</control>
+			<control type="group">
+				<posx>1210</posx>
+				<posy>685</posy>
+				<visible>!Skin.HasSetting(No_PageCounts)</visible>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="51">
+			<posx>755</posx>
+			<posy>20</posy>
+			<width>515</width>
+			<height>650</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="$LOCALIZE[558] $LOCALIZE[535]">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="25" width="515">
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25" width="515">
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>15</width>
+					<height>15</height>
+					<texture>Dot.png</texture>
+				</control>
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="CommonFilesFileView2">
+		<control type="group">
+			<visible>Control.IsVisible(58)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>680</width>
+				<height>30</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31998][B]$INFO[ListItem.Label][/B]$LOCALIZE[31999]</label>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>60</posy>
+				<width>700</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="image">
+				<posx>30</posx>
+				<posy>70</posy>
+				<width>660</width>
+				<height>540</height>
+				<aspectratio>keep</aspectratio>
+				<bordertexture border="40">Dialogback.png</bordertexture>
+				<bordersize>40</bordersize>
+				<texture>$INFO[ListItem.Thumb]</texture>
+			</control>
+			<control type="image">
+				<posx>30</posx>
+				<posy>70</posy>
+				<width>660</width>
+				<height>540</height>
+				<aspectratio>keep</aspectratio>
+				<bordertexture border="40">Dialogfront.png</bordertexture>
+				<bordersize>40</bordersize>
+				<texture>$INFO[ListItem.Thumb]</texture>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>620</posy>
+				<width>700</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>640</posy>
+				<width>680</width>
+				<height>30</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Size,$LOCALIZE[553] : ]$INFO[ListItem.Date, - $LOCALIZE[552] : ]</label>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>670</posy>
+				<width>680</width>
+				<height>30</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Duration,$LOCALIZE[555] : ]</label>
+			</control>
+			<control type="group">
+				<posx>140</posx>
+				<posy>130</posy>
+				<visible>IsEmpty(Listitem.Thumb)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>460</width>
+					<height>440</height>
+					<texture border="3">NoCover_1.png</texture>
+				</control>
+				<control type="image">
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>410</width>
+					<height>390</height>
+					<aspectratio>keep</aspectratio>
+					<texture>NoCover_2.png</texture>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>460</width>
+					<height>440</height>
+					<font>font25</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>31029</label>
+				</control>
+			</control>
+			<control type="image">
+				<posx>640</posx>
+				<posy>0</posy>
+				<width>640</width>
+				<height>720</height>
+				<include>OverlayMediaPlayingFadeEffect</include>
+				<texture border="500,0,0,0">DVDViewRight.png</texture>
+			</control>
+			<control type="group">
+				<posx>1210</posx>
+				<posy>685</posy>
+				<visible>!Skin.HasSetting(No_PageCounts)</visible>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="58">
+			<posx>755</posx>
+			<posy>20</posy>
+			<width>515</width>
+			<height>650</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>58</onup>
+			<ondown>58</ondown>
+			<viewtype label="$LOCALIZE[744] 2">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="25" width="515">
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25" width="515">
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>15</width>
+					<height>15</height>
+					<texture>Dot.png</texture>
+				</control>
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>25</height>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="CommonFilesFileView">
+		<control type="group">
+			<visible>Control.IsVisible(59)</visible>
+			<control type="image">
+				<posx>-40</posx>
+				<posy>130</posy>
+				<width>500</width>
+				<height>460</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>-40</posx>
+				<posy>130</posy>
+				<width>500</width>
+				<height>460</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>480</posx>
+				<posy>130</posy>
+				<width>840</width>
+				<height>460</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>480</posx>
+				<posy>130</posy>
+				<width>840</width>
+				<height>460</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>170</posy>
+				<width>380</width>
+				<height>380</height>
+				<aspectratio>keep</aspectratio>
+				<info>Listitem.Icon</info>
+			</control>
+			<control type="group">
+				<posx>1200</posx>
+				<posy>570</posy>
+				<visible>!Skin.HasSetting(No_PageCounts)</visible>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="59">
+			<animation effect="slide" time="0" end="0,70" condition="true">Conditional</animation>
+			<posx>520</posx>
+			<posy>110</posy>
+			<width>725</width>
+			<height>360</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>59</onup>
+			<ondown>59</ondown>
+			<viewtype label="744">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="30" width="725">
+				<control type="label">
+					<posx>18</posx>
+					<posy>0</posy>
+					<width>685</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>725</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30" width="725">
+				<control type="image">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>16</width>
+					<height>16</height>
+					<texture>Dot.png</texture>
+				</control>
+				<control type="label">
+					<posx>18</posx>
+					<posy>0</posy>
+					<width>685</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				<control type="label">
+					<posx>725</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label2][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="CommonWideIconView">
+		<control type="group">
+			<visible>Control.IsVisible(52)</visible>
+			<control type="image">
+				<posx>250</posx>
+				<posy>80</posy>
+				<width>780</width>
+				<height>560</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>250</posx>
+				<posy>80</posy>
+				<width>780</width>
+				<height>560</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>287</posx>
+				<posy>120</posy>
+				<width>705</width>
+				<height>140</height>
+				<aspectratio>stretch</aspectratio>
+				<info>Listitem.thumb</info>
+				<visible>!Window.IsVisible(Programs)</visible>
+			</control>
+			<control type="image">
+				<posx>287</posx>
+				<posy>120</posy>
+				<width>705</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<info>Listitem.thumb</info>
+				<visible>Window.IsVisible(Programs)</visible>
+			</control>
+			<control type="group">
+				<posx>930</posx>
+				<posy>575</posy>
+				<visible>!Skin.HasSetting(No_PageCounts)</visible>
+				<control type="label">
+					<description>Item Count Label</description>
+					<posx>-635</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025]</label>
+				</control>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="52">
+			<visible>!Window.IsVisible(Programs)</visible>
+			<posx>285</posx>
+			<posy>270</posy>
+			<width>705</width>
+			<height>300</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<viewtype label="$LOCALIZE[539] $LOCALIZE[535]">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="30" width="705">
+				<control type="label">
+					<posx>352</posx>
+					<posy>0</posy>
+					<width>705</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30" width="705">
+				<control type="label">
+					<posx>352</posx>
+					<posy>0</posy>
+					<width>705</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="list" id="52">
+			<visible>Window.IsVisible(Programs)</visible>
+			<posx>285</posx>
+			<posy>290</posy>
+			<width>705</width>
+			<height>270</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<viewtype label="$LOCALIZE[539] $LOCALIZE[535]">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="30" width="705">
+				<control type="label">
+					<posx>352</posx>
+					<posy>0</posy>
+					<width>705</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30" width="705">
+				<control type="label">
+					<posx>352</posx>
+					<posy>0</posy>
+					<width>705</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="PictureFilmStripView">
+		<control type="group">
+			<visible>Control.IsVisible(51)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>1280</width>
+				<height>530</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Listitem.Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-5</posy>
+				<width>1280</width>
+				<height>135</height>
+				<texture flipx="true" flipy="true" border="0,0,0,130">Panel_Horizontal.png</texture>
+				<include>OverlayMediaPlayingFadeEffect</include>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>10</posy>
+				<width>1280</width>
+				<height>30</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31998][B]$INFO[Listitem.Label][/B]$LOCALIZE[31999]</label>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>470</posy>
+				<width>1280</width>
+				<height>255</height>
+				<texture border="0,250,0,0">Panel_Horizontal.png</texture>
+				<include>OverlayMediaPlayingFadeEffect</include>
+			</control>
+			<control type="group">
+				<posx>1210</posx>
+				<posy>690</posy>
+				<visible>!Skin.HasSetting(No_PageCounts)</visible>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+		</control>
+		<control type="wraplist" id="51">
+			<posx>0</posx>
+			<posy>560</posy>
+			<width>1280</width>
+			<height>130</height>
+			<onleft>51</onleft>
+			<onright>61</onright>
+			<onup>9000</onup>
+			<ondown>60</ondown>
+			<viewtype label="31026">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>3</focusposition>
+			<itemlayout height="130" width="182">
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>172</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="130" width="182">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>182</width>
+					<height>130</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<bordertexture>button-focus.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+</includes>

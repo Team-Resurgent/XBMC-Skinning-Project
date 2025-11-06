@@ -1,0 +1,25 @@
+<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+	<type>dialog</type>
+	<controls>
+	<include>background-dialog</include>
+
+	<control type="textbox" id="5">
+		<description>textarea</description>
+		<posx>65</posx>
+		<posy>100</posy>
+		<width>620</width>
+		<height>450</height>
+	</control>
+
+	<control type="label" id="10">
+		<description>Scripts Output</description>
+		<posx>180</posx>
+		<posy>60</posy>
+		<label>262</label>
+		<font>font14</font>
+		<textcolor>FFB2D4F5</textcolor>
+	</control>
+
+	</controls>
+</window>

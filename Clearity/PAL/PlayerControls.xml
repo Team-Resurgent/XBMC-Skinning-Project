@@ -1,0 +1,254 @@
+<window type="dialog" id="114">
+	<defaultcontrol>402</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>300</posx>
+	<posy>500</posy>
+	</coordinates>
+	<include>FX-PlayerControl</include>
+	<controls>
+
+	<control type="image">
+		<description>Background Left</description>
+		<posx>-76</posx>
+		<posy>-3</posy>
+		<width>20</width>
+		<height>32</height>
+		<texture>Media-Background-Left.png</texture>
+		<visible>Window.IsActive(2007)</visible>
+	</control>
+	<control type="image">
+		<description>Background Middle</description>
+		<posx>-56</posx>
+		<posy>-3</posy>
+		<width>232</width>
+		<height>32</height>
+		<texture>Media-Background-Middle.png</texture>
+		<visible>Window.IsActive(2007)</visible>
+	</control>
+	<control type="image">
+		<description>Background Right</description>
+		<posx>176</posx>
+		<posy>-3</posy>
+		<width>20</width>
+		<height>32</height>
+		<texture>Media-Background-Right.png</texture>
+		<visible>Window.IsActive(2007)</visible>
+	</control>
+	<control type="button" id="398">
+		<description>Media Button</description>
+		<posx>-75</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Info-Focus.png</texturefocus>
+		<texturenofocus>Media-Info-NoFocus.png</texturenofocus>
+		<onleft>406</onleft>
+		<onright>399</onright>
+		<onup>398</onup>
+		<ondown>398</ondown>
+		<onclick>Skin.ToggleSetting(MediaInfo)</onclick>
+	</control>
+	<control type="togglebutton" id="399">
+		<description>Mute Button</description>
+		<posx>-45</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Mute-Off-Focus.png</texturefocus>
+		<texturenofocus>Media-Mute-Off-NoFocus.png</texturenofocus>
+		<usealttexture>Player.Muted</usealttexture>
+		<alttexturefocus>Media-Mute-On-Focus.png</alttexturefocus>
+		<alttexturenofocus>Media-Mute-On-NoFocus.png</alttexturenofocus>
+		<onleft>398</onleft>
+		<onright>400</onright>
+		<onup>399</onup>
+		<ondown>399</ondown>
+		<onclick>XBMC.Mute</onclick>
+	</control>
+	<control type="button" id="400">
+		<description>Previous Button</description>
+		<posx>-15</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Previous-Focus.png</texturefocus>
+		<texturenofocus>Media-Previous-NoFocus.png</texturenofocus>
+		<onleft>399</onleft>
+		<onright>401</onright>
+		<onup>400</onup>
+		<ondown>400</ondown>
+		<onclick>XBMC.PlayerControl(Previous)</onclick>
+	</control>
+	<control type="button" id="401">
+		<description>Rewind Button</description>
+		<posx>15</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Rewind-Focus.png</texturefocus>
+		<texturenofocus>Media-Rewind-NoFocus.png</texturenofocus>
+		<onleft>400</onleft>
+		<onright>402</onright>
+		<onup>401</onup>
+		<ondown>401</ondown>
+		<onclick>XBMC.PlayerControl(Rewind)</onclick>
+	</control>
+	<control type="button" id="402">
+		<description>Stop Button</description>
+		<posx>45</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Stop-Focus.png</texturefocus>
+		<texturenofocus>Media-Stop-NoFocus.png</texturenofocus>
+		<onleft>401</onleft>
+		<onright>403</onright>
+		<onup>402</onup>
+		<ondown>402</ondown>
+		<onclick>XBMC.PlayerControl(Stop)</onclick>
+	</control>
+	<control type="togglebutton" id="403">
+		<description>Pause Button</description>
+		<posx>75</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Pause-Focus.png</texturefocus>
+		<texturenofocus>Media-Pause-NoFocus.png</texturenofocus>
+		<usealttexture>Player.Paused</usealttexture>
+		<alttexturefocus>Media-Play-Focus.png</alttexturefocus>
+		<alttexturenofocus>Media-Play-NoFocus.png</alttexturenofocus>
+		<onleft>402</onleft>
+		<onright>404</onright>
+		<onup>403</onup>
+		<ondown>403</ondown>
+		<onclick>XBMC.PlayerControl(Play)</onclick>
+	</control>
+	<control type="button" id="404">
+		<description>Forward Button</description>
+		<posx>105</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Forward-Focus.png</texturefocus>
+		<texturenofocus>Media-Forward-NoFocus.png</texturenofocus>
+		<onleft>403</onleft>
+		<onright>405</onright>
+		<onup>404</onup>
+		<ondown>404</ondown>
+		<onclick>XBMC.PlayerControl(Forward)</onclick>
+	</control>
+	<control type="button" id="405">
+		<description>Next Button</description>
+		<posx>135</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>Media-Next-Focus.png</texturefocus>
+		<texturenofocus>Media-Next-NoFocus.png</texturenofocus>
+		<onleft>404</onleft>
+		<onright>406</onright>
+		<onup>405</onup>
+		<ondown>405</ondown>
+		<onclick>XBMC.PlayerControl(Next)</onclick>
+	</control>
+	<control type="button" id="406">
+		<description>Repeat Button</description>
+		<posx>165</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<label>-</label>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<onleft>405</onleft>
+		<onright>398</onright>
+		<onup>406</onup>
+		<ondown>406</ondown>
+		<onclick>XBMC.PlayerControl(Repeat)</onclick>
+	</control>
+	<control type="image">
+		<posx>165</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>Media-RepeatA-NoFocus.png</texture>
+		<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+		<visible>!Control.HasFocus(406)</visible>
+	</control>
+	<control type="image">
+		<posx>165</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>Media-RepeatA-Focus.png</texture>
+		<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+		<visible>Control.HasFocus(406)</visible>
+	</control>
+	<control type="image">
+		<posx>165</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>Media-RepeatOne-NoFocus.png</texture>
+		<visible>Playlist.IsRepeatOne</visible>
+		<visible>!Control.HasFocus(406)</visible>
+	</control>
+	<control type="image">
+		<posx>165</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>Media-RepeatOne-Focus.png</texture>
+		<visible>Playlist.IsRepeatOne</visible>
+		<visible>Control.HasFocus(406)</visible>
+	</control>
+	<control type="image">
+		<posx>165</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>Media-RepeatAll-NoFocus.png</texture>
+		<visible>Playlist.IsRepeat</visible>
+		<visible>!Control.HasFocus(406)</visible>
+	</control>
+	<control type="image">
+		<posx>165</posx>
+		<posy>-2</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>Media-RepeatAll-Focus.png</texture>
+		<visible>Playlist.IsRepeat</visible>
+		<visible>Control.HasFocus(406)</visible>
+	</control>
+	<control type="image">
+		<posx>-120</posx>
+		<posy>3</posy>
+		<width>50</width>
+		<height>20</height>
+		<texture>SeparatorOSD.png</texture>
+		<colordiffuse>90ffffff</colordiffuse>
+		<visible>!Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>190</posx>
+		<posy>3</posy>
+		<width>50</width>
+		<height>20</height>
+		<texture>SeparatorOSD.png</texture>
+		<colordiffuse>90ffffff</colordiffuse>
+		<visible>!Window.IsActive(home)</visible>
+	</control>
+
+	</controls>
+</window>

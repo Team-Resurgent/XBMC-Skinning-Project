@@ -1,0 +1,251 @@
+﻿<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="image">
+			<description>filemanager background image</description>
+			<posx>40</posx>
+			<posy>75</posy>
+			<width>320</width>
+			<height>400</height>
+			<texture>trans-panel.png</texture>
+		</control>
+		<control type="image">
+			<description>filemanager background image</description>
+			<posx>360</posx>
+			<posy>75</posy>
+			<width>320</width>
+			<height>400</height>
+			<texture>trans-panel.png</texture>
+		</control>
+		<control type="image">
+			<description>filemanager background image</description>
+			<posx>40</posx>
+			<posy>35</posy>
+			<width>320</width>
+			<height>40</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="image">
+			<description>filemanager background image</description>
+			<posx>360</posx>
+			<posy>35</posy>
+			<width>320</width>
+			<height>40</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="image">
+			<description>filemanager background image</description>
+			<posx>40</posx>
+			<posy>475</posy>
+			<width>320</width>
+			<height>40</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="image">
+			<description>filemanager background image</description>
+			<posx>360</posx>
+			<posy>475</posy>
+			<width>320</width>
+			<height>40</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="fadelabel" id="101">
+			<description>current directory text label left</description>
+			<align>left</align>
+			<posx>80</posx>
+			<posy>45</posy>
+			<width>270</width>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="fadelabel" id="102">
+			<description>current directory text label right</description>
+			<align>left</align>
+			<posx>400</posx>
+			<posy>45</posy>
+			<width>270</width>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label" id="12">
+			<description>number of files in left list text label</description>
+			<posx>80</posx>
+			<posy>484</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+		<control type="label" id="13">
+			<description>number of files in right list text label</description>
+			<posx>400</posx>
+			<posy>484</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>blue-text</textcolor>
+		</control>
+
+		<control type="list" id="20">
+			<posx>55</posx>
+			<posy>92</posy>
+			<width>290</width>
+			<height>360</height>
+			<onleft>21</onleft>
+			<onright>21</onright>
+			<onup>20</onup>
+			<ondown>20</ondown>
+			<scrolltime>1</scrolltime>
+			<include>ContainerFade</include>
+			<itemlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<texture>list-pixel.png</texture>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<texture>list-focus.png</texture>
+					<colordiffuse>77FFFFFF</colordiffuse>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="list" id="21">
+			<posx>375</posx>
+			<posy>92</posy>
+			<width>290</width>
+			<height>360</height>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
+			<scrolltime>1</scrolltime>
+			<include>ContainerFade</include>
+			<itemlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<texture>list-pixel.png</texture>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<texture>list-focus.png</texture>
+					<colordiffuse>77FFFFFF</colordiffuse>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>290</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<description>free space label</description>
+			<posx>80</posx>
+			<posy>530</posy>
+			<info>system.freespace(c)</info>
+			<textcolor>ccffffff</textcolor>
+			<font>font12</font>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<description>free space label</description>
+			<posx>270</posx>
+			<posy>530</posy>
+			<info>system.freespace(e)</info>
+			<textcolor>ccffffff</textcolor>
+			<font>font12</font>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<description>free space label</description>
+			<posx>460</posx>
+			<posy>530</posy>
+			<info>system.freespace(f)</info>
+			<textcolor>ccffffff</textcolor>
+			<font>font12</font>
+			<align>left</align>
+		</control>
+	</controls>
+</window>  

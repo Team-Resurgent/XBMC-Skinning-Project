@@ -1,0 +1,116 @@
+<window id="12">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel2</include>
+	<include>Menu-Time</include>
+
+	<control id="2">
+		<description>Title Label</description>
+		<include>Window-Title</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="grouplist" id="3">
+		<description>button area</description>
+		<posx>58</posx>
+		<posy>80</posy>
+		<width>550</width>
+		<height>30</height>
+		<itemgap>0</itemgap>
+		<orientation>horizontal</orientation>
+		<scrollspeed>2</scrollspeed>
+		<include>FX-Button</include>
+	</control>
+	<control type="image" id="4">
+		<description>button gap</description>
+		<width>350</width>
+		<height>38</height>
+		<texture>-</texture>
+	</control>
+	<control type="grouplist" id="5">
+		<description>control area</description>
+		<posx>70</posx>
+		<posy>121</posy>
+		<width>580</width>
+		<height>360</height>
+		<onup>5</onup>
+		<ondown>5</ondown>
+		<onleft>3</onleft>
+		<onright>3</onright>
+		<include>common-FX</include>
+	</control>
+	<control type="image" id="6">
+		<description>control gap</description>
+		<width>350</width>
+		<height>38</height>
+		<texture>-</texture>
+	</control>
+	<control type="button" id="7">
+		<description>Default Button</description>
+		<posx>530</posx>
+		<posy>150</posy>
+		<font>font13</font>
+		<shadowcolor>black</shadowcolor>
+		<texturefocus border="50,0,50,0">Button-List-Fade-Focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<include>common-fade</include>
+	</control>
+	<control type="radiobutton" id="8">
+		<description>Default RadioButton</description>
+		<posx>530</posx>
+		<posy>150</posy>
+		<font>font13</font>
+		<shadowcolor>black</shadowcolor>
+		<texturefocus border="50,0,50,0">Button-List-Fade-Focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureRadiofocus>settings-check-box.png</textureRadiofocus>
+		<textureRadionofocus>settings-check-boxNF.png</textureRadionofocus>
+		<include>common-fade</include>
+	</control>
+	<control type="spincontrolex" id="9">
+		<description>Default SpinControlex</description>
+		<posx>530</posx>
+		<posy>150</posy>
+		<width>300</width>
+		<texturefocus border="50,0,50,0">Button-List-Fade-Focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>scroll-up.png</textureup>
+		<texturedown>scroll-down.png</texturedown>
+		<textureupfocus>scroll-up-focus.gif</textureupfocus>
+		<texturedownfocus>scroll-down-focus.gif</texturedownfocus>
+		<font>font13</font>
+		<colordiffuse>ffffffff</colordiffuse>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<include>common-fade</include>
+	</control>
+	<control type="button" id="10">
+		<description>Default Category Button</description>
+		<posx>208</posx>
+		<posy>150</posy>
+		<height>30</height>
+		<width>110</width>
+		<label>224</label>
+		<font>menubutton</font>
+		<shadowcolor>black</shadowcolor>
+		<include>focusedcolor</include>
+		<align>left</align>
+		<texturefocus>Button-Menu.png</texturefocus>
+		<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+	</control>
+	<control type="image" id="11">
+		<description>separator image</description>
+		<width>580</width>
+		<height>2</height>
+		<texture border="10,0,10,0">Settings-Divider.png</texture>
+		<colordiffuse>80ffffff</colordiffuse>
+		<include>common-fade</include>
+	</control>
+
+	<include>Black-Overlay</include>
+	<include>Lines</include>
+	</controls>
+</window>

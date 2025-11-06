@@ -1,0 +1,115 @@
+<!-- window name: musicplaylist -->
+<window id="500">
+
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<!-- background -->
+		<include>bg-music</include>
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>overlay-bg</colordiffuse>
+		</control>		
+		
+		<!-- view modes -->		
+		<include>ViewPlaylist</include>
+
+		<!-- header -->
+		<control type="group">
+
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+				<label>Music Playlist</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, : ]$INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+			
+		<!-- view options -->
+		<control type="group">
+		
+			<posx>1280</posx>
+			<posy>20</posy>
+			
+			<include>anim-sidebar</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>black.png</texture>
+				<width>400</width>
+				<height>680</height>
+				<colordiffuse>sidebar</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="9000">			
+				<width>360</width>
+				<height>680</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<!-- view as -->
+				<control type="button" id="140">
+					<label>View: $INFO[Container.ViewMode]</label>
+					<include>type-sidebar</include>
+					<onclick>Container.NextViewMode</onclick>
+				</control>
+				<!-- shuffle -->
+				<control type="radiobutton" id="20">
+					<label>Shuffle</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- repeat -->
+				<control type="button" id="26">
+					<label>Repeat</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- save -->
+				<control type="button" id="21">
+					<label>Save</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- clear -->
+				<control type="button" id="22">
+					<label>Clear</label>
+					<include>type-sidebar</include>
+				</control>
+
+			</control>
+		</control>
+	
+	</controls>
+	
+</window>

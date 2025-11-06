@@ -1,0 +1,354 @@
+<window id="503">
+
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+	
+		<!-- background -->
+		<include>bg-music</include>
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>overlay-bg</colordiffuse>
+		</control>		
+
+		<control type="group">
+		
+			<posx>20</posx>
+			<posy>80</posy>
+			<animation type="Conditional" condition="!Control.HasFocus(20)">
+				<effect type="fade" start="100" end="65" time="300" />
+			</animation>
+
+			<!-- left panel -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>610</width>
+				<height>590</height>
+			</control>
+			<!-- left current directory -->
+			<control type="label">
+				<label>Music Files</label>
+				<width>590</width>
+				<height>30</height>
+				<posx>10</posx>
+				<posy>10</posy>
+				<font>listitem-small</font>
+				<textcolor>type-listitem-header</textcolor>
+			</control>
+			<!-- left filelist -->
+			<control type="list" id="50">
+				<width>590</width>
+				<height>540</height>
+				<posx>10</posx>
+				<posy>50</posy>
+				<onleft>9000</onleft>
+				<onright>100</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				
+				<itemlayout height="49">
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>590</width>
+						<height>40</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>4</posx>
+						<posy>4</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>320</width>
+						<height>40</height>
+						<posx>60</posx>
+						<font>listitem-small</font>
+						<textcolor>type-listitem-dark</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label2]</label>
+						<width>200</width>
+						<height>40</height>
+						<posx>540</posx>
+						<posy>0</posy>
+						<font>listitem-small</font>
+						<textcolor>type-listitem-dark</textcolor>
+						<align>right</align>
+					</control>
+				</itemlayout>
+				<focusedlayout height="49">
+					<control type="image">
+						<visible>Control.HasFocus(50)</visible>
+						<texture border="8">listitem-back.png</texture>
+						<width>590</width>
+						<height>40</height>
+					</control>
+					<control type="image">
+						<visible>!Control.HasFocus(50)</visible>
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>590</width>
+						<height>40</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>4</posx>
+						<posy>4</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>320</width>
+						<height>40</height>
+						<posx>60</posx>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label2]</label>
+						<width>200</width>
+						<height>40</height>
+						<posx>540</posx>
+						<posy>0</posy>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+						<align>right</align>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- number of files -->
+			<control type="label" id="12">
+				<width>590</width>
+				<height>40</height>
+				<posy>590</posy>
+				<font>content-small</font>
+				<textcolor>type-header-dark</textcolor>
+			</control>
+			<!-- current page / number of pages -->
+			<control type="label">
+				<label>$INFO[Container(20).CurrentPage,, / ]$INFO[Container(20).NumPages]</label>
+				<width>590</width>
+				<height>40</height>
+				<posx>590</posx>
+				<posy>590</posy>
+				<font>content-small</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+		
+		<control type="group">
+		
+			<posx>650</posx>
+			<posy>80</posy>
+			<animation type="Conditional" condition="!Control.HasFocus(21)">
+				<effect type="fade" start="100" end="65" time="300" />
+			</animation>
+			<!-- right panel -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>610</width>
+				<height>590</height>
+			</control>
+			<!-- right current directory -->
+			<control type="label">
+				<label>Playlist</label>
+				<width>590</width>
+				<height>30</height>
+				<posx>10</posx>
+				<posy>10</posy>
+				<font>listitem-small</font>
+				<textcolor>type-listitem-header</textcolor>
+			</control>
+
+			<!-- right filelist -->
+			<control type="list" id="100">
+				<width>590</width>
+				<height>540</height>
+				<posx>10</posx>
+				<posy>50</posy>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<itemlayout height="49">
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>590</width>
+						<height>40</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>4</posx>
+						<posy>4</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>320</width>
+						<height>40</height>
+						<posx>60</posx>
+						<font>listitem-small</font>
+						<textcolor>type-listitem-dark</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label2]</label>
+						<width>200</width>
+						<height>40</height>
+						<posx>540</posx>
+						<posy>0</posy>
+						<font>listitem-small</font>
+						<textcolor>type-listitem-dark</textcolor>
+						<align>right</align>
+					</control>
+				</itemlayout>
+				<focusedlayout height="49">
+					<control type="image">
+						<visible>Control.HasFocus(100)</visible>
+						<texture border="8">listitem-back.png</texture>
+						<width>590</width>
+						<height>40</height>
+					</control>
+					<control type="image">
+						<visible>!Control.HasFocus(100)</visible>
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>590</width>
+						<height>40</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>4</posx>
+						<posy>4</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>320</width>
+						<height>40</height>
+						<posx>60</posx>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label2]</label>
+						<width>200</width>
+						<height>40</height>
+						<posx>540</posx>
+						<posy>0</posy>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+						<align>right</align>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- number of files -->
+			<control type="label" id="101">
+				<width>590</width>
+				<height>40</height>
+				<posy>590</posy>
+				<font>content-small</font>
+				<textcolor>type-header-dark</textcolor>
+			</control>
+			<!-- current page / number of pages -->
+			<control type="label">
+				<label>$INFO[Container(21).CurrentPage,, / ]$INFO[Container(21).NumPages]</label>
+				<width>590</width>
+				<height>40</height>
+				<posx>590</posx>
+				<posy>590</posy>
+				<font>content-small</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>
+				
+		<!-- header -->
+		<control type="group">
+		
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+				<label>Playlist Editor</label>
+				<height>80</height>
+				<posx>20</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, : ]$INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1260</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>	
+						
+		<!-- view options -->
+		<control type="group">
+		
+			<posx>1280</posx>
+			<posy>20</posy>
+			
+			<include>anim-sidebar</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>black.png</texture>
+				<width>400</width>
+				<height>680</height>
+				<colordiffuse>sidebar</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="9000">			
+				<width>360</width>
+				<height>680</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<!-- open playlist -->
+				<control type="button" id="6">
+					<label>Open</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- save playlist -->
+				<control type="button" id="7">
+					<label>Save</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- clear playlist -->
+				<control type="button" id="8">
+					<label>Clear</label>
+					<include>type-sidebar</include>
+				</control>
+			</control>
+		</control>
+
+	</controls>
+	
+</window>

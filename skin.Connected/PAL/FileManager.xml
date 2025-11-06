@@ -1,0 +1,422 @@
+<window id="3">
+<defaultcontrol always="true">20</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+  
+<controls>
+
+<include>Backgrounds</include>
+
+  <control type="group">
+    <include>DefaultFade</include>
+<!-- Left -->
+  <control type="group">
+    <posx>20</posx>
+    <posy>20</posy>
+    <include>MediaInfoBack</include>
+    <control type="image">
+      <description>Header Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+      <visible>Control.HasFocus(21)</visible>
+    </control>
+    <control type="image">
+      <description>Header Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonFo.png</texture>
+      <visible>Control.HasFocus(20)</visible>
+    </control>
+    <control type="label" id="101">
+      <description>Header Label</description>
+      <posx>15</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+    </control>
+    <control type="list" id="20">
+      <description>Left File List</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>322</width>
+      <height>380</height>
+      <onleft>21</onleft>
+      <onright>21</onright>
+      <onup>20</onup>
+      <ondown>20</ondown>
+      <itemlayout height="35" width="320">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>30</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+        </control>
+        <control type="image">
+          <posx>5</posx>
+          <posy>5</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>30</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>310</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <info>listitem.label2</info>
+          <scroll>false</scroll>
+        </control>
+      </itemlayout>
+      <focusedlayout height="35" width="320">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>30</height>
+          <texture>ButtonInputFo.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+          <visible>Control.HasFocus(20)</visible>
+        </control>
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>30</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+          <visible>!Control.HasFocus(20)</visible>
+        </control>
+        <control type="image">
+          <posx>5</posx>
+          <posy>5</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>30</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>310</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label2</info>
+          <scroll>false</scroll>
+        </control>
+      </focusedlayout>
+    </control>
+  </control>
+    
+	<control type="group">
+		<posx>20</posx>
+		<posy>511</posy>
+    <control type="image">
+      <description>Footer Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+      <visible>Control.HasFocus(21)</visible>
+    </control>
+    <control type="image">
+      <description>Footer Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonFo.png</texture>
+      <visible>Control.HasFocus(20)</visible>
+    </control>
+    <control type="label" id="12">
+      <description>Header Label</description>
+      <posx>15</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+    </control>
+	</control>
+  
+<!-- Right -->
+  <control type="group">
+		<posx>360</posx>
+		<posy>20</posy>
+    <control type="image">
+      <description>Header Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+      <visible>Control.HasFocus(20)</visible>
+    </control>
+    <control type="image">
+      <description>Header Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonFo.png</texture>
+      <visible>Control.HasFocus(21)</visible>
+    </control>
+    <control type="label" id="102">
+      <description>Header Label</description>
+      <posx>15</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+    </control>
+    <control type="list" id="21">
+      <description>Right File List</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>320</width>
+      <height>380</height>
+      <onleft>20</onleft>
+      <onright>20</onright>
+      <onup>21</onup>
+      <ondown>21</ondown>
+      <itemlayout height="35" width="320">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>30</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+        </control>
+        <control type="image">
+          <posx>5</posx>
+          <posy>5</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>30</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>310</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <info>listitem.label2</info>
+          <scroll>false</scroll>
+        </control>
+      </itemlayout>
+      <focusedlayout height="35" width="320">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>30</height>
+          <texture>ButtonInputFo.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+          <visible>Control.HasFocus(21)</visible>
+        </control>
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>320</width>
+          <height>30</height>
+          <texture>ButtonInputNF.png</texture>
+          <aspectratio aligny="middle">keep</aspectratio>
+          <visible>!Control.HasFocus(21)</visible>
+        </control>
+        <control type="image">
+          <posx>5</posx>
+          <posy>5</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>30</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>310</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>30</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>18BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.label2</info>
+          <scroll>false</scroll>
+        </control>
+      </focusedlayout>
+    </control>
+	</control>
+
+  <control type="group">
+    <posx>360</posx>
+    <posy>511</posy>
+    <control type="image">
+      <description>Footer Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+      <visible>Control.HasFocus(20)</visible>
+    </control>
+    <control type="image">
+      <description>Footer Back</description>
+      <width>340</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonFo.png</texture>
+      <visible>Control.HasFocus(21)</visible>
+    </control>
+    <control type="label" id="13">
+      <description>Header Label</description>
+      <posx>15</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+    </control>
+  </control>
+
+  <control type="image">
+    <description>Separator image</description>
+    <posx>360</posx>
+    <posy>20</posy>
+    <width>1</width>
+    <height>535</height>
+    <aspectratio align="left">stretch</aspectratio>
+    <texture>white.png</texture>
+    <animation effect="fade" delay="0" end="40" time="0" condition="true">WindowOpen</animation>
+    <animation effect="fade" delay="0" end="40" time="0" condition="true">WindowClose</animation>
+  </control>
+
+  <control type="group">
+    <posx>20</posx>
+    <posy>465</posy>
+    <control type="label">
+      <description>Free Space Label</description>
+      <posx>15</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>30</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$INFO[System.Freespace(C)]</label>
+      <font>18BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    <control type="label">
+      <description>Free Space Label</description>
+      <posx>330</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>30</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <label>$INFO[System.Freespace(E)]</label>
+      <font>18BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    <control type="label">
+      <description>Free Space Label</description>
+      <posx>350</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>30</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$INFO[System.Freespace(F)]</label>
+      <font>18BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    <control type="label">
+      <description>Free Space Label</description>
+      <posx>670</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>30</height>
+      <align>right</align>
+      <aligny>center</aligny>
+      <label>$INFO[System.Freespace(G)]</label>
+      <font>18BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+  </control>
+  </control>
+</controls>
+</window>

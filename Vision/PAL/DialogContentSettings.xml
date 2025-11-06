@@ -1,0 +1,245 @@
+<window id="132">
+	<defaultcontrol>3</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>90</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(PluginSettings)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="!Skin.HasSetting(animated)">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="200" condition="!Skin.HasSetting(animated)">Visible</animation>
+			<control type="image">
+				<posx>-300</posx>
+				<posy>-300</posy>
+				<width>1320</width>
+				<height>1176</height>
+				<texture>black.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>520</width>
+				<height>400</height>
+				<texture border="0,35,0,10">Dialog.png</texture>
+			</control>
+			<control type="label" id="1000">
+				<description>Title Label</description>
+				<posx>60</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<align>center</align>
+				<font>font22</font>
+				<label>$LOCALIZE[ 20344 ]</label>
+			</control>
+			<control type="spincontrolex" id="3">
+				<description>directory content select spincontrol</description>
+				<align>left</align>
+				<width>240</width>
+				<height>17</height>
+				<posx>200</posx>
+				<posy>50</posy>
+				<font>font20</font>
+				<reverse>yes</reverse>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onup>28</onup>
+				<ondown>4</ondown>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>0</textoffsety>
+				<aligny>center</aligny>
+				<subtype>text</subtype>
+			</control>
+			<control type="list" id="4">
+				<posx>20</posx>
+				<posy>95</posy>
+				<width>600</width>
+				<height>160</height>
+				<onup>3</onup>
+				<ondown>30</ondown>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>90</pagecontrol>
+				<itemlayout height="32">
+					<control type="image">
+						<width>450</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>-2</posy>
+						<texture>Dialog_Button_NoFocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>50</posx>
+						<posy>4</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>80</posx>
+						<posy>4</posy>
+						<width>280</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="32">
+					<control type="image">
+						<width>450</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>-2</posy>
+						<texture>Dialog_Button_Focus.png</texture>
+						<visible>Control.HasFocus(4)</visible>
+					</control>
+					<control type="image">
+						<width>450</width>
+						<height>30</height>
+						<posx>0</posx>
+						<posy>-2</posy>
+						<texture>Dialog_Button_NoFocus.png</texture>
+						<visible>!Control.HasFocus(4)</visible>
+					</control>
+					<control type="image">
+						<posx>50</posx>
+						<posy>4</posy>
+						<width>22</width>
+						<height>22</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>80</posx>
+						<posy>4</posy>
+						<width>280</width>
+						<height>22</height>
+						<font>font16</font>
+						<align>left</align>
+						<include>textcolor-white</include>
+						<include>textcolor-selected</include>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<description>scraper image</description>
+				<posx>70</posx>
+				<posy>35</posy>
+				<width>200</width>
+				<height>50</height>
+				<aspectratio align="left">keep</aspectratio>
+				<info>listitem.Icon</info>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>60</posx>
+				<posy>260</posy>
+				<width>400</width>
+				<height>95</height>
+				<itemgap>-5</itemgap>
+				<onup>4</onup>
+				<ondown>28</ondown>
+				<onleft>5</onleft>
+				<onright>5</onright>
+			</control>
+			<control type="button" id="6">
+				<description>Settings Button</description>
+				<posx>55</posx>
+				<posy>360</posy>
+				<height>25</height>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>5</label>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onup>30</onup>
+				<onleft>29</onleft>
+				<onright>28</onright>
+				<ondown>30</ondown>
+			</control>
+			<control type="button" id="28">
+				<description>Ok Button</description>
+				<posx>185</posx>
+				<posy>360</posy>
+				<height>25</height>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onup>30</onup>
+				<onleft>6</onleft>
+				<onright>29</onright>
+				<ondown>30</ondown>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel Button</description>
+				<posx>315</posx>
+				<posy>360</posy>
+				<height>25</height>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+				<texturefocus>Dialog_Button_Focus.png</texturefocus>
+				<texturenofocus>Dialog_Button_NoFocus.png</texturenofocus>
+				<onup>30</onup>
+				<onleft>28</onleft>
+				<onright>6</onright>
+				<ondown>30</ondown>
+			</control>
+		</control>
+		<control type="button" id="7">
+			<description>default button</description>
+			<align>left</align>
+			<textoffsetx>10</textoffsetx>
+			<focusedcolor>-</focusedcolor>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>default radiobutton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<align>left</align>
+			<textoffsetx>10</textoffsetx>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureradiofocus>settings-check-box.png</textureradiofocus>
+			<textureradionofocus>settings-check-boxnf.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>default spincontrolex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<width>300</width>
+			<texturefocus>ListItem_Focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>Arrow_Up.png</textureup>
+			<texturedown>Arrow_Down.png</texturedown>
+			<textureupfocus>Arrow_Up_Focus.png</textureupfocus>
+			<texturedownfocus>Arrow_Down_Focus.png</texturedownfocus>
+			<include>textcolor-disabled</include>
+			<textoffsetx>10</textoffsetx>
+			<reverse>yes</reverse>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>5</height>
+			<texture>kai-divider.png</texture>
+		</control>
+	</controls>
+</window>

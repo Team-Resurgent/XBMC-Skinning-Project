@@ -1,0 +1,99 @@
+<window id="2006">
+  <defaultcontrol>90</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <control type="visualisation" id="2">
+      <description>visualisation</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>720</height>
+    </control>
+
+    <!-- codec & viz infos -->
+    <control type="group" id="0">
+      <posx>200</posx>
+      <posy>10</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-200" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,-200" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-200">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,-200">Hidden</animation>
+      <visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+
+      <control type="image" id="0">
+        <posx>-10</posx>
+        <posy>-20</posy>
+        <width>900</width>
+        <height>105</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="label" id="0">
+        <description>Audio Info</description>
+        <posx>86</posx>
+        <align>right</align>
+        <label>[COLOR=Highlighted]$LOCALIZE[445] [/COLOR] |</label>
+      </control>
+      <control type="label" id="0">
+        <posx>96</posx>
+        <label>$INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+      </control>
+
+      <control type="label" id="0">
+        <description>Audio Info</description>
+        <posx>86</posx>
+        <posy>25</posy>
+        <align>right</align>
+        <label>[COLOR=Highlighted]$LOCALIZE[31006] [/COLOR] |</label>
+      </control>
+      <control type="label" id="0">
+        <posx>96</posx>
+        <posy>25</posy>
+        <label>fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+        <visible>Visualisation.Locked</visible>
+      </control>
+      <control type="label" id="0">
+        <posx>96</posx>
+        <posy>25</posy>
+        <label>fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+        <visible>!Visualisation.Locked</visible>
+      </control>
+
+      <control type="label" id="0">
+        <description>Presets Info</description>
+        <posx>86</posx>
+        <posy>50</posy>
+        <align>right</align>
+        <label>[COLOR=Highlighted]$LOCALIZE[13388] [/COLOR] |</label>
+      </control>
+      <control type="label" id="0">
+        <posx>96</posx>
+        <posy>50</posy>
+        <label>$INFO[Visualisation.Preset]</label>
+      </control>
+    </control>
+
+    <!-- media infos -->
+    <control type="group" id="1">
+      <posx>-10</posx>
+      <posy>580</posy>
+      <visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+      <include>MusicNowPlayingAnim</include>
+
+      <include>MusicNowPlayingDisplay</include>
+      
+      <control type="image">
+        <description>Star Rating</description>
+        <posx>150</posx>
+        <posy>58</posy>
+        <width>64</width>
+        <aspectratio>keep</aspectratio>
+        <align>left</align>
+        <info>Player.StarRating</info>
+      </control>
+    </control>
+
+  </controls>
+</window>

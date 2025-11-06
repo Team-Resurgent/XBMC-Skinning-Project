@@ -1,0 +1,9 @@
+<includes>
+
+  <constant name="HomeMenu1posx">50</constant>
+  <constant name="HomeMenu2posx">55</constant>
+  <constant name="HomeMenu3posx">85</constant>
+  <constant name="HomeMenu4posx">110</constant>
+  <constant name="HomeMenu5posx">135</constant>
+  
+</includes>

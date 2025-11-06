@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Translator: taxigps-->
+<strings>
+<!-- 
+to add a label into an xml add this inside the label tags
+$LOCALIZE[*****]
+
+To create new lines use [CR] instead of a space. ie: Example[CR]to see if this worked.
+-->
+		<!-- Custom_Settings.xml -->
+		<string id="31100">切换</string>
+		<string id="31101">常用</string>
+		<string id="31102">媒体</string>
+		<string id="31103">高级</string>
+		<string id="31104">背景设置</string>
+		<string id="31105">首页面板</string>
+		<string id="31106">开发团队</string>
+		<string id="31107">扩展功能</string>
+		<string id="31112">文件：</string>
+		<string id="31113">文件夹：</string>
+		<string id="31114">[COLOR=blue]&gt;&gt;[/COLOR]</string>
+		<string id="31115">[COLOR=red]&gt;&gt;[/COLOR]</string>
+		<string id="31116">启用XBMC字幕扩展功能</string>
+		<string id="31117">Rss位置</string>
+		<string id="31118">上</string>
+		<string id="31119">中</string>
+		<string id="31120">下</string>
+		<string id="31121">在媒体视图禁用“选项”标签</string>
+		<string id="31122">禁用视图变换</string>
+		<string id="31123">信息面板启用高分辨率缩略图（仅图片功能）</string>
+		<string id="31124">电影信息启用高分辨率缩略图（none folderized）</string>
+		<string id="31125">电影信息启用高分辨率缩略图（folderized）</string>
+		<string id="31126">禁用同人画</string>
+		<string id="31127">最近新增脚本</string>
+		<string id="31128">XBMC启动时更新</string>
+		<string id="31129">在主界面按上键更新</string>
+		<string id="31130">启用已观看/未观看标记</string>
+		<string id="31131">动态</string>
+		<string id="31132">禁用图标</string>
+		<string id="31133">禁用波纹</string>
+		<string id="31134">禁用星暴</string>
+		<string id="31135">启用静态图标</string>
+		<string id="31136">天气图标</string>
+		<string id="31137">动态天气图标</string>
+		<string id="31138">静态天气图标</string>
+		<string id="31139">启用自定义图标</string>
+		<string id="31140">动态图标：</string>
+		<string id="31141">静态图标：</string>
+		<string id="31142">在天气界面启用动态天气图标</string>
+		<string id="31143">启用时钟</string>
+		<string id="31144">选择壁纸</string>
+		<string id="31145">选择场景颜色</string>
+		<string id="31146">选择漫反射贴图</string>
+		<string id="31147">重置漫反射</string>
+		<string id="31148">禁用面板</string>
+		<string id="31149">禁用电影面板</string>
+		<string id="31150">禁用剧集面板</string>
+		<string id="31151">禁用音乐面板</string>
+		<string id="31152">禁用图片面板</string>
+		<string id="31153">禁用程序面板</string>
+		<string id="31154">禁用天气面板</string>
+		<string id="31155">启用面板</string>
+		<string id="31156">启用视频文件面板</string>
+		<string id="31160">启用音乐电视面板</string>
+		<string id="31161">启用音乐文件面板</string>
+		<string id="31162">启用扩展功能面板</string>
+		<string id="31163">启用XBMC直播面板</string>
+		<string id="31164">启用正在播放面板</string>
+		<string id="31165">自定义主界面图标</string>
+		<string id="31166">剧集面板</string>
+		<string id="31167">视频文件面板</string>
+		<string id="31168">音乐面板</string>
+		<string id="31169">音乐电视面板</string>
+		<string id="31170">音乐文件面板</string>
+		<string id="31171">图片面板</string>
+		<string id="31172">程序面板</string>
+		<string id="31173">扩展功能面板</string>
+		<string id="31174">XBMC直播面板</string>
+		<string id="31175">天气面板</string>
+		<string id="31176">系统设置面板</string>
+		<string id="31177">正在播放面板</string>
+		<string id="31178">切换主界面图标弹跳动画</string>
+		<string id="31179">启用播放和暂停按钮转换</string>
+
+		<!-- Xperience_Music-View.XML -->
+		<string id="31200">正在播放：</string>
+		
+		<!-- DialogAlbumInfo.XML AND DialogVideoInfo.XML -->
+		<string id="31211">风格：</string>
+		<string id="31212">情调：</string>
+		<string id="31213">发行：</string>
+		<string id="31214">音轨</string>
+		<string id="31215">唱片目录</string>
+		<string id="31216">获取缩略图</string>
+		<string id="31217">获取同人画</string>
+		<string id="31218">刷新</string>
+		<string id="31219">导演：</string>
+		<string id="31220">编剧：</string>
+		<string id="31221">已观看：</string>
+		<string id="31222">未观看：</string>
+		<string id="31223">年份：</string>
+		<string id="31224">类型：</string>
+		<string id="31225">上映日期：</string>
+		<string id="31226">播放</string>
+		<string id="31227">查看演员表</string>
+		<string id="31228">观看预告片</string>
+
+		<!-- DialogButtonMenu.xml -->
+		<string id="31251">系统信息</string>
+		<string id="31252">注销</string>
+		<string id="31253">退出XBMC</string>
+		<string id="31254">文件管理</string>
+		<string id="31255">重启XBMC</string>
+		<string id="31258">关闭系统</string>
+		<string id="31259">系统挂起</string>
+		<string id="31260">系统休眠</string>
+		<string id="31261">重启系统</string>
+		<string id="31262">弹出/载入</string>
+		<string id="31264">登录为</string>
+		
+		<!-- DialogFileStacking.XML -->
+		<string id="31270">堆叠文件</string>
+
+		<!-- DialogSeekBar.xml -->
+		<string id="31271">当前时间：</string>
+		<string id="31272">结束时间：</string>	
+		<string id="31273">暂停</string>		
+		<string id="31274">后退：</string>
+		<string id="31275">前进：</string>
+		
+		<!-- DialogMusicScan.xml -->
+		<string id="31280">现在扫描：</string>
+		
+		<!-- DialogMuteBug.xml -->
+		<string id="31281">静音</string>	
+
+		<!-- DialogPictureInfo.xml -->
+		<string id="31284">图片信息</string>		
+		
+		<!-- DialogSongInfo.xml -->
+		<string id="31290">专辑：</string>			
+		<string id="31291">流派：</string>
+		<string id="31292">年份：</string>
+		<string id="31293">音轨：</string>
+		<string id="31294">评分：</string>
+		<string id="31295">文件名：</string>
+		
+		<!-- DialogVolumeBar.xml -->
+		<string id="31298">音量</string>
+		
+		<!-- FileBrowser.xml -->
+		<string id="31299">创建目录</string>		
+		
+		<!-- Include_Guide-Interface.xml -->
+		<string id="31300">系统信息</string>
+		<string id="31301">快速导航</string>
+		<string id="31302">BLACKBOLT开发组</string>
+		<string id="31303">正在播放</string>
+
+		<!-- Include_Home-NPaying.xml -->
+		<string id="31307">无媒体播放</string>
+		<string id="31308">导演</string>
+		<string id="31309">年份</string>
+		<string id="31310">时长</string>
+		<string id="31311">艺术家</string>
+		<string id="31312">专辑</string>
+		<string id="31313">歌曲</string>
+		<string id="31314">时间</string>
+		<string id="31315">标题</string>
+		
+		<!-- Includes_Home.xml -->
+		<string id="31001">电影</string>
+		<string id="31002">剧集</string>
+		<string id="31003">音乐</string>
+		<string id="31004">图片</string>
+		<string id="31005">程序</string>
+		<string id="31006">天气</string>
+		<string id="31007">系统设置</string>
+		<string id="31008">电源</string>
+		<string id="31009">收藏</string>
+		<string id="31010">扩展功能</string>
+		<string id="31011">游戏</string>
+		<string id="31012">市场</string>
+		<string id="31013">播放</string>
+		<string id="31014">音乐电视</string>
+		<string id="31015">视频文件</string>
+		<string id="31016">音乐文件</string>
+		<string id="31017">视图</string>
+		<string id="31034">访问</string>
+		<string id="31035">现在</string>
+		<string id="31041">观看</string>
+		<string id="31043">聆听</string>
+		<string id="31044">欣赏</string>
+		<string id="31045">浏览</string>
+		<string id="31046">今日</string>
+		<string id="31047">修改</string>
+		<string id="31049">从文件读取媒体信息</string>
+		<string id="31050">更新资料库</string>
+		
+		<!-- Include_Categories-Recently-Added.xml -->
+		<string id="31051">最新电影</string>
+		<string id="31052">最新剧集</string>
+		<string id="31053">最新音乐</string>
+		
+		<!-- Includes_Window-Contents.xml -->
+		<string id="31320">选项</string>
+		<string id="31321">使用上下键循环切换选项</string>
+		<string id="31322">滚动</string>
+		
+		<!-- LoginScreen.xml -->	
+		<string id="31330">登录</string>
+		
+		<!-- MyVideoNav.xml, MyMusicNav.xml so on -->
+		<string id="31331">视图选项</string>
+		<string id="31332">舞会模式</string>
+
+		<!-- Includes_Settings.xml -->
+		<string id="31431">xbmc支持视频资料库和播放的多种功能，包括字幕和刮削器。</string>
+		<string id="31432">xbmc支持音乐资料库和播放的多种功能，包括可视效果和网络电台。</string>
+		<string id="31433">图片管理非常方便，你可以调整显示、特效、信息和时间。</string>
+		<string id="31434">xbmc支持多用户管理，通过登录用户来管理访问控制。</string>
+		<string id="31435">xbmc的天气预报功能也很方便，可以设置你关注的地点。</string>
+		<string id="31436">网络设置可以调整互联网，smb共享和upnp服务。</string>
+		<string id="31437">xbmc有很多界面设置选项允许调整主题、语言区域和rss聚合信息。</string>
+		<string id="31438">定制你的xperience皮肤，设置背景、面板，切换皮肤各种项目。</string>
+		<string id="31439">更深入的设置硬件使用包括硬件设置选项和自动播放、锁定等。</string>		
+		
+		<!-- MyMusicPlaylistEditor.xml -->
+		<string id="31340">系统音乐文件</string>		
+		<string id="31341">当前播放列表</string>		
+		<string id="31342">专辑</string>		
+		<string id="31343">音轨</string>		
+		<string id="31344">时间</string>		
+		<string id="31345">项 - 页</string>		
+		<string id="31346">打开播放列表</string>		
+		<string id="31347">保存播放列表</string>		
+		<string id="31348">清除/关闭播放列表</string>				
+		
+		<!-- MyWeather.xml -->
+		<string id="31350">当前天气情况</string>		
+		<string id="31351">温度</string>		
+		<string id="31352">体感</string>		
+		<string id="31353">露点</string>		
+		<string id="31354">湿度</string>		
+		<string id="31355">紫外线</string>		
+		<string id="31356">风力</string>		
+		<string id="31357">高</string>		
+		<string id="31358">低</string>				
+		
+		<!-- PlayerControls.xml -->
+		<string id="31360">电影</string>
+		<string id="31361">剧集</string>
+		<string id="31362">音乐</string>
+		<string id="31363">图片</string>
+		<string id="31364">设置</string>
+		<string id="31365">电源</string>
+		<string id="31366">欢迎使用XBMC！</string>
+		<string id="31367">感谢选择Xperience作为你的默认皮肤！</string>
+		<string id="31368">电影：[CR]此按钮进入电影资料库。</string>
+		<string id="31369">剧集：[CR]此按钮进入电视剧集资料资料库。</string>
+		<string id="31370">音乐：[CR]此按钮进入音乐资料库。</string>
+		<string id="31371">图片：[CR]此按钮进入你的图片收藏。</string>
+		<string id="31372">设置：[CR]此按钮进入系统设置窗口。</string>
+		<string id="31373">电源：[CR]此按钮进入关机菜单。</string>		
+		
+		<!-- Settings.xml -->
+		<string id="31021">视频</string>
+		<string id="31022">音频</string>
+		<string id="31023">图片</string>
+		<string id="31024">用户</string>
+		<string id="31025">天气</string>
+		<string id="31026">网络</string>
+		<string id="31027">外观</string>
+		<string id="31028">定制</string>
+		<string id="31029">系统</string>
+
+		<!-- VideoOSD.xml -->
+		<string id="31380">导演</string>
+		<string id="31381">编剧</string>
+		<string id="31382">时长</string>
+		<string id="31383">评分</string>
+		<string id="31384">类型</string>
+		<string id="31385">制作公司</string>
+
+		<!-- VideoOSDBookmarks.xml -->
+		<string id="31388">创建书签</string>		
+		<string id="31389">清除书签</string>		
+		
+		<!-- Xperience_Views -->
+		<string id="31390">导演</string>		
+		<string id="31391">编剧</string>		
+		<string id="31392">类型</string>		
+		<string id="31393">无剧情</string>		
+		<string id="31394">未观看分集</string>		
+		<string id="31395">首播</string>		
+		<string id="31396">时长</string>
+		<string id="31397">类型</string>		
+		<string id="31398">导演</string>		
+		<string id="31399">年份</string>		
+		<string id="31400">已观看</string>		
+		<string id="31401">未观看</string>		
+		<string id="31402">季</string>		
+		<string id="31403">集</string>
+		<string id="31404">集</string>
+		
+		<!-- Now Wached Overlays -->
+		<string id="31411">未观看</string>
+
+		<!-- Debug Info -->
+		<string id="31991">调试信息</string>
+		<string id="31992">内存 = </string>
+		<string id="31993">编译日期 = </string>
+		<string id="31994">FPS = </string>
+		<string id="31995">窗口 = </string>
+		<string id="31996">控件 = </string>
+		<string id="31997">当前视图 = </string>
+		<string id="31998">启用网格显示</string>
+		<string id="31999">启用屏幕信息</string>
+		<string id="32000">启用XML标签</string>
+
+		<!-- ========================================================================= -->
+		<!-- New entries after tranlations this is here so its easier to see whats new. -->
+		<!-- ========================================================================= -->
+		
+		<!-- Custom_Settings.xml -->
+		<string id="31412">Movie.*和poster.*的扩展名（.tbn或.jpg）</string>
+		<string id="31180">切换全屏信息（媒体播放）</string>
+		<string id="31418">启用可视效果/视频播放背景显示</string>
+		<string id="31181">禁用DVD面板</string>
+		<string id="31157">启用自定义面板</string>
+		<string id="31158">[COLOR=greyblue]输入插件位置[/COLOR]</string>
+		<string id="31159">自定义图标：</string>
+		<string id="31182">自定义收藏面板</string>
+		<string id="31421">自定义名称：</string>
+		<string id="31422">插件类型如Video、Music等：</string>
+		<string id="31423">24=Video / 501=Music / 1=Programs / 2=Pictures / 2600=Weather：</string>
+		<string id="31424">主界面显示用户标签（[COLOR=greyblue]资料库项目数[/COLOR]）</string>
+		<string id="31183">图片幻灯播放显示“暂停”</string>
+		
+		<!-- DialogAlbumInfo.XML AND DialogVideoInfo.XML -->
+		<string id="31229">时长：</string>
+		<string id="31230">标题：</string>
+		<string id="31405">艺术家</string>
+		<string id="31231">集：</string>
+		<string id="31425">季：</string>
+		<string id="31232">查看剧情</string>
+		<string id="31233">分钟</string>
+		
+		
+		<!-- Includes_Settings.xml -->
+		<string id="31413">启用或禁用Xperience皮肤的特殊选项，如同人画、动态效果和扩展功能。</string>
+		<string id="31427">管理已安装的扩展功能或浏览和安装xbmc.org的扩展功能。调整扩展功能设置。</string>
+
+		<!-- Addon Labels -->
+		<string id="31428">退出</string>
+		<string id="31440">XBMC字幕</string>
+				
+		<!-- Script Path -->
+		<string id="31430">选择位置：</string>
+
+		<!-- Xperience_Views.xnl -->
+		<string id="31426">时长</string>
+		
+		<!-- Xperience_Views -->
+		<string id="31414">Collection</string>
+		<string id="31416">无</string>
+		
+		<!-- MyVideoNav.xml, MyMusicNav.xml so on -->
+		<string id="31415">常用选项</string>	
+		
+		<!-- Includes_Debug.xml -->
+		<string id="31417">载入XML名称：</string>
+		
+		<!-- Include_Categories-Recently-Added.xml -->
+		<string id="31420">扩展功能</string>
+		
+		<!-- custom_DialogFavourites.xml -->
+		<string id="31450">用户收藏</string>
+
+		
+</strings>

@@ -1,0 +1,345 @@
+<window>
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">101</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>23</posx>
+		<posy>16</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>675</width>
+			<height>492</height>
+			<colordiffuse>BBFFFFFF</colordiffuse>
+			<texture border="0,45,0,10">Dialog.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>heading label</description>
+			<posx>0</posx>
+			<posy>7</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font16</font>
+			<label>$INFO[MusicPlayer.Title]</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label" id="200">
+			<description>Scraper Label</description>
+			<posx>439</posx>
+			<posy>8</posy>
+			<width>84</width>
+			<label>-</label>
+			<align>right</align>
+			<visible>false</visible>
+		</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="textbox" id="100">
+			<description>textarea</description>
+			<posx>132</posx>
+			<posy>40</posy>
+			<width>411</width>
+			<height>304</height>
+			<align>center</align>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<onleft>101</onleft>
+			<onright>101</onright>
+			<pagecontrol>101</pagecontrol>
+		</control>
+		<control type="spincontrol" id="101">
+			<description>Next page button</description>
+			<posx>512</posx>
+			<posy>348</posy>
+			<subtype>page</subtype>
+			<font>font13</font>
+			<onleft>100</onleft>
+			<onright>100</onright>
+			<textcolor>red</textcolor>
+			<showonepage>false</showonepage>
+		</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="list" id="110">
+			<posx>132</posx>
+			<posy>40</posy>
+			<width>411</width>
+			<height>296</height>
+			<onleft>111</onleft>
+			<onright>111</onright>
+			<onup>110</onup>
+			<ondown>110</ondown>
+			<pagecontrol>111</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="24">
+				<control type="label">
+					<posx>205</posx>
+					<posy>0</posy>
+					<width>411</width>
+					<height>24</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="24">
+				<control type="label">
+					<posx>205</posx>
+					<posy>0</posy>
+					<width>411</width>
+					<height>24</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>red</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="spincontrol" id="111">
+			<description>Next page button</description>
+			<posx>512</posx>
+			<posy>348</posy>
+			<subtype>page</subtype>
+			<font>font13</font>
+			<onleft>110</onleft>
+			<onright>110</onright>
+			<textcolor>red</textcolor>
+			<showonepage>false</showonepage>
+		</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="list" id="120">
+			<posx>132</posx>
+			<posy>40</posy>
+			<width>411</width>
+			<height>320</height>
+			<onleft>121</onleft>
+			<onright>121</onright>
+			<onup>120</onup>
+			<ondown>120</ondown>
+			<pagecontrol>121</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="40">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>411</width>
+					<height>36</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>8</posx>
+					<posy>4</posy>
+					<width>394</width>
+					<height>28</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>411</width>
+					<height>36</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>!Control.HasFocus(120)</visible>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>433</width>
+					<height>36</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>Control.HasFocus(120)</visible>
+					<texture>button-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>8</posx>
+					<posy>4</posy>
+					<width>394</width>
+					<height>28</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="spincontrol" id="121">
+			<description>Next page button</description>
+			<posx>512</posx>
+			<posy>348</posy>
+			<subtype>page</subtype>
+			<font>font13</font>
+			<onleft>120</onleft>
+			<onright>120</onright>
+			<textcolor>red</textcolor>
+			<showonepage>false</showonepage>
+		</control>
+		<!-- media infos -->
+		<control type="group" id="1">
+			<posx>113</posx>
+			<posy>380</posy>
+			<control type="image" id="1">
+				<posx>-113</posx>
+				<posy>116</posy>
+				<width>675</width>
+				<height>40</height>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+				<texture>volume-panel-bg.png</texture>
+			</control>
+			<control type="label" id="1">
+				<posx>68</posx>
+				<posy>120</posy>
+				<width>56</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[musicplayer.Time]</label>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>73</posx>
+				<posy>133</posy>
+				<width>301</width>
+				<height>8</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">progress_middle.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label" id="1">
+				<posx>380</posx>
+				<posy>120</posy>
+				<width>56</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[musicplayer.Duration]</label>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<posx>-113</posx>
+				<posy>0</posy>
+				<width>675</width>
+				<height>4</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>0</posx>
+				<posy>8</posy>
+				<width>78</width>
+				<height>96</height>
+				<info>MusicPlayer.Cover</info>
+				<aspectratio>keep</aspectratio>
+				<bordertexture>button-focus.png</bordertexture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="group">
+				<posx>90</posx>
+				<posy>8</posy>
+				<control type="fadelabel" id="1">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>366</width>
+					<height>24</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>MusicPlayer.Artist</info>
+				</control>
+				<control type="fadelabel" id="1">
+					<posx>0</posx>
+					<posy>26</posy>
+					<width>366</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<info>MusicPlayer.Album</info>
+				</control>
+				<control type="label" id="1">
+					<posx>0</posx>
+					<posy>48</posy>
+					<width>366</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[MusicPlayer.Genre,$LOCALIZE[515]: ]</label>
+				</control>
+				<control type="label" id="1">
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>281</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[MusicPlayer.Year,$LOCALIZE[562]: ]</label>
+				</control>
+				<control type="label" id="1">
+					<description>Playlist Pos No</description>
+					<posx>354</posx>
+					<posy>70</posy>
+					<width>113</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
+					<visible>!MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="label" id="1">
+					<description>PartyMode Enabled</description>
+					<posx>354</posx>
+					<posy>70</posy>
+					<width>113</width>
+					<height>24</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>589</label>
+					<visible>MusicPartyMode.Enabled</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posx>34</posx>
+			<posy>540</posy>
+		</control>
+	</controls>
+</window>

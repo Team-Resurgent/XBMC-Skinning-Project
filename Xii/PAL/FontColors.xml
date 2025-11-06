@@ -1,0 +1,42 @@
+<includes>
+<! -- -- >
+
+  <include name="button-text"><textcolor>FFFFFFFF</textcolor></include>
+
+  <include name="rss-headline">
+		<headlinecolor>ffa8a7a7</headlinecolor>
+	</include>
+  <include name="rss-title">
+		<titlecolor>ff5cb1ed</titlecolor>
+	</include>
+  <include name="textdisabled">
+		<disabledcolor>ffa8a7a7</disabledcolor>
+	</include>
+	<include name="textcolorgrey">
+		<textcolor>ffa8a7a7</textcolor>
+	</include>
+	<include name="textcolorwhite">
+		<textcolor>ffffffff</textcolor>
+	</include>
+	<include name="textcolorblue">
+		<textcolor>ff5cb1ed</textcolor>
+	</include>
+	<include name="textcolorblack">
+		<textcolor>ff000000</textcolor>
+	</include>
+	<include name="textcolorlightgrey">
+		<textcolor>d0ffffff</textcolor>
+	</include>
+	<include name="controldefaults">
+		<include>textcolorwhite</include>
+		<colordiffuse>ffffffff</colordiffuse>
+	</include>
+	<include name="listselectedcolor">
+		<selectedcolor>ff000000</selectedcolor>
+	</include>
+	<include name="listselectedcolor2">
+		<selectedcolor>ff5cb1ed </selectedcolor>
+	</include>
+<! -- -- >
+</includes>
+

@@ -1,0 +1,496 @@
+<fonts>
+  <fontset id="Default" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>tahoma.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>tahoma.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>tahoma.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>tahoma.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>tahoma.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>tahoma.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>tahoma.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>tahoma.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>tahoma.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>tahoma.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>tahoma.ttf</filename>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>tahoma.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>tahoma.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>tahoma.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>nasa.ttf</filename>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>tahoma.ttf</filename>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+  </fontset>
+
+  <fontset id="Century Gothic" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>cgothic.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>cgothic.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>cgothic.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>cgothic.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>cgothic.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>cgothic.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>cgothic.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>cgothic.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>cgothic.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>cgothic.ttf</filename>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>cgothic.ttf</filename>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>cgothic.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>cgothic.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>cgothic.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>cgothic.ttf</filename>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>cgothic.ttf</filename>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+  </fontset>
+
+  <fontset id="Verdana" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>verdana.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>verdana.ttf</filename>
+      <size>12</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>verdana.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>verdana.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>verdana.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>verdana.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>verdana.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>verdana.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>verdana.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>verdana.ttf</filename>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>verdana.ttf</filename>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>verdana.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>verdana.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>verdana.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>verdana.ttf</filename>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>verdana.ttf</filename>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+  </fontset>
+
+  <fontset id="Prototype" unicode="false">
+    <font>
+      <name>font18</name>
+      <filename>prototype.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>prototype.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>prototype.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>prototype.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>prototype.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>prototype.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>prototype.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>prototype.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>prototype.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>prototype.ttf</filename>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>prototype.ttf</filename>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>prototype.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>prototype.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>prototype.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>prototype.ttf</filename>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>prototype.ttf</filename>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+  </fontset>
+
+  <fontset id="Arial" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>arial.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>arial.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>arial.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>arial.ttf</filename>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>arial.ttf</filename>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>arial.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>arial.ttf</filename>
+      <size>19</size>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>arial.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>arial.ttf</filename>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>arial.ttf</filename>
+      <size>15</size>
+    </font>
+  </fontset>
+
+</fonts>

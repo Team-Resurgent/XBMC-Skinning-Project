@@ -1,0 +1,105 @@
+<window id="121">
+<defaultcontrol always="true">5</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<include>DefaultFade</include>
+  
+<controls>
+
+  <control type="group">
+    <posx>20</posx>
+    <posy>65</posy>
+    <include>SettingsBack</include>
+    <control type="image">
+      <description>Header Back</description>
+      <width>680</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="2">
+      <description>Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>660</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    <control type="label" id="3">
+      <description>Header Label 2</description>
+      <posx>10</posx>
+      <posy>50</posy>
+      <width>660</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+
+    <control type="group">
+      <posy>55</posy>
+      <control type="scrollbar" id="61">
+        <description>Scroll Bar</description>
+        <posx>650</posx>
+        <height>380</height>
+        <onleft>5</onleft>
+        <onright>5</onright>
+        <onup>60</onup>
+        <ondown>60</ondown>
+        <visible>Control.HasFocus(60)</visible>
+        <animation effect="fade" time="0" start="0" end="60" condition="Control.HasFocus(60)">Conditional</animation>
+      </control>
+      <control type="scrollbar" id="61">
+        <description>Scroll Bar</description>
+        <posx>650</posx>
+        <height>380</height>
+        <onleft>5</onleft>
+        <onright>5</onright>
+        <onup>60</onup>
+        <ondown>60</ondown>
+        <visible>!Control.HasFocus(60)</visible>
+        <animation effect="fade" time="0" start="0" end="30" condition="!Control.HasFocus(60)">Conditional</animation>
+      </control>
+      <control type="grouplist" id="5">
+        <description>Control Area</description>
+        <posx>10</posx>
+        <posy>0</posy>
+        <width>640</width>
+        <height>380</height>
+        <itemgap>5</itemgap>
+        <pagecontrol>61</pagecontrol>
+        <onleft>60</onleft>
+        <onright>60</onright>
+        <onup>60</onup>
+        <ondown>5</ondown>
+      </control>
+      <control type="button" id="7">
+        <description>Default Button</description>
+        <width>-</width>
+        <font>18BdFont</font>
+        <texturefocus>ButtonInputFo.png</texturefocus>
+        <texturenofocus>ButtonInputNF.png</texturenofocus>
+        <align>left</align>
+        <textoffsetx>5</textoffsetx>
+      </control>
+      <control type="radiobutton" id="8">
+        <description>Default RadioButton</description>
+        <font>18BdFont</font>
+        <label>$LOCALIZE[590]</label>
+      </control>
+      <control type="spincontrolex" id="9">
+        <description>Default SpinControlex</description>
+        <width>-</width>
+        <font>18BdFont</font>
+      </control>
+    </control>
+  </control>
+  
+</controls>
+</window>

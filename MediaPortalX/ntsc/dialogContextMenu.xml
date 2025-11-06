@@ -1,0 +1,30 @@
+<window>
+  <id>106</id>
+  <defaultcontrol>1000</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <posX>0</posX>
+    <posY>0</posY>
+  </coordinates>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>999</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>210</width>
+      <texture>dialog-context.png</texture>
+    </control>
+    <control>
+      <description>button template</description>
+      <type>button</type>
+      <id>1000</id>
+      <posX>5</posX>
+      <posY>15</posY>
+      <width>200</width>
+      <height>28</height>
+      <align>center</align>
+    </control>
+  </controls>
+</window>

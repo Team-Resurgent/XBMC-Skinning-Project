@@ -1,0 +1,86 @@
+<window id="139">
+  <defaultcontrol>61</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <include>HorizWideDialogPos</include>
+      <include>VideoOSDSlideLeft</include>
+
+      <control type="image">
+        <description>Background Image</description>
+        <posx>-20</posx>
+        <include>HorizWideDialogBGDims</include>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="label" id="1">
+        <description>Heading</description>
+        <width>HorizWideDialogTextWidth</width>
+        <font>LargeTitleFont</font>
+        <label>13406</label>
+      </control>
+
+      <control type="group">
+        <posx>-15</posx>
+        <posy>60</posy>
+
+        <control type="list" id="5">
+          <width>HorizWideDialogTextWidth</width>
+          <height>634</height>
+          <onleft>61</onleft>
+          <onright>-</onright>
+          <onup>5</onup>
+          <ondown>5</ondown>
+          <pagecontrol>61</pagecontrol>
+          <scrolltime>200</scrolltime>
+
+          <itemlayout height="60">
+            <control type="label">
+              <posx>HorizWideDialogTextWidth</posx>
+              <width>HorizWideDialogTextWidth</width>
+              <info>ListItem.Label</info>
+              <include>DialogInfoCaption</include>
+            </control>
+
+            <control type="label">
+              <posx>HorizWideDialogTextWidth</posx>
+              <width>HorizWideDialogTextWidth</width>
+              <info>ListItem.Label2</info>
+              <include>DialogInfoDetails</include>
+            </control>
+          </itemlayout>
+
+          <focusedlayout height="60">
+            <control type="label">
+              <posx>HorizWideDialogTextWidth</posx>
+              <width>HorizWideDialogTextWidth</width>
+              <info>ListItem.Label</info>
+              <include>DialogInfoCaption</include>
+            </control>
+
+            <control type="label">
+              <posx>HorizWideDialogTextWidth</posx>
+              <width>HorizWideDialogTextWidth</width>
+              <info>ListItem.Label2</info>
+              <include>DialogInfoDetails</include>
+            </control>
+          </focusedlayout>
+        </control>
+
+        <control type="group">
+          <posx>5</posx>
+
+          <control type="scrollbar" id="61">
+            <posx>HorizWideDialogTextWidth</posx>
+            <posy>-6</posy>
+            <height>646</height>
+            <onup>61</onup>
+            <ondown>61</ondown>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

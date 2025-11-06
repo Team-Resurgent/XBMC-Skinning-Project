@@ -1,0 +1,349 @@
+<controls>
+
+    	<control>
+      	<description>default image</description>
+      	<type>image</type>
+      	<id>1</id>
+      	<posX>0</posX>
+     	 	<posY>0</posY>
+      	<texture>background.png</texture>
+      	<colorkey>0</colorkey>
+      	<colordiffuse>FFFFFFFF</colordiffuse>
+    	</control>
+
+    	<control>
+      	<description>default label</description>
+      	<type>label</type>
+      	<id>1</id>
+      	<posX>80</posX>
+      	<posY>60</posY>
+      	<label>6</label>
+      	<font>font14</font>
+      	<textcolor>FFFFFFFF</textcolor>
+      	<disabledcolor>70FFFFFF</disabledcolor>
+    	</control>
+
+	<control>
+		<description>default spinbutton</description>
+		<type>spinbutton</type>
+		<id>1</id>
+		<posX>300</posX>
+		<posY>200</posY>
+		<width>22</width>
+		<height>38</height>
+		<textureDownFocus>spinbutton4.png</textureDownFocus>
+		<textureUpFocus>spinbutton3.png</textureUpFocus>
+		<textureFocus>spinbutton2.png</textureFocus>
+		<textureNoFocus>spinbutton1.png</textureNoFocus>
+		<font>font14</font>
+		<textcolor>FFFFFFFF</textcolor>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<disabledcolor>70FFFFFF</disabledcolor>
+	</control>
+
+    	<control>
+      	<description>default button</description>
+      	<type>button</type>
+      	<id>1</id>
+      	<posX>45</posX>
+      	<posY>180</posY>
+      	<width>160</width>
+      	<height>32</height>     
+      	<textureFocus>button-focus.png</textureFocus>
+      	<textureNoFocus>button-nofocus.png</textureNoFocus>
+      	<font>font14</font>
+      	<textcolor>FFFFFFFF</textcolor>
+      	<colordiffuse>FFFFFFFF</colordiffuse>
+      	<disabledcolor>70FFFFFF</disabledcolor>
+		<textOffsetX>10</textOffsetX>
+		<textOffsetY>2</textOffsetY>
+    	</control>
+
+    	<control>
+      	<description>default buttonm</description>
+      	<type>buttonM</type>
+      	<id>10</id>
+      	<posX>430</posX>
+      	<posY>460</posY>
+      	<width>16</width>
+      	<height>16</height>
+      	<textureFocus>button-powerdown.png</textureFocus>
+      	<textureNoFocus>button-powerdownNF.png</textureNoFocus>
+      	<label>-</label>
+      	<bitmaps>2</bitmaps>
+      	<font>font14</font>
+      	<textcolor>FFFFFFFF</textcolor>
+      	<colordiffuse>FFFFFFFF</colordiffuse>
+      	<disabledcolor>70FFFFFF</disabledcolor>
+    	</control>  
+ 
+     	<control>
+		<description>default togglebutton</description>
+		<type>togglebutton</type>
+		<id>4</id>
+		<posX>192</posX>
+		<posY>162</posY>
+		<width>16</width>
+		<height>16</height>
+		<textureFocus>scroll-up-focus.png</textureFocus>
+		<textureNoFocus>scroll-up.png</textureNoFocus>
+		<AltTextureFocus>scroll-down-focus.png</AltTextureFocus>
+		<AltTextureNoFocus>scroll-down.png</AltTextureNoFocus>
+		<label>-</label>
+		<font>font14</font>
+		<textcolor>FFFFFFFF</textcolor>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<disabledcolor>70FFFFFF</disabledcolor>
+		<textOffsetX>0</textOffsetX>
+		<textOffsetY>0</textOffsetY>
+	</control>
+
+	<control>
+      	<description>default listcontrol</description>
+      	<type>listcontrol</type>
+      	<id>10</id>
+      	<posX>235</posX>
+      	<posY>150</posY>
+      	<width>440</width>
+      	<height>425</height>
+      	<spinWidth>16</spinWidth>
+      	<spinHeight>16</spinHeight>
+      	<spinPosX>645</spinPosX>
+      	<spinPosY>90</spinPosY>
+		<spinColor>FFFFFFFF</spinColor>
+      	<textureUp>scroll-up.png</textureUp>
+      	<textureDown>scroll-down.png</textureDown>
+      	<textureUpFocus>scroll-up-focus.png</textureUpFocus>
+      	<textureDownFocus>scroll-down-focus.png</textureDownFocus>
+      	<textureFocus>button-focus-music.png</textureFocus>
+      	<textureNoFocus>button-nofocus-music.png</textureNoFocus>
+      	<image>defaultFolderBig.png</image>
+      	<font>font13</font>
+      	<selectedColor>FF6192E9</selectedColor>      
+      	<textcolor>FFFFFFFF</textcolor>  
+      	<textcolor2>FFA7B5C0</textcolor2>    
+      	<colordiffuse>FFFFFFFF</colordiffuse>
+      	<suffix>|</suffix>
+    	</control>
+
+	<control>
+		<description>default rss control</description>
+		<type>rss</type>
+		<id>1</id>
+		<posX>48</posX>
+		<posY>450</posY>
+		<width>640</width>
+		<height>16</height>
+		<font>font14</font>
+		<feed>http://www.xbox-scene.com/xbox1data/xbox-scene.xml</feed>
+		<titlecolor>FFA7B5C0</titlecolor>
+		<headlinecolor>50FFFFFF</headlinecolor>
+		<textcolor>FFFFFFFF</textcolor>
+	</control>
+
+	<control>
+		<description>default ram (recently added media) control</description>
+		<type>ram</type>
+		<id>1</id>
+		<posX>304</posX>
+		<posY>138</posY>
+		<width>414</width>
+		<height>306</height>
+		<font>font14</font>
+		<font2>font13</font2>
+		<titlecolor>FFA7B5C0</titlecolor>
+		<textcolor>FFFFFFFF</textcolor>
+		<selectedColor>FF6192E9</selectedColor>
+		<textSpaceY>10</textSpaceY>
+		<gfxThumbWidth>80</gfxThumbWidth>
+		<gfxThumbHeight>128</gfxThumbHeight>
+		<gfxThumbSpaceX>6</gfxThumbSpaceX>
+		<gfxThumbSpaceY>25</gfxThumbSpaceY>
+		<gfxThumbDefault>-</gfxThumbDefault>
+	</control>
+
+	<control>
+		<description>default slider control</description>
+		<type>slider</type>
+		<id>1</id>
+		<controlOffsetX>60</controlOffsetX>
+		<controlOffsetY>0</controlOffsetY>
+	</control>
+
+	<control>
+		<description>default thumbnail panel</description>
+		<type>thumbnailpanel</type>
+		<id>11</id>
+		<posX>242</posX>
+		<posY>150</posY>
+		<width>510</width>
+		<height>480</height>
+		<spinWidth>16</spinWidth>
+		<spinHeight>16</spinHeight>
+		<spinPosX>645</spinPosX>
+		<spinPosY>90</spinPosY>
+		<spinColor>FFFFFFFF</spinColor>
+		<textureUp>scroll-up.png</textureUp>
+		<textureDown>scroll-down.png</textureDown>
+		<textureUpFocus>scroll-up-focus.png</textureUpFocus>
+		<textureDownFocus>scroll-down-focus.png</textureDownFocus>
+		<itemWidth>110</itemWidth>
+		<itemHeight>110</itemHeight>
+		<textureWidth>80</textureWidth>
+		<textureHeight>80</textureHeight> 
+		<thumbWidth>64</thumbWidth>
+		<thumbHeight>64</thumbHeight>
+		<thumbPosX>8</thumbPosX>
+		<thumbPosY>8</thumbPosY>		
+		<imageFolder>folder-nofocus.png</imageFolder>
+		<imageFolderFocus>folder-focus.png</imageFolderFocus>
+		<font>font13</font>
+		<selectedColor>FF6192E9</selectedColor>      
+      	<textcolor>FFFFFFFF</textcolor>
+      	<textcolor2>FFA7B5C0</textcolor2>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<suffix>|</suffix>
+		<textureWidthBig>128</textureWidthBig>
+		<textureHeightBig>128</textureHeightBig> 
+		<itemWidthBig>150</itemWidthBig>
+		<itemHeightBig>150</itemHeightBig>
+		<thumbWidthBig>100</thumbWidthBig>
+		<thumbHeightBig>100</thumbHeightBig>
+		<thumbPosXBig>14</thumbPosXBig>
+		<thumbPosYBig>14</thumbPosYBig>	
+	</control>
+
+	<control>
+      	<description>default fadelabel</description>
+      	<type>fadelabel</type>
+      	<id>5</id>
+      	<posX>55</posX>
+      	<posY>530</posY>
+      	<width>180</width>
+      	<align>left</align>
+      	<font>font13</font>
+      	<textcolor>FFFFFFFF</textcolor>
+    	</control>
+
+	<control>
+      	<description>default textarea</description>
+      	<type>textbox</type>
+      	<id>4</id>
+      	<posX>240</posX>
+     	 	<posY>260</posY>
+		<width>410</width>
+		<height>280</height>
+      	<spinWidth>16</spinWidth>
+      	<spinHeight>16</spinHeight>
+      	<spinPosX>645</spinPosX>
+		<spinPosY>90</spinPosY>
+      	<spinColor>FFFFFFFF</spinColor>
+      	<textureUp>scroll-up.png</textureUp>
+      	<textureDown>scroll-down.png</textureDown>
+      	<textureUpFocus>scroll-up-focus.png</textureUpFocus>
+      	<textureDownFocus>scroll-down-focus.png</textureDownFocus>
+      	<image>icon-folder.png</image>
+      	<font>font13</font>
+		<textcolor>FFA7B5C0</textcolor>
+      	<colordiffuse>FFFFFFFF</colordiffuse>
+	</control>
+
+    	<control>
+      	<description>default progress control </description>
+      	<type>progress</type>
+      	<id>20</id>
+      	<posX>100</posX>
+      	<posY>325</posY>
+		<texturebg>progress_back.png</texturebg>    
+		<lefttexture>progress_left.png</lefttexture>    
+		<midtexture>progress_mid.png</midtexture>      
+		<righttexture>progress_right.png</righttexture>    
+		<visible>no</visible>
+    	</control>
+
+	<control>
+		<description>deffault spin control</description>
+		<type>spincontrol</type>
+		<id>2</id>
+		<posX>330</posX>
+		<posY>126</posY>
+      	<textureUp>scroll-up.png</textureUp>
+      	<textureDown>scroll-down.png</textureDown>
+      	<textureUpFocus>scroll-up-focus.png</textureUpFocus>
+      	<textureDownFocus>scroll-down-focus.png</textureDownFocus>
+      	<align>left</align>
+      	<width>16</width>
+      	<height>16</height>
+		<font>font14</font>
+		<reverse>yes</reverse>
+		<textcolor>FFFFFFFF</textcolor>
+		<disabledcolor>70FFFFFF</disabledcolor>
+		<subtype>text</subtype>
+		<textOffsetX>0</textOffsetX>
+		<textOffsetY>0</textOffsetY>
+	</control>
+
+	<control>
+		<description>default checkmark</description>
+		<type>checkmark</type>
+		<id>4</id>
+		<posX>208</posX>
+		<posY>166</posY>
+		<textcolor>FFFFFFFF</textcolor>
+		<disabledcolor>70FFFFFF</disabledcolor>
+		<font>font14</font>
+		<label>167</label>
+		<textureCheckmark>check-box.png</textureCheckmark>
+		<textureCheckmarkNoFocus>check-boxNF.png</textureCheckmarkNoFocus>
+		<MarkWidth>18</MarkWidth>
+		<MarkHeight>18</MarkHeight>
+		<align>left</align>
+		<shadow>no</shadow>
+	</control>	
+
+    	<control>
+      	<description>default radio button</description>
+      	<type>radiobutton</type>
+      	<id>4</id>
+      	<posX>50</posX>
+      	<posY>268</posY>
+      	<width>160</width>
+      	<height>32</height>
+      	<textureRadioFocus>radiobutton-focus.png</textureRadioFocus>
+      	<textureRadioNoFocus>radiobutton-nofocus.png</textureRadioNoFocus>
+      	<textureFocus>button-focus.png</textureFocus>
+      	<textureNoFocus>button-nofocus.jpg</textureNoFocus>
+      	<label>215</label>
+      	<font>font14</font>
+      	<textcolor>FFFFFFFF</textcolor>
+      	<colordiffuse>FFFFFFFF</colordiffuse>
+      	<disabledcolor>70FFFFFF</disabledcolor>
+    	</control>
+
+    	<control>
+      	<description>default select button</description>
+      	<type>selectbutton</type>
+      	<id>6</id>
+		<posX>45</posX>
+		<posY>222</posY>
+      	<width>160</width>
+      	<height>32</height>
+      	<label>457</label>
+      	<font>font14</font>
+      	<textureFocus>button-focus.png</textureFocus>
+      	<textureNoFocus>button-nofocus.png</textureNoFocus>
+      	<texturebg>button-focus-bg.png</texturebg>
+      	<textureLeft>scroll-left.png</textureLeft>
+      	<textureLeftFocus>scroll-left-focus.png</textureLeftFocus>
+      	<textureRight>scroll-right.png</textureRight>
+      	<textureRightFocus>scroll-right-focus.png</textureRightFocus>
+      	<textcolor>FFFFFFFF</textcolor>
+      	<colordiffuse>FFFFFFFF</colordiffuse>
+      	<disabledcolor>70FFFFFF</disabledcolor>
+      	<onleft>50</onleft>
+      	<onright>50</onright>
+      	<onup>3</onup>
+      	<ondown>7</ondown>
+    	</control>
+	
+</controls>

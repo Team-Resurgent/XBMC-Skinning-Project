@@ -1,0 +1,30 @@
+<window id="136">
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>620</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>Busy background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>100</height>
+			<texture>busy_background.png</texture>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+		</control>
+		<control type="multiimage">
+			<description>Busy animation</description>
+			<posx>23</posx>
+			<posy>40</posy>
+			<width>54</width>
+			<height>54</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>80</timeperimage>
+			<fadetime>0</fadetime>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,47 @@
+<window id="104">
+<defaultcontrol>1</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<zorder>2</zorder>
+	
+<coordinates>
+	<system>1</system>
+	<posx>195</posx>
+	<posy>15</posy>
+</coordinates>
+ 
+<include>DefaultFade</include>
+	
+<controls>
+
+  <include>DialogVolumeBarBack</include>
+  
+	<control type="group">
+    <control type="image">
+      <posx>5</posx>
+      <posy>5</posy>
+      <width>34</width>
+      <height>34</height>
+      <aligny>center</aligny>
+      <texture>VolumeBarIcon.png</texture>
+      <aspectratio align="center">keep</aspectratio>
+    </control>
+		<control type="label" id="0">
+			<description>Volume Label</description>
+      <posx>39</posx>
+			<width>80</width>
+			<height>40</height>
+			<font>18BdFont</font>
+			<textcolor>FocusedTextColor</textcolor>
+			<align>center</align>
+			<info>Player.Volume</info>
+		</control>
+    <control type="progress">
+      <description>Progressbar</description>
+      <posx>124</posx>
+      <posy>16</posy>
+      <width>196</width>
+      <info>Player.Volume</info>
+    </control>
+	</control>
+</controls>
+</window>

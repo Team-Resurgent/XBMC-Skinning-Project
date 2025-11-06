@@ -1,0 +1,112 @@
+<window id="4">
+<defaultcontrol always="true">2000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+  
+<include>Backgrounds</include>
+
+  <control type="group">
+    <include>DialogBackWide</include>
+    <posx>90</posx>
+    <posy>101</posy>
+    <control type="image">
+      <description>Header Back</description>
+      <width>540</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label">
+      <description>Welcome Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>520</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[31000]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+
+    <control type="label">
+      <description>Line 1</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>520</width>
+      <height>120</height>
+      <label>$LOCALIZE[31001] [COLOR=FocusedTextColor]$LOCALIZE[31002][/COLOR].[CR]$LOCALIZE[31003].[CR][CR]$LOCALIZE[31004].[CR]$LOCALIZE[31005].</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <wrapmultiline>true</wrapmultiline>
+    </control>
+
+    <control type="group">
+      <posx>10</posx>
+      <posy>215</posy>
+      <animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+      <control type="image">
+        <description>Video Image</description>
+        <width>80</width>
+        <height>80</height>
+        <aspectratio align="left">keep</aspectratio>
+        <texture>HomeVideosThumb.png</texture>
+      </control>
+      <control type="image">
+        <description>Music Image</description>
+        <posx>90</posx>
+        <width>80</width>
+        <height>80</height>
+        <aspectratio align="left">keep</aspectratio>
+        <texture>HomeMusicThumb.png</texture>
+      </control>
+      <control type="image">
+        <description>Photos Image</description>
+        <posx>180</posx>
+        <width>80</width>
+        <height>80</height>
+        <aspectratio align="left">keep</aspectratio>
+        <texture>HomePhotosThumb.png</texture>
+      </control>
+      <control type="image">
+        <description>Scripts Image</description>
+        <posx>270</posx>
+        <width>80</width>
+        <height>80</height>
+        <aspectratio align="left">keep</aspectratio>
+        <texture>HomeScriptsThumb.png</texture>
+      </control>
+      <control type="image">
+        <description>Services Image</description>
+        <posx>360</posx>
+        <width>80</width>
+        <height>80</height>
+        <aspectratio align="left">keep</aspectratio>
+        <texture>HomeServicesThumb.png</texture>
+      </control>
+      <control type="image">
+        <description>Weather Image</description>
+        <posx>450</posx>
+        <width>80</width>
+        <height>80</height>
+        <aspectratio align="left">keep</aspectratio>
+        <texture>HomeWeatherThumb.png</texture>
+      </control>
+    </control>
+
+    <control type="button" id="2000">
+      <description>Ok Button</description>
+      <posx>210</posx>
+      <posy>335</posy>
+      <label>$LOCALIZE[12321]</label>
+      <font>18BdFont</font>
+      <onclick>ReplaceWindow(0)</onclick>
+      <onup>-</onup>
+      <ondown>-</ondown>
+      <onleft>-</onleft>
+      <onright>-</onright>
+    </control>
+  </control>
+
+</controls>
+</window>

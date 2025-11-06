@@ -1,0 +1,190 @@
+<includes>
+	<include name="ViewFanart">
+			
+		<control type="group">
+				
+		    <visible>Control.IsVisible(58)</visible>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>$INFO[Fanart.Image]</texture>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			
+			<!-- show info -->
+			<control type="group">
+				<posx>650</posx>
+				<posy>40</posy>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>590</width>
+					<height>40</height>
+					<colordiffuse>$INFO[Fanart.Color2]</colordiffuse>
+				</control>
+				<control type="label">
+					<label>$INFO[ListItem.Title]</label>
+					<width>560</width>
+					<height>40</height>
+					<posx>20</posx>
+					<font>info</font>
+					<textcolor>$INFO[Fanart.Color1]</textcolor>
+				</control>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>530</width>
+					<height>220</height>
+					<posy>60</posy>
+					<colordiffuse>$INFO[Fanart.Color2]</colordiffuse>
+				</control>
+				<control type="textbox">
+					<label>$INFO[ListItem.Plot,[COLOR type-info]Plot[/COLOR] ]</label>
+					<width>510</width>
+					<height>200</height>
+					<posx>10</posx>
+					<posy>70</posy>
+					<font>info</font>
+					<textcolor>$INFO[Fanart.Color3]</textcolor>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<!-- scrollbar -->
+				<control type="group">
+					<posx>550</posx>
+					<posy>60</posy>
+					<control type="scrollbar" id="61">
+						<height>230</height>
+						<onleft>59</onleft>
+						<onright>9000</onright>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>40</posx>
+				<posy>340</posy>
+				<!-- background -->
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>1200</width>
+					<height>200</height>
+					<colordiffuse>$INFO[Fanart.Color2]</colordiffuse>
+				</control>
+				<!-- list container -->
+				<control type="panel" id="58">
+				
+					<viewtype label="Fanart">icon</viewtype>
+					<width>1180</width>
+					<height>200</height>
+					<posx>10</posx>
+					<onup>61</onup>
+					<ondown>60</ondown>
+					<onleft>59</onleft>
+					<onright>59</onright>
+					<orientation>horizontal</orientation>
+					<pagecontrol>60</pagecontrol>
+					
+					<itemlayout width="295">
+						<control type="image">
+							<texture>$INFO[ListItem.Icon]</texture>
+							<width>275</width>
+							<height>160</height>
+							<posx>10</posx>
+							<posy>20</posy>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>dimmed</colordiffuse>
+						</control>
+						<!-- episode number -->
+						<control type="label">
+							<label>$INFO[ListItem.Episode]</label>
+							<width>275</width>
+							<height>40</height>
+							<posx>30</posx>
+							<posy>20</posy>
+							<font>info</font>
+							<textcolor>$INFO[Fanart.Color1]</textcolor>
+						</control>
+						<!-- watched overlay -->
+						<control type="image">
+							<texture border="8">$INFO[ListItem.Overlay]</texture>
+							<width>48</width>
+							<height>48</height>
+							<posx>227</posx>
+							<posy>132</posy>
+							<colordiffuse>dimmed</colordiffuse>
+						</control>
+					</itemlayout>
+					<focusedlayout width="295">
+						<control type="image">
+							<texture>listitem-back.png</texture>
+							<width>295</width>
+							<height>180</height>
+							<posy>10</posy>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>$INFO[Fanart.Color2]</colordiffuse>
+						</control>
+						<control type="image">
+							<texture>$INFO[ListItem.Icon]</texture>
+							<width>275</width>
+							<height>160</height>
+							<posx>10</posx>
+							<posy>20</posy>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<!-- episode number -->
+						<control type="label">
+							<label>$INFO[ListItem.Episode]</label>
+							<width>275</width>
+							<height>40</height>
+							<posx>30</posx>
+							<posy>20</posy>
+							<font>info</font>
+							<textcolor>$INFO[Fanart.Color1]</textcolor>
+						</control>
+						<!-- watched overlay -->
+						<control type="image">
+							<texture border="8">$INFO[ListItem.Overlay]</texture>
+							<width>48</width>
+							<height>48</height>
+							<posx>227</posx>
+							<posy>132</posy>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			
+			<!-- scrollbar -->
+			<control type="group">
+				<posx>40</posx>
+				<posy>560</posy>
+				<control type="scrollbar" id="60">
+					<width>1200</width>
+					<height>40</height>
+					<texturesliderbackground border="32,8,32,8">scrollbar-back-horiz.png</texturesliderbackground>
+					<onup>59</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+				</control>
+				<!-- number of files -->
+				<control type="label" id="12">
+					<width>320</width>
+					<height>40</height>
+					<posx>40</posx>
+					<font>scrollbar</font>
+					<textcolor>type-scrollbar</textcolor>
+				</control>
+				<!-- current page / number of pages -->
+				<control type="label">
+					<label>$INFO[Container().CurrentPage,, / ]$INFO[Container().NumPages]</label>
+					<width>320</width>
+					<height>40</height>
+					<posx>1140</posx>
+					<font>scrollbar</font>
+					<textcolor>type-scrollbar</textcolor>
+					<align>right</align>
+				</control>
+			</control>
+
+		</control>
+		
+	</include>
+</includes>

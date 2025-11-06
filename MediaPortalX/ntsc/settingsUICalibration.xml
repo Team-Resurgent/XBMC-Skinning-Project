@@ -1,0 +1,59 @@
+<window>
+  <id>10</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>Background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>480</height>
+      <texture>background.png</texture>
+    </control>
+    <control>
+      <description>Settings Logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>60</posX>
+      <posY>30</posY>
+      <width>328</width>
+      <height>89</height>
+      <texture>settings_logo.png</texture>
+    </control>
+    <control>
+      <description>UI Calibrate label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>350</posX>
+      <posY>65</posY>
+      <label>213</label>
+      <font>font16</font>
+      <align>right</align>
+      <textcolor>ffffffff</textcolor>
+    </control>
+    <control>
+      <description>rectangle image</description>
+      <type>mover</type>
+      <id>2</id>
+      <posX>0</posX>
+      <posY>240</posY>
+      <width>720</width>
+      <height>40</height>
+      <textureFocus>bluebar.png</textureFocus>
+      <textureNoFocus>bluebar.png</textureNoFocus>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+    <control>
+      <description>coordinates label</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>360</posX>
+      <posY>245</posY>
+      <label>5</label>
+      <font>font14</font>
+    </control>
+  </controls>
+</window>

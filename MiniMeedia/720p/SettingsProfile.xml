@@ -1,0 +1,164 @@
+<window id="34">
+  <defaultcontrol always="true">2</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+    <include>DateAndTime</include>
+
+    <control type="group">
+      <include>HideWhenLowerDialogActive</include>
+      <animation effect="slide" time="200" delay="0" tween="circle" easing="in" start="0,0" end="-1500,0" reversible="false" condition="Window.Next(Home)">WindowClose</animation>
+
+      <control type="group">
+        <description>Profiles Menu Text (from Home)</description>
+        <include>HomeMainMenuPos</include>
+
+        <control type="group">
+          <description>Profiles Menu</description>
+          <posx>HomeSubMenuBGOffset</posx>
+
+          <control type="group">
+            <posx>HomeSubMenuBGOffset</posx>
+            <animation effect="slide" time="300" delay="100" tween="circle" easing="out" start="-600,0" end="0,0" reversible="false">WindowOpen</animation>
+            <animation effect="slide" time="200" delay="0" tween="circle" easing="in" start="0,0" end="-600,0" reversible="false">WindowClose</animation>
+
+            <include>HomeMainMenuBG</include>
+
+            <control type="group">
+              <description>List of Profiles</description>
+
+              <control type="wraplist" id="2">
+                <description>Main Menu</description>
+                <onright>4</onright>
+                <include>HomeMainMenuWrapListProps</include>
+
+                <include>HomeMainMenuWrapListItemLayout</include>
+
+                <focusedlayout width="HomeMainMenuTextWidth" height="60">
+                  <control type="label">
+                    <label>$LOCALIZE[20067]</label>
+                    <include>HomeMainMenuSubLabelProps</include>
+                    <visible>Control.HasFocus(2)</visible>
+                  </control>
+                  <control type="label">
+                    <include>HomeMainMenuMainLabel</include>
+                    <visible>Control.HasFocus(2)</visible>
+                  </control>
+
+                  <control type="label">
+                    <label>$LOCALIZE[20067]</label>
+                    <textcolor>Unfocused</textcolor>
+                    <include>HomeMainMenuSubLabelProps</include>
+                    <visible>!Control.HasFocus(2)</visible>
+                  </control>
+                  <control type="label">
+                    <textcolor>Unfocused</textcolor>
+                    <include>HomeMainMenuMainLabel</include>
+                    <visible>!Control.HasFocus(2)</visible>
+                  </control>
+                </focusedlayout>
+              </control>
+
+              <control type="group" id="301">
+                <posx>HomeMainMenuBGWidth</posx>
+                <posy>100</posy>
+                <visible>!Window.IsVisible(ProfileSettings)</visible>
+                <animation effect="slide" time="300" delay="100" tween="circle" easing="out" start="0,50" end="0,0" reversible="false">Visible</animation>
+                <animation effect="slide" time="200" delay="0" tween="circle" easing="in" start="0,0" end="0,50" reversible="false">Hidden</animation>
+
+                <control type="image">
+                  <posx>-1</posx>
+                  <width>HomeMainMenuBGWidth</width>
+                  <height>30</height>
+                  <include>OverlayAreaRight</include>
+                </control>
+
+                <control type="image">
+                  <description>Right Indicator Arrow</description>
+                  <posx>12</posx>
+                  <posy>10</posy>
+                  <width>6</width>
+                  <height>12</height>
+                  <texture>arrow_right.png</texture>
+                  <colordiffuse>CCFFFFFF</colordiffuse>
+                  <visible>!ControlGroup(301).HasFocus()</visible>
+                </control>
+                <control type="image">
+                  <description>Left Indicator Arrow</description>
+                  <posx>12</posx>
+                  <posy>10</posy>
+                  <width>6</width>
+                  <height>12</height>
+                  <texture flipx="true">arrow_right.png</texture>
+                  <colordiffuse>CCFFFFFF</colordiffuse>
+                  <visible>ControlGroup(301).HasFocus()</visible>
+                </control>
+
+                <control type="radiobutton" id="4">
+                  <description>Login Screen</description>
+                  <posx>20</posx>
+                  <onleft>2</onleft>
+                  <width>HomeMainMenuTextWidth</width>
+                  <textoffsetx>10</textoffsetx>
+                  <textoffsety>7</textoffsety>
+                  <label>$LOCALIZE[20096]</label>
+                  <font>SmallTitleFont</font>
+                  <texturefocus>-</texturefocus>
+                </control>
+              </control>
+
+            </control>
+          </control>
+
+          <control type="group">
+            <posx>-35</posx>
+            <include>SettingsPrevScreenMenuAnim</include>
+
+            <control type="group">
+              <posy>30</posy>
+
+              <control type="label">
+                <label> $LOCALIZE[31016] </label>
+                <include>HomeMainMenuSubLabel</include>
+              </control>
+              <control type="label">
+                <label> $LOCALIZE[13200] </label>
+                <include>DialogTextColors</include>
+                <include>HomeMainMenuMainLabel</include>
+              </control>
+            </control>
+
+            <include>HomeMainMenuBG</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <posx>-70</posx>
+            <include>SettingsPrevScreenMenuAnim</include>
+
+          <control type="group">
+            <posy>30</posy>
+
+            <control type="label">
+              <label> $LOCALIZE[31016] </label>
+              <include>HomeMainMenuSubLabel</include>
+            </control>
+            <control type="label">
+              <label> $LOCALIZE[13000] </label>
+              <include>DialogTextColors</include>
+              <include>HomeMainMenuMainLabel</include>
+            </control>
+          </control>
+
+          <include>HomeMainMenuBG</include>
+        </control>
+      </control>
+    </control>
+
+    <include>MusicNowPlaying</include>
+    <include>VideoOverlayUI</include>
+
+  </controls>
+</window>

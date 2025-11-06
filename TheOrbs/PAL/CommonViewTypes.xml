@@ -1,0 +1,137 @@
+<includes>
+	<include name="ListView">
+		<control type="list" id="50">
+			<posx>235</posx>
+			<posy>96</posy>
+			<width>450</width>
+			<height>423</height>
+			<onleft>2</onleft>
+			<onright>23</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>list-fade</include>
+			<scrolltime>1</scrolltime>
+			<viewtype label="List">List</viewtype>
+			<pagecontrol>23</pagecontrol>
+			<include>ContainerFade</include>
+			<itemlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>435</width>
+					<height>26</height>
+					<texture>list-pixel.png</texture>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>435</width>
+					<height>26</height>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+	<include name="ListView2">
+		<control type="list" id="51">
+			<posx>235</posx>
+			<posy>96</posy>
+			<width>450</width>
+			<height>423</height>
+			<onleft>2</onleft>
+			<onright>23</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<include>ContainerFade</include>
+			<scrolltime>1</scrolltime>
+			<viewtype label="List2">List2</viewtype>
+			<pagecontrol>23</pagecontrol>
+			<itemlayout height="36">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>435</width>
+					<height>36</height>
+					<texture>list-pixel.png</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>2</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>0</posy>
+					<width>385</width>
+					<height>36</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="46">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>435</width>
+					<height>46</height>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>3</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>53</posx>
+					<posy>0</posy>
+					<width>375</width>
+					<height>46</height>
+					<font>font18</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+</includes>

@@ -1,0 +1,96 @@
+<windowid="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+
+	<control type="image">
+		<description>Music BG</description>
+		<posx>40</posx>
+		<posy>370</posy>
+		<width>140</width>
+		<height>140</height>
+		<texture>keyboard-numeric-bg.png</texture>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(2700)</visible>
+		<visible>Player.HasAudio + !Skin.HasSetting(music-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="image">
+		<description>Music Cover</description>
+		<posx>54</posx>
+		<posy>375</posy>
+		<width>120</width>
+		<height>120</height>
+		<texture>defaultAlbumCover.png</texture>
+		<info>MusicPlayer.Cover</info>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(2700)</visible>
+		<visible>Player.HasAudio + !Skin.HasSetting(music-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="image">
+		<description>ListItems Thumb Overlay</description>
+		<posx>40</posx>
+		<posy>370</posy>
+		<width>140</width>
+		<height>140</height>
+		<texture>keyboard-numeric-bg2.png</texture>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(2700)</visible>
+		<visible>Player.HasAudio + !Skin.HasSetting(music-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="label">
+		<description>Play Time Label</description>
+		<posx>58</posx>
+		<posy>523</posy>
+		<label>-</label>
+		<info>MusicPlayer.Time</info>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>      
+
+	<control type="label">
+		<description>Music Left-Suffix</description>
+		<posx>100</posx>
+		<posy>522</posy>
+		<label>[</label>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	<control type="label">
+		<description>Album/Artist/Genre Infos</description>
+		<width>305</width>
+		<posx>110</posx>
+		<posy>523</posy>
+		<include>musicoverlay-label</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="1000">VisibleChange</animation>
+	</control>
+
+	<control type="label">
+		<description>Music Right-Suffix</description>
+		<posx>420</posx>
+		<posy>522</posy>
+		<label>]</label>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(music-info)</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	</controls>
+</window>

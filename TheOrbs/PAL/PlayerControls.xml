@@ -1,0 +1,527 @@
+﻿<window type="dialog" id="114">
+	<defaultcontrol>213</defaultcontrol>
+	<zorder>0</zorder>
+	<!-- visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+   <animation effect="fade" time="200">WindowOpen</animation>
+   <animation effect="fade" time="200">WindowClose</animation -->
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<!-- other screens images -->
+		<control type="multiimage">
+			<posx>146</posx>
+			<posy>5</posy>
+			<width>89</width>
+			<height>80</height>
+			<imagepath>PlayerControls-Open</imagepath>
+			<timeperimage>80</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<visible>!window.isactive(0)</visible>
+		</control>
+		<!-- control>
+      <description>panel</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>15</posx>
+      <posy>50</posy>
+      <width>70</width>
+      <height>106</height>
+      <texture>test3.png</texture>
+      <visible>!window.isactive(0)</visible>
+      <animation effect="zoom" start="0" end="100" center="50,103" time="200">windowOpen</animation>
+      <animation effect="zoom" start="100" end="0" center="50,103" time="200">windowClose</animation>
+    </control>
+
+    <control>
+      <description>pause image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>39</posx>
+      <posy>86</posy>
+      <width>28</width>
+      <height>35</height>
+      <texture>test-pause-fo.png</texture>
+      <visible>!window.isactive(0) + control.hasfocus(213) + Player.Playing</visible>
+    </control -->
+		<control type="multiimage">
+			<posx>146</posx>
+			<posy>5</posy>
+			<width>89</width>
+			<height>80</height>
+			<imagepath>Pause</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>!window.isactive(0) + control.hasfocus(213) + Player.Playing</visible>
+			<animation effect="fade" time="200" delay="1000">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>pause image</description>
+			<posx>39</posx>
+			<posy>86</posy>
+			<width>28</width>
+			<height>35</height>
+			<texture>test-pause-nf-on.png</texture>
+			<visible>!window.isactive(0) + !control.hasfocus(213) + Player.Playing</visible>
+		</control>
+		<control type="image">
+			<description>play image</description>
+			<posx>39</posx>
+			<posy>86</posy>
+			<width>28</width>
+			<height>35</height>
+			<texture>test-play-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(213) + !Player.Playing</visible>
+		</control>
+		<control type="image">
+			<description>play image</description>
+			<posx>39</posx>
+			<posy>86</posy>
+			<width>28</width>
+			<height>35</height>
+			<texture>test-play-nf-on.png</texture>
+			<visible>!window.isactive(0) + !control.hasfocus(213) + !Player.Playing</visible>
+		</control>
+		<control type="image">
+			<description>stop image</description>
+			<posx>16</posx>
+			<posy>93</posy>
+			<width>25</width>
+			<height>20</height>
+			<texture>test-stop-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(500)</visible>
+		</control>
+		<control type="multiimage">
+			<posx>146</posx>
+			<posy>5</posy>
+			<width>89</width>
+			<height>80</height>
+			<imagepath>Stop</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>!window.isactive(0) + control.hasfocus(500)</visible>
+			<animation effect="fade" time="200" delay="1000">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>ffwd image</description>
+			<posx>64</posx>
+			<posy>77</posy>
+			<width>20</width>
+			<height>26</height>
+			<texture>test-ffwd-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(214)</visible>
+		</control>
+		<control type="image">
+			<description>ffwd image</description>
+			<posx>64</posx>
+			<posy>77</posy>
+			<width>20</width>
+			<height>26</height>
+			<texture>test-ffwd-nf-on.png</texture>
+			<visible>!window.isactive(0) + !control.hasfocus(214) + player.forwarding</visible>
+		</control>
+		<control type="image">
+			<description>rew image</description>
+			<posx>64</posx>
+			<posy>101</posy>
+			<width>20</width>
+			<height>27</height>
+			<texture>test-rew-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(211)</visible>
+		</control>
+		<control type="image">
+			<description>rew image</description>
+			<posx>64</posx>
+			<posy>101</posy>
+			<width>20</width>
+			<height>27</height>
+			<texture>test-rew-nf-on.png</texture>
+			<visible>!window.isactive(0) + !control.hasfocus(211) + player.rewinding </visible>
+		</control>
+		<control type="image">
+			<description>skip plus image</description>
+			<posx>19</posx>
+			<posy>79</posy>
+			<width>22</width>
+			<height>15</height>
+			<texture>test-skipplus-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(215)</visible>
+		</control>
+		<control type="image">
+			<description>skip minus image</description>
+			<posx>18</posx>
+			<posy>112</posy>
+			<width>23</width>
+			<height>15</height>
+			<texture>test-skipminus-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(210)</visible>
+		</control>
+		<control type="image">
+			<description>lyrics image</description>
+			<posx>30</posx>
+			<posy>63</posy>
+			<width>36</width>
+			<height>18</height>
+			<texture>test-lyrics-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(220)</visible>
+		</control>
+		<control type="image">
+			<description>Rec image</description>
+			<posx>28</posx>
+			<posy>123</posy>
+			<width>34</width>
+			<height>17</height>
+			<texture>test-rec-fo.png</texture>
+			<visible>!window.isactive(0) + control.hasfocus(219) + Player.CanRecord</visible>
+		</control>
+		<control type="image">
+			<description>Rec image</description>
+			<posx>28</posx>
+			<posy>123</posy>
+			<width>34</width>
+			<height>17</height>
+			<texture>test-rec-nf-on.png</texture>
+			<visible>!window.isactive(0) + !control.hasfocus(219) + Player.Recording</visible>
+		</control>
+		<control type="image">
+			<description>Rec image</description>
+			<posx>28</posx>
+			<posy>123</posy>
+			<width>34</width>
+			<height>17</height>
+			<texture>test-rec-nf.png</texture>
+			<visible>!window.isactive(0) + !control.hasfocus(219) + !Player.Recording + Player.CanRecord</visible>
+		</control>
+		<!-- home screen images -->
+		<control type="multiimage">
+			<posx>223</posx>
+			<posy>-16</posy>
+			<width>133</width>
+			<height>120</height>
+			<imagepath>PlayerControls-Open</imagepath>
+			<timeperimage>80</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<visible>window.isactive(0)</visible>
+		</control>
+		<control type="multiimage">
+			<posx>223</posx>
+			<posy>-16</posy>
+			<width>133</width>
+			<height>120</height>
+			<imagepath>Pause</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>window.isactive(0) + control.hasfocus(213) + player.playing</visible>
+			<animation effect="fade" time="200" delay="1000">WindowOpen</animation>
+		</control>
+		<!-- control>
+      <type>image</type>
+      <id>1</id>
+      <posx>248</posx>
+      <posy>12</posy>
+      <width>86</width>
+      <height>87</height>
+      <texture>pause05.png</texture>
+      <visible>window.isactive(0) + control.hasfocus(213) + player.playing</visible>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posx>246</posx>
+      <posy>8</posy>
+      <width>86</width>
+      <height>87</height>
+      <texture>pause05.png</texture>
+      <visible>window.isactive(0) + control.hasfocus(213) + player.playing</visible>
+    </control -->
+		<control type="image">
+			<description>pause image</description>
+			<posx>469</posx>
+			<posy>406</posy>
+			<width>28</width>
+			<height>35</height>
+			<texture>test-pause-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(213) + player.playing</visible>
+		</control>
+		<control type="image">
+			<description>pause image</description>
+			<posx>469</posx>
+			<posy>406</posy>
+			<width>28</width>
+			<height>35</height>
+			<texture>test-pause-nf-on.png</texture>
+			<visible>window.isactive(0) + !control.hasfocus(213) + player.playing</visible>
+		</control>
+		<control type="image">
+			<description>play image</description>
+			<posx>469</posx>
+			<posy>406</posy>
+			<width>28</width>
+			<height>35</height>
+			<texture>test-play-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(213) + !player.playing</visible>
+		</control>
+		<control type="image">
+			<description>play image</description>
+			<posx>469</posx>
+			<posy>406</posy>
+			<width>28</width>
+			<height>35</height>
+			<texture>test-play-nf-on.png</texture>
+			<visible>window.isactive(0) + !control.hasfocus(213) + !player.playing</visible>
+		</control>
+		<control type="multiimage">
+			<posx>223</posx>
+			<posy>-16</posy>
+			<width>133</width>
+			<height>120</height>
+			<imagepath>Stop</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>window.isactive(0)  + control.hasfocus(500)</visible>
+			<animation effect="fade" time="200" delay="1000">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>stop image</description>
+			<posx>446</posx>
+			<posy>413</posy>
+			<width>25</width>
+			<height>20</height>
+			<texture>test-stop-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(500)</visible>
+		</control>
+		<control type="image">
+			<description>ffwd image</description>
+			<posx>494</posx>
+			<posy>397</posy>
+			<width>20</width>
+			<height>26</height>
+			<texture>test-ffwd-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(214)</visible>
+		</control>
+		<control type="image">
+			<description>ffwd image</description>
+			<posx>494</posx>
+			<posy>397</posy>
+			<width>20</width>
+			<height>26</height>
+			<texture>test-ffwd-nf-on.png</texture>
+			<visible>window.isactive(0) + !control.hasfocus(214) + player.forwarding</visible>
+		</control>
+		<control type="image">
+			<description>rew image</description>
+			<posx>494</posx>
+			<posy>421</posy>
+			<width>20</width>
+			<height>27</height>
+			<texture>test-rew-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(211)</visible>
+		</control>
+		<control type="image">
+			<description>rew image</description>
+			<posx>494</posx>
+			<posy>421</posy>
+			<width>20</width>
+			<height>27</height>
+			<texture>test-rew-nf-on.png</texture>
+			<visible>window.isactive(0) + !control.hasfocus(211) + player.rewinding </visible>
+		</control>
+		<control type="image">
+			<description>skip plus image</description>
+			<posx>449</posx>
+			<posy>399</posy>
+			<width>22</width>
+			<height>15</height>
+			<texture>test-skipplus-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(215)</visible>
+		</control>
+		<control type="image">
+			<description>skip minus image</description>
+			<posx>448</posx>
+			<posy>432</posy>
+			<width>23</width>
+			<height>15</height>
+			<texture>test-skipminus-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(210)</visible>
+		</control>
+		<control type="image">
+			<description>lyrics image</description>
+			<posx>460</posx>
+			<posy>383</posy>
+			<width>36</width>
+			<height>18</height>
+			<texture>test-lyrics-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(220)</visible>
+		</control>
+		<control type="image">
+			<description>Rec image</description>
+			<posx>458</posx>
+			<posy>443</posy>
+			<width>34</width>
+			<height>17</height>
+			<texture>test-rec-fo.png</texture>
+			<visible>window.isactive(0) + control.hasfocus(219) + Player.CanRecord</visible>
+		</control>
+		<control type="image">
+			<description>Rec image</description>
+			<posx>458</posx>
+			<posy>443</posy>
+			<width>34</width>
+			<height>17</height>
+			<texture>test-rec-nf-on.png</texture>
+			<visible>window.isactive(0) + !control.hasfocus(219) + Player.Recording</visible>
+		</control>
+		<control type="image">
+			<description>Rec image</description>
+			<posx>458</posx>
+			<posy>443</posy>
+			<width>34</width>
+			<height>17</height>
+			<texture>test-rec-nf.png</texture>
+			<visible>window.isactive(0) + !control.hasfocus(219) + !Player.Recording + Player.CanRecord</visible>
+		</control>
+		<!-- controls -->
+		<control type="button" id="500">
+			<description>stop button</description>
+			<posx>586</posx>
+			<posy>255</posy>
+			<width>23</width>
+			<height>67</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>500</onleft>
+			<onright>213</onright>
+			<onup>215</onup>
+			<ondown>210</ondown>
+			<onclick>xbmc.playercontrol(stop)</onclick>
+		</control>
+		<control type="button" id="220">
+			<description>xbmc lyrics</description>
+			<posx>600</posx>
+			<posy>0</posy>
+			<width>57</width>
+			<height>172</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>215</onleft>
+			<onright>214</onright>
+			<onup>220</onup>
+			<ondown>213</ondown>
+			<onclick>XBMC.RunScript(Q:\skin\The Orbs\Scripts\xbmclyrics\xbmclyrics.py)</onclick>
+		</control>
+		<control type="button" id="211">
+			<description>rewind</description>
+			<posx>651</posx>
+			<posy>166</posy>
+			<width>26</width>
+			<height>26</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>211</onright>
+			<onup>214</onup>
+			<ondown>211</ondown>
+			<onclick>xbmc.playercontrol(rewind)</onclick>
+		</control>
+		<control type="button" id="210">
+			<description>skip bwd</description>
+			<posx>635</posx>
+			<posy>210</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>210</onleft>
+			<onright>213</onright>
+			<onup>500</onup>
+			<ondown>210</ondown>
+			<onclick>xbmc.playercontrol(previous)</onclick>
+		</control>
+		<control type="button" id="213">
+			<description>play</description>
+			<posx>628</posx>
+			<posy>267</posy>
+			<width>44</width>
+			<height>44</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>500</onleft>
+			<onright>214</onright>
+			<onup>220</onup>
+			<ondown>219</ondown>
+			<onclick>xbmc.playercontrol(play)</onclick>
+		</control>
+		<control type="button" id="219">
+			<description>rec button</description>
+			<posx>628</posx>
+			<posy>410</posy>
+			<width>59</width>
+			<height>168</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>210</onleft>
+			<onright>211</onright>
+			<onup>213</onup>
+			<ondown>219</ondown>
+			<onclick>XBMC.PlayerControl(Record)</onclick>
+			<visible>Player.CanRecord</visible>
+		</control>
+		<control type="button" id="215">
+			<description>skip fwd</description>
+			<posx>635</posx>
+			<posy>333</posy>
+			<width>33</width>
+			<height>33</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>215</onleft>
+			<onright>213</onright>
+			<onup>220</onup>
+			<ondown>500</ondown>
+			<onclick>xbmc.playercontrol(next)</onclick>
+		</control>
+		<control type="button" id="214">
+			<description>fast forward</description>
+			<posx>651</posx>
+			<posy>382</posy>
+			<width>26</width>
+			<height>26</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>214</onright>
+			<onup>220</onup>
+			<ondown>211</ondown>
+			<onclick>xbmc.playercontrol(forward)</onclick>
+		</control>
+	</controls>
+</window> 

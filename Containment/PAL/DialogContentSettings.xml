@@ -1,0 +1,214 @@
+<window id="132">
+	<defaultcontrol>3</defaultcontrol>
+	<controls>
+		<include>Dialog-Container</include>
+		<control type="group">
+			<include>dialog-slide</include>
+			<control type="image">
+				<description>scraper image</description>
+				<posx>275</posx>
+				<posy>110</posy>
+				<width>115</width>
+				<height>115</height>
+				<aspectratio>keep</aspectratio>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="label" id="1000">
+				<description>directory contains label</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<width>280</width>
+				<align>left</align>
+				<font>font13</font>
+				<textcolor>main-text</textcolor>
+				<label>20344</label>
+			</control>
+			<control type="spincontrolex" id="3">
+				<description>directory content select spincontrol</description>
+				<posx>200</posx>
+				<posy>113</posy>
+				<width>200</width>
+				<height>17</height>
+				<font>font13</font>
+				<textcolor>main-text</textcolor>
+				<reverse>yes</reverse>
+				<align>left</align>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onup>28</onup>
+				<ondown>4</ondown>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<aligny>center</aligny>
+				<subtype>text</subtype>
+			</control>
+			<control type="list" id="4">
+				<posx>5</posx>
+				<posy>140</posy>
+				<width>250</width>
+				<height>180</height>
+				<onup>3</onup>
+				<ondown>30</ondown>
+				<onleft>3</onleft>
+				<onright>30</onright>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="35">
+					<control type="image">
+						<posx>6</posx>
+						<posy>3</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>32</posx>
+						<posy>0</posy>
+						<width>210</width>
+						<height>30</height>
+						<font>font13</font>
+						<textcolor>button-nofocus-text</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>250</width>
+						<height>31</height>
+						<visible>Control.HasFocus(4)</visible>
+						<colordiffuse>object-color</colordiffuse>
+						<texture>line.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>250</width>
+						<height>31</height>
+						<visible>!Control.HasFocus(4)</visible>
+						<colordiffuse>icon-nf-color</colordiffuse>
+						<texture>line.png</texture>
+					</control>
+					<control type="image">
+						<posx>6</posx>
+						<posy>3</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>32</posx>
+						<posy>0</posy>
+						<width>210</width>
+						<height>30</height>
+						<font>font13</font>
+						<textcolor>main-text</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>5</posx>
+				<posy>320</posy>
+				<width>390</width>
+				<height>110</height>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>4</onup>
+				<ondown>28</ondown>
+			</control>
+			<control type="button" id="28">
+				<description>Ok Button</description>
+				<posx>5</posx>
+				<posy>435</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+				<onup>30</onup>
+				<onleft>29</onleft>
+				<onright>29</onright>
+				<ondown>3</ondown>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel Button</description>
+				<posx>115</posx>
+				<posy>435</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+				<onup>30</onup>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<ondown>3</ondown>
+			</control>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<font>font12</font>
+			<texturefocus>line.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<textureradiofocus>checkbox-fo.png</textureradiofocus>
+			<textureradionofocus>checkbox-nf.png</textureradionofocus>
+			<colordiffuse>object-color</colordiffuse>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>25</height>
+			<width>200</width>
+			<textcolor>main-text</textcolor>
+			<disabledcolor>60d0d0d0</disabledcolor>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<sliderwidth>100</sliderwidth>
+			<sliderheight>12</sliderheight>
+			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+			<textureslidernib>osd-osd_slider_nibfo.png</textureslidernib>
+			<textureslidernibfocus>osd-osd_slider_nibfo.png</textureslidernibfocus>
+			<font>font10</font>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		<include>Dialog-Shutters</include>
+	</controls>
+</window>

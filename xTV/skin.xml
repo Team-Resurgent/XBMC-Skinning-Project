@@ -1,0 +1,15 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <version>2.1</version>
+  
+  <credits>
+    <skinname>Xtv</skinname>
+    <name>by Terc, mbay, CHI3f, and Franklin Shen [manturafs]</name>
+    <name>I would like to thank:</name>
+    <name>xbox-scene for the knowledge and support</name>
+    <name>Apple for the inspiration</name>
+    <name>Corona for the beer</name>
+    <name>...and everybody who loves xbmc and the skin</name>
+  </credits>
+</skin>

@@ -1,0 +1,25 @@
+<window id="113">
+  <defaultcontrol>901</defaultcontrol>
+  <zorder>5</zorder>
+
+  <controls>
+
+    <control type="group">
+      <include>VolumeDialogArea</include>
+
+      <control type="image">
+        <description>Mute image</description>
+        <texture>VolumeRed.png</texture>
+        <include>VolumeImage</include>
+      </control>
+
+      <control type="label">
+        <description>Volume Label</description>
+        <label>$LOCALIZE[31501]</label>
+        <font>MediumSmallTitleFont</font>
+        <include>VolumeLabel</include>
+      </control>
+    </control>
+
+  </controls>
+</window>

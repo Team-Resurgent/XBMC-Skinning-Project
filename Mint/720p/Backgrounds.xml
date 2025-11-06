@@ -1,0 +1,427 @@
+<includes>
+
+	<include name="bg-dimmed">
+		<control type="image">
+			<texture>black.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>bg-dimmed</colordiffuse>
+		</control>
+	</include>
+
+	<!-- HOME -->
+	<include name="bg-home">
+		<include>bg-home-movies</include>
+		<include>bg-home-tv</include>
+		<include>bg-home-games</include>
+		<include>bg-home-arcade</include>
+		<include>bg-home-music</include>
+		<include>bg-home-pictures</include>
+		<include>bg-home-weather</include>
+		<include>bg-home-system</include>
+		<include>bg-home-video</include>
+		<include>bg-home-vis</include>
+	</include>
+	<!-- END HOME -->
+	
+	<!-- OVERLAYS -->
+	<!-- video -->
+	<include name="bg-home-video">
+		<control type="group">
+			<visible>Skin.HasSetting(bg-video)</visible>
+			<control type="videowindow">
+				<include>screen-dim</include>
+			</control>
+			<control type="group">
+				<posy>640</posy>
+				<control type="image">
+					<texture>black.png</texture>
+					<include>screen-width</include>
+					<height>80</height>
+					<colordiffuse>overlay-home</colordiffuse>
+				</control>
+				<control type="label">
+					<label>$INFO[VideoPlayer.Title,[COLOR type-osd]Now Playing:[/COLOR] ]</label>
+					<height>60</height>
+					<posx>20</posx>
+					<posy>20</posy>
+					<font>osd</font>
+					<textcolor>type-osd-dark</textcolor>
+				</control>
+				<control type="label">
+					<label>$INFO[VideoPlayer.Time, / ]$INFO[VideoPlayer.Duration]</label>
+					<height>60</height>
+					<posx>1260</posx>
+					<posy>20</posy>
+					<font>osd</font>
+					<textcolor>type-osd-dark</textcolor>
+					<align>right</align>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="bg-video">
+		<control type="group">
+			<visible>Skin.HasSetting(bg-video)</visible>
+			<control type="videowindow">
+				<include>screen-dim</include>
+			</control>
+		</control>
+	</include>
+	<!-- vis -->
+	<include name="bg-home-vis">
+		<control type="group">
+\			<control type="visualisation">
+				<include>screen-dim</include>
+			</control>
+		</control>
+	</include>
+	<include name="bg-vis">
+		<control type="group">
+			<control type="visualisation">
+				<include>screen-dim</include>
+			</control>
+		</control>
+	</include>
+	<!-- END OVERLAYS -->
+
+	<!-- MOVIES -->
+	<include name="bg-home-movies">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-movies)</visible>
+				<visible>!Skin.HasSetting(bg-movies-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(101)</visible>
+				<texture>bg-movies.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-movies)</visible>
+				<visible>ControlGroup(9000).HasFocus(101)</visible>
+				<texture>$INFO[Skin.String(bg-movies)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-movies-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(101)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/movies/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="bg-movies">
+		<control type="group">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>[Window.IsVisible(videofiles) | Window.IsVisible(videolibrary)] + Skin.HasSetting(movies)</visible>
+				<visible>!Skin.String(bg-movies)</visible>
+				<visible>!Skin.HasSetting(bg-movies-ss)</visible>
+				<texture>bg-movies.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>[Window.IsVisible(videofiles) | Window.IsVisible(videolibrary)] + Skin.HasSetting(movies)</visible>
+				<visible>Skin.String(bg-movies)</visible>
+				<texture>$INFO[Skin.String(bg-movies)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-movies-ss)</visible>
+				<include>screen-dim</include>
+				<imagepath>backgrounds/movies/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END MOVIES -->
+	
+	<!-- TV -->
+	<include name="bg-home-tv">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-tv)</visible>
+				<visible>!Skin.HasSetting(bg-tv-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(102)</visible>
+				<texture>bg-tv.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-tv)</visible>
+				<visible>ControlGroup(9000).HasFocus(102)</visible>
+				<texture>$INFO[Skin.String(bg-tv)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-tv-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(102)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/tv/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="bg-tv">
+		<control type="group">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>[Window.IsVisible(videofiles) | Window.IsVisible(videolibrary)] + Skin.HasSetting(tv)</visible>
+				<visible>!Skin.String(bg-tv)</visible>
+				<visible>!Skin.HasSetting(bg-tv-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(102)</visible>
+				<texture>bg-tv.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>[Window.IsVisible(videofiles) | Window.IsVisible(videolibrary)] + Skin.HasSetting(tv)</visible>
+				<visible>Skin.String(bg-tv)</visible>
+				<visible>ControlGroup(9000).HasFocus(102)</visible>
+				<texture>$INFO[Skin.String(bg-tv)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>[Window.IsVisible(videofiles) | Window.IsVisible(videolibrary)] + Skin.HasSetting(tv)</visible>
+				<visible>Skin.HasSetting(bg-tv-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(102)</visible>
+				<include>screen-dim</include>
+				<imagepath>backgrounds/tv/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END TV -->
+	
+	<!-- GAMES -->
+	<include name="bg-home-games">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-games)</visible>
+				<visible>!Skin.HasSetting(bg-games-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(103)</visible>
+				<texture>bg-games.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-games)</visible>
+				<visible>ControlGroup(9000).HasFocus(103)</visible>
+				<texture>$INFO[Skin.String(bg-games)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-games-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(103)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/games/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END GAMES -->
+	
+	<!-- ARCADE -->
+	<include name="bg-home-arcade">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-arcade)</visible>
+				<visible>!Skin.HasSetting(bg-arcade-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(104)</visible>
+				<texture>bg-arcade.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-arcade)</visible>
+				<visible>ControlGroup(9000).HasFocus(104)</visible>
+				<texture>$INFO[Skin.String(bg-arcade)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-arcade-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(104)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/arcade/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END ARCADE -->
+	
+	<!-- MUSIC -->
+	<include name="bg-home-music">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-music)</visible>
+				<visible>!Skin.HasSetting(bg-music-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(105)</visible>
+				<texture>bg-music.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-music)</visible>
+				<visible>ControlGroup(9000).HasFocus(105)</visible>
+				<texture>$INFO[Skin.String(bg-music)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-music-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(105)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/music/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END MUSIC -->
+	
+	<!-- PICTURES -->
+	<include name="bg-home-pictures">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-pictures)</visible>
+				<visible>!Skin.HasSetting(bg-pictures-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(106)</visible>
+				<texture>bg-pictures.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-pictures)</visible>
+				<visible>ControlGroup(9000).HasFocus(106)</visible>
+				<texture>$INFO[Skin.String(bg-pictures)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-pictures-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(106)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/pictures/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END PICTURES -->
+	
+	<!-- WEATHER -->
+	<include name="bg-home-weather">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-weather)</visible>
+				<visible>!Skin.HasSetting(bg-weather-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(107)</visible>
+				<texture>bg-weather.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-weather)</visible>
+				<visible>ControlGroup(9000).HasFocus(107)</visible>
+				<texture>$INFO[Skin.String(bg-weather)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-weather-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(107)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/weather/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END WEATHER -->
+	
+	<!-- SYSTEM -->
+	<include name="bg-home-system">
+		<control type="group">
+			<visible>!Player.HasMedia | [ [Player.HasVideo + !Skin.HasSetting(bg-video)] | [Player.HasAudio + !Skin.HasSetting(bg-vis)] ]</visible>
+			<!-- default movies background -->
+			<control type="image">
+				<visible>!Skin.String(bg-system)</visible>
+				<visible>!Skin.HasSetting(bg-system-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(108)</visible>
+				<texture>bg-system.png</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- custom movies background -->
+			<control type="image">
+				<visible>Skin.String(bg-system)</visible>
+				<visible>ControlGroup(9000).HasFocus(108)</visible>
+				<texture>$INFO[Skin.String(bg-system)]</texture>
+				<include>screen-dim</include>
+				<include>anim-backgrounds</include>
+			</control>
+			<!-- default movies background slideshow -->
+			<control type="multiimage">
+				<visible>Skin.HasSetting(bg-system-ss)</visible>
+				<visible>ControlGroup(9000).HasFocus(108)</visible>
+				<include>screen-dim</include>
+			    <imagepath>backgrounds/system/</imagepath>
+				<randomize>true</randomize>
+				<include>anim-backgrounds</include>
+			</control>
+		</control>
+	</include>
+	<!-- END SYSTEM -->
+	
+</includes>

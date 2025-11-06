@@ -1,0 +1,203 @@
+﻿<window id="2901">
+	<defaultcontrol>213</defaultcontrol>
+	<animation effect="fade" start="0" time="300">WindowOpen</animation>
+	<animation effect="fade" end="0" time="300">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>20</posx>
+		<posy>390</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>top</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>680</width>
+			<height>30</height>
+			<texture>context2-wide-top.png</texture>
+		</control>
+		<control type="image">
+			<description>middle</description>
+			<posx>0</posx>
+			<posy>30</posy>
+			<width>680</width>
+			<height>100</height>
+			<texture>context2-wide-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>bottom</description>
+			<posx>0</posx>
+			<posy>130</posy>
+			<width>680</width>
+			<height>30</height>
+			<texture>context2-wide-bottom.png</texture>
+		</control>
+		<control type="button" id="211">
+			<description>Rewind</description>
+			<posx>15</posx>
+			<posy>26</posy>
+			<width>20</width>
+			<height>20</height>
+			<texturefocus>osd-rewind-focus.png</texturefocus>
+			<texturenofocus>osd-rewind-nofocus.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>210</onleft>
+			<onright>213</onright>
+			<onup>211</onup>
+			<ondown>211</ondown>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		</control>
+		<control type="button" id="210">
+			<description>Skip Bwd</description>
+			<posx>55</posx>
+			<posy>26</posy>
+			<width>12</width>
+			<height>20</height>
+			<texturefocus>osd-skipback-focus.png</texturefocus>
+			<texturenofocus>osd-skipback-nofocus.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+			<textoffsetx>0</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<textcolor>button-text</textcolor>
+			<label>31050</label>
+			<font>-</font>
+			<onleft>208</onleft>
+			<onright>211</onright>
+			<onup>210</onup>
+			<ondown>210</ondown>
+		</control>
+		<control type="togglebutton" id="213">
+			<description>Play\Pause</description>
+			<posx>87</posx>
+			<posy>26</posy>
+			<width>12</width>
+			<height>20</height>
+			<texturefocus>osd-pause-focus.png</texturefocus>
+			<texturenofocus>osd-pause-nofocus.png</texturenofocus>
+			<alttexturefocus>osd-play-focus.png</alttexturefocus>
+			<alttexturenofocus>osd-play-nofocus.png</alttexturenofocus>
+			<usealtlabel>-</usealtlabel>
+			<textcolor>button-text</textcolor>
+			<font>font11</font>
+			<onleft>211</onleft>
+			<onright>214</onright>
+			<onup>213</onup>
+			<ondown>213</ondown>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+		</control>
+		<control type="button" id="215">
+			<description>Skip Fwd</description>
+			<posx>119</posx>
+			<posy>26</posy>
+			<width>12</width>
+			<height>20</height>
+			<texturefocus>osd-skipforward-focus.png</texturefocus>
+			<texturenofocus>osd-skipforward-nofocus.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>214</onleft>
+			<onright>918</onright>
+			<onup>215</onup>
+			<ondown>215</ondown>
+		</control>
+		<control type="button" id="214">
+			<description>Fast Forward</description>
+			<posx>151</posx>
+			<posy>26</posy>
+			<width>20</width>
+			<height>20</height>
+			<texturefocus>osd-fastforward-focus.png</texturefocus>
+			<texturenofocus>osd-fastforward-nofocus.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>215</onright>
+			<onup>214</onup>
+			<ondown>214</ondown>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+		</control>
+		<control type="button" id="918">
+			<description>playlist buton</description>
+			<posx>250</posx>
+			<posy>26</posy>
+			<width>15</width>
+			<height>20</height>
+			<texturefocus>osd-playlist-focus.png</texturefocus>
+			<texturenofocus>osd-playlist-nofocus.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(28)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>215</onleft>
+			<onright>921</onright>
+			<onup>918</onup>
+			<ondown>918</ondown>
+		</control>
+		<control type="button" id="921">
+			<description>Audio Menu</description>
+			<posx>233</posx>
+			<posy>26</posy>
+			<width>45</width>
+			<height>50</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ActivateWindow(124)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>918</onleft>
+			<onright>920</onright>
+			<onup>921</onup>
+			<ondown>921</ondown>
+		</control>
+		<control type="button" id="920">
+			<description>Video Menu</description>
+			<posx>268</posx>
+			<posy>26</posy>
+			<width>45</width>
+			<height>50</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ActivateWindow(123)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>921</onleft>
+			<onright>919</onright>
+			<onup>920</onup>
+			<ondown>920</ondown>
+		</control>
+		<control type="button" id="919">
+			<description>Bookmarks Menu</description>
+			<posx>303</posx>
+			<posy>26</posy>
+			<width>45</width>
+			<height>50</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ActivateWindow(125)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>920</onleft>
+			<onright>208</onright>
+			<onup>919</onup>
+			<ondown>919</ondown>
+		</control>
+		<control type="button" id="208">
+			<description>DVD Menu</description>
+			<posx>303</posx>
+			<posy>26</posy>
+			<width>45</width>
+			<height>50</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>919</onleft>
+			<onright>210</onright>
+			<onup>208</onup>
+			<ondown>208</ondown>
+			<visible>VideoPlayer.HasMenu</visible>
+		</control>
+	</controls>
+</window>           

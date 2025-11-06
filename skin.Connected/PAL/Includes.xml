@@ -1,0 +1,1104 @@
+<includes>
+	
+  <include file="Defaults.xml" />
+	<include file="CommonViews.xml" />
+	<include file="HomeSelection.xml" />
+  <include file="Constants.xml" />
+  <include file="IncludesAnimations.xml" />
+  <include file="IncludesMediaFlags.xml" />
+  
+  <include name="WindowOverlay">
+    <control type="image">
+      <width>720</width>
+      <height>576</height>
+      <aspectratio>stretch</aspectratio>
+      <texture>black.png</texture>
+      <include>WindowOverlayFade</include>
+    </control>
+  </include>
+
+  <include name="DefaultViewOptions">
+    <control type="group" id="9001">
+      <posx>0</posx>
+      <posy>0</posy>
+      <control type="button" id="2001">
+        <description>View Header</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>304</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>-</label>
+        <font>22BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <focusedcolor>DefaultTextColor</focusedcolor>
+        <disabledcolor>DisabledTextColor</disabledcolor>
+        <texturefocus>ButtonNF.png</texturefocus>
+        <texturenofocus>ButtonNF.png</texturenofocus>
+        <textoffsetx>35</textoffsetx>
+        <onfocus>SetFocus(2002)</onfocus>
+        <pulseonselect>false</pulseonselect>
+        <onleft>-</onleft>
+        <onright>-</onright>
+        <onup>-</onup>
+        <ondown>-</ondown>
+      </control>
+      <control type="label">
+        <description>View Header Label</description>
+        <posx>35</posx>
+        <posy>0</posy>
+        <width>268</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[31023]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>ControlGroup(9001).HasFocus</visible>
+      </control>
+      <control type="label">
+        <description>View Header Label</description>
+        <posx>35</posx>
+        <posy>0</posy>
+        <width>268</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[31023]</label>
+        <font>22BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <visible>!ControlGroup(9001).HasFocus</visible>
+      </control>
+
+      <control type="group">
+        <animation effect="fade" time="10" delay="120" end="100" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+        <control type="button" id="2002">
+          <description>List</description>
+          <posx>0</posx>
+          <posy>45</posy>
+          <width>285</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[535]</label>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <focusedcolor>FocusedTextColor</focusedcolor>
+          <disabledcolor>DisabledTextColor</disabledcolor>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>45</textoffsetx>
+          <pulseonselect>false</pulseonselect>
+          <onclick>Container.SetViewMode(51)</onclick>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>2021</onup>
+          <ondown>2003</ondown>
+          <visible>ControlGroup(9001).HasFocus + !Container.SortDirection(None) + [!Window.IsVisible(20) + !Window.IsVisible(35)]</visible>
+        </control>
+        <control type="button" id="2002">
+          <description>List Scripts/Gamesaves</description>
+          <posx>0</posx>
+          <posy>45</posy>
+          <width>285</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[535]</label>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <focusedcolor>FocusedTextColor</focusedcolor>
+          <disabledcolor>DisabledTextColor</disabledcolor>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>45</textoffsetx>
+          <pulseonselect>false</pulseonselect>
+          <onclick>Container.SetViewMode(51)</onclick>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>2011</onup>
+          <ondown>2003</ondown>
+          <visible>ControlGroup(9001).HasFocus + !Container.SortDirection(None) + [Window.IsVisible(20) | Window.IsVisible(35)]</visible>
+        </control>
+        <control type="button" id="2002">
+          <description>List Scripts/Gamesaves</description>
+          <posx>0</posx>
+          <posy>45</posy>
+          <width>285</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[535]</label>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <focusedcolor>FocusedTextColor</focusedcolor>
+          <disabledcolor>DisabledTextColor</disabledcolor>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>45</textoffsetx>
+          <pulseonselect>false</pulseonselect>
+          <onclick>Container.SetViewMode(51)</onclick>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>2021</onup>
+          <ondown>2003</ondown>
+          <visible>Container.SortDirection(None)</visible>
+        </control>
+        <control type="image">
+          <description>Selected Dot</description>
+          <posx>15</posx>
+          <posy>49</posy>
+          <width>30</width>
+          <height>30</height>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>ButtonDot.png</texture>
+          <visible>ControlGroup(9001).HasFocus + Control.IsVisible(51)</visible>
+        </control>
+        <control type="button" id="2003">
+          <description>Big List</description>
+          <posx>0</posx>
+          <posy>75</posy>
+          <width>285</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[537]</label>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <focusedcolor>FocusedTextColor</focusedcolor>
+          <disabledcolor>DisabledTextColor</disabledcolor>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>45</textoffsetx>
+          <pulseonselect>false</pulseonselect>
+          <onclick>Container.SetViewMode(52)</onclick>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>2002</onup>
+          <ondown>2004</ondown>
+          <visible>ControlGroup(9001).HasFocus</visible>
+        </control>
+        <control type="image">
+          <description>Selected Dot</description>
+          <posx>15</posx>
+          <posy>78</posy>
+          <width>30</width>
+          <height>30</height>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>ButtonDot.png</texture>
+          <visible>ControlGroup(9001).HasFocus + Control.IsVisible(52)</visible>
+        </control>
+        <control type="button" id="2004">
+          <description>Icons</description>
+          <posx>0</posx>
+          <posy>105</posy>
+          <width>285</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[536]</label>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <focusedcolor>FocusedTextColor</focusedcolor>
+          <disabledcolor>DisabledTextColor</disabledcolor>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>45</textoffsetx>
+          <pulseonselect>false</pulseonselect>
+          <onclick>Container.SetViewMode(53)</onclick>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>2003</onup>
+          <ondown>2005</ondown>
+          <visible>ControlGroup(9001).HasFocus</visible>
+        </control>
+        <control type="image">
+          <description>Selected Dot</description>
+          <posx>15</posx>
+          <posy>108</posy>
+          <width>30</width>
+          <height>30</height>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>ButtonDot.png</texture>
+          <visible>ControlGroup(9001).HasFocus + Control.IsVisible(53)</visible>
+        </control>
+        <control type="button" id="2005">
+          <description>Fanart</description>
+          <posx>0</posx>
+          <posy>135</posy>
+          <width>285</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31022]</label>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <focusedcolor>FocusedTextColor</focusedcolor>
+          <disabledcolor>DisabledTextColor</disabledcolor>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>45</textoffsetx>
+          <pulseonselect>false</pulseonselect>
+          <onclick>Container.SetViewMode(54)</onclick>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>2004</onup>
+          <ondown>2011</ondown>
+          <visible>ControlGroup(9001).HasFocus + !Container.SortDirection(None) | [Window.IsVisible(28) | Window.IsVisible(500)]</visible>
+        </control>
+        <control type="button" id="2005">
+          <description>Fanart</description>
+          <posx>0</posx>
+          <posy>135</posy>
+          <width>285</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31022]</label>
+          <font>18BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <focusedcolor>FocusedTextColor</focusedcolor>
+          <disabledcolor>DisabledTextColor</disabledcolor>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>45</textoffsetx>
+          <pulseonselect>false</pulseonselect>
+          <onclick>Container.SetViewMode(54)</onclick>
+          <onleft>51</onleft>
+          <onright>51</onright>
+          <onup>2004</onup>
+          <ondown>2021</ondown>
+          <visible>ControlGroup(9001).HasFocus + Container.SortDirection(None) + !Window.IsVisible(28) + !Window.IsVisible(500)</visible>
+        </control>
+        <control type="image">
+          <description>Selected Dot</description>
+          <posx>15</posx>
+          <posy>138</posy>
+          <width>30</width>
+          <height>30</height>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>ButtonDot.png</texture>
+          <visible>ControlGroup(9001).HasFocus + Control.IsVisible(54)</visible>
+        </control>
+      </control>
+    </control>
+    <control type="group" id="9002">
+      <posx>0</posx>
+      <posy>170</posy>
+      <animation effect="slide" time="100" end="0,-125" condition="ControlGroup(9002).HasFocus | ControlGroup(9003).HasFocus">Conditional</animation>
+      <control type="button" id="2011">
+        <description>View Options Header</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>304</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>-</label>
+        <font>22BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <focusedcolor>DefaultTextColor</focusedcolor>
+        <disabledcolor>DisabledTextColor</disabledcolor>
+        <texturefocus>ButtonNF.png</texturefocus>
+        <texturenofocus>ButtonNF.png</texturenofocus>
+        <textoffsetx>35</textoffsetx>
+        <pulseonselect>false</pulseonselect>
+        <onfocus>SetFocus(3)</onfocus>
+        <onleft>51</onleft>
+        <onright>51</onright>
+        <onup>-</onup>
+        <ondown>-</ondown>
+        <visible>Window.IsVisible(1) | Window.IsVisible(2) | Window.IsVisible(24) | Window.IsVisible(25) |  Window.IsVisible(40) | Window.IsVisible(501) | Window.IsVisible(502)</visible>
+      </control>
+      <control type="button" id="2011">
+        <description>View Options Header</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>304</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>-</label>
+        <font>22BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <focusedcolor>DefaultTextColor</focusedcolor>
+        <disabledcolor>DisabledTextColor</disabledcolor>
+        <texturefocus>ButtonNF.png</texturefocus>
+        <texturenofocus>ButtonNF.png</texturenofocus>
+        <textoffsetx>35</textoffsetx>
+        <pulseonselect>false</pulseonselect>
+        <onfocus>SetFocus(20)</onfocus>
+        <onleft>51</onleft>
+        <onright>51</onright>
+        <onup>-</onup>
+        <ondown>-</ondown>
+        <visible>Window.IsVisible(28) | Window.IsVisible(500)</visible>
+      </control>
+      <control type="button" id="2011">
+        <description>View Options Header</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>304</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>-</label>
+        <font>22BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <focusedcolor>DefaultTextColor</focusedcolor>
+        <disabledcolor>DisabledTextColor</disabledcolor>
+        <texturefocus>ButtonNF.png</texturefocus>
+        <texturenofocus>ButtonNF.png</texturenofocus>
+        <textoffsetx>35</textoffsetx>
+        <pulseonselect>false</pulseonselect>
+        <onfocus>SetFocus(3)</onfocus>
+        <onleft>51</onleft>
+        <onright>51</onright>
+        <onup>-</onup>
+        <ondown>-</ondown>
+        <visible>Window.IsVisible(20) | Window.IsVisible(35)</visible>
+      </control>
+
+      <control type="label">
+        <description>View Options Header Label</description>
+        <posx>35</posx>
+        <posy>0</posy>
+        <width>268</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[31024]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>ControlGroup(9002).HasFocus</visible>
+      </control>
+      <control type="label">
+        <description>View Options Header Label</description>
+        <posx>35</posx>
+        <posy>0</posy>
+        <width>268</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[31024]</label>
+        <font>22BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <visible>!ControlGroup(9002).HasFocus + !Container.SortDirection(None) | [!ControlGroup(9002).HasFocus + Window.IsVisible(28) | Window.IsVisible(500)]</visible>
+      </control>
+      <control type="label">
+        <description>View Options Header Label</description>
+        <posx>35</posx>
+        <posy>0</posy>
+        <width>268</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[31024]</label>
+        <font>22BdFont</font>
+        <textcolor>DisabledTextColor</textcolor>
+        <visible>!ControlGroup(9002).HasFocus + Container.SortDirection(None) + [!Window.IsVisible(28) | !Window.IsVisible(500)]</visible>
+      </control>
+      
+      <control type="group">
+        <animation effect="fade" time="10" delay="120" end="100" condition="ControlGroup(9002).HasFocus">Conditional</animation>
+        <control type="group">
+          <!-- Programs, Pictures, Video, Music -->
+          <visible>Window.IsVisible(1) | Window.IsVisible(2) | Window.IsVisible(24) | Window.IsVisible(25) | Window.IsVisible(40) | Window.IsVisible(501) | Window.IsVisible(502)</visible>
+          <control type="button" id="3">
+            <description>Sort By</description>
+            <posx>0</posx>
+            <posy>45</posy>
+            <width>285</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[581]</label>
+            <font>18BdFont</font>
+            <textcolor>DefaultTextColor</textcolor>
+            <focusedcolor>FocusedTextColor</focusedcolor>
+            <disabledcolor>DisabledTextColor</disabledcolor>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <pulseonselect>false</pulseonselect>
+            <textoffsetx>45</textoffsetx>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>2001</onup>
+            <ondown>2012</ondown>
+            <visible>ControlGroup(9002).HasFocus</visible>
+          </control>
+          <control type="togglebutton" id="2012">
+            <description>Up/Down</description>
+            <posx>0</posx>
+            <posy>75</posy>
+            <width>285</width>
+            <height>30</height>
+            <font>18BdFont</font>
+            <label>$LOCALIZE[31034]</label>
+            <altlabel>$LOCALIZE[31035]</altlabel>
+            <texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+            <alttexturenofocus>-</alttexturenofocus>
+            <alttexturefocus>-</alttexturefocus>
+            <onclick>Container.SortDirection(ascending)</onclick>
+            <align>left</align>
+            <textoffsetx>45</textoffsetx>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>3</onup>
+            <ondown>2021</ondown>
+            <visible>ControlGroup(9002).HasFocus</visible>
+          </control>
+        </control>
+        <control type="group">
+          <!-- Scripts, GameSaves -->
+          <visible>Window.IsVisible(20) | Window.IsVisible(35)</visible>
+          <control type="button" id="3">
+            <description>Sort By</description>
+            <posx>0</posx>
+            <posy>45</posy>
+            <width>285</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[581]</label>
+            <font>18BdFont</font>
+            <textcolor>DefaultTextColor</textcolor>
+            <focusedcolor>FocusedTextColor</focusedcolor>
+            <disabledcolor>DisabledTextColor</disabledcolor>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <pulseonselect>false</pulseonselect>
+            <textoffsetx>45</textoffsetx>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>2001</onup>
+            <ondown>2012</ondown>
+            <visible>ControlGroup(9002).HasFocus</visible>
+          </control>
+          <control type="togglebutton" id="2012">
+            <description>Up/Down</description>
+            <posx>0</posx>
+            <posy>75</posy>
+            <width>285</width>
+            <height>30</height>
+            <font>18BdFont</font>
+            <label>$LOCALIZE[31034]</label>
+            <altlabel>$LOCALIZE[31035]</altlabel>
+            <texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+            <alttexturenofocus>-</alttexturenofocus>
+            <alttexturefocus>-</alttexturefocus>
+            <onclick>Container.SortDirection(ascending)</onclick>
+            <align>left</align>
+            <textoffsetx>45</textoffsetx>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>3</onup>
+            <ondown>2001</ondown>
+            <visible>ControlGroup(9002).HasFocus</visible>
+          </control>
+        </control>
+        <control type="group">
+          <!-- Music and Video Playlist -->
+          <visible>Window.IsVisible(28) | Window.IsVisible(500)</visible>
+          <control type="radiobutton" id="20">
+            <description>Shuffle button</description>
+            <posx>0</posx>
+            <posy>45</posy>
+            <height>30</height>
+            <width>270</width>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>18BdFont</font>
+            <label>$LOCALIZE[191]</label>
+            <textcolor>DefaultTextColor</textcolor>
+            <focusedcolor>FocusedTextColor</focusedcolor>
+            <disabledcolor>DisabledTextColor</disabledcolor>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+            <textureradionofocus>RadiobuttonNF.png</textureradionofocus>
+            <textoffsetx>45</textoffsetx>
+            <pulseonselect>false</pulseonselect>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>2001</onup>
+            <ondown>26</ondown>
+            <visible>ControlGroup(9002).HasFocus</visible>
+          </control>
+          <control type="button" id="26">
+            <description>Repeat button</description>
+            <posx>0</posx>
+            <posy>75</posy>
+            <width>285</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>-</label>
+            <font>18BdFont</font>
+            <textcolor>DefaultTextColor</textcolor>
+            <focusedcolor>FocusedTextColor</focusedcolor>
+            <disabledcolor>DisabledTextColor</disabledcolor>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <pulseonselect>false</pulseonselect>
+            <textoffsetx>45</textoffsetx>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>20</onup>
+            <ondown>2021</ondown>
+            <visible>ControlGroup(9002).HasFocus</visible>
+          </control>
+        </control>
+      </control>
+    </control>
+  </include>
+
+  <include name="NowPlaying">
+
+    <!-- Videos -->
+    <control type="group">
+      <posx>515</posx>
+      <posy>5</posy>
+      <include>DefaultFade</include>
+      <visible>Player.HasVideo + !Window.IsActive(2005) + !Window.IsActive(0)</visible>
+      <control type="label" id="0">
+        <description>title label</description>
+        <width>180</width>
+        <height>30</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[VideoPlayer.Label]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>IsEmpty(ListItem.Title)</visible>
+      </control>
+      <control type="label" id="0">
+        <description>title label</description>
+        <width>180</width>
+        <height>30</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[VideoPlayer.Title]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+      <control type="progress" id="0">
+        <description>Progressbar</description>
+        <posx>0</posx>
+        <posy>35</posy>
+        <width>180</width>
+        <info>Player.Progress</info>
+      </control>
+    </control>
+
+    <!-- Music -->
+    <control type="group">
+      <posx>515</posx>
+      <posy>5</posy>
+      <include>DefaultFade</include>
+      <visible>Player.HasAudio + !Window.IsActive(2006) + !Window.IsActive(0)</visible>
+      <control type="label" id="0">
+        <description>title label</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>180</width>
+        <height>30</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[MusicPlayer.Label]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <visible>IsEmpty(ListItem.Title)</visible>
+      </control>
+      <control type="label" id="0">
+        <description>title label</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>180</width>
+        <height>30</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$INFO[MusicPlayer.Title]</label>
+        <scroll>true</scroll>
+        <font>18BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+      <control type="progress" id="0">
+        <description>Progressbar</description>
+        <posx>0</posx>
+        <posy>35</posy>
+        <width>180</width>
+        <info>Player.Progress</info>
+      </control>
+    </control>
+
+  </include>
+  
+  <include name="Logo">
+    <control type="button">
+      <posx>535</posx>
+      <posy>465</posy>
+      <width>180</width>
+      <height>90</height>
+      <texturefocus>LogoNF.png</texturefocus>
+      <texturenofocus>LogoNF.png</texturenofocus>
+      <label>$INFO[System.Time(HH:MM:XX)]</label>
+      <font>20BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <align>-</align>
+      <aligny>-</aligny>
+      <textoffsetx>-100</textoffsetx>
+      <textoffsety>58</textoffsety>
+      <pulseonselect>false</pulseonselect>
+      <onclick>-</onclick>
+      <onfocus>-</onfocus>
+      <include>DefaultFade</include>
+    </control>
+  </include>
+  
+  <include name="HomeWeatherInfo">
+    <control type="group">
+      <posx>460</posx>
+      <posy>10</posy>
+      <visible>Skin.HasSetting(HomeWeatherInfo) + Weather.IsFetched + !Window.IsVisible(136)</visible>
+      <include>DefaultFade</include>
+      <control type="image">
+        <posx>195</posx>
+        <width>55</width>
+        <height>55</height>
+        <info>Weather.Conditions</info>
+        <aspectratio align="right">keep</aspectratio>
+      </control>
+      <control type="label">
+        <posx>190</posx>
+        <width>200</width>
+        <height>55</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[Weather.Conditions] $INFO[Weather.Temperature]</label>
+        <font>20BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+    </control>
+  </include>
+  
+	<include name="Backgrounds">    
+    <control type="group">
+      <!-- Default Background -->
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <aspectratio>scale</aspectratio>
+        <texture>BackgroundDefault.png</texture>
+        <visible>!Skin.String(CustomBackImage) + !Skin.String(CustomBackFolder) + !Skin.HasSetting(DefaultBackground)</visible>
+      </control>
+
+      <!-- Default Background Colored -->
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <aspectratio>scale</aspectratio>
+        <texture>$INFO[Skin.String(DefaultBackground)]</texture>
+        <visible>!Skin.String(CustomBackImage) + !Skin.String(CustomBackFolder) + !Skin.HasSetting(DefaultBackground)]</visible>
+      </control>
+
+      <!-- Custom Background Image -->
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <aspectratio>scale</aspectratio>
+        <info>Skin.String(CustomBackImage)</info>
+        <visible>Skin.String(CustomBackImage) + !Skin.String(CustomBackFolder)</visible>
+      </control>
+
+      <!-- Custom Background Folder -->
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <timeperimage>5000</timeperimage>
+        <fadetime>2000</fadetime>
+        <pauseatend>10000</pauseatend>
+        <randomize>true</randomize>
+        <loop>no</loop>
+        <aspectratio>scale</aspectratio>
+        <info>Skin.String(CustomBackFolder)</info>
+        <fadetime>400</fadetime>
+        <visible>!Skin.String(CustomBackImage) + Skin.String(CustomBackFolder)</visible>
+      </control>
+
+    </control>
+	</include>
+      
+	<include name="MediaInfoBack">
+    <!-- <posx>20 <posy>20 -->
+		<control type="image">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>700</width>
+			<height>556</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+  
+  <include name="MediaScanBack">
+    <control type="group">
+      <control type="image">
+        <description>Menu Background Image</description>
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>300</width>
+        <height>75</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+
+  <include name="NowPlayingBack">
+    <control type="group">
+      <control type="image">
+        <description>Menu Background Image</description>
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>420</width>
+        <height>180</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+  
+  <include name="OSDBack">
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>700</width>
+        <height>100</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+  
+  <include name="VideoFullScreenBack">
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>700</width>
+        <height>150</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+
+  <include name="PlaylistEditorBack">
+    <!-- <posx>80 <posy>75 -->
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>560</width>
+        <height>445</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+  
+  <include name="PlaylistRulesBack">
+    <!-- <posx>145 <posy>188 -->
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>430</width>
+        <height>220</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+
+  <include name="SettingsBack">
+    <!-- <posx>20 <posy>65 -->
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>700</width>
+        <height>465</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+
+  <include name="DialogBackWide">
+    <!-- <posx>90 <posy>101 -->
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>560</width>
+        <height>395</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+  
+  <include name="DialogKeyboardBack">
+    <!-- <posx>140 <posy>165 -->
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>460</width>
+        <height>265</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+  
+  <include name="DialogVolumeBarBack">
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>350</width>
+        <height>64</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+  
+  <include name="DialogMuteBugBack">
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>170</width>
+        <height>54</height>
+        <texture border="12">DialogBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+
+	<!-- Option Menus #Headers-#Buttons -->
+  <include name="OptionBack1-1">
+    <!-- <posx>208 <posy>240 -->
+    <control type="image">
+      <description>Menu Background Image</description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <width>324</width>
+      <height>115</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+    </control>
+  </include>
+  <include name="OptionBack1-2">
+    <!-- <posx>208 <posy>223 -->
+    <control type="image">
+      <description>Menu Background Image</description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <width>324</width>
+      <height>150</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+    </control>
+  </include>
+	<include name="OptionBack1-3">
+    <!-- <posx>208 <posy>205 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>185</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+	<include name="OptionBack1-4">
+    <!-- <posx>208 <posy>188 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>220</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+	<include name="OptionBack1-5">
+    <!-- <posx>208 <posy>170 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>255</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+  <include name="OptionBack1-6">
+    <!-- <posx>208 <posy>153 -->
+    <control type="image">
+      <description>Menu Background Image </description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <width>324</width>
+      <height>290</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+    </control>
+  </include>
+  <include name="OptionBack1-7">
+    <!-- <posx>208 <posy>135 -->
+    <control type="image">
+      <description>Menu Background Image </description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <width>324</width>
+      <height>325</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+    </control>
+  </include>
+  
+	<include name="OptionBack2-2">
+    <!-- <posx>208 <posy>210 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>175</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+	<include name="OptionBack2-4">
+    <!-- <posx>208 <posy>180 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>235</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+  <include name="OptionBack2-6">
+    <!-- <posx>208 <posy>150 -->
+    <control type="image">
+      <description>Menu Background Image</description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <width>324</width>
+      <height>295</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+    </control>
+  </include>
+  
+	<include name="OptionBack3-1">
+    <!-- <posx>208 <posy>203 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>190</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+	<include name="OptionBack3-2">
+    <!-- <posx>208 <posy>188 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>220</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+	<include name="OptionBack3-3">
+    <!-- <posx>208 <posy>173 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>250</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+	<include name="OptionBack3-4">
+    <!-- <posx>208 <posy>158 -->
+		<control type="image">
+			<description>Menu Background Image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>324</width>
+			<height>280</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+		</control>
+	</include>
+  <include name="OptionBack3-5">
+    <!-- <posx>208 <posy>143 -->
+    <control type="image">
+      <description>Menu Background Image</description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <width>324</width>
+      <height>310</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+    </control>
+  </include>
+  <include name="OptionBack3-6">
+    <!-- <posx>208 <posy>128 -->
+    <control type="image">
+      <description>Menu Background Image</description>
+      <posx>-10</posx>
+      <posy>-10</posy>
+      <width>324</width>
+      <height>340</height>
+      <texture border="12">DialogBack.png</texture>
+      <aspectratio align="left">stretch</aspectratio>
+    </control>
+  </include>
+	
+</includes>

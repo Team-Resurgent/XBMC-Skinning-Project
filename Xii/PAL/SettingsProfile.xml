@@ -1,0 +1,168 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-profile.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control type="label" id="1">
+			<description>description label</description>
+			<posx>700</posx>
+			<posy>25</posy>
+			<align>right</align>
+			<label>13200</label>
+			<font>font32</font>
+			<include>textcolorblack</include>
+		</control>
+		<control type="button" id="9009">
+  		<description>Back</description>
+  		<posx>25</posx>
+  		<posy>10</posy>
+  		<width>57</width>
+  		<height>57</height>
+  		<label>-</label>
+  		<onclick>ActivateWindow(Home)</onclick>
+			<ondown>4</ondown>
+			<onup>4</onup>
+			<onright>2</onright>
+			<onleft>2</onleft>
+  		<texturefocus>profile-back.png</texturefocus>
+  		<texturenofocus>profile-back.png</texturenofocus>
+	  	<include>buttonpanelslide</include>
+		</control>
+		<control type="label" id="9009">
+			<description>back label</description>
+			<posx>90</posx>
+			<posy>24</posy>
+			<align>left</align>
+  		<include>backlabel</include>
+			<font>font16</font>
+			<include>textcolorblack</include>
+			<visible>Control.HasFocus(9009)</visible>
+			<animation effect="fade" time="250" start="0" end="100" delay="100">VisibleChange</animation>
+		</control>
+		<control type="radiobutton" id="4">
+			<description>enable login screen</description>
+			<posx>25</posx>
+			<posy>75</posy>
+			<width>57</width>
+			<height>57</height>
+			<textureradiofocus>profile-radio.png</textureradiofocus>
+			<textureradionofocus>-</textureradionofocus>
+			<texturefocus>profile-login.png</texturefocus>
+			<texturenofocus>profile-login.png</texturenofocus>
+			<ondown>9009</ondown>
+			<onup>9009</onup>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<label>-</label>
+			<include>buttonpanelslide</include>
+		</control>
+		<control type="label" id="4">
+			<description>login label</description>
+			<posx>90</posx>
+			<posy>94</posy>
+			<align>left</align>
+			<label>$LOCALIZE[20096]?</label>
+			<font>font16</font>
+			<include>textcolorblack</include>
+			<visible>Control.HasFocus(4)</visible>
+			<animation effect="fade" time="250" start="0" end="100" delay="100">VisibleChange</animation>
+		</control>
+		<control type="fadelabel" id="3">
+			<description>Last loaded</description>
+			<posx>25</posx>
+			<posy>526</posy>
+			<width>550</width>
+			<align>left</align>
+			<label>$LOCALIZE[13204] $INFO[system.profilename]</label>
+			<font>font20</font>
+			<include>textcolorblack</include>
+			<include>contentpanelslide</include>
+		</control>
+    <control type="panel" id="2">
+      <posx>190</posx>
+      <posy>100</posy>
+      <width>490</width>
+      <height>420</height>
+      <onleft>9009</onleft>
+      <onright>9009</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+			<viewtype label="536">icon</viewtype>
+       <itemlayout height="200" width="75">
+        <control type="image">
+         <posx>0</posx>
+         <posy>130</posy>
+         <width>68</width>
+         <height>75</height>
+				 <texture>profile-mii.png</texture>
+         <aspectratio>keep</aspectratio>
+        </control>
+        <control type="image">
+         <posx>10</posx>
+         <posy>88</posy>
+         <width>50</width>
+         <height>50</height>
+				 <texture>unknown-user.png</texture>
+         <info>ListItem.Icon</info>
+         <aspectratio>keep</aspectratio>
+        </control>
+       </itemlayout>
+       <focusedlayout height="200" width="150">
+        <control type="image">
+         <posx>0</posx>
+         <posy>130</posy>
+         <width>125</width>
+         <height>150</height>
+				 <texture>profile-mii2.png</texture>
+         <aspectratio>keep</aspectratio>
+        </control>
+         <control type="image">
+          <posx>12</posx>
+          <posy>50</posy>
+          <width>100</width>
+          <height>100</height>
+          <aspectratio>keep</aspectratio>
+				 	<texture>unknown-user.png</texture>
+          <info>ListItem.Icon</info>
+         </control>
+				<control type="label">
+					<posx>65</posx>
+					<posy>25</posy>
+					<width>250</width>
+					<height>16</height>
+					<font>special13</font>
+					<align>center</align>
+					<selectedcolor>green</selectedcolor>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>65</posx>
+					<posy>40</posy>
+					<width>350</width>
+					<height>16</height>
+					<font>font13</font>
+					<align>center</align>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label2</info>
+				</control>
+       </focusedlayout>
+    </control>
+		<control type="image" id="0">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control>
+	</controls>
+</window>

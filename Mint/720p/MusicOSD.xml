@@ -1,0 +1,285 @@
+﻿<window id="120">
+
+	<defaultcontrol>403</defaultcontrol>
+
+	<controls>
+	
+		<!-- controls -->
+		<control type="group">
+		
+			<posx>20</posx>
+			<posy>614</posy>
+			
+			<animation effect="slide" start="-240,0" end="0,0" time="300">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-240,0" time="300">WindowClose</animation>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>220</width>
+				<height>86</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- previous button -->
+			<control type="button" id="212">
+				<width>32</width>
+				<height>32</height>
+				<posx>10</posx>
+				<posy>10</posy>
+				
+				<texturefocus>osd-prev.png</texturefocus>
+				<texturenofocus>osd-prev-nf.png</texturenofocus>
+				
+				<onleft>218</onleft>
+				<onright>214</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				<onclick>PlayerControl(Previous)</onclick>
+			</control>
+			<!-- rewind button -->
+			<control type="button" id="214">
+				<width>32</width>
+				<height>32</height>
+				<posx>42</posx>
+				<posy>10</posy>
+				
+				<texturefocus>osd-rw.png</texturefocus>
+				<texturenofocus>osd-rw-nf.png</texturenofocus>
+				
+				<onleft>212</onleft>
+				<onright>210</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				<onclick>PlayerControl(Rewind)</onclick>
+			</control>
+			<!-- stop button -->
+			<control type="button" id="210">
+				<width>32</width>
+				<height>32</height>
+				<posx>74</posx>
+				<posy>10</posy>
+				
+				<texturefocus>osd-stop.png</texturefocus>
+				<texturenofocus>osd-stop-nf.png</texturenofocus>
+				
+				<onleft>214</onleft>
+				<onright>403</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				
+				<onclick>PlayerControl(Stop)</onclick>
+			</control>
+			<!-- play/pause button -->
+			<control type="togglebutton" id="403">
+				<visible>!Player.Forwarding + !Player.Rewinding</visible>
+				
+				<width>32</width>
+				<height>32</height>
+				<posx>106</posx>
+				<posy>10</posy>
+				
+				<texturefocus>osd-pause.png</texturefocus>
+				<texturenofocus>osd-pause-nf.png</texturenofocus>
+				<usealttexture>Player.Paused</usealttexture>
+				<alttexturefocus>osd-play.png</alttexturefocus>
+				<alttexturenofocus>osd-play-nf.png</alttexturenofocus>
+				
+				<onleft>210</onleft>
+				<onright>215</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				
+				<onclick>PlayerControl(Play)</onclick>
+			</control>
+			<control type="button" id="403">
+				<visible>Player.Forwarding | Player.Rewinding</visible>
+			
+				<width>32</width>
+				<height>32</height>
+				<posx>106</posx>
+				<posy>10</posy>
+				
+				<texturefocus>osd-play.png</texturefocus>
+				<texturenofocus>osd-play-nf.png</texturenofocus>
+				
+				<onleft>210</onleft>
+				<onright>215</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				
+				<onclick>PlayerControl(Play)</onclick>
+			</control>
+			<!-- fast forward button-->
+			<control type="button" id="215">
+				<width>32</width>
+				<height>32</height>
+				<posx>138</posx>
+				<posy>10</posy>
+				
+				<texturefocus>osd-ff.png</texturefocus>
+				<texturenofocus>osd-ff-nf.png</texturenofocus>
+				
+				<onleft>403</onleft>
+				<onright>213</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				<onclick>PlayerControl(Forward)</onclick>
+			</control>
+			<!-- next button -->
+			<control type="button" id="213">
+				<width>32</width>
+				<height>32</height>
+				<posx>170</posx>
+				<posy>10</posy>
+				
+				<texturefocus>osd-next.png</texturefocus>
+				<texturenofocus>osd-next-nf.png</texturenofocus>
+				
+				<onleft>215</onleft>
+				<onright>399</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				<onclick>PlayerControl(Next)</onclick>
+			</control>
+			
+			<!-- shuffle -->
+			<control type="button">
+				<width>32</width>
+				<height>32</height>
+				<posx>10</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-shuffle.png</texturefocus>
+				<texturenofocus>osd-shuffle-nf.png</texturenofocus>
+				
+			    <onleft>398</onleft>
+			    <onright>218</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+			    <onclick>PlayerControl(Random)</onclick>
+			</control>
+			<!-- repeat all -->
+			<control type="button">
+				<visible>Playlist.IsRepeatAll</visible>
+				<width>32</width>
+				<height>32</height>
+				<posx>42</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-repeat.png</texturefocus>
+				<texturenofocus>osd-repeat-nf.png</texturenofocus>
+				
+			    <onleft>219</onleft>
+			    <onright>212</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+			    <onclick>PlayerControl(RepeatAll)</onclick>
+			</control>
+			<!-- repeat one -->
+			<control type="button">
+				<visible>Playlist.IsRepeatOne</visible>
+				<width>32</width>
+				<height>32</height>
+				<posx>42</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-repeat-one.png</texturefocus>
+				<texturenofocus>osd-repeat-one-nf.png</texturenofocus>
+				
+			    <onleft>219</onleft>
+			    <onright>212</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+			    <onclick>PlayerControl(RepeatOne)</onclick>
+			</control>
+			<!-- repeat off -->
+			<control type="button">
+				<visible>!Playlist.IsRepeatOne + !Playlist.IsRepeatAll + !Playlist.IsRepeat</visible>
+				<width>32</width>
+				<height>32</height>
+				<posx>42</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-repeat-off.png</texturefocus>
+				<texturenofocus>osd-repeat-off-nf.png</texturenofocus>
+				
+			    <onleft>219</onleft>
+			    <onright>212</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+			    <onclick>PlayerControl(RepeatOff)</onclick>
+			</control>
+			<!-- playlist -->
+			<control type="button" id="399">
+				<width>32</width>
+				<height>32</height>
+				<posx>74</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-playlist.png</texturefocus>
+				<texturenofocus>osd-playlist-nf.png</texturenofocus>
+				
+				<onleft>213</onleft>
+				<onright>217</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				
+				<onclick>ActivateWindow(musicplaylist)</onclick>
+			</control>
+			<!-- visual select -->
+			<control type="button" id="217">
+				<width>32</width>
+				<height>32</height>
+				<posx>106</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-video.png</texturefocus>
+				<texturenofocus>osd-video-nf.png</texturenofocus>
+				
+				<onleft>399</onleft>
+				<onright>216</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+			</control>
+			<!-- visual settings -->
+			<control type="button" id="216">
+				<width>32</width>
+				<height>32</height>
+				<posx>138</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-audio.png</texturefocus>
+				<texturenofocus>osd-audio-nf.png</texturenofocus>
+				
+				<onleft>217</onleft>
+				<onright>398</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				<onclick>ActivateWindow(visualisationsettings)</onclick>
+			</control>
+			<!-- mute button -->
+			<control type="togglebutton" id="399">
+				<width>32</width>
+				<height>32</height>
+				<posx>170</posx>
+				<posy>42</posy>
+				
+				<texturefocus>osd-nomute.png</texturefocus>
+				<texturenofocus>osd-nomute-nf.png</texturenofocus>
+				<usealttexture>Player.Muted</usealttexture>
+				<alttexturefocus>osd-mute.png</alttexturefocus>
+				<alttexturenofocus>osd-mute-nf.png</alttexturenofocus>
+				
+				<onleft>213</onleft>
+				<onright>217</onright>
+			    <onup>1</onup>
+			    <ondown>1</ondown>
+				
+				<onclick>Mute</onclick>
+			</control>
+		</control>
+	
+	</controls>
+	
+</window>

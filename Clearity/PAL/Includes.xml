@@ -1,0 +1,1005 @@
+<includes>
+
+<include file="Defaults.xml" />
+<include file="CommonView.xml" />
+<include file="CommonView_3D.xml" />
+<include file="CommonView_Home.xml" />
+
+<!-- Text Color ================================== -->
+
+<include name="textcolorwhite">
+	<textcolor>white</textcolor>
+	<shadowcolor>black</shadowcolor>
+</include>
+<include name="textcolorgrey">
+	<textcolor>grey</textcolor>
+	<shadowcolor>black</shadowcolor>
+</include>
+<include name="textcolorlightgrey">
+	<textcolor>grey2</textcolor>
+	<shadowcolor>black</shadowcolor>
+</include>
+<include name="dialogheadingcolor">
+	<textcolor>white</textcolor>
+	<shadowcolor>black</shadowcolor>
+</include>
+<include name="controldefaults">
+	<include>textcolorwhite</include>
+	<colordiffuse>white</colordiffuse>
+	<shadowcolor>black</shadowcolor>
+</include>
+<include name="selectedcolor">
+	<selectedcolor>selected</selectedcolor>
+</include>
+<include name="selectedcolor2">
+	<selectedcolor>white4</selectedcolor>
+	<textcolor>grey3</textcolor>
+</include>
+<include name="focusedcolor">
+	<textcolor>white2</textcolor>
+	<focusedcolor>white</focusedcolor>
+</include>
+<include name="focusedcolor2">
+	<textcolor>white</textcolor>
+	<focusedcolor>white</focusedcolor>
+	<focusedcolor2>white2</focusedcolor2>
+</include>
+
+<!-- Home Items ================================== -->
+
+<include name="HomeItems">
+	<item>
+		<icon>icon-scripts2.png</icon>
+		<label>247</label>
+		<onclick>ActivateWindow(scripts)</onclick>
+	</item>
+	<item>
+		<icon>icon-music3.png</icon>
+		<label>1211</label>
+		<onclick>ActivateWindow(MyMusic)</onclick>
+	</item>
+	<item>
+		<icon>icon-videos5.png</icon>
+		<label>1212</label>
+		<onclick>ActivateWindow(MyVideos)</onclick>
+	</item>
+	<item>
+		<icon>icon-pictures3.png</icon>
+		<label>1213</label>
+		<onclick>ActivateWindow(MyPictures)</onclick>
+	</item>
+	<item>
+		<icon>icon-programs2.png</icon>
+		<label>0</label>
+		<onclick>ActivateWindow(MyPrograms)</onclick>
+		<!-- <visible>!System.Platform.Linux</visible> -->
+	</item>
+	<item>
+		<icon>icon-files2.png</icon>
+		<label>7</label>
+		<onclick>ActivateWindow(MyFiles)</onclick>
+	</item>
+	<item>
+		<icon>icon-weather2.png</icon>
+		<label>8</label>
+		<onclick>ActivateWindow(Weather)</onclick>
+	</item>
+</include>
+
+<!-- Visibility Conditions ============================= -->
+
+<include name="Home-Visible">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(FileBrowser) + !Window.IsActive(contextmenu)</visible>
+	<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(134)</visible>
+</include>
+<include name="Home-Visible2">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(contextmenu)</visible>
+	<visible> !Window.IsActive(PlayerControls) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog)</visible>
+</include>
+<include name="Common-Visible">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(FileBrowser) + !Window.IsActive(contextmenu)</visible>
+	<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(128) + !Window.IsActive(129) + !Window.IsActive(PlayerControls) + !Window.IsActive(selectdialog) + !Window.IsActive(MusicOverlay) + !Window.IsActive(VideoOverlay) + !Window.IsActive(115)</visible>
+</include>
+<include name="MenuBG">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(128) + !Window.IsActive(129) + !Window.IsActive(scandialog) + !Window.IsActive(progressdialog) + !Window.IsActive(MusicOverlay) + !Window.IsActive(VideoOverlay)</visible>
+</include>
+<include name="MenuBG2">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(128) + !Window.IsActive(129) + !Window.IsActive(scandialog) + !Window.IsActive(progressdialog) + !Window.IsActive(MusicOverlay) + !Window.IsActive(VideoOverlay)</visible>
+</include>
+
+<include name="Music_Overlay">
+	<visible>[Player.HasAudio + !Skin.HasSetting(MediaInfo) + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation)] | !Window.IsActive(Home) + !Window.IsActive(2007) + [Player.HasAudio + !Skin.HasSetting(MediaInfoIdleTime) + !Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)] | !Window.IsActive(Home)  + !Window.IsActive(2007) + [Player.HasAudio + !Skin.HasSetting(MediaInfoIdleTime) + Window.IsActive(PlayerControls) + Skin.HasSetting(MediaInfo) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)]</visible>
+</include>
+<include name="Video_Overlay">
+	<visible>[Player.HasVideo + !Skin.HasSetting(MediaInfo) + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation)] | !Window.IsActive(Home)  + !Window.IsActive(2007) + [Player.HasVideo + !Skin.HasSetting(MediaInfoIdleTime) + !Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)] | !Window.IsActive(Home)  + !Window.IsActive(2007) + [Player.HasVideo + !Skin.HasSetting(MediaInfoIdleTime) + Window.IsActive(PlayerControls) + Skin.HasSetting(MediaInfo) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)]</visible>
+</include>
+
+<!-- Animations - FX =================================== -->
+
+<include name="common">
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+<include name="common-fade">
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+<include name="common-FX">
+	<animation type="Visible" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="500"/>
+	</animation>
+	<animation type="Hidden" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="400" delay="100"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-fade-x">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" start="0" end="100" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" start="100" end="0" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-FX-Home">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" start="0" end="100" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="rotatey" center="360" start="90" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" start="100" end="0" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-fade-normal">
+	<animation type="Visible" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="1000"/>
+	</animation>
+	<animation type="Hidden" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" delay="200" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" start="0" end="100" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" start="100" end="0" time="500"/>
+	</animation>
+</include>
+<include name="common-fade-quick">
+	<animation type="Visible" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="0"/>
+	</animation>
+	<animation type="Hidden" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="0"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-fade-home">
+	<animation type="Visible" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="500"/>
+	</animation>
+	<animation type="Hidden" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" delay="100" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" start="0" end="100" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" start="100" end="0" time="500"/>
+	</animation>
+</include>
+<include name="common-effect">
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+</include>
+<include name="common-Black">
+	<animation type="Visible" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="100"/>
+	</animation>
+	<animation type="Hidden" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="100"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="600" delay="300"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="0" center="360,288" acceleration="1" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		 <effect type="fade" time="400" delay="100"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="Volume-Rotate">
+	<animation type="WindowOpen">
+		<effect type="rotate" start="90" end="90" center="400,100" time="0"/>
+	</animation>
+	<animation type="WindowClose">
+		<effect type="rotate" start="90" end="90" center="400,100" time="0"/>
+	</animation>
+</include>
+
+<!-- Animation - Normal Lines ========================= -->
+
+<include name="common-FX-1">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="300" end="100" center="360,288" acceleration="-1" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="300" center="360,288" acceleration="1" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-FX-2">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="300" end="100" center="360,288" acceleration="-1" time="500" delay="100"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="300" center="360,288" acceleration="1" time="500" delay="100"/>
+	</animation>
+	<animation type="Windowclose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-FX-3">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="300" end="100" center="360,288" acceleration="-1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="300" center="360,288" acceleration="1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+</include>
+
+<!-- Animation - Reverse Lines ======================== -->
+
+<include name="common-FX-4">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" start="0" end="0" time="0"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="0" center="360,288" acceleration="1" time="500" delay="0"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-FX-5">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" start="0" end="0" time="0"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="0" center="360,288" acceleration="1" time="500" delay="100"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="common-FX-6">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" start="0" end="0" time="0"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="0" center="360,288" acceleration="1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" reversible="false" tween="circle" easing="inout"/>
+	</animation>
+</include>
+
+<!-- Animation - Special Lines ========================= -->
+
+<include name="Lines-Special">
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+		<include>FX-ShutDownMenu</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+		<include>FX-ShutDownMenu</include>
+	</control>
+</include>
+
+<!-- Animation - Others ============================= -->
+
+<include name="FX-Button">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="300" end="100" center="360,288" acceleration="-1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="300" center="360,288" acceleration="1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500" delay="100"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="FX-ShutDownMenu">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="1000" end="100" center="360,288" acceleration="-1" time="500"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="zoom" start="1000" end="100" center="360,288" acceleration="-1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="zoom" start="100" end="1000" center="360,288" acceleration="1" time="500"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500" delay="100"/>
+		<effect type="zoom" start="100" end="1000" center="360,288" acceleration="1" time="500" delay="200"/>
+	</animation>
+</include>
+<include name="FX-PlayerControl">
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	<animation effect="zoom" start="300" end="100" center="60,-212" acceleration="-1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="300" center="60,-212" acceleration="1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+<include name="FX-Settings">
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="zoom" start="1000" end="100" center="360,288" acceleration="-1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="100"/>
+		<effect type="rotatey" center="360" start="90" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="zoom" start="100" end="1000" center="360,288" acceleration="1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500" delay="100"/>
+		<effect type="rotatey" center="360" start="0" end="-90" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="MediaOverlay">
+	<animation type="Visible" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="500"/>
+		<effect type="zoom" start="1000" end="100" center="360,288" acceleration="-1" time="500" delay="200"/>
+	</animation>
+	<animation type="Hidden" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="500" delay="100"/>
+		<effect type="zoom" start="100" end="1000" center="360,288" acceleration="1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="500"/>
+		<effect type="zoom" start="1000" end="100" center="360,288" acceleration="-1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowOpen" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500"/>
+		<effect type="rotatey" center="360" start="450" end="0" time="500" tween="circle" easing="inout"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate)">
+		<effect type="fade" time="500" delay="100"/>
+		<effect type="zoom" start="100" end="1000" center="360,288" acceleration="1" time="500" delay="200"/>
+	</animation>
+	<animation type="WindowClose" condition="!Skin.HasSetting(Animate) + !Skin.HasSetting(Window-Animation)">
+		<effect type="fade" time="500" delay="100"/>
+		<effect type="rotatey" center="360" start="0" end="-450" time="500" tween="circle" easing="inout"/>
+	</animation>
+</include>
+<include name="DialogInfo">
+	<animation effect="fade" time="1000" delay="200" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="fade" time="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+	<animation effect="fade" time="1000" delay="200" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" time="200" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+</include>
+<include name="ButtonMenu-Arrows">
+	<animation effect="fade" start="0" end="90" time="800" condition="!Skin.HasSetting(Animate)">visible</animation>
+	<animation effect="fade" start="90" end="0" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+</include>
+<include name="FullScreenInfo">
+	<animation effect="fade" time="300" condition="!Skin.HasSetting(Animate)">visible</animation>
+	<animation effect="fade" time="300" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+</include>
+
+<!-- Animation - Settings.xml (4x3) ============= -->
+
+<include name="SettingsIcon_1_4x3">
+	<animation effect="zoom" start="100" end="105" center="137,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="137,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_2_4x3">
+	<animation effect="zoom" start="100" end="105" center="277,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="277,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_3_4x3">
+	<animation effect="zoom" start="100" end="105" center="417,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="417,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_4_4x3">
+	<animation effect="zoom" start="100" end="105" center="557,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="557,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_5_4x3">
+	<animation effect="zoom" start="100" end="105" center="137,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="137,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_6_4x3">
+	<animation effect="zoom" start="100" end="105" center="277,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="277,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_7_4x3">
+	<animation effect="zoom" start="100" end="105" center="417,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="417,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_8_4x3">
+	<animation effect="zoom" start="100" end="105" center="557,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="557,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+
+<!-- Animation - Settings.xml (16x9) ============ -->
+
+<include name="SettingsIcon_1_16x9">
+	<animation effect="zoom" start="100" end="105" center="147,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="147,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_2_16x9">
+	<animation effect="zoom" start="100" end="105" center="287,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="287,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_3_16x9">
+	<animation effect="zoom" start="100" end="105" center="427,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="427,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_4_16x9">
+	<animation effect="zoom" start="100" end="105" center="567,200" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="567,200" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_5_16x9">
+	<animation effect="zoom" start="100" end="105" center="147,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="147,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_6_16x9">
+	<animation effect="zoom" start="100" end="105" center="287,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="287,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_7_16x9">
+	<animation effect="zoom" start="100" end="105" center="427,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="427,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+<include name="SettingsIcon_8_16x9">
+	<animation effect="zoom" start="100" end="105" center="567,360" acceleration="-1" time="100" condition="!Skin.HasSetting(Animate)">Focus</animation>
+	<animation effect="zoom" start="105" end="100" center="567,360" acceleration="1" time="50" condition="!Skin.HasSetting(Animate)">Unfocus</animation>
+</include>
+
+<!-- Background ================================= -->
+
+<include name="Background">
+	<control type="visualisation">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<visible>!Skin.HasSetting(Visualisation) + Player.HasMedia</visible>
+	</control>
+	<control type="videowindow">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<visible>!Skin.HasSetting(Videowindow) + Player.HasMedia</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<include>common-effect</include>
+		<visible>Skin.HasSetting(Animation)</visible>
+		<animation effect="fade" condition="!Window.Previous(startup)" time="300">WindowOpen</animation>
+	</control>
+	<control type="multiimage">
+		<description>Default Background</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(Custom-Background)</info>
+		<colordiffuse>90ffffff</colordiffuse>
+		<visible>!Skin.HasSetting(Custom-Background)</visible> 
+	</control>
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<imagepath>-</imagepath>
+		<info>Skin.String(Custom-Background-Folder)</info>
+		<colordiffuse>90ffffff</colordiffuse>
+		<visible>!Skin.HasSetting(Custom-Background-Folder)</visible> 
+	</control>
+</include>
+
+<!-- Menu - Number of Files, Time and Titles ===== -->
+
+<include name="Window-Files">
+	<control type="label" id="12">
+		<posx>80</posx>
+		<posy>500</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>grey2</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<include>Common-Visible</include>
+	</control>
+</include>
+<include name="Window-Title">
+	<type>label</type>
+	<id>14</id>
+	<align>left</align> 
+	<posx>55</posx> 
+	<posy>35</posy>
+	<font>special16</font>
+	<textcolor>grey2</textcolor>
+	<shadowcolor>black</shadowcolor>
+	<include>common-FX</include>
+	<visible>!Skin.HasSetting(WindowTitle)</visible>
+</include>
+<include name="Window-Title-NoFX">
+	<type>label</type>
+	<id>14</id>
+	<align>left</align> 
+	<posx>55</posx> 
+	<posy>35</posy>
+	<font>special16</font>
+	<textcolor>grey2</textcolor>
+	<shadowcolor>black</shadowcolor>
+	<visible>!Skin.HasSetting(WindowTitle)</visible>
+</include>
+<include name="Menu-Time">
+	<control type="label">
+		<id>201</id>
+		<posx>660</posx>
+		<posy>35</posy>
+		<label>-</label>
+		<info>System.Time</info>
+		<align>right</align>
+		<font>special16</font>
+		<textcolor>grey2</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<include>common-effect</include>
+		<visible>!Skin.HasSetting(Time)</visible>
+	</control>
+</include>
+
+<!-- Black Panels ================================= -->
+
+<include name="Black-Panel">
+	<control type="image">
+		<posx>63</posx>
+		<posy>115</posy>
+		<width>595</width>
+		<height>372</height>
+		<texture>Black-Special.png</texture>
+		<include>common-Black</include>
+
+		<!-- <include>MenuBG</include> -->
+
+		<visible>!Skin.HasSetting(Black-Panel)</visible>
+	</control>
+</include>
+<include name="Black-Panel2">
+	<control type="image">
+		<posx>63</posx>
+		<posy>115</posy>
+		<width>595</width>
+		<height>372</height>
+		<texture>Black-Special.png</texture>
+		<include>common-Black</include>
+
+		<!-- <include>MenuBG2</include> -->
+
+		<visible>!Skin.HasSetting(Black-Panel)</visible>
+	</control>
+</include>
+<include name="Black-Special">
+	<control type="image">
+		<posx>63</posx>
+		<posy>106</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Top.png</texture>
+		<include>FX-ShutDownMenu</include>
+	</control>
+	<control type="image">
+		<posx>63</posx>
+		<posy>414</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Bottom.png</texture>
+		<include>FX-ShutDownMenu</include>
+	</control>
+</include>
+<include name="Black-Overlay">
+	<control type="image">
+		<posx>63</posx>
+		<posy>115</posy>
+		<width>595</width>
+		<height>372</height>
+		<texture>Black.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-effect</include>
+		<visible>Window.IsActive(PlayerControls) + Skin.HasSetting(MediaInfo)</visible>
+	</control>
+</include>
+
+<!-- Home - Guider =============================== -->
+
+<include name="Guider">
+	<!-- <control type="group">
+		<include>common-FX-1</include>
+		<include>common-fade-normal</include>
+		<include>Home-Visible</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>720</width>
+			<height>10</height>
+			<texture>Black.png</texture>
+			<colordiffuse>50ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>513</posy>
+			<width>720</width>
+			<height>10</height>
+			<texture>Black.png</texture>
+			<colordiffuse>50ffffff</colordiffuse>
+		</control>
+	</control> -->
+</include>
+
+<!-- Home - Icon ================================= -->
+
+<include name="Big-Icon-4x3">
+	<type>image</type>
+	<posx>0</posx>
+	<posy>-20</posy>
+	<width>256</width>
+	<height>256</height>
+	<colordiffuse>50ffffff</colordiffuse>
+	<include>Icon-Animation</include>
+</include>
+<include name="Big-Icon-16x9">
+	<type>image</type>
+	<posx>0</posx>
+	<posy>-20</posy>
+	<width>192</width>
+	<height>256</height>
+	<colordiffuse>50ffffff</colordiffuse>
+	<include>Icon-Animation</include>
+</include>
+
+<!-- Lines ====================================== -->
+
+<include name="Lines">
+
+	<!-- Lines normal -->
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-1</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-1</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-2</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-2</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+		<include>common-FX-3</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+		<include>common-FX-3</include>
+	</control>
+
+	<!-- Lines Reverse -->
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-4</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-4</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-5</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-5</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-6</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-6</include>
+	</control>
+</include>
+
+<include name="Lines-2">
+
+	<!-- Lines Normal Animation-->
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-1</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>450</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-1</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-2</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>450</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-3</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+		<include>common-FX-3</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>450</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+		<include>common-FX-3</include>
+	</control>
+
+	<!-- Lines Reverse Animation-->
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-4</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>450</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX-4</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-5</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>450</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-5</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-6</include>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>450</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-FX-6</include>
+	</control>
+</include>
+</includes>

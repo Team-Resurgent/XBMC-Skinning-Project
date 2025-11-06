@@ -1,0 +1,99 @@
+<window id="2004">
+
+	<controls>
+	
+		<control type="group">
+		
+			<posx>640</posx>
+			<posy>500</posy>
+			<include>anim-musicoverlay</include>
+					
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>620</width>
+				<height>200</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- album cover -->
+			<control type="image">
+				<info>MusicPlayer.Cover</info>
+				<width>160</width>
+				<height>160</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<!-- title -->
+			<control type="label">
+				<label>title</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>20</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Title]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>20</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- artist -->
+			<control type="label">
+				<label>artist</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>60</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>60</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- album -->
+			<control type="label">
+				<label>album</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>100</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Album]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>100</posy>
+				<textcolor>overlay-infolabel</textcolor>
+			</control>
+			<!-- time -->
+			<control type="label">
+				<label>time</label>
+				<height>40</height>
+				<posx>300</posx>
+				<posy>140</posy>
+				<textcolor>overlay-label</textcolor>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+				<width>280</width>
+				<height>40</height>
+				<posx>320</posx>
+				<posy>140</posy>
+				<textcolor>overlay-time</textcolor>
+			</control>	
+		</control>
+		
+	</controls>
+	
+</window>

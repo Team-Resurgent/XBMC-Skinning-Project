@@ -1,0 +1,501 @@
+case "buttonM":
+					{
+						XButtonM xb = new XButtonM();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						if (drLabels["textureFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureFocus"];
+							xb.Picture.Add("textureFocus",p);
+						}
+
+						if (drLabels["textureNoFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureNoFocus"];
+							xb.Picture.Add("textureNoFocus",p);
+						}
+
+						
+						xb.Up = this.GetValue(drLabels, "onup");
+						xb.Down = this.GetValue(drLabels, "ondown");
+						xb.Left = this.GetValue(drLabels, "onleft");
+						xb.Right = this.GetValue(drLabels, "onright");
+						xb.Hyperlink = this.GetValue(drLabels, "hyperlink");
+
+						xb.Font = this.GetValue(drLabels, "font");
+					
+						xb.Labeltext = "-";
+
+						xb.Description = this.GetValue(drLabels, "description");
+
+						XColor xc1 = new XColor();
+						xc1.Color = this.GetValue(drLabels, "textcolor");
+
+						XColor xc2 = new XColor();
+						xc2.Color = this.GetValue(drLabels, "colordiffuse");
+
+						XColor xc3 = new XColor();
+						xc3.Color = this.GetValue(drLabels, "disabledcolor");
+
+						xb.XColor.Add("textcolor",xc1);
+						xb.XColor.Add("colordiffuse",xc2);
+						xb.XColor.Add("disabledcolor",xc3);
+
+						skin.XButtonM.Add("button",xb);
+
+						break;
+					}
+
+					case "spinbutton":
+					{
+						XSpinButton xb = new XSpinButton();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+						
+						xb.Up = this.GetValue(drLabels, "onup");
+						xb.Down = this.GetValue(drLabels, "ondown");
+						xb.Left = this.GetValue(drLabels, "onleft");
+						xb.Right = this.GetValue(drLabels, "onright");
+						xb.Hyperlink = this.GetValue(drLabels, "hyperlink");
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						if (drLabels["textureDownFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureDownFocus"];
+							xb.Picture.Add("textureDownFocus",p);
+						}
+
+						if (drLabels["textureUpFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureUpFocus"];
+							xb.Picture.Add("textureUpFocus",p);
+						}
+
+						if (drLabels["textureFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureFocus"];
+							xb.Picture.Add("textureFocus",p);
+						}
+
+						if (drLabels["textureNoFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureNoFocus"];
+							xb.Picture.Add("textureNoFocus",p);
+						}
+
+						xb.Description = this.GetValue(drLabels, "description");
+
+						XColor xc1 = new XColor();
+						xc1.Color = this.GetValue(drLabels, "textcolor");
+
+						XColor xc2 = new XColor();
+						xc2.Color = this.GetValue(drLabels, "colordiffuse");
+						xb.Up = this.GetValue(drLabels, "onup");
+						xb.Down = this.GetValue(drLabels, "ondown");
+						xb.Left = this.GetValue(drLabels, "onleft");
+						xb.Right = this.GetValue(drLabels, "onright");
+						xb.Hyperlink = this.GetValue(drLabels, "hyperlink");
+
+						XColor xc3 = new XColor();
+						xc3.Color = this.GetValue(drLabels, "disabledcolor");
+
+						xb.XColor.Add("textcolor",xc1);
+						xb.XColor.Add("colordiffuse",xc2);
+						xb.XColor.Add("disabledcolor",xc3);
+
+						skin.XSpinButton.Add("spinbutton",xb);
+
+						break;
+					}
+
+					case "togglebutton":
+					{
+						XButtonT xb = new XButtonT();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						if (drLabels["textureFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureFocus"];
+							xb.Picture.Add("textureFocus",p);
+						}
+
+						if (drLabels["textureNoFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureNoFocus"];
+							xb.Picture.Add("textureNoFocus",p);
+						}
+
+						if (drLabels["AltTextureFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["AltTextureFocus"];
+							xb.Picture.Add("AltTextureFocus",p);
+						}
+
+						if (drLabels["AltTextureNoFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["AltTextureNoFocus"];
+							xb.Picture.Add("AltTextureNoFocus",p);
+						}
+
+						xb.Font = this.GetValue(drLabels, "font");
+						
+						xb.Labeltext = "-";
+
+						xb.Description = this.GetValue(drLabels, "description");
+
+						XColor xc1 = new XColor();
+						xc1.Color = this.GetValue(drLabels, "textcolor");
+
+						XColor xc2 = new XColor();
+						xc2.Color = this.GetValue(drLabels, "colordiffuse");
+
+						XColor xc3 = new XColor();
+						xc3.Color = this.GetValue(drLabels, "disabledcolor");
+
+						xb.XColor.Add("textcolor",xc1);
+						xb.XColor.Add("colordiffuse",xc2);
+						xb.XColor.Add("disabledcolor",xc3);
+
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+						skin.XButtonT.Add("togglebutton",xb);
+
+						break;
+					}
+
+case "ram":
+					{
+						XRam xb = new XRam();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						if (drLabels["textureFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + this.GetValue(drLabels ,"gfxThumbDefault");
+							p.Pichieght = this.GetValue(drLabels ,"gfxThumbHeight");
+							p.Picwidth = this.GetValue(drLabels ,"gfxThumbWidth");
+							p.Spacex = this.GetValue(drLabels ,"gfxThumbSpaceX");
+							p.Spacey = this.GetValue(drLabels ,"gfxThumbSpaceY");
+							xb.Picture.Add("textureFocus",p);
+						}
+
+						xb.Font = this.GetValue(drLabels ,"font");
+
+
+
+						xb.Feed = Convert.ToString(drLabels["feed"]);
+
+						xb.Description = this.GetValue(drLabels, "description");
+
+						XColor xc1 = new XColor();
+
+						XColor xc2 = new XColor();
+						xc2.Color = this.GetValue(drLabels, "textcolor");
+
+						XColor xc3 = new XColor();
+						xc3.Color = this.GetValue(drLabels, "selectedColor");
+
+						xb.XColor.Add("titlecolor",xc1);
+						xb.XColor.Add("textcolor",xc2);
+						xb.XColor.Add("selectedColor",xc3);
+
+						skin.XRam.Add("ram",xb);
+
+						break;
+					}
+
+					case "slider":
+					{
+						XSlider xb = new XSlider();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						xb.Font = this.GetValue(drLabels, "font");
+						
+						//xb.Labeltext = getlabel.GetLabelFromValue(Convert.ToInt32(drLabels["label"]),path);
+
+						xb.Description = this.GetValue(drLabels, "description");
+
+						XColor xc1 = new XColor();
+						xc1.Color = this.GetValue(drLabels, "titlecolor");
+
+						XColor xc2 = new XColor();
+						xc2.Color = this.GetValue(drLabels, "textcolor");
+
+						XColor xc3 = new XColor();
+						xc3.Color = this.GetValue(drLabels, "selectedColor");
+
+						xb.XColor.Add("titlecolor",xc1);
+						xb.XColor.Add("textcolor",xc2);
+						xb.XColor.Add("selectedColor",xc3);
+
+						xb.XOffset = this.GetValue(drLabels, "controlOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "controlOffsetY");
+
+						skin.XSlider.Add("slider",xb);
+
+						break;
+					}
+
+case "textbox":
+					{
+						XtextArea xb = new XtextArea();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						if (drLabels["textureUp"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + this.GetValue(drLabels, "textureUp");
+							p.Pichieght = this.GetValue(drLabels, "spinHeight");
+							p.Picwidth = this.GetValue(drLabels, "spinWidth");
+							p.Picxpos = this.GetValue(drLabels, "spinPosX");
+							p.Picypos = this.GetValue(drLabels, "spinPosY");
+							xb.Picture.Add("textureUp",p);
+						}
+
+						if (drLabels["textureDown"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureDown"];
+							xb.Picture.Add("textureDown",p);
+						}
+
+						if (drLabels["textureUpFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureUpFocus"];
+							xb.Picture.Add("textureUpFocus",p);
+						}
+
+						if (drLabels["textureDownFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureDownFocus"];
+							xb.Picture.Add("textureNoFocus",p);
+						}
+
+						if (drLabels["image"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["image"];
+							xb.Picture.Add("image",p);
+						}
+
+						xb.Font = this.GetValue(drLabels, "font");
+
+						xb.Description = this.GetValue(drLabels, "description");
+
+						XColor xc1 = new XColor();
+						xc1.Color = this.GetValue(drLabels, "textcolor");
+
+						XColor xc2 = new XColor();
+						xc2.Color = this.GetValue(drLabels, "colordiffuse");
+
+						XColor xc4 = new XColor();
+						xc4.Color = this.GetValue(drLabels, "spinColor");
+
+						xb.XColor.Add("textcolor",xc1);
+						xb.XColor.Add("colordiffuse",xc2);
+						xb.XColor.Add("spinColor",xc4);
+
+						skin.XtextArea.Add("textbox",xb);
+
+						break;
+					}
+
+					case "progress":
+					{
+						XProgress xb = new XProgress();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						if (drLabels["texturebg"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["texturebg"];
+							xb.Picture.Add("texturebg",p);
+						}
+
+						if (drLabels["lefttexture"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["lefttexture"];
+							xb.Picture.Add("lefttexture",p);
+						}
+
+						if (drLabels["midtexture"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["midtexture"];
+							xb.Picture.Add("midtexture",p);
+						}
+
+						if (drLabels["righttexture"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["righttexture"];
+							xb.Picture.Add("righttexture",p);
+						}
+
+						xb.Description = this.GetValue(drLabels, "description");
+						xb.Visible = this.GetValue(drLabels, "visable]");
+
+						skin.XProgress.Add("progress",xb);
+
+						break;
+					}
+
+case "radiobutton":
+					{
+						XRadio xb = new XRadio();
+
+						xb.Save = true;
+
+						xb.ID = this.GetValue(drLabels, "id");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.YOffset = this.GetValue(drLabels, "textOffsetY");
+
+						xb.Xpos = this.GetValue(drLabels, "posX");
+						xb.Ypos = this.GetValue(drLabels, "posY");
+						xb.XWidth = this.GetValue(drLabels, "width");
+						xb.YHieght = this.GetValue(drLabels, "height");
+
+						
+						xb.Up = this.GetValue(drLabels, "onup");
+						xb.Down = this.GetValue(drLabels, "ondown");
+						xb.Left = this.GetValue(drLabels, "onleft");
+						xb.Right = this.GetValue(drLabels, "onright");
+
+						if (drLabels["textureRadioFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureRadioFocus"];
+							xb.Picture.Add("textureRadioFocus",p);
+						}
+
+						if (drLabels["textureRadioNoFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureRadioNoFocus"];
+							xb.Picture.Add("textureUpFocus",p);
+						}
+
+						if (drLabels["textureFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureFocus"];
+							xb.Picture.Add("textureFocus",p);
+						}
+
+						if (drLabels["textureNoFocus"] !=null)
+						{
+							Picture p = new Picture();
+							p.Path = mediapath + drLabels["textureNoFocus"];
+							xb.Picture.Add("textureNoFocus",p);
+						}
+
+						xb.Description = this.GetValue(drLabels, "description");
+						xb.Align = this.GetValue(drLabels, "align");
+						xb.XOffset = this.GetValue(drLabels, "textOffsetX");
+						xb.Shadow = this.GetValue(drLabels, "shadow");
+
+						XColor xc1 = new XColor();
+						xc1.Color = this.GetValue(drLabels, "textcolor");
+
+						XColor xc2 = new XColor();
+						xc2.Color = this.GetValue(drLabels, "colordiffuse");
+
+						XColor xc3 = new XColor();
+						xc3.Color = this.GetValue(drLabels, "disabledcolor");
+
+						xb.XColor.Add("textcolor",xc1);
+						xb.XColor.Add("colordiffuse",xc2);
+						xb.XColor.Add("disabledcolor",xc3);
+
+						skin.XRadio.Add("radiobutton",xb);
+
+						break;
+					}

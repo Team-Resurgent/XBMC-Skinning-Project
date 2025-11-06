@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!--  strings 31000 thru 31999 reserved for skins  -->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">Файловый менеджер</string>
+  <string id="31001">Info</string>
+  <string id="31002">Сброс</string>
+  <string id="31003">Анализ</string>
+  <string id="31004">Изменить</string>
+  <string id="31005">Разное</string>
+  <string id="31006">ВИзуальное</string>
+  <string id="31007">Вкл/Выкл</string>
+  <string id="31008">Без оценки</string>
+  <string id="31009">Смотрите свои</string>  <!-- used for Movies -->
+  <string id="31010">Смотрите свои</string>  <!-- used for TV Shows -->
+  <string id="31011">Смотрите свое</string>  <!-- used for Videos -->
+  <string id="31012">Любимая</string>
+  <string id="31013">Просматривайте</string>
+  <string id="31014">Используйте</string>
+  <string id="31015">Проверить</string>
+  <string id="31016">Настройки</string>
+  <string id="31017">XBMC</string>
+  <string id="31018">Основные данные</string>
+  <string id="31019">Проиграть</string>
+  <string id="31020">Берем зонтик?</string>
+  <string id="31021">по</string>
+  <string id="31022">Недавно добавленные</string>
+  <string id="31023">Последние</string>
+  <string id="31023">Latest</string>
+  <string id="31024">Page</string>
+  <string id="31025">Items</string>
+
+  <!-- Options Menu -->
+  <string id="31100">Постер</string>
+  <string id="31101">Порядок сортировки</string>
+  <string id="31102">Настройки</string>
+  <string id="31103">Витрина</string>
+  <string id="31104">Показывать большие часы</string>
+  <string id="31105">Водопад</string>
+  <string id="31106">Выставка</string>
+  <string id="31107">Короткий список</string>
+  <string id="31108">Экспонирование</string>
+  <string id="31109">Большой список</string>
+
+  <!-- Settings -->
+  <string id="31200">Показать сюжет</string>
+  <string id="31201">Обновлялось</string>
+  <string id="31202">(путь к папке с фоном)</string>
+  <string id="31203">"Задники"</string>
+  <string id="31204">Меню настроек</string>
+  <string id="31205">Спрятать</string>
+  <string id="31206">Часы</string>
+  <string id="31207">Спрятать Погоду на стартовом экране</string>
+  <string id="31208">Отключить</string>
+  <string id="31209">Настраиваем опции:</string>
+  <string id="31210">Меню</string>
+  <string id="31211">Спрятать сюжет в Video OSD</string>
+  <string id="31212">Прятать пометку "Просмотрено"</string>
+  <string id="31213">Прятать эскизы</string>
+  <string id="31214">Показать обзор</string>
+  <string id="31215">Показать тип содержимого</string>
+  <string id="31216">Прятать количество файлов</string>
+  <string id="31217">Использовать "портретные" эскизы для сериалов</string>
+  <string id="31218">Использовать минимальный Video OSD</string>
+  <string id="31219">Прятать фон с "белым шумом"</string>
+  <string id="31220">Использовать анимированные эскизы погоды</string>
+  <string id="31221">Hide Latest Videos</string>
+
+  <!-- Video -->
+  <string id="31300">Н/Д</string>
+  <string id="31301">Эскиз</string>
+  <string id="31302">Фанарт</string>
+  <string id="31303">Сезоны</string>
+  <string id="31304">Досмотрим примерно к:</string>
+
+  <!-- Music -->
+  <string id="31400">Закончен</string>
+  <string id="31401">Сейчас</string>
+  <string id="31402">Выбор визуализации</string>
+  <string id="31403">Наборы визуализации</string>
+  <string id="31404">Настройки визуализации</string>
+  <string id="31405">Тексты</string>
+  <string id="31406">Путь к текстам</string>
+  <string id="31407">Open playlist</string>
+  <string id="31408">Save playlist</string>
+  <string id="31409">Close playlist</string>
+  <string id="31410">System music files</string>
+  <string id="31411">Current playlist</string>
+
+  <!-- Dialogs -->
+  <string id="31500">Выбор профиля</string>
+  <string id="31501">Без звука</string>
+  <string id="31502">Создан</string>
+  <string id="31503">Кодек</string>
+
+</strings>

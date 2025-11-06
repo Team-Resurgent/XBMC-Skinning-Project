@@ -1,0 +1,875 @@
+<window id="7">
+
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Settings text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>10007</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+<control type="grouplist" id="9000">
+	<onup>9000</onup>
+	<ondown>9000</ondown>
+        <posx>60</posx>
+         <posy>120</posy>
+	<width>140</width>
+
+      <control type="button" id="100">
+        <description>Button Default Values</description>
+      <include>button</include>
+        <posx>60</posx>
+         <posy>120</posy>
+	<width>140</width>
+        <label>13278</label>
+        <font>font13</font>
+        <onleft>100</onleft>
+        <onright>100</onright>
+        <onup>106</onup>
+        <ondown>101</ondown>
+        <align>Left</align>
+      </control>
+      
+      <control type="button" id="101">
+        <description>Button Storage</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>157</posy>
+	<width>140</width>
+        <label>13277</label>
+        <font>font13</font>
+        <onleft>101</onleft>
+        <onright>101</onright>
+        <onup>100</onup>
+        <ondown>102</ondown>
+        <align>Left</align>
+      </control>
+      
+      <control type="button" id="102">
+        <description>Button HDD</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>194</posy>
+	<width>140</width>
+        <label>13275</label>
+        <font>font13</font>
+        <onleft>102</onleft>
+        <onright>102</onright>
+        <onup>101</onup>
+        <ondown>103</ondown>
+        <align>Left</align>
+      </control>
+
+      <control type="button" id="103">
+        <description>Button DVD</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>231</posy>
+	<width>140</width>
+        <label>13276</label>
+        <font>font13</font>
+        <onleft>103</onleft>
+        <onright>103</onright>
+        <onup>102</onup>
+        <ondown>104</ondown>
+        <align>Left</align>
+      </control>
+
+      <control type="button" id="104">
+        <description>Button Network</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>268</posy>
+	<width>140</width>
+        <label>13279</label>
+        <font>font13</font>
+        <onleft>104</onleft>
+        <onright>104</onright>
+        <onup>103</onup>
+        <ondown>105</ondown>
+        <align>Left</align>
+      </control>
+
+      <control type="button" id="105">
+        <description>Button VIDEO</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>305</posy>
+	<width>140</width>
+        <label>13280</label>
+        <font>font13</font>
+        <onleft>105</onleft>
+        <onright>105</onright>
+        <onup>104</onup>
+        <ondown>106</ondown>
+        <align>Left</align>
+      </control>
+
+      <control type="button" id="106">
+        <description>Button XBOX Hardware</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>342</posy>
+	<width>140</width>
+        <label>13281</label>
+        <font>font13</font>
+        <onleft>106</onleft>
+        <onright>106</onright>
+        <onup>105</onup>
+        <ondown>100</ondown>
+        <align>Left</align>
+      </control>
+
+</control>
+
+		<control type="group">
+			<description>Default Contents</description>
+			<include>contentpanelslide</include>
+			<visible>ControlGroup(9000).HasFocus(100)</visible>
+			<control type="label">
+				<description>Section Label</description>
+				<posx>215</posx>
+				<posy>120</posy>
+				<font>font13</font>
+				<label>20154</label>
+			</control>
+			<control type="label">
+				<description>Label 2</description>
+				<posx>215</posx>
+				<posy>150</posy>
+				<label>$LOCALIZE[13271] $INFO[system.cpuusage]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar diagram cpu usage</description>
+				<info>bar.cpuusage</info>
+				<visible>true</visible>
+				<posx>215</posx>
+				<posy>178</posy>
+				<width>490</width>
+				<height>9</height>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>215</posx>
+				<posy>193</posy>
+				<label>$LOCALIZE[139] $LOCALIZE[22011] $INFO[system.cputemperature]  -  $LOCALIZE[22010] $INFO[system.gputemperature]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>215</posx>
+				<posy>221</posy>
+				<label>$LOCALIZE[13300]: $INFO[system.fanspeed]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 5</description>
+				<posx>215</posx>
+				<posy>249</posy>
+				<label>$LOCALIZE[158] : $INFO[system.freememory]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 5</description>
+				<posx>680</posx>
+				<posy>249</posy>
+				<align>right</align>
+				<label>$LOCALIZE[20161] : $INFO[system.memory(total)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar diagram free memory</description>
+				<info>bar.freememory</info>
+				<visible>true</visible>
+				<posx>215</posx>
+				<posy>277</posy>
+				<width>490</width>
+				<height>9</height>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label">
+				<description>Label 6</description>
+				<posx>215</posx>
+				<posy>292</posy>
+				<label>$LOCALIZE[150]: $INFO[Network.IPAddress]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 7</description>
+				<posx>215</posx>
+				<posy>320</posy>
+				<label>$LOCALIZE[13287] $INFO[system.screenresolution]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 8</description>
+				<posx>215</posx>
+				<posy>348</posy>
+        <label>$LOCALIZE[13283] $INFO[system.kernelversion]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 9</description>
+				<posx>215</posx>
+				<posy>376</posy>
+				<label>$LOCALIZE[12390]: $INFO[system.uptime]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 10</description>
+				<posx>215</posx>
+				<posy>404</posy>
+				<label>$LOCALIZE[12394]: $INFO[system.totaluptime]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Storage Contents</description>
+			<include>contentpanelslide</include>
+			<visible>ControlGroup(9000).HasFocus(101)</visible>
+			<control type="label">
+				<description>Section Label</description>
+				<posx>215</posx>
+				<posy>120</posy>
+				<font>font13</font>
+				<label>20155</label>
+			</control>
+			<control type="label">
+				<description>Label 2</description>
+				<posx>215</posx>
+				<posy>150</posy>
+				<label>$INFO[system.dvdtraystate]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>215</posx>
+				<posy>178</posy>
+				<label>$INFO[system.freespace(c)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>680</posx>
+				<posy>178</posy>
+				<align>right</align>
+				<label>$INFO[system.totalspace(c)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar Free Space c:</description>
+				<info>bar.freespace(c)</info>
+				<visible>true</visible>
+				<posx>215</posx>
+				<posy>204</posy>
+				<width>490</width>
+				<height>9</height>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>215</posx>
+				<posy>216</posy>
+				<label>$INFO[system.freespace(e)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>680</posx>
+				<posy>216</posy>
+				<align>right</align>
+				<label>$INFO[system.totalspace(e)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar Free Space e:</description>
+				<info>bar.freespace(e)</info>
+				<visible>true</visible>
+				<posx>215</posx>
+				<posy>242</posy>
+				<width>490</width>
+				<height>9</height>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="group">
+				<visible>System.HasDriveF</visible>
+				<control type="label">
+					<description>Label 5</description>
+					<posx>215</posx>
+					<posy>254</posy>
+					<label>$INFO[system.freespace(f)]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Label 5</description>
+					<posx>680</posx>
+					<posy>254</posy>
+					<align>right</align>
+					<label>$INFO[system.totalspace(f)]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="progress">
+					<description>bar Free Space f:</description>
+					<info>bar.freespace(f)</info>
+					<visible>true</visible>
+					<posx>215</posx>
+					<posy>280</posy>
+					<width>490</width>
+					<height>9</height>
+					<texturebg>progress_back.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>progress_mid.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+				</control>
+			</control>
+			<control type="group">
+				<visible>System.HasDriveG</visible>
+				<control type="label">
+					<description>Label 6</description>
+					<posx>215</posx>
+					<posy>292</posy>
+					<label>$INFO[system.freespace(g)]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Label 10</description>
+					<posx>680</posx>
+					<posy>292</posy>
+					<align>right</align>
+					<label>$INFO[system.totalspace(g)]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="progress">
+					<description>bar Free Space g:</description>
+					<info>bar.freespace(g)</info>
+					<visible>true</visible>
+					<posx>215</posx>
+					<posy>318</posy>
+					<width>490</width>
+					<height>9</height>
+					<texturebg>progress_back.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>progress_mid.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="slide" time="0" end="0,-38" condition="!System.HasDriveF">conditional</animation>
+				<animation effect="slide" time="0" end="0,-38" condition="!System.HasDriveG">conditional</animation>
+				<control type="label">
+					<description>Label 7</description>
+					<posx>215</posx>
+					<posy>330</posy>
+					<label>$INFO[system.freespace(x)]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Label 8</description>
+					<posx>215</posx>
+					<posy>358</posy>
+					<label>$INFO[system.freespace(y)]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Label 9</description>
+					<posx>215</posx>
+					<posy>386</posy>
+					<label>$INFO[system.freespace(z)]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Label 10</description>
+					<posx>215</posx>
+					<posy>414</posy>
+					<label>$LOCALIZE[20161]: $INFO[system.freespace]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="label">
+					<description>Label 10</description>
+					<posx>680</posx>
+					<posy>414</posy>
+					<align>right</align>
+					<label>$LOCALIZE[20161]: $INFO[system.totalspace]</label>
+					<font>font13</font>
+					<textcolor>d0ffffff</textcolor>
+				</control>
+				<control type="progress">
+					<description>bar Free Space Total</description>
+					<info>bar.freespace</info>
+					<visible>true</visible>
+					<posx>215</posx>
+					<posy>440</posy>
+					<width>490</width>
+					<height>9</height>
+					<texturebg>progress_back.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>progress_mid.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<description>HardDisk Contents</description>
+			<include>contentpanelslide</include>
+			<visible>ControlGroup(9000).HasFocus(102)</visible>
+			<control type="label">
+				<description>Section Label</description>
+				<posx>215</posx>
+				<posy>120</posy>
+				<font>font13</font>
+				<label>20156</label>
+			</control>
+			<control type="label">
+				<description>Label 2</description>
+				<posx>215</posx>
+				<posy>150</posy>
+				<label>$INFO[system.hddinfomodel]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>215</posx>
+				<posy>178</posy>
+				<label>$INFO[system.hddinfoserial]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>215</posx>
+				<posy>206</posy>
+				<label>$INFO[system.hddinfofirmware]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 5</description>
+				<posx>215</posx>
+				<posy>234</posy>
+				<label>$INFO[system.hddinfopw]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 6</description>
+				<posx>215</posx>
+				<posy>262</posy>
+				<label>$INFO[system.hddinfolockstate]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 7</description>
+				<posx>215</posx>
+				<posy>290</posy>
+				<label>$INFO[system.hddlockkey]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 8</description>
+				<posx>215</posx>
+				<posy>318</posy>
+				<label>$INFO[system.hddbootdate]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 9</description>
+				<posx>215</posx>
+				<posy>346</posy>
+				<label>$INFO[system.hddcyclecount]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 10</description>
+				<posx>215</posx>
+				<posy>374</posy>
+				<label>$INFO[system.hddtemperature]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>DVD-ROM Contents</description>
+			<include>contentpanelslide</include>
+			<visible>ControlGroup(9000).HasFocus(103)</visible>
+			<control type="label">
+				<description>Section Label</description>
+				<posx>215</posx>
+				<posy>120</posy>
+				<font>font13</font>
+				<label>20157</label>
+			</control>
+			<control type="label">
+				<description>Label 2</description>
+				<posx>215</posx>
+				<posy>150</posy>
+				<label>$INFO[system.dvdinfomodel]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>215</posx>
+				<posy>178</posy>
+				<label>$INFO[system.dvdinfofirmware]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>215</posx>
+				<posy>206</posy>
+				<label>$INFO[system.dvdzone]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 5</description>
+				<posx>215</posx>
+				<posy>234</posy>
+				<label>$INFO[system.dvdtraystate]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Network Contents</description>
+			<include>contentpanelslide</include>
+			<visible>ControlGroup(9000).HasFocus(104)</visible>
+			<control type="label">
+				<description>Section Label</description>
+				<posx>215</posx>
+				<posy>120</posy>
+				<font>font13</font>
+				<label>20158</label>
+			</control>
+			<control type="label">
+				<description>Label 2</description>
+				<posx>215</posx>
+				<posy>150</posy>
+				<label>$INFO[network.isdhcp]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>215</posx>
+				<posy>178</posy>
+				<label>$INFO[network.linkstate]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>215</posx>
+				<posy>206</posy>
+				<label>$INFO[network.macadress]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 5</description>
+				<posx>215</posx>
+				<posy>234</posy>
+				<label>$LOCALIZE[150]: $INFO[network.ipaddress]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 6</description>
+				<posx>215</posx>
+				<posy>262</posy>
+				<label>$INFO[network.subetadress]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 7</description>
+				<posx>215</posx>
+				<posy>290</posy>
+				<label>$LOCALIZE[13160]: $INFO[network.gatewayadress]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 8</description>
+				<posx>215</posx>
+				<posy>318</posy>
+				<label>$LOCALIZE[13161]: $INFO[network.dns1adress]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 9</description>
+				<posx>215</posx>
+				<posy>346</posy>
+				<label>$LOCALIZE[20307]: $INFO[network.dns2adress]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 10</description>
+				<posx>215</posx>
+				<posy>374</posy>
+				<label>$LOCALIZE[13295] $INFO[system.internetstate]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Video Contents</description>
+			<include>contentpanelslide</include>
+			<visible>ControlGroup(9000).HasFocus(105)</visible>
+			<control type="label">
+				<description>Section Label</description>
+				<posx>215</posx>
+				<posy>120</posy>
+				<font>font13</font>
+				<label>20159</label>
+			</control>
+			<control type="label">
+				<description>Label 2</description>
+				<posx>215</posx>
+				<posy>150</posy>
+				<label>$INFO[system.videoencoderinfo]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>215</posx>
+				<posy>178</posy>
+				<label>$LOCALIZE[13287] $INFO[system.screenresolution]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>215</posx>
+				<posy>206</posy>
+				<label>$INFO[system.avpackinfo]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 5</description>
+				<posx>215</posx>
+				<posy>234</posy>
+				<label>$INFO[system.xberegion]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Hardware Contents</description>
+			<include>contentpanelslide</include>
+			<visible>ControlGroup(9000).HasFocus(106)</visible>
+			<control type="label">
+				<description>Section Label</description>
+				<posx>215</posx>
+				<posy>120</posy>
+				<font>font13</font>
+				<label>20160</label>
+			</control>
+			<control type="label">
+				<description>Label 2</description>
+				<posx>215</posx>
+				<posy>150</posy>
+				<label>$INFO[system.xboxversion]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 3</description>
+				<posx>215</posx>
+				<posy>178</posy>
+				<label>$INFO[system.xboxserial]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 4</description>
+				<posx>215</posx>
+				<posy>206</posy>
+				<label>$LOCALIZE[13284] $INFO[system.cpufrequency]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 5</description>
+				<posx>215</posx>
+				<posy>234</posy>
+				<label>$INFO[system.modchip]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 6</description>
+				<posx>215</posx>
+				<posy>262</posy>
+				<label>$INFO[system.bios]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 7</description>
+				<posx>215</posx>
+				<posy>290</posy>
+				<label>$INFO[system.xboxproduceinfo]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 8</description>
+				<posx>215</posx>
+				<posy>318</posy>
+				<label>$INFO[system.controllerport(1)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 9</description>
+				<posx>215</posx>
+				<posy>346</posy>
+				<label>$INFO[system.controllerport(2)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 10</description>
+				<posx>215</posx>
+				<posy>374</posy>
+				<label>$INFO[system.controllerport(3)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label">
+				<description>Label 11</description>
+				<posx>215</posx>
+				<posy>402</posy>
+				<label>$INFO[system.controllerport(4)]</label>
+				<font>font13</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Misc Values</description>
+			<include>contentpanelslide</include>
+			<control type="label" id="50">
+				<description>Current Time</description>
+				<posx>215</posx>
+				<posy>465</posy>
+				<label>143</label>
+				<font>font12</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label" id="52">
+				<description>XBMC XBE BUILD Version</description>
+				<posx>215</posx>
+				<posy>490</posy>
+				<label>144</label>
+				<font>font12</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+			<control type="label" id="53">
+				<description>Mplayer DLL Version</description>
+				<posx>215</posx>
+				<posy>515</posy>
+				<label>144</label>
+				<font>font12</font>
+				<textcolor>d0ffffff</textcolor>
+			</control>
+		</control>
+
+  </controls>
+
+</window>

@@ -1,0 +1,70 @@
+<includes>
+
+	<!-- Custom8_Profile.xml -->
+
+	<include name="19000">
+		<label>Autostart</label>
+	</include>
+	<include name="19001">
+		<label>Animation</label>
+	</include>
+	<include name="19002">
+		<label>Reset Skin..</label>
+	</include>
+	<include name="19003">
+		<label>User - Profile</label>
+	</include>
+	<include name="19004">
+		<label>Logo</label>
+	</include>
+	<include name="19005">
+		<label>Profile</label>
+	</include>
+	<include name="19006">
+		<label>Show Resolution</label>
+	</include>
+	<include name="19007">
+		<label>Enable FTP Update</label>
+	</include>
+	<include name="19008">
+		<label>Enable XBMC Logo</label>
+	</include>
+	<include name="19009">
+		<label>Background...</label>
+	</include>
+	<include name="19010">
+		<label>Change..</label>
+	</include>
+	<include name="19011">
+		<label>max. 1024x768</label>
+	</include>
+
+	<!-- LoginScreen.xml -->
+
+	<include name="19012">
+		<label>User login</label>
+	</include>
+
+	<!-- MyPrograms.xml BUTTONS=LINK -->
+
+	<include name="button200">
+        <label>Games</label>
+      <onclick>XBMC.ReplaceWindow(1,Games)</onclick>
+	</include>
+
+	<include name="button201">
+        <label>Emulators</label>
+      <onclick>XBMC.ReplaceWindow(1,Emulators)</onclick>
+	</include>
+
+	<include name="button202">
+        <label>Programs</label>
+      <onclick>XBMC.ReplaceWindow(1,Programs)</onclick>
+	</include>
+
+	<include name="button203">
+        <label>DVD-Game</label>
+      <onclick>XBMC.ReplaceWindow(1,DVD-Game)</onclick>
+	</include>
+
+</includes>

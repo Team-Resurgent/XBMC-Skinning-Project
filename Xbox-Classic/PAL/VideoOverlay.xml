@@ -1,0 +1,41 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<include>Fade_Window_OpenClose_Animation</include>
+	<controls>
+		<control type="image" id="0">
+			<description>Icon Back</description>
+			<posx>45</posx>
+			<posy>370</posy>
+			<width>150</width>
+			<height>150</height>
+			<texture>Panel.png</texture>
+		</control>
+		<control type="videowindow">
+			<description>video preview window</description>
+			<posx>55</posx>
+			<posy>380</posy>
+			<width>130</width>
+			<height>115</height>
+		</control>
+		<control type="label" id="0">
+			<description>play time label</description>
+			<posx>120</posx>
+			<posy>496</posy>
+			<align>center</align>
+			<label>$INFO[videoplayer.Time]$INFO[videoplayer.Duration, / ]</label>
+			<align>left</align>
+			<font>font101</font>
+			<textcolor>green</textcolor>
+		</control>
+		<control type="fadelabel">
+			<description>album/artist/genre etc info label</description>
+			<width>150</width>
+			<posx>45</posx>
+			<posy>525</posy>
+			<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Director, - ]</label>
+			<font>font13</font>
+			<textcolor>green</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+	</controls>
+</window>

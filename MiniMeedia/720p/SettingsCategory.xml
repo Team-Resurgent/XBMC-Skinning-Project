@@ -1,0 +1,190 @@
+<window id="12">
+  <defaultcontrol>3</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+    <include>DateAndTime</include>
+
+    <control type="group">
+      <include>HideWhenLowerDialogActive</include>
+      <animation effect="slide" time="200" delay="0" tween="circle" easing="in" start="0,0" end="-1500,0" reversible="false" condition="Window.Next(Home)">WindowClose</animation>
+
+      <control type="group">
+        <description>Settings Menu Text (from Home)</description>
+        <include>HomeMainMenuPos</include>
+
+        <control type="group">
+          <description>Settings Category Menu Text</description>
+          <posx>HomeSubMenuBGOffset</posx>
+
+          <control type="group">
+            <posx>HomeSubMenuBGOffset</posx>
+            <animation effect="slide" time="300" delay="100" tween="circle" easing="out" start="-600,0" end="0,0" reversible="false">WindowOpen</animation>
+            <animation effect="slide" time="200" delay="0" tween="circle" easing="in" start="0,0" end="-600,0" reversible="false">WindowClose</animation>
+
+            <include>HomeMainMenuBG</include>
+
+            <control type="group" id="302">
+              <description>Settings Category Groups</description>
+
+              <control type="grouplist" id="3">
+                <description>main menu</description>
+                <posx>0</posx>
+                <posy>8</posy>
+                <width>HomeMainMenuBGWidth</width>
+                <height>118</height>
+                <orientation>vertical</orientation>
+                <focusposition>2</focusposition>
+                <scrolltime>200</scrolltime>
+                <onright>301</onright>
+		            <onleft>Skin.ToggleSetting(HideMusicNowPlayingInfo)</onleft>
+                <onup>3</onup>
+                <ondown>3</ondown>
+                <visible allowhiddenfocus="false">true</visible>
+              </control>
+
+              <control type="button" id="10">
+                <description>menu buttons</description>
+                <height>24</height>
+                <texturefocus>-</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <onclick>SetFocus(301)</onclick>
+		            <onleft>Skin.ToggleSetting(HideMusicNowPlayingInfo)</onleft>
+                <include>HomeMainMenuMainLabel</include>
+              </control>
+            </control>
+
+            <include>HomeMainMenuNavIndics</include>
+          </control>
+
+          <control type="group">
+            <posx>-35</posx>
+            <include>SettingsPrevScreenMenuAnim</include>
+
+            <control type="group">
+              <posy>30</posy>
+
+              <control type="label">
+                <label> $LOCALIZE[31016] </label>
+                <include>HomeMainMenuSubLabel</include>
+              </control>
+              <control type="label" id="2">
+                <label> $LOCALIZE[13000] </label>
+                <include>DialogTextColors</include>
+                <include>HomeMainMenuMainLabel</include>
+              </control>
+            </control>
+
+            <include>HomeMainMenuBG</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <posx>-70</posx>
+            <include>SettingsPrevScreenMenuAnim</include>
+
+          <control type="group">
+            <posy>30</posy>
+
+            <control type="label">
+              <label> $LOCALIZE[31016] </label>
+              <include>HomeMainMenuSubLabel</include>
+            </control>
+            <control type="label">
+              <label> $LOCALIZE[13000] </label>
+              <include>DialogTextColors</include>
+              <include>HomeMainMenuMainLabel</include>
+            </control>
+          </control>
+
+          <include>HomeMainMenuBG</include>
+        </control>
+      </control>
+    </control>
+
+    <!-- Main control area -->
+    <control type="group">
+      <include>HideWhenLowerDialogActive</include>
+
+      <control type="group" id="301">
+        <description>Settings Options Area</description>
+        <posx>630</posx>
+        <posy>460</posy>
+        <visible allowhiddenfocus="true">ControlGroup(301).HasFocus()</visible>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="700,0" end="0,0">Visible</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">Hidden</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">WindowClose</animation>
+
+        <control type="image">
+          <width>660</width>
+          <height>270</height>
+          <include>OverlayArea</include>
+        </control>
+
+        <control type="grouplist" id="5">
+          <description>control_area</description>
+          <posx>16</posx>
+          <posy>9</posy>
+          <width>620</width>
+          <height>240</height>
+          <onup>1000</onup>
+          <ondown>5</ondown>
+          <onleft>302</onleft>
+          <onright>5</onright>
+          <itemgap>0</itemgap>
+          <pagecontrol>101</pagecontrol>
+        </control>
+
+        <control type="button" id="7">
+          <description>default_button</description>
+          <posx>-10</posx>
+          <posy>-10</posy>
+          <width>600</width>
+          <height>30</height>
+          <texturefocus border="3">black_rounded.png</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <textoffsetx>10</textoffsetx>
+          <font>MediumDefaultFont</font>
+        </control>
+
+        <control type="radiobutton" id="8">
+          <description>default_radio_button</description>
+          <posx>-10</posx>
+          <width>600</width>
+          <height>30</height>
+          <textoffsetx>10</textoffsetx>
+          <radioposx>560</radioposx>
+          <font>MediumDefaultFont</font>
+          <aligny>center</aligny>
+          <texturefocus border="3">black_rounded.png</texturefocus>
+        </control>
+
+        <control type="spincontrolex" id="9">
+          <description>default_spincontrol</description>
+          <posx>-10</posx>
+          <width>600</width>
+          <height>30</height>
+          <textoffsetx>10</textoffsetx>
+          <font>MediumDefaultFont</font>
+          <align>left</align>
+          <texturefocus border="3">black_rounded.png</texturefocus>
+        </control>
+
+        <control type="scrollbar" id="101">
+          <posx>702</posx>
+          <posy>65</posy>
+          <height>400</height>
+          <onup>61</onup>
+          <ondown>61</ondown>
+        </control>
+
+      </control>
+    </control>
+
+    <include>MusicNowPlaying</include>
+    <include>VideoOverlayUI</include>
+
+  </controls>
+</window>

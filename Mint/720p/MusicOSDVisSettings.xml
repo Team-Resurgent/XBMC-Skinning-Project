@@ -1,0 +1,87 @@
+<!-- TODO -->
+<window id="121">
+
+	<defaultcontrol>2</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>220</posx>
+		<posy>110</posy>
+	</coordinates>
+	
+	<controls>
+	
+		<!-- background -->
+		<control type="image">
+			<texture border="12">bg-dialog.png</texture>
+			<width>446</width>
+			<height>406</height>
+			<posx>-25</posx>
+			<posy>-11</posy>
+			<colordiffuse>dialog</colordiffuse>
+		</control>
+		<control type="label" id="2">
+			<description>Settings Label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>420</width>
+			<font>dialog</font>
+			<textcolor>type-dialog-header</textcolor>
+		</control>
+		<control type="label" id="3">
+			<description>No Settings Label</description>
+			<posx>0</posx>
+			<posy>170</posy>
+			<width>408</width>
+			<align>center</align>
+			<font>dialog</font>
+			<textcolor>type-dialog-header</textcolor>
+		</control>
+		<control type="spincontrol" id="60">
+			<description>Next page button</description>
+			<posx>400</posx>
+			<posy>8</posy>
+			<subtype>page</subtype>
+			<onleft>5</onleft>
+			<onright>28</onright>
+			<ondown>5</ondown>
+			<onup>5</onup>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>-1</posx>
+			<posy>40</posy>
+			<width>438</width>
+			<height>310</height>
+			<pagecontrol>60</pagecontrol>
+			<onleft>28</onleft>
+			<onright>60</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<width>300</width>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		
+	</controls>
+
+</window>

@@ -1,0 +1,359 @@
+<window id="2999">
+
+  <defaultcontrol always="true">10</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+
+    <control type="button" id="10">
+      <description>ReplaceWindow Trigger</description>
+      <posx>35</posx>
+      <posy>235</posy>
+      <font>font14</font>
+      <onfocus>ReplaceWindow(Home)</onfocus>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onup>10</onup>
+      <ondown>10</ondown>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <animation effect="fade" time="5000">Focus</animation>
+      <visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
+    </control>
+
+		<control type="button" id="10">
+			<description>trigger with startup Playlist</description>
+			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" time="5000">Focus</animation>
+			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+		</control>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+     <control type="image" id="1">
+        <posx>50</posx>
+        <posy>300</posy>
+      <width>150</width>
+      <height>100</height>
+      <texture>home-myprograms.png</texture>
+<visible>false</visible>
+      <animation effect="fade" start="0" end="70" time="2000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+    </control>
+
+     <control type="image" id="1">
+        <posx>150</posx>
+        <posy>300</posy>
+      <width>150</width>
+      <height>100</height>
+      <texture>home-mypictures.png</texture>
+<visible>false</visible>
+      <animation effect="fade" start="0" end="70" time="2000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+    </control>
+
+
+     <control type="image" id="1">
+        <posx>420</posx>
+        <posy>300</posy>
+      <width>150</width>
+      <height>100</height>
+      <texture>home-myfiles.png</texture>
+<visible>false</visible>
+      <animation effect="fade" start="0" end="70" time="2000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+    </control>
+
+     <control type="image" id="1">
+        <posx>520</posx>
+        <posy>300</posy>
+      <width>150</width>
+      <height>100</height>
+      <texture>home-myweather.png</texture>
+<visible>false</visible>
+      <animation effect="fade" start="0" end="70" time="2000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+    </control>
+
+     <control type="image" id="1">
+        <posx>245</posx>
+        <posy>130</posy>
+      <width>230</width>
+      <height>85</height>
+      <texture>logo.png</texture>
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+    </control>
+
+     <control type="image" id="1">
+        <posx>300</posx>
+        <posy>240</posy>
+      <texture>loading.gif</texture>
+      <width>120</width>
+      <height>120</height>
+
+      <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+        <posx>296</posx>
+        <posy>236</posy>
+      <texture>loading_over.png</texture>
+      <width>128</width>
+      <height>128</height>
+
+      <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+
+    </control>
+
+    <control type="image" id="1">
+      <description>hdtv logo</description>
+      <include>hdtv</include>
+      <visible>Skin.HasSetting(resolution)</visible>
+
+      <animation effect="fade" start="0" end="100" time="1500">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+
+      <posx>480</posx>
+      <posy>125</posy>
+      <width>33</width>
+      <height>24</height>
+    </control>
+
+
+
+
+     <control type="image" id="1">
+      <description>user image netzwerk</description>
+      <posx>300</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_netzwerk.png</texture>
+      <visible>System.HasNetwork</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image netzwerk</description>
+      <posx>300</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_netzwerk_off.png</texture>
+      <visible>!System.HasNetwork</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image hilfe</description>
+      <posx>325</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_hilfe.png</texture>
+      <visible>Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image hilfe</description>
+      <posx>325</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_hilfe_off.png</texture>
+      <visible>![Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)]</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image kai</description>
+      <posx>350</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_kai.png</texture>
+      <visible>System.KaiConnected</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image kai</description>
+      <posx>350</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_kai_off.png</texture>
+      <visible>!System.KaiConnected</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image dvd</description>
+      <posx>375</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_dvd.png</texture>
+      <visible>System.Hasmediadvd</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image dvd</description>
+      <posx>375</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_dvd_off.png</texture>
+      <visible>!System.Hasmediadvd</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image xbox</description>
+      <posx>400</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_xbox.png</texture>
+      <visible>System.AutoDetection</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+     <control type="image" id="1">
+      <description>user image xbox</description>
+      <posx>400</posx>
+      <posy>420</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>25</height>
+
+      <texture>profil_xbox_off.png</texture>
+      <visible>!System.AutoDetection</visible>
+
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+    </control>
+
+
+     <control type="label" id="1">
+      <description>user</description>
+      <visible>true</visible>
+
+      <animation effect="fade" start="0" end="80" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+      <posx>310</posx>
+      <posy>470</posy>
+      <label>-</label>
+      <width>200</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>System.BuildVersion</info>
+    </control>
+
+     <control type="label" id="1">
+      <description>user</description>
+      <visible>true</visible>
+
+      <animation effect="fade" start="0" end="80" time="1000">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+
+      <posx>350</posx>
+      <posy>470</posy>
+      <label>-</label>
+      <width>200</width>
+      <align>left</align>
+      <font>font10</font>
+      <info>System.BuildDate</info>
+    </control>
+
+     <control type="image" id="1">
+        <posx>60</posx>
+        <posy>20</posy>
+      <texture>ceomr.png</texture>
+
+      <width>102</width>
+      <height>102</height>
+
+      <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+    </control>
+
+  </controls>
+
+</window>

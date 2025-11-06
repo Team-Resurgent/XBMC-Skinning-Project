@@ -1,0 +1,213 @@
+﻿<window id="132">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>true</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>30</posy>
+	</coordinates>
+	<animation effect="zoom" start="100" end="0" center="250,95" time="100">windowClose</animation>
+	<controls>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>512</width>
+			<height>50</height>
+			<texture>dialog-context-top.png</texture>
+			<animation effect="zoom" start="0" end="100" center="250,95" time="200">windowOpen</animation>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>50</posy>
+			<width>512</width>
+			<height>440</height>
+			<texture>dialog-context-middle.png</texture>
+			<animation effect="zoom" start="0" end="100" center="250,95" time="200">windowOpen</animation>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>490</posy>
+			<width>512</width>
+			<height>50</height>
+			<texture>dialog-context-bottom.png</texture>
+			<animation effect="zoom" start="0" end="100" center="240,95" time="200">windowOpen</animation>
+		</control>
+		<control type="image">
+			<description>scraper image</description>
+			<posx>40</posx>
+			<posy>45</posy>
+			<width>120</width>
+			<height>120</height>
+			<aspectratio>keep</aspectratio>
+			<info>ListItem.Icon</info>
+		</control>
+		<control type="label" id="1000">
+			<description>directory contains label</description>
+			<posx>10</posx>
+			<posy>8</posy>
+			<width>280</width>
+			<align>left</align>
+			<font>font12</font>
+			<textcolor>common-text</textcolor>
+			<label>$LOCALIZE[ 20344 ]</label>
+		</control>
+		<control type="spincontrolex" id="3">
+			<description>directory content select spincontrol</description>
+			<align>left</align>
+			<posx>185</posx>
+			<posy>44</posy>
+			<font>font12</font>
+			<reverse>yes</reverse>
+			<onup>28</onup>
+			<ondown>4</ondown>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<textcolor>common-text</textcolor>
+			<disabledcolor>ffffffff</disabledcolor>
+			<textoffsetx>0</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<aligny>center</aligny>
+			<subtype>text</subtype>
+		</control>
+		<control type="list" id="4">
+			<posx>190</posx>
+			<posy>95</posy>
+			<width>300</width>
+			<height>180</height>
+			<onup>3</onup>
+			<ondown>30</ondown>
+			<onleft>3</onleft>
+			<onright>30</onright>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="35">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>29</height>
+					<texture>list-pixel.png</texture>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>32</posx>
+					<posy>5</posy>
+					<width>266</width>
+					<height>23</height>
+					<font>font12</font>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>29</height>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>32</posx>
+					<posy>5</posy>
+					<width>266</width>
+					<height>23</height>
+					<font>font12</font>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>40</posx>
+			<posy>300</posy>
+			<width>438</width>
+			<height>135</height>
+			<itemgap>2</itemgap>
+			<onup>4</onup>
+			<ondown>28</ondown>
+			<onleft>5</onleft>
+			<onright>5</onright>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>29</height>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<textcolor>button-text</textcolor>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-pixel.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<font>font12</font>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-pixel</texturenofocus>
+			<textoffsetx>12</textoffsetx>
+			<textcolor>common-text</textcolor>
+			<aligny>center</aligny>
+			<textureradiofocus>check-box.png</textureradiofocus>
+			<textureradionofocus>check-boxNF.png</textureradionofocus>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<posx>40</posx>
+			<posy>225</posy>
+			<width>438</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="button" id="28">
+			<description>OK button</description>
+			<posx>300</posx>
+			<posy>453</posy>
+			<width>80</width>
+			<onleft>29</onleft>
+			<onright>29</onright>
+			<onup>30</onup>
+			<ondown>3</ondown>
+			<align>center</align>
+			<label>186</label>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+		</control>
+		<control type="button" id="29">
+			<description>Cancel button</description>
+			<posx>390</posx>
+			<posy>453</posy>
+			<width>80</width>
+			<onleft>28</onleft>
+			<onright>28</onright>
+			<onup>30</onup>
+			<ondown>3</ondown>
+			<label>222</label>
+			<align>center</align>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+		</control>
+	</controls>
+</window>

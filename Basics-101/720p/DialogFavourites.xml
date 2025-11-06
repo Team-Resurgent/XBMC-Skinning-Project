@@ -1,0 +1,159 @@
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>240</posx>
+		<posy>100</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>510</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>790</width>
+			<height>500</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="label" id="1">
+			<description>heading label</description>
+			<posx>20</posx>
+			<posy>10</posy>
+			<width>420</width>
+			<align>left</align>
+			<font>font16</font>
+			<label>$LOCALIZE[1036]</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="group">
+			<posx>755</posx>
+			<posy>50</posy>
+			<control type="button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<onclick>PageUp(60)</onclick>
+				<texturefocus>scrollbar_arrow_up_focus.png</texturefocus>
+				<texturenofocus>scrollbar_arrow_up.png</texturenofocus>
+				<visible>Control.IsVisible(60)</visible>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>30</width>
+				<height>375</height>
+				<texturesliderbackground>button-nofocus.png</texturesliderbackground>
+				<texturesliderbar>scrollbar_bar.png</texturesliderbar>
+				<texturesliderbarfocus>scrollbar_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="button">
+				<posx>0</posx>
+				<posy>415</posy>
+				<width>30</width>
+				<height>30</height>
+				<onclick>PageDown(60)</onclick>
+				<texturefocus>scrollbar_arrow_down_focus.png</texturefocus>
+				<texturenofocus>scrollbar_arrow_down.png</texturenofocus>
+				<visible>Control.IsVisible(60)</visible>
+			</control>
+		</control>
+		<control type="list" id="450">
+			<posx>15</posx>
+			<posy>50</posy>
+			<width>730</width>
+			<height>450</height>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
+			<itemlayout height="50">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>730</width>
+					<height>45</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>5</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>65</posx>
+					<posy>5</posy>
+					<width>630</width>
+					<height>35</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>730</width>
+					<height>45</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>!Control.HasFocus(450)</visible>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>770</width>
+					<height>45</height>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>Control.HasFocus(450)</visible>
+					<texture>button-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>5</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>65</posx>
+					<posy>5</posy>
+					<width>630</width>
+					<height>35</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

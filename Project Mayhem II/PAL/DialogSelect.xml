@@ -1,0 +1,74 @@
+<window id="2000">
+	<defaultcontrol>5</defaultcontrol>
+	<include>dialog-effect-special</include>
+	<type>dialog</type>
+	<controls>
+
+	<control type="image">
+		<description>filemanager background image 2</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel_bg.png</texture>
+	</control>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<posx>250</posx>
+		<posy>70</posy>
+		<width>218</width>
+		<height>40</height>
+		<texture>Header-SelectAlbum.png</texture>
+	</control>
+
+	<control type="label" id="2">
+		<description>number of files text label</description>
+		<posx>135</posx>
+		<posy>470</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>d0ffffff</textcolor>
+	</control>
+
+	<control type="listcontrol" id="3">
+		<description>pics listcontrol</description>
+		<posx>100</posx>
+		<posy>150</posy>
+		<width>520</width>
+		<height>350</height>
+		<spinposx>419</spinposx>
+		<spinposy>330</spinposy>
+		<font>font12</font>
+		<textoffsetx>10</textoffsetx>
+		<aligny>center</aligny>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<onup>5</onup>
+		<ondown>5</ondown>
+	</control>
+
+	<control type="button" id="5">
+		<description>IMDB</description>
+		<posx>100</posx>
+		<posy>119</posy>
+		<width>520</width>
+		<font>font12</font>
+		<textoffsetx>10</textoffsetx>
+		<aligny>center</aligny>
+		<label>368</label>
+		<texturefocus>list-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<onleft>3</onleft>
+		<onright>3</onright>
+		<onup>3</onup>
+		<ondown>3</ondown>
+	</control>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel.png</texture>
+	</control>
+
+	</controls>
+</window>

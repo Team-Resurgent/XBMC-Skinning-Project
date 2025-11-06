@@ -1,0 +1,52 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>498</posx>
+		<posy>640</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>285</width>
+			<height>60</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image">
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>275</width>
+			<height>50</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="progress" id="1">
+			<description>Progressbar</description>
+			<posx>20</posx>
+			<posy>40</posy>
+			<width>245</width>
+			<height>8</height>
+			<info>Player.Volume</info>
+			<texturebg>progress_back.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture border="2">progress_middle.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>true</visible>
+		</control>
+		<control type="label" id="0">
+			<description>Volume Label</description>
+			<posx>20</posx>
+			<posy>8</posy>
+			<label>$LOCALIZE[13376] ($INFO[Player.Volume])</label>
+			<font>font13</font>
+			<align>center</align>
+			<width>245</width>
+			<height>16</height>
+		</control>
+	</controls>
+</window>

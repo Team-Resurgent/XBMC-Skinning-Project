@@ -1,0 +1,536 @@
+<window id="2600">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>Background</include>
+	<include>Black-Panel2</include>
+	<include>Menu-Time</include>
+
+	<control>
+		<description>Title Label</description>
+		<label>8</label>
+		<include>Window-Title</include>
+	</control>
+
+	<control type="button" id="2">
+		<description>Refresh Button</description>
+		<posx>58</posx>
+		<posy>80</posy>
+		<height>30</height>
+		<width>110</width>
+		<label>184</label>
+		<texturefocus>Button-Menu.png</texturefocus>
+		<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+		<font>menubutton</font>
+		<shadowcolor>black</shadowcolor>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>3</onup>
+		<ondown>3</ondown>
+		<align>left</align>
+		<include>focusedcolor</include>
+		<include>FX-Button</include>
+	</control>
+	<control type="button" id="4">
+		<description>Settings Button</description>
+		<posx>168</posx>
+		<posy>80</posy>
+		<height>30</height>
+		<width>110</width>
+		<label>5</label>
+		<texturefocus>Button-Menu.png</texturefocus>
+		<texturenofocus>Button-Menu-NoFocus.png</texturenofocus>
+		<font>menubutton</font>
+		<shadowcolor>black</shadowcolor>
+		<onclick>XBMC.ActivateWindow(myweathersettings)</onclick>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<onup>3</onup>
+		<ondown>3</ondown>
+		<align>left</align>
+		<include>focusedcolor</include>
+		<include>FX-Button</include>
+	</control>
+	<control type="spincontrol" id="3">
+		<description>Location Select</description>
+		<posx>80</posx>
+		<posy>123</posy>
+		<align>left</align>
+		<width>15</width>
+		<height>15</height>
+		<spinwidth>12</spinwidth>
+		<spinheight>16</spinheight>
+		<font>-</font>
+		<reverse>yes</reverse>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<textoffsety>-12</textoffsety>
+		<disabledcolor>disabled</disabledcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="0">
+		<description>Location Select Label</description>
+		<posx>115</posx>
+		<posy>123</posy>
+		<width>220</width>
+		<height>15</height>
+		<font>special15</font>
+		<reverse>yes</reverse>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+		<info>Weather.Location</info>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="11">
+		<description>Update Time Label</description>
+		<posx>335</posx>
+		<posy>120</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+
+	<control type="label" id="223">
+		<description>current temp static label</description>
+		<posx>80</posx>
+		<posy>145</posy>
+		<label>Temp</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="23">
+		<description>current temp value</description>
+		<posx>335</posx>
+		<posy>145</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="224">
+		<description>current feels like static label</description>
+		<posx>80</posx>
+		<posy>170</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="24">
+		<description>current feels like value</description>
+		<posx>335</posx>
+		<posy>170</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="228">
+		<description>current humidity static label</description>
+		<posx>80</posx>
+		<posy>195</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="28">
+		<description>current humidity value</description>
+		<posx>335</posx>
+		<posy>195</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="227">
+		<description>current dew static label</description>
+		<posx>80</posx>
+		<posy>220</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="27">
+		<description>current dew value</description>
+		<posx>335</posx>
+		<posy>220</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="225">
+		<description>current UV Index static label</description>
+		<posx>80</posx>
+		<posy>245</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="25">
+		<description>current UV Index value</description>
+		<posx>335</posx>
+		<posy>245</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="226">
+		<description>current wind static label</description>
+		<posx>80</posx>
+		<posy>270</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="26">
+		<description>current wind value</description>
+		<posx>335</posx>
+		<posy>270</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="image" id="21">
+		<description>current weather icon</description>
+		<posx>500</posx>
+		<posy>135</posy>
+		<height>128</height>
+		<width>96</width>
+		<texture>-</texture>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="22">
+		<description>current condition label</description>
+		<posx>490</posx>
+		<posy>273</posy>
+		<width>120</width>
+		<wrapmultiline>false</wrapmultiline>
+		<label>-</label>
+		<font>font10</font>
+		<align>center</align>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+
+	<control type="label" id="31">
+		<description>day 0 label</description>
+		<posx>65</posx>
+		<posy>300</posy>
+		<width>148</width>
+		<label>-</label>
+		<align>center</align>
+		<font>font14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="32">
+		<description>day 0 Hi label</description>
+		<posx>65</posx>
+		<posy>328</posy>
+		<width>148</width>
+		<label>-</label>
+		<align>center</align>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="33">
+		<description>day 0 low label</description>
+		<posx>65</posx>
+		<posy>350</posy>
+		<width>148</width>
+		<label>-</label>
+		<align>center</align>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="34">
+		<description>day 0 general weather label</description>
+		<posx>65</posx>
+		<posy>460</posy>
+		<width>148</width>
+		<wrapmultiline>true</wrapmultiline>
+		<label>-</label>
+		<align>center</align>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="image" id="35">
+		<description>day 0 icon</description>
+		<posx>115</posx>
+		<posy>380</posy>
+		<height>64</height>
+		<width>48</width>
+		<align>center</align>
+		<texture>-</texture>
+		<include>common-FX</include>
+	</control>
+
+	<control type="label" id="41">
+		<description>day 1 label</description>
+		<posx>213</posx>
+		<posy>300</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="42">
+		<description>day 1 Hi label</description>
+		<posx>213</posx>
+		<posy>328</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="43">
+		<description>day 1 low label</description>
+		<posx>213</posx>
+		<posy>350</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="44">
+		<description>day 1 general weather label</description>
+		<posx>213</posx>
+		<posy>460</posy>
+		<width>148</width>
+		<align>center</align>
+		<wrapmultiline>true</wrapmultiline>
+		<label>-</label>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="image" id="45">
+		<description>day 1 icon</description>
+		<posx>265</posx>
+		<posy>380</posy>
+		<height>64</height>
+		<width>48</width>
+		<align>center</align>
+		<texture>-</texture>
+		<include>common-FX</include>
+	</control>
+
+	<control type="label" id="51">
+		<description>day 2 label</description>
+		<posx>361</posx>
+		<posy>300</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="52">
+		<description>day 2 Hi label</description>
+		<posx>361</posx>
+		<posy>328</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="53">
+		<description>day 2 low label</description>
+		<posx>361</posx>
+		<posy>350</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="54">
+		<description>day 2 general weather label</description>
+		<posx>361</posx>
+		<posy>460</posy>
+		<width>148</width>
+		<align>center</align>
+		<wrapmultiline>true</wrapmultiline>
+		<label>-</label>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="image" id="55">
+		<description>day 2 icon</description>
+		<posx>410</posx>
+		<posy>380</posy>
+		<height>64</height>
+		<width>48</width>
+		<align>center</align>
+		<texture>-</texture>
+		<include>common-FX</include>
+	</control>
+
+	<control type="label" id="61">
+		<description>day 3 label</description>
+		<posx>509</posx>
+		<posy>300</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="62">
+		<description>day 3 Hi label</description>
+		<posx>509</posx>
+		<posy>328</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="63">
+		<description>day 3 low label</description>
+		<posx>509</posx>
+		<posy>350</posy>
+		<width>148</width>
+		<align>center</align>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="label" id="64">
+		<description>day 3 general weather label</description>
+		<posx>509</posx>
+		<posy>460</posy>
+		<width>148</width>
+		<align>center</align>
+		<wrapmultiline>true</wrapmultiline>
+		<label>-</label>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+	</control>
+	<control type="image" id="65">
+		<description>day 3 icon</description>
+		<posx>560</posx>
+		<posy>380</posy>
+		<height>64</height>
+		<width>48</width>
+		<align>center</align>
+		<texture>-</texture>
+		<include>common-FX</include>
+	</control>
+
+	<control type="image" id="11">
+		<description>separator image</description>
+		<posx>70</posx>
+		<posy>295</posy>
+		<width>580</width>
+		<height>2</height>
+		<texture border="10,0,10,0">Settings-Divider.png</texture>
+		<colordiffuse>80ffffff</colordiffuse>
+		<include>common-FX</include>
+	</control>
+
+	<control type="image">
+		<posx>65</posx>
+		<posy>310</posy>
+		<height>168</height>
+		<width>148</width>
+		<texture border="10,0,10,0">folder-focus-left.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX</include>
+	</control>
+	<control type="image">
+		<posx>213</posx>
+		<posy>310</posy>
+		<height>168</height>
+		<width>148</width>
+		<texture border="10,0,10,0">folder-focus.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX</include>
+	</control>
+	<control type="image">
+		<posx>361</posx>
+		<posy>310</posy>
+		<height>168</height>
+		<width>148</width>
+		<texture border="10,0,10,0">folder-focus.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX</include>
+	</control>
+	<control type="image">
+		<posx>509</posx>
+		<posy>310</posy>
+		<height>168</height>
+		<width>148</width>
+		<texture border="10,0,10,0">folder-focus-right.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-FX</include>
+	</control>
+
+	<include>Black-Overlay</include>
+	<include>Lines</include>
+	</controls>
+</window>

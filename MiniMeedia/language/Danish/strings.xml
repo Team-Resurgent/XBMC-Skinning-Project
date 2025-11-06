@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!--  strings 31000 thru 31999 reserved for skins  -->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">Fil Manager</string>
+  <string id="31001">Info</string>
+  <string id="31002">Nulstil</string>
+  <string id="31003">Analysér</string>
+  <string id="31004">Ændr</string>
+  <string id="31005">Diverse</string>
+  <string id="31006">Visuel</string>
+  <string id="31007">Tænd/Sluk</string>
+  <string id="31008">Ikke Anmeldt</string>
+  <string id="31009"></string>
+  <string id="31010"></string>
+  <string id="31011">Se dine</string>
+  <string id="31012">Lyt til</string>
+  <string id="31013">Se dine</string>
+  <string id="31014">Brug dine</string>
+  <string id="31015">Check</string>
+  <string id="31016">Konfigurer</string>
+  <string id="31017">Strøm</string>
+  <string id="31018"></string>
+  <string id="31019">Afspil</string>
+  <string id="31020">Check</string>
+  <string id="31021">Af</string>
+  <string id="31022">Nyligt Tilføjet</string>
+  <string id="31023">Latest</string>
+  <string id="31024">Page</string>
+  <string id="31025">Items</string>
+
+  <!-- Options Menu -->
+  <string id="31100">Plakat Info</string>
+  <string id="31101">Sortér efter</string>
+  <string id="31102">Opsætningsmuligheder</string>
+  <string id="31103">Showcase</string>
+  <string id="31104">Vis Større Ur</string>
+  <string id="31105">Vandfald</string>
+  <string id="31106">Udstilling</string>
+  <string id="31107">Lav Liste</string>
+  <string id="31108">Fremstilling</string>
+  <string id="31109">Høj Liste</string>
+
+  <!-- Settings -->
+  <string id="31200">Vis Plot</string>
+  <string id="31201">Sidst Opdateret</string>
+  <string id="31202">Baggrundsmappe</string>
+  <string id="31203">Baggrunde</string>
+  <string id="31204">Opsætningsmenu</string>
+  <string id="31205">Skjul</string>
+  <string id="31206">Ur</string>
+  <string id="31207">Skjul Vejrudsigt I Hovedmenuen</string>
+  <string id="31208">Deaktiver</string>
+  <string id="31209">Konfigurer Opsætningen for</string>
+  <string id="31210">Menu</string>
+  <string id="31211">Skjul Plot I Video OSD</string>
+  <string id="31212">Skjul "Set" Overlay</string>
+  <string id="31213">Skjul Miniature</string>
+  <string id="31214">Vis Anmeldelse</string>
+  <string id="31215">Vis Indholdstype</string>
+  <string id="31216">Skjul Medie Optælling</string>
+  <string id="31217">Vis Portrætminiaturer Ved TV</string>
+  <string id="31218">Vis Minimal Video OSD</string>
+  <string id="31219">Skjul Statisk (Sne) Baggrundsbillede</string>
+  <string id="31220">Use Animated Weather Thumbs</string>
+  <string id="31221">Hide Latest Videos</string>
+
+  <!-- Video -->
+  <string id="31300">Ikke Tilgængligt</string>
+  <string id="31301">Miniature</string>
+  <string id="31302">Fanart</string>
+  <string id="31303">Sæsoner</string>
+  <string id="31304">Forventet Sluttid</string>
+
+  <!-- Music -->
+  <string id="31400">Sluttede</string>
+  <string id="31401">Nuværende</string>
+  <string id="31402">Vælg Visuelle Effekter</string>
+  <string id="31403">Allerede Konfigurerede Visuelle Effekter...</string>
+  <string id="31404">Indstillinger For Visuelle Effekter</string>
+  <string id="31405">Tekster</string>
+  <string id="31406">Angiv Sti Til Tekster</string>
+  <string id="31407">Open playlist</string>
+  <string id="31408">Save playlist</string>
+  <string id="31409">Close playlist</string>
+  <string id="31410">System music files</string>
+  <string id="31411">Current playlist</string>
+
+  <!-- Dialogs -->
+  <string id="31500">Vælg Profil</string>
+  <string id="31501">Muted</string>
+  <string id="31502">Lav</string>
+  <string id="31503">Codec</string>
+
+</strings>

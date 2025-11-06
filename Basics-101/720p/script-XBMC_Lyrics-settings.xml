@@ -1,0 +1,308 @@
+<window>
+	<defaultcontrol>201</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>220</posx>
+		<posy>85</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>840</width>
+			<height>550</height>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+			<texture border="6">dialog_background.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>830</width>
+			<height>540</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>menu_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="label" id="20">
+			<description>heading label</description>
+			<posx>20</posx>
+			<posy>10</posy>
+			<width>760</width>
+			<align>left</align>
+			<font>font16</font>
+			<label>$LOCALIZE[SCRIPT0]</label>
+			<textcolor>red</textcolor>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="label" id="30">
+			<description>Version label</description>
+			<posx>820</posx>
+			<posy>10</posy>
+			<width>760</width>
+			<align>right</align>
+			<font>font13</font>
+			<label>-</label>
+			<textcolor>white</textcolor>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="group">
+			<posx>638</posx>
+			<posy>60</posy>
+			<control type="button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>30</height>
+				<onclick>PageUp(900)</onclick>
+				<texturefocus>scrollbar_arrow_up_focus.png</texturefocus>
+				<texturenofocus>scrollbar_arrow_up.png</texturenofocus>
+				<visible>Control.IsVisible(900)</visible>
+			</control>
+			<control type="scrollbar" id="900">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>30</width>
+				<height>380</height>
+				<texturesliderbackground>button-nofocus.png</texturesliderbackground>
+				<texturesliderbar>scrollbar_bar.png</texturesliderbar>
+				<texturesliderbarfocus>scrollbar_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onleft>9000</onleft>
+				<onright>2000</onright>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="button">
+				<posx>0</posx>
+				<posy>420</posy>
+				<width>30</width>
+				<height>30</height>
+				<onclick>PageDown(900)</onclick>
+				<texturefocus>scrollbar_arrow_down_focus.png</texturefocus>
+				<texturenofocus>scrollbar_arrow_down.png</texturenofocus>
+				<visible>Control.IsVisible(900)</visible>
+			</control>
+		</control>
+		<!-- ** Required ** Do not change id's or type's -->
+		<control type="grouplist" id="9000">
+			<posx>15</posx>
+			<posy>60</posy>
+			<width>615</width>
+			<height>450</height>
+			<itemgap>5</itemgap>
+			<pagecontrol>900</pagecontrol>
+			<onleft>2000</onleft>
+			<onright>2000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="button" id="201">
+				<description>Setting1 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT201]</label>
+			</control>
+			<control type="image" id="1">
+				<description>separator image</description>
+				<width>615</width>
+				<height>5</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="radiobutton" id="202">
+				<description>Setting2 Button</description>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT202]</label>
+				<pulseonselect>no</pulseonselect>
+			</control>
+			<control type="button" id="203">
+				<description>Setting2 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT203]</label>
+			</control>
+			<control type="radiobutton" id="210">
+				<description>Setting10 Button</description>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT210]</label>
+				<pulseonselect>no</pulseonselect>
+			</control>
+			<control type="radiobutton" id="211">
+				<description>Setting11 Button</description>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT211]</label>
+				<pulseonselect>no</pulseonselect>
+			</control>
+			<control type="image" id="2">
+				<description>separator image</description>
+				<width>615</width>
+				<height>5</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="radiobutton" id="204">
+				<description>Setting4 Button</description>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT204]</label>
+				<pulseonselect>no</pulseonselect>
+			</control>
+			<control type="radiobutton" id="205">
+				<description>Setting5 Button</description>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT205]</label>
+				<pulseonselect>no</pulseonselect>
+			</control>
+			<control type="image" id="3">
+				<description>separator image</description>
+				<width>615</width>
+				<height>5</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="radiobutton" id="206">
+				<description>Setting6 Button</description>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT206]</label>
+				<pulseonselect>no</pulseonselect>
+			</control>
+			<control type="button" id="207">
+				<description>Setting7 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT207]</label>
+			</control>
+			<control type="image" id="4">
+				<description>separator image</description>
+				<width>615</width>
+				<height>5</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="button" id="208">
+				<description>Setting8 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT208]</label>
+			</control>
+			<control type="radiobutton" id="209">
+				<description>Setting9 Button</description>
+				<width>615</width>
+				<height>45</height>
+				<label>$LOCALIZE[SCRIPT209]</label>
+				<pulseonselect>no</pulseonselect>
+			</control>
+		</control>
+		<!-- ** Required ** Do not change id's or type's -->
+		<control type="group" id="2000">
+			<control type="button" id="250">
+				<description>OK button</description>
+				<posx>675</posx>
+				<posy>60</posy>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT250]</label>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<onleft>900</onleft>
+				<onright>9000</onright>
+				<onup>254</onup>
+				<ondown>251</ondown>
+			</control>
+			<control type="button" id="251">
+				<description>Cancel button</description>
+				<posx>675</posx>
+				<posy>110</posy>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT251]</label>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<onleft>900</onleft>
+				<onright>9000</onright>
+				<onup>250</onup>
+				<ondown>252</ondown>
+			</control>
+			<control type="button" id="252">
+				<description>Update button</description>
+				<posx>675</posx>
+				<posy>160</posy>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT252]</label>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<onleft>900</onleft>
+				<onright>9000</onright>
+				<onup>251</onup>
+				<ondown>253</ondown>
+			</control>
+			<control type="button" id="253">
+				<description>Credits button</description>
+				<posx>675</posx>
+				<posy>210</posy>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT253]</label>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<onleft>900</onleft>
+				<onright>9000</onright>
+				<onup>252</onup>
+				<ondown>255</ondown>
+			</control>
+			<control type="button" id="255">
+				<description>Defaults button</description>
+				<posx>675</posx>
+				<posy>260</posy>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT255]</label>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<onleft>900</onleft>
+				<onright>9000</onright>
+				<onup>253</onup>
+				<ondown>254</ondown>
+			</control>
+			<control type="button" id="254">
+				<description>Play button</description>
+				<posx>675</posx>
+				<posy>310</posy>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<font>font12</font>
+				<label>$LOCALIZE[SCRIPT254]</label>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<onleft>900</onleft>
+				<onright>9000</onright>
+				<onup>255</onup>
+				<ondown>250</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

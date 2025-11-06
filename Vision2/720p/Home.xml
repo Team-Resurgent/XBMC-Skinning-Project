@@ -1,0 +1,1168 @@
+<window id="0">
+	<defaultcontrol always ="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>	
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasVideo + !Skin.HasSetting(Back_Video)</visible>
+		</control>
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasAudio + !Skin.HasSetting(Back_Vis)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Background.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<visible>!Skin.HasSetting(No_HomeBacks)</visible>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Programs</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(1) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Videos</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(2) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Music</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(3) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Pictures</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(4) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Settings</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(5) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Weather</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(6) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Shutdown</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(7) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>405</height>
+				<imagepath>Home_Scripts</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(8) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
+			</control>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Frontground.png</texture>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="rss">
+				<description>rss feed</description>
+				<posx>0</posx>
+				<posy>10</posy>
+				<width>1280</width>
+				<aligy>center</aligy>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>grey2</headlinecolor>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
+			<control type="label">
+				<description>date/time label</description>
+				<posx>1260</posx>
+				<posy>10</posy>
+				<align>right</align>
+				<aligy>center</aligy>
+				<font>font12</font>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[System.Date] [COLOR=blue] |  $INFO[System.Time][/COLOR]</label>
+				<animation effect="slide" time="0" start="0,30" end="0,30" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>380</posy>
+				<width>1280</width>
+				<height>148</height>
+				<texture>HorizontalBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>501</posy>
+				<width>512</width>
+				<height>64</height>
+				<texture>HorizontalGlowHome.png</texture>
+			</control>
+			<control type="image">
+				<posx>768</posx>
+				<posy>501</posy>
+				<width>512</width>
+				<height>64</height>
+				<texture>HorizontalGlowHome.png</texture>
+			</control>
+			<control type="image">
+				<posx>477</posx>
+				<posy>210</posy>
+				<width>326</width>
+				<height>385</height>
+				<texture>MenuBack.png</texture>
+			</control>
+			<control type="wraplist" id="2">
+				<posx>0</posx>
+				<posy>385</posy>
+				<height>192</height>
+				<width>1280</width>
+				<onup>105</onup>
+				<ondown>101</ondown>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<focusposition>2</focusposition>
+				<orientation>horizontal</orientation>
+				<itemlayout  width="256" height="96">
+					<control type="image">
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>3</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>VeticalLight.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>256</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>$INFO[ListItem.ActualIcon]</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>256</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>MyBlackFade.png</texture>
+					</control>
+					<control type="image">
+						<posx>253</posx>
+						<posy>20</posy>
+						<width>3</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>VeticalLight.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>116</posy>
+						<width>256</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture flipy="true" diffuse="diffuse_mirror.png">$INFO[ListItem.ActualIcon]</texture>
+					</control>
+					<control type="label">
+						<posx>128</posx>
+						<posy>0</posy>
+						<width>236</width>
+						<height>15</height>
+						<label>[B]$INFO[ListItem.label][/B] $INFO[ListItem.label2]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font10</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout  width="256" height="96">
+					<control type="image">
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>3</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>VeticalLight.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>256</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>$INFO[ListItem.ActualIcon]</texture>
+					</control>
+					<control type="image">
+						<posx>253</posx>
+						<posy>20</posy>
+						<width>3</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>VeticalLight.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>116</posy>
+						<width>256</width>
+						<height>96</height>
+						<aspectratio>stretch</aspectratio>
+						<texture flipy="true" diffuse="diffuse_mirror.png">$INFO[ListItem.ActualIcon]</texture>
+					</control>
+					<control type="label">
+						<posx>128</posx>
+						<posy>0</posy>
+						<width>236</width>
+						<height>15</height>
+						<label>[B]$INFO[ListItem.label][/B] $INFO[ListItem.label2]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font10</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="6">
+						<icon>MyWeather.png</icon>
+						<label>31005</label>
+						<label2>31015</label2>
+						<onclick>ActivateWindow(Weather)</onclick>
+					</item>
+					<item id="1">
+						<icon>MyPrograms.png</icon>
+						<label>31000</label>
+						<label2>31010</label2>
+						<onclick>ActivateWindow(MyPrograms)</onclick>
+						<visible>!System.Platform.Linux</visible>
+					</item>
+					<item id="2">
+						<icon>MyVideos.png</icon>
+						<label>31001</label>
+						<label2>31011</label2>
+						<onclick>ActivateWindow(MyVideos)</onclick>
+					</item>
+					<item id="3">
+						<icon>MyMusic.png</icon>
+						<label>31002</label>
+						<label2>31012</label2>
+						<onclick>ActivateWindow(MyMusic)</onclick>
+					</item>
+					<item id="4">
+						<icon>MyPictures.png</icon>
+						<label>31003</label>
+						<label2>31013</label2>
+						<onclick>ActivateWindow(MyPictures)</onclick>
+					</item>
+					<item id="8">
+						<icon>MyScripts.png</icon>
+						<label>31007</label>
+						<label2>31017</label2>
+						<onclick>ActivateWindow(Scripts)</onclick>
+					</item>
+					<item id="5">
+						<icon>MySettings.png</icon>
+						<label>31004</label>
+						<label2>31014</label2>
+						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					</item>
+					<item id="7">
+						<icon>MyShutdown.png</icon>
+						<label>31006</label>
+						<label2>31016</label2>
+						<onclick>ActivateWindow(shutdownmenu)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="group">
+				<control type="label">
+					<posx>600</posx>
+					<posy>100</posy>
+					<width>500</width>
+					<height>20</height>
+					<label>[B]$INFO[Container(2).ListItem.label][/B]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>570</posx>
+					<posy>140</posy>
+					<width>500</width>
+					<height>20</height>
+					<label>$INFO[Container(2).ListItem.label2]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="image">
+				<posx>477</posx>
+				<posy>210</posy>
+				<width>326</width>
+				<height>385</height>
+				<texture>MenuFront.png</texture>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(1)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>15016</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(Programs,Games)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>0</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(Programs,Programs)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<label>31020</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(Programs,Emulators)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<label>20323</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(GameSaves)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>5</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(ProgramsSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(2)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>342</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(VideoLibrary,MovieTitles)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>library.hascontent(movies)</visible>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>20343</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(VideoLibrary,TvShowTitles)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>library.hascontent(tvshows)</visible>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<label>20389</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>library.hascontent(musicvideos)</visible>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<label>31021</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(VideoFiles)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>5</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(3)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>132</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(MusicLibrary,Albums)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>library.hascontent(music)</visible>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>133</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(MusicLibrary,Artists)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>library.hascontent(music)</visible>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<label>31022</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(MusicFiles)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<label>5</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>-</label>
+					<font>font12</font>
+					<onclick>-</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(4)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>31023</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(Pictures)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>5</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<label>-</label>
+					<font>font12</font>
+					<onclick>-</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<label>-</label>
+					<font>font12</font>
+					<onclick>-</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>-</label>
+					<font>font12</font>
+					<onclick>-</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(6)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>10508</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(Weather)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>5</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<label>-</label>
+					<font>font12</font>
+					<onclick>-</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<label>-</label>
+					<font>font12</font>
+					<onclick>-</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>-</label>
+					<font>font12</font>
+					<onclick>-</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(5)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>7</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(Files)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>480</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<label>13000</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<label>13279</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>20077</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(1111)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(7)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>13005</label>
+					<font>font12</font>
+					<onclick>XBMC.ShutDown()</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>$LOCALIZE[13313] XBMC</label>
+					<font>font12</font>
+					<onclick>XBMC.RestartApp()</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<label>130</label>
+					<font>font12</font>
+					<onclick>XBMC.ActivateWindow(systeminfo)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<label>20045</label>
+					<font>font12</font>
+					<onclick>xbmc.mastermode</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!System.IsMaster + System.LoggedOn + System.HasLocks</visible>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>20126</label>
+					<font>font12</font>
+					<onclick>system.logoff</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>System.LoggedOn + System.HasLoginScreen</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>Container(2).HasFocus(8)</visible>
+				<animation effect="fade" delay="100" time="100" start="0" end="100">visible</animation>
+				<animation effect="fade" delay="0" time="100" start="100" end="0">hidden</animation>
+				<posx>480</posx>
+				<posy>260</posy>
+				<width>320</width>
+				<height>115</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<itemgap>1</itemgap>
+				<control type="button" id="101">
+					<description>Button1</description>
+					<height>22</height>
+					<width>320</width>
+					<label>1037</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(HomeScriptMenu_VideoPlugins_Visible)</visible>
+				</control>
+				<control type="button" id="102">
+					<description>Button2</description>
+					<height>22</height>
+					<width>320</width>
+					<label>1038</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(MusicLibrary,Plugins)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(HomeScriptMenu_MusicPlugins_Visible)</visible>
+				</control>
+				<control type="button" id="103">
+					<description>Button3</description>
+					<height>22</height>
+					<width>320</width>
+					<font>font12</font>
+					<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
+					<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
+				</control>
+				<control type="button" id="104">
+					<description>Button4</description>
+					<height>22</height>
+					<width>320</width>
+					<font>font12</font>
+					<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
+					<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
+				</control>
+				<control type="button" id="105">
+					<description>Button5</description>
+					<height>22</height>
+					<width>320</width>
+					<label>5</label>
+					<font>font12</font>
+					<onclick>ActivateWindow(1112)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<visible>true</visible>
+				</control>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>501</posy>
+				<width>968</width>
+				<height>219</height>
+				<texture>PV2LogoBig.png</texture>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>!Skin.HasSetting(No_Weather_In_Home)</visible>
+				<control type="image">
+					<posx>220r</posx>
+					<posy>520</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>$INFO[Weather.Conditions]</texture>
+					<bordertexture>HomeSquares.png</bordertexture>
+					<bordersize>32</bordersize>
+				</control>
+				<control type="label">
+					<posx>225r</posx>
+					<posy>635</posy>
+					<width>300</width>
+					<height>15</height>
+					<label>$INFO[Weather.Location]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>225r</posx>
+					<posy>660</posy>
+					<width>300</width>
+					<height>15</height>
+					<label>$LOCALIZE[143] $INFO[Weather.Temperature]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Player.HasAudio</visible>
+				<control type="image">
+					<posx>20</posx>
+					<posy>520</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>$INFO[MusicPlayer.Cover]</texture>
+					<bordertexture>HomeSquares.png</bordertexture>
+					<bordersize>32</bordersize>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>635</posy>
+					<width>580</width>
+					<height>15</height>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>660</posy>
+					<width>580</width>
+					<height>15</height>
+					<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Album]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+			</control>
+		</control>
+	</controls>	
+</window>

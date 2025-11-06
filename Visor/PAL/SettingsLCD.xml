@@ -1,0 +1,317 @@
+<window>
+  <id>29</id>
+  <defaultcontrol>12</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>Settings text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>448</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>Enabled</description>
+      <type>checkmark</type>
+      <id>12</id>
+      <posX>208</posX>
+      <posY>120</posY>
+      <font>font13</font>
+      <label>449</label>
+      <onup>16</onup>
+      <ondown>19</ondown>
+    </control>
+
+    <control>
+      <description>Mode label</description>
+      <type>label</type>
+      <id>1</id>
+      <font>font13</font>
+      <posX>208</posX>
+      <posY>150</posY>
+      <label>456</label>
+    </control>
+
+    <control>
+      <description>Mode select</description>
+      <type>spincontrol</type>
+      <id>19</id>
+      <font>font13</font>
+      <posX>500</posX>
+      <posY>150</posY>
+      <reverse>yes</reverse>
+      <onup>12</onup>
+      <ondown>20</ondown>
+    </control>
+
+    <control>
+      <description>backlight label</description>
+      <type>label</type>
+      <id>1</id>
+      <font>font13</font>
+      <posX>208</posX>
+      <posY>180</posY>
+      <label>463</label>
+    </control>
+
+    <control>
+      <description>backlight select</description>
+      <type>spincontrol</type>
+      <id>20</id>
+      <posX>500</posX>
+      <posY>180</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>19</onup>
+      <ondown>23</ondown>
+    </control>
+
+    <control>
+      <description>contrast label</description>
+      <type>label</type>
+      <id>200</id>
+      <posX>208</posX>
+      <posY>210</posY>
+      <label>465</label>
+    </control>
+
+    <control>
+      <description>contrast select</description>
+      <type>spincontrol</type>
+      <id>23</id>
+      <align>right</align>
+      <posX>500</posX>
+      <posY>210</posY>
+      <reverse>yes</reverse>
+      <onup>20</onup>
+      <ondown>22</ondown>
+    </control>
+
+    <control>
+      <description>modchip Type</description>
+      <type>label</type>
+      <id>109</id>
+      <font>font13</font>
+      <posX>208</posX>
+      <posY>260</posY>
+      <label>471</label>
+    </control>
+
+    <control>
+      <description>modchip Type select</description>
+      <type>spincontrol</type>
+      <id>22</id>
+      <font>font13</font>
+      <posX>500</posX>
+      <posY>260</posY>
+      <reverse>yes</reverse>
+      <onup>23</onup>
+      <ondown>21</ondown>
+      <buddycontrolid>109</buddycontrolid>
+    </control>
+
+    <control>
+      <description>LCD Type</description>
+      <type>label</type>
+      <id>1</id>
+      <font>font13</font>
+      <posX>208</posX>
+      <posY>290</posY>
+      <label>4501</label>
+    </control>
+
+    <control>
+      <description>LCD Type select</description>
+      <type>spincontrol</type>
+      <id>21</id>
+      <font>font13</font>
+      <posX>500</posX>
+      <posY>290</posY>
+      <reverse>yes</reverse>
+      <onup>22</onup>
+      <ondown>17</ondown>
+    </control>
+
+    <control>
+      <description>columns label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <posY>320</posY>
+      <label>450</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>columns select</description>
+      <type>spincontrol</type>
+      <id>17</id>
+      <posX>500</posX>
+      <posY>320</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>21</onup>
+      <ondown>18</ondown>
+    </control>
+
+    <control>
+      <description>Rows label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <posY>350</posY>
+      <label>455</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>rows select</description>
+      <type>spincontrol</type>
+      <id>18</id>
+      <posX>500</posX>
+      <font>font13</font>
+      <posY>350</posY>
+      <reverse>yes</reverse>
+      <onup>17</onup>
+      <ondown>13</ondown>
+    </control>
+
+    <control>
+      <description>row1 label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <font>font13</font>
+      <posY>380</posY>
+      <label>451</label>
+    </control>
+
+    <control>
+      <description>row1 select</description>
+      <type>spincontrol</type>
+      <id>13</id>
+      <posX>500</posX>
+      <posY>380</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>18</onup>
+      <ondown>14</ondown>
+    </control>
+
+    <control>
+      <description>row2 label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <posY>410</posY>
+      <font>font13</font>
+      <label>452</label>
+    </control>
+
+    <control>
+      <description>row2 select</description>
+      <type>spincontrol</type>
+      <id>14</id>
+      <posX>500</posX>
+      <posY>410</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onup>13</onup>
+      <ondown>15</ondown>
+    </control>
+
+    <control>
+      <description>row3 label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>208</posX>
+      <posY>440</posY>
+      <label>453</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>row3 select</description>
+      <type>spincontrol</type>
+      <id>15</id>
+      <font>font13</font>
+      <posX>500</posX>
+      <posY>440</posY>
+      <reverse>yes</reverse>
+      <onup>14</onup>
+      <ondown>16</ondown>
+    </control>
+
+    <control>
+      <description>row4 label</description>
+      <type>label</type>
+      <id>1</id>
+      <font>font13</font>
+      <posX>208</posX>
+      <posY>470</posY>
+      <label>454</label>
+    </control>
+
+    <control>
+      <description>row4 select</description>
+      <type>spincontrol</type>
+      <id>16</id>
+      <posX>500</posX>
+      <font>font13</font>
+      <posY>470</posY>
+      <reverse>yes</reverse>
+      <onup>15</onup>
+      <ondown>12</ondown>
+    </control>
+
+  </controls>
+
+</window>
+

@@ -1,0 +1,112 @@
+<window id="34">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<previouswindow>ShutdownMenu</previouswindow>
+	<controls>
+		<include>background</include>
+		<control type="radiobutton" id="4">
+			<description>enable login screen</description>
+			<posx>20</posx>
+			<posy>536</posy>
+			<width>130</width>
+			<height>35</height>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>2</onleft>
+			<label>20096</label>
+			<align>left</align>
+			<texturefocus>button2.png</texturefocus>
+			<texturenofocus>button2-alpha.png</texturenofocus>
+			<textcolor>button-text</textcolor>
+		</control>
+
+		<control type="list" id="2">
+			<posx>417</posx>
+			<posy>23</posy>
+			<width>300</width>
+			<height>530</height>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<include></include>
+			<scrolltime>1</scrolltime>
+			<viewtype label="List">List</viewtype>
+			<pagecontrol>23</pagecontrol>
+			<itemlayout height="40">
+				<control type="label">
+					<posx>10</posx>
+					<posy>-</posy>
+					<width>280</width>
+					<height>40</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<width>300</width>
+					<height>40</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>default-button.png</texture>
+					<visible>Control.HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<width>300</width>
+					<height>40</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>default-button-alpha.png</texture>
+					<visible>!Control.HasFocus(2)</visible>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>-</posy>
+					<width>280</width>
+					<height>40</height>
+					<font>font16</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<description>list item icon</description>
+			<posx>20</posx>
+			<posy>70</posy>
+			<width>350</width>
+			<height>350</height>
+			<texture>$INFO[Container(2).Listitem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotatey" start="-20" end="-20" time="0" condition="Skin.HasSetting(tilted-icons)">Conditional</animation>
+		</control>
+		<control type="image">
+			<description>list item icon reflection</description>
+			<posx>20</posx>
+			<posy>420</posy>
+			<width>350</width>
+			<height>350</height>
+			<texture flipy="true" diffuse="fade2.png">$INFO[Container(2).Listitem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotatey" start="-20" end="-20" time="0" condition="Skin.HasSetting(tilted-icons)">Conditional</animation>
+		</control>
+		<control type="label" id="3">
+			<description>Last loaded</description>
+			<posx>710</posx>
+			<posy>556</posy>
+			<width>250</width>
+			<align>right</align>
+			<label>$LOCALIZE[13204] $INFO[system.profilename]</label>
+			<font>font10</font>
+			<textcolor>button-text</textcolor>
+		</control>
+	</controls>
+</window> 

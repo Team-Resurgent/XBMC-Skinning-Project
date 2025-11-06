@@ -1,0 +1,485 @@
+<includes>
+	<include name="CommonView_Home">
+		<control type="wraplist" id="2">
+			<posx>68</posx>
+			<posy>80</posy>
+			<width>585</width>
+			<height>363</height>
+			<scrolltime>200</scrolltime>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<onleft>90</onleft>
+			<onright>90</onright>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<itemlayout height="200" width="200">
+			</itemlayout>
+			<focusedlayout height="200" width="200">
+	 		</focusedlayout>
+			<content>
+				<include>HomeItems</include>
+			</content>
+		</control>
+		<control type="group" id="3001">
+			<posy>185</posy>
+			<camera x="360" y="288" />
+			<include>common-FX-Home</include>
+			<visible>Control.IsVisible(2) + Container(2).OnNext</visible>
+			<animation effect="slide" end="-130,0" time="100" reversible="false">Hidden</animation>
+
+			<!-- Leftside -->
+
+			<control type="image">
+				<posx>-30</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-3).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-30" end="-45" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-30</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-3).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-30" end="-45" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-2).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-15" end="-30" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>100</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-2).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-15" end="-30" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>230</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-1).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-15" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>230</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-1).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-15" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<!-- Death Center -->
+
+			<control type="image">
+				<posx>390</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(0).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>390</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(0).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+			</control>
+
+			<!-- Rightside -->
+
+			<control type="image">
+				<posx>550</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(1).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="15" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>550</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(1).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="15" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>680</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(2).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="15" end="30" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>680</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(2).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="15" end="30" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>810</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(3).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="30" end="45" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>810</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(3).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="30" end="45" time="100" condition="true">Conditional</animation>
+			</control>
+		</control>
+		<control type="group" id="3002">
+			<posy>185</posy>
+			<camera x="360" y="288" />
+			<include>common-FX-Home</include>
+			<visible>Control.IsVisible(2) + Container(2).OnPrevious</visible>
+			<animation effect="slide" end="130,0" time="100" reversible="false">Hidden</animation>
+
+			<!-- Left side -->
+
+			<control type="image">
+				<posx>-290</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-3).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-30" end="-45" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-290</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-3).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-30" end="-45" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>-160</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-2).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-15" end="-30" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-160</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-2).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="-15" end="-30" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>-30</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-1).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-15" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-30</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-1).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-15" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<!-- Death Center -->
+
+			<control type="image">
+				<posx>130</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(0).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>130</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(0).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+			</control>
+
+			<!-- Right side -->
+
+			<control type="image">
+				<posx>290</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(1).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="15" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>290</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(1).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="15" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>420</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(2).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="15" end="30" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>420</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(2).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="15" end="30" time="100" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>550</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(3).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="30" end="45" time="100" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>550</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(3).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="200" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="30" end="45" time="100" condition="true">Conditional</animation>
+			</control>
+		</control>
+		<control type="group" id="3000">
+			<posy>185</posy>
+			<camera x="360" y="288" />
+			<include>common-FX-Home</include>
+			<visible>Control.IsVisible(2) + !Control.IsVisible(3001)  + !Control.IsVisible(3002)</visible>
+
+			<!-- Previous -->
+
+			<control type="image">
+				<posx>-68</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-2).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-30" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-68</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-2).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-30" time="0" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>95</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-1).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-15" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>95</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(-1).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="-15" time="0" condition="true">Conditional</animation>
+			</control>
+
+			<!-- Next -->
+
+			<control type="image">
+				<posx>425</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(1).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="15" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>425</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(1).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="15" time="0" condition="true">Conditional</animation>
+			</control>
+
+			<control type="image">
+				<posx>588</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(2).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="30" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>588</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(2).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+				<animation effect="rotatey" center="360" start="0" end="30" time="0" condition="true">Conditional</animation>
+			</control>
+
+			<!-- Death Center -->
+
+			<control type="image">
+				<posx>260</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(0).ActualIcon</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<visible>Contol.HasFocus(2)</visible>
+			</control>
+			<control type="image">
+				<posx>260</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<info>Container(2).ListItem(0).ActualIcon</info>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+				<visible>Contol.HasFocus(2)</visible>
+			</control>
+		</control>
+		<control type="label">
+			<posx>110</posx>
+			<posy>495</posy>
+			<width>500</width>
+			<height>16</height>
+			<align>center</align>
+			<font>special16</font>
+			<align>center</align>
+			<info>Container(2).ListItem(0).Label</info>
+			<shadowcolor>black</shadowcolor>
+			<include>textcolorlightgrey</include>
+			<include>common-FX-1</include>
+			<include>common-fade-home</include>
+			<include>Home-Visible</include>
+		</control>
+	</include>
+</includes>

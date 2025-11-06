@@ -1,0 +1,48 @@
+﻿<window id="107">
+	<defaultcontrol>402</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>420</posx>
+		<posy>490</posy>
+	</coordinates>
+	<animation effect="slide" time="400" start="300,0">WindowOpen</animation>
+	<animation effect="slide" time="400" start="300,0">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<description>popup kai toast dialog background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>255</width>
+			<height>75</height>
+			<texture>trans-panel-small.png</texture>
+		</control>
+		<control type="image" id="400">
+			<description>avatar</description>
+			<posx>30</posx>
+			<posy>15</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>buddyitem-default-avatar.png</texture>
+		</control>
+		<control type="label" id="401">
+			<description>Caption Label</description>
+			<posx>76</posx>
+			<posy>17</posy>
+			<width>160</width>
+			<font>font12</font>
+			<align>center</align>
+			<label>ChokeManiac</label>
+			<scroll>true</scroll>
+		</control>
+		<control type="image" id="402">
+			<description>Description Button</description>
+			<posx>76</posx>
+			<posy>40</posy>
+			<width>160</width>
+			<label>has just signed in</label>
+			<font>font10</font>
+			<align>center</align>
+			<scroll>true</scroll>
+		</control>
+	</controls>
+</window>

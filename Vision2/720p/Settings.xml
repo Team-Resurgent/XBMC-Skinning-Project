@@ -1,0 +1,23 @@
+<window id="4">
+	<defaultcontrol always="true">99</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="button" id="99">
+			<description>Fake Focus Button button to throw you back to home</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<height>2</height>
+			<width>2</width>
+			<font>-</font>
+			<label>-</label>
+			<onfocus>ActivateWindow(home)</onfocus>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>99</onleft>
+			<onright>99</onright>
+			<onup>99</onup>
+			<ondown>99</ondown>
+		</control>
+	</controls>
+</window>

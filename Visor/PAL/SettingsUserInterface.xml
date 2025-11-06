@@ -1,0 +1,113 @@
+<window>
+  <id>30</id>
+  <defaultcontrol>6</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>50</posX>
+      <posY>50</posY>
+      <height>500</height>
+      <width>650</width>
+      <texture>bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>585</posX>
+      <posY>33</posY>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      <colordiffuse>60FFFFFF</colordiffuse>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>55</posX>
+      <posY>35</posY>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>Filters text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> <posX>660</posX> <posY>85</posY>
+      <label>230</label>
+      <font>font04</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+
+    <control>
+      <description>Flicker filter</description>
+      <type>label</type>
+      <id>16</id>
+      <posX>208</posX>
+      <posY>150</posY>
+      <label>13100</label>
+      <font>font13</font>
+    </control>
+
+    <control>
+      <description>Flicker filter spin select</description>
+      <type>spincontrol</type>
+      <id>6</id>
+      <align>right</align>
+      <posX>515</posX>
+      <posY>150</posY>
+      <font>font13</font>
+      <reverse>yes</reverse>
+      <onleft>17</onleft>
+      <onright>17</onright>
+      <onup>4</onup>
+      <ondown>4</ondown>
+    </control>
+
+    <control>
+      <description>Soften</description>
+      <type>checkmark</type>
+      <id>4</id>
+      <posX>208</posX>
+      <posY>180</posY>
+      <label>215</label>
+      <font>font13</font>
+      <onleft>15</onleft>
+      <onright>15</onright>
+      <onup>6</onup>
+      <ondown>6</ondown>
+    </control>
+
+    <control>
+      <description>test image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>188</posX>
+      <posY>200</posY>
+      <height>290</height>
+      <width>380</width>
+      <texture>test.png</texture>
+    </control>
+
+  </controls>
+
+</window>
+

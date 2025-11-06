@@ -1,0 +1,895 @@
+<window id="0">
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		
+    <!-- Reminders and media positioning-->
+	<!--
+	<control type="image">
+	
+	Page Size is !
+			<width>720</width>
+			<height>576</height>
+
+	</control>
+
+	
+	-->
+
+
+
+    <control type="image">
+      <width>720</width>
+      <height>576</height>
+      <texture>ampbehind.png</texture>
+    </control>
+
+    <control type="group">
+      <animation effect="fade" time="400">WindowClose</animation>
+      <animation effect="fade" time="2000">WindoOpen</animation>
+
+      <control type="multiimage">
+      <posx>0</posx>
+      <posy>30</posy>
+      <width>720</width>
+      <height>576</height>
+      <imagepath>Movies</imagepath>
+      <timeperimage>5000</timeperimage>
+      <fadetime>2000</fadetime>
+      <info>Skin.String(CustomMovies)</info>
+      <visible>[Control.HasFocus(1) + Buttonscroller.HasFocus(101)]</visible>
+      <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <timeperimage>5000</timeperimage>
+        <fadetime>2000</fadetime>
+        <imagepath>Music</imagepath>
+        <info>Skin.String(CustomMusic)</info>
+        <visible>[Control.HasFocus(1) + Buttonscroller.HasFocus(102)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+    </control>
+    <control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <timeperimage>5000</timeperimage>
+      <imagepath>Pictures</imagepath>
+      <info>Skin.String(CustomPictures)</info>
+      <visible>[Control.HasFocus(1) + Buttonscroller.HasFocus(103)]</visible>
+      <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+      <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+    </control>
+
+
+
+
+
+    <control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <imagepath>Programs</imagepath>
+      <timeperimage>5000</timeperimage>
+      <info>Skin.String(CustomGames)</info>
+      <visible>[Control.HasFocus(2) + Buttonscroller.HasFocus(101)]</visible>
+      <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+      <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <imagepath>Programs</imagepath>
+        <timeperimage>5000</timeperimage>
+        <info>Skin.String(CustomPrograms)</info>
+        <visible>[Control.HasFocus(2) + Buttonscroller.HasFocus(102)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <imagepath>Games</imagepath>
+        <timeperimage>5000</timeperimage>
+        <info>Skin.String(CustomGames)</info>
+        <visible>[Control.HasFocus(2) + Buttonscroller.HasFocus(102)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <imagepath>Emulators</imagepath>
+        <timeperimage>5000</timeperimage>
+        <info>Skin.String(CustomEmulators)</info>
+        <visible>[Control.HasFocus(2) + Buttonscroller.HasFocus(103)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <imagepath>Files</imagepath>
+        <timeperimage>5000</timeperimage>
+        <info>Skin.String(CustomFiles)</info>
+        <visible>[Control.HasFocus(3) + Buttonscroller.HasFocus(101)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <imagepath>Settings</imagepath>
+        <timeperimage>5000</timeperimage>
+        <info>Skin.String(CustomSettings)</info>
+        <visible>[Control.HasFocus(3) + Buttonscroller.HasFocus(102)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <imagepath>Weather</imagepath>
+        <timeperimage>5000</timeperimage>
+        <info>Skin.String(CustomWeather)</info>
+        <visible>[Control.HasFocus(3) + Buttonscroller.HasFocus(103)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+      <control type="multiimage">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <imagepath>Scripts</imagepath>
+        <timeperimage>5000</timeperimage>
+        <info>Skin.String(CustomScripts)</info>
+        <visible>[Control.HasFocus(3) + Buttonscroller.HasFocus(104)]</visible>
+        <animation effect="fade" time="800" delay="900">VisibleChange</animation>
+        <animation effect="fade" time="800" delay="1000">WindowOpen</animation>
+      </control>
+
+
+    </control>
+
+
+    <control type="image">
+      <posy>-35</posy>
+      <width>720</width>
+      <height>35</height>
+      <texture>rssBar.png</texture>
+      <animation effect="slide" end="0,35" time="800">WindowOpen</animation>
+    </control>
+
+    <control type="image">
+      <posy>7</posy>
+      <posx>-15</posx>
+      <width>18</width>
+      <height>18</height>
+      <texture>rssIcon.png</texture>
+      <animation effect="slide" end="45,0" time="800" delay="900">WindowOpen</animation>
+    </control>
+
+    <control type="image">
+      <posy>525</posy>
+      <posx>0</posx>
+      <width>720</width>
+      <height>56</height>
+      <texture>ampFloor.png</texture>
+    </control>
+
+
+
+
+    <!--<control type="image">
+      <width>720</width>
+      <height>596</height>
+      <texture>ampOverlay.png</texture>
+    </control>-->
+
+
+
+    <!--ToDo
+		<control type="videowindow">
+        <description>video preview window</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <visible>Player.HasVideo</visible>
+        <animation effect="fade" time="100">WindowOpen</animation>
+      </control>
+-->
+
+    
+    
+		<!-- Music visulisation / equaliser / music infos and controls-->	
+		<control type="group">
+      <animation effect="zoom" start="100" end="1" center="360,288" time="400" delay="200">WindowClose</animation>
+
+      <description>Group of Object for music playback and display.</description>
+      <visible>Player.HasAudio</visible>
+      <posx>250</posx>
+		  <posy>264</posy>
+
+
+      <control type="image">
+        <description>LeftFoot</description>
+        <posx>20</posx>
+        <posy>66</posy>
+        <width>90</width>
+        <height>40</height>
+        <texture>foot.png</texture>
+      </control>
+
+      <control type="image">
+        <description>RightFoot</description>
+        <posx>260</posx>
+        <posy>66</posy>
+        <width>90</width>
+        <height>40</height>
+        <texture>foot.png</texture>
+      </control>
+      
+      <control type="image">
+        <description>black behind</description>
+        <posx>15</posx>
+        <posy>9</posy>
+        <width>340</width>
+        <height>85</height>
+        <texture>blank.png</texture>
+      </control>
+      
+			<control type="visualisation">
+        <visible>Player.HasAudio</visible>
+        <description>visualisation</description>
+        <posx>15</posx>
+        <posy>9</posy>
+        <width>340</width>
+        <height>85</height>
+        <animation effect="fade"  time="0">WindowClose</animation>
+        <animation effect="fade"  time="800">WindowOpen</animation>
+      </control>
+
+
+      <control type="image">
+        <description>Ex overlay to make visulisation look like led</description>
+        <posx>15</posx>
+        <posy>9</posy>
+        <width>340</width>
+        <height>85</height>
+        <animation effect="fade"  time="1800">WindowOpen</animation>
+        <texture>LED-overlay.png</texture>
+      </control>
+      
+   
+      <control type="image">
+        <description>Equaliser</description>
+        <posx></posx>
+        <posy></posy>
+        <width>370</width>
+        <height>100</height>
+        <texture>Equaliser.png</texture>
+        <animation effect="none" time="400" end="0" reversible="false">WindowClose</animation>
+      </control>
+
+
+      
+
+
+      <!--CD Case and Overlays-->	
+		  <control type="group">
+			<description>CD Cover / Case Group</description>
+			<posx>-132</posx>
+			<posy>-20</posy>
+        <animation effect="fade"  time="600">WindowOpen</animation>
+        <animation effect="fade"  time="400">WindowClose</animation>
+			<control type="image">
+			  <description>Case Behind</description>
+			  <posx></posx>
+			  <posy></posy>
+			  <width>120</width>
+			  <height>120</height>
+			  <texture>case.png</texture>
+			</control>
+
+			<control type="image">
+			  <description>cover image</description>
+			  <posx>12</posx>
+			  <posy>4</posy>
+			  <width>104</width>
+			  <height>114</height>
+        <info>MusicPlayer.Cover</info>
+			</control>
+
+			<control type="image">
+			  <description>Gloss Over CD</description>
+			  <posx></posx>
+			  <posy></posy>
+			  <width>122</width>
+			  <height>114</height>
+        <texture>gloss.png</texture>
+			</control>
+		  </control>
+
+      <!-- media infos (music) -->
+      
+      <control type="group">
+        <posy>-320</posy>
+        <posx>100</posx>
+        <include>homemediainfo</include>
+
+        <include>textcolor-LEDBRIGHT</include>
+        <include>textcolor-LEDDIMM</include>
+        <control type="image">
+          <description>RW Image</description>
+          <posx>15</posx>
+          <posy>58</posy>
+          <width>15</width>
+          <height>15</height>
+          <label>hhh</label>
+          <aspectratio align="right">keep</aspectratio>
+          <texture>music-rewind.png</texture>
+          <!--<visible>Player.Rewinding</visible>-->
+        </control>
+        <control type="image">
+          <description>FF Image</description>
+          <posx>15</posx>
+          <posy>58</posy>
+          <width>15</width>
+          <height>15</height>
+          <aspectratio align="right">keep</aspectratio>
+          <texture>music-forward.png</texture>
+          <visible>Player.Forwarding</visible>
+        </control>
+        <control type="image">
+          <description>Paused Image</description>
+          <posx>15</posx>
+          <posy>58</posy>
+          <width>15</width>
+          <height>15</height>
+          <aspectratio align="right">keep</aspectratio>
+          <texture>music-pause.png</texture>
+          <visible>Player.Paused</visible>
+        </control>
+        <control type="image">
+          <description>Play Image</description>
+          <posx>15</posx>
+          <posy>58</posy>
+          <width>15</width>
+          <height>15</height>
+          <aspectratio align="right">keep</aspectratio>
+          <texture>music-play.png</texture>
+          <visible>Player.Playing</visible>
+        </control>
+
+        <control type="label">
+          <description>Artist label</description>
+          <posx>30</posx>
+          <posy>50</posy>
+          <label>$INFO[MusicPlayer.Title]</label>
+          <font>font12_NoBold</font>
+        </control>
+
+        <control type="label">
+          <description>Artist label</description>
+          <posx>30</posx>
+          <posy>64</posy>
+          <label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Album]   </label>
+          <font>font12_NoBold</font>
+        </control>
+
+        <control type="label">
+          <description>Time label</description>
+          <posx>275</posx>
+          <posy>60</posy>
+          <label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
+          <font>font12_NoBold</font>
+        </control>
+      </control>
+    </control>
+
+
+
+    <!-- Main Amp Visuals and controls-->
+    <control type="group">
+      <posx>100</posx>
+      <posy>360</posy>
+
+      <control type="image">
+        <description>Blank for behind lcds</description>
+        <posx>90</posx>
+        <posy>48</posy>
+        <width>410</width>
+        <height>110</height>
+        <texture>blank.png</texture>
+      </control>
+
+
+      <control type="image">
+        <animation effect="fade"  time="1800">WindowOpen</animation>
+        <animation effect="fade"  time="400">WindowClose</animation>
+        <description>Blank for behind lcds</description>
+        <posx>90</posx>
+        <posy>48</posy>
+        <width>410</width>
+        <height>110</height>
+        <texture>ledbehind.png</texture>
+      </control>
+
+
+
+
+
+
+
+      <control type="image">
+        <description>LeftFoot</description>
+        <posx>25</posx>
+        <posy>155</posy>
+        <width>90</width>
+        <height>30</height>
+        <texture>foot.png</texture>
+      </control>
+
+
+
+      <control type="image">
+        <description>RightFoot</description>
+        <posx>410</posx>
+        <posy>155</posy>
+        <width>90</width>
+        <height>30</height>
+        <texture>foot.png</texture>
+      </control>
+
+      <!--Reflection-->
+      <control type="image">
+        <description>LeftFoot</description>
+        <posx>25</posx>
+        <posy>188</posy>
+        <width>90</width>
+        <height>40</height>
+        <texture flipy="true" diffuse="fade2.png">foot.png</texture>
+      </control>
+      <control type="image">
+        <description>RightFoot</description>
+        <posx>410</posx>
+        <posy>188</posy>
+        <width>90</width>
+        <height>40</height>
+        <texture flipy="true" diffuse="fade2.png">foot.png</texture>
+      </control>
+
+
+
+      <control type="image">
+        <description>refect faceplate</description>
+        <posx>0</posx>
+        <posy>188</posy>
+        <width>520</width>
+        <height>180</height>
+        <texture flipy="true" diffuse="fade2.png">faceplate.png</texture>
+      </control>
+      <!--Reflection-->
+
+      <!--
+      <control type="image">
+        <description>LED Photos appearance</description>
+        <posx>220</posx>
+        <posy>15</posy>
+        <width>460</width>
+        <height>117</height>
+        <visible>[Control.HasFocus(1) + Buttonscroller.HasFocus(103)]</visible>
+        <animation effect="slide"  end="0,85"  delay="400" time="800" >visible</animation>
+        <animation effect="slide"  start ="0,85" end="0,0"  delay="0" time="400" >hidden</animation>
+
+        <texture>LED-photos.png</texture>
+      </control>
+
+      <control type="image">
+        <description>LED Photos appearance</description>
+        <posx>60</posx>
+        <posy>115</posy>
+        <width>81</width>
+        <height>80</height>
+        <visible>[Control.HasFocus(1) + Buttonscroller.HasFocus(102)]</visible>
+        <animation effect="slide"  end="480,0"  delay="400" time="800" >visible</animation>
+        <animation effect="slide"  start ="480,0" end="0,0"  delay="0" time="400" >hidden</animation>
+        <texture>LED-music.png</texture>
+      </control>
+
+      <control type="image">
+        <description>LED Photos appearance</description>
+        <posx>220</posx>
+        <posy>15</posy>
+        <width>460</width>
+        <height>117</height>
+        <visible>[Control.HasFocus(1) + Buttonscroller.HasFocus(104)]</visible>
+        <animation effect="slide"  end="0,85"  delay="400" time="800" >visible</animation>
+        <animation effect="slide"  start ="0,85" end="0,0"  delay="0" time="400" >hidden</animation>
+        <texture>LED-fav.png</texture>
+      </control>
+-->
+
+
+      <!--Group for Menu selections -->
+      <control type="group">
+        <posx>120</posx>
+        <posy>45</posy>
+
+
+        <!-- Begin Media menu and Images -->
+        <control type="group" >
+          <animation effect="fade"  time="400">WindowClose</animation>
+
+          <visible allowhiddenfocus="true">Control.HasFocus(1)</visible>
+          <control type="buttonscroller" id="1">
+
+            <width>130</width>
+            <height>110</height>
+            <description>Media buttons</description>
+            <include>textcolor-LEDBRIGHT</include>
+            <include>textcolor-LEDDIMM</include>
+            <buttongap>0</buttongap>
+            <numbuttons>3</numbuttons>
+            <orientation>horizontal</orientation>
+            <align>center</align>
+            <aligny>center</aligny>
+            <movement>0</movement>
+            <defaultbutton>2</defaultbutton>
+            <wraparound>yes</wraparound>
+            <smoothscrolling>yes</smoothscrolling>
+            <alpha>1</alpha>
+            <font>fntLED_Large</font>
+            <onleft>1</onleft>
+            <onright>1</onright>
+            <onup>1</onup>
+            <ondown>2</ondown>
+            <textoffsetx>0</textoffsetx>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textcolor>FFffffff</textcolor>
+            <visible allowhiddenfocus="true">Control.HasFocus(1)</visible>
+            <buttons>
+              <button id="101">
+                <label>1212 </label>
+                <onclick>XBMC.ActivateWindow(MyVideos)</onclick>
+              </button>
+              <button id="102">
+                <label>1211</label>
+                <onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+              </button>
+              <button id="103">
+                <label>1213</label>
+                <onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+              </button>
+              <button id="104">
+                <label>1036</label>
+                <onclick>ActivateWindow(Favourites)</onclick>
+              </button>
+            </buttons>
+          </control>
+        </control>
+        <!-- End Media menu and Images -->
+
+        <!-- Start Games / Emulator Menu -->
+        <control type="group" >
+          <visible allowhiddenfocus="true">Control.HasFocus(2)</visible>
+          <control type="buttonscroller" id="2">
+            <width>130</width>
+            <height>110</height>
+            <description>Games/Programs</description>
+            <include>textcolor-LEDBRIGHT</include>
+            <include>textcolor-LEDDIMM</include>
+            <buttongap>0</buttongap>
+            <numbuttons>3</numbuttons>
+            <orientation>horizontal</orientation>
+            <align>center</align>
+            <aligny>center</aligny>
+            <movement>0</movement>
+            <defaultbutton>2</defaultbutton>
+            <wraparound>yes</wraparound>
+            <smoothscrolling>yes</smoothscrolling>
+            <alpha>1</alpha>
+            <font>fntLED_Large</font>
+            <onleft>2</onleft>
+            <onright>2</onright>
+            <onup>1</onup>
+            <ondown>3</ondown>
+            <textoffsetx>0</textoffsetx>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textcolor>FFffffff</textcolor>
+            <visible allowhiddenfocus="true">Control.HasFocus(2)</visible>
+            <buttons>
+
+              <button id="101">
+                <label>350</label>
+                <onclick>XBMC.ActivateWindow(1,Programs)</onclick>
+              </button>
+              <button id="102">
+                <label>15016</label>
+                <onclick>XBMC.ActivateWindow(1,Games)</onclick>
+              </button>
+              <button id="103">
+                <label>Emulators</label>
+                <onclick>XBMC.ActivateWindow(1,Emulators)</onclick>
+              </button>
+            </buttons>
+          </control>
+        </control>
+        <!-- End Games and Emulators -->
+
+        <!-- Start System -->
+        <control type="group" >
+          <visible allowhiddenfocus="true">Control.HasFocus(3)</visible>
+          <control type="buttonscroller" id="3">
+            <width>130</width>
+            <height>110</height>
+            <description>Settings</description>
+            <include>textcolor-LEDBRIGHT</include>
+            <include>textcolor-LEDDIMM</include>
+            <buttongap>0</buttongap>
+            <numbuttons>3</numbuttons>
+            <orientation>horizontal</orientation>
+            <align>center</align>
+            <aligny>center</aligny>
+            <movement>0</movement>
+            <defaultbutton>2</defaultbutton>
+            <wraparound>yes</wraparound>
+            <smoothscrolling>yes</smoothscrolling>
+            <alpha>1</alpha>
+            <font>fntLED_Large</font>
+            <onleft>3</onleft>
+            <onright>3</onright>
+            <onup>2</onup>
+            <ondown>3</ondown>
+            <textoffsetx>0</textoffsetx>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <textcolor>FFffffff</textcolor>
+            <visible allowhiddenfocus="true">Control.HasFocus(3)</visible>
+            <buttons>
+              <button id="101">
+                <label>7</label>
+                <onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+              </button>
+              <button id="102">
+                <width>300</width>
+                <label>5</label>
+                <onclick>XBMC.ActivateWindow(Settings)</onclick>
+              </button>
+
+              <button id="103">
+                <label>8</label>
+                <onclick>XBMC.ActivateWindow(Weather)</onclick>
+              </button>
+              <button id="104">
+                <label>10020</label>
+                <onclick>XBMC.ActivateWindow(scripts)</onclick>
+              </button>
+            </buttons>
+          </control>
+        </control>
+        <!-- End System -->
+      </control>
+
+
+
+      <!--
+      <control type="image">
+        <description>Main Amp Overlay for LED appearance</description>
+        <posx>220</posx>
+        <posy>86</posy>
+        <width>460</width>
+        <height>117</height>
+        <texture>LED-overlay.png</texture>
+      </control>
+-->
+
+      <control type="image">
+        <description>FacePlate</description>
+        <width>520</width>
+        <height>180</height>
+        <texture>Faceplate.png</texture>
+      </control>
+
+
+      <control type="label">
+        <description>Time label</description>
+        <posx>148</posx>
+        <posy>62</posy>
+        <align>center</align>
+        <aligny>center</aligny>
+        <info>System.Time</info>
+        <font>font14</font>
+        <include>textcolor-LEDDIMM</include>
+      </control>
+
+
+
+
+
+      <control type="image">
+        <description>KnobBack</description>
+        <aspectratio>keep</aspectratio>
+        <posx>2</posx>
+        <posy>46</posy>
+        <width>105</width>
+        <height>105</height>
+        <texture>Knobback.png</texture>
+      </control>
+
+      <control type="image">
+        <aspectratio>keep</aspectratio>
+        <description>KnobFront</description>
+        <posx>2</posx>
+        <posy>48</posy>
+        <width>105</width>
+        <height>105</height>
+        <animation effect="rotate" end="360" center="54,100" time="800">WindowOpen</animation>
+        <animation effect="rotate" end="0" center="54,100" time="400">WindowClose</animation>
+        <animation effect="rotate" end="120" center="54,100" time="800" condition="[Control.HasFocus(1) + Buttonscroller.HasFocus(103)]">Conditional</animation>
+        <animation effect="rotate" end="240" center="54,100" time="800" condition="[Control.HasFocus(1) + Buttonscroller.HasFocus(102)]">Conditional</animation>
+        <animation effect="rotate" end="360" center="54,100" time="800" condition="[Control.HasFocus(1) + Buttonscroller.HasFocus(101)]">Conditional</animation>
+
+        <animation effect="rotate" end="120" center="54,100" time="800" condition="[Control.HasFocus(2) + Buttonscroller.HasFocus(103)]">Conditional</animation>
+        <animation effect="rotate" end="240" center="54,100" time="800" condition="[Control.HasFocus(2) + Buttonscroller.HasFocus(102)]">Conditional</animation>
+        <animation effect="rotate" end="360" center="54,100" time="800" condition="[Control.HasFocus(2) + Buttonscroller.HasFocus(101)]">Conditional</animation>
+
+        <animation effect="rotate" end="90" center="54,100" time="800" condition="[Control.HasFocus(3) + Buttonscroller.HasFocus(104)]">Conditional</animation>
+        <animation effect="rotate" end="180" center="54,100" time="800" condition="[Control.HasFocus(3) + Buttonscroller.HasFocus(103)]">Conditional</animation>
+        <animation effect="rotate" end="270" center="54,100" time="800" condition="[Control.HasFocus(3) + Buttonscroller.HasFocus(102)]">Conditional</animation>
+        <animation effect="rotate" end="360" center="54,100" time="800" condition="[Control.HasFocus(3) + Buttonscroller.HasFocus(101)]">Conditional</animation>
+
+        <texture>Knobfront.png</texture>
+      </control>
+
+
+
+      <!--Group for Change Media Controls-->
+      <control type="group">
+        <description>Change Media</description>
+
+        <!--Images Buttons Off-->
+        <control type="image">
+          <posx>105</posx>
+          <posy>70</posy>
+          <width>10</width>
+          <height>10</height>
+          <texture>Select_off.png</texture>
+          <aspectratio>stretch</aspectratio>
+          <animation effect="fade" delay="100" time="100" start="0">visible</animation>
+          <animation effect="fade" time="50" end="0">hidden</animation>
+        </control>
+        <control type="image">
+          <posx>105</posx>
+          <posy>95</posy>
+          <width>10</width>
+          <height>10</height>
+          <texture>Select_off.png</texture>
+          <aspectratio>stretch</aspectratio>
+
+          <animation effect="fade" delay="100" time="100" start="0">visible</animation>
+          <animation effect="fade" time="50" end="0">hidden</animation>
+        </control>
+        <control type="image">
+          <posx>105</posx>
+          <posy>120</posy>
+          <width>10</width>
+          <height>10</height>
+          <texture>Select_off.png</texture>
+          <aspectratio>stretch</aspectratio>
+          <animation effect="fade" delay="100" time="100" start="0">visible</animation>
+          <animation effect="fade" time="50" end="0">hidden</animation>
+        </control>
+
+        <!--Image buttons on-->
+        <control type="image">
+          <description>MyPictures Background Image</description>
+          <posx>105</posx>
+          <posy>70</posy>
+          <width>10</width>
+          <height>10</height>
+          <texture>Select_on.png</texture>
+          <aspectratio>stretch</aspectratio>
+          <visible>Control.HasFocus(1)</visible>
+          <animation effect="fade"  time="2500"  condition="true" pulse="true">Conditional</animation>
+          <animation effect="fade" time="600" end="0">hidden</animation>
+        </control>
+
+        <control type="image">
+          <description>MyPictures Background Image</description>
+          <posx>105</posx>
+          <posy>95</posy>
+          <width>10</width>
+          <height>10</height>
+          <texture>Select_on.png</texture>
+          <aspectratio>stretch</aspectratio>
+          <visible>Control.HasFocus(2)</visible>
+          <animation effect="fade"  time="2500"  condition="true" pulse="true">Conditional</animation>
+          <animation effect="fade" time="600" end="0">hidden</animation>
+        </control>
+
+        <control type="image">
+          <description>MyPictures Background Image</description>
+          <posx>105</posx>
+          <posy>120</posy>
+          <width>10</width>
+          <height>10</height>
+          <texture>Select_on.png</texture>
+          <aspectratio>stretch</aspectratio>
+          <visible>Control.HasFocus(3)</visible>
+          <animation effect="fade"  time="2500"  condition="true" pulse="true">Conditional</animation>
+          <animation effect="fade" time="600" end="0">hidden</animation>
+        </control>
+      </control>
+
+      
+
+      <control type="image">
+        <description>tray</description>
+        <posx>130</posx>
+        <posy>20</posy>
+        <width>365</width>
+        <height>20</height>
+        <texture>tray.png</texture>
+        <animation effect="zoom" end="185" center="380,75" time="400">WindowClose</animation>
+
+      </control>
+
+    
+    </control>
+
+
+		<!-- rss -->	
+		<control type="rss" id="1">
+			<description>rss feed</description>
+			<posx>50</posx>
+			<posy>10</posy>
+			<width>1300</width>
+			<font>font14</font>
+			<urlset>1</urlset>
+			<include>textcolor-rsstitle</include>
+			<include>textcolor-rssheadline</include>
+			<textcolor>
+        <include>textcolor-grey</include>
+      </textcolor>
+			<visible>!Player.HasMedia</visible>
+      <animation effect="fade" time="400">WindowClose</animation>
+		</control>
+
+
+
+    
+	</controls>
+</window>

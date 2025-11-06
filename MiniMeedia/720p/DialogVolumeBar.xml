@@ -1,0 +1,25 @@
+<window id="104">
+  <defaultcontrol></defaultcontrol>
+  <zorder>5</zorder>
+
+  <controls>
+
+    <control type="group" id="0">
+      <include>VolumeDialogArea</include>
+      <visible>!Window.IsVisible(113)</visible>
+
+      <control type="image" id="0">
+        <description>Volume image</description>
+        <texture>VolumeBlue.png</texture>
+        <include>VolumeImage</include>
+      </control>
+
+      <control type="label" id="0">
+        <description>Volume Label</description>
+        <info>Player.Volume</info>
+        <include>VolumeLabel</include>
+      </control>
+    </control>
+
+  </controls>
+</window>

@@ -1,0 +1,7 @@
+<colors>
+	<color name="textcolorwhite">ffffffff</color>
+	<color name="textcolorlightgrey">d0ffffff</color>
+	<color name="textcolorlightblue">FFB2D4F5</color>
+	<color name="textcolordialog">FFB2D4F5</color>
+	<color name="controldefaults">ffffffff</color>
+</colors>

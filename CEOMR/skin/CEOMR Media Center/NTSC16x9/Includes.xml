@@ -1,0 +1,98 @@
+<includes>
+
+  <include file="Defaults.xml" /> 
+  <include file="CommonViewTypes.xml" />
+  <include file="3D_CoverView.xml" />
+  <include file="Translate.xml" />
+
+  <include name="logo">
+    <animation effect="fade" time="200" condition="!Skin.HasSetting(animation)">VisibleChange</animation>
+    <animation effect="fade" time="200" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="200" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+  </include>
+
+  <include name="xbmclogo">
+      <posx>63</posx>
+      <posy>46</posy>
+      <height>60</height>
+      <width>133</width>
+      <visible>!Skin.HasSetting(logo)</visible>
+      <texture>logo.png</texture>
+      <animation effect="zoom" time="100" start="100" end="100" center="0,0">WindowOpen</animation>
+      <animation effect="zoom" time="100" start="100" end="100" center="0,0">WindowClose</animation>
+  </include>
+
+  <include name="contentpanelslide">
+	<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1" condition="!Skin.HasSetting(Animation)">WindowOpen</animation>
+	<animation effect="slide" time="300" start="0,0" end="600,0" acceleration="1.1" condition="!Skin.HasSetting(Animation)">WindowClose</animation>
+  </include>
+
+  <include name="settings">
+      <animation effect="zoom" time="200" end="102" center="360,240">Focus</animation>
+      <animation effect="zoom" time="200" start="102" center="360,240">Unfocus</animation>
+    <animation effect="fade" time="100" condition="!Skin.HasSetting(animation)">VisibleChange</animation>
+    <animation effect="fade" time="500" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="100" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+  </include>
+
+  <include name="buttonmenu">
+      <animation effect="zoom" start="20" end="100" center="360,240" time="800">WindowOpen</animation>
+      <animation effect="slide" time="400" end="0,-800" acceleration="2">WindowClose</animation>
+  </include>
+
+  <include name="home">
+      <animation effect="zoom" time="400" start="100" end="150" center="0,0">WindowOpen</animation>
+      <animation effect="zoom" time="400" start="150" end="100" center="0,0">WindowClose</animation>
+  </include>
+
+  <include name="xbmcinfo">
+      <animation effect="zoom" time="400" start="130" center="0,0">WindowOpen</animation>
+      <animation effect="zoom" time="400" end="130" center="0,0">WindowClose</animation>
+    <animation effect="fade" time="200" condition="!Skin.HasSetting(animation)">VisibleChange</animation>
+    <animation effect="fade" time="200" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="200" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+  </include>
+
+  <include name="control">
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">VisibleChange</animation>
+    <animation effect="fade" time="400" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="fade" time="100" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+  </include>
+
+  <include name="button">
+    <animation effect="slide" time="400" start="-200,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animation)">WindowOpen</animation>
+    <animation effect="slide" time="150" start="0,0" end="-200,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animation)">WindowClose</animation>
+    <animation effect="slide" time="150" start="0,0" end="-10,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animation)">Focus</animation>
+    <animation effect="slide" time="150" start="-10,0" end="0,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animation)">UnFocus</animation>
+  </include>
+
+  <include name="textcolorwhite">
+    <textcolor>ffffffff</textcolor>
+  </include>
+
+  <include name="textcolorlightgrey">
+    <textcolor>d0ffffff</textcolor>
+  </include>
+
+  <include name="textcolorlightblue">
+    <textcolor>FFB2D4F5</textcolor>
+  </include>
+
+  <include name="textcolordialog">
+    <textcolor>FFB2D4F5</textcolor>
+  </include>
+
+  <include name="controldefaults">
+    <textcolor>ffffffff</textcolor>    
+  </include>
+
+  <include name="hdtv">
+      <texture>ntsc169.png</texture>
+  </include>
+
+  <include name="ui_calibration">
+      <width>720</width>
+      <height>480</height>
+  </include>
+
+</includes>

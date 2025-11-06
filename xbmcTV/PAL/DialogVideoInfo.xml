@@ -1,0 +1,299 @@
+<window id="2003">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="fade" time="1000">WindowOpen</animation>
+	<animation effect="fade" time="1000">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<description>background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-solid.png</texture>
+			<visible>!Skin.String(custom-background)</visible>
+		</control>
+		<control type="image">
+			<description>custom background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+		</control>
+
+		<control type="image">
+			<description>Cover image</description>
+			<posx>10</posx>
+			<posy>20</posy>
+			<width>160</width>
+			<height>280</height>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotatey" start="-20" end="-20" time="0" condition="Skin.HasSetting(tilted-icons)">Conditional</animation>
+			<info>ListItem.Icon</info>
+		</control>
+		<control type="image">
+			<description>Cover image reflection</description>
+			<posx>10</posx>
+			<posy>300</posy>
+			<width>160</width>
+			<height>280</height>
+			<info>ListItem.Icon</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotatey" start="-20" end="-20" time="0" condition="Skin.HasSetting(tilted-icons)">Conditional</animation>
+		</control>
+
+		<control type="label" id="20">
+			<description>Movie Title</description>
+			<posx>220</posx>
+			<posy>18</posy>
+			<width>480</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control type="label">
+			<description>Studio</description>
+			<posx>220</posx>
+			<posy>36</posy>
+			<width>220</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<info>LIstItem.Studio</info>
+			<textcolor>grey-text</textcolor>
+			<font>font10</font>
+		</control>
+		<control type="label">
+			<description>MPAA rating</description>
+			<posx>700</posx>
+			<posy>36</posy>
+			<width>220</width>
+			<align>right</align>
+			<scroll>true</scroll>
+			<info>LIstItem.MPAA</info>
+			<textcolor>grey-text</textcolor>
+			<font>font10</font>
+		</control>
+
+		<control type="textbox" id="4">
+			<description>Plot</description>
+			<posx>230</posx>
+			<posy>62</posy>
+			<width>470</width>
+			<height>165</height>
+			<onleft>5</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<font>font11</font>
+			<spinposx>430</spinposx>
+			<spinposy>170</spinposy>
+			<textcolor>button-text</textcolor>
+			<include>AutoScroll2x</include>
+		</control>
+		<control type="listcontrol" id="50">
+			<description>cast listcontrol</description>
+			<posx>230</posx>
+			<posy>62</posy>
+			<width>470</width>
+			<height>180</height>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<textoff>10</textoff>
+			<font>font11</font>
+			<textureheight>32</textureheight>
+			<texturewidth>285</texturewidth>
+			<textcolor>button-text</textcolor>
+			<spinposx>430</spinposx>
+			<spinposy>155</spinposy>
+		</control>
+
+	<!-- Start Movie Details -->
+		<control type="label">
+			<description>Movie Details Label</description>
+			<posx>220</posx>
+			<posy>242</posy>
+			<width>140</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>31091</label>
+			<textcolor>grey-text</textcolor>
+			<font>font11</font>
+		</control>
+		<control type="label" id="23">
+			<description>Genre value</description>
+			<posx>230</posx>
+			<posy>260</posy>
+			<width>140</width>
+			<label>-</label>
+			<font>font11</font>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>Release year</description>
+			<posx>230</posx>
+			<posy>278</posy>
+			<width>140</width>
+			<label>$LOCALIZE[31092] $INFO[ListItem.Year]</label>
+			<font>font11</font>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>Duration</description>
+			<posx>230</posx>
+			<posy>296</posy>
+			<width>140</width>
+			<info>ListItem.Duration</info>
+			<font>font11</font>
+			<scroll>true</scroll>
+		</control>
+		<control type="image">
+			<description>Rating</description>
+			<posx>230</posx>
+			<posy>314</posy>
+			<height>15</height>
+			<width>80</width>
+			<info>ListItem.StarRating</info>		
+		</control>
+	<!-- End Movie Details -->
+
+	<!-- Start Actors -->
+		<control type="label">
+			<description>Actors Label</description>
+			<posx>380</posx>
+			<posy>242</posy>
+			<width>140</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>31093</label>
+			<textcolor>grey-text</textcolor>
+			<font>font11</font>
+		</control>
+		<control type="textbox">
+			<description>Actors text box</description>
+			<posx>390</posx>
+			<posy>260</posy>
+			<width>140</width>
+			<height>180</height>
+			<font>font11</font>
+			<info>ListItem.Cast</info>
+			<textcolor>button-text</textcolor>
+			<include>AutoScroll1x</include>
+		</control>
+	<!-- End Actors -->
+
+	<!-- Start Director -->
+		<control type="label">
+			<description>Director/Writer Label</description>
+			<posx>540</posx>
+			<posy>242</posy>
+			<width>150</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>$LOCALIZE[20339]/$LOCALIZE[20417]</label>
+			<textcolor>grey-text</textcolor>
+			<font>font11</font>
+		</control>
+		<control type="label">
+			<description>Director value</description>
+			<posx>550</posx>
+			<posy>260</posy>
+			<width>140</width>
+			<info>LIstItem.Director</info>
+			<font>font11</font>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>Writer value</description>
+			<posx>550</posx>
+			<posy>278</posy>
+			<width>140</width>
+			<info>LIstItem.Writer</info>
+			<font>font11</font>
+			<scroll>true</scroll>
+		</control>
+	<!-- End Director -->
+
+		<control type="button" id="5">
+			<description>Cast/Plot</description>
+			<posx>50</posx>
+			<posy>520</posy>
+			<width>120</width>
+			<height>37</height>
+			<texturenofocus>button2-alpha.png</texturenofocus>
+			<texturefocus>button2.png</texturefocus>
+			<label>206</label>
+			<align>center</align>
+			<textcolor>button-text</textcolor>
+			<onleft>4</onleft>
+			<onright>8</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+		</control>
+		<control type="button" id="8">
+			<description>Play</description>
+			<posx>170</posx>
+			<posy>520</posy>
+			<width>120</width>
+			<height>37</height>
+			<texturenofocus>button2-alpha.png</texturenofocus>
+			<texturefocus>button2.png</texturefocus>
+			<label>208</label>
+			<align>center</align>
+			<onleft>5</onleft>
+			<onright>9</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+		</control>
+		<control type="button" id="9">
+			<description>Resume</description>
+			<posx>290</posx>
+			<posy>520</posy>
+			<width>120</width>
+			<height>37</height>
+			<texturenofocus>button2-alpha.png</texturenofocus>
+			<texturefocus>button2.png</texturefocus>
+			<label>13404</label>
+			<align>center</align>
+			<onleft>8</onleft>
+			<onright>6</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+		</control>
+		<control type="button" id="6">
+			<description>Refresh</description>
+			<posx>410</posx>
+			<posy>520</posy>
+			<width>120</width>
+			<height>37</height>
+			<texturenofocus>button2-alpha.png</texturenofocus>
+			<texturefocus>button2.png</texturefocus>
+			<label>184</label>
+			<align>center</align>
+			<onleft>9</onleft>
+			<onright>10</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+		</control>
+		<control type="button" id="10">
+			<description>Get Thumb</description>
+			<posx>530</posx>
+			<posy>520</posy>
+			<width>120</width>
+			<height>37</height>
+			<texturenofocus>button2-alpha.png</texturenofocus>
+			<texturefocus>button2.png</texturefocus>
+			<label>13405</label>
+			<align>center</align>
+			<onleft>6</onleft>
+			<onright>4</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+		</control>
+
+	</controls>
+</window>

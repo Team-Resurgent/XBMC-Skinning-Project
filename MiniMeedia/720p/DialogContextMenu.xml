@@ -1,0 +1,46 @@
+<window id="106">
+  <defaultcontrol>1000</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <posx>0</posx>
+    <posy>0</posy>
+    <origin x="134" y="70">true</origin>
+  </coordinates>
+
+  <controls>
+    <control type="group">
+      <description>Context menu</description>
+
+      <control type="image" id="999">
+        <description>Background Image</description>
+        <include condition="!Window.IsVisible(FileManager.xml)">ContextMenuDefaultDims</include>
+        <include condition="Window.IsVisible(FileManager.xml)">FileMgrContentMenuDims</include>
+        <include>OverlayDarkArea</include>
+        <animation effect="slide" start="0,0" end="389,0" time="0" condition="Window.IsVisible(FileManager.xml)">Conditional</animation>
+      </control>
+
+      <control type="button" id="1000">
+        <description>Buttons</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <include condition="!Window.IsVisible(FileManager.xml)">ContextMenuDefaultDims</include>
+        <include condition="Window.IsVisible(FileManager.xml)">FileMgrContentMenuDims</include>
+        <height>30</height>
+        <texturefocus border="3">black_rounded_transparent.png</texturefocus>
+        <texturenofocus>-</texturenofocus>
+        <label>-</label>
+        <font>MediumSmallTitleFont</font>
+        <textoffsetx>0</textoffsetx>
+        <textoffsety>6</textoffsety>
+        <pulseonselect>no</pulseonselect>
+        <onfocus>-</onfocus>
+        <onup>1000</onup>
+        <ondown>1000</ondown>
+        <onleft>-</onleft>
+        <onright>-</onright>
+        <animation effect="slide" start="0,0" end="389,0" time="0" condition="Window.IsVisible(FileManager.xml)">Conditional</animation>
+      </control>
+    </control>
+
+  </controls>
+</window>

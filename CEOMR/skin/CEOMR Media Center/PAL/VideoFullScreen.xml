@@ -1,0 +1,343 @@
+<window id="2005">
+
+  <defaultcontrol>13</defaultcontrol>
+  <controls>
+
+    <!-- codec infos -->
+
+    <control type="image" id="0">
+      <description>bar image</description>
+      <posx>0</posx>
+      <posy>54</posy>
+      <width>720</width>
+      <height>65</height>
+      <texture>bluebar.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="label" id="10">
+      <description>row 1 label</description>
+      <posx>70</posx>
+      <posy>54</posy>
+      <label>-</label>
+      <align>left</align>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="11">
+      <description>row 2 label</description>
+      <posx>70</posx>
+      <posy>74</posy>
+      <label>-</label>
+      <align>left</align>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <control type="label" id="12">
+      <description>row 3 label</description>
+      <posx>70</posx>
+      <posy>94</posy>
+      <label>-</label>
+      <align>left</align>
+      <font>font13</font>
+      <include>textcolorwhite</include>
+    </control>
+
+    <!-- buffering dialog -->
+
+       <control type="label" id="24">
+         <description>buffering label</description> 
+         <visible>Player.IsCaching</visible>
+         <posx>60</posx> 
+         <posy>520</posy> 
+         <label>15107</label> 
+         <align>center</align>
+         <font>font12</font> 
+         <include>textcolorwhite</include> 
+       </control>
+
+    <!-- playstate images -->
+
+
+    <control type="image" id="16">
+      <description>pause image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Paused</visible>
+      <texture>video-pause.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="17">
+      <description>2x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding2x</visible>
+      <texture>video-2x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="18">
+      <description>4x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding4x</visible>
+      <texture>video-4x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="19">
+      <description>8x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding8x</visible>
+      <texture>video-8x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="20">
+      <description>16x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding16x</visible>
+      <texture>video-16x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="21">
+      <description>32x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Forwarding32x</visible>
+      <texture>video-32x.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="117">
+      <description>-2x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding2x</visible>
+      <texture>video-2xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="118">
+      <description>-4x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding4x</visible>
+      <texture>video-4xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="119">
+      <description>-8x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding8x</visible>
+      <texture>video-8xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="120">
+      <description>-16x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding16x</visible>
+      <texture>video-16xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+    <control type="image" id="121">
+      <description>-32x image</description>
+      <align>right</align>
+      <posx>580</posx>
+      <posy>75</posy>
+      <height>64</height>
+      <width>128</width>
+      <visible>Player.Rewinding32x</visible>
+      <texture>video-32xr.png</texture>
+      <colorkey>0</colorkey>
+      
+    </control>
+
+		<!-- media infos -->
+
+
+		<control type="group" id="1">
+			<posx>0</posx>
+			<posy>433</posy>
+			<visible>Player.ShowInfo</visible>
+			<control type="image" id="1">
+				<description>media info background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>110</height>
+				<texture>blue_rectangle_weather.png</texture>
+			</control>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>55</posx>
+				<posy>5</posy>
+				<width>99</width>
+				<height>99</height>
+				<info>videoplayer.cover</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label" id="1">
+				<description>Current System Time label</description>
+				<width>100</width>
+				<posx>680</posx>
+				<posy>5</posy>
+				<info>System.Time</info>
+				<align>right</align>
+				<textcolor>FFe2ff43</textcolor>
+				<font>font13</font>
+			</control>
+	<control type="group" id="1">
+		<visible>!videoplayer.content(episodes)</visible>
+			<control type="label" id="1">
+				<description>current_event_name</description>
+				<width>420</width>
+				<posx>160</posx>
+				<posy>5</posy>
+				<info>VideoPlayer.Title</info>
+				<align>left</align>
+				<font>font13</font>
+			</control>
+			<control type="label" id="1">
+				<description>current_event_description</description>
+				<width>520</width>
+				<posx>160</posx>
+				<posy>30</posy>
+				<info>VideoPlayer.Genre</info>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="label" id="1">
+				<description>current_event_details</description>
+				<width>520</width>
+				<posx>160</posx>
+				<posy>60</posy>
+				<info>VideoPlayer.Director</info>
+				<align>left</align>
+				<font>font10</font>
+			</control>
+	</control>
+
+
+	<control type="group" id="1">
+			<visible>videoplayer.content(episodes)</visible>
+				<control type="label" id="1">
+					<description>current_event_name</description>
+					<width>420</width>
+					<posx>160</posx>
+					<posy>5</posy>
+					<info>VideoPlayer.tvshowtitle</info>
+					<align>left</align>
+					<font>font13</font>
+				</control>
+				<control type="label" id="1">
+					<description>TV current_event_description</description>
+					<width>520</width>
+					<posx>160</posx>
+					<posy>30</posy>
+					<info>VideoPlayer.Title</info>
+					<align>left</align>
+					<font>font12</font>
+				</control>
+				<control type="label" id="1">
+					<description>TV current_event_details</description>
+					<width>520</width>
+					<posx>160</posx>
+					<posy>60</posy>
+					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+					<align>left</align>
+					<font>font10</font>
+			</control>
+	</control>
+
+
+			<control type="label" id="1">
+				<description>time label</description>
+				<width>520</width>
+				<posx>160</posx>
+				<posy>80</posy>
+				<label>$INFO[VideoPlayer.Time]$INFO[Player.Duration, / ]</label>
+				<align>left</align>
+				<font>font10</font>
+			</control>
+			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<width>200</width>
+				<posx>680</posx>
+				<posy>80</posy>
+				<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
+				<visible>player.chaptercount</visible>
+				<align>right</align>
+				<font>font10</font>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>720</width>
+				<height>8</height>
+				<info>Player.Progress</info>
+         			<texturebg>blackbar.png</texturebg> 
+         			<midtexture>bluebar.png</midtexture>
+         			<lefttexture>-</lefttexture>
+         			<righttexture>-</righttexture>
+         			<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+			</control>
+		</control>
+
+  </controls>
+
+</window>

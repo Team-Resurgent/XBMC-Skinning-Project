@@ -1,0 +1,32 @@
+﻿<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background2.png</texture>
+		</control>
+		<control type="textbox" id="5">
+			<description>textarea</description>
+			<posx>65</posx>
+			<posy>100</posy>
+			<width>620</width>
+			<height>450</height>
+			<spinposx>530</spinposx>
+			<spinposy>440</spinposy>
+		</control>
+		<control type="label" id="10">
+			<description>scripts output</description>
+			<posx>180</posx>
+			<posy>60</posy>
+			<label>262</label>
+			<font>font14</font>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+	</controls>
+</window>

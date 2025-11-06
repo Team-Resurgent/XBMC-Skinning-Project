@@ -1,0 +1,172 @@
+<!-- 
+USE: For displaying dvd covers.
+-->
+<includes>
+	<include name="ViewDVDCover">
+	
+		<control type="group">
+				
+			<visible>Control.IsVisible(54)</visible>
+			<posx>40</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>1150</width>
+				<height>590</height>
+			</control>
+
+			<!-- large cover -->
+			<control type="group">
+				<posx>10</posx>
+				<posy>10</posy>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>410</width>
+					<height>569</height>
+				</control>
+				<control type="label">
+					<label>No Cover Image</label>
+					<width>390</width>
+					<height>500</height>
+					<posx>10</posx>
+					<font>listitem</font>
+					<textcolor>type-listitem-dark</textcolor>
+					<align>center</align>
+				</control>
+				<control type="image">
+					<texture border="8">$INFO[ListItem.Thumb]</texture>
+					<width>390</width>
+					<height>500</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<!-- current item name -->
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<width>390</width>
+					<height>40</height>
+					<posx>10</posx>
+					<posy>520</posy>
+					<font>listitem</font>
+					<textcolor>type-listitem</textcolor>
+					<align>center</align>
+				</control>
+			</control>
+			
+			<!-- list container -->
+			<control type="panel" id="54">
+			
+				<viewtype label="DVD">icon</viewtype>
+				<width>740</width>
+				<height>580</height>
+				<posx>430</posx>
+				<posy>10</posy>
+				<onup>54</onup>
+				<ondown>54</ondown>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="193" width="144">
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>134</width>
+						<height>183</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>116</width>
+						<height>163</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<colordiffuse>dimmed</colordiffuse>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<!-- watched overlay -->
+					<control type="image">
+					    <texture border="8">$INFO[ListItem.Overlay]</texture>
+					    <width>48</width>
+					    <height>48</height>
+					    <posx>68</posx>
+					    <posy>92</posy>
+						<colordiffuse>dimmed</colordiffuse>
+					</control>
+				</itemlayout>
+				<focusedlayout height="193" width="144">
+					<control type="image">
+						<visible>Control.HasFocus(20)</visible>
+						<texture border="8">listitem-back.png</texture>
+						<width>134</width>
+						<height>183</height>
+					</control>
+					<control type="image">
+						<visible>!Control.HasFocus(20)</visible>
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>134</width>
+						<height>183</height>
+					</control>
+					<control type="image">
+						<texture aligny="bottom">$INFO[ListItem.Icon]</texture>
+						<width>116</width>
+						<height>163</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<!-- watched overlay -->
+					<control type="image">
+					    <texture border="8">$INFO[ListItem.Overlay]</texture>
+					    <width>48</width>
+					    <height>48</height>
+					    <posx>68</posx>
+					    <posy>92</posy>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<!-- scrollbar -->
+			<control type="group">
+				<posx>1170</posx>
+				<control type="image">
+					<texture>container-back-nf.png</texture>
+					<width>30</width>
+					<height>590</height>
+				</control>
+				<control type="scrollbar" id="60">
+					<width>30</width>
+					<height>590</height>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+				</control>
+			</control>
+			
+			<!-- container info -->
+			<control type="group">
+				<posy>590</posy>
+				<!-- number of files -->
+				<control type="label" id="12">
+					<width>670</width>
+					<height>40</height>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+				</control>
+				<!-- current page / number of pages -->
+				<control type="label">
+					<label>$INFO[Container().CurrentPage,, / ]$INFO[Container().NumPages]</label>
+					<width>670</width>
+					<height>40</height>
+					<posx>1200</posx>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+					<align>right</align>
+				</control>
+			</control>
+						
+		</control>
+		
+	</include>
+</includes>

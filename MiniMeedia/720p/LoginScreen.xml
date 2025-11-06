@@ -1,0 +1,127 @@
+<window id="29">
+  <defaultcontrol always="true">52</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+
+    <control type="group">
+      <posx>870</posx>
+      <animation effect="slide" time="300" delay="300" tween="circle" easing="out" start="500,0" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="200" tween="circle" easing="out" start="0,0" end="500,0">WindowClose</animation>
+
+      <control type="image">
+        <posx>-20</posx>
+        <width>430</width>
+        <height>720</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="label">
+        <description>Select Profile</description>
+        <posy>10</posy>
+        <width>400</width>
+        <height>24</height>
+        <align>center</align>
+        <font>LargeTitleFont</font>
+        <label>$LOCALIZE[31500]</label>
+      </control>
+
+      <control type="list" id="52">
+        <description>Login Main Menu</description>
+        <posx>0</posx>
+        <posy>320</posy>
+        <width>400</width>
+        <height>280</height>
+        <onup>52</onup>
+        <ondown>3112</ondown>
+
+        <itemlayout width="400" height="42">
+          <control type="label">
+            <width>400</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Label]</label>
+            <font>MediumLargeTitleFont</font>
+            <textcolor>Unfocused</textcolor>
+          </control>
+        </itemlayout>
+
+        <focusedlayout width="400" height="42">
+          <control type="label">
+            <width>400</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Label]</label>
+            <font>MediumLargeTitleFont</font>
+            <textcolor>Unfocused</textcolor>
+            <visible>!Control.HasFocus(52)</visible>
+          </control>
+          <control type="label">
+            <width>400</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Label]</label>
+            <font>LargeTitleFont</font>
+            <visible>Control.HasFocus(52)</visible>
+          </control>
+        </focusedlayout>
+      </control>
+
+      <control type="group">
+        <posx>131</posx>
+        <posy>620</posy>
+
+        <control type="button" id="3112">
+          <description>Shutdown button</description>
+          <width>64</width>
+          <height>64</height>
+          <texturefocus>ButtonMenuShutdownFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuShutdownFO.png</texturenofocus>
+          <onclick>XBMC.ShutDown()</onclick>
+          <pulseonselect>no</pulseonselect>
+          <onleft>3115</onleft>
+          <onright>3115</onright>
+          <onup>52</onup>
+          <font>-</font>
+        </control>
+        <control type="label">
+          <description>Shutdown</description>
+          <posx>-131</posx>
+          <posy>74</posy>
+          <width>400</width>
+          <height>24</height>
+          <align>center</align>
+          <font>TitleFont</font>
+          <label>$LOCALIZE[13005]</label>
+          <visible>Control.HasFocus(3112)</visible>
+        </control>
+
+        <control type="button" id="3115">
+          <description>Restart XBMC button</description>
+          <posx>74</posx>
+          <width>64</width>
+          <height>64</height>
+          <texturefocus>ButtonMenuRestartFO.png</texturefocus>
+          <texturenofocus diffuse="GreyDark.png">ButtonMenuRestartFO.png</texturenofocus>
+          <onclick>XBMC.RestartApp()</onclick>
+          <pulseonselect>no</pulseonselect>
+          <onleft>3112</onleft>
+          <onright>3115</onright>
+          <onup>52</onup>
+          <font>-</font>
+        </control>
+        <control type="label">
+          <description>Restart XBMC</description>
+          <posx>-131</posx>
+          <posy>74</posy>
+          <width>400</width>
+          <height>24</height>
+          <align>center</align>
+          <font>TitleFont</font>
+          <label>$LOCALIZE[13313] XBMC</label>
+          <visible>Control.HasFocus(3115)</visible>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

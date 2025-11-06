@@ -1,0 +1,224 @@
+<window id="28">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>background</include>
+		<include>#files</include>
+		<control type="image">
+			<description>Videos Logo</description>
+			<include>icon-header-commons</include>
+			<texture>icon-video.png</texture>
+		</control>
+		<control type="label">
+			<description>Video Label</description>
+			<posx>535</posx>
+			<posy>40</posy>
+			<label>31012</label>
+			<font>font20</font>
+			<textcolor>button-text</textcolor>
+		</control>
+		<include>PlaylistView</include>
+		<include>PageControl</include>
+		<control type="videowindow">
+			<posx>30</posx>
+			<posy>100</posy>
+			<width>350</width>
+			<height>350</height>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="progress">
+			<posx>30</posx>
+			<posy>455</posy>
+			<width>350</width>
+			<height>20</height>
+			<info>Player.Progress</info>
+			<texturebg>progressbar-background-blue.png</texturebg>
+			<lefttexture>progress-left1.png</lefttexture>
+			<midtexture>progress-middle1.png</midtexture>
+			<righttexture>progress-right1.png</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="slider">
+			<posx>30</posx>
+			<posy>455</posy>
+			<width>350</width>
+			<height>8</height>
+			<info>Player.Progress</info>
+			<texturesliderbar>seekslider.png</texturesliderbar>
+			<textureslidernib>progress-marker.png</textureslidernib>
+			<textureslidernibfocus>progress-marker.png</textureslidernibfocus>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="label">
+			<description>Duration Label</description>
+			<posx>313</posx>
+			<posy>477</posy>
+			<align>right</align>
+			<font>font10</font>
+			<info>Player.Time</info>
+			<textcolor>button-text</textcolor>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="label">
+			<description>Duration Label</description>
+			<posx>320</posx>
+			<posy>477</posy>
+			<width>200</width>
+			<height>200</height>
+			<font>font10</font>
+			<label>$INFO[Player.Duration,/ ]</label>
+			<textcolor>button-text</textcolor>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="label">
+			<description>Now Playing Label</description>
+			<posx>30</posx>
+			<posy>477</posy>
+			<width>220</width>
+			<height>200</height>
+			<font>font10</font>
+			<info>VideoPlayer.Title</info>
+			<scroll>true</scroll>
+			<textcolor>button-text</textcolor>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control type="group">
+			<control type="image">
+				<description>Background shadow</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>576</height>
+				<texture>black.png</texture>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="image">
+				<description>button background top image</description>
+				<posx>260</posx>
+				<posy>178</posy>
+				<width>225</width>
+				<height>2</height>
+				<texture>dialog-context-end.png</texture>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="image">
+				<description>button background image</description>
+				<posx>260</posx>
+				<posy>180</posy>
+				<width>225</width>
+				<height>225</height>
+				<texture>dialog-context-middle.png</texture>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="image">
+				<description>button background bottom image</description>
+				<posx>260</posx>
+				<posy>405</posy>
+				<width>225</width>
+				<height>2</height>
+				<texture>dialog-context-end.png</texture>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="button" id="20">
+				<description>Shuffle button</description>
+				<posx>262</posx>
+				<posy>180</posy>
+				<width>220</width>
+				<height>45</height>
+				<font>font12</font>
+				<label>191</label>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>22</onup>
+				<ondown>28</ondown>
+				<textcolor>button-text</textcolor>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="radiobutton" id="28">
+				<description>Randomize button</description>
+				<posx>262</posx>
+				<posy>225</posy>
+				<width>220</width>
+				<height>45</height>
+				<font>font12</font>
+				<label>13319</label>
+				<label>194</label>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>20</onup>
+				<ondown>26</ondown>
+				<textcolor>button-text</textcolor>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="button" id="26">
+				<description>Repeat button</description>
+				<posx>262</posx>
+				<posy>270</posy>
+				<width>220</width>
+				<height>45</height>
+				<font>font12</font>
+				<textoffsetx>10</textoffsetx>
+				<label>-</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>28</onup>
+				<ondown>21</ondown>
+				<textcolor>button-text</textcolor>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="button" id="21">
+				<description>Save button</description>
+				<posx>262</posx>
+				<posy>315</posy>
+				<width>220</width>
+				<height>45</height>
+				<font>font12</font>
+				<label>190</label>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>26</onup>
+				<ondown>22</ondown>
+				<textcolor>button-text</textcolor>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+			<control type="button" id="22">
+				<description>Clear button</description>
+				<posx>262</posx>
+				<posy>360</posy>
+				<width>220</width>
+				<height>45</height>
+				<font>font12</font>
+				<label>192</label>
+				<label>31011</label>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>21</onup>
+				<ondown>20</ondown>
+				<textcolor>button-text</textcolor>
+				<include>button-fade</include>
+				<include>View-as</include>
+			</control>
+		</control>
+	</controls>
+</window>  

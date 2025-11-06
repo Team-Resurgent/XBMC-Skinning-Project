@@ -1,0 +1,147 @@
+<window id="4">
+<defaultcontrol always="true">9000</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+
+  <control type="label">
+    <include>WindowID</include>
+    <label>Settings.xml</label>
+  </control>
+  
+	<control type="grouplist" id="9000">
+    <posx>10</posx>
+    <posy>40</posy>
+    <width>150</width>
+    <height>480</height>
+    <itemgap>2</itemgap>
+    <onleft>50</onleft>
+    <onright>50</onright>
+    <onup>9000</onup>
+    <ondown>9000</ondown>
+    <orientation>vertical</orientation>
+	    <control type="button" id="2">
+		    <description>Videos</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[3]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(MyVideosSettings)</onclick>
+	    </control>
+	    <control type="button" id="3">
+		    <description>Music</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[2]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(MyMusicSettings)</onclick>
+	    </control>
+	    <control type="button" id="4">
+		    <description>Pictures</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[1]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(MyPicturesSettings)</onclick>
+	    </control>
+	    <control type="button" id="5">
+		    <description>Programs</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[0]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(MyProgramsSettings)</onclick>
+	    </control>
+	    <control type="button" id="6">
+		    <description>Weather</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[8]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(MyWeatherSettings)</onclick>
+	    </control>
+	    <control type="button" id="7">
+		    <description>Network</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[705]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(NetworkSettings)</onclick>
+	    </control>
+	    <control type="button" id="8">
+		    <description>System</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[13000]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(SystemSettings)</onclick>
+	    </control>
+	    <control type="button" id="9">
+		    <description>Appearance</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[480]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(AppearanceSettings)</onclick>
+	    </control>
+	    <control type="button" id="10">
+		    <description>Profiles</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[13200]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>xbmc.activatewindow(34)</onclick>
+	    </control>
+	    <control type="button" id="11">
+		    <description>About</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[482]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>xbmc.credits()</onclick>
+	    </control>
+	    <control type="button" id="12">
+		    <description>System Info</description>
+		    <width>150</width>
+		    <label>$LOCALIZE[130]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		    <onclick>activatewindow(7)</onclick>
+	    </control>
+      <control type="button" id="13">
+        <description>Custom Settings</description>
+        <width>150</width>
+        <label>$LOCALIZE[636]</label>
+        <width>150</width>
+        <textcolor>White</textcolor>
+        <texturefocus border="1">ButtonFo.png</texturefocus>
+        <texturenofocus border="1">ButtonNF.png</texturenofocus>
+        <onclick>activatewindow(56)</onclick>
+      </control>
+	</control>
+  
+</controls>
+  
+</window>

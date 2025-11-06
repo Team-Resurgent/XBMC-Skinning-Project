@@ -1,0 +1,317 @@
+<window id="4">
+	<defaultcontrol always="false">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<include>XBMC_Logo_Image</include>
+
+		<control type="group">
+			<posx>40</posx>
+			<posy>140</posy>
+			<width>340</width>
+			<height>282</height>
+			<include>Slide_From_Left_Animation</include>
+			<control type="label">
+				<description>Settings label</description>
+				<posx>40</posx>
+				<posy>10</posy>
+				<width>300</width>
+				<font>fontSH</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>grey</shadowcolor>
+				<label>[UPPERCASE]$LOCALIZE[31020][/UPPERCASE]</label>
+			</control>
+			<control type="image">
+				<description>Image option 1</description>
+				<posx>32</posx>
+				<posy>81</posy>
+				<width>40</width>
+				<height>20</height>
+				<texture>settings-option.png</texture>
+			</control>
+			<control type="image">
+				<description>Image option 2</description>
+				<posx>32</posx>
+				<posy>114</posy>
+				<width>40</width>
+				<height>20</height>
+				<texture>settings-option.png</texture>
+			</control>
+			<control type="image">
+				<description>Image option 3</description>
+				<posx>32</posx>
+				<posy>147</posy>
+				<width>40</width>
+				<height>20</height>
+				<texture>settings-option.png</texture>
+			</control>
+			<control type="image">
+				<description>Image option 4</description>
+				<posx>32</posx>
+				<posy>180</posy>
+				<width>40</width>
+				<height>20</height>
+				<texture>settings-option.png</texture>
+			</control>
+			<control type="image">
+				<description>Image option 5</description>
+				<posx>32</posx>
+				<posy>213</posy>
+				<width>40</width>
+				<height>20</height>
+				<texture>settings-option.png</texture>
+			</control>
+			<control type="image">
+				<description>Image option 6</description>
+				<posx>32</posx>
+				<posy>246</posy>
+				<width>40</width>
+				<height>20</height>
+				<texture>settings-option.png</texture>
+			</control>
+			<control type="label">
+				<description>Label option 1</description>
+				<posx>74</posx>
+				<posy>81</posy>
+				<width>265</width>
+				<font>fontSO</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[LOWERCASE]$LOCALIZE[31021][/LOWERCASE]</label>
+			</control>
+			<control type="label">
+				<description>Label option 2</description>
+				<posx>74</posx>
+				<posy>114</posy>
+				<width>265</width>
+				<font>fontSO</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[LOWERCASE]$LOCALIZE[31022][/LOWERCASE]</label>
+			</control>
+			<control type="label">
+				<description>Label option 3</description>
+				<posx>74</posx>
+				<posy>147</posy>
+				<width>265</width>
+				<font>fontSO</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[LOWERCASE]$LOCALIZE[31023][/LOWERCASE]</label>
+			</control>
+			<control type="label">
+				<description>Label option 4</description>
+				<posx>74</posx>
+				<posy>180</posy>
+				<width>265</width>
+				<font>fontSO</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[LOWERCASE]$LOCALIZE[31024][/LOWERCASE]</label>
+			</control>
+			<control type="label">
+				<description>Label option 5</description>
+				<posx>74</posx>
+				<posy>213</posy>
+				<width>265</width>
+				<font>fontSO</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[LOWERCASE]$LOCALIZE[31025][/LOWERCASE]</label>
+			</control>
+			<control type="label">
+				<description>Label option 6</description>
+				<posx>74</posx>
+				<posy>246</posy>
+				<width>265</width>
+				<font>fontSO</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[LOWERCASE]$LOCALIZE[31026][/LOWERCASE]</label>
+			</control>
+		</control>
+
+		<control type="image" id="1">
+			<posx>380</posx>
+			<posy>100</posy>
+			<width>277</width>
+			<height>440</height>
+			<texture>setback.png</texture>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="group">
+			<control type="button" id="2">
+				<description>my videos</description>
+				<posx>420</posx>
+				<posy>130</posy>
+				<width>150</width>
+				<label>3</label>
+				<onclick>XBMC.ActivateWindow(17)</onclick>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>12</onup>
+				<ondown>3</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="3">
+				<description>my music</description>
+				<posx>420</posx>
+				<posy>165</posy>
+				<width>150</width>
+				<label>2</label>
+				<onclick>XBMC.ActivateWindow(15)</onclick>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>2</onup>
+				<ondown>4</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="4">
+				<description>my pictures</description>
+				<posx>420</posx>
+				<posy>200</posy>
+				<width>150</width>
+				<label>1</label>
+				<onclick>XBMC.ActivateWindow(12)</onclick>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>3</onup>
+				<ondown>5</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="5">
+				<description>my programs</description>
+				<posx>420</posx>
+				<posy>235</posy>
+				<width>150</width>
+				<label>0</label>
+				<onclick>XBMC.ActivateWindow(13)</onclick>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>4</onup>
+				<ondown>6</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="6">
+				<description>my weather</description>
+				<posx>420</posx>
+				<posy>270</posy>
+				<width>150</width>
+				<label>8</label>
+				<onclick>XBMC.ActivateWindow(14)</onclick>
+				<onleft>6</onleft>
+				<onright>6</onright>
+				<onup>5</onup>
+				<ondown>7</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="7">
+				<description>network</description>
+				<posx>420</posx>
+				<posy>305</posy>
+				<width>150</width>
+				<label>705</label>
+				<onclick>XBMC.ActivateWindow(18)</onclick>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<onup>6</onup>
+				<ondown>8</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="8">
+				<description>system</description>
+				<posx>420</posx>
+				<posy>340</posy>
+				<width>150</width>
+				<label>13000</label>
+				<onclick>XBMC.ActivateWindow(16)</onclick>
+				<onleft>8</onleft>
+				<onright>8</onright>
+				<onup>7</onup>
+				<ondown>9</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="9">
+				<description>appearance</description>
+				<posx>420</posx>
+				<posy>375</posy>
+				<width>150</width>
+				<label>480</label>
+				<onclick>XBMC.ActivateWindow(19)</onclick>
+				<onleft>9</onleft>
+				<onright>9</onright>
+				<onup>8</onup>
+				<ondown>10</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="10">
+				<description>Profiles</description>
+				<posx>420</posx>
+				<posy>410</posy>
+				<width>150</width>
+				<label>13200</label>
+				<font>font13</font>
+				<onclick>XBMC.ActivateWindow(34)</onclick>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>9</onup>
+				<ondown>11</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="11">
+				<description>Skin Settings</description>
+				<posx>420</posx>
+				<posy>445</posy>
+				<width>150</width>
+				<label>20077</label>
+				<font>font13</font>
+				<onclick>XBMC.ActivateWindow(1112)</onclick>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<onup>10</onup>
+				<ondown>12</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="12">
+				<description>About XBMC</description>
+				<posx>420</posx>
+				<posy>480</posy>
+				<width>150</width>
+				<label>482</label>
+				<font>font13</font>
+				<onleft>12</onleft>
+				<onright>12</onright>
+				<onup>11</onup>
+				<ondown>2</ondown>
+				<include>Slide_From_Right_Animation</include>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+	</controls>
+</window>

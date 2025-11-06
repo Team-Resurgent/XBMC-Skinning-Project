@@ -1,0 +1,21 @@
+﻿<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(Startup_Playlist)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist)])</onfocus>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(Startup_Playlist)</visible>
+		</control>
+	</controls>
+</window>

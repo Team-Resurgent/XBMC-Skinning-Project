@@ -1,0 +1,204 @@
+﻿<window id="28">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="multiimage">
+			<posx>50</posx>
+			<posy>30</posy>
+			<width>160</width>
+			<height>160</height>
+			<imagepath>mymovies</imagepath>
+			<timeperimage>18</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>no</loop>
+			<visible>!player.hasmedia</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+		</control>
+		<include>CTRLsections1</include>
+		<control type="label">
+			<description>section text label</description>
+			<align>center</align>
+			<posx>455</posx>
+			<posy>29</posy>
+			<label>3</label>
+			<font>font34</font>
+			<textcolor>header-text</textcolor>
+			<include>ContainerFade</include>
+		</control>
+		<control type="label" id="14">
+			<description>playlist text label</description>
+			<align>right</align>
+			<posx>650</posx>
+			<posy>52</posy>
+			<label>136</label>
+			<font>font12</font>
+			<textcolor>header-text</textcolor>
+			<include>ContainerFade</include>
+		</control>
+		<!-- List Items when not playing -->
+		<control type="image" id="0">
+			<description>start logo</description>
+			<posx>50</posx>
+			<posy>310</posy>
+			<width>164</width>
+			<height>200</height>
+			<texture>folder-dvd-nofocus.png</texture>
+			<visible>[!system.idletime(5) + control.hasfocus(50) + !player.hasaudio] | [player.hasaudio + !system.idletime(5) + control.hasfocus(50)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="image" id="0">
+			<description>start logo</description>
+			<posx>75</posx>
+			<posy>355</posy>
+			<width>113</width>
+			<height>113</height>
+			<texture>defaultDVDRomBig.png</texture>
+			<visible>[!system.idletime(5) + control.hasfocus(50) + !player.hasaudio] | [player.hasaudio + !system.idletime(5) + control.hasfocus(50)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>image</description>
+			<posx>70</posx>
+			<posy>320</posy>
+			<width>120</width>
+			<height>180</height>
+			<visible>[!system.idletime(5) + control.hasfocus(50) + !player.hasaudio] | [player.hasaudio + !system.idletime(5) + control.hasfocus(50)]</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<texture>-</texture>
+			<info>ListItem.Thumb</info>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<include>CTRLsections3</include>
+		<control type="image">
+			<description>image</description>
+			<posx>70</posx>
+			<posy>275</posy>
+			<width>125</width>
+			<height>140</height>
+			<visible>[player.hasaudio + system.idletime(5) + control.hasfocus(50)] |[player.hasaudio + control.hasfocus(51)]</visible>
+			<info>musicplayer.cover</info>
+			<texture>-</texture>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="group">
+			<control type="button" id="2">
+				<description>view as icons button</description>
+				<posx>45</posx>
+				<posy>220</posy>
+				<label>100</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>22</onup>
+				<ondown>20</ondown>
+			</control>
+			<control type="radiobutton" id="20">
+				<description>shuffle button</description>
+				<posx>45</posx>
+				<posy>257</posy>
+				<label>191</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>28</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(20) | control.hasfocus(28) | control.hasfocus(26) | control.hasfocus(27)| control.hasfocus(21) | control.hasfocus(22) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-37" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="radiobutton" id="28">
+				<description>randomize button</description>
+				<posx>45</posx>
+				<posy>294</posy>
+				<label>13319</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>20</onup>
+				<ondown>26</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(20) | control.hasfocus(28) | control.hasfocus(26) | control.hasfocus(27)| control.hasfocus(21) | control.hasfocus(22) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-74" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="26">
+				<description>repeat button</description>
+				<posx>45</posx>
+				<posy>331</posy>
+				<label>486</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>28</onup>
+				<ondown>21</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(20) | control.hasfocus(28) | control.hasfocus(26) | control.hasfocus(27)| control.hasfocus(21) | control.hasfocus(22) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-111" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="21">
+				<description>save button</description>
+				<posx>45</posx>
+				<posy>368</posy>
+				<label>190</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>26</onup>
+				<ondown>22</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(20) | control.hasfocus(28) | control.hasfocus(26) | control.hasfocus(27)| control.hasfocus(21) | control.hasfocus(22) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-148" acceleration="1">VisibleChange</animation>
+			</control>
+			<control type="button" id="22">
+				<description>clear button</description>
+				<posx>45</posx>
+				<posy>405</posy>
+				<label>192</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>21</onup>
+				<ondown>2</ondown>
+				<visible allowhiddenfocus="true">[control.hasfocus(2) | control.hasfocus(20) | control.hasfocus(28) | control.hasfocus(26) | control.hasfocus(27)| control.hasfocus(21) | control.hasfocus(22) |[control.hasfocus(51) + !player.hasaudio]] | [system.idletime(5) + !player.hasaudio]</visible>
+				<animation effect="slide" time="300" start="0,-185" acceleration="1">VisibleChange</animation>
+			</control>
+		</control>
+		<control type="listcontrol" id="50">
+			<description>apps listcontrol</description>
+			<posx>235</posx>
+			<posy>96</posy>
+			<width>440</width>
+			<height>450</height>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+		</control>
+		<control type="thumbnailpanel" id="51">
+			<description>default thumbnail panel</description>
+			<posx>225</posx>
+			<posy>94</posy>
+			<width>520</width>
+			<height>490</height>
+			<itemwidth>116</itemwidth>
+			<itemheight>144</itemheight>
+			<texturewidth>100</texturewidth>
+			<textureheight>122</textureheight>
+			<thumbwidth>75</thumbwidth>
+			<thumbheight>112</thumbheight>
+			<thumbposx>12</thumbposx>
+			<thumbposy>6</thumbposy>
+			<imagefolder>folder-dvd-nofocus.png</imagefolder>
+			<imagefolderfocus>folder-dvd-focus.png</imagefolderfocus>
+			<font>font12</font>
+			<selectedcolor>ffffffff</selectedcolor>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texturewidthbig>150</texturewidthbig>
+			<textureheightbig>188</textureheightbig>
+			<itemwidthbig>151</itemwidthbig>
+			<itemheightbig>210</itemheightbig>
+			<thumbwidthbig>106</thumbwidthbig>
+			<thumbheightbig>182</thumbheightbig>
+			<thumbposxbig>20</thumbposxbig>
+			<thumbposybig>4</thumbposybig>
+			<suffix>-</suffix>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>51</onup>
+			<ondown>2</ondown>
+		</control>
+	</controls>
+</window>   

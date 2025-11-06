@@ -1,0 +1,222 @@
+<window id="2005">
+	<controls>
+
+	<control type="image" id="1">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="image" id="1">
+		<posx>63</posx>
+		<posy>106</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Top.png</texture>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="image" id="1">
+		<posx>63</posx>
+		<posy>414</posy>
+		<width>595</width>
+		<height>80</height>
+		<texture>Panel_Bottom.png</texture>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="image" id="1">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="image" id="1">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>dialog Heading</description>
+		<posx>160</posx>
+		<posy>145</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>center</align>
+		<label>20060</label>
+		<font>special16</font>
+		<include>dialogheadingcolor</include>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+
+	<!-- === Codec Infos ========================== -->
+
+	<control type="image" id="0">
+		<description>media info background image</description>
+		<posx>-10</posx>
+		<posy>40</posy>
+		<width>740</width>
+		<height>90</height>
+		<texture>Black.png</texture>
+	</control>
+	<control type="label" id="10">
+		<description>row 1 label</description>
+		<posx>70</posx>
+		<posy>50</posy>
+		<font>font12</font>
+		<label>-</label>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+	</control>
+	<control type="label" id="11">
+		<description>row 2 label</description>
+		<posx>70</posx>
+		<posy>75</posy>
+		<font>font12</font>
+		<label>-</label>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+	</control>
+	<control type="label" id="12">
+		<description>row 3 label</description>
+		<posx>70</posx>
+		<posy>100</posy>
+		<font>font12</font>
+		<label>-</label>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+	</control>
+
+	<!-- === Media Content ======================== -->
+
+	<control type="image" id="1">
+		<description>Cover Image</description>
+		<posx>70</posx>
+		<posy>200</posy>
+		<width>113</width>
+		<height>200</height>
+		<texture>defaultdvdcover.png</texture>
+		<aspectratio>keep</aspectratio>
+		<info>VideoPlayer.Cover</info>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>Title</description>
+		<posx>200</posx>
+		<posy>200</posy>
+		<width>350</width>
+		<font>special15</font>
+		<label>$LOCALIZE[369]: $INFO[VideoPlayer.Title]</label>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>Director</description>
+		<posx>200</posx>
+		<posy>240</posy>
+		<width>350</width>
+		<font>mediainfo</font>
+		<label>Director: $INFO[VideoPlayer.Director]</label>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>Year</description>
+		<posx>200</posx>
+		<posy>260</posy>
+		<width>350</width>
+		<font>mediainfo</font>
+		<label>$LOCALIZE[562]:  $INFO[VideoPlayer.Year]</label>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>Genre</description>
+		<posx>200</posx>
+		<posy>280</posy>
+		<width>350</width>
+		<font>mediainfo</font>
+		<label>$LOCALIZE[515]: $INFO[VideoPlayer.Genre]</label>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>Play Time</description>
+		<posx>200</posx>
+		<posy>300</posy>
+		<font>mediainfo</font>
+		<label>$LOCALIZE[142] $INFO[VideoPlayer.Time]  / $INFO[VideoPlayer.TimeRemaining]</label>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>Duration</description>
+		<posx>200</posx>
+		<posy>320</posy>
+		<font>mediainfo</font>
+		<label>$LOCALIZE[180]:  $INFO[VideoPlayer.Duration]</label>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="label" id="1">
+		<description>DVDLabel</description>
+		<posx>200</posx>
+		<posy>340</posy>
+		<font>mediainfo</font>
+		<label>DVD Info: $INFO[System.DVDLabel]</label>
+		<shadowcolor>black</shadowcolor>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+	<control type="progress" id="1">
+		<description>Progressbar</description>
+		<posx>200</posx>
+		<posy>380</posy>
+		<width>390</width>
+		<height>8</height>
+		<info>Player.Progress</info>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture border="10,0,10,0">Progress-Overlay.png</overlaytexture>
+		<include>common-FX</include>
+		<visible>Player.ShowInfo + !Window.IsActive(115)</visible>
+	</control>
+
+	<!-- === Buffering Dialog ===================== -->
+
+	<control type="label" id="24">
+		<description>buffering label</description>
+		<posx>210</posx>
+		<posy>520</posy>
+		<width>291</width>
+		<font>font12</font>
+		<label>15107</label>
+		<shadowcolor>black</shadowcolor>
+		<align>center</align>
+		<include>textcolorwhite</include>
+	</control>
+
+	</controls>
+</window>

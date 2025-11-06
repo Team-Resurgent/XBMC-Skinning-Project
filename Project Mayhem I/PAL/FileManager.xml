@@ -1,0 +1,82 @@
+<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="image">
+			<include>Catagory_Background_Commons</include>
+			<texture>bg-files.png</texture>
+		</control>
+		<control type="fadelabel" id="101">
+			<description>current directory text label left</description>
+			<align>left</align>
+			<posx>70</posx>
+			<posy>48</posy>
+			<width>280</width>
+			<font>font13</font>
+			<textcolor>ffb2d4f5</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="fadelabel" id="102">
+			<description>current directory text label right</description>
+			<align>left</align>
+			<posx>380</posx>
+			<posy>48</posy>
+			<width>280</width>
+			<font>font13</font>
+			<textcolor>ffb2d4f5</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="12">
+			<description>number of files in left list text label</description>
+			<posx>70</posx>
+			<posy>500</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffb2d4f5</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="13">
+			<description>number of files in right list text label</description>
+			<posx>380</posx>
+			<posy>500</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffb2d4f5</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="listcontrol" id="20">
+			<description>left file list</description>
+			<selectedcolor>ffff9600</selectedcolor>
+			<posx>55</posx>
+			<posy>90</posy>
+			<width>305</width>
+			<height>440</height>
+			<onleft>21</onleft>
+			<onright>21</onright>
+			<onup>20</onup>
+			<ondown>20</ondown>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="listcontrol" id="21">
+			<description>right file list</description>
+			<selectedcolor>ffff9600</selectedcolor>
+			<posx>366</posx>
+			<posy>90</posy>
+			<width>305</width>
+			<height>440</height>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="1">
+			<description>filemanager background image</description>
+			<width>720</width>
+			<height>576</height>
+			<texture border="100">filemanager.png</texture>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+	</controls>
+</window>

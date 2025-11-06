@@ -1,0 +1,70 @@
+<window id="2004">
+	<defaultcontrol>61</defaultcontrol>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture border="40">DialogBack.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture border="40">DialogFront.png</texture>
+		</control>
+		<control type="label">
+			<description>Item Title value</description>
+			<posx>40</posx>
+			<posy>45</posy>
+			<width>1200</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$LOCALIZE[31998][B]$LOCALIZE[262][/B]$LOCALIZE[31999]</label>
+			<font>font18</font>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>80</posy>
+			<width>1200</width>
+			<height>8</height>
+			<texture>StreakBlueFull.png</texture>
+		</control>
+		<control type="textbox" id="5">
+			<description>textarea</description>
+			<posx>50</posx>
+			<posy>100</posy>
+			<width>1180</width>
+			<height>540</height>
+			<label>-</label>
+			<font>font11</font>
+			<align>justify</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<pagecontrol>61</pagecontrol>
+		</control>
+		<control type="group">
+			<posx>1180</posx>
+			<posy>650</posy>
+			<control type="spincontrol" id="61">
+				<description>Next page button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<subtype>page</subtype>
+				<font>12b</font>
+				<onleft>61</onleft>
+				<onright>61</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+				<textcolor>white</textcolor>
+				<showonepage>true</showonepage>
+			</control>
+		</control>
+	</controls>
+</window>

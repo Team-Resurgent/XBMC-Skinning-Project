@@ -1,0 +1,45 @@
+<includes>
+
+	<include name="ViewCategory">
+		
+		<control type="list" id="54">
+		
+			<viewtype label="Category">list</viewtype>
+			<width>790</width>
+			<height>400</height>
+			<posx>400</posx>
+			<posy>160</posy>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+
+			<itemlayout height="50">
+				<control type="label">
+					<info>ListItem.Label</info>
+					<width>790</width>
+					<height>50</height>
+					<posx>780</posx>
+					<font>content</font>
+					<textcolor>content-dark</textcolor>
+					<align>right</align>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="label">
+					<info>ListItem.Label</info>
+					<width>790</width>
+					<height>50</height>
+					<posx>780</posx>
+					<font>content</font>
+					<textcolor>content</textcolor>
+					<scroll>true</scroll>
+					<align>right</align>
+				</control>
+			</focusedlayout>
+			
+		</control>
+
+	</include>
+
+</includes>

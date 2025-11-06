@@ -1,0 +1,67 @@
+<window id="107">
+
+  <controls>
+
+     <control type="image" id="1">
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background_dialog.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <description>Popup Kai Toast Dialog Background</description>
+      <posx>420</posx>
+      <posy>490</posy>
+      <width>255</width>
+      <height>75</height>
+      <texture>toast-panel-bg.png</texture>
+   <animation effect="slide" time="500" start="0,214" acceleration="-1">WindowOpen</animation>
+   <animation effect="slide" time="500" end="0,214" acceleration="1">WindowClose</animation>
+    </control>
+
+    <control type="image" id="400">
+      <description>avatar</description>
+      <posx>450</posx>
+      <posy>505</posy>
+      <width>40</width>
+      <height>40</height>
+      <texture>kai-panel-avatar.png</texture>
+   <animation effect="slide" time="500" start="0,214" acceleration="-1">WindowOpen</animation>
+   <animation effect="slide" time="500" end="0,214" acceleration="1">WindowClose</animation>
+    </control>
+
+    <control type="label" id="401">
+      <description>Caption Label</description>
+      <posx>496</posx>
+      <posy>505</posy>
+      <width>160</width>
+      <font>font12</font>
+      <align>center</align>
+      <label>-</label>
+      <scroll>true</scroll>
+   <animation effect="slide" time="500" start="0,214" acceleration="-1">WindowOpen</animation>
+   <animation effect="slide" time="500" end="0,214" acceleration="1">WindowClose</animation>
+    </control>
+
+    <control type="label" id="402">
+      <description>Description Button</description>
+      <posx>496</posx>
+      <posy>525</posy>
+      <width>160</width>
+      <height>32</height>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <label>-</label>
+      <font>font10</font>
+      <align>center</align>
+      <scroll>true</scroll>
+   <animation effect="slide" time="500" start="0,214" acceleration="-1">WindowOpen</animation>
+   <animation effect="slide" time="500" end="0,214" acceleration="1">WindowClose</animation>
+    </control>
+
+  </controls>
+
+</window>
+

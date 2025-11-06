@@ -1,0 +1,11 @@
+<window id="133">
+
+  <controls>
+    <control type="group">
+      <visible>!VideoPlayer.IsFullscreen</visible>
+
+      <include>ScanDialogControls</include>
+    </control>
+
+  </controls>
+</window>

@@ -1,0 +1,91 @@
+﻿<window id="2008">
+	<defaultcontrol>450</defaultcontrol>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>595</width>
+		<height>220</height>
+		<texture>Black.png</texture>
+		<include>FX-ShutDownMenu</include>
+	</control>
+
+	<control type="wraplist" id="450">
+		<viewtype label="535">list</viewtype>
+		<posx>70</posx>
+		<posy>220</posy>
+		<width>580</width>
+		<height>190</height>
+		<scrolltime>250</scrolltime>
+		<focusposition>3</focusposition>
+		<orientation>horizontal</orientation>
+		<onleft>450</onleft>
+		<onright>450</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<include>common-fade-quick</include>
+		<itemlayout height="60" width="70">
+			<control type="image">
+				<posx>12</posx>
+				<posy>50</posy>
+				<width>45</width>
+				<height>60</height>
+				<texture>button-cd-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<posx>12</posx>
+				<posy>98</posy>
+				<width>45</width>
+				<height>60</height>
+				<texture flipy="true" diffuse="Thumb_Mask2.png">button-cd-nofocus.png</texture>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+		</itemlayout>
+		<focusedlayout height="160" width="160">
+			<control type="image">
+				<posx>25</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>160</height>
+				<texture>button-cd-focus.png</texture>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>126</posy>
+				<width>120</width>
+				<height>160</height>
+				<texture flipy="true" diffuse="Thumb_Mask2.png">button-cd-focus.png</texture>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>85</posx>
+				<posy>140</posy>
+				<width>400</width>
+				<height>22</height>
+				<font>special14</font>
+				<include>selectedcolor</include>
+				<align>center</align>
+				<info>ListItem.Label</info>
+			</control>
+		</focusedlayout>
+	</control>
+	<include>Black-Special</include>
+	<include>Lines-Special</include>
+
+	<control type="label">
+		<description>Heading Label</description>
+		<posx>160</posx>
+		<posy>145</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>center</align>
+		<label>14000</label>
+		<font>special16</font>
+		<include>dialogheadingcolor</include>
+		<include>FX-ShutDownMenu</include>
+	</control>
+
+	</controls>
+</window>

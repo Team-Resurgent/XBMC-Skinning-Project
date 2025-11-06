@@ -1,0 +1,196 @@
+<window type="dialog" id="1111">
+	<defaultcontrol>9000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>315</posx>
+		<posy>60</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>650</width>
+			<height>600</height>
+			<texture border="40">DialogBack.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>650</width>
+			<height>600</height>
+			<texture border="40">DialogFront.png</texture>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>570</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font18</font>
+			<label>20077</label>
+			<textcolor>white</textcolor>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>75</posy>
+			<width>570</width>
+			<height>8</height>
+			<texture>StreakBlueFull.png</texture>
+		</control>
+		<control type="grouplist" id="9000">
+			<posx>40</posx>
+			<posy>90</posy>
+			<width>570</width>
+			<height>464</height>
+			<itemgap>5</itemgap>
+			<pagecontrol>-</pagecontrol>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="label" id="201">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>40</height>
+				<font>font18</font>
+				<label>31100</label>
+				<textcolor>white</textcolor>
+				<align>center</align>
+			</control>
+			<control type="radiobutton" id="2">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>31101</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Back_Video)</onclick>
+				<selected>!Skin.HasSetting(Back_Video)</selected>
+			</control>
+			<control type="radiobutton" id="3">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>31102</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Back_Vis)</onclick>
+				<selected>!Skin.HasSetting(Back_Vis)</selected>
+			</control>
+			<control type="image" id="100">
+				<width>570</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="label" id="202">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>40</height>
+				<font>font18</font>
+				<label>31106</label>
+				<textcolor>white</textcolor>
+				<align>center</align>
+			</control>
+			<control type="radiobutton" id="4">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>31103</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
+				<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
+			</control>
+			<control type="radiobutton" id="5">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>31104</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(No_Home_Descriptions)</onclick>
+				<selected>Skin.HasSetting(No_Home_Descriptions)</selected>
+			</control>
+			<control type="radiobutton" id="6">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>31105</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(No_Media_Titles_In_Scanner)</onclick>
+				<selected>!Skin.HasSetting(No_Media_Titles_In_Scanner)</selected>
+			</control>
+			<control type="image" id="101">
+				<width>570</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="label" id="203">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>40</height>
+				<font>font18</font>
+				<label>31107</label>
+				<textcolor>white</textcolor>
+				<align>center</align>
+			</control>
+			<control type="radiobutton" id="7">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>31108</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(No_Center_RootView)</onclick>
+				<selected>Skin.HasSetting(No_Center_RootView)</selected>
+			</control>
+			<control type="radiobutton" id="8">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>30</height>
+				<font>font12</font>
+				<label>31109</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(No_Center_ListView)</onclick>
+				<selected>Skin.HasSetting(No_Center_ListView)</selected>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,170 @@
+﻿<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<visible>Skin.HasSetting(Startup-Video)</visible>
+			<control type="button" id="10">
+				<description>trigger without playlist</description>
+				<onfocus>ReplaceWindow(MyVideos)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>!Skin.Hassetting(startup-playlist)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>trigger with playlist</description>
+				<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+				<onfocus>ReplaceWindow(MyVideos)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>Skin.Hassetting(startup-playlist)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(Startup-VideoLibrary)</visible>
+			<control type="button" id="10">
+				<description>trigger without playlist</description>
+				<onfocus>ReplaceWindow(MyVideoLibrary,MovieTitles)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>!Skin.Hassetting(startup-playlist)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>trigger with playlist</description>
+				<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+				<onfocus>ReplaceWindow(MyVideoLibrary,MovieTitles)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>Skin.Hassetting(startup-playlist)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(Startup-Music)</visible>
+			<control type="button" id="10">
+				<description>trigger without playlist</description>
+				<onfocus>ReplaceWindow(MyMusic)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>!Skin.Hassetting(startup-playlist)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>trigger with playlist</description>
+				<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+				<onfocus>ReplaceWindow(MyMusic)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>Skin.Hassetting(startup-playlist)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(Startup-MusicLibrary)</visible>
+			<control type="button" id="10">
+				<description>trigger without playlist</description>
+				<onfocus>ReplaceWindow(MyMusicLibrary)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>!Skin.Hassetting(startup-playlist)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>trigger with playlist</description>
+				<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+				<onfocus>ReplaceWindow(MyMusicLibrary)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>Skin.Hassetting(startup-playlist)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(Startup-Photo)</visible>
+			<control type="button" id="10">
+				<description>trigger without playlist</description>
+				<onfocus>ReplaceWindow(MyPictures)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>!Skin.Hassetting(startup-playlist)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>trigger with playlist</description>
+				<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+				<onfocus>ReplaceWindow(MyPictures)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>Skin.Hassetting(startup-playlist)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>System.Platform.XBOX</visible>
+			<visible>Skin.HasSetting(Startup-Programs)</visible>
+			<control type="button" id="10">
+				<description>trigger without playlist</description>
+				<onfocus>ReplaceWindow(MyPrograms)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>!Skin.Hassetting(startup-playlist)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>trigger with playlist</description>
+				<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+				<onfocus>ReplaceWindow(MyPrograms)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>Skin.Hassetting(startup-playlist)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>![Skin.HasSetting(Startup-Video) | Skin.HasSetting(Startup-VideoLibrary) | Skin.HasSetting(Startup-Music) | Skin.HasSetting(Startup-MusicLibrary) | Skin.HasSetting(Startup-Photo) | Skin.HasSetting(Startup-Programs)]</visible>
+			<control type="button" id="10">
+				<description>trigger without playlist</description>
+				<onfocus>ReplaceWindow(Home)</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>!Skin.Hassetting(startup-playlist)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>trigger with playlist</description>
+				<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+				<onfocus>ActivateWindow(ShutdownMenu)</onfocus>
+				<onfocus>ReplaceWindow(Home)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<animation effect="fade" delay="3000" end="100">Focus</animation>
+				<visible>Skin.Hassetting(startup-playlist)</visible>
+			</control>
+		</control>
+		<control type="image">
+			<description>Background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-startup.png</texture>
+			<animation effect="fade" end="0" time="1000">WindowClose</animation>
+		</control>
+	</controls>
+</window>

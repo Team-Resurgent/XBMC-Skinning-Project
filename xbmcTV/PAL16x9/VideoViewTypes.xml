@@ -1,0 +1,254 @@
+<includes>
+	<include name="VideoIconView">
+		<control type="panel" id="52">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>704</width>
+			<height>576</height>
+			<onleft>2</onleft>
+			<onright>23</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<include></include>
+			<viewtype label="Icons">Icons</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>24</pagecontrol>
+			<itemlayout height="144" width="88">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>88</width>
+					<height>144</height>
+					<info>ListItem.Icon</info>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>88FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>88</width>
+					<height>144</height>
+					<texture>movieposter-unavailable.png</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>88FFFFFF</colordiffuse>
+				</control>
+
+			</itemlayout>
+			<focusedlayout height="144" width="88">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>87</width>
+					<height>144</height>
+					<texture>movie-poster-highlight.png</texture>
+					<!-- Center Icons -->
+					<animation effect="zoom" time="0" end="-20,-47,128,237" condition="![Container(52).Row(0) + Container(52).Column(0) | Container(52).Row(0) + Container(52).Column(1) | Container(52).Row(0) + Container(52).Column(2) | Container(52).Row(0) + Container(52).Column(3) | Container(52).Row(0) + Container(52).Column(4) | Container(52).Row(0) + Container(52).Column(5) | Container(52).Row(0) + Container(52).Column(6) | Container(52).Row(0) + Container(52).Column(7) | Container(52).Row(1) + Container(52).Column(0) | Container(52).Row(2) + Container(52).Column(0) | Container(52).Row(3) + Container(52).Column(0) | Container(52).Row(3) + Container(52).Column(1) | Container(52).Row(3) + Container(52).Column(2) | Container(52).Row(3) + Container(52).Column(3) | Container(52).Row(3) + Container(52).Column(4) | Container(52).Row(3) + Container(52).Column(5) | Container(52).Row(3) + Container(52).Column(6) | Container(52).Row(3) + Container(52).Column(7) | Container(52).Row(1) + Container(52).Column(7) | Container(52).Row(2) + Container(52).Column(7)]">Conditional</animation>
+
+
+					<!-- Top Left Icon -->
+					<animation effect="zoom" time="0" end="-7,-7,128,239" condition="Container(52).Row(0) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Top Row Excluding Corners -->
+					<animation effect="zoom" time="0" end="-20,-7,128,239" condition="Container(52).Row(0) + Container(52).Column(1) | Container(52).Row(0) + Container(52).Column(2) | Container(52).Row(0) + Container(52).Column(3) | Container(52).Row(0) + Container(52).Column(4) | Container(52).Row(0) + Container(52).Column(5) | Container(52).Row(0) + Container(52).Column(6)">Conditional</animation>
+
+					<!-- Top Right Corner -->
+					<animation effect="zoom" time="0" end="-37,-7,128,239" condition="Container(52).Row(0) + Container(52).Column(7)">Conditional</animation>
+
+					<!-- Left Column Excluding Corners -->
+					<animation effect="zoom" time="0" end="-7,-47,128,237" condition="[Container(52).Row(1) | Container(52).Row(2)] + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Bottom Left Corner -->
+					<animation effect="zoom" time="0" end="-7,-88,128,237" condition="Container(52).Row(3) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Bottom Row Excluding Corners -->
+					<animation effect="zoom" time="0" end="-20,-88,128,239" condition="Container(52).Row(3) + Container(52).Column(1) | Container(52).Row(3) + Container(52).Column(2) | Container(52).Row(3) + Container(52).Column(3) | Container(52).Row(3) + Container(52).Column(4) | Container(52).Row(3) + Container(52).Column(5) | Container(52).Row(3) + Container(52).Column(6)">Conditional</animation>
+
+					<!-- Bottom Right Corner -->
+					<animation effect="zoom" time="0" end="-37,-88,128,239" condition="Container(52).Row(3) + Container(52).Column(7)">Conditional</animation>
+
+					<!-- Right Column Excluding Corners -->
+					<animation effect="zoom" time="0" end="-37,-47,128,239" condition="Container(52).Row(1) + Container(52).Column(7) | Container(52).Row(2) + Container(52).Column(7)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>88</width>
+					<height>144</height>
+					<info>ListItem.Icon</info>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<aspectratio>stretch</aspectratio>
+					<!-- Center Icons -->
+					<animation effect="zoom" time="0" end="-9,-32,106,208" condition="![Container(52).Row(0) + Container(52).Column(0) | Container(52).Row(0) + Container(52).Column(1) | Container(52).Row(0) + Container(52).Column(2) | Container(52).Row(0) + Container(52).Column(3) | Container(52).Row(0) + Container(52).Column(4) | Container(52).Row(0) + Container(52).Column(5) | Container(52).Row(0) + Container(52).Column(6) | Container(52).Row(0) + Container(52).Column(7) | Container(52).Row(1) + Container(52).Column(0) | Container(52).Row(2) + Container(52).Column(0) | Container(52).Row(3) + Container(52).Column(0) | Container(52).Row(3) + Container(52).Column(1) | Container(52).Row(3) + Container(52).Column(2) | Container(52).Row(3) + Container(52).Column(3) | Container(52).Row(3) + Container(52).Column(4) | Container(52).Row(3) + Container(52).Column(5) | Container(52).Row(3) + Container(52).Column(6) | Container(52).Row(3) + Container(52).Column(7) | Container(52).Row(1) + Container(52).Column(7) | Container(52).Row(2) + Container(52).Column(7)]">Conditional</animation>
+					<!-- Top Left Icon -->
+					<animation effect="zoom" time="0" end="4,10,106,208" condition="Container(52).Row(0) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Top Row Excluding Corners -->
+					<animation effect="zoom" time="0" end="-9,10,106,208" condition="Container(52).Row(0) + Container(52).Column(1) | Container(52).Row(0) + Container(52).Column(2) | Container(52).Row(0) + Container(52).Column(3) | Container(52).Row(0) + Container(52).Column(4) | Container(52).Row(0) + Container(52).Column(5) | Container(52).Row(0) + Container(52).Column(6)">Conditional</animation>
+
+					<!-- Top Right Corner -->
+					<animation effect="zoom" time="0" end="-26,10,106,208" condition="Container(52).Row(0) + Container(52).Column(7)">Conditional</animation>
+
+					<!-- Left Column Excluding Corners -->
+					<animation effect="zoom" time="0" end="4,-32,106,208" condition="Container(52).Row(1) + Container(52).Column(0) | Container(52).Row(2) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Bottom Left Corner -->
+					<animation effect="zoom" time="0" end="4,-73,106,208" condition="Container(52).Row(3) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Bottom Row Excluding Corners -->
+					<animation effect="zoom" time="0" end="-9,-73,106,210" condition="Container(52).Row(3) + Container(52).Column(1) | Container(52).Row(3) + Container(52).Column(2) | Container(52).Row(3) + Container(52).Column(3) | Container(52).Row(3) + Container(52).Column(4) | Container(52).Row(3) + Container(52).Column(5) | Container(52).Row(3) + Container(52).Column(6)">Conditional</animation>
+
+					<!-- Bottom Right Corner -->
+					<animation effect="zoom" time="0" end="-26,-73,106,210" condition="Container(52).Row(3) + Container(52).Column(7)">Conditional</animation>
+
+					<!-- Right Column Excluding Corners -->
+					<animation effect="zoom" time="0" end="-26,-32,106,210" condition="Container(52).Row(1) + Container(52).Column(7) | Container(52).Row(2) + Container(52).Column(7)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>88</width>
+					<height>144</height>
+					<texture>movieposter-unavailable.png</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<aspectratio>stretch</aspectratio>
+					<!-- Center Icons -->
+					<animation effect="zoom" time="0" end="-9,-32,106,208" condition="![Container(52).Row(0) + Container(52).Column(0) | Container(52).Row(0) + Container(52).Column(1) | Container(52).Row(0) + Container(52).Column(2) | Container(52).Row(0) + Container(52).Column(3) | Container(52).Row(0) + Container(52).Column(4) | Container(52).Row(0) + Container(52).Column(5) | Container(52).Row(0) + Container(52).Column(6) | Container(52).Row(0) + Container(52).Column(7) | Container(52).Row(1) + Container(52).Column(0) | Container(52).Row(2) + Container(52).Column(0) | Container(52).Row(3) + Container(52).Column(0) | Container(52).Row(3) + Container(52).Column(1) | Container(52).Row(3) + Container(52).Column(2) | Container(52).Row(3) + Container(52).Column(3) | Container(52).Row(3) + Container(52).Column(4) | Container(52).Row(3) + Container(52).Column(5) | Container(52).Row(3) + Container(52).Column(6) | Container(52).Row(3) + Container(52).Column(7) | Container(52).Row(1) + Container(52).Column(7) | Container(52).Row(2) + Container(52).Column(7)]">Conditional</animation>
+					<!-- Top Left Icon -->
+					<animation effect="zoom" time="0" end="4,10,106,208" condition="Container(52).Row(0) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Top Row Excluding Corners -->
+					<animation effect="zoom" time="0" end="-9,10,106,208" condition="Container(52).Row(0) + Container(52).Column(1) | Container(52).Row(0) + Container(52).Column(2) | Container(52).Row(0) + Container(52).Column(3) | Container(52).Row(0) + Container(52).Column(4) | Container(52).Row(0) + Container(52).Column(5) | Container(52).Row(0) + Container(52).Column(6)">Conditional</animation>
+
+					<!-- Top Right Corner -->
+					<animation effect="zoom" time="0" end="-26,10,106,208" condition="Container(52).Row(0) + Container(52).Column(7)">Conditional</animation>
+
+					<!-- Left Column Excluding Corners -->
+					<animation effect="zoom" time="0" end="4,-32,106,208" condition="Container(52).Row(1) + Container(52).Column(0) | Container(52).Row(2) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Bottom Left Corner -->
+					<animation effect="zoom" time="0" end="4,-73,106,208" condition="Container(52).Row(3) + Container(52).Column(0)">Conditional</animation>
+
+					<!-- Bottom Row Excluding Corners -->
+					<animation effect="zoom" time="0" end="-9,-73,106,210" condition="Container(52).Row(3) + Container(52).Column(1) | Container(52).Row(3) + Container(52).Column(2) | Container(52).Row(3) + Container(52).Column(3) | Container(52).Row(3) + Container(52).Column(4) | Container(52).Row(3) + Container(52).Column(5) | Container(52).Row(3) + Container(52).Column(6)">Conditional</animation>
+
+					<!-- Bottom Right Corner -->
+					<animation effect="zoom" time="0" end="-26,-73,106,210" condition="Container(52).Row(3) + Container(52).Column(7)">Conditional</animation>
+
+					<!-- Right Column Excluding Corners -->
+					<animation effect="zoom" time="0" end="-26,-32,106,210" condition="Container(52).Row(1) + Container(52).Column(7) | Container(52).Row(2) + Container(52).Column(7)">Conditional</animation>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+	<include name="VideoWrapView">
+		<control type="wraplist" id="54">
+			<viewtype label="Wrap">Wraplist</viewtype>
+			<posx>0</posx>
+			<posy>150</posy>
+			<width>720</width>
+			<height>420</height>
+			<onleft>54</onleft>
+			<onright>54</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<include></include>
+			<focusposition>3</focusposition>
+			<orientation>horizontal</orientation>
+			<itemlayout height="390" width="90">
+				<control type="image">
+					<posx>2</posx>
+					<posy>123</posy>
+					<width>86</width>
+					<height>162</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>285</posy>
+					<width>86</width>
+					<height>170</height>
+					<texture flipy="true" diffuse="fade.png">-</texture>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</itemlayout>
+			<focusedlayout height="410" width="160">
+				<control type="image">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>150</width>
+					<height>285</height>
+					<aspectratio>stretch</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>285</posy>
+					<width>200</width>
+					<height>285</height>
+					<texture flipy="true" diffuse="fade2.png">-</texture>
+					<aspectratio>stretch</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>545</posy>
+			<width>500</width>
+			<height>30</height>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>button-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<info>ListItem.Label</info>
+			<textoffsetx>0</textoffsetx>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+	</include>
+
+
+	<include name="TallPageControl">
+		<control type="button">
+			<posx>704</posx>
+			<posy>0</posy>
+			<width>13</width>
+			<height>17</height>
+			<onclick>PageUp(24)</onclick>
+			<texturefocus>scrollbar-arrow-up.png</texturefocus>
+			<texturenofocus>scrollbar-arrow-up-nofocus.png</texturenofocus>
+			<visible>Control.IsVisible(24)</visible>
+		</control>
+		<control type="button">
+			<posx>704</posx>
+			<posy>559</posy>
+			<width>13</width>
+			<height>17</height>
+			<onclick>PageDown(24)</onclick>
+			<texturefocus>scrollbar-arrow-down.png</texturefocus>
+			<texturenofocus>scrollbar-arrow-down-nofocus.png</texturenofocus>
+			<visible>Control.IsVisible(24)</visible>
+		</control>
+		<control type="scrollbar" id="24">
+			<posx>704</posx>
+			<posy>17</posy>
+			<width>13</width>
+			<height>542</height>
+			<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+			<texturesliderbar>scrollbar_bar.png</texturesliderbar>
+			<texturesliderbarfocus>scrollbar_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>-</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>2</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(52) + Window.IsActive(MyVideoFiles) | Control.IsVisible(52) + Window.IsActive(MyVideoLibrary) | Control.IsVisible(55)</visible>
+		</control>
+	</include>
+</includes>

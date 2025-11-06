@@ -1,0 +1,77 @@
+<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>23</posx>
+		<posy>176</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>-5</posy>
+			<width>675</width>
+			<height>225</height>
+			<texture border="0,45,0,10">Dialog.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Heading label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<font>font16</font>
+			<label>13406</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="group">
+			<posx>113</posx>
+			<posy>44</posy>
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<label>-</label>
+				<align>center</align>
+				<font>font13</font>
+			</control>
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>0</posx>
+				<posy>28</posy>
+				<width>450</width>
+				<label>-</label>
+				<align>center</align>
+				<font>font13</font>
+			</control>
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>0</posx>
+				<posy>56</posy>
+				<width>450</width>
+				<label>-</label>
+				<align>center</align>
+				<font>font13</font>
+			</control>
+			<control type="button" id="10">
+				<description>Ok button</description>
+				<posx>155</posx>
+				<posy>128</posy>
+				<width>141</width>
+				<height>32</height>
+				<label>186</label>
+				<font>font13</font>
+				<align>center</align>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

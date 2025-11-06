@@ -1,0 +1,70 @@
+<window id="59">
+	<defaultcontrol always="true">420</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>ShutdownMenu</previouswindow>
+	<controls>
+		<include>background</include>
+		<include>xtv-box</include>
+		<include>Fake-Overlay</include>
+
+		<control type="grouplist" id="420">
+			<posx>405</posx>
+			<posy>90</posy>
+			<width>285</width>
+			<height>425</height>
+			<itemgap>-2</itemgap>
+			<onup>420</onup>
+			<ondown>420</ondown>
+			<onleft>420</onleft>
+			<onright>420</onright>
+			<control type="button" id="2">
+				<description>Custom Background Button</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31030</label>
+				<onclick>Skin.SetImage(custom-background)</onclick>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<visible>!Skin.String(custom-background)</visible>
+			</control>
+			<control type="button" id="3">
+				<description>Reset Custom Background Button</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31031</label>
+				<onclick>Skin.Reset(custom-background)</onclick>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<visible>Skin.String(custom-background)</visible>
+			</control>
+			<control type="radiobutton" id="4">
+				<description>Media In Background Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31032</label>
+				<onclick>Skin.ToggleSetting(HomeViewToggle)</onclick>
+				<selected>Skin.HasSetting(HomeViewToggle)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			<control type="radiobutton" id="5">
+				<description>Fanart Toggle</description>
+				<font>font13</font>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>31084</label>
+				<onclick>Skin.ToggleSetting(Fanart)</onclick>
+				<selected>Skin.HasSetting(Fanart)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+			</control>
+		</control>
+	</controls>
+</window>

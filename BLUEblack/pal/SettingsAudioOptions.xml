@@ -1,0 +1,195 @@
+<window>
+	<id>31</id>
+	<defaultcontrol>10</defaultcontrol>
+
+<controls>
+        <control>
+            <description>background image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>720</width>
+            <height>576</height>
+            <texture>background.png</texture>
+        </control>
+        <control>
+            <description>left menu</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>300</width>
+            <height>576</height>
+            <texture>menu.png</texture>
+        </control>
+        <control>
+            <description>BBmini</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>165</posX>
+            <posY>70</posY>
+            <width>80</width>
+            <height>43</height>
+            <texture>BB_logo.png</texture>
+        </control>
+    		<control>
+      		<description>title image</description>
+      		<type>image</type>
+      		<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>200</width>
+			<height>150</height>
+			<texture>title-settings.png</texture>
+    		</control>  
+
+
+		<control>
+			<description>Audio text label</description>
+			<type>label</type>
+			<id>1</id>
+      		<posX>250</posX>
+      		<posY>80</posY>
+			<label>481</label>
+			<font>font18</font>
+		</control>
+
+	<control>
+		<description>Volume Amplification:</description>
+		<type>label</type>
+		<id>9</id>
+		<posX>260</posX>
+		<posY>150</posY>
+		<label>290</label>
+	</control>
+	<control>
+		<description>Volume amplification spin control</description>
+		<type>spincontrol</type>
+		<id>10</id>
+		<posX>500</posX>
+		<posY>156</posY>
+		<subtype>float</subtype>
+		<onleft>10</onleft>
+		<onright>10</onright>
+		<onup>12</onup>
+		<ondown>3</ondown>
+		<buddycontrolid>9</buddycontrolid>
+	</control>
+	<control>
+		<description>Audio Output</description>
+		<type>label</type>
+		<id>2</id>
+		<posX>260</posX>
+		<posY>180</posY>
+		<label>337</label>
+	</control>
+	<control>
+		<description>Audio Output spin control</description>
+		<type>spincontrol</type>
+		<id>3</id>
+		<posX>500</posX>
+		<posY>186</posY>
+		<onleft>3</onleft>
+		<onright>3</onright>
+		<onup>10</onup>
+		<ondown>4</ondown>
+		<buddycontrolid>2</buddycontrolid>
+	</control>
+	<control>
+		<description>Output to all speakers</description>
+		<type>checkmark</type>
+		<id>4</id>
+		<posX>260</posX>
+		<posY>210</posY>
+		<label>252</label>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>3</onup>
+		<ondown>5</ondown>
+	</control>
+	<control>
+		<description>DD/DTS Multichannel Passthrough:</description>
+		<type>checkmark</type>
+		<id>5</id>
+		<posX>260</posX>
+		<posY>240</posY>
+		<label>364</label>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<onup>4</onup>
+		<ondown>6</ondown>
+	</control>
+	<control>
+		<description>DD/PCM Stereo Passthrough:</description>
+		<type>checkmark</type>
+		<id>6</id>
+		<posX>260</posX>
+		<posY>270</posY>
+		<label>254</label>
+		<onleft>6</onleft>
+		<onright>6</onright>
+		<onup>5</onup>
+		<ondown>8</ondown>
+	</control>
+	
+
+
+
+	<control>
+		<description>Advanced Audio Label</description>
+		<type>label</type>
+		<id>1</id>
+		<posX>260</posX>
+		<posY>330</posY>
+		<label>493</label>
+		<font>font13</font>
+	</control>
+	<control>
+		<description>HQ Resampling:</description>
+		<type>label</type>
+		<id>7</id>
+		<posX>260</posX>
+		<posY>360</posY>
+		<label>473</label>
+		<font>font13</font>
+	</control>
+	<control>
+		<description>HQ Resampling spin control</description>
+		<type>spincontrol</type>
+		<id>8</id>
+		<posX>500</posX>
+		<posY>366</posY>
+		<reverse>yes</reverse>
+		<onleft>8</onleft>
+		<onright>8</onright>
+		<onup>6</onup>
+		<ondown>12</ondown>
+		<buddycontrolid>7</buddycontrolid>
+	</control>
+	<control>
+		<description>Overall Audio Headroom</description>
+		<type>label</type>
+		<id>11</id>
+		<posX>260</posX>
+		<posY>390</posY>
+		<label>494</label>
+		<font>font13</font>
+	</control>
+	<control>
+		<description>Overall Audio Headroom spin control</description>
+		<type>spincontrol</type>
+		<id>12</id>
+		<posX>520</posX>
+		<posY>396</posY>
+		<subtype>float</subtype>
+		<textcolor>FFFFFFFF</textcolor>
+		<reverse>yes</reverse>
+		<onleft>12</onleft>
+		<onright>12</onright>
+		<onup>8</onup>
+		<ondown>10</ondown>
+		<buddycontrolid>11</buddycontrolid>
+	</control>
+</controls>
+</window>

@@ -1,0 +1,22 @@
+<window id="136">
+
+	<controls>
+
+		<control type="group">			
+
+			<control type="multiimage">
+				<description>Busy animation</description>
+				<posx>664.5</posx>
+				<posy>501</posy>
+				<width>42</width>
+				<height>60</height>
+				<imagepath>special://skin/images/busy</imagepath>
+				<timeperimage>85</timeperimage>
+				<fadetime>0</fadetime>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

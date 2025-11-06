@@ -1,0 +1,70 @@
+﻿<window id="115">
+<defaultcontrol always="true">901</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<visible>player.seeking | player.displayafterSeek | player.paused | player.forwarding | player.rewinding</visible>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+
+<controls>
+
+<include>DialogBack</include>
+
+  <control type="label">
+    <include>DialogID</include>
+    <label>DialogProgress.xml</label>
+  </control>
+  
+	<control type="group">
+		<posx>10</posx>
+		<posy>40</posy>
+	  <control type="label" id="0">
+      <label>$LOCALIZE[112]</label>
+		  <visible>player.paused</visible>
+	  </control>
+	  <control type="label" id="0">
+      <label>2x</label>
+		  <visible>player.forwarding2x | player.rewinding2x</visible>
+	  </control>
+	  <control type="label" id="0">
+      <label>4x</label>
+		  <visible>player.forwarding4x | player.rewinding4x</visible>
+	  </control>
+	  <control type="label" id="0">
+      <label>8x</label>
+		  <visible>player.forwarding8x | player.rewinding8x</visible>
+	  </control>
+	  <control type="label" id="0">
+      <label>16x</label>
+		  <visible>player.forwarding16x | player.rewinding16x</visible>
+	  </control>
+	  <control type="label" id="0">
+      <label>32x</label>
+		  <visible>player.forwarding32x | player.rewinding32x</visible>
+	  </control>
+	</control>
+  
+	<control type="label" id="0">
+		<posx>10</posx>
+		<posy>72</posy>
+		<label>$INFO[Player.Duration]</label>
+	</control>
+  
+  <control type="progress" id="23">
+    <description>Progress Bar</description>
+    <posx>10</posx>
+    <posy>104</posy>
+  </control>
+	<control type="slider" id="401">
+    <description>Seekbar</description>
+    <posx>10</posx>
+    <posy>104</posy>
+  </control>
+  
+</controls>
+  
+</window>

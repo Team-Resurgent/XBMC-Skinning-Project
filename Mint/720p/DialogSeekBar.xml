@@ -1,0 +1,102 @@
+<window id="115">
+
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<visible>!Window.IsActive(videoosd)</visible>
+	<visible>VideoPlayer.IsFullscreen</visible>
+
+	<controls>
+		
+		<control type="group">
+		
+			<posx>620</posx>	
+			<posy>620</posy>
+			
+			<include>anim-seekbar</include>
+
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>640</width>
+				<height>80</height>	
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			
+			<!-- video progress -->
+			<control type="progress" id="23">
+				<info>Player.Progress</info>
+				<width>532</width>
+				<height>40</height>
+				<posx>88</posx>
+				<posy>20</posy>
+			</control>
+			<!-- video time/duration -->
+			<control type="label">
+				<visible>!Player.Seeking</visible>
+				<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+				<width>320</width>
+				<height>40</height>
+				<posx>108</posx>
+				<posy>20</posy>	
+				<font>videoosd</font>
+				<textcolor>type-videoosd-dark</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Seeking</visible>
+				<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+				<width>320</width>
+				<height>40</height>
+				<posx>108</posx>
+				<posy>20</posy>	
+				<font>videoosd</font>
+				<textcolor>type-videoosd-dark</textcolor>
+			</control>
+			<!-- video finish time -->
+			<control type="label">
+				<label>End: $INFO[Player.FinishTime]</label>
+				<width>320</width>
+				<height>40</height>
+				<posx>600</posx>
+				<posy>20</posy>			
+				<font>videoosd</font>
+				<textcolor>type-videoosd-dark</textcolor>
+				<align>right</align>
+			</control>
+
+			<!-- play states -->
+			<control type="image">
+				<visible>Player.Paused</visible>
+				<texture>osd-pause-nf.png</texture>
+				<width>48</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>20</posy>
+			</control>		
+			<control type="image">
+				<visible>Player.Playing</visible>
+				<texture>osd-play-nf.png</texture>
+				<width>48</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>20</posy>
+			</control>		
+			<control type="image">
+				<visible>Player.Forwarding2x | Player.Forwarding4x | Player.Forwarding8x | Player.Forwarding16x | Player.Forwarding32x</visible>
+				<texture>osd-ff-nf.png</texture>
+				<width>48</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>20</posy>
+			</control>		
+			<control type="image">
+				<visible>Player.Rewinding2x | Player.Rewinding4x | Player.Rewinding8x | Player.Rewinding16x | Player.Rewinding32x</visible>
+				<texture>osd-rw-nf.png</texture>
+				<width>48</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>20</posy>
+			</control>		
+		</control>
+		
+	</controls>
+
+</window>

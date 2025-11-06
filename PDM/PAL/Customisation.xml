@@ -1,0 +1,1507 @@
+<window id="56">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+	</control>
+
+	<control type="group" id="1">
+		<control type="button" id="10">
+			<description>Home Options Button</description>
+			<posx>20</posx>
+			<posy>110</posy>
+			<include>20000</include>
+			<font>font13</font>
+			<align>left</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+			<width>150</width>
+			<height>35</height>
+			<onleft>500</onleft>
+			<onright>500</onright>
+			<onup>15</onup>
+			<ondown>11</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="11">
+			<description>Customisation Options</description>
+			<posx>20</posx>
+			<posy>147</posy>
+			<include>20020</include>
+			<font>font13</font>
+			<align>left</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+			<width>150</width>
+			<height>35</height>
+			<onleft>900</onleft>
+			<onright>900</onright>
+			<onup>10</onup>
+			<ondown>12</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="12">
+			<description>Media Options Button</description>
+ 			<posx>20</posx>
+			<posy>184</posy>
+			<include>20040</include>
+			<font>font13</font>
+			<align>left</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+			<width>150</width>
+			<height>35</height>
+			<onleft>700</onleft>
+			<onright>700</onright>
+			<onup>11</onup>
+			<ondown>13</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="13">
+			<description>Menu Options Button</description>
+			<posx>20</posx>
+			<posy>221</posy>
+			<include>20060</include>
+			<font>font13</font>
+			<align>left</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+			<width>150</width>
+			<height>35</height>
+			<onleft>600</onleft>
+			<onright>600</onright>
+			<onup>12</onup>
+			<ondown>14</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="button" id="14">
+			<description>Other Options</description>
+			<posx>20</posx>
+			<posy>258</posy>
+			<include>20080</include>
+			<font>font13</font>
+			<align>left</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+			<width>150</width>
+			<height>35</height>
+			<onleft>800</onleft>
+			<onright>800</onright>
+			<onup>13</onup>
+			<ondown>15</ondown>
+			<include>slideleft</include>
+		</control>
+		<control type="radiobutton" id="15">
+			<description>Skin Animation</description>
+			<posx>20</posx>
+			<posy>295</posy>
+			<include>20101</include>
+			<font>font13</font>
+			<align>left</align>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<onclick>Skin.ToggleSetting(animation)</onclick>
+			<selected>!Skin.HasSetting(animation)</selected>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+			<width>150</width>
+			<height>35</height>
+			<onleft>100</onleft>
+			<onright>100</onright>
+			<onup>14</onup>
+			<ondown>10</ondown>
+			<include>slideleft</include>
+		</control>
+	</control>
+
+	<include>4x3menu-background</include>
+
+	<!-- Home Options - Buttonscroller-Hide -->
+
+	<control type="group" id="2">
+		<control type="radiobutton" id="500">
+			<description>"Buttonscroller-hide" Switch</description>
+			<posx>181</posx>
+			<posy>115</posy>
+			<font>font13</font>
+			<include>20001</include>
+			<align>left</align>
+			<selected>Skin.HasSetting(buttonscroller-hide)</selected>
+			<onclick>Skin.ToggleSetting(buttonscroller-hide)</onclick>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>508</onup>
+			<ondown>501</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<!-- Home Options - Rename "My Programs" Switch -->
+
+		<control type="button" id="501">
+			<description>Rename "My Programs" Switch</description>
+			<posx>181</posx>
+			<posy>152</posy>
+			<include>20002</include>
+			<font>font13</font>
+			<onclick>Skin.SetString(myprograms-label)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>500</onup>
+			<ondown>509</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+			<visible>!Skin.String(myprograms-label)</visible>
+		</control>
+
+		<control type="button" id="501">
+			<description>Rename "CustomInfo" Switch</description>
+			<posx>181</posx>
+			<posy>152</posy>
+			<include>20003</include>
+			<font>font13</font>
+			<onclick>Skin.SetString(myprograms-label)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>500</onup>
+			<ondown>509</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+			<visible>Skin.String(myprograms-label)</visible>
+		</control>
+
+		<!-- Home Options - Horizontal ButtonScroller Switch -->
+
+		<control type="radiobutton" id="509">
+			<description>"Horizontal ButtonScroller" Button</description>
+			<posx>181</posx>
+			<posy>189</posy>
+			<include>20004</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(horizontal-buttonscroller)</selected>
+			<onclick>Skin.ToggleSetting(horizontal-buttonscroller)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>501</onup>
+			<ondown>502</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>separator image</description>
+			<posx>181</posx>
+			<posy>220</posy>
+			<width>477</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<!-- Home Options - Weather -->
+
+		<control type="radiobutton" id="502">
+			<description>"Weather" Switch</description>
+			<posx>181</posx>
+			<posy>226</posy>
+			<include>20005</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(weather)</selected>
+			<onclick>Skin.ToggleSetting(weather)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>509</onup>
+			<ondown>503</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<!-- Home Options - RSS Feeds -->
+
+		<control type="radiobutton" id="503">
+			<description>"RSS Feeds" Switch</description>
+			<posx>181</posx>
+			<posy>263</posy>
+			<include>20006</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(rss)</selected>
+			<onclick>Skin.ToggleSetting(rss)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>502</onup>
+			<ondown>504</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<!-- Home Options - Time and Date / CPU and RAM -->
+
+		<!-- <control type="button" id="504">
+			<description>Time/Date Switch</description>
+			<posx>181</posx>
+			<posy>300</posy>
+			<include>20007</include>
+			<font>font13</font>
+			<onclick>Skin.SetBool(time-and-date,false)</onclick>
+			<onclick>Skin.SetBool(cpu-and-ram,false)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>503</onup>
+			<ondown>505</ondown>
+			<include>slideright</include>
+			<visible>[Control.HasFocus(10) | ControlGroup(2).HasFocus()] + Skin.HasSetting(cpu-and-ram)</visible>
+		</control> -->
+
+		<!-- <control type="button" id="504">
+			<description>CPU/RAM Switch</description>
+			<posx>181</posx>
+			<posy>300</posy>
+			<include>20008</include>
+			<font>font13</font>
+			<onclick>Skin.SetBool(cpu-and-ram,true)</onclick>
+			<onclick>Skin.SetBool(time-and-date,true)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>503</onup>
+			<ondown>505</ondown>
+			<include>slideright</include>
+			<visible>[Control.HasFocus(10) | ControlGroup(2).HasFocus()] + !Skin.HasSetting(cpu-and-ram)</visible>
+		</control> -->
+
+
+
+
+
+		<control type="togglebutton" id="504">
+			<description>"Time/Date and CPU/RAM Switch" Switch</description>
+			<posx>181</posx>
+			<posy>300</posy>
+			<label>Enable Time and Date Information</label>
+			<altlabel>Enable CPU and RAM Information</altlabel>
+			<font>font13</font>
+
+			<onclick>Skin.SetBool(time-and-date,false)</onclick>
+			<onclick>Skin.SetBool(cpu-and-ram,false)</onclick>
+
+			<altclick>Skin.SetBool(cpu-and-ram,true)</altclick>
+			<altclick>Skin.SetBool(time-and-date,true)</altclick>
+			<align>left</align>
+
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<alttexturefocus>list-focus.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+
+			<usealttexture>Skin.Bool(cpu-and-ram)</usealttexture>
+
+
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>503</onup>
+			<ondown>505</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+
+
+
+		<!-- Home Options - System InfoBar -->
+
+		<control type="radiobutton" id="505">
+			<description>"Home System InfoBar" Switch</description>
+			<posx>181</posx>
+			<posy>337</posy>
+			<include>20010</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(sysstatsbarhome)</selected>
+			<onclick>Skin.ToggleSetting(sysstatsbarhome)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>504</onup>
+			<ondown>506</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>separator image</description>
+			<posx>181</posx>
+			<posy>368</posy>
+			<width>477</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<!-- Home Options - XBMC Logo -->
+
+		<control type="radiobutton" id="506">
+			<description>"XBMC Logo" Switch</description>
+			<posx>181</posx>
+			<posy>374</posy>
+			<include>20011</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(skinlogo)</selected>
+			<onclick>Skin.ToggleSetting(skinlogo)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>505</onup>
+			<ondown>507</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<!-- Home Options - Sub-Buttons -->
+
+		<control type="radiobutton" id="507">
+			<description>"Home Sub-Buttons" Switch</description>
+			<posx>181</posx>
+			<posy>411</posy>
+			<include>20012</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(homebuttons)</selected>
+			<onclick>Skin.ToggleSetting(homebuttons)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>506</onup>
+			<ondown>508</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+
+		<!-- Home Options - ScanLines Switch -->
+
+		<control type="radiobutton" id="508">
+			<description>"ScanLines" Switch</description>
+			<posx>181</posx>
+			<posy>448</posy>
+			<include>20013</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(scanlines)</selected>
+			<onclick>Skin.ToggleSetting(scanlines)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>507</onup>
+			<ondown>500</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+		</control>
+	</control>
+
+	<!-- Menu Options - Menu Labels -->
+
+	<control type="group" id="3">
+		<control type="radiobutton" id="600">
+			<description>"Menu Labels" Switch</description>
+			<posx>181</posx>
+			<posy>115</posy>
+			<include>20061</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(menulabels)</selected>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<onclick>Skin.ToggleSetting(menulabels)</onclick>
+			<width>520</width>
+			<height>30</height>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>604</onup>
+			<ondown>601</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(13) | ControlGroup(3).HasFocus()</visible>
+		</control>
+
+		<!-- Menu Options - Menu StatsBar -->
+
+		<control type="radiobutton" id="601">
+			<description>"Menu System InfoBar" Switch</description>
+			<posx>181</posx>
+			<posy>152</posy>
+			<include>20062</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(sysstatsbarmenu)</selected>
+			<onclick>Skin.ToggleSetting(sysstatsbarmenu)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>600</onup>
+			<ondown>602</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(13) | ControlGroup(3).HasFocus()</visible>
+		</control>
+
+		<!-- Menu Options - List.Item Thumbs -->
+
+		<control type="radiobutton" id="602">
+			<description>"List.Item Thumbs" Switch</description>
+			<posx>181</posx>
+			<posy>189</posy>
+			<include>20063</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(listItem)</selected>
+			<onclick>Skin.ToggleSetting(listItem)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>601</onup>
+			<ondown>603</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(13) | ControlGroup(3).HasFocus()</visible>
+		</control>
+
+		<!-- Menu Options - Menu Overlay -->
+
+		<control type="radiobutton" id="603">
+			<description>"Menu Overlay" Switch</description>
+			<posx>181</posx>
+			<posy>226</posy>
+			<include>20064</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(menu-overlay)</selected>
+			<onclick>Skin.ToggleSetting(menu-overlay)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>602</onup>
+			<ondown>604</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(13) | ControlGroup(3).HasFocus()</visible>
+		</control>
+
+		<!-- Menu Options - Switch Glass Panel BG -->
+
+		<control type="button" id="604">
+			<description>"Switch to Glass Panel" Switch</description>
+			<posx>181</posx>
+			<posy>263</posy>
+			<include>20065</include>
+			<font>font13</font>
+			<onclick>Skin.ToggleSetting(menu-panel)</onclick>
+			<onclick>Skin.SetBool(menu-animation,true)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>603</onup>
+			<ondown>600</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(13) | ControlGroup(3).HasFocus()</visible>
+			<visible>!Skin.HasSetting(menu-panel)</visible>
+		</control>
+
+		<control type="button" id="604">
+			<description>"Switch Glass Panel" Reset Switch</description>
+			<posx>181</posx>
+			<posy>263</posy>
+			<include>20066</include>
+			<font>font13</font>
+			<onclick>Skin.Reset(menu-animation)</onclick>
+			<onclick>Skin.Reset(menu-panel)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>603</onup>
+			<ondown>600</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(13) | ControlGroup(3).HasFocus()</visible>
+			<visible>Skin.HasSetting(menu-panel)</visible>
+		</control>
+	</control>
+
+	<!-- Media Options - Media Progress Bar -->
+
+	<control type="group" id="4">
+		<control type="radiobutton" id="700">
+			<description>"Media Progress Bar" Switch</description>
+			<posx>181</posx>
+			<posy>115</posy>
+			<include>20041</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(mediaprogress)</selected>
+			<onclick>Skin.ToggleSetting(mediaprogress)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>708</onup>
+			<ondown>701</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+         	</control>
+
+		<control type="image">
+			<description>separator image</description>
+			<posx>181</posx>
+			<posy>146</posy>
+			<width>477</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - Home Music Info -->
+
+		<control type="radiobutton" id="701">
+			<description>"Home Music Info" Switch</description>
+			<posx>181</posx>
+			<posy>152</posy>
+			<include>20042</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(home-music-info)</selected>
+			<onclick>Skin.ToggleSetting(home-music-info)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>700</onup>
+			<ondown>702</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - Menu Music Info -->
+
+		<control type="radiobutton" id="702">
+			<description>"Menu Music Info" Switch</description>
+			<posx>181</posx>
+			<posy>189</posy>
+			<include>20043</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(music-info)</selected>
+			<onclick>Skin.ToggleSetting(music-info)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>701</onup>
+			<ondown>703</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - Home Visualisation Switch -->
+
+		<control type="radiobutton" id="703">
+			<description>"Home visualisation" Switch</description>
+			<posx>181</posx>
+			<posy>226</posy>
+			<include>20044</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(home-visualisation)</selected>
+			<onclick>Skin.ToggleSetting(home-visualisation)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>702</onup>
+			<ondown>704</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - "empty" Switch -->
+
+		<control type="radiobutton" id="704">
+			<description>"empty" Switch</description>
+			<posx>181</posx>
+			<posy>263</posy>
+			<include>20045</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting()</selected>
+			<onclick>Skin.ToggleSetting()</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>703</onup>
+			<ondown>705</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+			<visible>no</visible>
+		</control>
+
+		<control type="image">
+			<description>separator image</description>
+			<posx>181</posx>
+			<posy>294</posy>
+			<width>477</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - Home Video Info -->
+
+		<control type="radiobutton" id="705">
+			<description>"Home Video Info" Switch</description>
+			<posx>181</posx>
+			<posy>300</posy>
+			<include>20046</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(home-video-info)</selected>
+			<onclick>Skin.ToggleSetting(home-video-info)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>704</onup>
+			<ondown>706</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - Menu Video Info -->
+
+		<control type="radiobutton" id="706">
+			<description>"Menu Video Info" Switch</description>
+			<posx>181</posx>
+			<posy>337</posy>
+			<include>20047</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(video-info)</selected>
+			<onclick>Skin.ToggleSetting(video-info)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>705</onup>
+			<ondown>707</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - Video Preview Switch -->
+
+		<control type="radiobutton" id="707">
+			<description>"Video Preview" Switch</description>
+			<posx>181</posx>
+			<posy>374</posy>
+			<include>20048</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(home-video-preview)</selected>
+			<onclick>Skin.ToggleSetting(home-video-preview)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>706</onup>
+			<ondown>708</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+
+		<!-- Media Options - Menu Video Preview -->
+
+		<control type="radiobutton" id="708">
+			<description>"Menu Video Preview" Switch</description>
+			<posx>181</posx>
+			<posy>411</posy>
+			<include>20049</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(video-preview)</selected>
+			<onclick>Skin.ToggleSetting(video-preview)</onclick>
+			<onclick>!Skin.SetBool(video-info)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>707</onup>
+			<ondown>700</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+		</control>
+	</control>
+
+	<!-- Other Options - Keyboard Layout -->
+
+	<control type="group" id="5">
+		<control type="radiobutton" id="800">
+			<description>"Keyboard Layout" Switch</description>
+			<posx>181</posx>
+			<posy>115</posy>
+			<include>20081</include>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(keyboard)</selected>
+			<onclick>Skin.ToggleSetting(keyboard)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>14</onleft>
+			<onright>14</onright>
+			<onup>803</onup>
+			<ondown>801</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(14) | ControlGroup(5).HasFocus()</visible>
+		</control>
+
+		<!-- Other Options - Settings menu Switch -->
+
+		<control type="radiobutton" id="801">
+			<description>"Settings menu" Button</description>
+			<posx>181</posx>
+			<posy>152</posy>
+			<include>20082</include>
+			<font>font13</font>
+			<selected>Skin.HasSetting(Settings-menu)</selected>
+			<onclick>Skin.ToggleSetting(Settings-menu)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>14</onleft>
+			<onright>14</onright>
+			<onup>800</onup>
+			<ondown>803</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(14) | ControlGroup(5).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>separator image</description>
+			<posx>181</posx>
+			<posy>220</posy>
+			<width>477</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>slideright</include>
+			<visible>Control.HasFocus(14) | ControlGroup(5).HasFocus()</visible>
+		</control>
+
+		<!-- Other Options - Skin.ResetSettings Switch -->
+
+		<control type="button" id="803">
+			<description>"Skin.ResetSettings" Switch</description>
+			<posx>181</posx>
+			<posy>226</posy>
+			<include>20084</include>
+			<font>font13</font>
+			<onclick>Skin.ResetSettings</onclick>
+			<onclick>XBMC.Notification(PDM Skin Setting,Settings back to Default),100</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>14</onleft>
+			<onright>14</onright>
+			<onup>801</onup>
+			<ondown>800</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(14) | ControlGroup(5).HasFocus()</visible>
+		</control>
+	</control>
+
+	<!-- Customisation Options - Custom Images -->
+
+	<control type="group" id="6">
+		<control type="button" id="900">
+			<description>"Custom Images" Switch</description>
+			<posx>181</posx>
+			<posy>115</posy>
+			<include>20021</include>
+			<align>left</align>
+			<font>font13</font>
+			<selected>!Skin.HasSetting(custom-image)</selected>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<onclick>Skin.ToggleSetting(custom-image)</onclick>
+			<width>520</width>
+			<height>30</height>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>904</onup>
+			<ondown>901</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<!-- Customisation Options - Stretch My Pictures -->
+
+		<control type="togglebutton" id="901">
+			<description>"Stretch My Pictures" Switch</description>
+			<posx>181</posx>
+			<posy>152</posy>
+			<include>20022</include>
+			<include>20023</include>
+			<font>font13</font>
+			<textoffsetx>17</textoffsetx>
+			<onclick>Skin.ToggleSetting(stretch)</onclick>
+			<align>left</align>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<usealttexture>Skin.HasSetting(stretch)</usealttexture>
+			<alttexturefocus>list-focus.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>900</onup>
+			<ondown>902</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>separator image</description>
+			<posx>181</posx>
+			<posy>183</posy>
+			<width>477</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<!-- Customisation Options - Customize Options Switch-->
+
+		<control type="button" id="902">
+			<description>"Customize Options" Switch</description>
+			<posx>181</posx>
+			<posy>189</posy>
+			<include>20025</include>
+			<font>font13</font>
+			<onclick>Skin.SetPath(custom-pictures)</onclick>
+			<onclick>Skin.SetBool(custom-image,false)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>901</onup>
+			<ondown>920</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="button" id="903">
+			<description>"Use Single Image" Switch</description>
+			<posx>181</posx>
+			<posy>426</posy>
+			<include>20030</include>
+			<font>font13</font>
+			<onclick>Skin.SetImage(custom-image)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>920</onup>
+			<ondown>904</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="button" id="904">
+			<description>"Image Reset" Switch</description>
+			<posx>181</posx>
+			<posy>463</posy>
+			<include>20031</include>
+			<font>font13</font>
+			<onclick>Skin.Reset(Games)</onclick>
+			<onclick>Skin.Reset(Pictures)</onclick>
+			<onclick>Skin.Reset(Music)</onclick>
+			<onclick>Skin.Reset(Movies)</onclick>
+			<onclick>Skin.Reset(Weather)</onclick>
+			<onclick>Skin.Reset(Filemanager)</onclick>
+			<onclick>Skin.Reset(Settings)</onclick>
+			<align>left</align>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>903</onup>
+			<ondown>900</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<!-- Customisation Options - Custom Image Selector-->
+
+		<control type="label">
+			<description>Image Option Label</description>
+			<posx>200</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<include>20026</include>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>separator image</description>
+			<posx>181</posx>
+			<posy>220</posy>
+			<width>477</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>arrow-left image</description>
+			<posx>250</posx>
+			<posy>310</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>select-left.gif</texture>
+			<colordiffuse>90ffffff</colordiffuse>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>arrow-right image</description>
+			<posx>500</posx>
+			<posy>310</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>select-right.gif</texture>
+			<colordiffuse>90ffffff</colordiffuse>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<!-- Customisation Options - Custom Images - Switches --> 
+
+		<control type="button" id="920">
+			<description>Games Switch</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<onclick>Skin.SetImage(Games)</onclick>
+			<texturefocus>folder-focus.png</texturefocus>
+			<texturenofocus>folder-nofocus.png</texturenofocus>
+			<onleft>926</onleft>  
+			<onright>921</onright>
+			<onup>902</onup> 
+			<ondown>903</ondown> 
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="button" id="921">
+			<description>Pictures Switch</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<onclick>Skin.SetImage(Pictures)</onclick>
+			<texturefocus>folder-focus.png</texturefocus>
+			<texturenofocus>folder-nofocus.png</texturenofocus>
+			<onleft>920</onleft>  
+			<onright>922</onright>
+			<onup>902</onup> 
+			<ondown>903</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>  
+		</control>
+
+		<control type="button" id="922">
+			<description>Music Switch</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<onclick>Skin.SetImage(Music)</onclick>
+			<texturefocus>folder-focus.png</texturefocus>
+			<texturenofocus>folder-nofocus.png</texturenofocus>
+			<onleft>921</onleft>
+			<onright>923</onright>
+			<onup>902</onup> 
+			<ondown>903</ondown> 
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible> 
+		</control>
+
+		<control type="button" id="923">
+			<description>Movies Switch</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<onclick>Skin.SetImage(Movies)</onclick>
+			<texturefocus>folder-focus.png</texturefocus>
+			<texturenofocus>folder-nofocus.png</texturenofocus>
+			<onleft>922</onleft>
+			<onright>924</onright>
+			<onup>902</onup> 
+			<ondown>903</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>  
+		</control>
+
+		<control type="button" id="924">
+			<description>Weather Switch</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<onclick>Skin.SetImage(Weather)</onclick>
+			<texturefocus>folder-focus.png</texturefocus>
+			<texturenofocus>folder-nofocus.png</texturenofocus>
+			<onleft>923</onleft> 
+			<onright>925</onright>
+			<onup>902</onup> 
+			<ondown>903</ondown> 
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="button" id="925">
+			<description>FileManager Switch</description>     
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<onclick>Skin.SetImage(Filemanager)</onclick>
+			<texturefocus>folder-focus.png</texturefocus>
+			<texturenofocus>folder-nofocus.png</texturenofocus>
+			<onleft>924</onleft>
+			<onright>926</onright>
+			<onup>902</onup> 
+			<ondown>903</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible> 
+		</control>
+
+		<control type="button" id="926">
+			<description>Settings Switch</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<onclick>Skin.SetImage(Settings)</onclick>
+			<texturefocus>folder-focus.png</texturefocus>
+			<texturenofocus>folder-nofocus.png</texturenofocus>
+			<onleft>925</onleft>
+			<onright>920</onright>
+			<onup>902</onup> 
+			<ondown>903</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<!-- Customisation Options - Custom Images - Images -->
+
+		<control type="multiimage">
+			<description>Games image</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<imagepath>PIC Games</imagepath>
+			<info>Skin.String(Games)</info>
+			<timeperimage>3000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(920)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="multiimage">
+			<description>Pictures image</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<imagepath>PIC Pictures</imagepath>
+			<info>Skin.String(Pictures)</info>
+			<timeperimage>3000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(921)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="multiimage">
+			<description>Music image</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<imagepath>PIC Music</imagepath>
+			<info>Skin.String(Music)</info>
+			<timeperimage>3000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize> 
+			<include>slideright</include> 
+			<visible>Control.HasFocus(922)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="multiimage">
+			<description>Movies image</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<imagepath>PIC Movies</imagepath>
+			<info>Skin.String(Movies)</info>
+			<timeperimage>3000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>  
+			<include>slideright</include> 
+			<visible>Control.HasFocus(923)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="multiimage">
+			<description>Weather image</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<imagepath>PIC Weather</imagepath>
+			<info>Skin.String(Weather)</info>
+			<timeperimage>3000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(924)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="multiimage">
+			<description>FileManager image</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<imagepath>PIC Filemanager</imagepath>
+			<info>Skin.String(Filemanager)</info>
+			<timeperimage>3000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(925)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="multiimage">
+			<description>Settings image</description>
+			<posx>300</posx>
+			<posy>260</posy>
+			<width>200</width>
+			<height>160</height>
+			<imagepath>PIC Settings</imagepath>
+			<info>Skin.String(Settings)</info>
+			<timeperimage>3000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(926)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="image">
+			<description>image panel</description>
+			<posx>290</posx>
+			<posy>250</posy>
+			<width>220</width>
+			<height>180</height>
+			<texture>image-panel.png</texture>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<!-- Customisation Options - Custom Images - Labels --> 
+
+		<control type="label">
+			<description>Programs Label</description>
+			<posx>420</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<label>0</label>
+			<info>Skin.String(myprograms-label)</info>
+			<include>slideright</include>
+			<visible>Control.HasFocus(920)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="label">
+			<description>Pictures Label</description>
+			<posx>420</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<label>1</label>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(921)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="label">
+			<description>Music Label</description>
+			<posx>420</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<label>2</label>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(922)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="label">
+			<description>Videos Label</description>
+			<posx>420</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<label>3</label>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(923)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="label">
+			<description>Video Label</description>
+			<posx>420</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<label>8</label>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(924)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="label">
+			<description>FileManager Label</description>
+			<posx>420</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<label>7</label>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(925)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+
+		<control type="label">
+			<description>Settings Label</description>
+			<posx>420</posx>
+			<posy>226</posy>
+			<width>300</width>
+			<height>90</height>
+			<label>5</label>
+			<include>slideright</include> 
+			<visible>Control.HasFocus(926)</visible>
+			<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+		</control>
+	</control>
+
+	<!-- Animation Options - Menu BG Animation -->
+
+	<control type="group" id="7">
+		<control type="radiobutton" id="100">
+			<description>"Menu BG Animation" Switch</description>
+			<posx>181</posx>
+			<posy>115</posy>
+			<font>font13</font>
+			<include>20102</include>
+			<align>left</align>
+			<selected>!Skin.HasSetting(menu-animation)</selected>
+			<onclick>Skin.ToggleSetting(menu-animation)</onclick>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<width>520</width>
+			<height>30</height>
+			<onleft>15</onleft>
+			<onright>15</onright>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<include>slideright</include>
+			<visible>Control.HasFocus(15) | ControlGroup(7).HasFocus()</visible>
+		</control>
+	</control>
+
+	<include>4x3slider</include>
+
+	<!-- Menu Description Labels -->
+	<control>
+		<description>"Home Options" Description Label</description>
+		<include>20000</include>
+		<include>description</include>
+		<visible>Control.HasFocus(10) | ControlGroup(2).HasFocus()</visible>
+	</control>
+	<control>
+		<description>"Customisations Options" Description Label</description>
+		<include>20020</include>
+		<include>description</include>
+		<visible>Control.HasFocus(11) | ControlGroup(6).HasFocus()</visible>
+	</control>
+	<control>
+		<description>"Media Options" Description Label</description>
+		<include>20040</include>
+		<include>description</include>
+		<visible>Control.HasFocus(12) | ControlGroup(4).HasFocus()</visible>
+	</control>
+	<control>
+		<description>"Menu Options" Description Label</description>
+		<include>20060</include>
+		<include>description</include>
+		<visible>Control.HasFocus(13) | ControlGroup(3).HasFocus()</visible>
+	</control>
+	<control>
+		<description>"Other Options" Description Label</description>
+		<include>20080</include>
+		<include>description</include>
+		<visible>Control.HasFocus(14) | ControlGroup(5).HasFocus()</visible>
+	</control>
+	<control>
+		<description>"Animation Options" Description Label</description>
+		<include>20100</include>
+		<include>description</include>
+		<visible>Control.HasFocus(15) | ControlGroup(7).HasFocus()</visible>
+	</control>
+
+	</controls>
+</window>

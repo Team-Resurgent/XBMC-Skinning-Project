@@ -1,0 +1,115 @@
+<window id="108">
+	<defaultcontrol>3101</defaultcontrol>
+	<controls>
+		<include>Dialog-Container</include>
+		<control type="group">
+			<include>dialog-slide</include>
+			<control type="label" id="3100">
+				<description>Heading Label</description>
+				<posx>10</posx>
+				<posy>110</posy>
+				<width>370</width>
+				<align>left</align>
+				<label>15049</label>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="radiobutton" id="3101">
+				<description>hosting type radiobutton</description>
+				<posx>0</posx>
+				<posy>155</posy>
+				<width>370</width>
+				<height>30</height>
+				<font>font12</font>
+				<textcolor>main-text</textcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<texturefocus>line.png</texturefocus>
+				<texturenofocus></texturenofocus>
+				<colordiffuse>object-color</colordiffuse>
+				<textureradiofocus>checkbox-fo.png</textureradiofocus>
+				<textureradionofocus>checkbox-nf.png</textureradionofocus>
+				<label>15050</label>
+				<onleft>3101</onleft>
+				<onright>3101</onright>
+				<onup>3108</onup>
+				<ondown>3105</ondown>
+			</control>
+			<control type="label" id="3104">
+				<description>Password Label</description>
+				<posx>10</posx>
+				<posy>221</posy>
+				<width>370</width>
+				<font>font12</font>
+				<label>15052</label>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="button" id="3105">
+				<description>Password Button</description>
+				<posx>10</posx>
+				<posy>245</posy>
+				<width>370</width>
+				<font>font12</font>
+				<textoffsetx>0</textoffsetx>
+				<textwidth>370</textwidth>
+				<aligny>center</aligny>
+				<label>-</label>
+				<onleft>3105</onleft>
+				<onright>3105</onright>
+				<onup>3101</onup>
+				<ondown>3107</ondown>
+			</control>
+			<control type="label" id="3106">
+				<description>Description Label</description>
+				<posx>10</posx>
+				<posy>290</posy>
+				<width>370</width>
+				<font>font12</font>
+				<label>15053</label>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="button" id="3107">
+				<description>Description Button</description>
+				<posx>10</posx>
+				<posy>314</posy>
+				<width>370</width>
+				<font>font12</font>
+				<textoffsetx>0</textoffsetx>
+				<textwidth>370</textwidth>
+				<aligny>center</aligny>
+				<label>-</label>
+				<onleft>3107</onleft>
+				<onright>3107</onright>
+				<onup>3105</onup>
+				<ondown>3108</ondown>
+			</control>
+			<control type="button" id="3108">
+				<description>Ok Button</description>
+				<posx>5</posx>
+				<posy>435</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>186</label>
+				<onleft>3108</onleft>
+				<onright>3109</onright>
+				<onup>3107</onup>
+				<ondown>3101</ondown>
+			</control>
+			<control type="button" id="3109">
+				<description>Cancel Button</description>
+				<posx>115</posx>
+				<posy>435</posy>
+				<width>100</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>222</label>
+				<onleft>3108</onleft>
+				<onright>3109</onright>
+				<onup>3107</onup>
+				<ondown>3101</ondown>
+			</control>
+		</control>
+		<include>Dialog-Shutters</include>
+	</controls>
+</window>

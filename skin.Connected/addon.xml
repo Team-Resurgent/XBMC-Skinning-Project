@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.connected"
+  version="1.5"
+  name="Connected"
+  provider-name="Wir3d">
+  <requires>
+    <import addon="xbmc.gui" version="2.11"/>
+  </requires>
+  <extension 
+    point="xbmc.gui.skin"
+    defaultresolution="pal" 
+    defaultresolutionwide="pal16x9"
+    defaultthemename="textures.xbt" 
+    effectslowdown="1"
+    debugging="false"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">A skin based on the impressesive DivX Connected frontend.</summary>
+	<description  lang="en">A skin based on the impressesive DivX Connected frontend.[CR][CR]This skin uses little memory and still works for XBOX!</description>
+    <platform>all</platform>
+  </extension>
+</addon>

@@ -1,0 +1,232 @@
+<window type="buttonmenu" id="111">
+	<defaultcontrol>3112</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>185</posx>
+		<posy>230</posy>
+	</coordinates>
+	<controls>
+		<!-- With master lock -->
+		<control type="group">
+			<control type="image" id="0">
+				<posx>-4</posx>
+				<posy>-5</posy>
+				<width>350</width>
+				<height>130</height>
+				<texture border="10">sub-background.png</texture>
+				<visible>System.HasLocks</visible>
+			</control>
+			<control type="button" id="3110">
+				<description>dashboard button</description>
+				<posx>30</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-dashboard-focus.png</texturefocus>
+				<texturenofocus>sub-dashboard-nofocus.png</texturenofocus>
+				<onclick>xbmc.dashboard()</onclick>
+				<onleft>3114</onleft>
+				<onright>3111</onright>
+				<onup>3110</onup>
+				<ondown>3110</ondown>
+				<font>-</font>
+				<label>13006</label>
+				<visible>System.HasLocks</visible>
+			</control>
+			<control type="button" id="3111">
+				<description>reboot button</description>
+				<posx>90</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-reboot-focus.png</texturefocus>
+				<texturenofocus>sub-reboot-nofocus.png</texturenofocus>
+				<onclick>XBMC.Reset()</onclick>
+				<onleft>3110</onleft>
+				<onright>3112</onright>
+				<onup>3111</onup>
+				<ondown>3111</ondown>
+				<font>-</font>
+				<label>13313</label>
+				<visible>System.HasLocks</visible>
+			</control>
+			<control type="button" id="3112">
+				<description>shutdown button</description>
+				<posx>150</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-shutdown-focus.png</texturefocus>
+				<texturenofocus>sub-shutdown-nofocus.png</texturenofocus>
+				<onclick>xbmc.shutdown()</onclick>
+				<onleft>3111</onleft>
+				<onright>3113</onright>
+				<onup>3115</onup>
+				<ondown>3115</ondown>
+				<font>-</font>
+				<label>13005</label>
+				<visible>System.HasLocks</visible>
+			</control>
+			<control type="button" id="3115">
+				<description>Restart XBMC button</description>
+				<posx>150</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-shutdown-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>xbmc.RestartApp()</onclick>
+				<onleft>3111</onleft>
+				<onright>3113</onright>
+				<onup>3112</onup>
+				<ondown>3112</ondown>
+				<font>-</font>
+				<label>$LOCALIZE[13313] XBMC</label>
+				<visible>System.HasLocks</visible>
+			</control>
+			<control type="button" id="3113">
+				<description>system info button</description>
+				<posx>210</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-info-focus.png</texturefocus>
+				<texturenofocus>sub-info-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(7)</onclick>
+				<onleft>3112</onleft>
+				<onright>3114</onright>
+				<onup>3113</onup>
+				<ondown>3113</ondown>
+				<font>-</font>
+				<label>130</label>
+				<visible>System.HasLocks</visible>
+			</control>
+			<control type="togglebutton" id="3114">
+				<description>Enter master mode / Leave master mode</description>
+				<posx>270</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<label>20046</label>
+				<altlabel>20045</altlabel>
+				<texturefocus>sub-profiles-focus.png</texturefocus>
+				<texturenofocus>sub-profiles-nofocus.png</texturenofocus>
+				<usealttexture>System.IsMaster</usealttexture>
+				<alttexturefocus>sub-profiles-focus.png</alttexturefocus>
+				<alttexturenofocus>sub-profiles-nofocus.png</alttexturenofocus>
+				<onclick>xbmc.mastermode</onclick>
+				<pulseonselect>no</pulseonselect>
+				<onleft>3113</onleft>
+				<onright>3110</onright>
+				<onup>3114</onup>
+				<ondown>3114</ondown>
+				<font>-</font>
+				<visible>System.HasLocks</visible>
+			</control>
+			<!-- Without master lock -->
+			<control type="image" id="0">
+				<posx>26</posx>
+				<posy>-5</posy>
+				<width>290</width>
+				<height>130</height>
+				<texture border="10">sub-background.png</texture>
+				<visible>!System.HasLocks</visible>
+			</control>
+			<control type="button" id="3110">
+				<description>dashboard button</description>
+				<posx>60</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-dashboard-focus.png</texturefocus>
+				<texturenofocus>sub-dashboard-nofocus.png</texturenofocus>
+				<onclick>xbmc.dashboard()</onclick>
+				<onleft>3113</onleft>
+				<onright>3111</onright>
+				<onup>3110</onup>
+				<ondown>3110</ondown>
+				<font>-</font>
+				<label>13006</label>
+				<visible>!System.HasLocks</visible>
+			</control>
+			<control type="button" id="3111">
+				<description>reboot button</description>
+				<posx>120</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-reboot-focus.png</texturefocus>
+				<texturenofocus>sub-reboot-nofocus.png</texturenofocus>
+				<onclick>xbmc.Reset()</onclick>
+				<onleft>3110</onleft>
+				<onright>3112</onright>
+				<onup>3111</onup>
+				<ondown>3111</ondown>
+				<font>-</font>
+				<label>13313</label>
+				<visible>!System.HasLocks</visible>
+			</control>
+			<control type="button" id="3112">
+				<description>shutdown button</description>
+				<posx>180</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-shutdown-focus.png</texturefocus>
+				<texturenofocus>sub-shutdown-nofocus.png</texturenofocus>
+				<onclick>xbmc.shutdown()</onclick>
+				<onleft>3111</onleft>
+				<onright>3113</onright>
+				<onup>3115</onup>
+				<ondown>3115</ondown>
+				<font>-</font>
+				<label>13005</label>
+				<visible>!System.HasLocks</visible>
+			</control>
+			<control type="button" id="3115">
+				<description>Restart XBMC button</description>
+				<posx>180</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-shutdown-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>xbmc.RestartApp()</onclick>
+				<onleft>3111</onleft>
+				<onright>3113</onright>
+				<onup>3112</onup>
+				<ondown>3112</ondown>
+				<font>-</font>
+				<label>$LOCALIZE[13313] XBMC</label>
+				<visible>!System.HasLocks</visible>
+			</control>
+			<control type="button" id="3113">
+				<description>system info button</description>
+				<posx>240</posx>
+				<posy>10</posy>
+				<width>61</width>
+				<height>61</height>
+				<texturefocus>sub-info-focus.png</texturefocus>
+				<texturenofocus>sub-info-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(7)</onclick>
+				<onleft>3112</onleft>
+				<onright>3110</onright>
+				<onup>3113</onup>
+				<ondown>3113</ondown>
+				<font>-</font>
+				<label>130</label>
+				<visible>!System.HasLocks</visible>
+			</control>
+		</control>
+		<control type="label" id="3100">
+			<description>label control</description>
+			<posx>19</posx>
+			<posy>73</posy>
+			<width>322</width>
+			<height>20</height>
+			<align>center</align>
+			<font>font10</font>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,92 @@
+<window>
+  <id>101</id>
+  <defaultcontrol>10</defaultcontrol>
+  <controls>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>177</posX>
+      <posY>188</posY>
+      <width>406</width>
+      <height>130</height>
+      <texture>dialog-popup.png</texture>
+    </control>
+    <control>
+      <description>dialog header</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>177</posX>
+      <posY>188</posY>
+      <width>406</width>
+      <height>25</height>
+      <texture>dialog-header.png</texture>
+    </control>
+    <control>
+      <description>dialog Heading</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>190</posX>
+      <posY>190</posY>
+      <label>0</label>
+      <font>font13</font>
+      <textcolor>FF000000</textcolor>
+    </control>
+    <control>
+      <description>dialog line 1</description>
+      <type>label</type>
+      <id>2</id>
+      <posX>190</posX>
+      <posY>217</posY>
+      <hasPath>yes</hasPath>
+      <label>0</label>
+      <font>font13</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>dialog line 2</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>190</posX>
+      <posY>233</posY>
+      <hasPath>yes</hasPath>
+      <label>0</label>
+      <font>font13</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>dialog line 3</description>
+      <type>label</type>
+      <id>4</id>
+      <posX>190</posX>
+      <posY>250</posY>
+      <hasPath>yes</hasPath>
+      <label>0</label>
+      <font>font13</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>progress control</description>
+      <type>progress</type>
+      <id>20</id>
+      <posX>190</posX>
+      <posY>280</posY>
+      <width>100</width>
+      <visible>no</visible>
+    </control>
+    <control>
+      <description>Cancel button</description>
+      <type>button</type>
+      <id>10</id>
+      <posX>490</posX>
+      <posY>283</posY>
+      <width>76</width>
+      <height>28</height>
+      <align>center</align>
+      <label>222</label>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>10</onup>
+      <ondown>10</ondown>
+    </control>
+  </controls>
+</window>

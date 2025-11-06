@@ -1,0 +1,69 @@
+<window id="101">
+	<defaultcontrol>10</defaultcontrol>
+	<controls>
+		<include>Dialog-Container</include>
+		<control type="group">
+		<include>dialog-slide</include>
+			<control type="label" id="1">
+				<description>dialog heading</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<width>365</width>
+				<label>0</label>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>5</posx>
+				<posy>170</posy>
+				<width>365</width>
+				<scroll>true</scroll>
+				<label>0</label>
+				<font>font13</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>5</posx>
+				<posy>230</posy>
+				<width>365</width>
+				<scroll>true</scroll>
+				<label>0</label>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>5</posx>
+				<posy>265</posy>
+				<width>365</width>
+				<label>0</label>
+				<scroll>true</scroll>
+				<font>font14</font>
+				<textcolor>main-text</textcolor>
+			</control>
+			<control type="button" id="10">
+				<description>OK button</description>
+				<posx>5</posx>
+				<posy>435</posy>
+				<width>100</width>
+				<label>222</label>
+				<align>center</align>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+			<control type="progress" id="20">
+				<description>progress control</description>
+				<posx>5</posx>
+				<posy>400</posy>
+				<width>365</width>
+				<height>20</height>
+				<colordiffuse>object-color</colordiffuse>
+			</control>
+		</control>
+		<include>Dialog-Shutters</include>
+	</controls>
+</window>

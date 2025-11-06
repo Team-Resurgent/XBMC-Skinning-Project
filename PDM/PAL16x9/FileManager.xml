@@ -1,0 +1,398 @@
+<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+		<visible>Skin.HasSetting(menu-panel)</visible>
+	</control>
+
+	<!-- Default Theme -->
+
+	<control type="image">
+		<description>Background Panel image 1</description>
+		<posx>75</posx>
+		<posy>108</posy>
+		<width>580</width>
+		<height>407</height>
+		<texture>background-settings.png</texture>
+		<include>color-preset</include>
+		<visible>!Skin.HasSetting(menu-panel) | Skin.HasTheme(Default)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>65</posx>
+		<posy>108</posy>
+		<width>590</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<include>color-animation</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>!Skin.HasSetting(menu-animation) | Skin.HasTheme(Default)</visible>
+	</control>
+
+	<!-- X Theme -->
+
+	<control type="image">
+		<description>Background Panel image 1</description>
+		<posx>75</posx>
+		<posy>108</posy>
+		<width>580</width>
+		<height>407</height>
+		<texture>background-settings.png</texture>
+		<include>color-preset-theme</include>
+		<visible>!Skin.HasSetting(menu-panel) + Skin.HasTheme(X)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>65</posx>
+		<posy>108</posy>
+		<width>590</width>
+		<height>407</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<include>color-animation-theme</include>
+		<visible>!Skin.HasSetting(menu-panel)</visible>
+		<visible>!Skin.HasSetting(menu-animation) + Skin.HasTheme(X)</visible>
+	</control>
+
+	<control type="image">
+		<description>Background Panel Overlayer</description>
+		<posx>50</posx>
+		<posy>108</posy>
+		<width>600</width>
+		<height>407</height>
+		<texture>keyboard-numeric-overlay.png</texture>
+		<include>menu-overlay</include>
+	</control>
+
+	<control type="image">
+		<description>Background Overlay</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>407</height>
+		<texture>background-filemanager.png</texture>
+	</control>
+
+	<control type="fadelabel" id="101">
+		<description>Current Directory Text Label Left</description>
+		<align>left</align>
+		<posx>90</posx>
+		<posy>108</posy>
+		<width>270</width>
+		<font>font13</font>
+	</control>
+
+	<control type="fadelabel" id="102">
+		<description>Current Directory Text Label Right</description>
+		<align>left</align>
+		<posx>380</posx>
+		<posy>108</posy>
+		<width>270</width>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="12">
+		<description>Number of Files in Left List Text Label</description>
+		<posx>90</posx>
+		<posy>492</posy>
+		<label>-</label>
+		<font>font13</font>
+		<visible effect="fade" time="100" start="hidden">Window.IsActive(3)</visible>
+	</control>
+
+	<control type="label" id="13">
+		<description>Number of Files in Right List Text Label</description>
+		<posx>380</posx>
+		<posy>492</posy>
+		<label>-</label>
+		<font>font13</font>
+		<visible effect="fade" time="200" start="hidden">Window.IsActive(3)</visible>
+	</control>
+
+	<control type="list" id="20">
+		<viewtype label="535">list</viewtype>
+		<posx>80</posx>
+		<posy>140</posy>
+		<width>283</width>
+		<height>340</height>
+		<onleft>21</onleft>
+		<onright>21</onright>
+		<onup>20</onup>
+		<ondown>20</ondown>
+		<visible effect="fade" time="100" start="hidden">Window.IsActive(3)</visible>
+		<itemlayout height="29">
+			<control type="image">
+				<posx>5</posx>
+				<posy>2</posy>
+				<width>22</width>
+				<height>22</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>FFcbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>500</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="29">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>283</width>
+				<height>26</height>
+				<texture>input-focus.png</texture>
+				<visible>Control.HasFocus(20)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-3</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+				<visible>Control.HasFocus(20)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>283</width>
+				<height>26</height>
+				<texture>-</texture>
+				<visible>!Control.HasFocus(20)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>2</posy>
+				<width>22</width>
+				<height>22</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+				<visible>!Control.HasFocus(20)</visible>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font14</font>
+				<textcolor>FFffffff</textcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+				<visible>Control.HasFocus(20)</visible>
+			</control>
+			<control type="label">
+				<posx>500</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font14</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label2</info>
+				<visible>Control.HasFocus(20)</visible>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>FFffffff</textcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+				<visible>!Control.HasFocus(20)</visible>
+			</control>
+			<control type="label">
+				<posx>500</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label2</info>
+				<visible>!Control.HasFocus(20)</visible>
+			</control>
+ 		</focusedlayout>
+	</control>
+
+	<control type="list" id="21">
+		<viewtype label="535">list</viewtype>
+		<posx>367</posx>
+		<posy>140</posy>
+		<width>283</width>
+		<height>340</height>
+		<onleft>20</onleft>
+		<onright>20</onright>
+		<onup>21</onup>
+		<ondown>21</ondown>
+		<visible effect="fade" time="100" start="hidden">Window.IsActive(3)</visible>
+		<itemlayout height="29">
+			<control type="image">
+				<posx>5</posx>
+				<posy>2</posy>
+				<width>22</width>
+				<height>22</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>FFcbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>500</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="29">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>283</width>
+				<height>26</height>
+				<texture>input-focus.png</texture>
+				<visible>Control.HasFocus(21)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-3</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+				<visible>Control.HasFocus(21)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>283</width>
+				<height>26</height>
+				<texture>-</texture>
+				<visible>!Control.HasFocus(21)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>2</posy>
+				<width>22</width>
+				<height>22</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+				<visible>!Control.HasFocus(21)</visible>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font14</font>
+				<textcolor>FFffffff</textcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+				<visible>Control.HasFocus(21)</visible>
+			</control>
+			<control type="label">
+				<posx>500</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font14</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+				<visible>Control.HasFocus(21)</visible>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>FFffffff</textcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+				<visible>!Control.HasFocus(21)</visible>
+			</control>
+			<control type="label">
+				<posx>500</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+				<visible>!Control.HasFocus(21)</visible>
+			</control>
+ 		</focusedlayout>
+	</control>
+
+	<include>16x9slider</include>
+
+	<control>
+		<description>Description label</description>
+		<label>7</label>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

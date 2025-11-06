@@ -1,0 +1,52 @@
+<window id="112">
+	<defaultcontrol>402</defaultcontrol>
+	<include>dialog-effect</include>
+	<coordinates>
+	<system>1</system>
+	<origin x="60" y="25">true</origin>
+	</coordinates>
+	<controls>
+
+	<control type="image" id="1">
+		<description>Popup Music Scan Dialog Background</description>
+		<posx>0</posx>
+		<posy>-20</posy>
+		<width>400</width>
+		<height>140</height>
+		<texture>scan-panel-bg.png</texture>
+	</control>
+
+	<control type="label" id="401">
+		<description>Caption Label</description>
+		<posx>106</posx>
+		<posy>17</posy>
+		<font>font12</font>
+		<align>center</align>
+		<width>200</width>
+		<height>20</height>
+	</control>
+
+	<control type="label" id="402">
+		<description>Current Directory Label</description>
+		<posx>60</posx>
+		<posy>45</posy>
+		<haspath>no</haspath>
+		<font>font10</font>
+		<onleft>402</onleft>
+		<onright>402</onright>
+		<onup>402</onup>
+		<ondown>402</ondown>
+	</control>
+	
+	<control type="progress" id="403">
+		<description>progress control</description>
+		<posx>60</posx>
+		<posy>70</posy>
+		<width>280</width>
+		<height>4</height>
+		<texturebg>progress_back.png</texturebg>
+		<overlaytexture>-</overlaytexture>
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- XBMC Skin Manager english.xml : English language file -->
+
+<strings>
+    <!-- Global strings -->
+    <string id="0">English</string>
+    <string id="1">XBMC Skin Manager v%s</string>
+    <string id="2">B</string>
+    <string id="3">%m/%d/%Y %I:%M %p</string>
+    
+    <!-- Init strings -->
+    <string id="1000">Starting...</string>
+    <string id="1001">Starting in progress...</string>
+    <string id="1002">Testing Internet connection...</string>
+    <string id="1003">Upgrading XML file...</string>
+    <string id="1004">Contacting SVN server...</string>
+    <string id="1005">Starting ended..</string>
+    
+    <!-- GUI strings -->
+    <string id="2000">Skins</string>
+    <string id="2001">Select the skins on which you want to work</string>
+    <string id="2002">Configuration</string>
+    <string id="2003">Program and xbox related options</string>
+    <string id="2004">Skins customizations</string>
+    <string id="2005">Special options for some skins</string>
+    <string id="2006">Operations</string>
+    <string id="2007">Start and watch operations</string>
+    <string id="2008">SVN Skins</string>
+    <string id="2009">HTTP Skins</string>
+    <string id="2010">Skin name</string>
+    <string id="2011">Revision</string>
+    <string id="2012">Version</string>
+    <string id="2013">Changelog</string>
+    <string id="2014">Display changes since your last update</string>
+    <string id="2015">Informations</string>
+    <string id="2016">Display informations about this skin (screenshot, changelog...)</string>
+    <string id="2017">Xbox configuration</string>
+    <string id="2018">Address:</string>
+    <string id="2019">User:</string>
+    <string id="2020">Password:</string>
+    <string id="2021">XBMC path:</string>
+    <string id="2022">Tasks</string>
+    <string id="2023">Download/Update</string>
+    <string id="2024">Build/Extract</string>
+    <string id="2025">Install</string>
+    <string id="2026">Clear temporary folders</string>
+    <string id="2027">Language:</string>
+    <string id="2028">Start</string>
+    <string id="2029">Reset skin settings</string>
+    <string id="2030">Current task : %s %s</string>
+    <string id="2031">waiting...</string>
+    <string id="2032">testing FTP connection</string>
+    <string id="2033">downloading</string>
+    <string id="2034">updating</string>
+    <string id="2035">building</string>
+    <string id="2036">extracting</string>
+    <string id="2037">installing</string>
+    <string id="2038">cleaning up</string>
+    <string id="2039">Misc options</string>
+    <string id="2041">Restore defaults</string>
+    <string id="2042">Keep XPR files</string>
+    <string id="2043">Definitely delete</string>
+    <string id="2044">This feature can reset current skin for back to PM3.
+It must be used if you tried to use
+a skin incompatible with your XBMC version.</string>
+    <string id="2045">Do it !</string>
+    <string id="2046">Local mode</string>
+    <string id="2047">Check this if you use a local XBMC installation.
+Fill only local XBMC path, others parameters will be ignored.</string>
+    <string id="2048">unknown</string>
+    
+    <!-- Common customization strings -->
+    <string id="3000">Install Splash Screen</string>
+    <string id="3001">Install Python scripts</string>
+    <string id="3002">Install web interface</string>
+    <string id="3003">Build type : </string>
+    <string id="3004">Textures definition : </string>
+    
+    <!-- Boxes strings -->
+    <string id="4000">No skin checked</string>
+    <string id="4001">Please check at least one skin.</string>
+    <string id="4002">XBMC is current Dashboard</string>
+    <string id="4003">It appears that XBMC is your current dashboard.
+It is very disadvised to update skins under these circumstances.
+Especially if you try to update your current skin.
+Do you want to continue anyway ?</string>
+    <string id="4004">Update is available</string>
+    <string id="4005">XBMC Skin Manager v %s is available.
+There is the release Notes </string>
+    <string id="4006">Go to website</string>
+    <string id="4007">by %s</string>
+    <string id="4008">Last version : %s</string>
+    <string id="4009">Local version : %s</string>
+    <string id="4010">File size : %s</string>
+    <string id="4011">Misc informations :</string>
+    <string id="4012">View screenshot</string>
+    <string id="4013">Internet links :</string>
+    <string id="4014">Close</string>
+    <string id="4015">Changelog %s</string>
+    <string id="4016">From revision %s to revision %s</string>
+    <string id="4017">Date</string>
+    <string id="4018">Author</string>
+    <string id="4019">Notes</string>
+    <string id="4020">Downloading...</string>
+    <string id="4021">Remote file checking</string>
+    <string id="4022">Download in progress : %s/%s</string>
+    <string id="4023">Remote file unavailable</string>
+    <string id="4024">Download error</string>
+    <string id="4025">Screenshot : %s</string>
+    <string id="4026">Are you sure ?</string>
+    <string id="4027">Do you really want to reset settings ?</string>
+    <string id="4028">Reset finished</string>
+    <string id="4029">Reset successfully finished.
+Restart XBMC for changes takes effect.</string>
+    <string id="4030">Unable to locate XBMC</string>
+    <string id="4031">XBMC has not been located on provided folder.
+Are you sure that %s is correct ?</string>
+    <string id="4032">Restart required</string>
+    <string id="4033">Please restart XBMC Skin Manager 
+for changes takes effect.</string>
+    <string id="4034">Bulid script missed</string>
+    <string id="4035">No build script has been found for %s.
+Would you want to use skin as is (with plain textures files) ?
+(Result not guarantied !)</string>
+    <string id="4036">In progress...</string>
+    <string id="4037">Gathering changelog...</string>
+    
+    <!-- Log Strings -->
+    <string id="5000">r|Errors occurred:</string>
+    <string id="5001">ri|Unable to connect to Internet</string>
+    <string id="5002">ri|Unable to reach SVN server</string>
+    <string id="5003">ri|Unable to read XML file</string>
+    <string id="5005">Connecting...</string>
+    <string id="5006">gi|FTP connection succeeded</string>
+    <string id="5007">ri|FTP connection failed</string>
+    <string id="5008">gi|XBMC installation located</string>
+    <string id="5010">Downloading skins...</string>
+    <string id="5011">gi|%s downloading finished (%s/%s)</string>
+    <string id="5012">gi|No update for %s (%s/%s)</string>
+    <string id="5013">ri|Unable to download SVN skins</string>
+    <string id="5014">ri|Failed to download %s</string>
+    <string id="5015">Building Skins...</string>
+    <string id="5016">gi|%s building finished (%s/%s)</string>
+    <string id="5017">ri|Unable to build %s (build script missed)</string>
+    <string id="5018">ri|Unable to extract skin %s (missed or corrupt archive)</string>
+    <string id="5019">Installing skins...</string>
+    <string id="5020">gi|%s installed (%s/%s)</string>
+    <string id="5021">ri|Unable to install %s (build folder missed)</string>
+    <string id="5022">ri|%s installation failed</string>
+    <string id="5023">ri|Unable to create %s folder</string>
+    <string id="5024">ri|Unable to install %s</string>
+    <string id="5025">ri|Unable to download %s</string>
+    <string id="5026">Deleting temporary folders...</string>
+    <string id="5027">gi|%s's build folder deleted (%s/%s)</string>
+    <string id="5028">ri|Unable to delete %s's build folder (folder missed)</string>
+    <string id="5029">ri|Unable to delete %s's build folder (unknown error)</string>
+    <string id="5030">c|---FINISHED---</string>
+    <string id="5031">Canceled by user</string>
+    <string id="5032">ri|The skin %s is not processed (%s/%s)</string>
+    <string id="5033">ri|Unable to download HTTP skins</string>
+    <string id="5034">gi|%s deleted (%s/%s)</string>
+    <string id="5035">ri|Unable to delete %s (folder missed)</string>
+    <string id="5036">ri|Unable to delete %s (unknown error)</string>
+    <string id="5037">Resetting settings...</string>
+    <string id="5038">r|Error while resetting settings</string>
+    <string id="5039">ri|XBMC path must be absolute (ex : "/E/XBMC")</string>
+    <string id="5040">ri|Unable to create tempoary folder : %s already exists !</string>
+    <string id="5041">ri|Unable to locate UserData folder.</string>
+    <string id="5042">ri|Unable to build skins (%s is not a supported platform)</string>
+</strings>

@@ -1,0 +1,84 @@
+﻿<window id="2">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>ShutdownMenu</previouswindow>
+	<controls>
+		<include>background</include>
+		<include>#files</include>
+		<include>Fake-Overlay</include>
+		<include>ListView</include>
+		<include>List2</include>
+		<include>IconView</include>
+		<include>BigIconView</include>
+		<include>WrapView</include>
+		<include>PageControl</include>
+		<control type="group" id="9001">
+			<include>Slide-In</include>
+			<control type="group" id="9000">
+				<posx>11</posx>
+				<posy>0</posy>
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posy>5</posy>
+					<label>100</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>3</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>50</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>4</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<posx>177</posx>
+					<posy>65</posy>
+					<label>-</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+				</control>
+				<control type="button" id="6">
+					<description>SlideShow button</description>
+					<posy>95</posy>
+					<label>108</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>7</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="7">
+					<description>recursive slideshow</description>
+					<posy>140</posy>
+					<label>361</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>9</ondown>
+					<include>Media-Button</include>
+				</control>
+				<control type="button" id="9">
+					<description>Randomize button</description>
+					<posy>185</posy>
+					<label>13319</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>7</onup>
+					<ondown>2</ondown>
+					<include>Media-Button</include>
+				</control>
+				<include>Media-Info</include>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,44 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>400</posy>
+		<origin x="0" y="350">Window.IsVisible(VideoOSD)</origin>
+	</coordinates>
+	<controls>
+		<control type="image" id="0">
+			<description>popup volume dialog background</description>
+			<posx>20</posx>
+			<posy>0</posy>
+			<width>723</width>
+			<height>67</height>
+			<texture>voulume-panel-bg.png</texture>
+		</control>
+		<control type="progress" id="1">
+			<description>progress control</description>
+			<posx>232</posx>
+			<posy>17</posy>
+			<width>256</width>
+			<height>20</height>
+			<info>Player.Volume</info>
+			<texturebg>volume_background.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>volume_middle.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>volume_overlay.png</overlaytexture>
+		</control>
+		<control type="label" id="0">
+			<description>volume label</description>
+			<posx>260</posx>
+			<posy>60</posy>
+			<width>200</width>
+			<font>font16</font>
+			<align>center</align>
+			<info>Player.Volume</info>
+			<width>70</width>
+			<height>16</height>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,502 @@
+<window id="2600">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="image">
+			<description>Catagory Image Upper Right</description>
+			<include>Catagory_TitleImage_Commons</include>
+			<texture>weather-small.png</texture>
+		</control>
+		<control type="label">
+			<description>Weather text label</description>
+			<align>right</align>
+			<posx>660</posx>
+			<posy>85</posy>
+			<label>8</label>
+			<font>font14</font>
+			<textcolor>ffb2d4f5</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+
+		<control type="button" id="2">
+			<description>refresh button</description>
+			<posx>60</posx>
+			<posy>60</posy>
+			<width>135</width>
+			<height>35</height>
+			<label>184</label>
+			<font>font13</font>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="4">
+			<description>Settings button</description>
+			<posx>60</posx>
+			<posy>97</posy>
+			<width>135</width>
+			<height>35</height>
+			<label>5</label>
+			<font>font13</font>
+			<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="image">
+			<description>logo image</description>
+			<posx>80</posx>
+			<posy>140</posy>
+			<width>95</width>
+			<height>170</height>
+			<aspectratio>keep</aspectratio>
+			<texture>twclogo_64px.png</texture>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="spincontrol" id="3">
+			<description>weather location select</description>
+			<align>right</align>
+			<width>15</width>
+			<height>15</height>
+			<posx>217</posx>
+			<posy>60</posy>
+			<font>-</font>
+			<reverse>yes</reverse>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<textoffsety>-12</textoffsety>
+			<disabledcolor>ddffffff</disabledcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="0">
+			<description>weather location select label</description>
+			<align>left</align>
+			<width>350</width>
+			<height>15</height>
+			<posx>256</posx>
+			<posy>60</posy>
+			<font>font14</font>
+			<reverse>yes</reverse>
+			<disabledcolor>ffffffff</disabledcolor>
+			<textoffsetx>0</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<aligny>center</aligny>
+			<info>Weather.Location</info>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="11">
+			<description>update time label</description>
+			<posx>210</posx>
+			<posy>93</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="image">
+			<description>Main Background image</description>
+			<posx>200</posx>
+			<posy>127</posy>
+			<width>475</width>
+			<height>180</height>
+			<texture>blue_rectangle_weather.png</texture>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="223">
+			<description>current temp static label</description>
+			<posx>210</posx>
+			<posy>140</posy>
+			<label>temp</label>
+			<font>font14</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="224">
+			<description>current feels like static label</description>
+			<posx>210</posx>
+			<posy>165</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="225">
+			<description>current uv index static label</description>
+			<posx>210</posx>
+			<posy>240</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="226">
+			<description>current wind static label</description>
+			<posx>210</posx>
+			<posy>265</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="227">
+			<description>current dew static label</description>
+			<posx>210</posx>
+			<posy>190</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="228">
+			<description>current humidity static label</description>
+			<posx>210</posx>
+			<posy>215</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="image" id="21">
+			<description>current weather icon</description>
+			<posx>510</posx>
+			<posy>140</posy>
+			<height>150</height>
+			<width>128</width>
+			<texture>-</texture>
+			<aspectratio>keep</aspectratio>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="22">
+			<description>current condition label</description>
+			<posx>425</posx>
+			<posy>140</posy>
+			<width>120</width>
+			<wrapmultiline>true</wrapmultiline>
+			<label>-</label>
+			<font>font10</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="23">
+			<description>current temp label</description>
+			<posx>335</posx>
+			<posy>140</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="24">
+			<description>current feels like label</description>
+			<posx>335</posx>
+			<posy>165</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="25">
+			<description>current uv index label</description>
+			<posx>335</posx>
+			<posy>240</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="26">
+			<description>current wind label</description>
+			<posx>335</posx>
+			<posy>265</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="27">
+			<description>current dew label</description>
+			<posx>335</posx>
+			<posy>190</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="label" id="28">
+			<description>current humidity label</description>
+			<posx>335</posx>
+			<posy>215</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Fade_Window_OpenClose_Animation</include>
+		</control>
+		<control type="group">
+			<description>Forcast Day 0</description>
+			<posx>200</posx>
+			<posy>315</posy>
+			<include>Fade_Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>Forcast Background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>115</width>
+				<height>310</height>
+				<texture>blue_rectangle_weather.png</texture>
+			</control>
+			<control type="label" id="31">
+				<description>day label</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="32">
+				<description>day hi label</description>
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="33">
+				<description>day low label</description>
+				<posx>5</posx>
+				<posy>55</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="image" id="35">
+				<description>day icon</description>
+				<posx>25</posx>
+				<posy>70</posy>
+				<height>100</height>
+				<width>64</width>
+				<aspectratio>keep</aspectratio>
+				<texture>-</texture>
+			</control>
+			<control type="label" id="34">
+				<description>day general weather label</description>
+				<posx>5</posx>
+				<posy>175</posy>
+				<width>100</width>
+				<width>105</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<align>center</align>
+				<font>font10</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Forcast Day 1</description>
+			<posx>320</posx>
+			<posy>315</posy>
+			<include>Fade_Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>Forcast Background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>115</width>
+				<height>310</height>
+				<texture>blue_rectangle_weather.png</texture>
+			</control>
+			<control type="label" id="41">
+				<description>day label</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="42">
+				<description>day hi label</description>
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="43">
+				<description>day low label</description>
+				<posx>5</posx>
+				<posy>55</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="image" id="45">
+				<description>day icon</description>
+				<posx>25</posx>
+				<posy>70</posy>
+				<height>100</height>
+				<width>64</width>
+				<aspectratio>keep</aspectratio>
+				<texture>-</texture>
+			</control>
+			<control type="label" id="44">
+				<description>day general weather label</description>
+				<posx>5</posx>
+				<posy>175</posy>
+				<width>100</width>
+				<width>105</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<align>center</align>
+				<font>font10</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Forcast Day 2</description>
+			<posx>440</posx>
+			<posy>315</posy>
+			<include>Fade_Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>Forcast Background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>115</width>
+				<height>310</height>
+				<texture>blue_rectangle_weather.png</texture>
+			</control>
+			<control type="label" id="51">
+				<description>day label</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="52">
+				<description>day hi label</description>
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="53">
+				<description>day low label</description>
+				<posx>5</posx>
+				<posy>55</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="image" id="55">
+				<description>day icon</description>
+				<posx>25</posx>
+				<posy>70</posy>
+				<height>100</height>
+				<width>64</width>
+				<aspectratio>keep</aspectratio>
+				<texture>-</texture>
+			</control>
+			<control type="label" id="54">
+				<description>day general weather label</description>
+				<posx>5</posx>
+				<posy>175</posy>
+				<width>100</width>
+				<width>105</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<align>center</align>
+				<font>font10</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>Forcast Day 3</description>
+			<posx>560</posx>
+			<posy>315</posy>
+			<include>Fade_Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>Forcast Background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>115</width>
+				<height>310</height>
+				<texture>blue_rectangle_weather.png</texture>
+			</control>
+			<control type="label" id="61">
+				<description>day label</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font13</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="62">
+				<description>day hi label</description>
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="label" id="63">
+				<description>day low label</description>
+				<posx>5</posx>
+				<posy>55</posy>
+				<width>105</width>
+				<label>-</label>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control type="image" id="65">
+				<description>day icon</description>
+				<posx>25</posx>
+				<posy>70</posy>
+				<height>100</height>
+				<width>64</width>
+				<aspectratio>keep</aspectratio>
+				<texture>-</texture>
+			</control>
+			<control type="label" id="64">
+				<description>day general weather label</description>
+				<posx>5</posx>
+				<posy>175</posy>
+				<width>100</width>
+				<width>105</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<align>center</align>
+				<font>font10</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

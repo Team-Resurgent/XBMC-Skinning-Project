@@ -1,0 +1,864 @@
+<window id="1057">
+
+  <defaultcontrol always="true">12</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+<controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Settings text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>13200</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+<control type="group" id="9000">
+
+      <control type="button" id="4">
+        <description>profil</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>120</posy>
+        <label>13200</label>
+        <onclick>XBMC.ActivateWindow(34)</onclick>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>1512</onup>
+        <ondown>5</ondown>
+      </control>
+
+      <control type="button" id="5">
+        <description>profil settings</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>157</posy>
+        <label>5</label>
+      <texturenofocus>button-nofocus_green.png</texturenofocus>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>4</onup>
+        <ondown>6</ondown>
+      </control>
+
+      <control type="button" id="6">
+        <description>Python Scripts</description>
+      <include>button</include>
+        <onclick>XBMC.ActivateWindow(20)</onclick>
+        <posx>60</posx>
+        <posy>194</posy>
+        <label>247</label>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>5</onup>
+        <ondown>11</ondown>
+      </control>
+
+      <control type="button" id="11">
+        <description>Autostart</description>
+      <include>button</include>
+        <onclick>XBMC.ActivateWindow(1059)</onclick>
+        <posx>60</posx>
+        <posy>230</posy>
+        <include>19000</include>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>6</onup>
+        <ondown>9</ondown>
+      </control>
+
+      <control type="button" id="9">
+        <description>Wecker</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>270</posy>
+        <label>13208</label>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>30</textoffsetx>
+      <font>font101</font>
+      <height>27</height>
+        <onclick>Skin.ToggleSetting(wecker)</onclick>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>11</onup>
+        <ondown>8</ondown>
+      </control>
+
+      <control type="button" id="8">
+        <description>Animation</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>302</posy>
+        <include>19001</include>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>30</textoffsetx>
+      <font>font101</font>
+      <height>27</height>
+        <onclick>Skin.ToggleSetting(Animation)</onclick>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>9</onup>
+        <ondown>29</ondown>
+      </control>
+
+      <control type="button" id="29">
+        <description>scrollbar</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>334</posy>
+        <label>21383</label>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>30</textoffsetx>
+      <font>font101</font>
+      <height>27</height>
+        <onclick>Skin.ToggleSetting(UseScrollbars)</onclick>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>8</onup>
+        <ondown>7</ondown>
+      </control>
+
+      <control type="button" id="7">
+        <description>Reset</description>
+      <include>button</include>
+        <onclick>Skin.ResetSettings</onclick>
+        <posx>60</posx>
+        <posy>370</posy>
+        <include>19002</include>
+        <onleft>12</onleft>
+        <onright>12</onright>
+        <onup>29</onup>
+        <ondown>1512</ondown>
+      </control>
+
+      <control type="button" id="1512">
+		<description>Update</description>
+      <include>button</include>
+		<visible>System.HasNetwork+Skin.HasSetting(ftpupdate)</visible>
+		<posx>80</posx>
+		<posy>420</posy>
+    		<width>60</width>
+    		<height>80</height>
+		<onclick>XBMC.RunScript(q:\scripts\skinupdate.py)</onclick>
+		<label>-</label>
+    		<texturefocus>ftp_update.png</texturefocus>
+    		<texturenofocus>ftp_update_off.png</texturenofocus>
+		<onleft>12</onleft>
+		<onright>12</onright>
+		<onup>7</onup>
+		<ondown>4</ondown>
+      </control>
+
+
+</control>
+
+          <control type="image" id="1">
+      <include>button</include>
+	    <visible>true</visible>
+            <posx>65</posx>
+            <posy>277</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>button</include>
+	    <visible>Skin.HasSetting(wecker)</visible>
+            <posx>65</posx>
+            <posy>277</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>button</include>
+	    <visible>true</visible>
+            <posx>65</posx>
+            <posy>309</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>button</include>
+	    <visible>!Skin.HasSetting(Animation)</visible>
+            <posx>65</posx>
+            <posy>309</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>button</include>
+	    <visible>true</visible>
+            <posx>65</posx>
+            <posy>340</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>button</include>
+	    <visible>!Skin.HasSetting(UseScrollbars)</visible>
+            <posx>65</posx>
+            <posy>340</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+
+    <control type="button" id="12">
+      <description>button user profil</description>
+      <visible>true</visible>
+      <include>control</include>
+      <posx>240</posx>
+      <posy>120</posy>
+     <font>font101</font>
+      <include>19003</include>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.ToggleSetting(HomeViewToggle)</onclick>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>26</onup>
+      <ondown>13</ondown>
+    </control>
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>true</visible>
+            <posx>245</posx>
+            <posy>130</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>Skin.HasSetting(HomeViewToggle)</visible>
+            <posx>245</posx>
+            <posy>130</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+     </control>
+
+
+     <control type="button" id="13">
+      <description>user label</description>
+      <include>control</include>
+      <visible>false</visible>
+      <posx>240</posx>
+      <posy>137</posy>
+      <label>1014</label>
+      <height>20</height>
+      <width>130</width>
+      <align>left</align>
+      <aligny>center</aligny>
+      <font>font10</font>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Skin.SetString(profil_name)</onclick>
+      <info>Skin.String(profil_name)</info>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>12</onup>
+      <ondown>10</ondown>
+    </control>
+
+     <control type="button" id="10">
+      <description>user image</description>
+      <include>control</include>
+      <visible>false</visible>
+      <aspectratio>stretch</aspectratio>
+        <posx>240</posx>
+        <posy>195</posy>
+      <width>55</width>
+      <height>55</height>
+      <include>19004</include>
+      <font>font10</font>
+      <aligny>top</aligny>
+      <textoffsety>60</textoffsety>
+      <onclick>Skin.SetImage(profil_logo)</onclick>
+      <info>Skin.String(profil_logo)</info>
+      <texturefocus>user.png</texturefocus>
+      <texturenofocus>user_off.png</texturenofocus>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>13</onup>
+      <ondown>21</ondown>
+    </control>
+
+
+
+     <control type="image" id="1">
+      <description>profil image</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+        <posx>430</posx>
+        <posy>130</posy>
+      <width>200</width>
+      <height>100</height>
+      <texture>profil.png</texture>
+    </control>
+
+     <control type="label" id="1">
+      <description>user label</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>440</posx>
+      <posy>137</posy>
+      <include>19005</include>
+      <width>170</width>
+      <align>left</align>
+      <font>font101</font>
+      <info>system.profilename</info>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <aspectratio>stretch</aspectratio>
+        <posx>440</posx>
+        <posy>165</posy>
+      <width>55</width>
+      <height>55</height>
+      <info>system.profilethumb</info>
+      <texture>user.png</texture>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image netzwerk</description>
+      <include>control</include>
+      <posx>500</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_netzwerk.png</texture>
+      <visible>System.HasNetwork+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image netzwerk</description>
+      <include>control</include>
+      <posx>500</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_netzwerk_off.png</texture>
+      <visible>!System.HasNetwork+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image hilfe</description>
+      <include>control</include>
+      <posx>525</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_hilfe.png</texture>
+      <visible>[Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)]+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image hilfe</description>
+      <include>control</include>
+      <posx>525</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_hilfe_off.png</texture>
+      <visible>Skin.HasSetting(HomeViewToggle)+![Skin.HasTheme(Hilfe)|Skin.HasTheme(Help)]</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image kai</description>
+      <include>control</include>
+      <posx>550</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_kai.png</texture>
+      <visible>System.KaiConnected+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image kai</description>
+      <include>control</include>
+      <posx>550</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_kai_off.png</texture>
+      <visible>!System.KaiConnected+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image dvd</description>
+      <include>control</include>
+      <posx>575</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_dvd.png</texture>
+      <visible>System.Hasmediadvd+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image dvd</description>
+      <include>control</include>
+      <posx>575</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_dvd_off.png</texture>
+      <visible>!System.Hasmediadvd+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image xbox</description>
+      <include>control</include>
+      <posx>600</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_xbox.png</texture>
+      <visible>System.AutoDetection+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>user image xbox</description>
+      <include>control</include>
+      <posx>600</posx>
+      <posy>163</posy>
+      <label>-</label>
+      <width>25</width>
+      <height>20</height>
+      <texture>profil_xbox_off.png</texture>
+      <visible>!System.AutoDetection+Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+
+     <control type="fadelabel" id="1">
+      <description>xbmc</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>505</posx>
+      <posy>185</posy>
+      <label>XBMC:</label>
+      <width>100</width>
+      <align>left</align>
+      <font>font101</font>
+    </control>
+
+     <control type="fadelabel" id="1">
+      <description>user</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>550</posx>
+      <posy>185</posy>
+      <label>-</label>
+      <width>76</width>
+      <align>left</align>
+      <font>font101</font>
+      <info>System.BuildVersion</info>
+      <info>System.BuildDate</info>
+    </control>
+
+     <control type="label" id="1">
+      <description>user ip</description>
+      <include>control</include>
+      <visible>Skin.HasSetting(HomeViewToggle)</visible>
+      <posx>505</posx>
+      <posy>205</posy>
+      <label>$LOCALIZE[150]: $INFO[Network.IPAddress]</label>
+      <width>125</width>
+      <align>left</align>
+      <font>font101</font>
+    </control>
+
+
+
+    <control type="button" id="21">
+      <description>Datum Zeit</description>
+      <visible>true</visible>
+      <include>control</include>
+      <height>27</height>
+      <width>155</width>
+      <posx>240</posx>
+      <posy>280</posy>
+     <font>font101</font>
+      <label>14063</label>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.ToggleSetting(zeit)</onclick>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>10</onup>
+      <ondown>22</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>true</visible>
+            <posx>245</posx>
+            <posy>286</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>!Skin.HasSetting(zeit)</visible>
+            <posx>245</posx>
+            <posy>286</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+    <control type="button" id="22">
+      <description>Wetter</description>
+      <visible>true</visible>
+      <include>control</include>
+      <height>27</height>
+      <width>155</width>
+      <posx>240</posx>
+      <posy>315</posy>
+     <font>font101</font>
+      <label>8</label>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.ToggleSetting(wetter)</onclick>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>21</onup>
+      <ondown>23</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>true</visible>
+            <posx>245</posx>
+            <posy>320</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>!Skin.HasSetting(wetter)</visible>
+            <posx>245</posx>
+            <posy>320</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+    <control type="button" id="23">
+      <description>Auflösung anzeigen</description>
+      <visible>true</visible>
+      <include>control</include>
+      <height>27</height>
+      <width>155</width>
+      <posx>240</posx>
+      <posy>350</posy>
+     <font>font101</font>
+      <include>19006</include>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.ToggleSetting(resolution)</onclick>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>22</onup>
+      <ondown>24</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>true</visible>
+            <posx>245</posx>
+            <posy>356</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>Skin.HasSetting(resolution)</visible>
+            <posx>245</posx>
+            <posy>356</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+    <control type="button" id="24">
+      <description>FTP Update aktivieren</description>
+      <visible>true</visible>
+      <include>control</include>
+      <height>27</height>
+      <width>155</width>
+      <posx>240</posx>
+      <posy>385</posy>
+     <font>font101</font>
+      <include>19007</include>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.ToggleSetting(ftpupdate)</onclick>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>23</onup>
+      <ondown>25</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>true</visible>
+            <posx>245</posx>
+            <posy>391</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>Skin.HasSetting(ftpupdate)</visible>
+            <posx>245</posx>
+            <posy>391</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+    <control type="button" id="25">
+      <description>XBMC LOGO</description>
+      <visible>true</visible>
+      <include>control</include>
+      <height>27</height>
+      <width>155</width>
+      <posx>240</posx>
+      <posy>420</posy>
+     <font>font101</font>
+      <include>19008</include>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.ToggleSetting(logo)</onclick>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>24</onup>
+      <ondown>26</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>true</visible>
+            <posx>245</posx>
+            <posy>426</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>!Skin.HasSetting(logo)</visible>
+            <posx>245</posx>
+            <posy>426</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+    <control type="button" id="26">
+      <description>Hintergrund</description>
+      <visible>true</visible>
+      <include>control</include>
+      <height>27</height>
+      <width>155</width>
+      <posx>240</posx>
+      <posy>455</posy>
+     <font>font101</font>
+      <include>19009</include>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.ToggleSetting(hintergrund)</onclick>
+      <onleft>5</onleft>
+      <onright>27</onright>
+      <onup>25</onup>
+      <ondown>12</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>true</visible>
+            <posx>245</posx>
+            <posy>461</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>settings-check-boxNF.png</texture>
+          </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+	    <visible>Skin.HasSetting(hintergrund)</visible>
+            <posx>245</posx>
+            <posy>461</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>radiobutton-focus.png</texture>
+          </control>
+
+    <control type="button" id="27">
+      <description>Hintergrund</description>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <include>control</include>
+      <height>27</height>
+      <width>155</width>
+      <posx>400</posx>
+      <posy>455</posy>
+     <font>font101</font>
+      <include>19010</include>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.SetImage(hintergrund)</onclick>
+      <onleft>26</onleft>
+      <onright>28</onright>
+      <onup>25</onup>
+      <ondown>12</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+            <posx>403</posx>
+            <posy>456</posy>
+            <width>20</width>
+            <height>25</height>
+            <texture>settings-pictures-focus.png</texture>
+          </control>
+
+    <control type="button" id="28">
+      <description>Hintergrund zurücksetzen</description>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <include>control</include>
+      <height>28</height>
+      <width>155</width>
+      <posx>556</posx>
+      <posy>455</posy>
+     <font>font101</font>
+      <label>13403</label>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <textoffsetx>25</textoffsetx>
+      <onclick>Skin.Reset(hintergrund)</onclick>
+      <onleft>27</onleft>
+      <onright>26</onright>
+      <onup>27</onup>
+      <ondown>27</ondown>
+    </control>
+
+          <control type="image" id="1">
+      <include>control</include>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+	    <visible>true</visible>
+            <posx>561</posx>
+            <posy>456</posy>
+            <width>15</width>
+            <height>15</height>
+            <texture>abbruch.png</texture>
+          </control>
+
+
+          	<control type="image" id="1">
+	    		<visible>true</visible>
+      <include>control</include>
+            		<posx>243</posx>
+            		<posy>500</posy>
+            		<width>50</width>
+            		<height>45</height>
+            		<texture>achtung.png</texture>
+      <visible>Control.HasFocus(26)</visible>
+          	</control>
+
+    		<control type="label" id="1">
+      			<description>Achtung</description>
+      <include>control</include>
+            		<posx>300</posx>
+            		<posy>515</posy>
+      			<include>19011</include>
+      			<font>font101</font>
+      			<textcolor>FFFF0000</textcolor>
+      <visible>Control.HasFocus(26)</visible>
+    		</control>
+
+
+</controls>
+
+</window>

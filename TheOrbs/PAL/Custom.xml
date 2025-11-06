@@ -1,0 +1,263 @@
+﻿<window id="55">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="button" id="2">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padglobalkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>9</onleft>
+			<onright>3</onright>
+			<onup>22</onup>
+			<ondown>22</ondown>
+		</control>
+		<control type="button" id="3">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padvideokeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>2</onleft>
+			<onright>4</onright>
+			<onup>23</onup>
+			<ondown>23</ondown>
+		</control>
+		<control type="button" id="4">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padmusickeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>3</onleft>
+			<onright>5</onright>
+			<onup>24</onup>
+			<ondown>24</ondown>
+		</control>
+		<control type="button" id="5">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padfileskeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>4</onleft>
+			<onright>6</onright>
+			<onup>25</onup>
+			<ondown>25</ondown>
+		</control>
+		<control type="button" id="6">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padfullscreenkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>5</onleft>
+			<onright>7</onright>
+			<onup>26</onup>
+			<ondown>26</ondown>
+		</control>
+		<control type="button" id="7">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padosdkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>6</onleft>
+			<onright>8</onright>
+			<onup>27</onup>
+			<ondown>27</ondown>
+		</control>
+		<control type="button" id="8">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padpicskeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>7</onleft>
+			<onright>9</onright>
+			<onup>28</onup>
+			<ondown>28</ondown>
+		</control>
+		<control type="button" id="9">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>padvideocalkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>8</onleft>
+			<onright>2</onright>
+			<onup>29</onup>
+			<ondown>29</ondown>
+		</control>
+		<control type="button" id="22">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remoteglobalkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>29</onleft>
+			<onright>23</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+		</control>
+		<control type="button" id="23">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remotevideokeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>22</onleft>
+			<onright>24</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+		</control>
+		<control type="button" id="24">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remotemusickeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>23</onleft>
+			<onright>25</onright>
+			<onup>4</onup>
+			<ondown>4</ondown>
+		</control>
+		<control type="button" id="25">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remotefileskeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>24</onleft>
+			<onright>26</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		<control type="button" id="26">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remotefullscreenkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>25</onleft>
+			<onright>27</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+		</control>
+		<control type="button" id="27">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remoteosdkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>26</onleft>
+			<onright>28</onright>
+			<onup>7</onup>
+			<ondown>7</ondown>
+		</control>
+		<control type="button" id="28">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remotepicskeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>27</onleft>
+			<onright>29</onright>
+			<onup>8</onup>
+			<ondown>8</ondown>
+		</control>
+		<control type="button" id="29">
+			<description>pad button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texturefocus>remotevideocalkeys.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>font13</font>
+			<onleft>28</onleft>
+			<onright>22</onright>
+			<onup>9</onup>
+			<ondown>9</ondown>
+		</control>
+		<control type="label">
+			<description>section text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>45</posy>
+			<label>key mapping help</label>
+			<font>font34</font>
+			<textcolor>ff09313a</textcolor>
+		</control>
+	</controls>
+</window>

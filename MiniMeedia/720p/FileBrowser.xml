@@ -1,0 +1,179 @@
+<window id="126">
+  <defaultcontrol always="true">450</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <posx>630</posx>
+      <posy>0</posy>
+
+      <animation effect="slide" time="300" tween="circle" easing="out" start="900,-500" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="900,-500" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="out" start="0,0" end="900,-500">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="out" start="0,0" end="900,-500">Hidden</animation>
+
+      <control type="image">
+        <description>Dialog Background</description>
+        <posy>-10</posy>
+        <width>690</width>
+        <height>450</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posx>10</posx>
+        <posy>14</posy>
+
+        <control type="label" id="411">
+          <description>Heading</description>
+          <width>660</width>
+          <align>center</align>
+          <font>MediumTitleFont</font>
+        </control>
+
+        <control type="list" id="450">
+          <posy>44</posy>
+          <width>660</width>
+          <height>310</height>
+          <onup>450</onup>
+          <ondown>413</ondown>
+          <onleft>413</onleft>
+          <onright>413</onright>
+          <orientation>vertical</orientation>
+
+          <itemlayout height="30" width="660">
+            <control type="image">
+              <width>30</width>
+              <height>30</height>
+              <info>ListItem.Thumb</info>
+              <colordiffuse>66999999</colordiffuse>
+              <aspectratio aligny="center" align="center">keep</aspectratio>
+            </control>
+
+            <control type="label">
+              <posx>38</posx>
+              <width>622</width>
+              <textcolor>Unfocused</textcolor>
+              <info>ListItem.Label</info>
+            </control>
+          </itemlayout>
+
+          <focusedlayout height="30" width="660">
+            <control type="image">
+              <width>30</width>
+              <height>30</height>
+              <info>ListItem.Thumb</info>
+              <aspectratio aligny="center" align="center">keep</aspectratio>
+            </control>
+
+            <control type="label">
+              <posx>38</posx>
+              <width>622</width>
+              <scroll>true</scroll>
+              <textcolor>Focused</textcolor>
+              <info>ListItem.Label</info>
+            </control>
+          </focusedlayout>
+        </control>
+
+        <control type="panel" id="451">
+          <posy>44</posy>
+          <width>660</width>
+          <height>310</height>
+          <ondown>413</ondown>
+          <onleft>413</onleft>
+          <onright>413</onright>
+          <orientation>vertical</orientation>
+
+          <itemlayout height="150" width="220">
+            <control type="image">
+              <width>200</width>
+              <height>120</height>
+              <info>ListItem.Thumb</info>
+              <colordiffuse>66999999</colordiffuse>
+              <aspectratio align="left">keep</aspectratio>
+            </control>
+
+            <control type="label">
+              <posy>126</posy>
+              <width>220</width>
+              <height>24</height>
+              <align>left</align>
+              <textcolor>Unfocused</textcolor>
+              <info>ListItem.Label</info>
+            </control>
+          </itemlayout>
+
+          <focusedlayout height="150" width="220">
+            <control type="image">
+              <width>200</width>
+              <height>120</height>
+              <info>ListItem.Thumb</info>
+              <aspectratio align="left">keep</aspectratio>
+            </control>
+
+            <control type="label">
+              <posx>0</posx>
+              <posy>126</posy>
+              <width>200</width>
+              <align>left</align>
+              <textcolor>Focused</textcolor>
+              <info>ListItem.Label</info>
+            </control>
+          </focusedlayout>
+        </control>
+
+        <control type="label" id="412">
+          <description>Path</description>
+          <posy>354</posy>
+          <width>660</width>
+          <align>center</align>
+          <label>-</label>
+          <haspath>true</haspath>
+        </control>
+
+        <control type="grouplist">
+          <posx>105</posx>
+          <posy>384</posy>
+          <onup>450</onup>
+          <itemgap>10</itemgap>
+          <orientation>horizontal</orientation>
+          <animation effect="slide" start="0,0" end="-90,0" time="0" condition="Control.IsVisible(451)">Conditional</animation>
+
+          <control type="button" id="413">
+            <description>Ok Button</description>
+            <label>$LOCALIZE[186]</label>
+          </control>
+
+          <control type="button" id="414">
+            <description>Cancel Button</description>
+            <label>$LOCALIZE[222]</label>
+          </control>
+
+          <control type="button" id="415">
+            <description>Create Folder</description>
+            <label>$LOCALIZE[119]</label>
+          </control>
+
+    			<control type="radiobutton" id="416">
+    				<description>Flip Image</description>
+    				<posy>5</posy>
+    				<width>150</width>
+    				<height>32</height>
+    				<label>$LOCALIZE[749]</label>
+            <font>MediumSmallTitle2Font</font>
+            <textoffsetx>14</textoffsetx>
+            <textoffsety>7</textoffsety>
+            <texturefocus border="3">black_rounded_underline.png</texturefocus>
+            <texturenofocus border="3">black_rounded_transparent.png</texturenofocus>
+            <radioposy>2</radioposy>
+    				<include>DialogTextControl</include>
+    				<visible>Control.IsVisible(451)</visible>
+    			</control>
+        </control>
+
+      </control>
+    </control>
+
+  </controls>
+</window>

@@ -1,0 +1,279 @@
+<!-- album info accessed from song info -->
+<window id="2001">
+
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+
+		<!-- background -->
+		<control type="image">
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		
+		<control type="group">
+			
+			<posx>40</posx>
+			<posy>80</posy>
+
+			<!-- background -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>1200</width>
+				<height>600</height>
+			</control>
+			
+			<!-- review / track list -->
+			<control type="group">
+				<posx>480</posx>
+				<posy>240</posy>
+				<control type="image">
+					<texture border="4">container-back-nf.png</texture>
+					<width>670</width>
+					<height>350</height>
+				</control>
+				<!-- review -->
+				<control type="textbox" id="4">
+					<visible>!Control.IsVisible(50)</visible>
+					<width>650</width>
+					<height>330</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<font>listitem-small</font>
+					<textcolor>type-listitem</textcolor>
+					<onleft>9100</onleft>
+					<onright>9100</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					<pagecontrol>700</pagecontrol>
+					<autoscroll delay="2000" time="5000" repeat="5000">!Control.HasFocus(9000)</autoscroll>
+				</control>
+				<!-- track list -->
+				<control type="list" id="50">
+					<width>650</width>
+					<height>330</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<onleft>9100</onleft>
+					<onright>700</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<pagecontrol>700</pagecontrol>
+					<itemlayout height="42">
+						<control type="image">
+							<texture>listitem-back-nf.png</texture>
+							<width>665</width>
+							<height>32</height>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<width>635</width>
+							<height>32</height>
+							<posx>10</posx>
+							<font>listitem-small</font>
+							<textcolor>type-listitem-dark</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="42">
+						<control type="image">
+							<visible>Control.HasFocus(50)</visible>
+							<texture>listitem-back.png</texture>
+							<width>665</width>
+							<height>32</height>
+						</control>
+						<control type="image">
+							<visible>!Control.HasFocus(50)</visible>
+							<texture>listitem-back-nf.png</texture>
+							<width>665</width>
+							<height>32</height>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<width>635</width>
+							<height>32</height>
+							<posx>10</posx>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+					</focusedlayout>
+				</control>
+				<!-- scrollbar -->
+				<control type="scrollbar" id="700">
+					<width>30</width>
+					<height>350</height>
+					<posx>680</posx>
+					<onleft>50</onleft>
+					<onright>9100</onright>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+			
+			<!-- cover -->
+			<control type="group">
+				<posx>10</posx>
+				<posy>10</posy>
+				<control type="image">
+					<texture border="4">container-back-nf.png</texture>
+					<width>460</width>
+					<height>580</height>
+				</control>
+				<!-- cover -->
+				<control type="image">
+					<texture>$INFO[ListItem.Thumb]</texture>
+					<width>440</width>
+					<height>560</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<aspectratio aligny="center">keep</aspectratio>
+				</control>
+				<!-- rating -->
+				<control type="label" id="23">
+					<width>440</width>
+					<height>40</height>
+					<posx>10</posx>
+					<posy>530</posy>
+					<font>listitem-small</font>
+					<textcolor>type-listitem-header</textcolor>
+					<align>center</align>
+				</control>
+			</control>
+			<!-- content -->
+			<control type="group">
+			
+				<posx>480</posx>
+				<posy>10</posy>
+				
+				<control type="image">
+					<texture border="4">container-back-nf.png</texture>
+					<width>710</width>
+					<height>220</height>
+				</control>
+				<control type="grouplist">
+				
+					<posx>10</posx>
+					<posy>10</posy>
+					
+					<!-- album -->
+					<control type="label">
+						<label>$INFO[Listitem.Album]</label>
+						<width>690</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem-header</textcolor>
+					</control>
+					<!-- artist -->
+					<control type="label">
+						<label>$INFO[ListItem.Artist,[COLOR type-listitem-dark]Artist:[/COLOR] ]</label>
+						<width>690</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<!-- year -->
+					<control type="label">
+						<label>$INFO[ListItem.Year,[COLOR type-listitem-dark]Year:[/COLOR] ]</label>
+						<width>690</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<!-- genre -->
+					<control type="label">
+						<label>$INFO[ListItem.Genre,[COLOR type-listitem-dark]Genre:[/COLOR] ]</label>
+						<width>690</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<!-- mpaa rating -->
+					<control type="label">
+						<label>$INFO[ListItem.MPAA,[COLOR type-listitem-dark]MPAA:[/COLOR] ]</label>
+						<width>690</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					
+				</control>	
+			</control>
+			
+		</control>	
+				
+		<!-- header -->
+		<control type="group">
+
+			<!-- mint logo
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control> -->
+			<!-- window name -->
+			<control type="label">
+				<label>Album Information</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, |]  $INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+				<align>right</align>
+			</control>
+		</control>					
+		
+		<!-- view options -->
+		<control type="group">
+		
+			<posx>1280</posx>
+			<posy>20</posy>
+			
+			<include>anim-sidebar</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>black.png</texture>
+				<width>400</width>
+				<height>680</height>
+				<colordiffuse>sidebar</colordiffuse>
+			</control>
+			
+			<control type="grouplist" id="9100">
+				<width>360</width>
+				<height>680</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<onleft>700</onleft>
+				<onright>700</onright>
+				<onup>9100</onup>
+				<ondown>9100</ondown>
+				
+				<!-- tracks/review button -->
+				<control type="button" id ="5">
+					<label>182</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- refresh button -->
+				<control type="button" id ="6">
+					<label>Refresh</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- get thumb button -->
+				<control type="button" id ="10">
+					<label>Get Thumb</label>
+					<include>type-sidebar</include>
+				</control>
+			</control>
+		</control>
+	
+	</controls>
+	
+</window>

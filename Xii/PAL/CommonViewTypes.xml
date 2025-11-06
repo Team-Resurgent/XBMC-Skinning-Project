@@ -1,0 +1,1161 @@
+<includes>
+	<include name="OldListViewCommons">
+		<control type="list" id="50">
+			<posx>120</posx>
+			<posy>95</posy>
+			<width>455</width>
+			<height>380</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<include>contentpanelslide</include>
+			<itemlayout height="35">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>2</posy>
+					<width>380</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>435</posx>
+					<posy>2</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<textcolor>ff000000</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35">
+				<control type="image">
+					<width>445</width>
+					<height>35</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(50)</visible>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>2</posy>
+					<width>380</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>435</posx>
+					<posy>2</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<textcolor>ff000000</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="MusicViewCommons">
+		<control type="list" id="51">
+			<posx>110</posx>
+			<posy>95</posy>
+			<width>475</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="$LOCALIZE[535] 2">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<include>contentpanelslide</include>
+			<itemlayout height="35">
+				<control type="image">
+					<posx>25</posx>
+					<posy>3</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>2</posy>
+					<width>330</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>2</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<textcolor>ff000000</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="75">
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<visible>Control.HasFocus(51)</visible>
+					<texture border="0,0,0,0">list2-focus.png</texture>
+				</control>
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<visible>!Control.HasFocus(51)</visible>
+					<texture border="0,0,0,0">list2-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>9</posy>
+					<width>58</width>
+					<height>58</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>47</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>360</width>
+					<height>16</height>
+					<font>special24</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>34</posy>
+					<width>355</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<scroll>true</scroll>
+					<info>ListItem.Album</info>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>51</posy>
+					<width>315</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<label>$INFO[ListItem.Year,, - ]$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>45</posy>
+					<width>330</width>
+					<height>16</height>
+					<font>special20</font>
+					<align>right</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="MusicViewCommons_BigList">
+		<control type="list" id="54">
+			<posx>110</posx>
+			<posy>95</posy>
+			<width>475</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>54</onup>
+			<ondown>54</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="537">biglist</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="80">
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture border="0,0,0,0">list2-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>9</posy>
+					<width>58</width>
+					<height>58</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>47</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>360</width>
+					<height>16</height>
+					<font>special24</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>34</posy>
+					<width>355</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Year ,$LOCALIZE[201] ]</label>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>51</posy>
+					<width>315</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>45</posy>
+					<width>330</width>
+					<height>16</height>
+					<font>special20</font>
+					<align>right</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="80">
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture border="0,0,0,0">list2-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>9</posy>
+					<width>58</width>
+					<height>58</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>47</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>360</width>
+					<height>16</height>
+					<font>special24</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>34</posy>
+					<width>355</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Year ,$LOCALIZE[201] ]</label>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>51</posy>
+					<width>315</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>45</posy>
+					<width>330</width>
+					<height>16</height>
+					<font>special20</font>
+					<align>right</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="VideoViewCommons">
+		<control type="list" id="51">
+			<posx>110</posx>
+			<posy>95</posy>
+			<width>475</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="$LOCALIZE[535] 2">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="35">
+				<control type="image">
+					<posx>25</posx>
+					<posy>3</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>2</posy>
+					<width>330</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>2</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<textcolor>ff000000</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="80">
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<visible>Control.HasFocus(51)</visible>
+					<texture border="0,0,0,0">list2-focus.png</texture>
+				</control>
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<visible>!Control.HasFocus(51)</visible>
+					<texture border="0,0,0,0">list2-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>9</posy>
+					<width>58</width>
+					<height>58</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>47</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>360</width>
+					<height>16</height>
+					<font>special24</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>34</posy>
+					<width>355</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Year ,$LOCALIZE[201] ]</label>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>51</posy>
+					<width>315</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>45</posy>
+					<width>330</width>
+					<height>16</height>
+					<font>special20</font>
+					<align>right</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="VideoViewCommons_BigList">
+		<control type="list" id="54">
+			<posx>110</posx>
+			<posy>95</posy>
+			<width>475</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>54</onup>
+			<ondown>54</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="537">biglist</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="80">
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture border="0,0,0,0">list2-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>9</posy>
+					<width>58</width>
+					<height>58</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>47</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>360</width>
+					<height>16</height>
+					<font>special24</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>34</posy>
+					<width>355</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Year ,$LOCALIZE[201] ]</label>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>51</posy>
+					<width>315</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>45</posy>
+					<width>330</width>
+					<height>16</height>
+					<font>special20</font>
+					<align>right</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="80">
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture border="0,0,0,0">list2-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>9</posy>
+					<width>58</width>
+					<height>58</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>47</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>360</width>
+					<height>16</height>
+					<font>special24</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>34</posy>
+					<width>355</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Year ,$LOCALIZE[201] ]</label>
+				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>51</posy>
+					<width>315</width>
+					<height>16</height>
+					<font>font20</font>
+					<include>listselectedcolor2</include>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>45</posy>
+					<width>330</width>
+					<height>16</height>
+					<font>special20</font>
+					<align>right</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="ProgramsViewCommons">
+		<control type="list" id="51">
+			<posx>110</posx>
+			<posy>95</posy>
+			<width>475</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="$LOCALIZE[535] 2">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="35">
+				<control type="image">
+					<posx>25</posx>
+					<posy>3</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>2</posy>
+					<width>330</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>2</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font20</font>
+					<include>listselectedcolor</include>
+					<textcolor>ff000000</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="80">
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<visible>Control.HasFocus(51)</visible>
+					<texture border="0,0,0,0">list2-focus.png</texture>
+				</control>
+				<control type="image">
+					<width>465</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<visible>!Control.HasFocus(51)</visible>
+					<texture border="0,0,0,0">list2-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>9</posy>
+					<width>58</width>
+					<height>58</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>47</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>360</width>
+					<height>16</height>
+					<font>special24</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>445</posx>
+					<posy>45</posy>
+					<width>330</width>
+					<height>16</height>
+					<font>special20</font>
+					<align>right</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="AllViewCommonThumbSmall">
+		<control type="panel" id="52">
+			<posx>105</posx>
+			<posy>95</posy>
+			<width>485</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">icon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="120" width="120">
+				<control type="image">
+					<width>120</width>
+					<height>120</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>button-tile-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>7</posy>
+					<width>90</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>77</posx>
+					<posy>67</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>93</posy>
+					<width>96</width>
+					<height>22</height>
+					<font>special12</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="120" width="120">
+				<control type="image">
+					<width>120</width>
+					<height>120</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>button-tile-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>7</posy>
+					<width>90</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>77</posx>
+					<posy>67</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>93</posy>
+					<width>96</width>
+					<height>22</height>
+					<font>special12</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="AllViewCommonThumbLarge">
+		<control type="panel" id="53">
+			<posx>103</posx>
+			<posy>95</posy>
+			<width>500</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="538">bigicon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="160" width="160">
+				<control type="image">
+					<width>165</width>
+					<height>165</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>button-tile-nofocus-2.png</texture>
+				</control>
+				<control type="image">
+					<posx>18</posx>
+					<posy>10</posy>
+					<width>125</width>
+					<height>125</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>110</posx>
+					<posy>105</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>81</posx>
+					<posy>135</posy>
+					<width>115</width>
+					<height>22</height>
+					<font>font13</font>
+					<include>listselectedcolor</include>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="185" width="150">
+				<control type="image">
+					<width>165</width>
+					<height>165</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>button-tile-focus-2.png</texture>
+				</control>
+				<control type="image">
+					<posx>18</posx>
+					<posy>10</posy>
+					<width>125</width>
+					<height>125</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>110</posx>
+					<posy>105</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>81</posx>
+					<posy>135</posy>
+					<width>115</width>
+					<height>22</height>
+					<font>font13</font>
+					<include>listselectedcolor</include>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="WideIcon_Small">
+		<control type="panel" id="55">
+			<posx>120</posx>
+			<posy>95</posy>
+			<width>485</width>
+			<height>350</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<viewtype label="539">wide</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="95" width="230">
+				<control type="image">
+					<posx>4</posx>
+					<posy>7</posy>
+					<width>210</width>
+					<height>65</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>220</width>
+					<height>80</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="0,0,0,0">WideIcon.png</texture>
+				</control>
+				<control type="label">
+					<posx>110</posx>
+					<posy>75</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font13</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<align>center</align>
+					<visible>Skin.HasSetting(widelabels)</visible>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="image">
+					<posx>185</posx>
+					<posy>55</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="95" width="230">
+				<control type="image">
+					<posx>4</posx>
+					<posy>7</posy>
+					<width>210</width>
+					<height>65</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>220</width>
+					<height>80</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="0,0,0,0">WideIconFO.png</texture>
+				</control>
+				<control type="label">
+					<posx>110</posx>
+					<posy>75</posy>
+					<width>200</width>
+					<height>16</height>
+					<font>font13</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<align>center</align>
+					<visible>Skin.HasSetting(widelabels)</visible>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="image">
+					<posx>185</posx>
+					<posy>55</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</focusedlayout>
+		</control>
+    <control type="label">
+     <posx>105</posx>
+		 <posy>445</posy>
+		 <width>475</width>
+		 <height>30</height>
+		 <info>ListItem.Label</info>
+		 <font>font28</font>
+		 <include>textcolorblue</include>
+		 <align>center</align>
+		 <scroll>true</scroll>
+     <visible>Control.IsVisible(55)</visible>
+    </control>
+	</include>
+	<include name="WideIcon_Big">
+		<control type="list" id="56">
+			<posx>125</posx>
+			<posy>95</posy>
+			<width>455</width>
+			<height>355</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="540">bigwide</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="118">
+				<control type="image">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>440</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>440</width>
+					<height>105</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="0,0,0,0">WideIcon2.png</texture>
+				</control>
+				<control type="image">
+					<posx>400</posx>
+					<posy>65</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>220</posx>
+					<posy>98</posy>
+					<width>295</width>
+					<height>16</height>
+					<font>special13</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<align>center</align>
+					<visible>Skin.HasSetting(widelabels)</visible>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="118">
+				<control type="image">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>440</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>440</width>
+					<height>105</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>WideIconFO2.png</texture>
+				</control>
+				<control type="image">
+					<posx>400</posx>
+					<posy>65</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>220</posx>
+					<posy>98</posy>
+					<width>295</width>
+					<height>16</height>
+					<font>special13</font>
+					<include>listselectedcolor</include>
+					<scroll>true</scroll>
+					<align>center</align>
+					<visible>Skin.HasSetting(widelabels)</visible>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+    <control type="label">
+     <posx>105</posx>
+		 <posy>445</posy>
+		 <width>475</width>
+		 <height>30</height>
+		 <info>ListItem.Label</info>
+		 <font>font28</font>
+		 <include>textcolorblue</include>
+		 <align>center</align>
+		 <scroll>true</scroll>
+     <visible>Control.IsVisible(56)</visible>
+    </control>
+	</include>  
+	<include name="VideoWrapView">
+    <control type="wraplist" id="57">
+      <viewtype label="Wrap">Wraplist</viewtype>
+      <posx>87</posx>
+      <posy>97</posy>
+      <width>490</width>
+      <height>420</height>
+      <onleft>57</onleft>
+      <onright>57</onright>
+      <onup>9000</onup>
+      <ondown>9000</ondown>
+      <focusposition>3</focusposition>
+      <orientation>horizontal</orientation>
+       <itemlayout height="125" width="75">
+        <control type="image">
+         <posx>0</posx>
+         <posy>0</posy>
+         <width>120</width>
+         <height>120</height>
+         <info>ListItem.Icon</info>
+         <aspectratio>keep</aspectratio>
+        </control>
+        <control type="image">
+          <posx>121</posx>
+          <posy>221</posy>
+          <width>25</width>
+          <height>25</height>
+          <info>ListItem.Overlay</info>
+        </control>
+       </itemlayout>
+       <focusedlayout height="0" width="20">
+         <control type="image">
+          <posx>-115</posx>
+          <posy>55</posy>
+          <width>300</width>
+          <height>300</height>
+          <aspectratio>keep</aspectratio>
+          <info>ListItem.Icon</info>
+         </control>
+         <control type="image">
+          <posx>250</posx>
+          <posy>247</posy>
+          <width>60</width>
+          <height>60</height>
+          <info>ListItem.Overlay</info>
+         </control>
+       </focusedlayout>
+      </control>
+      <control type="label">
+       <posx>105</posx>
+  		 <posy>445</posy>
+  		 <width>475</width>
+  		 <height>30</height>
+  		 <info>ListItem.Label</info>
+  		 <font>font28</font>
+  		 <include>textcolorblue</include>
+  		 <align>center</align>
+  		 <scroll>true</scroll>
+       <visible>Control.IsVisible(57)</visible>
+      </control>
+  </include>
+	<include name="AllViewCommonPageControls">
+		<control type="scrollbar" id="60">
+			<posx>588</posx>
+			<posy>127</posy>
+			<width>34</width>
+			<height>317</height>
+			<texturesliderbackground border="4">slider_background.png</texturesliderbackground>
+			<texturesliderbar border="3">slider_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="3">slider_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>-</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>true</showonepage>
+			<orientation>vertical</orientation>
+			<include>contentpanelslide</include>
+			<visible>!Skin.HasSetting(UseScrollbars)</visible>
+      			<visible>!Control.IsVisible(57)</visible>
+		</control>
+		<control type="spincontrol" id="60">
+			<description>Next page button</description>
+			<posx>455</posx>
+			<posy>490</posy>
+			<height>75</height>
+			<width>120</width>
+			<subtype>page</subtype>
+			<font>font20</font>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<ondown>60</ondown>
+			<onup>50</onup>
+			<showonepage>true</showonepage>
+			<reverse>false</reverse>
+  			<textureup>button-rpage-nofocus.png</textureup>
+  			<texturedown>button-lpage-nofocus.png</texturedown>
+  			<textureupfocus>button-rpage-focus.png</textureupfocus>
+  			<texturedownfocus>button-lpage-focus.png</texturedownfocus>
+			<include>contentpanelslide</include>
+			<include>textcolorblack</include>
+			<textoffsetx>137</textoffsetx>
+			<visible>Skin.HasSetting(UseScrollbars)</visible>
+      			<visible>!Control.IsVisible(57)</visible>
+		</control>
+	</include>
+</includes>

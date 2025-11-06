@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: smuto-->
+<!--Email: smuto.promyk@gmail.com-->
+<!--Date of translation: 07/07/2008-->
+<!--$Revision$-->
+<strings>
+  <string id="31000">Uruchom</string>
+  <string id="31001">Oglądaj</string>
+  <string id="31002">Słuchaj</string>
+  <string id="31003">Przeglądaj</string>
+  <string id="31004">Zmień</string>
+  <string id="31005">Sprawdź</string>
+  <string id="31006">Wyjście</string>
+  <string id="31007">Otwórz</string>
+  <string id="31008">
+  </string>
+  <string id="31009">
+  </string>
+  <string id="31010">gry lub emulatory</string>
+  <string id="31011">filmy, seriale lub teledyski</string>
+  <string id="31012">muzyki z dysku lub CD</string>
+  <string id="31013">fotografie lub obrazy</string>
+  <string id="31014">ustawienia lub opcje</string>
+  <string id="31015">prognozę pogody</string>
+  <string id="31016">zamknij lub restartuj</string>
+  <string id="31017">skrypty lub wtyczki</string>
+  <string id="31018">
+  </string>
+  <string id="31019">
+  </string>
+  <string id="31020">Emulatory</string>
+  <string id="31021">Pliki wideo</string>
+  <string id="31022">Pliki muzyki</string>
+  <string id="31023">Pliki zdjęć</string>
+  <string id="31024">strona</string>
+  <string id="31025">pozycji</string>
+  <string id="31026">Przezrocze</string>
+  <string id="31027">OKŁADKA[CR]SEZONU[CR]NIEDOSTĘPNA</string>
+  <string id="31028">MINIATURKA[CR]ODCINKA[CR]NIEDOSTĘPNA</string>
+  <string id="31029">OKŁADKA[CR]ALBUMU[CR]NIEDOSTĘPNA</string>
+  <string id="31030">PORTRET[CR]ARTYSTY[CR]NIEDOSTĘPNY</string>
+  <string id="31031">Wybierz nowy lub zmień aktualny[CR]obraz Fanart tego serialu[CR][CR]Kliknij, aby pobrać</string>
+  <string id="31032">ODTWARZAM</string>
+  <string id="31033">PAUZA</string>
+  <string id="31034">PRZEWIŃ</string>
+  <string id="31035">COFNIJ</string>
+  <string id="31036">WYCISZONE</string>
+  <string id="31037">Udane logowanie:</string>
+  <string id="31100">Zamglenie tła</string>
+  <string id="31101">Filmy w tle</string>
+  <string id="31102">Wizualizacja w tle</string>
+  <string id="31103">Wyświetlaj tematyczne tła dla zakładek</string>
+  <string id="31104">Nie pokazuj informacji o ilości pozycji</string>
+  <string id="31105">Zablokuj (ukryj) wejście w ustawienia mediów</string>
+  <string id="31106">Info o pogodzie  na ekranie głównym</string>
+  <string id="31107">Zablokuj (ukryj) panel " Widok "</string>
+  <string id="31998">[B]</string>
+  <string id="31999">[/B]</string>
+</strings>

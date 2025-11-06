@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!--  strings 31000 thru 31999 reserved for skins  -->
+
+<strings>
+  <!-- Home / General -->
+  <string id="31000">Dateimanager</string>
+  <string id="31001">Info</string>
+  <string id="31002">System neustarten</string>
+  <string id="31003">Untersuchen</string>
+  <string id="31004">Ändern</string>
+  <string id="31005">Verschiedenes</string>
+  <string id="31006">Sichtbar</string>
+  <string id="31007">An/Aus</string>
+  <string id="31008">Nicht bewertet</string>
+  <string id="31009"></string>
+  <string id="31010"></string>
+  <string id="31011">Anschauen</string>
+  <string id="31012">Anhören</string>
+  <string id="31013">Ansehen</string>
+  <string id="31014">Benutzen</string>
+  <string id="31015">Prüfen</string>
+  <string id="31016">Einstellen</string>
+  <string id="31017">Energieverwaltung</string>
+  <string id="31018"></string>
+  <string id="31019">Abspielen von</string>
+  <string id="31020">Abrufen</string>
+  <string id="31021">Von</string>
+  <string id="31022">Neulich hinzugefügt</string>
+  <string id="31023">Latest</string>
+  <string id="31024">Seite</string>
+  <string id="31025">Einträge</string>
+
+  <!-- Options Menu -->
+  <string id="31100">Poster Info</string>
+  <string id="31101">Sortieren nach</string>
+  <string id="31102">Einstellungen</string>
+  <string id="31103">Schaufenster</string>
+  <string id="31104">Grosse Uhr anzeigen</string>
+  <string id="31105">Wasserfall</string>
+  <string id="31106">Ausstellung</string>
+  <string id="31107">Kleine Liste</string>
+  <string id="31108">Enthüllung</string>
+  <string id="31109">Grosse Liste</string>
+
+  <!-- Settings -->
+  <string id="31200">Handlung anzeigen</string>
+  <string id="31201">Letzte Aktualisierung</string>
+  <string id="31202">Hintergrund-Ordner</string>
+  <string id="31203">Hintergründe</string>
+  <string id="31204">Einstellungen</string>
+  <string id="31205">Ausblenden der</string>
+  <string id="31206">Uhr</string>
+  <string id="31207">Kein Wetter auf der Startseite</string>
+  <string id="31208">Deaktivieren</string>
+  <string id="31209">Einstellungen von</string>
+  <string id="31210">Menü</string>
+  <string id="31211">Keine Handlung im Video-OSD</string>
+  <string id="31212">"Gesehen" nicht anzeigen</string>
+  <string id="31213">Vorschau verstecken</string>
+  <string id="31214">Kritiken anzeigen</string>
+  <string id="31215">Inhaltstyp anzeigen</string>
+  <string id="31216">Medienanzahl verstecken</string>
+  <string id="31217">Hochformat bei TV-Serien</string>
+  <string id="31218">Minimalistisches OSD anzeigen</string>
+  <string id="31219">Ameisenhintergrund verstecken</string>
+  <string id="31220">Wettervorschau animieren</string>
+  <string id="31221">Hide Latest Videos</string>
+
+  <!-- Video -->
+  <string id="31300">nicht verfügbar</string>
+  <string id="31301">Vorschau</string>
+  <string id="31302">Fanbilder</string>
+  <string id="31303">Staffeln</string>
+  <string id="31304">Ungefähr verbleibend</string>
+
+  <!-- Music -->
+  <string id="31400">Beendet</string>
+  <string id="31401">Aktuell</string>
+  <string id="31402">Visualisierung auswählen</string>
+  <string id="31403">Visualisierungsvorgaben</string>
+  <string id="31404">Visualisierungseinstellungen</string>
+  <string id="31405">Liedtexte</string>
+  <string id="31406">Pfad zu den Liedtexten setzen</string>
+  <string id="31407">Wiedergabeliste öffnen</string>
+  <string id="31408">Wiedergabeliste speichern</string>
+  <string id="31409">Wiedergabeliste schliessen</string>
+  <string id="31410">System-Musikdateien</string>
+  <string id="31411">Aktuelle Wiedergabeliste</string>
+  
+  <!-- Dialogs -->
+  <string id="31500">Profil wählen</string>
+  <string id="31501">Stumm geschaltet</string>
+  <string id="31502">Erstellen</string>
+  <string id="31503">Codec</string>
+
+</strings>

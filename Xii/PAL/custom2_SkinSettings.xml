@@ -1,0 +1,147 @@
+<window id="56">
+	<defaultcontrol always="true">20</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-blackbase.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>background middle overlay</description>
+			<posx>0</posx>
+			<posy>85</posy>
+			<width>720</width>
+			<height>367</height>
+			<texture>background-black2.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>white tab image 1</description>
+			<posx>25</posx>
+			<posy>48</posy>
+			<width>400</width>
+			<height>33</height>
+			<texture>background-tab-grey.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>white tab image 2</description>
+			<posx>65</posx>
+			<posy>40</posy>
+			<width>400</width>
+			<height>41</height>
+			<texture>background-tab-white.png</texture>
+		</control>
+		
+		<control id="2" type="label">
+  		<description>white tab label 1</description>
+    	<posx>75</posx> 
+    	<posy>43</posy>
+			<height>41</height>
+    	<align>left</align> 
+			<font>font28</font>
+			<label>10507</label>
+			<include>textcolorblack</include>
+		</control>
+		
+		<!-- Global Options -->
+		<control type="group" id="9002">
+			<include>contentpanelslide</include>
+			<control type="radiobutton" id="20">
+				<description>enable animations</description>
+				<posx>135</posx>
+				<posy>90</posy>
+				<width>445</width>
+				<label>20079</label>
+				<onclick>Skin.ToggleSetting(animated)</onclick>
+				<selected>!Skin.HasSetting(animated)</selected>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>23</onup>
+				<ondown>21</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="21">
+				<description>enable scrollbars</description>
+				<posx>135</posx>
+				<posy>127</posy>
+				<width>445</width>
+				<label>Enable Scrollbars</label>
+				<onclick>Skin.ToggleSetting(UseScrollbars)</onclick>
+				<selected>!Skin.HasSetting(UseScrollbars)</selected>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>20</onup>
+				<ondown>22</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="22">
+				<description>enable home weather overlays</description>
+				<posx>135</posx>
+				<posy>167</posy>
+				<width>445</width>
+				<include>90001</include>
+				<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
+				<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>21</onup>
+				<ondown>23</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="radiobutton" id="23">
+				<description>Disable wide icon labels</description>
+				<posx>135</posx>
+				<posy>207</posy>
+				<width>445</width>
+				<include>90002</include>
+				<onclick>Skin.ToggleSetting(widelabels)</onclick>
+				<selected>!Skin.HasSetting(widelabels)</selected>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>22</onup>
+				<ondown>50</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+		
+		<control type="button" id="50">
+  		<description>Back</description>
+  		<posx>35</posx>
+  		<posy>465</posy>
+  		<width>316</width>
+  		<height>79</height>
+  		<include>backlabel</include>
+  		<font>font28</font>
+  		<align>center</align>
+  		<aligny>center</aligny>
+  		<include>textcolorblack</include>
+  		<onclick>ActivateWindow(1110)</onclick>
+  		<onleft>50</onleft>
+  		<onright>50</onright>
+  		<onup>22</onup>
+  		<ondown>50</ondown>
+  		<texturefocus>button-big-focus.png</texturefocus>
+  		<texturenofocus>button-big-nofocus.png</texturenofocus>
+			<include>homebuttonanimation</include>
+		</control>
+		<control type="image" id="0">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control>
+	</controls>
+</window>

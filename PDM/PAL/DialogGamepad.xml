@@ -1,0 +1,48 @@
+<window type="110">
+	<defaultcontrol>0</defaultcontrol>
+	<include>dialog-effect</include> 
+	<controls>
+
+	<control type="image">
+		<posx>135</posx>
+		<posy>205</posy>
+		<width>466</width>
+		<height>210</height>
+		<texture>dialog-popup.png</texture>
+	</control>
+
+	<control type="label" id="1">
+		<description>dialog Heading</description>
+		<posx>190</posx>
+		<posy>225</posy>
+		<label>12325</label>
+		<font>special13</font>
+		<textcolor>DDced8da</textcolor>
+	</control>
+
+	<control type="label" id="2">
+		<description>dialog line 1</description>
+		<posx>190</posx>
+		<posy>260</posy>
+		<label>12330</label>
+		<font>font10</font>
+	</control>
+
+	<control type="label" id="3">
+		<description>dialog line 2</description>
+		<posx>190</posx>
+		<posy>280</posy>
+		<label>12331</label>
+		<font>font10</font>
+	</control>
+
+	<control type="label" id="4">
+		<description>dialog line 3</description>
+		<posx>190</posx>
+		<posy>320</posy>
+		<label>12323</label>
+		<font>font14</font>
+	</control>
+
+	</controls>
+</window>

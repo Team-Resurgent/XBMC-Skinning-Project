@@ -1,0 +1,252 @@
+<window id="130">
+	<defaultcontrol>1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<type>dialog</type>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls>
+
+	<control type="image" id="1">
+		<description>filemanager background image</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel_bg.png</texture>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(126)</visible>
+		<animation effect="fade" time="400">Hidden</animation>
+	</control>
+
+	<control type="image" id="1">
+		<description>filemanager background image</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel_bg.png</texture>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(126)</visible>
+		<animation effect="fade" time="400">Hidden</animation>
+	</control>
+
+	<control type="image" id="2">
+		<description>profile image</description>
+		<posx>100</posx>
+		<posy>72</posy>
+		<width>128</width>
+		<height>128</height>
+		<align>left</align>
+		<texture>unknown-user.png</texture>
+		<include>logon-effect</include>
+		<aspectratio align="left">keep</aspectratio>
+	</control>
+
+	<control type="label" id="0">
+		<description>profile name label</description>
+		<posx>240</posx>
+		<posy>76</posy>
+		<width>280</width>
+		<align>left</align>
+		<font>special13</font>
+		<textcolor>DDced8da</textcolor>
+		<label>$LOCALIZE[ 20093 ]</label>
+		<include>logon-effect</include>
+	</control>
+  
+	<control type="label" id="1000">
+		<description>profile name label</description>
+		<posx>240</posx>
+		<posy>96</posy>
+		<width>280</width>
+		<align>left</align>
+		<font>special13</font>
+		<textcolor>FFFFFFFF</textcolor>
+		<include>logon-effect</include>
+	</control>
+
+	<control type="label" id="0">
+		<description>profile name label</description>
+		<posx>240</posx>
+		<posy>122</posy>
+		<width>280</width>
+		<align>left</align>
+		<font>special13</font>
+		<textcolor>DDced8da</textcolor>
+		<label>$LOCALIZE[ 20070 ]</label>
+		<include>logon-effect</include>
+	</control>
+
+	<control type="label" id="1001">
+		<description>profile directory label</description>
+		<posx>240</posx>
+		<posy>142</posy>
+		<width>280</width>
+		<align>left</align>
+		<font>special13</font>
+		<textcolor>FFFFFFFF</textcolor>
+		<include>logon-effect</include>
+	</control>
+
+	<control type="spincontrol" id="60">
+		<description>Next page button</description>
+		<posx>300</posx>
+		<posy>300</posy>
+		<subtype>int</subtype>
+		<font>font12</font>
+		<onleft>60</onleft>
+		<onright>60</onright>
+		<ondown>2</ondown>
+		<include>logon-effect</include>
+	</control>
+
+	<control type="image" id="5">
+		<description>control area</description>
+		<posx>100</posx>
+		<posy>230</posy>
+		<width>508</width>
+		<height>325</height>
+		<texture>-</texture>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="image" id="6">
+		<description>control gap</description>
+		<width>350</width>
+		<height>31</height>
+		<texture>-</texture>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="button" id="7">
+		<description>Default Button</description>
+		<posx>530</posx>
+		<posy>150</posy>
+		<height>29</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus>list-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="radiobutton" id="8">
+		<description>Default RadioButton</description>
+		<posx>530</posx>
+		<posy>150</posy>
+		<height>31</height>
+		<font>font12</font>
+		<texturefocus>list-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textoffsetx>12</textoffsetx>
+		<aligny>center</aligny>
+		<textureradiofocus>settings-check-box.png</textureradiofocus>
+		<textureradionofocus>settings-check-boxNF.png</textureradionofocus>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="spincontrolex" id="9">
+		<description>Default SpinControlex</description>
+		<posx>530</posx>
+		<posy>150</posy>
+		<height>31</height>
+		<width>300</width>
+		<texturefocus>list-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>scroll-up.png</textureup>
+		<texturedown>scroll-down.png</texturedown>
+		<textureupfocus>scroll-up-focus.png</textureupfocus>
+		<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+		<font>font12</font>
+		<include>textcolorwhite</include>
+		<disabledcolor>60d0d0d0</disabledcolor>
+		<textoffsetx>12</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="sliderex" id="10">
+		<description>Default Slider</description>
+		<posx>1530</posx>
+		<posy>150</posy>
+		<height>31</height>
+		<width>300</width>
+		<texturefocus>list-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<sliderwidth>100</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus>osd_slider_nibFO.png</textureslidernibfocus>
+		<font>font12</font>
+		<include>textcolorwhite</include>
+		<disabledcolor>60d0d0d0</disabledcolor>
+		<textoffsetx>12</textoffsetx>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="image" id="11">
+		<description>separator image</description>
+		<width>350</width>
+		<height>5</height>
+		<texture>separatorOSD.png</texture>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<width>720</width>
+		<height>576</height>
+		<texture>trainerpanel.png</texture>
+		<include>logon-effect</include>
+		<animation effect="fade" time="400">Hidden</animation>
+	</control>
+
+	<control type="button" id="28">
+		<description>OK button</description>
+		<posx>423</posx>
+		<posy>470</posy>
+		<width>90</width>
+		<height>32</height>
+		<align>center</align>
+		<label>186</label>
+		<font>font10</font>
+		<texturefocus>btn-focus.png</texturefocus>
+		<texturenofocus>btn-nofocus.png</texturenofocus>
+		<onleft>30</onleft>
+		<onright>29</onright>
+		<onup>30</onup>
+		<ondown>30</ondown>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	<control type="button" id="29">
+		<description>Cancel button</description>
+		<posx>518</posx>
+		<posy>470</posy>
+		<width>90</width>
+		<height>32</height>
+		<align>center</align>
+		<label>222</label>
+		<font>font10</font>
+		<texturefocus>btn-focus.png</texturefocus>
+		<texturenofocus>btn-nofocus.png</texturenofocus>
+		<onleft>28</onleft>
+		<onright>30</onright>
+		<onup>30</onup>
+		<ondown>30</ondown>
+		<include>logon-effect</include>
+		<visible>!Window.IsActive(131)</visible>
+	</control>
+
+	</controls>
+</window>

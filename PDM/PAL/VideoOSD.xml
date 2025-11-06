@@ -1,0 +1,303 @@
+<window id="2901">
+	<defaultcontrol>213</defaultcontrol>
+	<animation effect="slide" start="0,600" end="0,0" acceleration="-1" time="300">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="0,600" acceleration="1" time="300">WindowClose</animation>	
+	<coordinates>
+	<system>1</system>
+	<origin x="0" y="55">true</origin>
+	</coordinates>
+	<controls>
+
+	<control type="image">
+		<description>BG Panel</description>
+		<posx>105</posx>
+		<posy>403</posy>
+		<height>35</height>
+		<width>510</width>
+		<texture>color-black.png</texture>
+		<colordiffuse>90ffffff</colordiffuse>
+	</control>
+
+	<control type="button" id="925">
+		<description>Empty button</description>
+		<posx>100</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-left-focus.png</texturefocus>
+		<texturenofocus>osd-button-left-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick></onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>926</onleft>
+		<onright>928</onright>
+		<onup>925</onup>
+		<ondown>925</ondown>
+	</control>
+
+	<control type="button" id="928">
+		<description>Empty button</description>
+		<posx>140</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-random-focus.png</texturefocus>
+		<texturenofocus>osd-button-random-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>925</onleft>
+		<onright>208</onright>
+		<onup>928</onup>
+		<ondown>928</ondown>
+	</control>
+
+	<control type="button" id="208">
+		<description>DVD menu button</description>
+		<posx>180</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-cd-focus.png</texturefocus>
+		<texturenofocus>osd-button-cd-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>928</onleft>
+		<onright>918</onright>
+		<onup>208</onup>
+		<ondown>208</ondown>
+	</control>
+
+	<control type="button" id="918">
+		<description>Playlist buton</description>
+		<posx>220</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-list-focus.png</texturefocus>
+		<texturenofocus>osd-button-list-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.ActivateWindow(28)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>208</onleft>
+		<onright>210</onright>
+		<onup>918</onup>
+		<ondown>918</ondown>
+	</control>
+
+	<control type="button" id="210">
+		<description>Previous button</description>
+		<posx>260</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-previous-focus.png</texturefocus>
+		<texturenofocus>osd-button-previous-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Previous)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>918</onleft>
+		<onright>211</onright>
+		<onup>210</onup>
+		<ondown>210</ondown>
+	</control>
+
+	<control type="button" id="211">
+		<description>Rewind button</description>
+		<posx>300</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-rewind-focus.png</texturefocus>
+		<texturenofocus>osd-button-rewind-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>210</onleft>
+		<onright>213</onright>
+		<onup>211</onup>
+		<ondown>211</ondown>
+	</control>
+
+	<control type="togglebutton" id="213">
+		<description>Play/Pause button</description>
+		<posx>340</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-pause-focus.png</texturefocus>
+		<texturenofocus>osd-button-pause-nofocus.png</texturenofocus>
+		<usealttexture>Player.Paused</usealttexture>
+		<alttexturefocus>osd-button-play-focus.png</alttexturefocus>
+		<alttexturenofocus>osd-button-play-nofocus.png</alttexturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Play)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>211</onleft>
+		<onright>214</onright>
+		<onup>213</onup>
+		<ondown>213</ondown>
+	</control>
+
+	<control type="button" id="214">
+		<description>Forward button</description>
+		<posx>380</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-forward-focus.png</texturefocus>
+		<texturenofocus>osd-button-forward-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Forward)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>213</onleft>
+		<onright>215</onright>
+		<onup>214</onup>
+		<ondown>214</ondown>
+	</control>
+
+	<control type="button" id="215">
+		<description>Next button</description>
+		<posx>420</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-next-focus.png</texturefocus>
+		<texturenofocus>osd-button-next-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.PlayerControl(Next)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>214</onleft>
+		<onright>216</onright>
+		<onup>215</onup>
+		<ondown>215</ondown>
+	</control>
+
+	<control type="button" id="216">
+		<description>Mute button</description>
+		<posx>460</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-mute-focus.png</texturefocus>
+		<texturenofocus>osd-button-mute-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.Mute</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>215</onleft>
+		<onright>920</onright>
+		<onup>216</onup>
+		<ondown>216</ondown>
+	</control>
+
+	<control type="button" id="920">
+		<description>Video Menu button</description>
+		<posx>500</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-vis-focus.png</texturefocus>
+		<texturenofocus>osd-button-vis-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.ActivateWindow(123)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>216</onleft>
+		<onright>921</onright>
+		<onup>920</onup>
+		<ondown>920</ondown>
+	</control>
+
+	<control type="button" id="921">
+		<description>Audio Menu button</description>
+		<posx>540</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-music-focus.png</texturefocus>
+		<texturenofocus>osd-button-music-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick>XBMC.ActivateWindow(124)</onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>920</onleft>
+		<onright>926</onright>
+		<onup>921</onup>
+		<ondown>921</ondown>
+	</control>
+
+	<control type="button" id="926">
+		<description>Empty button</description>
+		<posx>580</posx>
+		<posy>400</posy>
+		<width>40</width>
+		<height>40</height>
+		<texturefocus>osd-button-right-focus.png</texturefocus>
+		<texturenofocus>osd-button-right-nofocus.png</texturenofocus>
+		<pulseonselect>yes</pulseonselect>
+		<onclick></onclick>
+		<label>-</label>
+		<font>-</font>
+		<onleft>921</onleft>
+		<onright>925</onright>
+		<onup>926</onup>
+		<ondown>926</ondown>
+	</control>
+
+<!-- ----------------------- !!! OLd Layout !!!----------------------- -->
+
+    <!-- <control>
+      <description>DVD menu button 2</description>
+      <type>button</type>
+      <id>209</id>
+      <posx>55</posx>
+      <posy>339</posy>
+      <width>128</width>
+      <height>128</height>
+      <texturefocus>osd_button_dvdmenu2.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <label>-</label>
+      <font>-</font>
+      <onleft>211</onleft>
+      <onright>921</onright>
+      <onup>921</onup>
+      <ondown>211</ondown>
+      <onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+      <visible>VideoPlayer.HasMenu</visible>
+    </control> -->
+
+    <!-- <control>
+      <description>Bookmarks Menu</description>
+      <type>togglebutton</type>
+      <id>919</id>
+      <posx>176</posx>
+      <posy>486</posy>
+      <width>43</width>
+      <height>43</height>
+      <texturefocus>osd_button_bookmarkFO.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <usealttexture>Window.IsActive(125)</usealttexture>
+      <alttexturefocus>osd_button_bookmarkSELNF.png</alttexturefocus>
+      <alttexturenofocus>-</alttexturenofocus>
+      <onclick>XBMC.ActivateWindow(125)</onclick>
+      <label>-</label>
+      <font>-</font>
+      <onleft>210</onleft>
+      <onright>215</onright>
+      <onup>920</onup>
+      <ondown>918</ondown>
+    </control> -->
+
+  </controls>
+</window>

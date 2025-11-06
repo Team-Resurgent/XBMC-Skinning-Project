@@ -1,0 +1,122 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+
+	<control type="image">
+		<description>DVD BG</description>
+		<posx>14</posx>
+		<posy>323</posy>
+		<width>127</width>
+		<height>185</height>
+		<texture>video-bg.png</texture>
+		<include>slideleft</include>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(56) + !Window.IsActive(2700)</visible>
+		<visible>!Window.IsActive(AppearanceSettings) + !Window.IsActive(MyVideosSettings)</visible>
+		<visible>!Window.IsActive(MyMusicSettings) + !Window.IsActive(SystemSettings)</visible>
+		<visible>Player.HasMedia + !Skin.HasSetting(video-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="image">
+		<description>DVD Cover</description>
+		<posx>28</posx>
+		<posy>332</posy>
+		<width>108</width>
+		<height>157</height>
+		<texture>defaultDVDCover.png</texture>
+		<info>VideoPlayer.Cover</info>
+		<aspectratio>keep</aspectratio>
+		<include>slideleft</include>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(56) + !Window.IsActive(2700)</visible>
+		<visible>!Window.IsActive(AppearanceSettings) + !Window.IsActive(MyVideosSettings)</visible>
+		<visible>!Window.IsActive(MyMusicSettings) + !Window.IsActive(SystemSettings)</visible>
+		<visible>Player.HasMedia + !Skin.HasSetting(video-info)</visible>
+		<visible>Skin.HasSetting(listItem) | !Skin.HasSetting(video-preview) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="videowindow">
+		<description>Video Preview</description>
+		<posx>28</posx>
+		<posy>332</posy>
+		<width>108</width>
+		<height>157</height>
+		<aspectratio>keep</aspectratio>
+		<include>slideleft</include>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(56) + !Window.IsActive(2700)</visible>
+		<visible>!Window.IsActive(AppearanceSettings) + !Window.IsActive(MyVideosSettings)</visible>
+		<visible>!Window.IsActive(MyMusicSettings) + !Window.IsActive(SystemSettings)</visible>
+		<visible>Player.HasMedia + !Skin.HasSetting(video-preview)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="image">
+		<description>DVD BG Overlay</description>
+		<posx>14</posx>
+		<posy>323</posy>
+		<width>127</width>
+		<height>185</height>
+		<texture>keyboard-numeric-bg2.png</texture>
+		<include>slideleft</include>
+		<visible>!Window.IsActive(3) + !Window.IsActive(4)</visible>
+		<visible>!Window.IsActive(7) + !Window.IsActive(56) + !Window.IsActive(2700)</visible>
+		<visible>!Window.IsActive(AppearanceSettings) + !Window.IsActive(MyVideosSettings)</visible>
+		<visible>!Window.IsActive(MyMusicSettings) + !Window.IsActive(SystemSettings)</visible>
+		<visible>Player.HasMedia + !Skin.HasSetting(video-info)</visible>
+		<visible>Skin.HasSetting(listItem) | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(5)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+	</control>
+
+	<control type="label">
+		<description>Play Time Label</description>
+		<posx>58</posx>
+		<posy>523</posy>
+		<label>-</label>
+		<info>VideoPlayer.Time</info>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(video-info) + !Player.HasAudio</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	<control type="label">
+		<description>Video Left-Suffix</description>
+		<posx>135</posx>
+		<posy>522</posy>
+		<label>[</label>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(video-info) + !Player.HasAudio</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	<control type="label">
+		<description>Video/Artist/Genre Infos</description>
+		<width>275</width>
+		<posx>144</posx>
+		<posy>523</posy>
+		<include>videooverlay-label</include>
+		<visible>!Skin.HasSetting(video-info) + !Player.HasAudio</visible>
+		<animation effect="fade" time="1000">VisibleChange</animation>
+	</control>
+
+	<control type="label">
+		<description>Video Right-Suffix</description>
+		<posx>420</posx>
+		<posy>522</posy>
+		<label>]</label>
+		<align>left</align>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(video-info) + !Player.HasAudio</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	</controls>
+</window>

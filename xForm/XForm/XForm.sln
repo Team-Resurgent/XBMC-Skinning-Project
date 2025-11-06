@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XForm", "XForm.csproj", "{1AF4382E-96BF-4BEE-9B1B-02FBF13C05EE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XForm.Data", "..\XForm.Data\XForm.Data.csproj", "{614BFABD-3971-4DA4-B1A2-D3E6CAF9C735}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1AF4382E-96BF-4BEE-9B1B-02FBF13C05EE}.Debug.ActiveCfg = Debug|.NET
+		{1AF4382E-96BF-4BEE-9B1B-02FBF13C05EE}.Debug.Build.0 = Debug|.NET
+		{1AF4382E-96BF-4BEE-9B1B-02FBF13C05EE}.Release.ActiveCfg = Release|.NET
+		{1AF4382E-96BF-4BEE-9B1B-02FBF13C05EE}.Release.Build.0 = Release|.NET
+		{614BFABD-3971-4DA4-B1A2-D3E6CAF9C735}.Debug.ActiveCfg = Debug|.NET
+		{614BFABD-3971-4DA4-B1A2-D3E6CAF9C735}.Debug.Build.0 = Debug|.NET
+		{614BFABD-3971-4DA4-B1A2-D3E6CAF9C735}.Release.ActiveCfg = Release|.NET
+		{614BFABD-3971-4DA4-B1A2-D3E6CAF9C735}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

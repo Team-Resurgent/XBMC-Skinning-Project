@@ -1,0 +1,45 @@
+<!-- context menu accessed from list container when pressing white button -->
+<window id="106">
+
+	<defaultcontrol>1000</defaultcontrol>
+
+	<controls>
+				
+		<control type="group">
+		
+			<!-- bg top -->
+			<control type="image" id="997">
+				<texture>black.png</texture>
+				<width>360</width>
+				<height>10</height>
+				<posy>-10</posy>
+				<colordiffuse>eeffffff</colordiffuse>
+			</control>
+			<!-- bg main -->
+			<control type="image" id="999">
+				<texture>black.png</texture>
+				<width>360</width>
+				<colordiffuse>eeffffff</colordiffuse>
+			</control>
+			<!-- bg bottom -->
+			<control type="image" id="998">
+				<texture>black.png</texture>
+				<width>360</width>
+				<height>10</height>
+				<colordiffuse>eeffffff</colordiffuse>
+			</control>
+			<!-- context items -->
+			<control type="button" id="1000">
+				<include>anim-context</include>
+				<width>340</width>
+				<height>40</height>
+				<posx>10</posx>
+				<font>context</font>
+				<textcolor>type-context-dark</textcolor>
+				<focusedcolor>type-context</focusedcolor>
+				<align>center</align>
+			</control>
+		</control>
+	
+	</controls>
+</window>

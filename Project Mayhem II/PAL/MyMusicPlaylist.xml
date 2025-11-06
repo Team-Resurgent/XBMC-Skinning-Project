@@ -1,0 +1,120 @@
+<window id="500">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<include>background</include>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<posx>478</posx>
+		<posy>280</posy>
+		<width>240</width>
+		<height>270</height>
+		<texture>bg-mymusic.png</texture>
+		<include>common-icons</include>
+	</control>
+
+	<control type="image" id="1">
+		<description>music logo</description>
+		<posx>55</posx>
+		<posy>50</posy>
+		<height>54</height>
+		<texture>background-mymusic.png</texture>
+		<include>slide-left</include>
+		<aspectratio align="left">keep</aspectratio>
+	</control>
+
+	<control type="label" id="12">
+		<description>number of files text label</description>
+		<posx>210</posx>
+		<posy>525</posy>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>d0ffffff</textcolor>
+		<include>slide-right</include>
+	</control>
+
+	<control type="label" id="15">
+		<description>playlist text label</description>
+		<align>right</align> 
+		<posx>660</posx> 
+		<posy>85</posy>
+		<label>136</label>
+		<font>font14</font>
+		<textcolor>d0ffffff</textcolor>
+		<include>slide-right</include>
+	</control>
+
+	<control type="group">
+		<control type="button" id="2">
+			<description>View As Icons button</description>
+			<posx>60</posx>
+			<posy>120</posy>
+			<label>100</label>
+			<font>font13</font>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>22</onup>
+			<ondown>26</ondown>
+			<include>slide-left</include>
+		</control>
+		<control type="button" id="26">
+			<description>Repeat button</description>
+			<posx>60</posx>
+			<posy>157</posy>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>2</onup>
+			<ondown>28</ondown>
+			<include>slide-left</include>
+		</control>
+		<control type="radiobutton" id="28">
+			<description>Randomize button</description>
+			<posx>60</posx>
+			<posy>194</posy>
+			<label>13319</label>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>26</onup>
+			<ondown>21</ondown>
+			<include>slide-left</include>
+		</control>
+		<control type="button" id="21">
+			<description>Save button</description>
+			<posx>60</posx>
+			<posy>231</posy>
+			<label>190</label>
+			<font>font13</font>
+			<onup>28</onup>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<include>slide-left</include>
+      		</control>
+		<control type="button" id="22">
+			<description>Clear button</description>
+			<posx>60</posx>
+			<posy>268</posy>
+			<label>192</label>
+			<font>font13</font>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<ondown>2</ondown>
+			<include>slide-left</include>
+		</control>
+	</control>
+
+	<control type="image">
+		<description>ListItems Icons</description>
+		<posx>67</posx>
+		<posy>375</posy>
+		<width>120</width>
+		<height>120</height>
+		<texture>defaultAlbumCover.png</texture>
+		<info>ListItem.Icon</info>
+		<include>listitem-icon</include>
+		<include>slide-left</include>
+	</control>
+	<include>Common_List</include>
+
+	</controls>
+</window>

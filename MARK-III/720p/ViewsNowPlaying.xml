@@ -1,0 +1,588 @@
+<includes>
+	<include name="NowPlayingView">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<control type="image">
+				<posx>235</posx>
+				<posy>55</posy>
+				<width>810</width>
+				<height>610</height>
+				<texture border="40">DialogBack.png</texture>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<posx>235</posx>
+				<posy>55</posy>
+				<width>810</width>
+				<height>610</height>
+				<texture border="40">DialogFront.png</texture>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<posx>235</posx>
+				<posy>55</posy>
+				<width>810</width>
+				<height>420</height>
+				<texture border="40">DialogBack.png</texture>
+				<visible>!Player.HasMedia</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="0" condition="!Player.Hasmedia">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>235</posx>
+				<posy>55</posy>
+				<width>810</width>
+				<height>420</height>
+				<texture border="40">DialogFront.png</texture>
+				<visible>!Player.HasMedia</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="0" condition="!Player.Hasmedia">Conditional</animation>
+			</control>
+			<control type="group">
+				<posx>945</posx>
+				<posy>405</posy>
+				<animation effect="slide" start="0,0" end="0,90" time="0" condition="!Player.Hasmedia">Conditional</animation>
+				<control type="image">
+					<posx>-240</posx>
+					<posy>-5</posy>
+					<width>320</width>
+					<height>30</height>
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(60)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>20</height>
+					<font>font12b</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>($INFO[Container.NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<subtype>page</subtype>
+					<font>-</font>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<ondown>60</ondown>
+					<onup>50</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+			<control type="image">
+				<posx>275</posx>
+				<posy>435</posy>
+				<width>725</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="group">
+				<visible>Player.HasAudio</visible>
+				<posy>450</posy>
+				<control type="label">
+					<posx>465</posx>
+					<posy>0</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>13350</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>285</posx>
+					<posy>0</posy>
+					<width>170</width>
+					<height>160</height>
+					<aspectratio>keep</aspectratio>
+					<info>MusicPlayer.Cover</info>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>25</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>55</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>90</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[MusicPlayer.Album]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>115</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[MusicPlayer.Genre]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>145</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, [COLOR=blue]-[/COLOR] ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<posy>450</posy>
+				<control type="label">
+					<posx>410</posx>
+					<posy>0</posy>
+					<width>555</width>
+					<height>20</height>
+					<label>13350</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>285</posx>
+					<posy>0</posy>
+					<width>115</width>
+					<height>160</height>
+					<aspectratio>keep</aspectratio>
+					<info>VideoPlayer.Cover</info>
+				</control>
+				<control type="label">
+					<posx>410</posx>
+					<posy>25</posy>
+					<width>555</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Director]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>410</posx>
+					<posy>55</posy>
+					<width>555</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>410</posx>
+					<posy>90</posy>
+					<width>555</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Studio]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>410</posx>
+					<posy>115</posy>
+					<width>555</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Genre]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>410</posx>
+					<posy>145</posy>
+					<width>555</width>
+					<height>20</height>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, [COLOR=blue]-[/COLOR] ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(MusicVideos)</visible>
+				<posy>450</posy>
+				<control type="label">
+					<posx>465</posx>
+					<posy>0</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>13350</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>285</posx>
+					<posy>0</posy>
+					<width>170</width>
+					<height>160</height>
+					<aspectratio>keep</aspectratio>
+					<info>VideoPlayer.Cover</info>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>25</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Artist]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>55</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>90</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Album]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>115</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Genre]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>145</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, [COLOR=blue]-[/COLOR] ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<posy>450</posy>
+				<control type="label">
+					<posx>515</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>20</height>
+					<label>13350</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>285</posx>
+					<posy>0</posy>
+					<width>210</width>
+					<height>160</height>
+					<aspectratio>keep</aspectratio>
+					<info>VideoPlayer.Cover</info>
+				</control>
+				<control type="label">
+					<posx>515</posx>
+					<posy>510</posy>
+					<width>25</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>515</posx>
+					<posy>55</posy>
+					<width>450</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>515</posx>
+					<posy>90</posy>
+					<width>450</width>
+					<height>20</height>
+					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>515</posx>
+					<posy>115</posy>
+					<width>450</width>
+					<height>20</height>
+					<label></label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>515</posx>
+					<posy>145</posy>
+					<width>450</width>
+					<height>20</height>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, [COLOR=blue]-[/COLOR] ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Player.Hasmedia + !Player.HasAudio + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)</visible>
+				<posy>450</posy>
+				<control type="label">
+					<posx>465</posx>
+					<posy>0</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>13350</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>285</posx>
+					<posy>0</posy>
+					<width>170</width>
+					<height>160</height>
+					<aspectratio>keep</aspectratio>
+					<info>VideoPlayer.Cover</info>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>55</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>465</posx>
+					<posy>145</posy>
+					<width>530</width>
+					<height>20</height>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, [COLOR=blue]-[/COLOR] ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="50">
+			<animation effect="slide" time="0" end="0,70" condition="true">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,90" time="0" condition="!Player.Hasmedia">Conditional</animation>
+			<posx>275</posx>
+			<posy>25</posy>
+			<width>725</width>
+			<height>300</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="744">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="30" width="725">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>685</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>725</posx>
+					<posy>0</posy>
+					<width>650</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="label">
+					<posx>725</posx>
+					<posy>0</posy>
+					<width>650</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<info>ListItem.duration</info>
+					<visible>IsEmpty(ListItem.Label2)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30" width="725">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>725</width>
+					<height>30</height>
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<texture>list-focus.png</texture>
+					<visible>Control.HasFocus(50)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>685</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				<control type="label">
+					<posx>725</posx>
+					<posy>0</posy>
+					<width>650</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label2][/B]</label>
+				</control>
+				<control type="label">
+					<posx>725</posx>
+					<posy>0</posy>
+					<width>650</width>
+					<height>30</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.duration][/B]</label>
+					<visible>IsEmpty(ListItem.Label2)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+</includes>

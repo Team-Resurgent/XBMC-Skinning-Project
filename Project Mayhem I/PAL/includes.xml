@@ -1,0 +1,75 @@
+<includes>
+	<include file="Defaults.xml"/>
+	<include name="ListItemIcon">
+		<control type="image" id="0">
+			<description>Icon Back</description>
+			<posx>60</posx>
+			<posy>370</posy>
+			<width>140</width>
+			<height>140</height>
+			<texture>blue_rectangle_music.png</texture>
+			<visible>Skin.HasSetting(UseListItemIcon) + Control.HasFocus(50) + !Player.HasMedia</visible>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="image" id="0">
+			<description>list icon</description>
+			<posx>65</posx>
+			<posy>375</posy>
+			<width>130</width>
+			<height>130</height>
+			<info>Listitem.Icon</info>
+			<aspectratio>keep</aspectratio>
+			<visible>Skin.HasSetting(UseListItemIcon) + Control.HasFocus(50) + !Player.HasMedia</visible>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+	</include>
+	<include name="Common_Background">
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+	</include>
+	<include name="Catagory_Background_Commons">
+		<posx>50</posx>
+		<posy>50</posy>
+		<height>500</height>
+		<width>650</width>
+		<include>Fade_Window_OpenClose_Animation</include>
+	</include>
+	<include name="Catagory_TitleImage_Commons">
+		<posx>585</posx>
+		<posy>33</posy>
+		<height>90</height>
+		<width>90</width>
+		<colordiffuse>a0ffffff</colordiffuse>
+		<include>Slide_From_Right_Animation</include>
+	</include>
+	<include name="Slide_From_Left_Animation">
+		<animation effect="slide" time="300" start="-720,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="300" start="0,0" end="-720,0" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="Slide_From_Right_Animation">
+		<animation effect="slide" time="300" start="720,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="300" start="0,0" end="720,0" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="Fade_Window_OpenClose_Animation">
+		<animation effect="fade" start="100" end="0" time="300" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	</include>
+	<include name="Fade_Dialog_OpenClose_Animation">
+		<animation effect="fade" start="100" end="0" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	</include>
+</includes>

@@ -1,0 +1,16 @@
+<skin>
+
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+
+  <version>2.1</version>
+
+  <zoom>1.0</zoom>
+
+  <credits>
+     <skinname>CEOMR Media Center</skinname>
+     <name>by ceomr</name>
+     <name>ceomr@gmx.net</name>
+  </credits>
+
+</skin>

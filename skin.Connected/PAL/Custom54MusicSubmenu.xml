@@ -1,0 +1,52 @@
+<window type="Window" id="54">
+<defaultcontrol always="true">2000</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<controls>
+
+<include>Backgrounds</include>
+
+<control type="group">
+  <control type="image">
+    <description>Music Window Image</description>
+    <posx>-15</posx>
+    <posy>510</posy>
+    <width>80</width>
+    <height>80</height>
+    <aspectratio align="left">keep</aspectratio>
+    <texture>HomeMusicThumb.png</texture>
+    <include>ContentImageFade</include>
+  </control>
+  <control type="label">
+    <description>Music Window Title</description>
+    <posx>25</posx>
+    <posy>515</posy>
+    <width>1180</width>
+    <height>80</height>
+    <align>left</align>
+    <aligny>center</aligny>
+    <label>$LOCALIZE[2]</label>
+    <scroll>true</scroll>
+    <font>22BdFont</font>
+    <textcolor>FocusedTextColor</textcolor>
+    <include>ContentTextFade</include>
+  </control>
+  <control type="label" id="12">
+    <description>Number of files label</description>
+    <posx>695</posx>
+    <posy>515</posy>
+    <width>200</width>
+    <height>80</height>
+    <align>right</align>
+    <aligny>center</aligny>
+    <label>-</label>
+    <scroll>true</scroll>
+    <font>22BdFont</font>
+    <textcolor>FocusedTextColor</textcolor>
+    <include>ContentTextFade</include>
+  </control>
+  <include>SubmenuList</include>
+</control>
+
+</controls>
+  
+</window>

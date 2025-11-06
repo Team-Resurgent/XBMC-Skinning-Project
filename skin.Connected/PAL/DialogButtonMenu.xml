@@ -1,0 +1,166 @@
+<window type="dialog" id="111">
+<defaultcontrol always="true">3112</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<coordinates>
+	<system>1</system>
+  <origin x="208" y="170">[!System.HasLocks + !System.HasLoginScreen] | Window.IsVisible(29)</origin>
+  <origin x="208" y="153">[!System.HasLocks + System.HasLoginScreen] | [System.HasLocks + !System.HasLoginScreen] + !Window.IsVisible(29)</origin>
+  <origin x="208" y="135">[System.HasLocks + System.HasLoginScreen] + !Window.IsVisible(29) + !Control.IsVisible(3113)</origin>
+</coordinates>
+
+<include>ButtonMenuFade</include>
+
+  <controls>
+
+    <control type="group">
+      <control type="group" id="1904">
+        <include>OptionBack1-5</include>
+        <visible>[!System.HasLocks + !System.HasLoginScreen] | [Window.IsVisible(29) | Control.IsVisible(3113)]</visible>
+      </control>
+      <control type="group" id="1905">
+        <include>OptionBack1-6</include>
+        <visible>[!System.HasLocks + System.HasLoginScreen + !Window.IsVisible(29)] | [System.HasLocks + !System.HasLoginScreen + !Window.IsVisible(29)]</visible>
+      </control>
+      <control type="group" id="1906">
+        <include>OptionBack1-7</include>
+        <visible>[System.HasLocks + System.HasLoginScreen] + !Window.IsVisible(29) + !Control.IsVisible(3113)</visible>
+      </control>
+      <control type="image">
+        <description>Header Back</description>
+        <width>304</width>
+        <height>45</height>
+        <align>left</align>
+        <texture>ButtonNF.png</texture>
+      </control>
+      <control type="label">
+        <description>Shutdown Header Label</description>
+        <posx>35</posx>
+        <posy>0</posy>
+        <width>268</width>
+        <height>45</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[31026]</label>
+        <font>22BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+      </control>
+
+      <control type="list" id="3112">
+        <description>Menu Buttons</description>
+        <posx>0</posx>
+        <posy>55</posy>
+        <width>284</width>
+        <height>245</height>
+        <onup>3112</onup>
+        <ondown>3112</ondown>
+        <onleft>-</onleft>
+        <onright>-</onright>
+        <orientation>vertical</orientation>
+        <scrolltime>200</scrolltime>
+        <itemgap>0</itemgap>
+        <animation effect="fade" time="300" end="100">WindowOpen</animation>
+        <visible allowhiddenfocus="true">!Control.HasFocus(3113)</visible>
+        <itemlayout height="35" width="284">
+          <control type="label">
+            <posx>50</posx>
+            <posy>0</posy>
+            <width>284</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>18BdFont</font>
+            <textcolor>DefaultTextColor</textcolor>
+            <info>listitem.label</info>
+            <scroll>false</scroll>
+          </control>
+        </itemlayout>
+        <focusedlayout height="35" width="284">
+          <control type="label">
+            <posx>50</posx>
+            <posy>0</posy>
+            <width>284</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>18BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <info>listitem.label</info>
+          </control>
+        </focusedlayout>
+        <content>
+          <item id="1">
+            <description>MasterMode</description>
+            <label>$LOCALIZE[20046]</label>
+            <onclick>xbmc.mastermode</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>System.HasLocks + System.IsMaster</visible>
+          </item>
+          <item id="1">
+            <description>Enter MasterMode</description>
+            <label>$LOCALIZE[20045]</label>
+            <onclick>xbmc.mastermode</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>System.HasLocks + !System.IsMaster + !Window.IsVisible(29)</visible>
+          </item>
+          <item id="2">
+            <description>Log Off</description>
+            <label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+            <onclick>system.logoff</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>System.HasLoginScreen + !Window.IsVisible(29)</visible>
+          </item>
+          <item id="3">
+            <description>Suspend</description>
+            <label>$LOCALIZE[13011]</label>
+            <onclick>XBMC.Suspend()</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>!system.platform.xbox</visible>
+          </item>
+          <item id="4">
+            <description>Shutdown</description>
+            <label>$LOCALIZE[13005]</label>
+            <onclick>XBMC.Shutdown()</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+          </item>
+          <item id="5">
+            <description>Hibernate</description>
+            <label>$LOCALIZE[13010]</label>
+            <onclick>XBMC.Hibernate()</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>!system.platform.xbox</visible>
+          </item>
+          <item id="5">
+            <description>Restart XBMC</description>
+            <label>$LOCALIZE[13313] XBMC</label>
+            <onclick>XBMC.RestartApp</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>system.platform.xbox</visible>
+          </item>
+          <item id="6">
+            <description>Reset (warm reboot)</description>
+            <label>$LOCALIZE[13013]</label>
+            <onclick>XBMC.Reset()</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+          </item>
+          <item id="7">
+            <description>Exit</description>
+            <label>$LOCALIZE[13012]</label>
+            <onclick>XBMC.Quit()</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>!system.platform.xbox</visible>
+          </item>
+          <item id="7">
+            <description>Dashboard</description>
+            <label>$LOCALIZE[13006]</label>
+            <onclick>XBMC.Quit()</onclick>
+            <onclick>Dialog.Close(111)</onclick>
+            <visible>system.platform.xbox</visible>
+          </item>
+        </content>
+      </control>
+    </control>
+    
+  </controls>
+	
+</window>

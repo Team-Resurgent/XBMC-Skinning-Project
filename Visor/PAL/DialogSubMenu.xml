@@ -1,0 +1,310 @@
+<window>
+  <id>105</id>
+
+  <!--  Change the defaultcontrol ID to have another button focussed when  !-->
+  <!--  you bring the panel up.                                            !-->
+  <!--  (look for this tag: <id>1123</id> on the button u want to focus)   !-->
+
+        <defaultcontrol>1111</defaultcontrol>
+        <coordinates>
+          <system>1</system>
+          <posX>520</posX>
+          <posY>100</posY>
+        </coordinates>
+
+        <controls>
+          <control>
+            <type>image</type>
+            <id>0</id>
+            <posX>10</posX>
+            <posY>15</posY>
+            <width>160</width>
+            <height>440</height>
+            <texture>subpanel.png</texture>
+          </control>
+
+  <!--  To add another button to the submenu, just put in your hyperlink,  !-->
+  <!--  give it the desired label and set visible to YES!                  !-->
+  <!--  Make sure you start from the bottom... Scroll down!                !-->
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1123</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>110</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1123</onleft>
+                  <onright>1123</onright>
+                  <onup>1125</onup>
+                  <ondown>1122</ondown>
+                  <align>center</align>
+                  <textOffsetY>-1</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1122</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>130</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1122</onleft>
+                  <onright>1122</onright>
+                  <onup>1123</onup>
+                  <ondown>1121</ondown>
+                  <align>center</align>
+                  <textOffsetY>-1</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1121</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>150</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1121</onleft>
+                  <onright>1121</onright>
+                  <onup>1122</onup>
+                  <ondown>1120</ondown>
+                  <align>center</align>
+                  <textOffsetY>-1</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1120</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>170</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1120</onleft>
+                  <onright>1120</onright>
+                  <onup>1121</onup>
+                  <ondown>1119</ondown>
+                  <align>center</align>
+                  <textOffsetY>0</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1119</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>190</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1119</onleft>
+                  <onright>1119</onright>
+                  <onup>1120</onup>
+                  <ondown>1118</ondown>
+                  <align>center</align>
+                  <textOffsetY>0</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1118</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>210</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1118</onleft>
+                  <onright>1118</onright>
+                  <onup>1119</onup>
+                  <ondown>1117</ondown>
+                  <align>center</align>
+                  <textOffsetY>0</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1117</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>230</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1117</onleft>
+                  <onright>1117</onright>
+                  <onup>1118</onup>
+                  <ondown>1116</ondown>
+                  <align>center</align>
+                  <textOffsetY>0</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>no</visible>
+                  <type>button</type>				<execute>q:\scripts\-.py</execute>
+                  <id>1116</id>					<label>-</label>
+                  <posX>30</posX>
+                  <posY>250</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1116</onleft>
+                  <onright>1116</onright>
+                  <onup>1117</onup>
+                  <ondown>1115</ondown>
+                  <align>center</align>
+                  <textOffsetY>0</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>yes</visible>
+                  <type>button</type>				<execute>q:\scripts\AQTbrowser.py</execute>
+                  <id>1115</id>					<label>Movie Trailers</label>
+                  <posX>30</posX>
+                  <posY>270</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1115</onleft>
+                  <onright>1115</onright>
+                  <onup>1116</onup>
+                  <ondown>1114</ondown>
+                  <align>center</align>
+                  <textOffsetY>0</textOffsetY>
+                </control>
+
+                <control>
+                  <description>webradio button</description>	<visible>yes</visible>
+                  <type>button</type>				<execute>q:\scripts\simplekml.py</execute>
+                  <id>1114</id>					<label>Web Radio</label>
+                  <posX>30</posX>
+                  <posY>290</posY>
+                  <width>110</width>
+                  <height>20</height>
+                  <font>font101</font>
+                  <onleft>1114</onleft>
+                  <onright>1114</onright>
+                  <onup>1115</onup>
+                  <ondown>1111</ondown>
+                  <align>center</align>
+                  <textOffsetY>0</textOffsetY>
+                </control>
+
+  <!--  Start from here going up, if you want to add new buttons           !-->
+  <!--  To link direct to a script,xbe/audio/video file use (eg): !-->
+  <!--  <execute>F:\Emulators\ScummVMx\default.xbe</execute> !-->
+  <!--  See the WebRadio button as example.                                !-->
+  <!--  To link to a XBMC screen use <hyperlink>windowID</hyperlink>       !-->
+  <!--  See System Info button below as example.                           !-->
+
+                            <control>
+                              <description>system info button</description>
+                              <type>button</type>
+                              <id>1111</id>
+                              <posX>30</posX>
+                              <posY>310</posY>
+                              <width>110</width>
+                              <height>20</height>
+                              <hyperlink>7</hyperlink>
+                              <label>130</label>
+                              <font>font101</font>
+                              <onleft>1111</onleft>
+                              <onright>1111</onright>
+                              <onup>1114</onup>
+                              <ondown>1112</ondown>
+                              <align>center</align>
+                              <textOffsetY>0</textOffsetY>
+                            </control>
+
+                            <control>
+                              <description>Profiles button</description>
+                              <type>button</type>
+                              <id>1112</id>
+                              <posX>30</posX>
+                              <posY>330</posY>
+                              <width>110</width>
+                              <height>20</height>
+                              <hyperlink>34</hyperlink>
+                              <label>13200</label>
+                              <font>font101</font>
+                              <onleft>1112</onleft>
+                              <onright>1112</onright>
+                              <onup>1111</onup>
+                              <ondown>1113</ondown>
+                              <align>center</align>
+                              <textOffsetY>0</textOffsetY>
+                            </control>
+
+                            <control>
+                              <description>scripts button</description>
+                              <type>button</type>
+                              <id>1113</id>
+                              <posX>30</posX>
+                              <posY>350</posY>
+                              <width>110</width>
+                              <height>20</height>
+                              <hyperlink>20</hyperlink>
+                              <label>247</label>
+                              <font>font101</font>
+                              <onleft>1113</onleft>
+                              <onright>1113</onright>
+                              <onup>1112</onup>
+                              <ondown>1124</ondown>
+                              <align>center</align>
+                              <textOffsetY>0</textOffsetY>
+                            </control>
+
+                            <control>
+                              <description>settings button</description>
+                              <type>button</type>
+                              <id>1124</id>
+                              <posX>30</posX>
+                              <posY>370</posY>
+                              <width>110</width>
+                              <height>20</height>
+                              <hyperlink>4</hyperlink>
+
+                              <label>5</label>
+                              <font>font101</font>
+                              <onleft>1124</onleft>
+                              <onright>1124</onright>
+                              <onup>1113</onup>
+                              <ondown>1125</ondown>
+                              <align>center</align>
+                              <textOffsetY>0</textOffsetY>
+                            </control>
+                     <control>
+                              <description>xplorer button</description>
+                              <type>button</type>
+                              <id>1125</id>
+                              <posX>30</posX>
+                              <posY>390</posY>
+                              <width>110</width>
+                              <height>20</height>
+                              <hyperlink>3</hyperlink>
+
+                              <label>7</label>
+                              <font>font101</font>
+                              <onleft>1125</onleft>
+                              <onright>1125</onright>
+                              <onup>1124</onup>
+                              <ondown>1123</ondown>
+                              <align>center</align>
+                              <textOffsetY>0</textOffsetY>
+                            </control>
+
+                             
+
+                            
+
+                          </controls>
+
+                        </window>
+

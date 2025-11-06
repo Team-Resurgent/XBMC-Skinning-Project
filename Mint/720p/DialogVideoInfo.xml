@@ -1,0 +1,665 @@
+<window id="2003">
+
+	<defaultcontrol>700</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+	
+		<!-- background -->
+		<control type="image">
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="group">
+			
+			<posx>40</posx>
+			<posy>80</posy>
+
+			<!-- background -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>1200</width>
+				<height>600</height>
+			</control>
+			
+			<!-- plot / cast -->
+			<control type="group">
+				<posx>480</posx>
+				<posy>240</posy>
+				<control type="image">
+					<texture border="4">container-back-nf.png</texture>
+					<width>670</width>
+					<height>350</height>
+				</control>
+				<!-- plot -->
+				<control type="textbox">
+					<visible>!Control.IsVisible(50)</visible>
+					<label>$INFO[ListItem.TagLine,[COLOR type-listitem-dark]Tagline[/COLOR] ,[CR][CR]]$INFO[ListItem.PlotOutline,[COLOR type-listitem-dark]Plot Outline[/COLOR] ,[CR][CR]]$INFO[ListItem.Plot,[COLOR type-listitem-dark]Plot[/COLOR] ]</label>
+					<width>650</width>
+					<height>330</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<font>listitem-small</font>
+					<textcolor>type-listitem</textcolor>
+					<onleft>9100</onleft>
+					<onright>9100</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					<pagecontrol>700</pagecontrol>
+					<autoscroll delay="2000" time="5000" repeat="5000">!Control.HasFocus(9000)</autoscroll>
+				</control>
+				<!-- cast list -->
+				<control type="list" id="50">
+					<width>650</width>
+					<height>330</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<onleft>9100</onleft>
+					<onright>700</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<pagecontrol>700</pagecontrol>
+					<itemlayout height="42">
+						<control type="image">
+							<texture>listitem-back-nf.png</texture>
+							<width>665</width>
+							<height>32</height>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<width>635</width>
+							<height>32</height>
+							<posx>10</posx>
+							<font>listitem-small</font>
+							<textcolor>type-listitem-dark</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="42">
+						<control type="image">
+							<visible>Control.HasFocus(50)</visible>
+							<texture>listitem-back.png</texture>
+							<width>665</width>
+							<height>32</height>
+						</control>
+						<control type="image">
+							<visible>!Control.HasFocus(50)</visible>
+							<texture>listitem-back-nf.png</texture>
+							<width>665</width>
+							<height>32</height>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<width>635</width>
+							<height>32</height>
+							<posx>10</posx>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+					</focusedlayout>
+				</control>
+				<!-- scrollbar -->
+				<control type="scrollbar" id="700">
+					<width>30</width>
+					<height>350</height>
+					<posx>680</posx>
+					<onleft>50</onleft>
+					<onright>9100</onright>
+					<showonepage>true</showonepage>
+				</control>
+			</control>
+					
+			<!-- general and movies view -->
+			<control type="group">
+			
+				<visible>!Container.Content(tvshows)</visible>
+				<visible>!Container.Content(episodes)</visible>
+				
+				<!-- cover / actor image -->
+				<control type="group">
+					<posx>10</posx>
+					<posy>10</posy>
+					<control type="image">
+						<texture border="4">container-back-nf.png</texture>
+						<width>460</width>
+						<height>580</height>
+					</control>
+					<!-- cover -->
+					<control type="image">
+						<visible>!Control.IsVisible(50)</visible>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>440</width>
+						<height>560</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+					<!-- actor image -->
+					<control type="image">
+						<visible>Control.IsVisible(50)</visible>
+						<texture>$INFO[Container(50).ListItem.Thumb]</texture>
+						<width>440</width>
+						<height>560</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+				</control>
+				
+				<!-- content -->
+				<control type="group">
+				
+					<posx>480</posx>
+					<posy>10</posy>
+					
+					<control type="image">
+						<texture border="4">container-back-nf.png</texture>
+						<width>710</width>
+						<height>220</height>
+					</control>
+					<control type="grouplist">
+					
+						<posx>10</posx>
+						<posy>10</posy>
+						
+						<!-- title -->
+						<control type="label">
+							<label>$INFO[Listitem.Title]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem-header</textcolor>
+						</control>
+						<!-- year -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Year,[COLOR type-listitem-dark]Year:[/COLOR] ]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						<!-- duration -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Duration,[COLOR type-listitem-dark]Duration:[/COLOR] ]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						<!-- genre -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Genre,[COLOR type-listitem-dark]Genre:[/COLOR] ]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						<!-- mpaa rating -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.MPAA,[COLOR type-listitem-dark]MPAA:[/COLOR] ]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						
+						<!-- directors -->
+						<control type="label" id="21">
+							<visible>Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Director,[COLOR type-listitem-dark]Directors:[/COLOR] ]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						<!-- writers -->
+						<control type="label" id="22">
+							<visible>Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Writer,[COLOR type-listitem-dark]Writers:[/COLOR] ]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						<!-- studio -->
+						<control type="label" id="36">
+							<visible>Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Studio,[COLOR type-listitem-dark]Studio:[/COLOR] ]</label>
+							<width>690</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						
+					</control>	
+				</control>
+				
+			</control>
+		
+			<!-- tv show view -->
+			<control type="group">
+			
+				<visible>Container.Content(tvshows)</visible>
+				
+				<!-- tv show banner -->
+				<control type="group">
+					<posx>10</posx>
+					<posy>10</posy>
+					<control type="image">
+						<texture border="4">container-back-nf.png</texture>
+						<width>1180</width>
+						<height>220</height>
+					</control>
+					<!-- banner -->
+					<control type="image" id="3">
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<width>1160</width>
+						<height>200</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+				</control>
+				
+				<!-- content -->
+				<control type="group">
+					<posx>10</posx>
+					<posy>240</posy>
+					<control type="image">
+						<texture border="4">container-back-nf.png</texture>
+						<width>460</width>
+						<height>350</height>
+					</control>
+					<control type="grouplist">
+						<posx>10</posx>
+						<posy>10</posy>
+						<!-- title -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[Listitem.Title]</label>
+							<width>440</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem-header</textcolor>
+						</control>
+						<!-- first aired -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Premiered,[COLOR type-listitem-dark]Premiered:[/COLOR] ]</label>
+							<width>440</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						<!-- episode count -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Episode,[COLOR type-listitem-dark]Episodes:[/COLOR] ]</label>
+							<width>250</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+						<!-- genre -->
+						<control type="label">
+							<visible>!Control.IsVisible(50)</visible>
+							<label>$INFO[ListItem.Genre,[COLOR type-listitem-dark]Genre:[/COLOR] ]</label>
+							<width>250</width>
+							<height>40</height>
+							<font>listitem-small</font>
+							<textcolor>type-listitem</textcolor>
+						</control>
+					</control>
+					<!-- actor image -->
+					<control type="image">
+						<visible>Control.IsVisible(50)</visible>
+						<texture>$INFO[Container(50).ListItem.Thumb]</texture>
+						<width>440</width>
+						<height>330</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+					</control>
+	
+				</control>
+			</control>
+	
+			<!-- episode view -->
+			<control type="group">
+			
+				<visible>Container.Content(episodes)</visible>
+				
+				<!-- tv show banner / episode screen -->
+				<control type="group">
+					<posx>20</posx>
+					<posy>20</posy>
+					<!-- outline -->
+					<control type="image">
+						<texture border="4">input-nofocus.png</texture>
+						<width>1240</width>
+						<height>200</height>
+					</control>
+					<!-- screen -->
+					<control type="image" id="3">
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<width>1220</width>
+						<height>180</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+				</control>
+				
+				<!-- content -->
+				<control type="group">
+					<posx>20</posx>
+					<posy>230</posy>
+					<!-- outline -->
+					<control type="image">
+						<texture border="4">input-nofocus.png</texture>
+						<width>1240</width>
+						<height>390</height>
+					</control>
+					<!-- show title -->
+					<control type="label">
+						<label>$INFO[ListItem.TVShowTitle]</label>
+						<width>500</width>
+						<height>40</height>
+						<posx>20</posx>
+						<posy>5</posy>
+						<font>info</font>
+						<textcolor>type-info-header</textcolor>
+					</control>
+					<!-- episode title -->
+					<control type="label">
+						<label>$INFO[ListItem.Title]</label>
+						<width>500</width>
+						<height>40</height>
+						<posx>500</posx>
+						<posy>5</posy>
+						<font>info</font>
+						<textcolor>type-info-header</textcolor>
+					</control>
+					<!-- show with plot -->
+					<control type="group">
+						<visible>!Control.IsVisible(50)</visible>
+						<!-- first aired -->
+						<control type="label">
+							<label>Premiered</label>
+							<width>200</width>
+							<height>40</height>
+							<posx>20</posx>
+							<posy>50</posy>
+							<font>info</font>
+							<textcolor>type-info-dark</textcolor>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Premiered]</label>
+							<width>250</width>
+							<height>40</height>
+							<posx>220</posx>
+							<posy>50</posy>
+							<font>info</font>
+							<textcolor>type-info</textcolor>
+						</control>
+						<!-- season -->
+						<control type="label">
+							<label>Season</label>
+							<width>200</width>
+							<height>40</height>
+							<posx>20</posx>
+							<posy>100</posy>
+							<font>info</font>
+							<textcolor>type-info-dark</textcolor>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Season]</label>
+							<width>250</width>
+							<height>40</height>
+							<posx>220</posx>
+							<posy>100</posy>
+							<font>info</font>
+							<textcolor>type-info</textcolor>
+						</control>
+						<!-- episode count -->
+						<control type="label">
+							<label>Episode</label>
+							<width>200</width>
+							<height>40</height>
+							<posx>20</posx>
+							<posy>150</posy>
+							<font>info</font>
+							<textcolor>type-info-dark</textcolor>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Episode]</label>
+							<width>250</width>
+							<height>40</height>
+							<posx>220</posx>
+							<posy>150</posy>
+							<font>info</font>
+							<textcolor>type-info</textcolor>
+						</control>
+						<!-- Genre -->
+						<control type="label">
+							<label>Genre</label>
+							<width>200</width>
+							<height>40</height>
+							<posx>20</posx>
+							<posy>200</posy>
+							<font>info</font>
+							<textcolor>type-info-dark</textcolor>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Genre]</label>
+							<width>250</width>
+							<height>40</height>
+							<posx>220</posx>
+							<posy>200</posy>
+							<font>info</font>
+							<textcolor>type-info</textcolor>
+						</control>
+						<!-- Director -->
+						<control type="label">
+							<label>Directors</label>
+							<width>200</width>
+							<height>40</height>
+							<posx>20</posx>
+							<posy>250</posy>
+							<font>info</font>
+							<textcolor>type-info-dark</textcolor>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Director]</label>
+							<width>250</width>
+							<height>40</height>
+							<posx>220</posx>
+							<posy>250</posy>
+							<font>info</font>
+							<textcolor>type-info</textcolor>
+						</control>
+						<!-- writer -->
+						<control type="label">
+							<label>Writers</label>
+							<width>200</width>
+							<height>40</height>
+							<posx>20</posx>
+							<posy>300</posy>
+							<font>info</font>
+							<textcolor>type-info-dark</textcolor>
+						</control>
+						<control type="label">
+							<label>$INFO[ListItem.Writer]</label>
+							<width>250</width>
+							<height>40</height>
+							<posx>220</posx>
+							<posy>300</posy>
+							<font>info</font>
+							<textcolor>type-info</textcolor>
+						</control>
+					</control>
+					<!-- show with cast -->
+					<control type="group">
+						<visible>Control.IsVisible(50)</visible>
+						<!-- outline -->
+						<control type="image">
+						   <texture border="4">input-nofocus.png</texture>
+						   <width>460</width>
+						   <height>330</height>
+						   <posx>20</posx>
+						   <posy>50</posy>
+						</control>
+						<!-- actor image -->
+						<control type="image">
+							<texture>$INFO[Container(50).ListItem.Thumb]</texture>
+							<width>440</width>
+							<height>310</height>
+							<posx>30</posx>
+							<posy>60</posy>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+						</control>
+					</control>
+	
+				</control>
+			</control>
+		</control>
+	
+		<!-- header -->
+		<control type="group">
+
+			<!-- mint logo
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control> -->
+			<!-- window name -->
+			<!-- general label -->
+			<control type="label">
+				<visible>!Container.Content(movies)</visible>
+				<visible>!Container.Content(tvshows)</visible>
+				<visible>!Container.Content(episodes)</visible>
+				<visible>!Container.Content(musicvideos)</visible>
+				<label>Video Information</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- movie label -->
+			<control type="label">
+				<visible>Container.Content(movies)</visible>
+				<label>Movie Information</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- show label -->
+			<control type="label">
+				<visible>Container.Content(tvshows)</visible>
+				<label>Show Information</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- episode label -->
+			<control type="label">
+				<visible>Container.Content(episodes)</visible>
+				<label>Episode Information</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- music video label -->
+			<control type="label">
+				<visible>Container.Content(musicvideos)</visible>
+				<label>Music Video Information</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, |]  $INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+				<align>right</align>
+			</control>
+		</control>					
+		
+		<!-- view options -->
+		<control type="group">
+		
+			<posx>1280</posx>
+			<posy>20</posy>
+			
+			<include>anim-sidebar</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>black.png</texture>
+				<width>400</width>
+				<height>680</height>
+				<colordiffuse>sidebar</colordiffuse>
+			</control>
+			
+			<control type="grouplist" id="9100">
+				<width>360</width>
+				<height>680</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<onleft>700</onleft>
+				<onright>700</onright>
+				<onup>9100</onup>
+				<ondown>9100</ondown>
+				
+				<!-- plot/cast button -->
+				<control type="button" id ="5">
+					<label>Plot / Cast</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- get thumb -->
+				<control type="button" id ="10">
+					<label>Get Thumb</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- refresh -->
+				<control type="button" id ="6">
+					<label>Refresh</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- play -->
+				<control type="button" id ="8">
+					<visible>!Container.Content(tvshows)</visible>
+					<label>Play</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- resume -->
+				<control type="button" id ="9">
+					<visible>!Container.Content(tvshows)</visible>
+					<label>Resume</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- trailer -->
+				<control type="button" id ="11">
+					<visible>!IsEmpty(ListItem.Trailer)</visible>
+					<label>Trailer</label>
+					<include>type-sidebar</include>
+				</control>
+			</control>
+		</control>
+		
+	</controls>
+	
+</window>

@@ -1,0 +1,58 @@
+<window id="2007">
+	<defaultcontrol>1</defaultcontrol>
+	<controls>
+		<!-- media infos -->
+		<control type="group" id="1">
+			<posx>0</posx>
+			<posy>620</posy>
+			<visible>Player.ShowInfo + Player.HasMedia</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>640</width>
+				<height>90</height>
+				<texture border="6">Slider_focus_right.png</texture>
+			</control>
+			<control type="group">
+				<control type="image" id="1">
+					<description>cover image</description>
+					<posx>30</posx>
+					<posy>10</posy>
+					<width>70</width>
+					<height>70</height>
+					<info>MusicPlayer.Cover</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label" id="1">
+					<posx>120</posx>
+					<posy>20</posy>
+					<font>font12</font>
+					<align>left</align>
+					<info>MusicPlayer.Artist</info>
+					<width>540</width>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="1">
+					<posx>120</posx>
+					<posy>43</posy>
+					<font>font13</font>
+					<align>left</align>
+					<info>MusicPlayer.Title</info>
+					<textcolor>red</textcolor>
+					<width>540</width>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="1">
+					<posx>120</posx>
+					<posy>70</posy>
+					<font>font12</font>
+					<align>left</align>
+					<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+					<width>540</width>
+					<aligny>center</aligny>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

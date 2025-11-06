@@ -1,0 +1,139 @@
+<window id="115">
+	<defaultcontrol>1</defaultcontrol>
+	<visible>Window.IsActive(PlayerControls) | Player.Seeking | Player.DisplayAfterSeek | [Player.ShowInfo + Window.IsActive(FullScreenVideo)] | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<coordinates>
+		<system>1</system>
+		<posx>160</posx>
+		<posy>35</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>slider underlay left</description>
+			<posx>0</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>40</height>
+			<texture>dropdown-end.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>slider underlay middle</description>
+			<posx>20</posx>
+			<posy>20</posy>
+			<width>360</width>
+			<height>40</height>
+			<texture>dropdown-mid.png</texture>
+		</control>
+		<control type="image">
+			<description>slider underlay right</description>
+			<posx>380</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>40</height>
+			<texture flipx="true">dropdown-end.png</texture>
+		</control>
+<!-- Playstate Images -->
+		<control type="image">
+			<description>Playing</description>
+			<posx>26</posx>
+			<posy>27</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture>osd-play.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>![Player.Forwarding | Player.Rewinding | Player.Paused]</visible>
+		</control>
+		<control type="image">
+			<description>Paused</description>
+			<posx>26</posx>
+			<posy>27</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture>osd-pause.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Player.Paused</visible>
+		</control>
+		<control type="image">
+			<description>Rewinding</description>
+			<posx>26</posx>
+			<posy>27</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture>osd-rewind.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Player.Rewinding</visible>
+		</control>
+		<control type="image">
+			<description>Forwarding</description>
+			<posx>26</posx>
+			<posy>27</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture>osd-ff.png</texture>
+			<colordiffuse>object-color</colordiffuse>
+			<visible>Player.Forwarding</visible>
+		</control>
+		<control type="label">
+			<description>Elapsed Time Label</description>
+			<posx>127</posx>
+			<posy>28</posy>
+			<font>font10</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<info>Player.Time</info>
+			<width>100</width>
+			<height>16</height>
+			<visible>!Player.Seeking</visible>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label">
+			<description>Seek Time Label</description>
+			<posx>127</posx>
+			<posy>28</posy>
+			<font>font10</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<info>Player.SeekTime</info>
+			<width>100</width>
+			<height>16</height>
+			<visible>Player.Seeking</visible>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label">
+			<description>Duration Label</description>
+			<posx>132</posx>
+			<posy>28</posy>
+			<label>$INFO[Player.Duration,/ ]</label>
+			<font>font10</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<width>100</width>
+			<height>16</height>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="image">
+			<description>fake slider background</description>
+			<posx>205</posx>
+			<posy>38</posy>
+			<width>160</width>
+			<height>3</height>
+			<texture>progress.png</texture>
+			<colordiffuse>icon-nf-color</colordiffuse>
+		</control>
+		<control type="slider">
+			<description>Seek Slider</description>
+			<posx>205</posx>
+			<posy>30</posy>
+			<width>160</width>
+			<height>10</height>
+			<info>Player.Progress</info>
+			<texturesliderbar>blank.png</texturesliderbar>
+			<textureslidernib>progress-nib.png</textureslidernib>
+			<textureslidernibfocus>progress-nib.png</textureslidernibfocus>
+			<colordiffuse>object-color</colordiffuse>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+	</controls>
+</window>

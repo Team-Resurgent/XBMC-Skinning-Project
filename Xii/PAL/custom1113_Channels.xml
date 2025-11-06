@@ -1,0 +1,956 @@
+<window id="1113">
+	<defaultcontrol always="true">20</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-blackbase.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>background middle overlay</description>
+			<posx>0</posx>
+			<posy>85</posy>
+			<width>720</width>
+			<height>367</height>
+			<texture>background-black2.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>white tab image 1</description>
+			<posx>25</posx>
+			<posy>48</posy>
+			<width>400</width>
+			<height>33</height>
+			<texture>background-tab-grey.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>white tab image 2</description>
+			<posx>65</posx>
+			<posy>40</posy>
+			<width>400</width>
+			<height>41</height>
+			<texture>background-tab-white.png</texture>
+		</control>
+		
+		<control id="2" type="label">
+  		<description>white tab label 1</description>
+    	<posx>75</posx> 
+    	<posy>43</posy>
+			<height>41</height>
+    	<align>left</align> 
+			<font>font28</font>
+			<include>4i</include>
+			<include>textcolorblack</include>
+		</control>
+		
+<!-- Global Options -->
+		<control type="group" id="9000">
+			<include>contentpanelslide</include>
+      <control type="image">
+        <description>Left Fading button</description>
+        <posx>125</posx>
+        <posy>92</posy>
+        <width>150</width>
+        <height>33</height>
+        <texture diffuse="fade2.png">button-long-nofocus.png</texture>
+  		</control>
+      <control type="image">
+        <description>Left Arrow</description>
+        <posx>177</posx>
+        <posy>97</posy>
+        <width>25</width>
+        <height>25</height>
+        <texture>scroll-left.png</texture>
+      </control>
+      <control type="image">
+        <description>Middle Focus</description>
+        <posx>285</posx>
+        <posy>92</posy>
+        <width>150</width>
+        <height>33</height>
+        <texture>button-long-nofocus.png</texture>
+      </control>
+      <control type="image">
+        <description>Right Fading button</description>
+        <posx>445</posx>
+        <posy>92</posy>
+        <width>150</width>
+        <height>33</height>
+        <texture diffuse="fade1.png">button-long-nofocus.png</texture>
+      </control>
+      <control type="image">
+        <description>Right Arrow</description>
+        <posx>518</posx>
+        <posy>97</posy>
+        <width>25</width>
+        <height>25</height>
+        <texture>scroll-right.png</texture>
+      </control>
+		</control>
+		 
+<!-- Channel Options !-->
+
+<!-- Channel 10 !-->
+		<control type="group" id="9000">
+			<include>contentpanelslide</include>
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
+			<control type="button" id="20">
+				<description>Button 10 focus label</description>
+				<posx>285</posx>
+				<posy>92</posy>
+				<width>150</width>
+				<height>33</height>
+				<onleft>50</onleft>
+    		<onright>30</onright>
+    		<onup>20</onup>
+    		<ondown>23</ondown>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus>button-long-focus.png</texturefocus>
+				<texturenofocus>button-long-nofocus.png</texturenofocus>
+				<scroll>true</scroll>
+				<include>channel10</include>
+				<include>textcolorblack</include>
+			</control>
+			<control type="radiobutton" id="23">
+				<description>enable button 10</description>
+				<posx>135</posx>
+				<posy>130</posy>
+				<width>445</width>
+				<include>chanenable10</include>
+				<onclick>Skin.ToggleSetting(Button10set)</onclick>
+				<selected>Skin.HasSetting(Button10set)</selected>
+				<onleft>23</onleft>
+				<onright>23</onright>
+				<onup>20</onup>
+				<ondown>24</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="24">
+				<description>Set button 10 image</description>
+				<posx>135</posx>
+				<posy>170</posy>
+				<width>445</width>
+				<include>chanimage</include>
+				<onclick>Skin.SetImage(Button10image)</onclick>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>23</onup>
+				<ondown>25</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="24">
+				<description>Set button 10 image path display</description>
+				<posx>570</posx>
+				<posy>178</posy>
+				<width>250</width>
+				<info>Skin.String(Button10image)</info>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="25">
+				<description>Set button 10 label</description>
+				<posx>135</posx>
+				<posy>210</posy>
+				<width>445</width>
+				<include>chanlabel</include>
+				<onclick>Skin.SetString(Button10label)</onclick>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>24</onup>
+				<ondown>26</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="25">
+				<description>Set button 10 label display</description>
+				<posx>570</posx>
+				<posy>215</posy>
+				<width>250</width>
+				<info>Skin.String(Button10label)</info>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="26">
+				<description>Set button 10 script</description>
+				<posx>135</posx>
+				<posy>250</posy>
+				<width>445</width>
+				<include>chanscript</include>
+				<onclick>Skin.Reset(Button10xbe)</onclick>
+				<onclick>Skin.SetPath(Button10script)</onclick>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>25</onup>
+				<ondown>27</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="26">
+				<description>Set button 10 script path display</description>
+				<posx>570</posx>
+				<posy>255</posy>
+				<width>250</width>
+				<info>Skin.String(Button10script)</info>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="label" id="26">
+				<description>OR</description>
+				<posx>235</posx>
+				<posy>278</posy>
+				<width>250</width>
+				<include>chanor</include>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="27">
+				<description>Set button 10 xbe</description>
+				<posx>135</posx>
+				<posy>293</posy>
+				<width>445</width>
+				<include>chanxbe</include>
+				<onclick>Skin.Reset(Button10script)</onclick>
+				<onclick>Skin.SetPath(Button10xbe)</onclick>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>26</onup>
+				<ondown>29</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="26">
+				<description>Set button 10 xbe path display</description>
+				<posx>570</posx>
+				<posy>295</posy>
+				<width>250</width>
+				<info>Skin.String(Button10xbe)</info>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="image" id="28">
+				<description>Button Plain</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<texture>chan-plain.png</texture>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>26</onup>
+				<ondown>9900</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+				<visible>Skin.String(Button10image)</visible>
+			</control>		
+			<control type="image" id="28">
+				<description>Button 10 Image</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<info>Skin.String(button10image)</info>
+				<visible>Skin.HasSetting(Button10set)</visible>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>26</onup>
+				<ondown>9900</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>				
+  		<control type="button" id="29">
+    		<description>Back</description>
+    		<posx>35</posx>
+    		<posy>465</posy>
+    		<width>316</width>
+    		<height>79</height>
+    		<include>backlabel</include>
+    		<font>font28</font>
+    		<align>center</align>
+    		<aligny>center</aligny>
+    		<include>textcolorblack</include>
+    		<onclick>ActivateWindow(1110)</onclick>
+    		<onleft>29</onleft>
+    		<onright>29</onright>
+    		<onup>27</onup>
+    		<ondown>29</ondown>
+    		<texturefocus>button-big-focus.png</texturefocus>
+    		<texturenofocus>button-big-nofocus.png</texturenofocus>
+  			<include>homebuttonanimation</include>
+  		</control>
+		</control>
+
+<!-- Channel 11 !-->
+		<control type="group" id="9001">
+			<include>contentpanelslide</include>
+			<visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(0)</visible>
+			<control type="button" id="30">
+				<description>Button 11 focus label</description>
+				<posx>285</posx>
+				<posy>92</posy>
+				<width>150</width>
+				<height>33</height>
+				<onleft>20</onleft>
+    		<onright>40</onright>
+    		<onup>30</onup>
+    		<ondown>31</ondown>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus>button-long-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<scroll>true</scroll>
+				<include>channel11</include>
+				<include>textcolorblack</include>
+			</control>
+			<control type="radiobutton" id="31">
+				<description>enable button 11</description>
+				<posx>135</posx>
+				<posy>130</posy>
+				<width>445</width>
+				<include>chanenable11</include>
+				<onclick>Skin.ToggleSetting(Button11set)</onclick>
+				<selected>Skin.HasSetting(Button11set)</selected>
+				<onleft>31</onleft>
+				<onright>31</onright>
+				<onup>30</onup>
+				<ondown>32</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="32">
+				<description>Set button 11 image</description>
+				<posx>135</posx>
+				<posy>170</posy>
+				<width>445</width>
+				<include>chanimage</include>
+				<onclick>Skin.SetImage(Button11image)</onclick>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<onleft>32</onleft>
+				<onright>32</onright>
+				<onup>31</onup>
+				<ondown>33</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="32">
+				<description>Set button 11 image path display</description>
+				<posx>570</posx>
+				<posy>178</posy>
+				<width>250</width>
+				<info>Skin.String(Button11image)</info>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="33">
+				<description>Set button 11 label</description>
+				<posx>135</posx>
+				<posy>210</posy>
+				<width>445</width>
+				<include>chanlabel</include>
+				<onclick>Skin.SetString(Button11label)</onclick>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<onleft>33</onleft>
+				<onright>33</onright>
+				<onup>32</onup>
+				<ondown>34</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="33">
+				<description>Set button 11 label display</description>
+				<posx>570</posx>
+				<posy>215</posy>
+				<width>250</width>
+				<info>Skin.String(Button11label)</info>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="34">
+				<description>Set button 11 script</description>
+				<posx>135</posx>
+				<posy>250</posy>
+				<width>445</width>
+				<align>-</align>
+				<aligny>center</aligny>
+				<include>chanscript</include>
+				<onclick>Skin.Reset(Button11xbe)</onclick>
+				<onclick>Skin.SetPath(Button11script)</onclick>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<onleft>34</onleft>
+				<onright>34</onright>
+				<onup>33</onup>
+				<ondown>35</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="label" id="34">
+				<description>Set button 11 script path display</description>
+				<posx>570</posx>
+				<posy>255</posy>
+				<width>250</width>
+				<info>Skin.String(Button11script)</info>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="label" id="35">
+				<description>OR</description>
+				<posx>235</posx>
+				<posy>278</posy>
+				<width>250</width>
+				<include>chanor</include>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="35">
+				<description>Set button 11 xbe</description>
+				<posx>135</posx>
+				<posy>293</posy>
+				<width>445</width>
+				<include>chanxbe</include>
+				<onclick>Skin.Reset(Button11script)</onclick>
+				<onclick>Skin.SetPath(Button11xbe)</onclick>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<onleft>35</onleft>
+				<onright>35</onright>
+				<onup>34</onup>
+				<ondown>37</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="35">
+				<description>Set button 11 xbe path display</description>
+				<posx>570</posx>
+				<posy>295</posy>
+				<width>250</width>
+				<info>Skin.String(Button11xbe)</info>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="image" id="36">
+				<description>Button Plain</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<texture>chan-plain.png</texture>
+				<visible>Skin.HasSetting(Button11set)</visible>
+				<visible>Skin.String(Button11image)</visible>
+			</control>		
+			<control type="image" id="36">
+				<description>Button 11 Image</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<info>Skin.String(button11image)</info>
+				<visible>Skin.HasSetting(Button11set)</visible>
+			</control>
+  		<control type="button" id="37">
+    		<description>Back</description>
+    		<posx>35</posx>
+    		<posy>465</posy>
+    		<width>316</width>
+    		<height>79</height>
+    		<include>backlabel</include>
+    		<font>font28</font>
+    		<align>center</align>
+    		<aligny>center</aligny>
+    		<include>textcolorblack</include>
+    		<onclick>ActivateWindow(1110)</onclick>
+    		<onleft>37</onleft>
+    		<onright>37</onright>
+    		<onup>35</onup>
+    		<ondown>37</ondown>
+    		<texturefocus>button-big-focus.png</texturefocus>
+    		<texturenofocus>button-big-nofocus.png</texturenofocus>
+  			<include>homebuttonanimation</include>
+  		</control>
+		</control>
+
+<!-- Channel 12 !-->
+		<control type="group" id="9002">
+			<include>contentpanelslide</include>
+			<visible allowhiddenfocus="true">ControlGroup(9002).HasFocus(0)</visible>
+			<control type="button" id="40">
+				<description>Button 12 focus label</description>
+				<posx>285</posx>
+				<posy>92</posy>
+				<width>150</width>
+				<height>33</height>
+				<onleft>30</onleft>
+    		<onright>50</onright>
+    		<onup>40</onup>
+    		<ondown>41</ondown>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus>button-long-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<scroll>true</scroll>
+				<include>channel12</include>
+				<include>textcolorblack</include>
+			</control>
+			<control type="radiobutton" id="41">
+				<description>enable button 12</description>
+				<posx>135</posx>
+				<posy>130</posy>
+				<width>445</width>
+				<include>chanenable12</include>
+				<onclick>Skin.ToggleSetting(Button12set)</onclick>
+				<selected>Skin.HasSetting(Button12set)</selected>
+				<onleft>41</onleft>
+				<onright>41</onright>
+				<onup>40</onup>
+				<ondown>42</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="42">
+				<description>Set button 12 image</description>
+				<posx>135</posx>
+				<posy>170</posy>
+				<width>445</width>
+				<include>chanimage</include>
+				<onclick>Skin.SetImage(Button12image)</onclick>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<onleft>42</onleft>
+				<onright>42</onright>
+				<onup>41</onup>
+				<ondown>43</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="43">
+				<description>Set button 12 label</description>
+				<posx>135</posx>
+				<posy>210</posy>
+				<width>445</width>
+				<include>chanlabel</include>
+				<onclick>Skin.SetString(Button12label)</onclick>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<onleft>43</onleft>
+				<onright>43</onright>
+				<onup>42</onup>
+				<ondown>44</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="42">
+				<description>Set button 12 image path display</description>
+				<posx>570</posx>
+				<posy>178</posy>
+				<width>250</width>
+				<info>Skin.String(Button12image)</info>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="label" id="43">
+				<description>Set button 12 label display</description>
+				<posx>570</posx>
+				<posy>215</posy>
+				<width>250</width>
+				<info>Skin.String(Button12label)</info>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="44">
+				<description>Set button 12 script</description>
+				<posx>135</posx>
+				<posy>250</posy>
+				<width>445</width>
+				<align>-</align>
+				<aligny>center</aligny>
+				<include>chanscript</include>
+				<onclick>Skin.Reset(Button12xbe)</onclick>
+				<onclick>Skin.SetPath(Button12script)</onclick>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<onleft>44</onleft>
+				<onright>44</onright>
+				<onup>43</onup>
+				<ondown>45</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="label" id="44">
+				<description>Set button 12 script path display</description>
+				<posx>570</posx>
+				<posy>255</posy>
+				<width>250</width>
+				<info>Skin.String(Button12script)</info>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="label" id="45">
+				<description>OR</description>
+				<posx>235</posx>
+				<posy>278</posy>
+				<width>250</width>
+				<include>chanor</include>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="45">
+				<description>Set button 12 xbe</description>
+				<posx>135</posx>
+				<posy>293</posy>
+				<width>445</width>
+				<include>chanxbe</include>
+				<onclick>Skin.Reset(Button12script)</onclick>
+				<onclick>Skin.SetPath(Button12xbe)</onclick>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<onleft>45</onleft>
+				<onright>45</onright>
+				<onup>44</onup>
+				<ondown>47</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="45">
+				<description>Set button 12 xbe path display</description>
+				<posx>570</posx>
+				<posy>295</posy>
+				<width>250</width>
+				<info>Skin.String(Button12xbe)</info>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="image" id="46">
+				<description>Button Plain</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<texture>chan-plain.png</texture>
+				<visible>Skin.HasSetting(Button12set)</visible>
+				<visible>Skin.String(Button12image)</visible>
+			</control>		
+			<control type="image" id="46">
+				<description>Button 12 Image</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<info>Skin.String(button12image)</info>
+				<visible>Skin.HasSetting(Button12set)</visible>
+			</control>
+  		<control type="button" id="47">
+    		<description>Back</description>
+    		<posx>35</posx>
+    		<posy>465</posy>
+    		<width>316</width>
+    		<height>79</height>
+    		<include>backlabel</include>
+    		<font>font28</font>
+    		<align>center</align>
+    		<aligny>center</aligny>
+    		<include>textcolorblack</include>
+    		<onclick>ActivateWindow(1110)</onclick>
+    		<onleft>47</onleft>
+    		<onright>47</onright>
+    		<onup>45</onup>
+    		<ondown>47</ondown>
+    		<texturefocus>button-big-focus.png</texturefocus>
+    		<texturenofocus>button-big-nofocus.png</texturenofocus>
+  			<include>homebuttonanimation</include>
+  		</control>
+		</control>
+
+<!-- Channel 13 !-->
+		<control type="group" id="9003">
+			<include>contentpanelslide</include>
+			<visible allowhiddenfocus="true">ControlGroup(9003).HasFocus(0)</visible>
+			<control type="button" id="50">
+				<description>Button 13 focus label</description>
+				<posx>285</posx>
+				<posy>92</posy>
+				<width>150</width>
+				<height>33</height>
+				<onleft>40</onleft>
+    		<onright>20</onright>
+    		<onup>50</onup>
+    		<ondown>51</ondown>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus>button-long-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<scroll>true</scroll>
+				<include>channel13</include>
+				<include>textcolorblack</include>
+			</control>
+			<control type="radiobutton" id="51">
+				<description>enable button 13</description>
+				<posx>135</posx>
+				<posy>130</posy>
+				<width>445</width>
+				<include>chanenable13</include>
+				<onclick>Skin.ToggleSetting(Button13set)</onclick>
+				<selected>Skin.HasSetting(Button13set)</selected>
+				<onleft>51</onleft>
+				<onright>51</onright>
+				<onup>50</onup>
+				<ondown>52</ondown>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="52">
+				<description>Set button 13 image</description>
+				<posx>135</posx>
+				<posy>170</posy>
+				<width>445</width>
+				<include>chanimage</include>
+				<onclick>Skin.SetImage(Button13image)</onclick>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<onup>51</onup>
+				<ondown>53</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="52">
+				<description>Set button 13 image path display</description>
+				<posx>570</posx>
+				<posy>178</posy>
+				<width>250</width>
+				<info>Skin.String(Button13image)</info>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="53">
+				<description>Set button 13 label</description>
+				<posx>135</posx>
+				<posy>210</posy>
+				<width>445</width>
+				<include>chanlabel</include>
+				<onclick>Skin.SetString(Button13label)</onclick>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<onleft>53</onleft>
+				<onright>53</onright>
+				<onup>52</onup>
+				<ondown>54</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="53">
+				<description>Set button 13 label display</description>
+				<posx>570</posx>
+				<posy>215</posy>
+				<width>250</width>
+				<info>Skin.String(Button13label)</info>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="54">
+				<description>Set button 13 script</description>
+				<posx>135</posx>
+				<posy>250</posy>
+				<width>445</width>
+				<align>-</align>
+				<aligny>center</aligny>
+				<include>chanscript</include>
+				<onclick>Skin.Reset(Button13xbe)</onclick>
+				<onclick>Skin.SetPath(Button13script)</onclick>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<onleft>54</onleft>
+				<onright>54</onright>
+				<onup>53</onup>
+				<ondown>55</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="label" id="54">
+				<description>Set button 13 script path display</description>
+				<posx>570</posx>
+				<posy>255</posy>
+				<width>250</width>
+				<info>Skin.String(Button13script)</info>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="label" id="55">
+				<description>OR</description>
+				<posx>235</posx>
+				<posy>278</posy>
+				<width>250</width>
+				<include>chanor</include>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="button" id="55">
+				<description>Set button 13 xbe</description>
+				<posx>135</posx>
+				<posy>293</posy>
+				<width>445</width>
+				<include>chanxbe</include>
+				<onclick>Skin.Reset(Button13script)</onclick>
+				<onclick>Skin.SetPath(Button13xbe)</onclick>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<onleft>55</onleft>
+				<onright>55</onright>
+				<onup>54</onup>
+				<ondown>57</ondown>
+				<textoffsetx>50</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>-</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="55">
+				<description>Set button 13 xbe path display</description>
+				<posx>570</posx>
+				<posy>295</posy>
+				<width>250</width>
+				<info>Skin.String(Button13xbe)</info>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<align>right</align>
+				<scroll>true</scroll>
+				<include>textcolorwhite</include>
+			</control>
+			<control type="image" id="56">
+				<description>Button Plain</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<texture>chan-plain.png</texture>
+				<visible>Skin.HasSetting(Button13set)</visible>
+				<visible>Skin.String(Button13image)</visible>
+			</control>		
+			<control type="image" id="56">
+				<description>Button 13 Image</description>
+				<posx>276</posx>
+				<posy>330</posy>
+				<width>168</width>
+				<height>108</height>
+				<info>Skin.String(button13image)</info>
+				<visible>Skin.HasSetting(Button13set)</visible>
+			</control>
+  		<control type="button" id="57">
+    		<description>Back</description>
+    		<posx>35</posx>
+    		<posy>465</posy>
+    		<width>316</width>
+    		<height>79</height>
+    		<include>backlabel</include>
+    		<font>font28</font>
+    		<align>center</align>
+    		<aligny>center</aligny>
+    		<include>textcolorblack</include>
+    		<onclick>ActivateWindow(1110)</onclick>
+    		<onleft>57</onleft>
+    		<onright>57</onright>
+    		<onup>55</onup>
+    		<ondown>57</ondown>
+    		<texturefocus>button-big-focus.png</texturefocus>
+    		<texturenofocus>button-big-nofocus.png</texturenofocus>
+  			<include>homebuttonanimation</include>
+  		</control>
+		</control>
+<!-- End Channel Options !-->
+
+		<control type="image" id="0">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control>
+	</controls>
+</window>

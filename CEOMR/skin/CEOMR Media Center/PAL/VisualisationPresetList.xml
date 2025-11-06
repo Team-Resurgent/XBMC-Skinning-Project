@@ -1,0 +1,59 @@
+<window id="122">
+
+  <defaultcontrol>2</defaultcontrol>
+  
+   <animation effect="fade" time="200">WindowOpen</animation> 
+   <animation effect="fade" time="200">WindowClose</animation>
+
+  <coordinates>
+    <system>1</system>
+    <posx>250</posx>
+    <posy>70</posy>
+  </coordinates>
+
+  <controls>
+    <control type="image" id="1">
+      <description>background image</description>
+      <posx>0</posx>
+      <posy>25</posy>
+      <width>420</width>
+      <height>326</height>
+      <texture>osd_menu_bg.png</texture>
+    </control>
+
+    <control type="label" id="3">
+      <description>Presets Label</description>
+      <posx>0</posx>
+      <posy>5</posy>
+      <width>420</width>
+      <align>center</align>
+      <font>font12</font>
+    </control>
+
+    <control type="label" id="4">
+      <description>No Presets Label</description>
+      <posx>0</posx>
+      <posy>170</posy>
+      <width>420</width>
+      <align>center</align>
+      <label>13389</label>
+    </control>
+
+    <control type="listcontrol" id="2">
+      <description>Preset List</description>
+      <posx>12</posx>
+      <posy>40</posy>
+      <width>395</width>
+      <height>325</height>
+      <spinposx>338</spinposx>
+      <spinposy>280</spinposy>
+      <selectedcolor>FFD2FF00</selectedcolor>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+    </control>
+
+  </controls>
+
+</window>

@@ -1,0 +1,184 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control type="label" id="2">
+			<description>Heading Label</description>
+			<posx>90</posx>
+			<posy>80</posy>
+			<width>420</width>
+			<align>left</align>
+			<label>-</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+		</control>
+		<control type="label" id="3">
+			<description>Profile Amount Label</description>
+			<posx>590</posx>
+			<posy>80</posy>
+			<align>right</align>
+			<width>420</width>
+			<label>Profiles : 1/3</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+		</control>
+<!--		<control type="spincontrol" id="90">
+			<posx>630</posx>
+			<posy>490</posy>
+			<subtype>page</subtype>
+			<font>font13</font>
+			<textcolor>yellow</textcolor>
+			<onleft>52</onleft>
+			<onright>9000</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+-->		<control type="fixedlist" id="52">
+			<posx>30</posx>
+			<posy>150</posy>
+			<width>660</width>
+			<height>600</height>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>52</onup>
+			<ondown>101</ondown>
+<!--			<pagecontrol>90</pagecontrol>  -->
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<itemlayout height="200" width="220">
+				<control type="image">
+					<width>180</width>
+					<height>180</height>
+					<posx>20</posx>
+					<posy>20</posy>
+					<texture border="4">blue-rectanglenf.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>40</posy>
+					<width>145</width>
+					<height>140</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>180</width>
+					<height>180</height>
+					<posx>20</posx>
+					<posy>200</posy>
+					<texture border="4" flipy="true" diffuse="diffuse_mirror.png">blue-rectanglenf.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>220</posy>
+					<width>145</width>
+					<height>140</height>
+					<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>110</posx>
+					<posy>205</posy>
+					<width>200</width>
+					<height>22</height>
+					<font>font12</font>
+					<align>center</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="300"  width="220">
+				<control type="image">
+					<width>220</width>
+					<height>220</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="10">blue-rectangle.png</texture>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>180</width>
+					<height>180</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>220</width>
+					<height>220</height>
+					<posx>0</posx>
+					<posy>220</posy>
+					<texture border="10" flipy="true" diffuse="diffuse_mirror.png">blue-rectangle.png</texture>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>240</posy>
+					<width>180</width>
+					<height>180</height>
+					<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>110</posx>
+					<posy>230</posy>
+					<width>220</width>
+					<height>16</height>
+					<font>font14</font>
+					<textcolor>yellow</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<align>center</align>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>110</posx>
+					<posy>255</posy>
+					<width>350</width>
+					<height>16</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>green</selectedcolor>
+					<align>center</align>
+					<scroll>true</scroll>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="button" id="101">
+			<description>shutdown button</description>
+			<posx>590</posx>
+			<posy>480</posy>
+			<width>128</width>
+			<height>35</height>
+			<label>13005</label>
+			<aligny>-</aligny>
+			<textoffsetx>30</textoffsetx>
+			<textoffsety>20</textoffsety>
+			<textcolor>green</textcolor>
+			<font>font10</font>
+			<texturefocus>home-side-button-FO.png</texturefocus>
+			<texturenofocus>home-side-button-NF.png</texturenofocus>
+			<onclick>xbmc.activatewindow(111)</onclick>
+			<onleft>52</onleft>
+			<onright>101</onright>
+			<onup>52</onup>
+			<ondown>101</ondown>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+	</controls>
+</window>

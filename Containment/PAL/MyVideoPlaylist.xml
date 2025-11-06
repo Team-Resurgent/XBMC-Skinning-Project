@@ -1,0 +1,120 @@
+<window id="28">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Background</include>
+		<include>PlaylistViews</include>
+		<control type="group" id="420">
+			<include>View-as</include>
+			<control type="button" id="2">
+				<description>view as icons button</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<label>100</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>22</onup>
+				<ondown>20</ondown>
+			</control>
+			<control type="image">
+				<description>Shuffle "button"</description>
+				<posx>5</posx>
+				<posy>147</posy>
+				<width>170</width>
+				<height>42</height>
+				<texture>button.png</texture>
+				<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(20)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="20">
+				<description>shuffle button</description>
+				<posx>5</posx>
+				<posy>147</posy>
+				<label>191</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>28</ondown>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="image">
+				<description>Randomize "button"</description>
+				<posx>5</posx>
+				<posy>184</posy>
+				<width>170</width>
+				<height>42</height>
+				<texture>button.png</texture>
+				<animation effect="fade" start ="100" end="75" time="1200" pulse="true" condition="Control.HasFocus(28)">Conditional</animation>
+			</control>
+			<control type="radiobutton" id="28">
+				<description>Randomize button</description>
+				<posx>5</posx>
+				<posy>184</posy>
+				<label>13319</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>20</onup>
+				<ondown>26</ondown>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="26">
+				<description>repeat button</description>
+				<posx>5</posx>
+				<posy>221</posy>
+				<label>-</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>28</onup>
+				<ondown>21</ondown>
+			</control>
+			<control type="button" id="21">
+				<description>save button</description>
+				<posx>5</posx>
+				<posy>258</posy>
+				<label>190</label>
+				<font>font13</font>
+				<onup>26</onup>
+				<ondown>22</ondown>
+				<onleft>50</onleft>
+				<onright>50</onright>
+			</control>
+			<control type="button" id="22">
+				<description>clear button</description>
+				<posx>5</posx>
+				<posy>296</posy>
+				<label>192</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>21</onup>
+				<ondown>2</ondown>
+			</control>
+		</control>
+		<control type="label">
+			<posx>430</posx>
+			<posy>120</posy>
+			<width>250</width>
+			<align>center</align>
+			<font>font12</font>
+			<info>VideoPlayer.Title</info>
+			<scroll>true</scroll>
+		</control>
+		<control type="videowindow">
+			<posx>430</posx>
+			<posy>140</posy>
+			<width>250</width>
+			<height>250</height>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="label">
+			<posx>430</posx>
+			<posy>400</posy>
+			<width>250</width>
+			<align>center</align>
+			<font>font12</font>
+			<label>$INFO[Player.Time]$INFO[Player.Duration,/]</label>
+		</control>
+		<include>Shutters</include>
+	</controls>
+</window>

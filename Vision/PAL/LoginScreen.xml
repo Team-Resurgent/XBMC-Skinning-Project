@@ -1,0 +1,145 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="label" id="3">
+			<description>Profile Amount Label</description>
+			<posx>670</posx>
+			<posy>120</posy>
+			<width>420</width>
+			<label>-</label>
+			<align>right</align>
+			<font>font18</font>
+		</control>
+		<control type="list" id="52">
+			<posx>300</posx>
+			<posy>150</posy>
+			<width>400</width>
+			<height>350</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<itemlayout height="32">
+				<control type="image">
+					<posx>50</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>4</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font16</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50">
+				<control type="image">
+					<width>400</width>
+					<height>46</height>
+					<posx>0</posx>
+					<posy>2</posy>
+					<texture>ListItem_Focus.png</texture>
+					<visible>Control.HasFocus(52)</visible>
+				</control>
+				<control type="image">
+					<posx>50</posx>
+					<posy>7</posy>
+					<width>36</width>
+					<height>36</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>8</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font22</font>
+					<align>left</align>
+					<include>textcolor-white</include>
+					<include>textcolor-selected</include>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>70</posx>
+			<posy>160</posy>
+			<width>200</width>
+			<height>200</height>
+			<aspectratio aligny="bottom">keep</aspectratio>
+			<info>ListItem.Icon</info>
+		</control>
+		<control type="image">
+			<posx>70</posx>
+			<posy>360</posy>
+			<width>200</width>
+			<height>200</height>
+			<aspectratio aligny="top">keep</aspectratio>
+			<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+			<info>ListItem.Icon</info>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>400</posy>
+			<width>300</width>
+			<height>22</height>
+			<font>font22</font>
+			<align>center</align>
+			<include>textcolor-white</include>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>430</posy>
+			<width>300</width>
+			<height>22</height>
+			<font>font16</font>
+			<align>center</align>
+			<include>textcolor-white</include>
+			<info>ListItem.Label2</info>
+		</control>
+		<control type="image">
+			<description>Top Bar BACK</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>560</width>
+			<height>105</height>
+			<texture>TBSettings.png</texture>
+		</control>
+		<control type="image">
+			<description>Top Bar FRONT</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>116</height>
+			<texture>Topbar_Front.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>Main Title text label</description>
+			<align>center</align>
+			<posx>360</posx>
+			<posy>35</posy>
+			<label>13200</label>
+			<font>font20</font>
+			<visible>!Skin.HasSetting(No_Title_Text)</visible>
+		</control>
+		<include>MusicNowPlayingDisplay</include>
+	</controls>
+</window>

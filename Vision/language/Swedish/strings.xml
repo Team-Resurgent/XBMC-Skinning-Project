@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: blittan-->
+<!--Email: blittan@xbmc.org-->
+<!--Date of translation: 01/01/2009-->
+<!--$Revision$-->
+<strings>
+  <string id="31001">MEDIA</string>
+  <string id="31002">SPEL</string>
+  <string id="31003">Emulatorer</string>
+  <string id="31004">Spela skiva</string>
+  <string id="31005">Inaktivera RSS flödet medans media spelas</string>
+  <string id="31006">Visa väderwidget på hemfönstret</string>
+  <string id="31007">Visa väderwidget på sidpanelen</string>
+  <string id="31008">Visa klockwidget på sidpanelen</string>
+  <string id="31009">Inaktivera video i media bakgrund</string>
+  <string id="31010">Inaktivera visualisation i media bakgrund</string>
+  <string id="31011">Inaktivera Alphablandning på breda ikoner</string>
+  <string id="31012">-</string>
+  <string id="31013">Aktivera uppstartsspellista</string>
+  <string id="31014">Välj uppstartsspellista</string>
+  <string id="31015">Sångtexter</string>
+  <string id="31016">Välj egen bakgrund för hemfönstret</string>
+  <string id="31017">Ãterställ egen bakgrund för hemfönstret</string>
+  <string id="31018">Ta bort rubriktext från titelpaneler</string>
+  <string id="31019">Visa objektsräknare i fillistor</string>
+</strings>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ --> 
+<!--  strings 31000 thru 31999 reserved for skins  --> 
+
+<strings> 
+  <!-- Home / General --> 
+  <string id="31000">Gerenciador de Ficheiros</string> 
+  <string id="31001">Info</string> 
+  <string id="31002">Repor</string> 
+  <string id="31003">Analizar</string> 
+  <string id="31004">Alterar</string> 
+  <string id="31005">Diversos</string> 
+  <string id="31006">Visual</string> 
+  <string id="31007">Ligar/Desligar</string> 
+  <string id="31008">Não Classificado</string> 
+  <string id="31009">Assiste aos teus</string>  <!-- used for Movies -->
+  <string id="31010">Assiste às tuas</string>  <!-- used for TV shows --> 
+  <string id="31011">Assiste aos teus</string>   <!-- used for Videos --> 
+  <string id="31012">Ouve a tua</string>
+  <string id="31013">Vê as tuas</string> 
+  <string id="31014">Utiliza os teus</string> 
+  <string id="31015">Verificar</string> 
+  <string id="31016">Configurar</string>
+  <string id="31017">Energia</string> 
+  <string id="31018">Informação Básica</string>
+  <string id="31019">Reproduz o</string> 
+  <string id="31020">Verifica a</string> 
+  <string id="31021">Por</string> 
+  <string id="31022">Adicionado Recentemente</string>
+  <string id="31023">Últimos</string>
+  <string id="31024">Página</string>
+  <string id="31025">Itens</string>
+
+  <!-- Options Menu -->
+  <string id="31100">Poster de Info</string>
+  <string id="31101">Ordenar Por</string>
+  <string id="31102">Opções de Configuração</string>
+  <string id="31103">Vitrina</string>
+  <string id="31104">Mostrar Relógio Grande</string>
+  <string id="31105">Cascata</string>
+  <string id="31106">Exibição</string>
+  <string id="31107">Lista Baixa</string>
+  <string id="31108">Exposição</string>
+  <string id="31109">Lista Alta</string>
+
+  <!-- Settings -->
+  <string id="31200">Mostrar Resumo</string>
+  <string id="31201">Últimos Actualizados</string>
+  <string id="31202">Pasta de Fundos de Ecrã</string>
+  <string id="31203">Fundos de Ecrã</string>
+  <string id="31204">Menu de Opções</string>
+  <string id="31205">Ocultar</string>
+  <string id="31206">Relógio</string>
+  <string id="31207">Ocultar Metereologia no Ecrã Principal</string>
+  <string id="31208">Desabilitar</string>
+  <string id="31209">Configurar Definições para</string>
+  <string id="31210">Menu</string>
+  <string id="31211">Ocultar Resumo no OSD de Video</string>
+  <string id="31212">Ocultar Marca de Visto</string>
+  <string id="31213">Ocultar Miniaturas</string>
+  <string id="31214">Mostrar Crítica</string>
+  <string id="31215">Mostrar Tipo</string>
+  <string id="31216">Ocultar Contagem</string>
+  <string id="31217">Usar Posters para TV</string>
+  <string id="31218">Mostrar OSD de Video Minimalista</string>
+  <string id="31219">Ocultar Fundo de Ecrã de Estática</string>
+  <string id="31220">Usar Miniaturas de Meteorologia Animadas</string>
+  <string id="31221">Ocultar os últimos videos</string>
+
+  <!-- Video -->
+  <string id="31300">N/D</string>
+  <string id="31301">Miniatura</string> 
+  <string id="31302">Fanart</string> 
+  <string id="31303">Temporada</string> 
+  <string id="31304">Hora Aprox. de Termo</string>
+
+  <!-- Music --> 
+  <string id="31400">Acabou</string> 
+  <string id="31401">Actual</string> 
+  <string id="31402">Seleccionar Visualização</string> 
+  <string id="31403">Visualizações Pré-ajustadas</string> 
+  <string id="31404">Definições de Visualização</string> 
+  <string id="31405">Letras</string> 
+  <string id="31406">Definir Caminho para Letras</string>
+  <string id="31407">Abrir playlist</string>
+  <string id="31408">Salvar playlist</string>
+  <string id="31409">Fechar playlist</string>
+  <string id="31410">Ficheiros de música do sistema</string>
+  <string id="31411">Playlist actual</string>
+  
+  <!-- Dialogs --> 
+  <string id="31500">Escolher Perfil</string> 
+  <string id="31501">Sem Som</string>
+  <string id="31502">Criar</string>
+  <string id="31503">Codec</string> 
+
+</strings>

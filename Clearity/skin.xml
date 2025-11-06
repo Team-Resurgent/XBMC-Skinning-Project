@@ -1,0 +1,18 @@
+<skin>
+  <defaultresolution>PAL</defaultresolution>
+  <defaultresolutionwide>PAL16x9</defaultresolutionwide>
+  <version>2.1</version>
+  <effectslowdown>1</effectslowdown>
+
+  <!-- amount to zoom skin to remove overscan compensation -->
+  <zoom>1.0</zoom>
+
+<credits>
+	<skinname>Clearity</skinname>
+    	<name>Design and Coding by SmokeHead</name>
+    	<name>Thanks goes out to :</name>
+    	<name>XBMC Developers &amp; XBMC Forums/wiki</name>
+	<name>for all reading support</name>
+</credits>
+</skin>
+

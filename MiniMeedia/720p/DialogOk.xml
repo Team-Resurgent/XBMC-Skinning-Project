@@ -1,0 +1,27 @@
+﻿<window id="2002">
+  <defaultcontrol always="true">10</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <include>ProgressDialogPos</include>
+
+      <include>ProgressDialogBG</include>
+
+      <control type="group">
+        <posx>10</posx>
+        <posy>24</posy>
+
+        <include>ConfirmDialogControls</include>
+
+        <control type="button" id="10">
+          <description>OK Button</description>
+          <posx>320</posx>
+          <posy>ConfirmDialogButtonYPos</posy>
+          <label>$LOCALIZE[12321]</label>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

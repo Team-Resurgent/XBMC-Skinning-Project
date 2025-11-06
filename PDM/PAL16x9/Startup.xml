@@ -1,0 +1,248 @@
+<window>
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+	<control type="button" id="1">
+		<description>ReplaceWindow Trigger</description>
+		<posx>35</posx>
+		<posy>235</posy>
+		<font>special15</font>
+		<onfocus>ReplaceWindow(Home)</onfocus>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<animation effect="fade" time="500">Focus</animation>
+	</control>
+
+	<!-- Home Layout -->
+
+	<control type="image">
+		<description>Startup-Top Image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>289</height>
+		<texture>16x9-Startup-top.png</texture>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+	<control type="image">
+		<description>Startup-Bottom Image</description>
+		<posx>0</posx>
+		<posy>288</posy>
+		<width>720</width>
+		<height>289</height>
+		<texture>16x9-Startup-bottom.png</texture>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+
+	<control type="image">
+		<description>XBMC Logo</description>
+		<posx>5</posx>
+		<posy>206</posy>
+		<width>130</width>
+		<height>45</height>
+		<texture>XBMC-logo.png</texture>
+		<aspectratio>scale</aspectratio>
+		<visible>!Skin.HasSetting(skinlogo)</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+
+	<!-- Date and Time Labels -->
+
+	<control type="label">
+		<description>Date</description>
+		<posx>640</posx>
+		<posy>236</posy>
+		<label>date</label>
+		<info>System.Date</info>
+		<align>right</align>
+		<aligny>center</aligny>
+		<font>special12</font>
+		<include>textcolorwhite-50</include>
+		<visible>!Skin.HasSetting(time-and-date)</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+	<control type="label">
+		<description>Date and Time Suffix</description>
+		<posx>652</posx>
+		<posy>234</posy>
+		<label>|</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(time-and-date)</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+	<control type="label">
+		<description>Time</description>
+		<posx>670</posx>
+		<posy>236</posy>
+		<label>time</label>
+		<info>System.Time</info>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>!Skin.HasSetting(time-and-date)</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+
+	<!-- CPU and RAM Labels -->
+
+	<control type="label">
+		<description>CPU</description>
+		<posx>640</posx>
+		<posy>236</posy>
+    <label>$LOCALIZE[13271] $INFO[system.cpuusage]</label>
+    <align>right</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-50</include>
+		<visible>Skin.HasSetting(cpu-and-ram)</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+	<control type="label">
+		<description>CPU and RAM Suffix</description>
+		<posx>652</posx>
+		<posy>234</posy>
+		<label>|</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>Skin.HasSetting(cpu-and-ram)</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+	<control type="label">
+		<description>RAM</description>
+		<posx>670</posx>
+		<posy>236</posy>
+		<info>System.FreeMemory</info>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<include>textcolorwhite-90</include>
+		<visible>Skin.HasSetting(cpu-and-ram)</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+
+	<!-- Media Progressbar -->
+
+	<control type="progress">
+		<description>Media Progressbar</description>
+		<posx>0</posx>
+		<posy>288</posy>
+		<width>720</width>
+		<height>3</height>
+		<info>Player.Progress</info>
+		<texturebg>progress_back.png</texturebg>
+		<lefttexture>progress_left.png</lefttexture>
+		<midtexture>progress_mid-green2.png</midtexture>
+		<righttexture>progress_right.png</righttexture>
+		<overlaytexture>progress_back2.png</overlaytexture>
+		<visible>!Skin.HasSetting(mediaprogress) + Player.HasMedia</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+	<control type="image">
+		<description>Media Progressbar overlay</description>
+		<posx>0</posx>
+		<posy>288</posy>
+		<width>720</width>
+		<height>3</height>
+		<texture>progress_over_home.png</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+		<visible>!Skin.HasSetting(mediaprogress) + Player.HasMedia</visible>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Window.Previous(29)">WindowOpen</animation>
+	</control>
+
+	<!-- Home Sub-Buttons -->
+
+	<control type="button" id="158">
+		<description>Xlink Kai Button 1</description>
+		<posx>608</posx>
+		<posy>323</posy>
+		<width>25</width>
+		<height>35</height>
+		<label>-</label>
+		<texturefocus>home-kai-focus.png</texturefocus>
+		<texturenofocus>home-kai.png</texturenofocus>
+		<onclick>XBMC.ActivateWindow(xlinkkai)</onclick>
+		<onleft>300</onleft>
+		<onright>159</onright>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<visible>!Skin.HasSetting(homebuttons) + System.KaiConnected + System.hasmediadvd</visible>
+		<animation effect="fade" start="0" end="100" delay="100" time="500">WindowOpen</animation>
+	</control>
+	<control type="button" id="159">
+		<description>Xlink Kai Button 2</description>
+		<posx>633</posx>
+		<posy>323</posy>
+		<width>25</width>
+		<height>35</height>
+		<label>-</label>
+		<texturefocus>home-kai-focus.png</texturefocus>
+		<texturenofocus>home-kai.png</texturenofocus>
+		<onclick>XBMC.ActivateWindow(xlinkkai)</onclick>
+		<onleft>158</onleft>
+		<onright>160</onright>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<visible>!Skin.HasSetting(homebuttons) + System.KaiConnected + !System.hasmediadvd</visible>
+		<animation effect="fade" start="0" end="100" delay="100" time="500">WindowOpen</animation>
+	</control>
+	<control type="button" id="160">
+		<description>DVD launch Button</description>
+		<posx>633</posx>
+		<posy>323</posy>
+		<width>25</width>
+		<height>35</height>
+		<texturefocus>home-tray-focus.png</texturefocus>
+		<texturenofocus>home-tray.png</texturenofocus>
+		<onclick>XBMC.PlayDVD()</onclick>
+		<label>-</label>
+		<onleft>159</onleft>
+		<onright>161</onright>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<visible>!Skin.HasSetting(homebuttons) + System.hasmediadvd</visible>
+		<animation effect="fade" start="0" end="100" delay="100" time="500">WindowOpen</animation>
+	</control>
+	<control type="button" id="161">
+		<description>Script Button</description>
+		<posx>658</posx>
+		<posy>323</posy>
+		<width>25</width>
+		<height>35</height>
+		<onclick>XBMC.ActivateWindow(submenu)</onclick>
+		<texturefocus>home-sub-focus.png</texturefocus>
+		<texturenofocus>home-sub.png</texturenofocus>
+		<label>-</label>
+		<onleft>160</onleft>
+		<onright>162</onright>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<visible>!Skin.HasSetting(homebuttons)</visible>
+		<animation effect="fade" start="0" end="100" delay="100" time="500">WindowOpen</animation>
+	</control>
+	<control type="button" id="162">
+		<description>Power Button</description>
+		<posx>683</posx>
+		<posy>323</posy>
+		<width>25</width>
+		<height>35</height>
+		<onclick>XBMC.ActivateWindow(shutdownmenu)</onclick>
+		<texturefocus>home-power-focus.png</texturefocus>
+		<texturenofocus>home-power.png</texturenofocus>
+		<label>-</label>
+		<onleft>161</onleft>
+		<onright>300</onright>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<visible>!Skin.HasSetting(homebuttons)</visible>
+		<animation effect="fade" start="0" end="100" delay="100" time="500">WindowOpen</animation>
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,63 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>235</posx>
+		<posy>-10</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="0">
+			<description>underlay left</description>
+			<posx>-20</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>40</height>
+			<texture>dropdown-end.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>underlay middle</description>
+			<posx>0</posx>
+			<posy>20</posy>
+			<width>250</width>
+			<height>40</height>
+			<texture>dropdown-mid.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>underlay right</description>
+			<posx>250</posx>
+			<posy>20</posy>
+			<width>20</width>
+			<height>40</height>
+			<texture flipx="true">dropdown-end.png</texture>
+		</control>
+		<control type="progress" id="1">
+			<description>volume slider</description>
+			<posx>44</posx>
+			<posy>27</posy>
+			<width>197</width>
+			<height>21</height>
+			<info>Player.Volume</info>
+			<colordiffuse>object-color</colordiffuse>
+		</control>
+		<control type="image" id="0">
+			<description>Volume bar overlay</description>
+			<posx>0</posx>
+			<posy>20</posy>
+			<width>250</width>
+			<height>40</height>
+			<texture>volume.png</texture>
+		</control>
+		<control type="label" id="0">
+			<description>volume label</description>
+			<posx>64</posx>
+			<posy>29</posy>
+			<width>70</width>
+			<height>16</height>
+			<font>font10</font>
+			<align>right</align>
+			<info>Player.Volume</info>
+			<aligny>center</aligny>
+			<textcolor>main-text</textcolor>
+		</control>
+	</controls>
+</window>

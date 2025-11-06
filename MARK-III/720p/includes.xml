@@ -1,0 +1,457 @@
+<includes>
+	<include file="defaults.xml" />
+	<include file="ViewsVideoLibrary.xml" />
+	<include file="ViewsMusicLibrary.xml" />
+	<include file="ViewsFileMode.xml" />
+	<include file="ViewsNowPlaying.xml" />
+	<include name="CommonBackground">
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>[Player.HasVideo + !Skin.HasSetting(Back_Video)]</visible>
+		</control>
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>[Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+		</control>
+	</include>
+	<include name="CommonVideoBackground">
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/video-background.png</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<include>backgroundfade</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[Fanart.Image]</texture>
+			<visible>!IsEmpty(Fanart.Image) + ![Window.IsVisible(VideoLibrary) + Control.IsVisible(55)]</visible>
+			<include>backgroundfade</include>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<fadetime>600</fadetime>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<visible>IsEmpty(Fanart.Image) + ![Window.IsVisible(VideoLibrary) + Control.IsVisible(55)]</visible>
+			<include>backgroundfade</include>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>895</width>
+			<height>650</height>
+			<aspectratio>scale</aspectratio>
+			<visible>!IsEmpty(Fanart.Image) + [Window.IsVisible(VideoLibrary) + Control.IsVisible(55)]</visible>
+			<texture background="true">$INFO[Fanart.Image]</texture>
+			<include>backgroundfade</include>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>895</width>
+			<height>720</height>
+			<visible>!IsEmpty(Fanart.Image) + [Window.IsVisible(VideoLibrary) + Control.IsVisible(55)]</visible>
+			<texture>fanart-overlay.png</texture>
+			<include>backgroundfade</include>
+			<include>Window_OpenClose_Animation</include>
+		</control>
+	</include>
+	<include name="CommonMusicBackground">
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/music-background.png</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<include>backgroundfade</include>
+		</control>
+	</include>
+	<include name="CommonPicturesBackground">
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/pictures-background.png</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<include>backgroundfade</include>
+		</control>
+	</include>
+	<include name="CommonProgramsBackground">
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/programs-background.png</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<include>backgroundfade</include>
+		</control>
+	</include>
+	<include name="CommonSettingsBackground">
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/settings-background.png</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<include>backgroundfade</include>
+		</control>
+	</include>
+	<include name="CommonWeatherBackground">
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/weather-background.png</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<include>backgroundfade</include>
+		</control>
+	</include>
+	<include name="CommonScriptsBackground">
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">special://skin/backgrounds/scripts-background.png</texture>
+			<visible>![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<include>backgroundfade</include>
+		</control>
+	</include>
+	<include name="CommonSideBlades">
+		<control type="image">
+			<posx>-125</posx>
+			<posy>35</posy>
+			<width>256</width>
+			<height>650</height>
+			<texture border="0,40,116,40">side-angle-left.png</texture>
+			<include>SlideMenuDownAnimation</include>
+			<animation effect="slide" start="-131,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="-131,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" end="-131,0" start="0,0" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation) | [Window.IsVisible(VideoLibrary) + [Control.IsVisible(56) | Control.IsVisible(55)]]">Conditional</animation>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="131,0" end="0,0" time="500" tween="quadratic" easing="out" condition="!Control.IsVisible(52)">WindowOpen</animation>
+			<animation effect="slide" end="131,0" start="0,0" time="500" tween="quadratic" easing="out" condition="!Control.IsVisible(52)">WindowClose</animation>
+			<animation effect="slide" start="512,0" end="0,0" time="500" tween="quadratic" easing="out" condition="Control.IsVisible(52)">WindowOpen</animation>
+			<animation effect="slide" end="512,0" start="0,0" time="500" tween="quadratic" easing="out" condition="Control.IsVisible(52)">WindowClose</animation>
+			<animation effect="slide" end="131,0" start="0,0" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation) | [Window.IsVisible(VideoLibrary) + [Control.IsVisible(56) | Control.IsVisible(55)]]">Conditional</animation>
+			<animation effect="slide" end="-381,0" start="0,0" time="500" tween="quadratic" easing="out" condition="Control.IsVisible(52) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">Conditional</animation>
+			<control type="image">
+				<posx>131r</posx>
+				<posy>35</posy>
+				<width>512</width>
+				<height>650</height>
+				<texture border="116,40,0,40">side-angle-right.png</texture>
+				<include>SlideMenuDownAnimation</include>
+			</control>
+			<control type="grouplist">
+				<posx>0r</posx>
+				<posy>130</posy>
+				<width>510</width>
+				<height>515</height>
+				<usecontrolcoords>true</usecontrolcoords>
+				<visible>Control.IsVisible(52) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]</visible>
+				<animation effect="fade" time="200" delay="600">Visible</animation>
+				<control type="group">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>410</height>
+						<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>410</posy>
+						<width>340</width>
+						<height>410</height>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<texture flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="CommonSideBlades_NonMedia">
+		<control type="image">
+			<posx>-125</posx>
+			<posy>35</posy>
+			<width>256</width>
+			<height>650</height>
+			<texture border="0,40,116,40">side-angle-left.png</texture>
+			<animation effect="slide" start="-131,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="-131,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+		</control>
+		<control type="image">
+			<posx>131r</posx>
+			<posy>35</posy>
+			<width>512</width>
+			<height>650</height>
+			<texture border="116,40,0,40">side-angle-right.png</texture>
+			<animation effect="slide" start="131,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="131,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+		</control>
+	</include>
+	<include name="CommonNowPlaying">
+		<control type="group">
+			<posx>390</posx>
+			<posy>630</posy>
+			<visible>Player.HasAudio</visible>
+			<visible>![Window.IsVisible(PlayerControls) + !Window.IsVisible(Home)]</visible>
+			<visible>![Window.IsVisible(VideoLibrary) + Control.IsVisible(56)]</visible>
+			<visible>![Window.IsVisible(VideoLibrary) + Control.IsVisible(55)]</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" end="-380,-620" start="-380,-620" time="0" condition="Window.IsVisible(Home)">Conditional</animation>
+			<animation effect="slide" end="-190,0" start="0,0" time="500" tween="quadratic" easing="out" condition="Control.IsVisible(52) + !Window.IsVisible(SettingsCategory.xml)">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>80</height>
+				<texture>black-back.png</texture>
+				<bordertexture border="3">NoCover_1.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>!Window.IsVisible(Home)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>80</height>
+				<colordiffuse>ccFFFFFF</colordiffuse>
+				<texture border="5">barground2.png</texture>
+				<visible>Window.IsVisible(Home)</visible>
+			</control>
+			<control type="image">
+				<posx>9</posx>
+				<posy>9</posy>
+				<width>64</width>
+				<height>64</height>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+			</control>
+			<control type="label">
+				<posx>90</posx>
+				<posy>9</posy>
+				<width>400</width>
+				<height>20</height>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posx>90</posx>
+				<posy>30</posy>
+				<width>400</width>
+				<height>20</height>
+				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posx>155</posx>
+				<posy>51</posy>
+				<width>75</width>
+				<height>20</height>
+				<label>$INFO[MusicPlayer.Time]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font11</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="progress" id="403">
+				<description>progress control</description>
+				<posx>160</posx>
+				<posy>58</posy>
+				<width>250</width>
+				<height>8</height>
+				<info>Player.progress</info>
+			</control>
+			<control type="label">
+				<posx>415</posx>
+				<posy>51</posy>
+				<width>75</width>
+				<height>20</height>
+				<label>$INFO[MusicPlayer.Duration]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font11</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+	</include>
+	<include name="CommonFileCount">
+		<control type="group">
+			<posx>80</posx>
+			<posy>590</posy>
+			<include>VisibleFadeEffect</include>
+			<visible>![Window.IsVisible(VideoLibrary) + [Control.IsVisible(56) | Control.IsVisible(55)]]</visible>
+			<animation effect="slide" start="0,0" end="40,-290" time="800" tween="quadratic" easing="out" condition="Control.IsVisible(58) + [Window.IsVisible(VideoLibrary) | Window.IsVisible(Pictures)]">Conditional</animation>
+			<control type="image">
+				<posx>790</posx>
+				<posy>-5</posy>
+				<width>320</width>
+				<height>30</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>list-focus.png</texture>
+				<visible>Control.HasFocus(60)</visible>
+				<include>VisibleFadeEffect</include>
+			</control>
+			<control type="label">
+				<description>Item Count Label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>20</height>
+				<font>font12b</font>
+				<textcolor>white</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>($INFO[Container.NumItems]) $LOCALIZE[31025]</label>
+			</control>
+			<control type="label">
+				<description>Page Count Label</description>
+				<posx>1010</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>20</height>
+				<font>font12b</font>
+				<textcolor>white</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31024] ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+				<include>FullList_Visible_Slide_Animation</include>
+			</control>
+			<control type="spincontrol" id="60">
+				<description>Next page button</description>
+				<posx>1020</posx>
+				<posy>0</posy>
+				<subtype>page</subtype>
+				<font>-</font>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<ondown>60</ondown>
+				<onup>50</onup>
+				<textcolor>white</textcolor>
+				<showonepage>true</showonepage>
+				<include>FullList_Visible_Slide_Animation</include>
+			</control>
+		</control>
+	</include>
+	<include name="ButtonCommonValues">
+		<height>30</height>
+		<width>270</width>
+		<font>font12</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<pulseonselect>no</pulseonselect>
+	</include>
+	<include name="ButtonHomeSubCommonValues">
+		<height>22</height>
+		<width>320</width>
+		<font>font12</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<onleft>SetFocus(2)</onleft>
+		<onleft>Control.Move(2,-1)</onleft>
+		<onright>SetFocus(2)</onright>
+		<onright>Control.Move(2,1)</onright>
+	</include>
+	<include name="ButtonInfoDialogsCommonValues">
+		<height>30</height>
+		<width>200</width>
+		<font>font12</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">-</texturenofocus>
+		<pulseonselect>no</pulseonselect>
+	</include>
+	<include name="SlideMenuDownAnimation">
+		<animation effect="slide" start="0,0" end="-20,390" time="800" tween="quadratic" easing="out" condition="Control.IsVisible(58) + [Window.IsVisible(VideoLibrary) | Window.IsVisible(Pictures)]">Conditional</animation>
+	</include>
+	<include name="FullList_Visible_Slide_Animation">
+		<animation effect="slide" end="-381,0" start="0,0" time="500" tween="quadratic" easing="out" condition="Control.IsVisible(52) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">Conditional</animation>
+	</include>
+	<include name="backgroundfade">
+		 <animation effect="fade" time="600">Visible</animation>
+		 <animation effect="fade" time="600">Hidden</animation>
+	</include>
+	<include name="Window_OpenClose_Animation">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="HomeBar_Window_OpenClose_Animation">
+		<animation effect="fade" delay="500" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="dialogeffect">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+	</include>
+	<include name="OverlayMediaPlayingFadeEffect">
+		<animation effect="fade" start="100" end="90" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
+		<animation effect="fade" start="100" end="90" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+	</include>
+</includes>

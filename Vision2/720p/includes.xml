@@ -1,0 +1,128 @@
+<includes>
+	<include file="defaults.xml" />
+	<include file="ViewsVideoLibrary.xml" />
+	<include file="ViewsMusicLibrary.xml" />
+	<include file="ViewsFileMode.xml" />
+	<include file="ViewsNowPlaying.xml" />
+	<include name="CommonBackground">
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasVideo + !Skin.HasSetting(Back_Video)</visible>
+		</control>
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasAudio + !Skin.HasSetting(Back_Vis)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Background.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Frontground.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>100</posy>
+			<width>1280</width>
+			<height>520</height>
+			<texture>FileListBack.png</texture>
+			<include>Window_OpenClose_Animation</include>
+			<visible>!Window.IsVisible(home) + !Skin.HasSetting(Grey_Overlay) + IsEmpty(Fanart.Image)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+		</control>
+	</include>
+	<include name="CommonBackgroundFullScreenDialog">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Background.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Frontground.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>100</posy>
+			<width>1280</width>
+			<height>520</height>
+			<texture>FileListBack.png</texture>
+			<include>Window_OpenClose_Animation</include>
+			<visible>!Window.IsVisible(home)</visible>
+		</control>
+	</include>
+	<include name="ButtonCommonValues">
+		<height>30</height>
+		<width>270</width>
+		<font>font12</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<pulseonselect>no</pulseonselect>
+	</include>
+	<include name="ButtonInfoDialogsCommonValues">
+		<height>35</height>
+		<width>198</width>
+		<font>font12</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<pulseonselect>no</pulseonselect>
+	</include>
+	<include name="SideMenuVisibleCommons">
+		<onleft>60</onleft>
+		<onright>50</onright>
+		<visible>!Skin.HasSetting(LockSideMenus)</visible>
+		<animation effect="fade" time="200" start="100" end="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+	</include>
+	<include name="backgroundfade">
+		 <animation effect="fade" time="600" delay="220">Visible</animation>
+		 <animation effect="fade" time="600" delay="220">Hidden</animation>
+	</include>
+	<include name="Window_OpenClose_Animation">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="dialogeffect">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+	</include>
+	<include name="OverlayMediaPlayingFadeEffect">
+		<animation effect="fade" start="100" end="90" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
+		<animation effect="fade" start="100" end="90" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+	</include>
+</includes>

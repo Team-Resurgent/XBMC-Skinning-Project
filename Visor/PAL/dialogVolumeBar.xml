@@ -1,0 +1,52 @@
+<window>
+  <id>104</id>
+  <defaultcontrol>1</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <posX>0</posX>
+    <posY>0</posY>
+  </coordinates>
+
+  <controls>
+    <control>
+      <description>Popup Volume Dialog Background</description>
+      <type>image</type>
+      <id>400</id>
+      <posX>430</posX>
+      <posY>480</posY>
+      <width>300</width>
+      <height>70</height>
+      <texture>voulume-panel-bg.png</texture>
+    </control>
+
+    <control>
+      <description>Volume Slider</description>
+      <type>slider</type>
+      <id>401</id>
+      <posX>520</posX>
+      <posY>500</posY>
+      <textureSliderBar>osd_slider_volume_bg.png</textureSliderBar>
+      <textureSliderNib>slider_nibFO.png</textureSliderNib>
+      <textureSliderNibFocus>sslider_nibFO.png</textureSliderNibFocus>
+      <onup>1</onup>
+      <ondown>1</ondown>
+      <onleft>1</onleft>
+      <onright>1</onright>
+    </control>
+
+    <control>
+      <description>Volume Label</description>
+      <type>label</type>
+      <id>402</id>
+      <posX>510</posX>
+      <posY>498</posY>
+      <font>font101</font>
+      <align>right</align>
+      <width>70</width>
+      <height>16</height>
+    </control>
+
+  </controls>
+
+</window>
+

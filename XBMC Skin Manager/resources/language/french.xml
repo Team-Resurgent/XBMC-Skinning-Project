@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- XBMC Skin Manager
+     french.xml : French language file              -->
+
+<strings>
+    <!-- Global strings -->
+    <string id="0">Français</string>
+    <string id="1">XBMC Skin Manager v%s</string>
+    <string id="2">o</string>
+    <string id="3">%d/%m/%Y %H:%M</string>
+    
+    <!-- Init strings -->
+    <string id="1000">Démarrage...</string>
+    <string id="1001">Démarrage en cours...</string>
+    <string id="1002">Test de la connexion internet...</string>
+    <string id="1003">Mise à jour du fichier XML...</string>
+    <string id="1004">Connexion au serveur SVN...</string>
+    <string id="1005">Démarrage terminé.</string>
+    
+    <!-- GUI strings -->
+    <string id="2000">Skins</string>
+    <string id="2001">Sélectionnez les skins sur lesquels vous voulez travailler</string>
+    <string id="2002">Configuration</string>
+    <string id="2003">Options liées au programme ou à la xbox</string>
+    <string id="2004">Options des skins</string>
+    <string id="2005">Options particulières pour certains skins</string>
+    <string id="2006">Opérations</string>
+    <string id="2007">Démarrez et surveillez les opérations</string>
+    <string id="2008">Skins du SVN</string>
+    <string id="2009">Skins HTTP</string>
+    <string id="2010">Nom du skin</string>
+    <string id="2011">Révision</string>
+    <string id="2012">Version</string>
+    <string id="2013">Changelog</string>
+    <string id="2014">Affiche les changements effectués depuis votre dernière mise à jour</string>
+    <string id="2015">Informations</string>
+    <string id="2016">Affiche des informations sur le skin (capture d'écran, changelog...)</string>
+    <string id="2017">Options de la Xbox</string>
+    <string id="2018">Adresse:</string>
+    <string id="2019">Utilisateur:</string>
+    <string id="2020">Mot de passe:</string>
+    <string id="2021">Répertoire de XBMC:</string>
+    <string id="2022">Tâches à effectuer</string>
+    <string id="2023">Télécharger/Mettre à jour</string>
+    <string id="2024">Construire/Extraire</string>
+    <string id="2025">Envoyer</string>
+    <string id="2026">Effacer les dossiers temporaires</string>
+    <string id="2027">Langue : </string>
+    <string id="2028">Démarrer</string>
+    <string id="2029">Réinitialiser le skin</string>
+    <string id="2030">Tâche en cours : %s %s</string>
+    <string id="2031">en attente...</string>
+    <string id="2032">test de la connexion FTP</string>
+    <string id="2033">téléchargement de</string>
+    <string id="2034">mise à jour de</string>
+    <string id="2035">construction de</string>
+    <string id="2036">extraction de</string>
+    <string id="2037">installation de</string>
+    <string id="2038">nettoyage de</string>
+    <string id="2039">Autres options</string>
+    <string id="2041">Restaurer les options par défaut</string>
+    <string id="2042">Garder les fichier XPR</string>
+    <string id="2043">Supprimer définitivement</string>
+    <string id="2044">Cette fonction permet de réinitialiser le skin 
+en cours d'utilisation pour remettre PM3.
+Elle doit être utilisée dans le cas où vous avez utilisé
+un skin incompatible avec votre version de XBMC.</string>
+    <string id="2045">Démarrer</string>
+    <string id="2046">Mode local</string>
+    <string id="2047">Cochez cette case si vous utilisez une version locale de XBMC.
+Précisez le chemin local de XBMC, tous les autres paramètres seront ignorés.</string>
+    <string id="2048">inconnu(e)</string>
+
+    <!-- Common customization strings -->
+    <string id="3000">Installer le Splash Screen</string>
+    <string id="3001">Installer les scripts Python</string>
+    <string id="3002">Installer l'interface web</string>
+    <string id="3003">Type de construction : </string>
+    <string id="3004">Définition des textures : </string>
+    
+    <!-- Boxes strings -->
+    <string id="4000">Aucun skin coché</string>
+    <string id="4001">Veuillez sélectionner au moins un skin.</string>
+    <string id="4002">XBMC en Dashboard</string>
+    <string id="4003">Il apparait que XBMC est votre dashboard actuel.
+Il est déconseillé de mettre à jour les skins dans ces conditions.
+Surtout si vous mettez à jour un skin en cours d'utilisation.
+Voulez vous tout de même continuer ?</string>
+    <string id="4004">Mise à jour disponible</string>
+    <string id="4005">La version %s est disponible !
+Voici les changements :</string>
+    <string id="4006">Aller sur le site Internet</string>
+    <string id="4007">Par %s</string>
+    <string id="4008">Dernière version : %s</string>
+    <string id="4009">Version locale : %s</string>
+    <string id="4010">Taille du fichier : %s</string>
+    <string id="4011">Informations diverses :</string>
+    <string id="4012">Capture d'écran</string>
+    <string id="4013">Liens internet :</string>
+    <string id="4014">Fermer</string>
+    <string id="4015">Changelog : %s</string>
+    <string id="4016">De la révision %s à la révision %s</string>
+    <string id="4017">Date</string>
+    <string id="4018">Auteur</string>
+    <string id="4019">Notes</string>
+    <string id="4020">Téléchargement...</string>
+    <string id="4022">Téléchargement : %s/%s</string>
+    <string id="4023">Fichier distant inaccessible</string>
+    <string id="4024">Erreur de téléchargement</string>
+    <string id="4025">Capture d'écran : %s</string>
+    <string id="4026">Êtes vous sûr ?</string>
+    <string id="4027">Voulez vous vraiment réinitialiser les paramètres ?</string>
+    <string id="4028">Réinitialisation terminée</string>
+    <string id="4029">Réinitialisation effectuée.
+Redémarrez XBMC pour que les changements prennent effet.</string>
+    <string id="4030">Impossible de repérer XBMC</string>
+    <string id="4031">XBMC n'a pas pu être repéré dans le répertoire fourni.
+Êtes vous sûr que %s est correct ?</string>
+    <string id="4032">Redémarrage requis</string>
+    <string id="4033">Veuillez redémarrer XBMC Skin Manager 
+pour que les changements soient appliqués</string>
+    <string id="4034">Aucun script de construction</string>
+    <string id="4035">Aucun script de construction na été trouvé pour %s.
+Voulez vous utiliser le skin tel-quel (avec les fichers de textures actuels) ?
+(Résultat non garanti !)</string>
+    <string id="4036">Demande en cours...</string>
+    <string id="4037">Téléchagement du changelog...</string>
+    
+    <!-- Log Strings -->
+    <string id="5000">r|Des erreurs se sont produites:</string>
+    <string id="5001">ri|Impossible de se connecter à Internet</string>
+    <string id="5002">ri|Impossible de joindre le serveur SVN</string>
+    <string id="5003">ri|Le fichier XML n'a pas pu être lu</string>
+    <string id="5005">Connexion...</string>
+    <string id="5006">gi|Connexion FTP réussie</string>
+    <string id="5007">ri|Connexion FTP impossible</string>
+    <string id="5008">gi|Installation de XBMC repérée</string>
+    <string id="5010">Téléchargement des skins...</string>
+    <string id="5011">gi|Téléchargement de %s terminé (%s/%s)</string>
+    <string id="5012">gi|Aucune mise à jour pour %s (%s/%s)</string>
+    <string id="5013">ri|Téléchargement des skins SVN impossible</string>
+    <string id="5014">ri|Échec de téléchargement pour %s</string>
+    <string id="5015">Construction des skins...</string>
+    <string id="5016">gi|Construction de %s terminée (%s/%s)</string>
+    <string id="5017">ri|Impossible de construire %s (fichier .bat absent)</string>
+    <string id="5018">ri|Impossible d'extraire le skin %s (archive absente ou corrompue)</string>
+    <string id="5019">Installation des skins...</string>
+    <string id="5020">gi|Installation de %s terminée (%s/%s)</string>
+    <string id="5021">ri|Impossible d'installer %s (dossier de construction absent)</string>
+    <string id="5022">ri|Installation de %s échouée</string>
+    <string id="5023">ri|Impossible de créer le répertoire %s</string>
+    <string id="5024">ri|Impossible d'installer %s</string>
+    <string id="5025">ri|Impossible de télécharger %s</string>
+    <string id="5026">Suppression des dossiers temporaires...</string>
+    <string id="5027">gi|Dossier temporaire de %s supprimé (%s/%s)</string>
+    <string id="5028">ri|Impossible de supprimer le dossier temporaire de %s (dossier absent)</string>
+    <string id="5029">ri|Impossible de supprimer %s</string>
+    <string id="5030">c|---OPERATIONS TERMINEES---</string>
+    <string id="5031">Annulé par l'utilisateur</string>
+    <string id="5032">ri|Le skin %s n'est pas traité (%s/%s)</string>
+    <string id="5033">ri|Téléchargement des skins HTTP impossible</string>
+    <string id="5034">gi|%s supprimé (%s/%s)</string>
+    <string id="5035">ri|Impossible de supprimer %s (dossier absent)</string>
+    <string id="5036">ri|Impossible de supprimer %s (erreur inconnue)</string>
+    <string id="5037">Réinitialisation des paramètres...</string>
+    <string id="5038">r|Erreur lors de la réinitialisation des paramètres</string>
+    <string id="5039">ri|Le chemin de XBMC doit être absolu (ex : "/E/XBMC")</string>
+    <string id="5040">ri|Impossible de créer le répertoire temporaire : %s existe déjà !</string>
+    <string id="5041">ri|Impossible de repérer le dossier UserData.</string>
+    <string id="5042">ri|Impossible de construire les skins (%s n'est pas une plateforme supportée)</string>
+</strings>

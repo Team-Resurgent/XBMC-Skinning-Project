@@ -1,0 +1,226 @@
+<!-- 
+USE: For displaying wide icons (tv series or games).
+-->
+<includes>
+	<include name="ViewMovies">
+			
+		<control type="group">
+				
+			<visible>Control.IsVisible(56)</visible>
+			<posx>40</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>1200</width>
+				<height>590</height>
+			</control>
+
+			<!-- show info -->
+			<control type="group">
+				<posx>10</posx>
+				<posy>10</posy>
+				<control type="image">
+					<texture border="8">container-back-nf.png</texture>
+					<width>600</width>
+					<height>210</height>
+				</control>
+				<control type="grouplist">
+					<posx>10</posx>
+					<control type="label">
+						<label>$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</label>
+						<width>420</width>
+						<height>40</height>
+						<font>listitem-header</font>
+						<textcolor>type-listitem-header</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Duration,[COLOR type-listitem-dark]Length:[/COLOR] ]</label>
+						<width>420</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Genre,[COLOR type-listitem-dark]Genre:[/COLOR] ]</label>
+						<width>420</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Rating,[COLOR type-listitem-dark]Rating:[/COLOR] , / 10]</label>
+						<width>420</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.MPAA,[COLOR type-listitem-dark]MPAA:[/COLOR] ]</label>
+						<width>420</width>
+						<height>40</height>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+				</control>
+				<!-- cover -->
+				<control type="group">
+					<posx>440</posx>
+					<posy>10</posy>
+					<control type="image">
+						<texture border="8">container-back-nf.png</texture>
+						<width>160</width>
+						<height>210</height>
+						<posy>-10</posy>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<width>160</width>
+						<height>190</height>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<texture border="8">$INFO[ListItem.Overlay]</texture>
+						<width>48</width>
+						<height>44</height>
+						<posx>102</posx>
+						<posy>146</posy>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<posx>10</posx>
+				<posy>230</posy>
+				<control type="image">
+					<texture border="8">container-back-nf.png</texture>
+					<width>600</width>
+					<height>350</height>
+				</control>	
+				<control type="textbox">
+					<label>$INFO[ListItem.TagLine,[COLOR type-listitem-dark]Tagline[/COLOR] ,[CR][CR]]$INFO[ListItem.PlotOutline,[COLOR type-listitem-dark]Plot Outline[/COLOR] ,[CR][CR]]$INFO[ListItem.Plot,[COLOR type-listitem-dark]Plot[/COLOR] ]</label>
+					<width>580</width>
+					<height>330</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<font>listitem-small</font>
+					<textcolor>type-listitem</textcolor>
+					<autoscroll delay="2000" time="5000" repeat="5000">!Control.HasFocus(9000)</autoscroll>
+				</control>
+				<control type="textbox">
+					<visible>IsEmpty(ListItem.TagLine) + IsEmpty(ListItem.PlotOutline) + IsEmpty(ListItem.Plot)</visible>
+					<label>No plot information available.</label>
+					<width>580</width>
+					<height>330</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<font>listitem-small</font>
+					<textcolor>type-listitem-dark</textcolor>
+				</control>
+			</control>
+
+			<!-- list container -->
+			<control type="panel" id="56">
+			
+				<viewtype label="Movie Info">icon</viewtype>
+				<width>530</width>
+				<height>580</height>
+				<posx>620</posx>
+				<posy>10</posy>
+				<onup>55</onup>
+				<ondown>55</ondown>
+				<onleft>61</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="58" width="530">
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>530</width>
+						<height>48</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Title]</label>
+						<width>510</width>
+						<height>46</height>
+						<posx>10</posx>
+						<font>listitem-small</font>
+						<textcolor>type-listitem-dark</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="58" width="530">
+					<control type="image">
+						<texture border="8">listitem-back.png</texture>
+						<width>530</width>
+						<height>48</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Title]</label>
+						<width>510</width>
+						<height>46</height>
+						<posx>10</posx>
+						<font>listitem-small</font>
+						<textcolor>type-listitem</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<!-- scrollbar -->
+			<control type="group">
+				<posx>1160</posx>
+				<posy>10</posy>
+				<control type="image">
+					<texture>container-back-nf.png</texture>
+					<width>30</width>
+					<height>570</height>
+				</control>
+				<control type="scrollbar" id="60">
+					<width>30</width>
+					<height>570</height>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+				</control>
+			</control>
+			
+			<!-- container info -->
+			<control type="group">
+				<posy>590</posy>
+				<!-- number of files -->
+				<control type="label" id="12">
+					<width>670</width>
+					<height>40</height>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+				</control>
+				<!-- current page / number of pages -->
+				<control type="label">
+					<label>$INFO[Container().CurrentPage,, / ]$INFO[Container().NumPages]</label>
+					<width>670</width>
+					<height>40</height>
+					<posx>1200</posx>
+					<font>content-small</font>
+					<textcolor>type-header-dark</textcolor>
+					<align>right</align>
+				</control>
+			</control>
+
+		</control>
+		
+		<control type="group">
+				
+			<visible>!Container.Content(movies) + !Container.Content(files) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(musicvideos)</visible>
+			<posx>40</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>container-back-nf.png</texture>
+				<width>1200</width>
+				<height>590</height>
+			</control>
+		</control>
+				
+	</include>
+</includes>

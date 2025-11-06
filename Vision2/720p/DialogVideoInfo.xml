@@ -1,0 +1,1023 @@
+<window id="2003">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonBackgroundFullScreenDialog</include>
+		<control type="group">
+			<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>330</width>
+				<height>450</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>330</width>
+				<height>450</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>300</posx>
+				<posy>0</posy>
+				<width>980</width>
+				<height>450</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>300</posx>
+				<posy>0</posy>
+				<width>980</width>
+				<height>450</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>40</posx>
+				<posy>40</posy>
+				<width>250</width>
+				<height>370</height>
+				<info>Listitem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Movie Title value</description>
+				<posx>340</posx>
+				<posy>40</posy>
+				<width>900</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
+				<font>font18</font>
+			</control>
+			<control type="image">
+				<posx>340</posx>
+				<posy>80</posy>
+				<width>900</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="list" id="49">
+				<posx>340</posx>
+				<posy>100</posy>
+				<width>900</width>
+				<height>300</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>61</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="30">
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<posy>0</posy>
+						<width>715</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>900</width>
+						<height>30</height>
+						<visible>Control.HasFocus(49)</visible>
+						<texture border="5">button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<posy>0</posy>
+						<width>715</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[20339]:</label>
+						<label2>$INFO[ListItem.Director]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Director)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20417]:</label>
+						<label2>$INFO[ListItem.Writer]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Writer)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[572]:</label>
+						<label2>$INFO[ListItem.Studio]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Studio)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[515]:</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[562]:</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[2050]:</label>
+						<label2>$INFO[ListItem.Duration]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[563]:</label>
+						<label2>$INFO[ListItem.RatingAndVotes]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[202]:</label>
+						<label2>$INFO[ListItem.TagLine]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.TagLine)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[203]:</label>
+						<label2>$INFO[ListItem.PlotOutline]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.PlotOutline)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20074]:</label>
+						<label2>$INFO[ListItem.mpaa]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.mpaa)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Container.Content(TVShows)</visible>
+			<control type="group">
+				<visible>Control.HasFocus(12)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>450</height>
+					<texture border="40">DialogBack.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>450</height>
+					<texture border="40">DialogFront.png</texture>
+				</control>
+				<control type="label">
+					<description>TVshow Title value</description>
+					<posx>690</posx>
+					<posy>50</posy>
+					<width>550</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
+					<font>font18</font>
+				</control>
+				<control type="image">
+					<posx>690</posx>
+					<posy>90</posy>
+					<width>550</width>
+					<height>8</height>
+					<texture>StreakBlueFull.png</texture>
+				</control>
+				<control type="label">
+					<posx>690</posx>
+					<posy>110</posy>
+					<width>550</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>31031</label>
+					<font>font13</font>
+				</control>
+				<control type="image">
+					<description>Current Fanart image</description>
+					<posx>40</posx>
+					<posy>40</posy>
+					<width>640</width>
+					<height>370</height>
+					<info>Listitem.Property(Fanart_Image)</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Control.HasFocus(12)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>230</height>
+					<texture border="40">DialogBack.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>230</height>
+					<texture border="40">DialogFront.png</texture>
+				</control>
+				<control type="image">
+					<description>Cover image</description>
+					<posx>40</posx>
+					<posy>40</posy>
+					<width>1200</width>
+					<height>150</height>
+					<info>Listitem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>1280</width>
+					<height>250</height>
+					<texture border="40">DialogBack.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>1280</width>
+					<height>250</height>
+					<texture border="40">DialogFront.png</texture>
+				</control>
+				<control type="label">
+					<description>TVshow Title value</description>
+					<posx>40</posx>
+					<posy>245</posy>
+					<width>1200</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
+					<font>font18</font>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>280</posy>
+					<width>1200</width>
+					<height>8</height>
+					<texture>StreakBlueFull.png</texture>
+				</control>
+				<control type="list" id="49">
+					<posx>40</posx>
+					<posy>290</posy>
+					<width>1200</width>
+					<height>120</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>61</onup>
+					<ondown>9000</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="30">
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>160</width>
+							<height>30</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>blue</textcolor>
+							<selectedcolor>white</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>175</posx>
+							<posy>0</posy>
+							<width>1015</width>
+							<height>30</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<selectedcolor>white</selectedcolor>
+							<info>ListItem.Label2</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="30">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1200</width>
+							<height>30</height>
+							<visible>Control.HasFocus(49)</visible>
+							<texture border="5">button-focus.png</texture>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>160</width>
+							<height>30</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>blue</textcolor>
+							<selectedcolor>white</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>175</posx>
+							<posy>0</posy>
+							<width>1015</width>
+							<height>30</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<selectedcolor>white</selectedcolor>
+							<info>ListItem.Label2</info>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$LOCALIZE[20360]:</label>
+							<label2>$INFO[ListItem.Episode]</label2>
+							<onclick>-</onclick>
+							<visible>!IsEmpty(ListItem.Episode)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[20416]:</label>
+							<label2>$INFO[ListItem.Premiered]</label2>
+							<onclick>-</onclick>
+							<visible>!IsEmpty(ListItem.Premiered)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[515]:</label>
+							<label2>$INFO[ListItem.Genre]</label2>
+							<onclick>-</onclick>
+							<visible>!IsEmpty(ListItem.Genre)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[562]:</label>
+							<label2>$INFO[ListItem.Year]</label2>
+							<onclick>-</onclick>
+							<visible>!IsEmpty(ListItem.Year)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[563]:</label>
+							<label2>$INFO[ListItem.Rating]</label2>
+							<onclick>-</onclick>
+							<visible>!IsEmpty(ListItem.Rating)</visible>
+						</item>
+					</content>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Container.Content(Episodes)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>450</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>450</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>420</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>450</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>420</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>450</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>40</posx>
+				<posy>40</posy>
+				<width>370</width>
+				<height>370</height>
+				<info>Listitem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Episode Title value</description>
+				<posx>460</posx>
+				<posy>40</posy>
+				<width>780</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
+				<font>font18</font>
+			</control>
+			<control type="image">
+				<posx>460</posx>
+				<posy>80</posy>
+				<width>780</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="list" id="49">
+				<posx>460</posx>
+				<posy>100</posy>
+				<width>780</width>
+				<height>300</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>61</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="30">
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>780</width>
+						<height>30</height>
+						<visible>Control.HasFocus(49)</visible>
+						<texture border="5">button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[20364]:</label>
+						<label2>$INFO[ListItem.TVShowTitle]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20373]:</label>
+						<label2>$INFO[ListItem.Season]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Season)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20359]:</label>
+						<label2>$INFO[ListItem.Episode]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Episode)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20416]:</label>
+						<label2>$INFO[ListItem.Premiered]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Premiered)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[515]:</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20339]:</label>
+						<label2>$INFO[ListItem.Director]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Director)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20417]:</label>
+						<label2>$INFO[ListItem.Writer]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Writer)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[562]:</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[2050]:</label>
+						<label2>$INFO[ListItem.Duration]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[563]:</label>
+						<label2>$INFO[ListItem.Rating]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Container.Content(MusicVideos)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>450</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>450</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<posx>420</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>450</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>420</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>450</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>40</posx>
+				<posy>40</posy>
+				<width>370</width>
+				<height>370</height>
+				<info>Listitem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Episode Title value</description>
+				<posx>460</posx>
+				<posy>40</posy>
+				<width>780</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
+				<font>font18</font>
+			</control>
+			<control type="image">
+				<posx>460</posx>
+				<posy>80</posy>
+				<width>780</width>
+				<height>8</height>
+				<texture>StreakBlueFull.png</texture>
+			</control>
+			<control type="list" id="49">
+				<posx>460</posx>
+				<posy>100</posy>
+				<width>780</width>
+				<height>300</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>61</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="30">
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>780</width>
+						<height>30</height>
+						<visible>Control.HasFocus(49)</visible>
+						<texture border="5">button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>175</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[557]:</label>
+						<label2>$INFO[ListItem.Artist]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Artist)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[558]:</label>
+						<label2>$INFO[ListItem.Album]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Album)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[515]:</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[572]:</label>
+						<label2>$INFO[ListItem.Studio]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Studio)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20417]:</label>
+						<label2>$INFO[ListItem.Writer]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Writer)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[562]:</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[2050]:</label>
+						<label2>$INFO[ListItem.Duration]</label2>
+						<onclick>-</onclick>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>510</posy>
+			<width>1280</width>
+			<height>210</height>
+			<texture border="40">DialogBack.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>510</posy>
+			<width>1280</width>
+			<height>210</height>
+			<texture border="40">DialogFront.png</texture>
+		</control>
+		<control type="textbox" id="400">
+			<description>textarea</description>
+			<posx>40</posx>
+			<posy>550</posy>
+			<width>1200</width>
+			<height>105</height>
+			<label>$INFO[ListItem.Plot,[COLOR=blue]$LOCALIZE[207]: &#32;&#32; [/COLOR]]</label>
+			<font>font11</font>
+			<align>justify</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>50</ondown>
+			<visible>!Control.IsVisible(50)</visible>
+			<pagecontrol>61</pagecontrol>
+			<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + !Skin.HasSetting(AutoScroll)</autoscroll>
+		</control>
+		<control type="panel" id="50">
+			<posx>40</posx>
+			<posy>550</posy>
+			<width>1080</width>
+			<height>105</height>
+			<onleft>9000</onleft>
+			<onright>61</onright>
+			<onup>9000</onup>
+			<ondown>61</ondown>
+			<viewtype label="">list</viewtype>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<orientation>vertical</orientation>
+			<itemlayout height="35" width="540">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>538</width>
+					<height>33</height>
+					<texture border="5">button-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>518</width>
+					<height>33</height>
+					<font>font12</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>white</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35" width="540">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>538</width>
+					<height>33</height>
+					<visible>!Control.HasFocus(50)</visible>
+					<texture border="5">button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>538</width>
+					<height>33</height>
+					<visible>Control.HasFocus(50)</visible>
+					<texture border="5">button-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>518</width>
+					<height>33</height>
+					<font>font12</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>white</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<description>Actor image</description>
+			<posx>1130</posx>
+			<posy>550</posy>
+			<width>110</width>
+			<height>130</height>
+			<texture>$INFO[Container(50).Listitem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<control type="group">
+			<posx>90r</posx>
+			<posy>660</posy>
+			<control type="spincontrol" id="61">
+				<description>Next page button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<subtype>page</subtype>
+				<font>font12b</font>
+				<onleft>50</onleft>
+				<onright>49</onright>
+				<ondown>49</ondown>
+				<onup>50</onup>
+				<textcolor>white</textcolor>
+				<showonepage>true</showonepage>
+				<animation effect="slide" time="0" end="-120,0" condition="Control.IsVisible(50)">Conditional</animation>
+			</control>
+		</control>
+		<control type="group" id="9001">
+			<control type="image">
+				<posx>0</posx>
+				<posy>420</posy>
+				<width>1280</width>
+				<height>120</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>420</posy>
+				<width>1280</width>
+				<height>120</height>
+				<texture border="40">DialogFront.png</texture>
+			</control>
+			<control type="group" id="9000">
+				<posx>40</posx>
+				<posy>462</posy>
+				<control type="button" id="5">
+					<description>Cast/Review</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>206</label>
+					<onleft>11</onleft>
+					<onright>8</onright>
+					<onup>49</onup>
+					<ondown>50</ondown>
+				</control>
+				<control type="button" id="8">
+					<description>Play</description>
+					<posx>200</posx>
+					<posy>0</posy>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>208</label>
+					<onleft>5</onleft>
+					<onright>9</onright>
+					<onup>49</onup>
+					<ondown>50</ondown>
+				</control>
+				<control type="button" id="9">
+					<description>Resume</description>
+					<posx>400</posx>
+					<posy>0</posy>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>13404</label>
+					<onleft>8</onleft>
+					<onright>6</onright>
+					<onup>49</onup>
+					<ondown>50</ondown>
+				</control>
+				<control type="button" id="6">
+					<description>Refresh</description>
+					<posx>600</posx>
+					<posy>0</posy>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>184</label>
+					<onleft>9</onleft>
+					<onright>10</onright>
+					<onup>49</onup>
+					<ondown>50</ondown>
+				</control>
+				<control type="button" id="10">
+					<description>Get Thumb</description>
+					<posx>800</posx>
+					<posy>0</posy>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>13405</label>
+					<onleft>6</onleft>
+					<onright>12</onright>
+					<onup>49</onup>
+					<ondown>50</ondown>
+				</control>
+				<control type="button" id="12">
+					<description>Get Fanart</description>
+					<posx>1000</posx>
+					<posy>0</posy>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>20413</label>
+					<onleft>10</onleft>
+					<onright>11</onright>
+					<onup>49</onup>
+					<ondown>50</ondown>
+					<visible>Container.Content(TVShows)</visible>
+				</control>
+				<control type="button" id="11">
+					<description>Play Trailer</description>
+					<posx>1000</posx>
+					<posy>0</posy>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>20410</label>
+					<onleft>12</onleft>
+					<onright>5</onright>
+					<onup>49</onup>
+					<ondown>50</ondown>
+					<enable>!IsEmpty(ListItem.Trailer)</enable>
+					<visible>!Container.Content(TVShows)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

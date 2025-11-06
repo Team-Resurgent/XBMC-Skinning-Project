@@ -1,0 +1,40 @@
+<fonts>
+	<fontset id="Default" unicode="true">
+		<font>
+			<name>font10</name>
+			<filename>Daville.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font12</name>
+			<filename>Daville.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>font13</name>
+			<filename>Daville.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>Daville.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>font15</name>
+			<filename>Daville.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>font30</name>
+			<filename>Daville.ttf</filename>
+			<size>56</size>
+		</font>
+		<font>
+			<name>home</name>
+			<filename>HomeLabels.ttf</filename>
+			<aspect>1.05</aspect>
+			<size>105</size>
+		</font>
+	</fontset>
+</fonts>

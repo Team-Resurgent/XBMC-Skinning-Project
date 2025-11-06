@@ -1,0 +1,192 @@
+<window id="20">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<!-- background 16x9 -->
+<include>background-image</include>
+
+        <control type="image">
+            <posx>50</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-network.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+        <control type="image">
+            <posx>120</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-friends.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+       <control type="label">
+            <posx>178</posx>
+            <posy>167</posy>
+            <width>70</width>
+            <height>40</height>
+            <font>font12</font>
+            <aligny>center</aligny>
+            <align>center</align>
+	    <label>247</label>
+        </control>
+
+        <control type="image">
+            <posx>190</posx>
+            <posy>125</posy>
+            <width>45</width>
+            <height>60</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-scripts-glow.png</texture>
+        </control>
+
+        <control type="image">
+            <posx>260</posx>
+            <posy>133</posy>
+            <width>35</width>
+            <height>50</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>bmx-settings-update.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+        </control>
+
+<control type="group" id="511">
+	<posx>20</posx>
+	<posy>180</posy>
+        <control type="image">
+		<posx>-15</posx>
+		<posy>70</posy>
+		<width>35</width>
+		<height>50</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-programs.png</texture>
+        </control>
+        <control type="image">
+		<posx>30</posx>
+		<posy>70</posy>
+		<width>35</width>
+		<height>50</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-play-glow.png</texture>
+        </control>
+	<control type="button" id="2">
+		<description>View As Icons button</description>
+		<posx>0</posx>
+		<posy>120</posy>
+		<width>120</width>
+		<height>20</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<animation effect="fade" start="50" time="600" pulse="true" condition="Control.HasFocus(2)">Conditional</animation>
+		<label>100</label>
+		<onleft>512</onleft>
+		<onright>50</onright>
+		<onup>3</onup>
+		<ondown>3</ondown>
+	</control>
+        <control type="image">
+		<posx>-10</posx>
+		<posy>110</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-sub.png</texture>
+		<colordiffuse>grey4</colordiffuse>
+        </control>
+        <control type="image">
+		<posx>-10</posx>
+		<posy>110</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-sub-glow.png</texture>
+		<animation effect="fade" start="50" time="600" pulse="true" condition="Control.HasFocus(2)">Conditional</animation>
+        </control>
+	<control type="button" id="3">
+		<description>Sort by button</description>
+		<posx>0</posx>
+		<posy>157</posy>
+		<width>120</width>
+		<height>20</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<animation effect="fade" start="50" time="600" pulse="true" condition="Control.HasFocus(3) | Control.HasFocus(4)">Conditional</animation>
+		<label>103</label>
+		<onleft>512</onleft>
+		<onright>4</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+	</control>
+	<control type="togglebutton" id="4">
+		<description>Sort asc</description>
+		<posx>100</posx>
+		<posy>162</posy>
+		<label>-</label>
+		<onleft>3</onleft>
+		<onright>50</onright>
+		<animation effect="fade" start="50" time="600" pulse="true" condition="Control.HasFocus(4)">Conditional</animation>
+		<onup>2</onup>
+		<ondown>2</ondown>
+	</control>
+        <control type="image">
+		<posx>-10</posx>
+		<posy>147</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-sub.png</texture>
+		<colordiffuse>grey4</colordiffuse>
+        </control>
+        <control type="image">
+		<posx>-10</posx>
+		<posy>147</posy>
+		<width>30</width>
+		<height>40</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>bmx-settings-sub-glow.png</texture>
+		<animation effect="fade" start="50" time="600" pulse="true" condition="Control.HasFocus(3) | Control.HasFocus(4)">Conditional</animation>
+        </control>
+
+	<visible allowhiddenfocus="true">ControlGroup(511).HasFocus(0)</visible>
+</control>
+
+
+
+
+
+		<include>OldListViewCommons</include>
+
+
+
+
+
+   <control type="button" id="512">
+	<description>power button</description>
+	<posx>665</posx>
+	<posy>500</posy>
+	<width>46</width>
+	<height>64</height>
+	<label>-</label>
+	<font>font14</font>
+      <onfocus>SetFocus(300)</onfocus>
+      <onfocus>ReplaceWindow(home)</onfocus>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+   </control>
+
+
+
+
+
+
+
+
+
+
+	</controls>
+</window>

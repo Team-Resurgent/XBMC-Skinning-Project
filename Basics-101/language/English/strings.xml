@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <string id="31001">Vis Options</string>
+  <string id="31002">Vis Select</string>
+  <string id="31003">Menu</string>
+  <string id="31004">Bookmarks</string>
+  <string id="31005">Audio Options</string>
+  <string id="31006">Video Options</string>
+  <string id="31007">Volume Muted</string>
+  <string id="31008">...Working...</string>
+  <string id="31009">Use Advanced Mouse Controls</string>
+  <string id="31010">Download Extra Skin Themes</string>
+  <string id="31011">Show Background Visualisations</string>
+  <string id="31012">Show Background Videos</string>
+  <string id="31013">Skin Version:</string>
+  <string id="31014">Use Extra Large DVD Icons View</string>
+  <string id="31015">View:</string>
+
+  <string id="31900">Basics-101 Themes</string>
+  <string id="31901">Download Basics-101 Themes</string>
+  <string id="31902">Downloading Theme:</string>
+  <string id="31903">Theme Installed</string>
+  <string id="31904">Go to Appereance Settings to apply.</string>
+  <string id="31905">Download Cancelled</string>
+  <string id="31906">Theme file already exists</string>
+  <string id="31907">Downloading again will replace existing file</string>
+  <string id="31908">Do you wish to download the new file ?</string>
+</strings>

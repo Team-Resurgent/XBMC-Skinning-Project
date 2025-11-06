@@ -1,0 +1,118 @@
+<window type="dialog" id="52">
+<defaultcontrol always="true">2002</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>208</posx>
+  <posy>188</posy>
+</coordinates>
+  
+<include>HomeSubMenuFade</include>
+  
+<controls>
+  
+  <control type="group">
+    <include>OptionBack1-4</include>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>304</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label">
+      <description>XBMC Connected Header Label</description>
+      <posx>35</posx>
+      <posy>0</posy>
+      <width>268</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[31002]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+
+    <control type="button" id="2002">
+      <description>Settings</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[5]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(52)</onclick>
+      <onclick>xbmc.activatewindow(56)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2005</onup>
+      <ondown>2003</ondown>
+    </control>
+    <control type="button" id="2003">
+      <description>Favorites</description>
+      <posx>10</posx>
+      <posy>90</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[1036]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(52)</onclick>
+      <onclick>SetFocus(450)</onclick>
+      <onclick>xbmc.activatewindow(Favourites)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2002</onup>
+      <ondown>2004</ondown>
+    </control>
+    <control type="button" id="2004">
+      <description>Filemanager</description>
+      <posx>10</posx>
+      <posy>125</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[7]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(52)</onclick>
+      <onclick>SetFocus(20)</onclick>
+      <onclick>xbmc.activatewindow(filemanager)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2003</onup>
+      <ondown>2005</ondown>
+    </control>
+    <control type="button" id="2005">
+      <description>Shutdown</description>
+      <posx>10</posx>
+      <posy>160</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[31026]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(52)</onclick>
+      <onclick>SetFocus(3112)</onclick>
+      <onclick>xbmc.activatewindow(111)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2004</onup>
+      <ondown>2002</ondown>
+    </control>
+  </control>
+  
+</controls>
+  
+</window>

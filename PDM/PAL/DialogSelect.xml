@@ -1,0 +1,127 @@
+<window id="2000">
+	<defaultcontrol>3</defaultcontrol>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="400">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>115</posy>
+	</coordinates>
+	<controls>
+
+		<control type="image">
+			<description>Profile Background -3</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>410</height>
+			<texture border="70,50,40,50">dialog-invite.png</texture>
+		</control>
+
+		<control type="group">
+			<posx>60</posx>
+			<posy>20</posy>
+
+			<control type="label" id="1">
+				<description>Heading Label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<align>left</align>
+				<font>special13</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>-</label>
+				<include>homemisc</include>
+			</control>
+
+			<control type="button" id="5">
+				<description>IMDB</description>
+				<posx>0</posx>
+				<posy>318</posy>
+				<height>27</height>
+				<label>368</label>
+				<aligny>center</aligny>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+
+			<control type="spincontrol" id="60">
+				<posx>365</posx>
+				<posy>325</posy>
+				<font>font10</font>
+				<subtype>page</subtype>
+				<showonepage>true</showonepage>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="list" id="3">
+				<posx>-10</posx>
+				<posy>35</posy>
+				<width>425</width>
+				<height>279</height>
+				<onleft>5</onleft>
+				<onright>60</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="31">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>425</width>
+						<height>29</height>
+						<texture>input-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>415</width>
+						<height>29</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<include>selectedcolor</include>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="31">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>425</width>
+						<height>29</height>
+						<texture>input-nofocus.png</texture>
+						<visible>!Control.hasfocus(3)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>425</width>
+						<height>29</height>
+						<texture>input-focus.png</texture>
+						<visible>Control.hasfocus(3)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>415</width>
+						<height>29</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<include>selectedcolor</include>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+
+	</controls>
+</window>

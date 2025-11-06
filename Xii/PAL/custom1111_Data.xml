@@ -1,0 +1,127 @@
+<window id="1111">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-blackbase.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>xii logo image</description>
+			<posx>609</posx>
+			<posy>40</posy>
+			<width>66</width>
+			<height>36</height>
+			<texture>logo-xii-grey.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>white tab image</description>
+			<posx>25</posx>
+			<posy>40</posy>
+			<width>400</width>
+			<height>41</height>
+			<texture>background-tab-white.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>data tab image</description>
+			<posx>42</posx>
+			<posy>50</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture>icon-data.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>white tab label </description>
+			<posx>85</posx>
+			<posy>43</posy>
+			<font>font28</font>
+			<height>41</height>
+			<include>textcolorblack</include>
+			<include>memorylabel</include>
+			<align>left</align>
+		</control>
+
+		<control type="group" id="9000">
+			<control type="button" id="4">
+				<description>Back button</description>
+				<posx>35</posx>
+				<posy>465</posy>
+				<width>316</width>
+				<height>79</height>
+				<include>backlabel</include>
+				<font>font28</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<include>textcolorblack</include>
+				<onclick>ActivateWindow(1110)</onclick>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<texturefocus>button-big-focus.png</texturefocus>
+				<texturenofocus>button-big-nofocus.png</texturenofocus>				
+				<include>homebuttonanimation</include>
+			</control>
+		</control>
+		
+		<control type="group" id="9001">	
+    	<animation effect="zoom"  end="-100,100,10,10" time="300">WindowClose</animation>	
+  		<animation effect="fade" time="300">WindowOpen</animation>
+			<control type="button" id="2">
+  			<description>File Manager</description>
+  			<font>font28</font>
+  			<posx>75</posx>
+  			<posy>155</posy>
+  			<width>275</width>
+  			<height>233</height>
+  			<texturefocus>button-file.png</texturefocus>
+  			<texturenofocus>button-file.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+  			<textoffsety>175</textoffsety>
+				<include>textcolorblack</include>
+  			<include>filelabel</include>
+  			<align>center</align>
+  			<onclick>ActivateWindow(MyFiles)</onclick>
+  			<onleft>3</onleft>
+  			<onright>3</onright>
+  			<onup>9000</onup>
+  			<ondown>9000</ondown>
+    		<animation effect="zoom"  end="35,135,325,275" time="200">Focus</animation>
+  		</control>
+  		<control type="button" id="3">
+  			<description>GameSaves</description>
+  			<font>font28</font>
+  			<posx>370</posx>
+  			<posy>155</posy>
+  			<width>275</width>
+  			<height>233</height>
+  			<texturefocus>button-gamesave.png</texturefocus>
+  			<texturenofocus>button-gamesave.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+  			<textoffsety>175</textoffsety>
+				<include>textcolorblack</include>
+  			<include>4f</include>
+  			<align>center</align>
+  			<onclick>ActivateWindow(35)</onclick>
+  			<onleft>2</onleft>
+  			<onright>2</onright>
+  			<onup>9000</onup>
+  			<ondown>9000</ondown>
+    		<animation effect="zoom"  end="370,135,325,275" time="200">Focus</animation>
+  		</control>
+		</control>
+		<control type="image" id="0">
+			<description>bg preview</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+			<visible>Window.Next(0)</visible>
+		</control>		
+	</controls>
+</window>

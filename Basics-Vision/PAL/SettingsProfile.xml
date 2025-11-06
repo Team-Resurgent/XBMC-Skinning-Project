@@ -1,0 +1,170 @@
+<window id="34">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="panel" id="2">
+				<posx>17</posx>
+				<posy>70</posy>
+				<width>669</width>
+				<height>437</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<viewtype label="$LOCALIZE[535] 2">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>vertical</orientation>
+				<animation effect="slide" start="0,0" end="11,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
+				<itemlayout height="73" width="335">
+					<control type="image">
+						<posx>8</posx>
+						<posy>4</posy>
+						<width>43</width>
+						<height>61</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="image">
+						<posx>34</posx>
+						<posy>39</posy>
+						<width>18</width>
+						<height>26</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<aspectratio>keep</aspectratio>
+						<info>Listitem.Overlay</info>
+					</control>
+					<control type="label">
+						<posx>59</posx>
+						<posy>4</posy>
+						<width>267</width>
+						<height>28</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>59</posx>
+						<posy>36</posy>
+						<width>267</width>
+						<height>28</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label2,Last Login - ]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="73" width="335">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>332</width>
+						<height>69</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<visible>Control.HasFocus(2)</visible>
+						<texture>ListItem_Focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>4</posy>
+						<width>43</width>
+						<height>61</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="image">
+						<posx>34</posx>
+						<posy>39</posy>
+						<width>18</width>
+						<height>26</height>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<aspectratio>keep</aspectratio>
+						<info>Listitem.Overlay</info>
+					</control>
+					<control type="label">
+						<posx>59</posx>
+						<posy>4</posy>
+						<width>267</width>
+						<height>28</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>59</posx>
+						<posy>36</posy>
+						<width>267</width>
+						<height>28</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>red</selectedcolor>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label2,Last Login - ]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>72</height>
+				<texture>Topbar.png</texture>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>23</posx>
+				<posy>16</posy>
+				<width>338</width>
+				<height>34</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>13200</label>
+				<font>font16b</font>
+			</control>
+			<include>Common_Now_Playing</include>
+			<include>Common_File_Count</include>
+			<include>AllViewCommonPageControls</include>
+			<control type="group" id="9001">
+				<posx>-194</posx>
+				<posy>0</posy>
+				<animation effect="slide" time="150" end="194,0" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>225</width>
+					<height>576</height>
+					<onclick>-</onclick>
+					<hitrect x="0" y="0" w="200" h="576" />
+					<texturefocus>Side_Slideout.png</texturefocus>
+					<texturenofocus>Side_Slideout.png</texturenofocus>
+				</control>
+				<control type="group" id="9000">
+					<posx>0</posx>
+					<posy>112</posy>
+					<control type="radiobutton" id="4">
+						<description>enable login screen</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>ButtonCommonValues</include>
+						<label>20096</label>
+						<onleft>2</onleft>
+						<onright>2</onright>
+						<onup>4</onup>
+						<ondown>4</ondown>
+						<pulseonselect>no</pulseonselect>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

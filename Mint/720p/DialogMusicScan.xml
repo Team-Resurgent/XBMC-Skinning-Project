@@ -1,0 +1,50 @@
+<window id="112">
+
+	<defaultcontrol>402</defaultcontrol>
+		
+	<controls>
+	
+		<control type="group">
+
+			<posx>780</posx>
+			<posy>20</posy>
+			<include>anim-scan</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>480</width>
+				<height>140</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label" id="401">
+				<width>460</width>
+				<height>40</height>
+				<posx>10</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+			<!-- current directory -->
+			<control type="label" id="402">
+				<width>460</width>
+				<height>40</height>
+				<posx>10</posx>
+				<posy>60</posy>
+				<haspath>yes</haspath>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+			</control>
+			<!-- progress bar -->
+			<control type="progress" id="403">
+				<width>460</width>
+				<height>30</height>
+				<posx>10</posx>
+				<posy>105</posy>
+			</control>
+		</control>
+		
+	</controls>
+	
+</window>

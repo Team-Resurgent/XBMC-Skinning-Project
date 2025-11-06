@@ -1,0 +1,222 @@
+<window>
+  <id>9</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background_settings.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+    
+<control>
+			<description>musiclogo</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>40</posX>
+			<posY>45</posY>
+			<width>175</width>
+			<height>31</height>
+			<texture>ani_settingslogo.gif</texture>
+		</control>
+
+
+    <control>
+      <description>settings label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>60</posX>
+      <posY>80</posY>
+      <label>5</label>
+      <font>font13</font>
+      <textcolor>FFF3D425</textcolor>
+    </control>
+    
+    <control>
+      <description>UI Calibration button</description>
+      <type>button</type>
+      <id>2</id>
+      <posX>250</posX>
+      <posY>130</posY>
+      <width>175</width>
+      <height>36</height>     
+      <label>213</label>
+      <font>font14</font>
+      <textcolor>ffffffff</textcolor>
+      <colordiffuse>ffffffff</colordiffuse>
+      <disabledcolor>60ffffff</disabledcolor>
+      <hyperlink>10</hyperlink>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>11</onup>
+      <ondown>3</ondown>
+    </control>
+    <control>
+      <description>Screen Calibration button</description>
+      <type>button</type>
+      <id>3</id>
+      <posX>250</posX>
+      <posY>166</posY>
+      <width>175</width>
+      <height>36</height>
+      <label>214</label>
+      <font>font14</font>
+      <textcolor>ffffffff</textcolor>
+      <colordiffuse>ffffffff</colordiffuse>
+      <disabledcolor>60ffffff</disabledcolor>
+      <hyperlink>11</hyperlink>
+      <onleft>3</onleft>
+      <onright>3</onright>
+      <onup>2</onup>
+      <ondown>4</ondown>
+    </control>
+
+    <control>
+      <description>Soften button</description>
+      <type>radiobutton</type>
+      <id>4</id>
+      <posX>250</posX>
+      <posY>202</posY>
+      <width>175</width>
+      <height>36</height>  
+      <label>215</label>
+      <onleft>4</onleft>
+      <onright>4</onright>
+      <onup>3</onup>
+      <ondown>5</ondown>
+    </control>
+
+    <control>
+      <description>Zoom button</description>
+      <type>radiobutton</type>
+      <id>5</id>
+      <posX>250</posX>
+      <posY>238</posY>
+      <width>175</width>
+      <height>36</height>  
+      <label>216</label>
+      <onleft>5</onleft>
+      <onright>5</onright>
+      <onup>4</onup>
+      <ondown>6</ondown>
+    </control>
+
+    <control>
+      <description>Stretch button</description>
+      <type>radiobutton</type>
+      <id>6</id>
+      <posX>250</posX>
+      <posY>274</posY>
+      <width>175</width>
+      <height>36</height>  
+      <label>217</label>
+      <onleft>6</onleft>
+      <onright>6</onright>
+      <onup>5</onup>
+      <ondown>7</ondown>
+    </control>
+
+    <control>
+      <description>Filters button</description>
+      <type>button</type>
+      <id>7</id>
+      <posX>250</posX>
+      <posY>310</posY>
+      <width>175</width>
+      <height>36</height>  
+      <label>230</label>
+      <font>font14</font>
+      <textcolor>ffffffff</textcolor>
+      <colordiffuse>ffffffff</colordiffuse>
+      <disabledcolor>60ffffff</disabledcolor>
+      <hyperlink>13</hyperlink>
+      <onleft>7</onleft>
+      <onright>7</onright>
+      <onup>6</onup>
+      <ondown>8</ondown>
+    </control>
+    
+    <control>
+      <description>Subtitle button</description>
+      <type>button</type>
+      <id>8</id>
+      <posX>250</posX>
+      <posY>346</posY>
+      <width>175</width>
+      <height>36</height>  
+      <label>287</label>
+      <font>font14</font>
+      <textcolor>ffffffff</textcolor>
+      <colordiffuse>ffffffff</colordiffuse>
+      <disabledcolor>60ffffff</disabledcolor>
+      <hyperlink>15</hyperlink>
+      <onleft>8</onleft>
+      <onright>8</onright>
+      <onup>7</onup>
+      <ondown>9</ondown>
+    </control>
+    <control>
+      <description>Frame Rate Conversions button</description>
+      <type>radiobutton</type>
+      <id>9</id>
+      <posX>250</posX>
+      <posY>382</posY>
+      <width>175</width>
+      <height>36</height>  
+      <label>336</label>
+      <onup>8</onup>
+      <ondown>10</ondown>
+    </control>
+
+    <control>
+      <description>Screensaver Button</description>
+      <type>button</type>
+      <id>10</id>
+      <posX>250</posX>
+      <posY>418</posY>
+      <width>175</width>
+      <height>36</height>  
+      <label>360</label>
+      <font>font14</font>
+      <textcolor>ffffffff</textcolor>
+      <colordiffuse>ffffffff</colordiffuse>
+      <disabledcolor>60ffffff</disabledcolor>
+      <hyperlink>16</hyperlink>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>9</onup>
+      <ondown>11</ondown>
+    </control>
+	<control>
+		<description>OSD Button</description>
+		<type>button</type>
+		<id>11</id>
+		<posX>250</posX>
+		<posY>454</posY>
+		<width>175</width>
+      <height>36</height>  
+		<label>478</label>
+		<font>font14</font>
+		<hyperlink>18</hyperlink>
+		<onleft>10</onleft>
+		<onright>10</onright>
+		<onup>10</onup>
+		<ondown>2</ondown>
+	</control>        
+		<control>
+			<description>video windowlogo</description>
+			<type>videowindow</type>
+			<id>1</id>
+			<posX>250</posX>
+			<posY>120</posY>
+			<width>400</width>
+			<height>350</height>
+		</control>
+  </controls>
+</window>

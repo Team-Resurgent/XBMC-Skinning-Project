@@ -1,0 +1,100 @@
+<includes>
+
+	<!-- default controls -->
+	<include file="Defaults.xml" />
+	
+	<!-- backgrounds -->
+	<include file="Backgrounds.xml" />
+	
+	<!-- animations -->
+	<include file="Animations.xml" />
+	
+	<!-- general views -->
+	<include file="ViewList.xml" />
+	<include file="ViewIcon.xml" />
+	<include file="ViewPanel.xml" />
+	<include file="ViewWide.xml" />
+	<!-- video views -->
+	<include file="ViewCategory.xml" />
+	<include file="ViewSimpleList.xml" />
+	<include file="ViewDVDCover.xml" />
+	<include file="ViewEpisodes.xml" />
+	<include file="ViewShows.xml" />
+	<include file="ViewFanart.xml" />
+	<include file="ViewMovies.xml" />
+	<!-- music views -->
+	<include file="ViewAlbum.xml" />
+	<include file="ViewCoverWall.xml" />
+	<include file="ViewCoverFlowLibrary.xml" />
+	<!-- pic views -->
+	<include file="ViewPicWall.xml" />
+	<!-- playlist views -->
+	<include file="ViewPlaylist.xml" />
+	
+	<!-- screen size -->
+	<include name="screen-dim">
+		<width>1280</width>
+		<height>720</height>
+	</include>
+	<include name="screen-width">
+		<width>1280</width>
+	</include>
+	<include name="screen-height">
+		<height>720</height>
+	</include>
+	
+	<!-- sidebar typography -->
+	<include name="type-sidebar">
+		<width>360</width>
+		<height>50</height>
+		<font>sidebar</font>
+		<textcolor>sidebar-dark</textcolor>
+		<focusedcolor>sidebar</focusedcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<align>left</align>
+		<texturefocus></texturefocus>
+		<texturenofocus></texturenofocus>
+	</include>
+	<!-- menu typography -->
+	<include name="type-menu">
+		<width>480</width>
+		<height>50</height>
+		<font>menu</font>
+		<textcolor>type-menu-dark</textcolor>
+		<focusedcolor>type-menu</focusedcolor>
+		<align>right</align>
+		<texturefocus></texturefocus>
+		<texturenofocus></texturenofocus>
+	</include>
+	<!-- settings typography -->
+	<include name="type-settings">
+		<width>880</width>
+		<height>50</height>
+		<font>content</font>
+		<textcolor>content-dark</textcolor>
+		<focusedcolor>content</focusedcolor>
+		<align>left</align>
+		<texturefocus></texturefocus>
+		<texturenofocus></texturenofocus>
+	</include>
+	
+	<include name="settings-button">
+		<width>810</width>
+		<height>50</height>
+		<textoffsetx>10</textoffsetx>
+		<font>settings</font>
+		<textcolor>type-settings-dark</textcolor>
+		<focusedcolor>type-settings</focusedcolor>
+		<texturefocus border="8">listitem-back.png</texturefocus>
+		<texturenofocus border="4">listitem-back-nf.png</texturenofocus>
+		<align>left</align>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="settings-header">
+		<width>810</width>
+		<height>50</height>
+		<font>settings</font>
+		<textcolor>type-settings</textcolor>
+	</include>
+		
+</includes>

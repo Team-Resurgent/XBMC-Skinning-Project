@@ -1,0 +1,63 @@
+<window id="11">
+
+	<defaultcontrol>8</defaultcontrol>
+
+	<controls>
+
+		<!-- video -->
+		<control type="videowindow" id="20">
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<!-- top left mover -->
+		<control type="mover" id="8">
+			<width>64</width>
+			<height>64</height>
+			<texturefocus>calibrate-topleft.png</texturefocus>
+			<texturenofocus>calibrate-topleft-nf.png</texturenofocus>
+		</control>
+		<!-- bottom right mover -->
+		<control type="mover" id="9">
+			<width>64</width>
+			<height>64</height>
+			<posx>1216</posx>
+			<posy>656</posy>
+			<texturefocus>calibrate-bottomright.png</texturefocus>
+			<texturenofocus>calibrate-bottomright-nf.png</texturenofocus>
+		</control>
+		<!-- subtitle mover -->
+		<control type="mover" id="10">
+			<width>320</width>
+			<height>64</height>
+			<posx>480</posx>
+			<posy>656</posy>
+			<texturefocus>calibrate-subtitles.png</texturefocus>
+			<texturenofocus>calibrate-subtitles-nf.png</texturenofocus>
+		</control>
+		<!-- pixel aspect ratio -->
+		<control type="resize" id="11">
+			<width>64</width>
+			<height>64</height>
+			<posx>640</posx>
+			<posy>360</posy>
+			<texturefocus>calibrate-pixelratio-focus.png</texturefocus>
+			<texturenofocus>calibrate-pixelratio.png</texturenofocus>
+		</control>
+		<!-- coordinates -->
+		<control type="label" id="2">
+			<width>1280</width>
+			<height>40</height>
+			<posy>64</posy>
+			<align>center</align>
+		</control>
+		<!-- help info -->
+		<control type="label" id="3">
+			<width>1280</width>
+			<height>40</height>
+			<posy>108</posy>
+			<align>center</align>
+		</control>
+		
+	</controls>
+	
+</window>

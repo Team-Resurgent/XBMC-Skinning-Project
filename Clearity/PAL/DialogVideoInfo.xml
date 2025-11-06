@@ -1,0 +1,303 @@
+<window type="dialog" id="2003">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>1</zorder>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>115</posy>
+		<width>595</width>
+		<height>372</height>
+		<texture>Black.png</texture>
+	</control>
+
+	<control type="label" id="20">
+		<description>Title Value</description>
+		<posx>230</posx>
+		<posy>48</posy>
+		<label>-</label>
+		<font>special14</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="image" id="3">
+		<description>Cover Image</description>
+		<posx>67</posx>
+		<posy>118</posy>
+		<width>100</width>
+		<height>150</height>
+		<texture>-</texture>
+	</control>
+
+	<control type="textbox" id="4">
+		<description>textarea</description>
+		<posx>225</posx>
+		<posy>280</posy>
+		<width>400</width>
+		<height>220</height>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<onup>5</onup>
+		<ondown>5</ondown>
+	</control>
+
+	<control type="listcontrol" id="50">
+		<description>cast listcontrol</description>
+		<posx>220</posx>
+		<posy>335</posy>
+		<width>410</width>
+		<height>200</height>
+		<onleft>5</onleft>
+		<onright>4</onright>
+		<onup>5</onup>
+		<ondown>8</ondown>
+		<spinposx>410</spinposx>
+		<spinposy>190</spinposy>
+	</control>
+
+	<control type="group">
+		<control type="button" id="5">
+		<description>Cast/Plot</description>
+		<posx>67</posx>
+		<posy>290</posy>
+		<width>150</width>
+		<height>32</height>
+		<label>206</label>
+		<font>font12</font>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>9</onup>
+		<ondown>6</ondown>
+		<align>center</align>
+		</control>
+
+		<control type="button" id="6">
+		<description>Refresh</description>
+		<posx>67</posx>
+		<posy>327</posy>
+		<width>150</width>
+		<height>32</height>
+		<label>184</label>
+		<font>font12</font>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>5</onup>
+		<ondown>10</ondown>
+		<align>center</align>
+		</control>
+
+		<control type="button" id="10">
+		<description>Get Thumb</description>
+		<posx>67</posx>
+		<posy>364</posy>
+		<width>150</width>
+		<height>32</height>
+		<label>13405</label>
+		<font>font12</font>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>6</onup>
+		<ondown>8</ondown>
+		<font>font12</font>
+		<align>center</align>
+		</control>
+
+		<control type="button" id="8">
+		<description>Play</description>
+		<posx>67</posx>
+		<posy>401</posy>
+		<width>150</width>
+		<height>32</height>
+		<label>208</label>
+		<font>font12</font>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>10</onup>
+		<ondown>9</ondown>
+		<align>center</align>
+		</control>
+
+		<control type="button" id="9">
+		<description>Resume</description>
+		<posx>67</posx>
+		<posy>438</posy>
+		<width>150</width>
+		<height>32</height>
+		<label>13404</label>
+		<font>font12</font>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<onup>8</onup>
+		<ondown>5</ondown>
+		<align>center</align>
+		</control>
+	</control>
+
+	<control type="image" id="11">
+		<description>separator image</description>
+		<posx>67</posx>
+		<posy>280</posy>
+		<width>580</width>
+		<height>2</height>
+		<texture>Separator.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+	</control>
+
+	<control type="label" id="1">
+		<description>Director txt</description>
+		<posx>180</posx>
+		<posy>115</posy>
+		<label>$LOCALIZE[20339]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="21">
+		<description>Director value</description>
+		<posx>280</posx>
+		<posy>115</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Writing Credits txt</description>
+		<posx>180</posx>
+		<posy>135</posy>
+		<label>$LOCALIZE[20417]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="22">
+		<description>Writing Credits value</description>
+		<posx>280</posx>
+		<posy>135</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Genre txt</description>
+		<posx>180</posx>
+		<posy>155</posy>
+		<label>$LOCALIZE[515]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="23">
+		<description>Genre value</description>
+		<posx>280</posx>
+		<posy>155</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Year</description>
+		<posx>180</posx>
+		<posy>175</posy>
+		<label>$LOCALIZE[562]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="24">
+		<description>Year value</description>
+		<posx>280</posx>
+		<posy>175</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>TagLine txt</description>
+		<posx>180</posx>
+		<posy>195</posy>
+		<label>$LOCALIZE[202]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="fadelabel" id="25">
+		<description>TagLine value</description>
+		<posx>280</posx>
+		<posy>195</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>PlotOutline txt</description>
+		<posx>180</posx>
+		<posy>215</posy>
+		<label>$LOCALIZE[203]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="fadelabel" id="26">
+		<description>PlotOutline value</description>
+		<posx>280</posx>
+		<posy>215</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Rating txt</description>
+		<posx>180</posx>
+		<posy>235</posy>
+		<label>$LOCALIZE[563]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="30">
+		<description>Rating and votes value</description>
+		<posx>280</posx>
+		<posy>235</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+
+	<control type="label" id="1">
+		<description>Runtime txt</description>
+		<posx>180</posx>
+		<posy>255</posy>
+		<label>$LOCALIZE[2050]:</label>
+		<font>font13</font>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="31">
+		<description>Runtime value</description>
+		<posx>280</posx>
+		<posy>255</posy>
+		<width>370</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>90ffffff</textcolor>
+	</control>
+	<include>Black-Overlay</include>
+
+	</controls>
+</window>

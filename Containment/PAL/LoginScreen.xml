@@ -1,0 +1,64 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+   		<control type="wraplist" id="52">
+			<posx>10</posx>
+			<posy>120</posy>
+			<width>700</width>
+			<height>600</height>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>52</onup>
+			<ondown>52</ondown> 
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<itemlayout height="170" width="200">
+				<control type="image">
+					<posx>15</posx>
+					<posy>120</posy>
+					<width>170</width>
+					<height>170</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>290</posy>
+					<width>170</width>
+					<height>170</height>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<info>ListItem.Icon</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="300"  width="280">
+				<control type="image">
+					<posx>15</posx>
+					<posy>40</posy>
+					<width>250</width>
+					<height>250</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>290</posy>
+					<width>250</width>
+					<height>250</height>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>140</posx>
+					<posy>20</posy>
+					<width>250</width>
+					<height>2</height>
+					<font>font12</font>
+					<align>center</align>
+					<aligny>bottom</aligny>
+					<textcolor>main-text</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<include>Shutters</include>
+	</controls>
+</window>

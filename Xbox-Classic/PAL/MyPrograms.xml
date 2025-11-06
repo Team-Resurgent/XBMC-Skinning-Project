@@ -1,0 +1,128 @@
+<window id="1">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<include>Controller_Image</include>
+		<include>MasterChief_Image</include>
+		<include>XBMC_Logo_Image</include>
+		<control type="label">
+			<description>my programs text label</description>
+			<posx>242</posx>
+			<posy>70</posy>
+			<label>0</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="label" id="12">
+			<description>number of files text label</description>
+			<posx>225</posx>
+			<posy>525</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>yellow</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="group" id="9000">
+			<include>Slide_From_Left_Animation</include>
+			<posx>45</posx>
+			<control type="image">
+				<description>panel</description>
+				<posx>0</posx>
+				<posy>115</posy>
+				<height>250</height>
+				<width>150</width>
+				<texture>panel.png</texture>
+			</control>
+			<control type="image">
+				<description>Middle panel Bar</description>
+				<posx>0</posx>
+				<posy>190</posy>
+				<height>20</height>
+				<width>150</width>
+				<texture>middle-bar.png</texture>
+			</control>
+			<control type="button" id="2">
+				<description>view as icons button</description>
+				<posx>5</posx>
+				<posy>120</posy>
+				<label>100</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>99</onup>
+				<ondown>3</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="3">
+				<description>sort by button</description>
+				<posx>5</posx>
+				<posy>157</posy>
+				<label>103</label>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>98</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>sort asc</description>
+				<posx>130</posx>
+				<posy>167</posy>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>98</ondown>
+			</control>
+			<control type="button" id="98">
+				<description>Game Saves Button</description>
+				<posx>5</posx>
+				<posy>215</posy>
+				<label>20323</label>
+				<onclick>ActivateWindow(35)</onclick>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>99</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+			<control type="button" id="99">
+				<description>online gaming button</description>
+				<posx>5</posx>
+				<posy>252</posy>
+				<label>998</label>
+				<onclick>ActivateWindow(2700)</onclick>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>98</onup>
+				<ondown>2</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+		<include>ListItemIcon</include>
+		<include>OldCommonListView</include>
+		<include>ProgramsCommonListView</include>
+		<include>AllViewCommonThumbSmall</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>WideIcon_Small</include>
+		<include>WideIcon_Big</include>
+		<include>AllCommonPageControls</include>
+	</controls>
+</window>

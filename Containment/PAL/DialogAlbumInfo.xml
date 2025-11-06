@@ -1,0 +1,222 @@
+<window id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="multiimage">
+			<description>background animation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-ani)</info>
+			<timeperimage>2</timeperimage>
+			<visible>Skin.string(custom-ani)</visible>
+		</control>
+		<control type="image" id="102">
+			<description>Custom background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+			<visible>Skin.String(custom-background)</visible>
+			<visible>!Skin.String(custom-ani)</visible>
+		</control>
+		<control type="image" id="103">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<visible>!Skin.String(custom-background)</visible>
+			<visible>!Skin.String(custom-ani)</visible>
+		</control>
+		<control type="image">
+			<description>Custom background image with vis\video</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>![Control.IsVisible(102) | Control.IsVisible(103)]</visible>
+		</control>
+		<control type="image">
+			<description>background image with vis\video</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>![Control.IsVisible(102) | Control.IsVisible(103)]</visible>
+		</control>
+		<include>Container</include>
+		<control type="group">
+			<include>media-slide</include>
+			<control type="button" id="5">
+				<description>tracks/review</description>
+				<posx>5</posx>
+				<posy>110</posy>
+				<label>206</label>
+				<onleft>4</onleft>
+				<onright>50</onright>
+				<onup>10</onup>
+				<ondown>6</ondown>
+			</control>
+			<control type="button" id="6">
+				<description>refresh</description>
+				<posx>5</posx>
+				<posy>147</posy>
+				<label>184</label>
+				<onleft>4</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>10</ondown>
+			</control>
+			<control type="button" id="10">
+				<description>Get Thumb</description>
+				<posx>5</posx>
+				<posy>184</posy>
+				<label>13405</label>
+				<onleft>4</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="image" id="3">
+				<description>Album Cover</description>
+				<posx>5</posx>
+				<posy>245</posy>
+				<width>140</width>
+				<height>210</height>
+				<texture>-</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</control>
+		<control type="label">
+			<description>release date label</description>
+			<posx>200</posx>
+			<posy>110</posy>
+			<label>$LOCALIZE[20339]:</label>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label">
+			<description>rating label</description>
+			<posx>200</posx>
+			<posy>135</posy>
+			<label>$LOCALIZE[563]:</label>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label">
+			<description>genre label</description>
+			<posx>200</posx>
+			<posy>160</posy>
+			<label>$LOCALIZE[515]:</label>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label">
+			<description>tones label</description>
+			<posx>200</posx>
+			<posy>185</posy>
+			<label>$LOCALIZE[175]:</label>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label">
+			<description>styles label</description>
+			<posx>200</posx>
+			<posy>210</posy>
+			<label>$LOCALIZE[176]:</label>
+			<font>font13</font>
+			<textcolor>main-text</textcolor>
+		</control>
+		<control type="label" id="22">
+			<description>release value</description>
+			<posx>320</posx>
+			<posy>110</posy>
+			<width>380</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>button-nofocus-text</textcolor>
+		</control>
+		<control type="label" id="23">
+			<description>rating value</description>
+			<posx>320</posx>
+			<posy>135</posy>
+			<width>380</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>button-nofocus-text</textcolor>
+		</control>
+		<control type="fadelabel" id="24">
+			<description>genre value</description>
+			<posx>320</posx>
+			<posy>160</posy>
+			<width>380</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>button-nofocus-text</textcolor>
+		</control>
+		<control type="fadelabel" id="25">
+			<description>tones value</description>
+			<posx>320</posx>
+			<posy>185</posy>
+			<width>380</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>button-nofocus-text</textcolor>
+		</control>
+		<control type="fadelabel" id="26">
+			<description>styles value</description>
+			<posx>320</posx>
+			<posy>210</posy>
+			<width>380</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>button-nofocus-text</textcolor>
+		</control>
+		<control type="textbox" id="4">
+			<description>textarea</description>
+			<posx>200</posx>
+			<posy>250</posy>
+			<width>500</width>
+			<height>226</height>
+			<onleft>5</onleft>
+			<onright>90</onright>
+			<onup>4</onup>
+			<ondown>4</ondown>
+		</control>
+		<include>Shutters</include>
+		<control type="label" id="21">
+			<description>Artist Label</description>
+			<posx>40</posx>
+			<posy>25</posy>
+			<width>640</width>
+			<label>-</label>
+			<font>home</font>
+			<textcolor>main-text</textcolor>
+			<align>center</align>
+			<scroll>true</scroll>
+			<animation effect="fade" start="0" delay="250" time="200">WindowOpen</animation>
+			<animation effect="fade" end="0" time="20">WindowClose</animation>
+		</control>
+		<control type="label" id="20">
+			<description>Album Label</description>
+			<posx>40</posx>
+			<posy>478</posy>
+			<width>640</width>
+			<label>-</label>
+			<font>home</font>
+			<textcolor>main-text</textcolor>
+			<align>center</align>
+			<scroll>true</scroll>
+			<animation effect="fade" start="0" delay="250" time="200">WindowOpen</animation>
+			<animation effect="fade" end="0" time="20">WindowClose</animation>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,30 @@
+﻿<window id="106">
+<defaultcontrol always="true">1000</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<coordinates>
+  <system>1</system>
+  <origin x="100" y="120">Visible</origin>
+</coordinates>
+  
+<controls>
+
+  <control type="group">
+    <posy>-40</posy>
+    <include>DialogBack</include>
+    <control type="label">
+      <include>DialogID</include>
+      <label>DialogContextMenu.xml</label>
+    </control>
+  </control>
+  
+	<control type="button" id="1000">
+		<description>Buttons</description>
+    <posx>10</posx>
+    <posy>40</posy>
+		<width>500</width>
+	</control>
+  
+</controls>
+
+</window>

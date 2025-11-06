@@ -1,0 +1,80 @@
+<window>
+    <id>2004</id>
+    <defaultcontrol>2</defaultcontrol>
+    <controls>
+        <control>
+            <description>play logo</description>
+            <type>image</type>
+            <id>3</id>
+            <posX>280</posX>
+            <posY>32</posY>
+            <texture>music-play.png</texture>
+        </control>
+        <control>
+            <description>Pause logo</description>
+            <type>image</type>
+            <id>4</id>
+            <posX>280</posX>
+            <posY>32</posY>
+            <texture>music-pause.png</texture>
+        </control>
+        <control>
+            <description>FF logo</description>
+            <type>image</type>
+            <id>7</id>
+            <posX>280</posX>
+            <posY>32</posY>
+            <texture>music-forward.png</texture>
+        </control>
+        <control>
+            <description>RW logo</description>
+            <type>image</type>
+            <id>8</id>
+            <posX>280</posX>
+            <posY>32</posY>
+            <texture>music-rewind.png</texture>
+        </control>
+        <control>
+            <description>play time label</description>
+            <type>label</type>
+            <id>2</id>
+            <posX>575</posX>
+            <posY>45</posY>
+            <label>-</label>
+            <align>left</align>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+        <control>
+            <description>album/artist/genre etc info label</description>
+            <type>fadelabel</type>
+            <width>220</width>
+            <height>30</height>
+            <posX>300</posX>
+            <posY>45</posY>
+            <align>right</align>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <id>5</id>
+        </control>
+		<control>
+			<description>Video rectangle</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>442</posY>
+			<width>146</width>
+			<height>106</height>
+			<texture>overlay_square.png</texture>
+		</control>
+		<control>
+			<description>Video preview window</description>
+			<type>videowindow</type>
+			<id>1</id>
+      		<posX>48</posX>
+      		<posY>445</posY>
+      		<width>140</width>
+      		<height>100</height>      
+		</control>
+    </controls>
+</window>

@@ -1,0 +1,185 @@
+<!-- music library -->
+<window id="502">
+
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<!-- background -->
+		<include>bg-music</include>
+		<control type="image">
+			<visible>!Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+		</control>		
+		<control type="image">
+			<visible>Skin.HasSetting(bg-media)</visible>
+			<texture>bg-default.png</texture>
+			<include>screen-dim</include>
+			<colordiffuse>overlay-bg</colordiffuse>
+		</control>		
+		
+		<!-- view modes -->
+		<include>ViewList</include>
+		<include>ViewIcon</include>
+		<include>ViewPanel</include>
+		<include>ViewAlbum</include>
+		<include>ViewCoverWall</include>
+		<include>ViewCoverFlowLibrary</include>
+
+		<!-- header -->
+		<control type="group">
+
+			<!-- mint logo 
+			<control type="image">
+				<texture>mint-logo.png</texture>
+				<width>48</width>
+				<height>48</height>
+				<posx>20</posx>
+				<posy>16</posy>
+			</control>-->
+			<!-- window name -->
+			<control type="label">
+				<label>Music Library</label>
+				<height>80</height>
+				<posx>40</posx>
+				<font>header</font>
+				<textcolor>type-header</textcolor>
+			</control>
+			<!-- temp / time -->
+			<control type="label">
+				<label>$INFO[Weather.Temperature,, : ]$INFO[System.Time]</label>
+				<height>80</height>
+				<posx>1240</posx>
+				<font>header</font>
+				<textcolor>type-header-dark</textcolor>
+				<align>right</align>
+			</control>
+		</control>					
+
+		<!-- view options -->
+		<control type="group">
+		
+			<posx>1280</posx>
+			<posy>20</posy>
+			
+			<include>anim-sidebar</include>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>black.png</texture>
+				<width>400</width>
+				<height>680</height>
+				<colordiffuse>sidebar</colordiffuse>
+			</control>
+
+			<control type="grouplist" id="9000">			
+				<width>360</width>
+				<height>680</height>
+				<posx>20</posx>
+				<posy>20</posy>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<!-- view as -->
+				<control type="button" id="140">
+					<label>View: $INFO[Container.ViewMode]</label>
+					<include>type-sidebar</include>
+					<onclick>Container.NextViewMode</onclick>
+				</control>
+				<!-- sort by -->
+				<control type="button" id="110">
+					<label>Sort: $INFO[Container.SortMethod]</label>
+					<include>type-sidebar</include>
+					<onclick>Container.NextSortMethod</onclick>
+				</control>
+				<!-- sort direction -->
+				<control type="togglebutton" id="4">
+					<width>50</width>
+					<height>50</height>
+					<posx>310</posx>
+					<posy>-50</posy>
+					<align>right</align>
+				</control>
+				<!-- last fm love -->
+				<control type="button" id="150">
+					<visible>LastFM.RadioPlaying</visible>
+					<width>20</width>
+					<height>20</height>
+					<texturefocus>Love-focus.png</texturefocus>
+					<texturenofocus>Love.png</texturenofocus>
+					<onclick>XBMC.LastFM.Love</onclick>
+				</control>
+				<!-- last fm hate -->
+				<control type="button" id="160">
+					<visible>LastFM.RadioPlaying</visible>
+					<width>20</width>
+					<height>20</height>
+					<texturefocus>Ban-focus.png</texturefocus>
+					<texturenofocus>Ban.png</texturenofocus>
+					<onclick>XBMC.LastFM.Ban</onclick>
+				</control>
+				<!-- party mode -->
+				<control type="radiobutton" id="16">
+					<label>589</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- search -->
+				<control type="button" id="8">
+					<label>137</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- filter -->
+				<control type="radiobutton" id="19">
+					<label>587</label>
+					<include>type-sidebar</include>
+				</control>
+				<!-- scripts -->
+				<control type="button" id="120">
+					<visible>Skin.HasSetting(usemusicscripts)</visible>
+					<label>Scripts</label>
+					<include>type-sidebar</include>
+					<onclick>Skin.ToggleSetting(showscripts)</onclick>
+				</control>				
+					<!-- movie script one -->
+					<control type="button" id="121">
+						<visible>Skin.HasSetting(showscripts)</visible>
+						<visible>Skin.HasSetting(musicscript1)</visible>
+						<label>$INFO[Skin.String(musicscript1name)]</label>
+						<posx>20</posx>
+						<include>type-sidebar</include>
+						<onclick>XBMC.RunScript($INFO[Skin.String(musicscript1path)])</onclick>
+						<onclick>Skin.Reset(showscripts)</onclick>
+					</control>
+					<!-- movie script two -->
+					<control type="button" id="122">
+						<visible>Skin.HasSetting(showscripts)</visible>
+						<visible>Skin.HasSetting(musicscript2)</visible>
+						<label>$INFO[Skin.String(musicscript2name)]</label>
+						<posx>20</posx>
+						<include>type-sidebar</include>
+						<onclick>XBMC.RunScript($INFO[Skin.String(musicscript2path)])</onclick>
+						<onclick>Skin.Reset(showscripts)</onclick>
+					</control>
+				<!-- library -->
+				<control type="button" id="130">
+					<label>Files Mode</label>
+					<include>type-sidebar</include>
+					<onclick>ReplaceWindow(mymusicfiles)</onclick>
+				</control>
+				<!-- settings -->
+				<control type="button" id="170">
+					<label>Settings</label>
+					<include>type-sidebar</include>
+					<onclick>ActivateWindow(musicsettings)</onclick>
+				</control>
+			</control>
+		</control>
+
+	</controls>
+
+</window>

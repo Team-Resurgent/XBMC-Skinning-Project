@@ -1,0 +1,46 @@
+<window id="2004">
+  <defaultcontrol>5</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <posx>30</posx>
+      <posy>270</posy>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,500" end="0,0">WindowOpen</animation>
+      <animation effect="slide" time="300" tween="circle" easing="out" start="0,500" end="0,0">Visible</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,500">WindowClose</animation>
+      <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="0,500">Hidden</animation>
+
+      <control type="image">
+        <width>1220</width>
+        <height>460</height>
+        <include>OverlayDarkArea</include>
+      </control>
+
+      <control type="group">
+        <posx>20</posx>
+        <posy>20</posy>
+
+        <control type="label" id="3">
+          <description>Heading</description>
+          <width>1180</width>
+          <align>center</align>
+          <textcolor>Selected</textcolor>
+          <font>MediumTitleFont</font>
+          <label>$LOCALIZE[262]</label>
+        </control>
+
+        <control type="group">
+          <posy>48</posy>
+
+          <control type="textbox" id="5">
+            <description>Textarea</description>
+            <width>1180</width>
+            <height>362</height>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

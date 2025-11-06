@@ -1,0 +1,18 @@
+Updated August 29, 2004
+- Fixed error introduced with XBMC 1.0 -- Python no longer correctly supported 
+	setNavigation. Replaced with ControlLeft and ControlRight statements.
+
+Updated August 11, 2004
+- Fixed a bug that caused the save function to overwrite current file with 
+	an empty file. Please continue to use caution saving important documents,
+	and please report any errors to script_requests@cox.net
+- Fixed a bug that forced repeated saves on exit. Notepad should no longer 
+	ask you to save an unchanged document.
+- Increased the size of the text display area. You can now read more of your 
+	document.
+- Added a menu. Currently only Increase/Decrease Font Size are working. To 
+	change the font size of an open document, press Start and select the 
+	appropriate option.
+
+Updated August 2, 2004
+- Began recording changes to changelog.

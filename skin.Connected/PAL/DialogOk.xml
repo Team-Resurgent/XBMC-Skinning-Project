@@ -1,0 +1,87 @@
+﻿<window id="2002">
+<defaultcontrol always="true">10</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<coordinates>
+	<system>1</system>
+	<posx>208</posx>
+	<posy>188</posy>
+</coordinates>
+  
+<include>DefaultFade</include>
+  
+<controls>
+
+  <control type="group">
+    <include>OptionBack1-4</include>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>304</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="1">
+      <description>Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>284</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+
+    <control type="label" id="2">
+      <description>Line 1</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>284</width>
+      <align>left</align>
+      <label>-</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+    </control>
+    <control type="label" id="3">
+      <description>Line 2</description>
+      <posx>10</posx>
+      <posy>90</posy>
+      <width>284</width>
+      <align>left</align>
+      <label>-</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+    </control>
+    <control type="label" id="4">
+      <description>Line 3</description>
+      <posx>10</posx>
+      <posy>125</posy>
+      <width>284</width>
+      <align>left</align>
+      <label>-</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+    </control>
+
+		<control type="button" id="10">
+			<description>Ok Button</description>
+			<posx>102</posx>
+			<posy>160</posy>
+			<align>center</align>
+			<label>$LOCALIZE[186]</label>
+			<font>18BdFont</font>
+			<onfocus>-</onfocus>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>10</onleft>
+			<onright>10</onright>
+		</control>
+	</control>
+		
+</controls>
+	
+</window>

@@ -1,0 +1,14 @@
+<skin>
+  <defaultresolution>720p</defaultresolution>
+  <defaultresolutionwide>720p</defaultresolutionwide>
+  <version>2.1</version>
+  
+  <!-- amount to zoom skin to remove overscan compensation -->
+  <zoom>1</zoom>
+  
+  <credits>
+    <skinname>Basics-101</skinname>
+    <name>Jezz_X - code, graphics</name>
+    <name>Mikebeecham - icons, background</name>
+  </credits>
+</skin>

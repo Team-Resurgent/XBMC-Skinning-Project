@@ -1,0 +1,593 @@
+<window id="1001">
+  <defaultcontrol always="true">300</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+    <include>DateAndTime</include>
+
+    <control type="group">
+      <include>HideWhenLowerDialogActive</include>
+      <animation effect="slide" time="200" delay="0" tween="circle" easing="in" start="0,0" end="-1500,0" reversible="false" condition="Window.Next(Home)">WindowClose</animation>
+
+      <control type="group">
+        <description>Settings Menu Text (from Home)</description>
+        <include>HomeMainMenuPos</include>
+
+        <control type="group">
+          <description>Settings Category Menu Text</description>
+          <posx>HomeSubMenuBGOffset</posx>
+
+
+          <control type="group">
+            <posx>HomeSubMenuBGOffset</posx>
+            <animation effect="slide" time="300" delay="100" tween="circle" easing="out" start="-600,0" end="0,0" reversible="false">WindowOpen</animation>
+            <animation effect="slide" time="200" delay="0" tween="circle" easing="in" start="0,0" end="-600,0" reversible="false">WindowClose</animation>
+
+            <include>HomeMainMenuBG</include>
+
+            <control type="group">
+              <description>Settings Category Groups</description>
+
+              <control type="group">
+                <posy>30</posy>
+
+                <control type="group">
+                  <description>Settings Category replacement labels</description>
+                  <visible>ControlGroup(301).HasFocus()</visible>
+
+                  <control type="label">
+                    <info>Container(300).ListItem(0).Label2</info>
+                    <include>HomeMainMenuSubLabel</include>
+                  </control>
+                  <control type="label">
+                    <info>Container(300).ListItem(0).Label</info>
+                    <include>HomeMainMenuMainLabel</include>
+                  </control>
+                </control>
+              </control>
+
+              <control type="wraplist" id="300">
+                <description>Main Menu</description>
+                <include>HomeMainMenuWrapList</include>
+                <visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
+
+                <content>
+                  <item id="8">
+                    <description>Backgrounds</description>
+                    <label>$LOCALIZE[31203]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                  <item id="1">
+                    <description>General</description>
+                    <label>$LOCALIZE[128]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                  <item id="2">
+                    <description>Home</description>
+                    <label>$LOCALIZE[10000]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                  <item id="3">
+                    <description>Videos</description>
+                    <label>$LOCALIZE[3]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                  <item id="4">
+                    <description>TV Shows</description>
+                    <label>$LOCALIZE[20343]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                  <item id="5">
+                    <description>Movies</description>
+                    <label>$LOCALIZE[20342]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                  <item id="6">
+                    <description>Music</description>
+                    <label>$LOCALIZE[2]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                  <item id="7">
+                    <description>Pictures</description>
+                    <label>$LOCALIZE[1]</label>
+                    <label2>31209</label2>
+                    <onclick>SetFocus(301)</onclick>
+                  </item>
+                </content>
+              </control>
+
+              <include>HomeMainMenuNavIndics</include>
+            </control>
+          </control>
+
+          <control type="group">
+            <posx>-35</posx>
+            <include>SettingsPrevScreenMenuAnim</include>
+
+            <control type="group">
+              <posy>30</posy>
+
+              <control type="label">
+                <label> $LOCALIZE[31016] </label>
+                <include>HomeMainMenuSubLabel</include>
+              </control>
+              <control type="label" id="2">
+                <label> $LOCALIZE[166] </label>
+                <include>DialogTextColors</include>
+                <include>HomeMainMenuMainLabel</include>
+              </control>
+            </control>
+
+            <include>HomeMainMenuBG</include>
+          </control>
+        </control>
+
+        <control type="group">
+          <posx>-70</posx>
+            <include>SettingsPrevScreenMenuAnim</include>
+
+          <control type="group">
+            <posy>30</posy>
+
+            <control type="label">
+              <label> $LOCALIZE[31016] </label>
+              <include>HomeMainMenuSubLabel</include>
+            </control>
+            <control type="label">
+              <label> $LOCALIZE[13000] </label>
+              <include>DialogTextColors</include>
+              <include>HomeMainMenuMainLabel</include>
+            </control>
+          </control>
+
+          <include>HomeMainMenuBG</include>
+        </control>
+      </control>
+    </control>
+
+    <!-- Main control area -->
+    <control type="group">
+      <include>HideWhenLowerDialogActive</include>
+
+      <control type="group" id="301">
+        <description>Settings Options Area</description>
+        <posx>1330</posx>
+        <posy>460</posy>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="0,0" end="-700,0">Focus</animation>
+        <animation effect="slide" time="300" tween="circle" easing="out" start="-700,0" end="0,0">Unfocus</animation>
+        <animation effect="slide" time="200" tween="circle" easing="in" start="0,0" end="700,0">WindowClose</animation>
+
+        <control type="image">
+          <width>660</width>
+          <height>270</height>
+          <include>OverlayArea</include>
+        </control>
+
+        <!-- General Options -->
+        <control type="grouplist" id="401">
+          <onup>401</onup>
+          <ondown>401</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(1)</visible>
+
+          <control type="radiobutton" id="1">
+            <description>Hide Options Menu</description>
+            <label>$LOCALIZE[31205] $LOCALIZE[31204]</label>
+            <onclick>Skin.ToggleSetting(HideOptionsMenu)</onclick>
+            <selected>Skin.HasSetting(HideOptionsMenu)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="2">
+            <description>Hide clock</description>
+            <label>$LOCALIZE[31205] $LOCALIZE[31206]</label>
+            <onclick>Skin.ToggleSetting(HideClock)</onclick>
+            <selected>Skin.HasSetting(HideClock)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="3">
+            <description>Show Larger Clock</description>
+            <label>$LOCALIZE[31104]</label>
+            <onclick>Skin.ToggleSetting(ShowLargerClock)</onclick>
+            <selected>Skin.HasSetting(ShowLargerClock)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="4">
+            <description>Hide Watched Overlay</description>
+            <label>$LOCALIZE[31212]</label>
+            <onclick>Skin.ToggleSetting(HideWatchedOverlay)</onclick>
+            <selected>Skin.HasSetting(HideWatchedOverlay)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="5">
+            <description>Hide Media Count</description>
+            <label>$LOCALIZE[31216]</label>
+            <onclick>Skin.ToggleSetting(HideMediaCount)</onclick>
+            <selected>Skin.HasSetting(HideMediaCount)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="6">
+            <description>Show Content Type</description>
+            <label>$LOCALIZE[31215]</label>
+            <onclick>Skin.ToggleSetting(ShowContentType)</onclick>
+            <selected>Skin.HasSetting(ShowContentType)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="7">
+            <description>Hide Weather Fanart</description>
+            <label>$LOCALIZE[31205] $LOCALIZE[8] $LOCALIZE[31302]</label>
+            <onclick>Skin.ToggleSetting(HideWeatherFanart)</onclick>
+            <selected>Skin.HasSetting(HideWeatherFanart)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+        </control>
+
+        <!-- Home Options -->
+        <control type="grouplist" id="402">
+          <onup>401</onup>
+          <ondown>401</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(2)</visible>
+
+          <control type="radiobutton" id="1">
+            <description>Hide Weather on Home</description>
+            <label>$LOCALIZE[31207]</label>
+            <onclick>Skin.ToggleSetting(HideWeatherOnHome)</onclick>
+            <selected>Skin.HasSetting(HideWeatherOnHome)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="2">
+            <description>Use Animated Weather</description>
+            <label>$LOCALIZE[31220]</label>
+            <onclick>Skin.ToggleSetting(UseAnimatedWeather)</onclick>
+            <selected>Skin.HasSetting(UseAnimatedWeather)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="3">
+            <description>Hide Latest Videos</description>
+            <label>$LOCALIZE[31221]</label>
+            <onclick>Skin.ToggleSetting(HideLatestVideos)</onclick>
+            <selected>Skin.HasSetting(HideLatestVideos)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="20">
+            <description>Disable Videos Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[3] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HideVideos)</onclick>
+            <selected>Skin.HasSetting(HideVideos)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="21">
+            <description>Disable Movies Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[342] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HideMovies)</onclick>
+            <selected>Skin.HasSetting(HideMovies)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="22">
+            <description>Disable TV shows Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[20343] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HideTVshows)</onclick>
+            <selected>Skin.HasSetting(HideTVshows)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="23">
+            <description>Disable Music Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[2] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HideMusic)</onclick>
+            <selected>Skin.HasSetting(HideMusic)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="24">
+            <description>Disable Pictures Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[1] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HidePictures)</onclick>
+            <selected>Skin.HasSetting(HidePictures)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="25">
+            <description>Disable Power Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[31007] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HidePower)</onclick>
+            <selected>Skin.HasSetting(HidePower)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="26">
+            <description>Disable System Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[13000] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HideSystem)</onclick>
+            <selected>Skin.HasSetting(HideSystem)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="27">
+            <description>Disable Weather Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[8] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HideWeather)</onclick>
+            <selected>Skin.HasSetting(HideWeather)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="28">
+            <description>Disable Programs Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[0] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HidePrograms)</onclick>
+            <selected>Skin.HasSetting(HidePrograms)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="29">
+            <description>Disable DVD Menu</description>
+            <label>$LOCALIZE[31208] $LOCALIZE[446] $LOCALIZE[31210]</label>
+            <onclick>Skin.ToggleSetting(HideDVD)</onclick>
+            <selected>Skin.HasSetting(HideDVD)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+        </control>
+
+        <!-- Videos Options -->
+        <control type="grouplist" id="403">
+          <onup>403</onup>
+          <ondown>403</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(3)</visible>
+
+          <control type="radiobutton" id="1">
+            <description>Hide Plot in Video OSD</description>
+            <label>$LOCALIZE[31211]</label>
+            <onclick>Skin.ToggleSetting(HidePlotInVideoOSD)</onclick>
+            <selected>Skin.HasSetting(HidePlotInVideoOSD)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="2">
+            <description>Show Minimal Video OSD</description>
+            <label>$LOCALIZE[31218]</label>
+            <onclick>Skin.ToggleSetting(UseMinimalVideoOSD)</onclick>
+            <selected>Skin.HasSetting(UseMinimalVideoOSD)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="3">
+            <description>Hide Fanart</description>
+            <label>$LOCALIZE[31205] $LOCALIZE[31302]</label>
+            <onclick>Skin.ToggleSetting(HideVideoFanart)</onclick>
+            <selected>Skin.HasSetting(HidevideoFanart)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="4">
+            <description>Custom Videos BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomVideosBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomVideosBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[3] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[3] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomVideosBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+        </control>
+
+        <!-- TV Shows Options -->
+        <control type="grouplist" id="404">
+          <onup>404</onup>
+          <ondown>404</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(4)</visible>
+
+          <control type="radiobutton" id="1">
+            <description>Use Portrait Thumbs for TV</description>
+            <label>$LOCALIZE[31217]</label>
+            <onclick>Skin.ToggleSetting(UsePortraitTVThumbs)</onclick>
+            <selected>Skin.HasSetting(UsePortraitTVThumbs)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="radiobutton" id="2">
+            <description>Hide Fanart</description>
+            <label>$LOCALIZE[31205] $LOCALIZE[31302]</label>
+            <onclick>Skin.ToggleSetting(HideTVFanart)</onclick>
+            <selected>Skin.HasSetting(HideTVFanart)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="3">
+            <description>Custom TV Shows BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomTVShowsBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomTVShowsBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[20343] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[20343] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomTVShowsBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+        </control>
+
+        <!-- Movies Options -->
+        <control type="grouplist" id="405">
+          <onup>405</onup>
+          <ondown>405</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(5)</visible>
+
+          <control type="radiobutton" id="1">
+            <description>Hide Fanart</description>
+            <label>$LOCALIZE[31205] $LOCALIZE[31302]</label>
+            <onclick>Skin.ToggleSetting(HideMovieFanart)</onclick>
+            <selected>Skin.HasSetting(HideMovieFanart)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="2">
+            <description>Custom Movies BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomMoviesBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomMoviesBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[342] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[342] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomMoviesBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+        </control>
+
+        <!-- Music Options -->
+        <control type="grouplist" id="406">
+          <onup>406</onup>
+          <ondown>406</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(6)</visible>
+
+          <control type="radiobutton" id="1">
+            <description>Hide Fanart</description>
+            <label>$LOCALIZE[31205] $LOCALIZE[31302]</label>
+            <onclick>Skin.ToggleSetting(HideMusicFanart)</onclick>
+            <selected>Skin.HasSetting(HideMusicFanart)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="2">
+            <description>Custom Music BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomMusicBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomMusicBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[2] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[2] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomMusicBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+  				<control type="button" id="402">
+  				  <description>Set Lyrics Path</description>
+  					<label>31406</label>
+  					<onclick>Skin.SetFile(LyricScriptPath,.py)</onclick>
+            <include>SettingsOptionRadioButton</include>
+  				</control>
+        </control>
+
+        <!-- Pictures Options -->
+        <control type="grouplist" id="407">
+          <onup>407</onup>
+          <ondown>407</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(7)</visible>
+
+          <control type="togglebutton" id="1">
+            <description>Custom Pictures BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomPicturesBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomPicturesBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[1] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[1] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomPicturesBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+        </control>
+
+        <!-- Backgrounds Options -->
+        <control type="grouplist" id="408">
+          <onup>408</onup>
+          <ondown>408</ondown>
+          <pagecontrol>61</pagecontrol>
+          <include>CustomSettingsList</include>
+          <visible>Container(300).HasFocus(8)</visible>
+
+          <control type="radiobutton" id="1">
+            <description>Hide White Noise BG</description>
+            <label>$LOCALIZE[31219]</label>
+            <onclick>Skin.ToggleSetting(HideWhiteNoiseBG)</onclick>
+            <selected>Skin.HasSetting(HideWhiteNoiseBG)</selected>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="10">
+            <description>Custom Weather BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomWeatherBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomWeatherBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[8] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[8] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomWeatherBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="11">
+            <description>Custom Programs BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomProgramsBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomProgramsBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[0] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[0] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomProgramsBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="12">
+            <description>Custom System BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomSystemBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomSystemBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[13000] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[13000] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomSystemBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="13">
+            <description>Custom Power BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomPowerBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomPowerBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[31017] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[31017] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomPowerBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+
+          <control type="togglebutton" id="14">
+            <description>Custom DVD BG Images Folder</description>
+            <onclick>Skin.SetPath(CustomDVDBGFolder)</onclick>
+            <altclick>Skin.Reset(CustomDVDBGFolder)</altclick>
+            <label>$LOCALIZE[20141] $LOCALIZE[446] $LOCALIZE[31202]</label>
+            <altlabel>$LOCALIZE[192] $LOCALIZE[446] $LOCALIZE[31202]</altlabel>
+            <usealttexture>Skin.String(CustomDVDBGFolder)</usealttexture>
+            <include>SettingsOptionRadioButton</include>
+          </control>
+        </control>
+
+        <control type="scrollbar" id="61">
+          <posx>610</posx>
+          <posy>10</posy>
+          <height>240</height>
+          <onup>61</onup>
+          <ondown>61</ondown>
+        </control>
+      </control>
+
+    </control>
+
+    <include>MusicNowPlaying</include>
+    <include>VideoOverlayUI</include>
+
+  </controls>
+</window>

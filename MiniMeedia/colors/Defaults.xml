@@ -1,0 +1,10 @@
+<colors>
+  <!-- Font / Text Color-->
+  <color name="Focused">FFFCFCFC</color>
+  <color name="Unfocused">FF909090</color>
+  <color name="UnfocusedLight">BBFCFCFC</color>
+  <color name="UnfocusedBtn">55FCFCFC</color>
+  <color name="Selected">FFE08701</color>
+  <color name="Highlighted">FF88C2FB</color>
+  <color name="Disabled">FF222222</color>
+</colors>

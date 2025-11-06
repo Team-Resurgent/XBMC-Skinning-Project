@@ -1,0 +1,742 @@
+<window id="7">
+<defaultcontrol>9000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+
+<include>Backgrounds</include>
+
+	<control type="group">
+		<posx>20</posx>
+		<posy>65</posy>
+    <include>SettingsBack</include>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>680</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="1000">
+      <description>System Info Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>660</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[5] $LOCALIZE[10507]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    
+		<control type="grouplist" id="9000">
+			<posx>10</posx>
+      <posy>55</posy>
+			<width>140</width>
+			<height>345</height>
+			<itemgap>5</itemgap>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="button" id="100">
+				<description>General</description>
+        <width>140</width>
+				<label>$LOCALIZE[128]</label>
+        <font>18BdFont</font>
+			</control>
+			<control type="button" id="101">
+				<description>Storage</description>
+        <width>140</width>
+				<label>$LOCALIZE[13277]</label>
+        <font>18BdFont</font>
+			</control>
+			<control type="button" id="102">
+				<description>HDD</description>
+        <width>140</width>
+				<label>$LOCALIZE[13275]</label>
+        <font>18BdFont</font>
+			</control>
+			<control type="button" id="103">
+				<description>DVD</description>
+        <width>140</width>
+				<label>$LOCALIZE[13276]</label>
+        <font>18BdFont</font>
+			</control>
+			<control type="button" id="104">
+				<description>Network</description>
+        <width>140</width>
+				<label>$LOCALIZE[13279]</label>
+        <font>18BdFont</font>
+			</control>
+			<control type="button" id="105">
+				<description>Video</description>
+        <width>140</width>
+				<label>$LOCALIZE[13280]</label>
+        <font>18BdFont</font>
+			</control>
+			<control type="button" id="106">
+				<description>Hardware</description>
+        <width>140</width>
+				<label>$LOCALIZE[13281]</label>
+        <font>18BdFont</font>
+			</control>
+			<control type="button" id="107">
+				<description>About</description>
+        <width>140</width>
+				<label>$LOCALIZE[482]</label>
+        <font>18BdFont</font>
+			</control>
+		</control>
+
+		<control type="group">
+      <posx>160</posx>
+			<description>General</description>
+			<visible>ControlGroup(9000).HasFocus(100)</visible>
+			<control type="label">
+				<description>2</description>
+				<posy>55</posy>
+				<label>$LOCALIZE[13271] $INFO[System.CpuUsage]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posy>90</posy>
+				<label>$LOCALIZE[139] $LOCALIZE[22011] $INFO[System.CpuTemperature]  -  $LOCALIZE[22010] $INFO[System.GpuTemperature]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posy>125</posy>
+				<label>$LOCALIZE[13300]: $INFO[System.FanSpeed]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posy>160</posy>
+				<label>$LOCALIZE[158]: $INFO[System.FreeMemory]  -  $LOCALIZE[20161]: $INFO[System.Memory(Total)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posy>195</posy>
+				<label>$LOCALIZE[150]: $INFO[Network.IPAddress]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posy>230</posy>
+				<label>$LOCALIZE[13287] $INFO[System.ScreenResolution]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posy>265</posy>
+				<label>$LOCALIZE[13283] $INFO[System.KernelVersion]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posy>300</posy>
+				<label>$LOCALIZE[12390]: $INFO[System.UpTime]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posy>335</posy>
+				<label>$LOCALIZE[12394]: $INFO[System.TotalUptime]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+      <control type="label" id="52">
+        <description>XBMC Build Revision</description>
+        <posy>405</posy>
+        <font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>DefaultTextColor</textcolor>
+      </control>
+		</control>
+
+		<control type="group">
+      <posx>160</posx>
+			<description>Storage Contents</description>
+			<visible>controlgroup(9000).hasfocus(101)</visible>
+			<control type="label">
+				<description>2</description>
+				<posy>55</posy>
+				<label>$INFO[System.DVDTrayState]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posy>90</posy>
+				<label>$INFO[System.FreeSpace(c)]  -  $INFO[System.TotalSpace(c)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posy>125</posy>
+				<label>$INFO[System.FreeSpace(e)]  -  $INFO[System.TotalSpace(e)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posy>160</posy>
+				<label>$INFO[System.FreeSpace(F)]  -  $INFO[System.TotalSpace(F)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posy>195</posy>
+				<label>$INFO[System.FreeSpace(G)]  -  $INFO[System.TotalSpace(G)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posy>230</posy>
+				<label>$INFO[System.FreeSpace(X)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posy>265</posy>
+				<label>$INFO[System.FreeSpace(Y)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posy>300</posy>
+				<label>$INFO[System.FreeSpace(Z)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posy>335</posy>
+				<label>$LOCALIZE[20161]: $INFO[System.FreeSpace]  -  $LOCALIZE[20161]: $INFO[System.TotalSpace]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+		</control>
+
+		<control type="group">
+      <posx>160</posx>
+			<description>Harddisk Contents</description>
+			<visible>controlgroup(9000).hasfocus(102)</visible>
+			<control type="label">
+				<description>2</description>
+				<posy>55</posy>
+				<label>$INFO[System.HddInfoModel]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posy>90</posy>
+				<label>$INFO[System.HddInfoserial]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posy>125</posy>
+				<label>$INFO[System.HddInfoFirmware]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posy>160</posy>
+				<label>$INFO[System.HddInfoPW]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posy>195</posy>
+				<label>$INFO[System.HddInfoLockState]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posy>230</posy>
+				<label>$INFO[System.HddLockKey]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posy>265</posy>
+				<label>$INFO[System.HddBootDate]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posy>300</posy>
+				<label>$INFO[System.HddCycleCount]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posy>335</posy>
+				<label>$INFO[System.HddTemperature]</label>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<font>18BdFont</font>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+		</control>
+
+		<control type="group">
+      <posx>160</posx>
+			<description>DVD Rom Contents</description>
+			<visible>controlgroup(9000).hasfocus(103)</visible>
+			<control type="label">
+				<description>2</description>
+				<posy>55</posy>
+				<label>$INFO[System.DvdInfoModel]</label>
+        <font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posy>90</posy>
+				<label>$INFO[System.DvdInfoFirmware]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posy>125</posy>
+				<label>$INFO[System.DvdZone]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posy>160</posy>
+				<label>$INFO[System.DvdTrayState]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+		</control>
+
+		<control type="group">
+      <posx>160</posx>
+			<description>Network Contents</description>
+			<visible>controlgroup(9000).hasfocus(104)</visible>
+			<control type="label">
+				<description>2</description>
+				<posy>55</posy>
+				<label>$INFO[Network.IsDhcp]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posy>90</posy>
+				<label>$INFO[Network.LinkState]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posy>125</posy>
+				<label>$LOCALIZE[149]: $INFO[Network.MacAddress]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posy>160</posy>
+				<label>$LOCALIZE[150]: $INFO[Network.IPAddress]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posy>195</posy>
+				<label>$LOCALIZE[13159]: $INFO[Network.SubnetAddress]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posy>230</posy>
+				<label>$LOCALIZE[13160]: $INFO[Network.GatewayAddress]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posy>265</posy>
+				<label>$LOCALIZE[13161]: $INFO[Network.Dns1Address]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posy>300</posy>
+				<label>$LOCALIZE[20307]: $INFO[Network.Dns2Address]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posy>335</posy>
+				<label>$LOCALIZE[13295] $INFO[System.InternetState]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+		</control>
+
+		<control type="group">
+      <posx>160</posx>
+			<description>Video Contents</description>
+			<visible>controlgroup(9000).hasfocus(105)</visible>
+			<control type="label">
+				<description>2</description>
+				<posy>55</posy>
+				<label>$INFO[System.VideoEncoderInfo]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posy>90</posy>
+				<label>$LOCALIZE[13287] $INFO[System.ScreenResolution]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posy>125</posy>
+				<label>$INFO[System.AvPackInfo]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posy>160</posy>
+				<label>$INFO[System.XbeRegion]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+		</control>
+
+		<control type="group">
+      <posx>160</posx>
+			<description>hardware_contents</description>
+			<visible>controlgroup(9000).hasfocus(106)</visible>
+			<control type="label">
+				<description>2</description>
+				<posy>55</posy>
+				<label>$INFO[System.XboxVersion]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posy>90</posy>
+				<label>$INFO[System.XboxSerial]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posy>125</posy>
+				<label>$LOCALIZE[13284] $INFO[System.CpuFrequency]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posy>160</posy>
+				<label>$INFO[System.ModChip]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posy>195</posy>
+				<label>$INFO[System.Bios]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posy>230</posy>
+				<label>$INFO[System.XboxProduceInfo]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posy>265</posy>
+				<label>$INFO[System.ControllerPort(1)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posy>300</posy>
+				<label>$INFO[System.ControllerPort(2)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posy>335</posy>
+				<label>$INFO[System.ControllerPort(3)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+			<control type="label">
+				<description>11</description>
+				<posy>370</posy>
+				<label>$INFO[System.ControllerPort(4)]</label>
+				<font>18BdFont</font>
+        <height>30</height>
+        <width>510</width>
+        <align>left</align>
+        <aligny>center</aligny>
+				<textcolor>DefaultTextColor</textcolor>
+			</control>
+		</control>
+	</control>
+
+</controls>
+</window>

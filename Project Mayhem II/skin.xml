@@ -1,0 +1,16 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <version>2.1</version>
+  <effectslowdown>1</effectslowdown>
+  <zoom>1.0</zoom>
+
+  <credits>
+    <skinname>Project Mayhem II</skinname>
+    <name>Design by ChokeManiac</name>
+    <name>V2.1 Conversion by SmokeHead</name>
+    <name>Thanks goes out to :</name>
+    <name>XBMC Developers &amp; XBMC Forums for reading support</name>
+  </credits>
+</skin>
+

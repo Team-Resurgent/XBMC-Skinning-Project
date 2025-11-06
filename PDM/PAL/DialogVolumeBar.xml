@@ -1,0 +1,133 @@
+<window type="104">
+	<defaultcontrol>1</defaultcontrol>
+	<include>vertical-volumebar</include>
+	<coordinates>
+	<system>1</system>
+	<posx>370</posx>
+	<posy>92</posy>
+	</coordinates>
+	<controls>
+
+	<!-- Normal GUI -->
+
+	<control type="image">
+		<description>Popup Volume Dialog Background</description>
+		<posx>0</posx>
+		<posy>2</posy>
+		<width>350</width>
+		<height>60</height>
+		<texture>SlideBar.png</texture>
+		<include>volumebar</include> 
+		<visible>!VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation) + !Window.IsActive(2007)</visible>
+	</control>
+
+	<control type="progress">
+		<description>Progressbar</description>
+		<posx>120</posx>
+		<posy>28</posy>
+		<width>200</width>
+		<height>8</height>
+		<info>Player.Volume</info>
+		<texturebg>progress_back.png</texturebg>
+		<lefttexture>progress_left.png</lefttexture>
+		<midtexture>progress_mid-green3.png</midtexture>
+		<righttexture>progress_right.png</righttexture>
+		<overlaytexture>progress_over.png</overlaytexture>
+		<include>volumebar</include> 
+		<visible>!VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation) + !Window.IsActive(2007)</visible>
+	</control>
+
+	<control type="slider">
+		<description>Volume Slider</description>
+		<posx>120</posx>
+		<posy>27</posy>
+		<width>200</width>
+		<height>8</height>
+		<texturesliderbar>seekslider.png</texturesliderbar>
+		<textureslidernib>slider_nibFO.png</textureslidernib>
+		<textureslidernibFocus>slider_nibFO.png</textureslidernibFocus>
+		<info>Player.Volume</info>
+		<include>volumebar</include> 
+		<visible>!VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation) + !Window.IsActive(2007)</visible>
+	</control>
+
+	<control type="label">
+		<description>Volume dB Label</description>
+		<posx>100</posx>
+		<posy>24</posy>
+		<width>70</width>
+		<height>30</height>
+		<font>font10</font>
+		<info>Player.Volume</info>
+		<align>right</align>
+		<include>volumebar</include> 
+		<visible>!VideoPlayer.IsFullscreen + !Window.IsActive(2006) + !Window.IsActive(2007)</visible>
+	</control>
+
+	<!-- Fullscreen -->
+
+	<control type="image">
+		<description>Progressbar Indication Image</description>
+		<posx>278</posx>
+		<posy>-15</posy>
+		<texture>verticalvolume_indication.png</texture>
+		<width>12</width>
+		<height>410</height>
+		<visible>VideoPlayer.IsFullscreen | Window.IsActive(2006) | Window.IsActive(2007)</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+	</control>
+
+	<control type="progress">
+		<description>Progressbar</description>
+		<posx>101</posx>
+		<posy>-5</posy>
+		<width>420</width>
+		<height>10</height>
+		<info>Player.Volume</info>
+		<texturebg>progress_back.png</texturebg>
+		<midtexture>progress_mid-green3.png</midtexture>
+		<overlaytexture></overlaytexture>
+		<visible>VideoPlayer.IsFullscreen | Window.IsActive(2006) | Window.IsActive(2007)</visible>
+		<animation effect="rotate" start="90" end="90" center="400,100" time="0">WindowOpen</animation>
+		<animation effect="rotate" start="90" end="90" center="400,100" time="0" condition="Window.IsActive(104)">WindowClose</animation>
+	</control>
+
+	<control type="image">
+		<description>Progressbar Background Image</description>
+		<posx>290</posx>
+		<posy>-20</posy>
+		<texture>verticalvolume_bg.png</texture>
+		<width>20</width>
+		<height>420</height>
+		<visible>VideoPlayer.IsFullscreen | Window.IsActive(2006) | Window.IsActive(2007)</visible>
+	</control>
+
+	<control type="slider">
+		<description>Volume Slider</description>
+		<posx>101</posx>
+		<posy>-5</posy>
+		<width>420</width>
+		<height>10</height>
+		<info>Player.Volume</info>
+		<texturesliderbar>seekslider.png</texturesliderbar>
+		<textureslidernib></textureslidernib>
+		<textureslidernibFocus></textureslidernibFocus>
+		<visible>VideoPlayer.IsFullscreen | Window.IsActive(2006) | Window.IsActive(2007)</visible>
+		<animation effect="rotate" start="90" end="90" center="400,100" time="0">WindowOpen</animation>
+		<animation effect="rotate" start="90" end="90" center="400,100" time="0" condition="Window.IsActive(104)">WindowClose</animation>
+	</control>
+
+	<control type="label">
+		<description>Volume dB Label</description>
+		<posx>320</posx>
+		<posy>-60</posy>
+		<width>70</width>
+		<height>30</height>
+		<font>special14</font>
+		<info>Player.Volume</info>
+		<align>right</align>
+		<visible>VideoPlayer.IsFullscreen | Window.IsActive(2006) | Window.IsActive(2007)</visible>
+	</control>
+
+	</controls>
+</window>

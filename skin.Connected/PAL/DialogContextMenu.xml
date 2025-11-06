@@ -1,0 +1,73 @@
+﻿<window id="106">
+<defaultcontrol>1000</defaultcontrol>
+	
+<coordinates>
+	<system>1</system>
+	<origin x="208" y="65">!Window.IsVisible(favourites)</origin>
+  <origin x="378" y="85">Window.IsVisible(favourites)</origin>
+</coordinates>
+
+<include>DefaultFade</include>
+
+<controls>
+
+		<control type="image" id="997">
+			<description>Top Background</description>
+			<posx>-10</posx>
+			<posy>-50</posy>
+			<width>324</width>
+			<height>50</height>
+			<texture>ContextTop.png</texture>
+		</control>
+    <control type="image">
+      <description>Header Back</description>
+      <posy>-40</posy>
+      <width>304</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+		<control type="label">
+			<description>Header Label</description>
+			<posx>35</posx>
+			<posy>-40</posy>
+			<width>260</width>
+			<height>45</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[1034]</label>
+			<font>22BdFont</font>
+			<textcolor>FocusedTextColor</textcolor>
+		</control>
+    <control type="image" id="999">
+      <description>Middle Background</description>
+      <posx>-10</posx>
+      <width>324</width>
+      <texture>ContextMid.png</texture>
+    </control>
+		<control type="image" id="998">
+			<description>Bottom Background</description>
+			<posx>-10</posx>
+			<width>324</width>
+			<height>22</height>
+			<texture>ContextBot.png</texture>
+		</control>
+		<control type="button" id="1000">
+			<description>Buttons</description>
+      <posx>10</posx>
+			<width>285</width>
+      <height>35</height>
+			<align>left</align>
+			<label>-</label>
+			<font>18BdFont</font>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>40</textoffsetx>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>1000</onup>
+			<ondown>1000</ondown>
+		</control>
+		
+	</controls>
+</window>

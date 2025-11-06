@@ -1,0 +1,506 @@
+<window id="2901">
+	<defaultcontrol>216</defaultcontrol>
+	<include>dialogeffect</include>
+	<controls>
+
+
+<!-- top menu bar -->
+
+
+
+		<control type="button" id="202">
+			<description>DVD menu button</description>
+			<posx>80</posx>
+			<posy>350</posy>
+            		<width>55</width>
+           	 	<height>69</height>
+			<texturefocus>bmx-dvdmenu-glow.png</texturefocus>
+			<texturenofocus>bmx-dvdmenu.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>208</onleft>
+			<onright>203</onright>
+			<onup>202</onup>
+			<ondown>215</ondown>
+			<visible>System.HasMediaDVD</visible> 
+			<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>DVD Menu</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(202)</visible>
+        </control>
+
+
+		<control type="button" id="203">
+			<description>Bookmarks Menu</description>
+			<posx>120</posx>
+			<posy>350</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-bookmarks-glow.png</texturefocus>
+			<texturenofocus>bmx-bookmarks.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(125)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>202</onleft>
+			<onright>204</onright>
+			<onup>203</onup>
+			<ondown>211</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Bookmarks Menu</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(203)</visible>
+        </control>
+ 
+
+		<control type="togglebutton" id="204">
+			<description>Audio Menu</description>
+			<posx>155</posx>
+			<posy>350</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-soundmenu-glow.png</texturefocus>
+			<texturenofocus>bmx-soundmenu.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(124)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>203</onleft>
+			<onright>205</onright>
+			<onup>204</onup>
+			<ondown>214</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Audio Settings</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(204)</visible>
+        </control>
+ 
+
+
+
+			<control type="togglebutton" id="205">
+			<description>Video Menu</description>
+			<posx>190</posx>
+			<posy>350</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-osd-video-glow.PNG</texturefocus>
+			<texturenofocus>bmx-osd-video.PNG</texturenofocus>
+			<onclick>XBMC.ActivateWindow(123)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>204</onleft>
+			<onright>206</onright>
+			<onup>205</onup>
+			<ondown>213</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Video Settings</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(205)</visible>
+        </control>
+
+		<control type="button" id="206">
+			<description>Screen Mode menu button</description>
+			<posx>225</posx>
+			<posy>350</posy>
+            		<width>55</width>
+           	 	<height>69</height>
+			<texturefocus>bmx-osd-screenmode-glow.PNG</texturefocus>
+			<texturenofocus>bmx-osd-screenmode.PNG</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>205</onleft>
+			<onright>207</onright>
+			<onup>206</onup>
+			<ondown>216</ondown>
+			<onclick>XBMC.PlayerControl(AspectRatio)</onclick>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Screen Mode</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(206)</visible>
+        </control>
+
+
+
+		<control type="button" id="207">
+			<description>Playlists</description>
+			<posx>260</posx>
+			<posy>350</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-osd-bookmarks-glow.PNG</texturefocus>
+			<texturenofocus>bmx-osd-bookmarks.PNG</texturenofocus>
+			<onclick>XBMC.ActivateWindow(28)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>206</onleft>
+			<onright>208</onright>
+			<onup>207</onup>
+			<ondown>217</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Playlists</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(207)</visible>
+        </control>
+
+
+		<control type="button" id="208">
+			<description>mute menu button</description>
+			<posx>295</posx>
+			<posy>350</posy>
+            		<width>55</width>
+           	 	<height>69</height>
+			<texturefocus>bmx-osd-audio-glow.PNG</texturefocus>
+			<texturenofocus>bmx-osd-audio.PNG</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>207</onleft>
+			<onright>209</onright>
+			<onup>208</onup>
+			<ondown>218</ondown>
+			<onclick>XBMC.Mute</onclick>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Mute</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(208) + !Player.Muted</visible>
+        </control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Un-Mute</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(208) + Player.Muted</visible>
+        </control>
+
+
+
+
+
+		<control type="button" id="209">
+			<description>video info menu button</description>
+			<posx>330</posx>
+			<posy>350</posy>
+            		<width>55</width>
+           	 	<height>69</height>
+			<texturefocus>bmx-movie-info-glow.png</texturefocus>
+			<texturenofocus>bmx-movie-info.png</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>208</onleft>
+			<onright>202</onright>
+			<onup>209</onup>
+			<ondown>219</ondown>
+			<onclick>XBMC.PlayerControl(Info)</onclick>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Video Info</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(209)</visible>
+        </control>
+
+
+<!-- lower menu bar -->
+
+		<control type="button" id="210">
+			<description>Skip Bwd</description>
+			<posx>50</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-skipbwd-glow.png</texturefocus>
+			<texturenofocus>bmx-skipbwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>221</onleft>
+			<onright>215</onright>
+			<onup>202</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Skip Backwards</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(210)</visible>
+        </control>
+
+
+		<control type="button" id="215">
+			<description>Skip Fwd</description>
+			<posx>85</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-skipfwd-glow.png</texturefocus>
+			<texturenofocus>bmx-skipfwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>210</onleft>
+			<onright>211</onright>
+			<onup>202</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Skip Forwards</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(215)</visible>
+        </control>
+
+
+		<control type="togglebutton" id="211">
+			<description>Rewind</description>
+			<posx>120</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-rewind-glow.png</texturefocus>
+			<texturenofocus>bmx-rewind.png</texturenofocus>
+			<usealttexture>Player.Rewinding</usealttexture>
+			<alttexturefocus>bmx-rewind-glow.png</alttexturefocus>
+			<alttexturenofocus>bmx-rewind.png</alttexturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>215</onleft>
+			<onright>214</onright>
+			<onup>203</onup>
+			<ondown>222</ondown>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Rewind</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(211)</visible>
+        </control>
+
+
+		<control type="togglebutton" id="214">
+			<description>Fast Forward</description>
+			<posx>155</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-ffd-glow.png</texturefocus>
+			<texturenofocus>bmx-ffd.png</texturenofocus>
+			<usealttexture>Player.Forwarding</usealttexture>
+			<alttexturefocus>bmx-ffd-glow.png</alttexturefocus>
+			<alttexturenofocus>bmx-ffd.png</alttexturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>211</onleft>
+			<onright>213</onright>
+			<onup>204</onup>
+			<ondown>222</ondown>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Fast Forward</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(214)</visible>
+        </control>
+
+
+		<control type="button" id="213">
+			<description>Play</description>
+			<posx>190</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-play-glow.png</texturefocus>
+			<texturenofocus>bmx-play.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>214</onleft>
+			<onright>216</onright>
+			<onup>205</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Play</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(213)</visible>
+        </control>
+
+
+		<control type="button" id="216">
+			<description>Pause</description>
+			<posx>225</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-pause-glow.png</texturefocus>
+			<texturenofocus>bmx-pause.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>217</onright>
+			<onup>206</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Pause</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(216)</visible>
+        </control>
+
+
+		<control type="button" id="217">
+			<description>Stop</description>
+			<posx>260</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-stop-glow.png</texturefocus>
+			<texturenofocus>bmx-stop.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>216</onleft>
+			<onright>218</onright>
+			<onup>207</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Stop</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(217)</visible>
+        </control>
+
+
+		<control type="button" id="218">
+			<description>SmallSkipBackward</description>
+			<posx>295</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-sskip-bwd-glow.png</texturefocus>
+			<texturenofocus>bmx-sskip-bwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(SmallSkipBackward)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>217</onleft>
+			<onright>219</onright>
+			<onup>208</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Small Skip Backward</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(218)</visible>
+        </control>
+
+
+		<control type="button" id="219">
+			<description>SmallSkipForward</description>
+			<posx>330</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-sskip-fwd-glow.png</texturefocus>
+			<texturenofocus>bmx-sskip-fwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(SmallSkipForward)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>218</onleft>
+			<onright>220</onright>
+			<onup>209</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Small Skip Forward</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(219)</visible>
+        </control>
+
+
+		<control type="button" id="220">
+			<description>BigSkipBackward</description>
+			<posx>365</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-bskip-bwd-glow.png</texturefocus>
+			<texturenofocus>bmx-bskip-bwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(BigSkipBackward)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>219</onleft>
+			<onright>221</onright>
+			<onup>209</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Big Skip Backward</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(220)</visible>
+        </control>
+
+
+		<control type="button" id="221">
+			<description>BigSkipForward</description>
+			<posx>400</posx>
+			<posy>400</posy>
+            		<width>55</width>
+            		<height>69</height>
+			<texturefocus>bmx-bskip-fwd-glow.png</texturefocus>
+			<texturenofocus>bmx-bskip-fwd.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(BigSkipForward)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>220</onleft>
+			<onright>210</onright>
+			<onup>209</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Big Skip Forward</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(221)</visible>
+        </control>
+
+<!-- lower menu bar -->
+		<control type="button" id="222">
+			<description>repeat</description>
+			<posx>225</posx>
+			<posy>450</posy>
+			<width>55</width>
+			<height>69</height>
+			<texturefocus>bmx-repeat-glow.png</texturefocus>
+			<texturenofocus>bmx-repeat.png</texturenofocus>
+			<onclick>XBMC.PlayerControl(Repeat)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>222</onleft>
+			<onright>222</onright>
+			<onup>216</onup>
+			<ondown>222</ondown>
+		</control>
+        <control type="label">
+	    <include>OSD-Label</include>
+	    <label>Repeat</label>
+	    <visible allowhiddenfocus="true">Control.HasFocus(222)</visible>
+        </control>
+
+
+
+<!--
+
+XBMC.PlayerControl(command)
+
+Allows control of music + videos. The command may be one of Play, Stop, Forward, Rewind, Next, Previous, BigSkipForward, BigSkipBackward, SmallSkipForward, SmallSkipBackward, Random, Repeat, RepeatOne, RepeatAll, RepeatOff, Partymode. Play will either pause, resume, or stop ffwding or rewinding. Random toggles random playback, Repeat cycles through the repeat modes, Partymode toggles partymode.
+
+-
+
+XBMC.Mute
+
+Mutes (or unmutes) the volume.
+
+-->
+
+	</controls>
+</window>

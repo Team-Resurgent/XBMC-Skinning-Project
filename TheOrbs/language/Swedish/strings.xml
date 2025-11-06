@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+	<!-- Start home strings -->
+	<string id="31001">Filmer</string>
+	<string id="31002">Program</string>
+	<string id="31003">Musik</string>
+	<string id="31004">Bilder</string>
+	<string id="31005">Väder</string>
+	<string id="31006">Filer</string>
+	<string id="31007">Skript</string>
+	<string id="31008">Inställningar</string>
+	<string id="31009">Spela skiva</string>
+	<string id="31010">TV-serier</string>
+	<!-- End home strings -->
+
+	<!-- Start video strings -->
+	<string id="31011">Filmtrailers</string>
+	<string id="31012">Videospellista</string>
+	<!-- End video strings -->
+
+	<!-- Start programs strings -->
+	<string id="31013">Sparade spel</string>
+	<!-- End programs strings -->
+
+	<!-- Start music strings -->
+	<string id="31014">CDDB</string>
+	<!-- End music strings -->
+
+	<!-- Start system strings -->
+	<string id="31015">System</string>
+	<string id="31016">Filhanterare</string>
+	<string id="31017">Skript</string>
+	<string id="31018">Sparade spel</string>
+	<string id="31019">Profiler</string>
+	<string id="31020">Skalinställningar</string>
+	<string id="31021">Om xTV</string>
+	<string id="31022">Strömmeny</string>
+	<string id="31023">Systeminfo</string>
+	<!-- End system strings -->
+
+	<!-- Begin skin settings strings -->
+	<string id="31024">Använd skrollhandtag</string>
+	<string id="31025">Använd mediaöverdrag</string>
+	<string id="31026">Använd visningsstatusöverdrag</string>
+	<string id="31027">Använd nu spelas fönster</string>
+	<string id="31028">Ändra typsnittsfärg</string>
+	<string id="31029">Nu spelas stilsvisualiseringar</string>
+	<string id="31030">Välj egen bakgrund</string>
+	<string id="31031">Återställ egen bakgrund</string>
+	<string id="31032">Visualisering under bakgrund</string>
+	<string id="31033">Filmerknappen länkar till bibliotek</string>
+	<string id="31068">Information</string>
+	<string id="31069">Ladda ner teman</string>
+	<string id="31070">Allmänna</string>
+	<string id="31071">Bakgrund</string>
+	<string id="31072">Hemfönster</string>
+	<string id="31073">Luta listvisningsikoner</string>
+	<string id="31074">Lås "Visa som" panel</string>
+	<string id="31075">Använd uppstartsspellista</string>
+	<string id="31076">Välj spellista</string>
+	<string id="31077">TV-serier på hemmenyn</string>
+	<string id="31078">YouTube på hemmenyn</string>
+	<string id="31079">Väder på hemmenyn</string>
+	<!-- End skin settings strings -->
+
+	<!-- Start progress strings -->
+	<string id="31034">Inställningar</string>
+	<string id="31035">Video</string>
+	<string id="31036">Ljud</string>
+	<string id="31037">Bokmärken</string>
+	<string id="31038">Låttexter</string>
+	<string id="31039">Förinställning</string>
+	<string id="31040">Visualisering</string>
+	<string id="31041">Spellista</string>
+	<string id="31042">Stopp</string>
+	<string id="31043">Pausa</string>
+	<string id="31044">Spela</string>
+	<string id="31045">Pausad</string>
+	<string id="31046">Spelar</string>
+	<string id="31047">DVD Meny</string>
+	<string id="31048">Spela in</string>
+	<string id="31049">Spelar in</string>
+	<string id="31050">|-Skippa</string>
+	<string id="31051">Skippa-|</string>
+	<string id="31052">Bakåt</string>
+	<string id="31053">Bakåt-2x</string>
+	<string id="31054">Bakåt-4x</string>
+	<string id="31055">Bakåt-8x</string>
+	<string id="31056">Bakåt-16x</string>
+	<string id="31057">Bakåt-32x</string>
+	<string id="31058">Framåt</string>
+	<string id="31059">Framåt-2x</string>
+	<string id="31060">Framåt-4x</string>
+	<string id="31061">Framåt-8x</string>
+	<string id="31062">Framåt-16x</string>
+	<string id="31063">Framåt-32x</string>
+	<!-- End progress strings -->
+
+	<!-- Begin weather strings -->
+	<string id="31064">Hög</string>
+	<string id="31065">Låg</string>
+	<!-- End weather strings -->
+
+	<!-- Begin Misc. strings -->
+	<string id="31066">Ljud avstängt</string>
+	<string id="31067">Favoriter</string>
+	<!-- End Misc. strings -->
+</strings>

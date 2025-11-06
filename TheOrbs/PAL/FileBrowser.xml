@@ -1,0 +1,209 @@
+﻿<window id="126">
+	<defaultcontrol>450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>100</posx>
+		<posy>30</posy>
+	</coordinates>
+	<animation effect="zoom" start="100" end="0" center="250,95" time="100">windowClose</animation>
+	<controls>
+		<control type="image" id="0">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>512</width>
+			<height>50</height>
+			<texture>dialog-context-top.png</texture>
+			<animation effect="zoom" start="0" end="100" center="250,95" time="200">windowOpen</animation>
+		</control>
+		<control type="image" id="0">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>50</posy>
+			<width>512</width>
+			<height>440</height>
+			<texture>dialog-context-middle.png</texture>
+			<animation effect="zoom" start="0" end="100" center="250,95" time="200">windowOpen</animation>
+		</control>
+		<control type="image" id="0">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>490</posy>
+			<width>512</width>
+			<height>50</height>
+			<texture>dialog-context-bottom.png</texture>
+			<animation effect="zoom" start="0" end="100" center="240,95" time="200">windowOpen</animation>
+		</control>
+		<control type="label" id="412">
+			<description>path label control</description>
+			<posx>55</posx>
+			<posy>477</posy>
+			<width>442</width>
+			<align>left</align>
+			<font>font13</font>
+			<haspath>true</haspath>
+			<textcolor>blue-text</textcolor>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+		</control>
+	
+		<control type="list" id="450">
+			<posx>30</posx>
+			<posy>50</posy>
+			<width>460</width>
+			<height>390</height>
+			<onleft>413</onleft>
+			<onright>413</onright>
+			<onup>413</onup>
+			<ondown>413</ondown>
+			<scrolltime>1</scrolltime>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+			<itemlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>460</width>
+					<height>26</height>
+					<texture>list-pixel.png</texture>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>424</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>460</width>
+					<height>26</height>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>13</posx>
+					<posy>0</posy>
+					<width>424</width>
+					<height>26</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>yellow-text</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="panel" id="451">
+			<posx>30</posx>
+			<posy>50</posy>
+			<width>460</width>
+			<height>390</height>
+			<onleft>413</onleft>
+			<onright>413</onright>
+			<onup>413</onup>
+			<ondown>413</ondown>
+			<scrolltime>200</scrolltime>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+			<itemlayout height="130" width="115">
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>90</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>100</height>
+					<posx>5</posx>
+					<posy>5</posy>
+					<texture>folder-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>105</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font12</font>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="130" width="115">
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>90</width>
+					<height>90</height>
+					<info>ListItem.Icon</info>
+					<animation effect="zoom" end="5,5,100,100" time="100">focus</animation>
+				</control>
+				<control type="image">
+					<width>100</width>
+					<height>100</height>
+					<posx>5</posx>
+					<posy>5</posy>
+					<texture>folder-focus.png</texture>
+					<animation effect="zoom" end="0,0,110,110" time="100">focus</animation>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>108</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>font12</font>
+					<textcolor>common-text</textcolor>
+					<selectedcolor>selected-text</selectedcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label" id="411">
+			<description>heading label</description>
+			<posx>10</posx>
+			<posy>23</posy>
+			<width>480</width>
+			<align>center</align>
+			<textcolor>header-text</textcolor>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+		</control>
+		<control type="button" id="413">
+			<description>OK button</description>
+			<posx>300</posx>
+			<posy>453</posy>
+			<width>80</width>
+			<align>center</align>
+			<label>186</label>
+			<onleft>450</onleft>
+			<onright>414</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+		</control>
+		<control type="button" id="414">
+			<description>Cancel button</description>
+			<posx>390</posx>
+			<posy>453</posy>
+			<width>80</width>
+			<align>center</align>
+			<label>222</label>
+			<onleft>413</onleft>
+			<onright>450</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<animation effect="fade" time="200" delay="200">WindowOpen</animation>
+		</control>
+	</controls>
+</window> 

@@ -1,0 +1,37 @@
+<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<zorder>true</zorder>
+	<include>dialog-effect</include> 
+	<controls>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>108</posy>
+		<width>720</width>
+		<height>408</height>
+		<texture>menu-background.png</texture>
+	</control>
+
+	<include>16x9menu-background</include>
+
+	<control type="textbox" id="5">
+		<description>textarea</description>
+		<posx>220</posx>
+		<posy>120</posy>
+		<width>470</width>
+		<height>425</height>
+		<include>slideright</include>
+	</control>
+
+	<include>16x9slider</include>
+
+	<control>
+		<description>Description label</description>
+		<label>262</label>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

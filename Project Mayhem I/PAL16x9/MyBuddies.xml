@@ -1,0 +1,374 @@
+﻿<window id="2700">
+	<defaultcontrol>3012</defaultcontrol>
+	<controls>
+		<control type="visualisation">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>Skin.HasSetting(VisBackground)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>avatar bg</description>
+			<posx>462</posx>
+			<posy>30</posy>
+			<height>113</height>
+			<width>200</width>
+			<texture>kai-panel-avatar.png</texture>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="1">
+			<description>community bg</description>
+			<posx>270</posx>
+			<posy>40</posy>
+			<height>94</height>
+			<width>250</width>
+			<texture>background-kai.png</texture>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="1">
+			<description>list panel</description>
+			<posx>220</posx>
+			<posy>117</posy>
+			<width>493</width>
+			<height>452</height>
+			<texture>panel2.png</texture>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="button" id="3080">
+			<description>list panel</description>
+			<posx>274</posx>
+			<posy>140</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15010</label>
+			<align>center</align>
+			<aligny>top</aligny>
+			<textoffsety>8</textoffsety>
+			<font>font12</font>
+			<texturefocus>kai-tab-focus.png</texturefocus>
+			<texturenofocus>kai-tab-nofocus.png</texturenofocus>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="button" id="3081">
+			<description>list panel</description>
+			<posx>360</posx>
+			<posy>140</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15016</label>
+			<align>center</align>
+			<aligny>top</aligny>
+			<textoffsety>8</textoffsety>
+			<font>font12</font>
+			<texturefocus>kai-tab-focus.png</texturefocus>
+			<texturenofocus>kai-tab-nofocus.png</texturenofocus>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="button" id="3082">
+			<description>list panel</description>
+			<posx>446</posx>
+			<posy>140</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15021</label>
+			<align>center</align>
+			<aligny>top</aligny>
+			<textoffsety>8</textoffsety>
+			<font>font12</font>
+			<texturefocus>kai-tab-focus.png</texturefocus>
+			<texturenofocus>kai-tab-nofocus.png</texturenofocus>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="button" id="3083">
+			<description>list panel</description>
+			<posx>532</posx>
+			<posy>140</posy>
+			<width>83</width>
+			<height>37</height>
+			<label>15026</label>
+			<align>center</align>
+			<aligny>top</aligny>
+			<textoffsety>8</textoffsety>
+			<font>font12</font>
+			<texturefocus>kai-tab-focus.png</texturefocus>
+			<texturenofocus>kai-tab-nofocus.png</texturenofocus>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="1">
+			<description>logo</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>223</width>
+			<height>197</height>
+			<texture>xlink.gif</texture>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="listcontrolex" id="3031">
+			<description>arena list</description>
+			<width>340</width>
+			<onleft>3012</onleft>
+			<onright>3031</onright>
+			<onup>3031</onup>
+			<ondown>3031</ondown>
+			<textcolor>ffffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="console" id="3074">
+			<description>console control</description>
+			<posx>245</posx>
+			<posy>215</posy>
+			<width>390</width>
+			<height>280</height>
+			<font>font12</font>
+			<textcolor>d0ffffff</textcolor>
+			<!-- normal  (pen0) -->
+			<textcolor2>fff2b466</textcolor2>
+			<!-- action  (pen1) -->
+			<titlecolor>ffa4ffae</titlecolor>
+			<!-- system  (pen2) -->
+			<selectedcolor>fff3fb6b</selectedcolor>
+			<!-- private (pen3) -->
+			<onleft>3074</onleft>
+			<onright>3074</onright>
+			<onup>3074</onup>
+			<ondown>3074</ondown>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="3076">
+			<description>list panel</description>
+			<posx>233</posx>
+			<posy>494</posy>
+			<width>415</width>
+			<height>8</height>
+			<texture>kai-divider.png</texture>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="edit" id="3075">
+			<description>edit control</description>
+			<posx>245</posx>
+			<posy>497</posy>
+			<width>390</width>
+			<label>-</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="3051">
+			<description>username</description>
+			<posx>643</posx>
+			<posy>110</posy>
+			<align>right</align>
+			<label>-</label>
+			<font>font10</font>
+			<textcolor>d0ffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="button" id="3052">
+			<description>arena name</description>
+			<posx>274</posx>
+			<posy>173</posy>
+			<width>340</width>
+			<label>-</label>
+			<font>font12</font>
+			<align>center</align>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textcolor>d0ffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="3060">
+			<description>buddy (offline) icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>buddy-offline.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>aaffffff</colordiffuse>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="3061">
+			<description>buddy (online) icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>buddy-online.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="3062">
+			<description>opponent icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>opponent.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="3063">
+			<description>arena icon</description>
+			<posx>290</posx>
+			<posy>455</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>arena.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="image" id="3064">
+			<description>my avatar icon</description>
+			<posx>586</posx>
+			<posy>47</posy>
+			<width>44</width>
+			<height>57</height>
+			<texture>buddyitem-default-avatar.png</texture>
+			<colorkey>ffff00ff</colorkey>
+			<colordiffuse>bbffffff</colordiffuse>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="fadelabel" id="3070">
+			<description>buddy name</description>
+			<posx>360</posx>
+			<posy>455</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="fadelabel" id="3071">
+			<description>buddy status</description>
+			<posx>360</posx>
+			<posy>485</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="3072">
+			<description>buddy invitation status</description>
+			<posx>360</posx>
+			<posy>500</posy>
+			<width>50</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="label" id="3073">
+			<description>player count</description>
+			<posx>596</posx>
+			<posy>180</posy>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+			<include>Slide_From_Right_Animation</include>
+		</control>
+		<control type="button" id="3012">
+			<description>mode button</description>
+			<posx>60</posx>
+			<posy>194</posy>
+			<onleft>12</onleft>
+			<onright>3031</onright>
+			<onup>3015</onup>
+			<ondown>3013</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3013">
+			<description>join (friends)</description>
+			<posx>60</posx>
+			<posy>231</posy>
+			<onleft>3013</onleft>
+			<onright>3031</onright>
+			<onup>3012</onup>
+			<ondown>3016</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3016">
+			<description>speex (friends)</description>
+			<posx>60</posx>
+			<posy>268</posy>
+			<onleft>3016</onleft>
+			<onright>3031</onright>
+			<onup>3013</onup>
+			<ondown>3014</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3014">
+			<description>invite (friends)</description>
+			<posx>60</posx>
+			<posy>305</posy>
+			<onleft>3014</onleft>
+			<onright>3031</onright>
+			<onup>3016</onup>
+			<ondown>3015</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3015">
+			<description>remove (friends)</description>
+			<posx>60</posx>
+			<posy>342</posy>
+			<onleft>3015</onleft>
+			<onright>3031</onright>
+			<onup>3014</onup>
+			<ondown>3012</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3036">
+			<description>keyboard (chat)</description>
+			<posx>60</posx>
+			<posy>231</posy>
+			<onleft>3036</onleft>
+			<onright>3036</onright>
+			<onup>3012</onup>
+			<ondown>3012</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3033">
+			<description>play (arenas)</description>
+			<posx>60</posx>
+			<posy>231</posy>
+			<onleft>3033</onleft>
+			<onright>3031</onright>
+			<onup>3012</onup>
+			<ondown>3035</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3035">
+			<description>host (arenas)</description>
+			<posx>60</posx>
+			<posy>268</posy>
+			<onleft>3035</onleft>
+			<onright>3031</onright>
+			<onup>3033</onup>
+			<ondown>3034</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+		<control type="button" id="3034">
+			<description>add (arenas)</description>
+			<posx>60</posx>
+			<posy>305</posy>
+			<onleft>3034</onleft>
+			<onright>3031</onright>
+			<onup>3035</onup>
+			<ondown>3012</ondown>
+			<include>Slide_From_Left_Animation</include>
+		</control>
+	</controls>
+</window>

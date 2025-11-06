@@ -1,0 +1,431 @@
+<!-- 
+USE: For displaying album covers in a cover flow view. Library specific shows album info.
+-->
+<includes>
+	<include name="ViewCoverFlowLibrary">
+			
+		<control type="group">
+				
+			<visible>Control.IsVisible(59)</visible>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture>bg-views.png</texture>
+				<width>1280</width>
+				<height>640</height>
+			</control>
+			
+			<control type="group">
+				<posx>40</posx>
+				<visible>!Container.OnNext + !Container.OnPrevious</visible>
+				<animation effect="fade" start="90" end="0" time="200" delay="300">VisibleChange</animation>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>410</width>
+					<height>210</height>
+				</control>
+			</control>
+			
+			<!-- cover flow panel -->
+			<control type="group">
+				<posx>40</posx>
+				<posy>40</posy>
+				
+				<!-- left cover 3 -->
+				<control type="group">
+					<posx>0</posx>
+					<animation effect="rotatey" center="0" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[Container.ListItem(-3).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>5</posy>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+					</control>
+					<!-- reflection -->
+					<control type="image">
+						<texture border="8" flipy="true" diffuse="diffuse.png">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<posy>210</posy>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture flipy="true" diffuse="diffuse.png">$INFO[Container.ListItem(-3).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>215</posy>
+						<aspectratio aligny="top">keep</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+ 					</control>
+				</control>
+				<!-- left cover 2 -->
+				<control type="group">
+					<posx>159</posx>
+					<animation effect="rotatey" center="159" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[Container.ListItem(-2).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>5</posy>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+					<!-- reflection -->
+					<control type="image">
+						<texture border="8" flipy="true" diffuse="diffuse.png">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<posy>210</posy>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture flipy="true" diffuse="diffuse.png">$INFO[Container.ListItem(-2).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>215</posy>
+						<aspectratio aligny="top">keep</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+				</control>
+				<!-- left cover -->
+				<control type="group">
+					<posx>304</posx>
+					<animation effect="rotatey" center="304" start="-50" end="-50" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[Container.ListItem(-1).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>5</posy>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+					<!-- reflection -->
+					<control type="image">
+						<texture border="8" flipy="true" diffuse="diffuse.png">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<posy>210</posy>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture flipy="true" diffuse="diffuse.png">$INFO[Container.ListItem(-1).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>215</posy>
+						<aspectratio aligny="top">keep</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+				</control>
+				<!-- right cover 3 -->
+				<control type="group">
+					<posx>1198</posx>
+					<animation effect="rotatey" center="1198" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[Container.ListItem(3).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>5</posy>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+					</control>
+					<!-- reflection -->
+					<control type="image">
+						<texture border="8" flipy="true" diffuse="diffuse.png">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<posy>210</posy>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture flipy="true" diffuse="diffuse.png">$INFO[Container.ListItem(3).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>215</posy>
+						<aspectratio aligny="top">keep</aspectratio>
+						<colordiffuse>50ffffff</colordiffuse>
+ 					</control>
+				</control>
+				<!-- right cover 2 -->
+				<control type="group">
+					<posx>1071</posx>
+					<animation effect="rotatey" center="1071" start="45" end="45" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[Container.ListItem(2).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>5</posy>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+					<!-- reflection -->
+					<control type="image">
+						<texture border="8" flipy="true" diffuse="diffuse.png">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<posy>210</posy>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture flipy="true" diffuse="diffuse.png">$INFO[Container.ListItem(2).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>215</posy>
+						<aspectratio aligny="top">keep</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+					</control>
+				</control>
+				<!-- right cover 1 -->
+				<control type="group">
+					<posx>906</posx>
+					<animation effect="rotatey" center="906" start="60" end="60" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture>$INFO[Container.ListItem(1).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>5</posy>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+					<!-- reflection -->
+					<control type="image">
+						<texture border="8" flipy="true" diffuse="diffuse.png">listitem-back-nf.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<posy>210</posy>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<texture flipy="true" diffuse="diffuse.png">$INFO[Container.ListItem(1).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>215</posy>
+						<aspectratio aligny="top">keep</aspectratio>
+						<colordiffuse>90ffffff</colordiffuse>
+					</control>
+				</control>
+				<!-- center -->
+				<control type="group">
+					<posx>495</posx>
+					<control type="image">
+						<texture border="8">listitem-back.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<texture>$INFO[Container.ListItem(0).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>5</posy>
+						<aspectratio aligny="bottom">keep</aspectratio>
+					</control>
+					<!-- reflection -->
+					<control type="image">
+						<texture border="8" flipy="true" diffuse="diffuse.png">listitem-back.png</texture>
+						<width>210</width>
+						<height>210</height>
+						<posy>210</posy>
+						<aspectratio aligny="top">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<texture flipy="true" diffuse="diffuse.png">$INFO[Container.ListItem(0).Icon]</texture>
+						<width>200</width>
+						<height>200</height>
+						<posx>5</posx>
+						<posy>215</posy>
+						<aspectratio aligny="top">keep</aspectratio>
+					</control>
+				</control>
+			</control>
+			<!-- cover flow scrollbar -->
+			<control type="scrollbar" id="60">
+				<width>1200</width>
+				<height>30</height>
+				<posx>40</posx>
+				<posy>270</posy>
+				<texturesliderbackground border="32,8,32,8">scrollbar-back-horiz.png</texturesliderbackground>
+				<onup>59</onup>
+				<ondown>59</ondown>
+				<orientation>horizontal</orientation>
+			</control>
+
+			<!-- album info -->
+			<control type="group">
+				<posx>40</posx>
+				<posy>330</posy>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>570</width>
+					<height>270</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+				</control>
+				<control type="label">
+					<label>$INFO[ListItem.Album]</label>
+					<width>470</width>
+					<height>40</height>
+					<posx>20</posx>
+					<font>info</font>
+					<textcolor>type-info-dark</textcolor>
+				</control>
+			</control>
+			
+			<!-- list -->
+			<control type="list" id="59">
+			
+				<viewtype label="List">list</viewtype>
+				<width>570</width>
+				<height>215</height>
+				<posx>610</posx>
+				<posy>330</posy>
+				<onup>60</onup>
+				<ondown>60</ondown>
+				<onleft>61</onleft>
+				<onright>9000</onright>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="36">
+					<control type="image">
+						<texture border="8">listitem-back-nf.png</texture>
+						<width>570</width>
+						<height>31</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>350</width>
+						<height>31</height>
+						<posx>20</posx>
+						<font>content</font>
+						<textcolor>type-content-dark</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label2]</label>
+						<width>200</width>
+						<height>31</height>
+						<posx>550</posx>
+						<font>content</font>
+						<textcolor>type-content-dark</textcolor>
+						<align>right</align>
+					</control>
+				</itemlayout>
+				<focusedlayout height="36">
+					<control type="image">
+						<texture border="8">listitem-back.png</texture>
+						<width>570</width>
+						<height>31</height>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>350</width>
+						<height>31</height>
+						<posx>20</posx>
+						<font>content</font>
+						<textcolor>type-content</textcolor>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.label2]</label>
+						<width>200</width>
+						<height>31</height>
+						<posx>550</posx>
+						<font>content</font>
+						<textcolor>type-content</textcolor>
+						<align>right</align>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<!-- container info -->
+			<control type="group">
+				<posx>610</posx>
+				<posy>560</posy>
+				<control type="image">
+					<texture border="8">listitem-back-nf.png</texture>
+					<width>570</width>
+					<height>40</height>
+				</control>
+				<!-- number of files -->
+				<control type="label" id="12">
+					<width>275</width>
+					<height>40</height>
+					<posx>20</posx>
+					<font>content</font>
+					<textcolor>type-content-dark</textcolor>
+				</control>
+				<!-- current page / number of pages -->
+				<control type="label">
+					<label>$INFO[Container().CurrentPage,, / ]$INFO[Container().NumPages]</label>
+					<width>320</width>
+					<height>40</height>
+					<posx>550</posx>
+					<font>content</font>
+					<textcolor>type-content-dark</textcolor>
+					<align>right</align>
+				</control>
+			</control>
+		</control>
+				
+	</include>
+</includes>

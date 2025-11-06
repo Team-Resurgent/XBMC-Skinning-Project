@@ -1,0 +1,59 @@
+<window id="112">
+	<defaultcontrol>402</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>260</posx>
+		<posy>10</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>popup music scan dialog background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>400</width>
+			<height>60</height>
+			<texture>blue-rectangleNF.png</texture>
+			<colordiffuse>EEFFFFFF</colordiffuse>
+		</control>
+		<control type="label" id="401">
+			<description>caption label</description>
+			<posx>15</posx>
+			<posy>3</posy>
+			<width>370</width>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<font>font13</font>
+			<width>160</width>
+			<height>20</height>
+		</control>
+		<control type="label" id="402">
+			<description>current directory label</description>
+			<posx>15</posx>
+			<posy>23</posy>
+			<width>370</width>
+			<haspath>yes</haspath>
+			<font>font10</font>
+			<onleft>402</onleft>
+			<onright>402</onright>
+			<onup>402</onup>
+			<ondown>402</ondown>
+		</control>
+		<control type="progress" id="403">
+			<description>progress control</description>
+			<posx>15</posx>
+			<posy>43</posy>
+			<width>375</width>
+			<height>10</height>
+			<overlaytexture>-</overlaytexture>
+		</control>
+		<control type="progress" id="404">
+			<description>progress control</description>
+			<posx>15</posx>
+			<posy>50</posy>
+			<width>375</width>
+			<height>10</height>
+			<overlaytexture>-</overlaytexture>
+		</control>
+	</controls>
+</window>

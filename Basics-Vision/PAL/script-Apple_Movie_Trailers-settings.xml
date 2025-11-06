@@ -1,0 +1,389 @@
+<window>
+	<defaultcontrol>201</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>23</posx>
+		<posy>64</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>675</width>
+			<height>464</height>
+			<texture border="0,45,0,10">Dialog.png</texture>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="label" id="20">
+			<description>Heading label</description>
+			<posx>0</posx>
+			<posy>7</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<font>font16</font>
+			<label>$LOCALIZE[SCRIPT0]</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<!-- ** Required ** Do not change id or type -->
+		<control type="label" id="30">
+			<description>Version label</description>
+			<posx>0</posx>
+			<posy>44</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<font>font12</font>
+			<label>-</label>
+			<textcolor>white</textcolor>
+		</control>
+		<!-- ** Required ** Do not change id's or type's -->
+		<control type="grouplist" id="9000">
+			<posx>108</posx>
+			<posy>72</posy>
+			<width>346</width>
+			<height>360</height>
+			<itemgap>2</itemgap>
+			<pagecontrol>900</pagecontrol>
+			<onleft>2000</onleft>
+			<onright>2000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="button" id="201">
+				<description>Setting1 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT201]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="image" id="1">
+				<description>separator image</description>
+				<width>346</width>
+				<height>3</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="button" id="202">
+				<description>Setting2 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT202]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="203">
+				<description>Setting3 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT203]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="204">
+				<description>Setting4 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT204]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="205">
+				<description>Setting5 Button</description>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT205]</label>
+				<pulseonselect>no</pulseonselect>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<radioposx>315</radioposx>
+			</control>
+			<control type="image" id="2">
+				<description>separator image</description>
+				<width>346</width>
+				<height>3</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="button" id="206">
+				<description>Setting5 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT206]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="207">
+				<description>Setting7 Button</description>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT207]</label>
+				<pulseonselect>no</pulseonselect>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<radioposx>315</radioposx>
+			</control>
+			<control type="image" id="3">
+				<description>separator image</description>
+				<width>346</width>
+				<height>3</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="button" id="208">
+				<description>Setting8 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT208]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="209">
+				<description>Setting9 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT209]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="210">
+				<description>Setting10 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT210]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="211">
+				<description>Setting11 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT211]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="image" id="4">
+				<description>separator image</description>
+				<width>346</width>
+				<height>3</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="radiobutton" id="212">
+				<description>Setting12 Button</description>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT212]</label>
+				<pulseonselect>no</pulseonselect>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<radioposx>315</radioposx>
+			</control>
+			<control type="radiobutton" id="218">
+				<description>Setting18 Button</description>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT218]</label>
+				<pulseonselect>no</pulseonselect>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<radioposx>315</radioposx>
+			</control>
+			<control type="radiobutton" id="213">
+				<description>Setting13 Button</description>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT213]</label>
+				<pulseonselect>no</pulseonselect>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<radioposx>315</radioposx>
+			</control>
+			<control type="radiobutton" id="214">
+				<description>Setting14 Button</description>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT214]</label>
+				<pulseonselect>no</pulseonselect>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<radioposx>315</radioposx>
+			</control>
+			<control type="button" id="215">
+				<description>Setting15 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT215]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="image" id="5">
+				<description>separator image</description>
+				<width>346</width>
+				<height>3</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>separator.png</texture>
+			</control>
+			<control type="button" id="216">
+				<description>Setting16 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT216]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="217">
+				<description>Setting17 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT217]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="219">
+				<description>Setting19 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT219]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<visible>false</visible>
+			</control>
+			<control type="button" id="220">
+				<description>Setting20 Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>346</width>
+				<height>36</height>
+				<label>$LOCALIZE[SCRIPT220]</label>
+				<texturefocus border="10,0,10,0">folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<visible>false</visible>
+			</control>
+		</control>
+		<!-- ** Required ** Do not change id's or type's -->
+		<control type="group" id="2000">
+			<posy>24</posy>
+			<control type="button" id="250">
+				<description>OK button</description>
+				<posx>454</posx>
+				<posy>48</posy>
+				<width>113</width>
+				<height>36</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT250]</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>254</onup>
+				<ondown>251</ondown>
+			</control>
+			<control type="button" id="251">
+				<description>Cancel button</description>
+				<posx>454</posx>
+				<posy>88</posy>
+				<width>113</width>
+				<height>36</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT251]</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>250</onup>
+				<ondown>252</ondown>
+			</control>
+			<control type="button" id="252">
+				<description>Create folder button</description>
+				<posx>454</posx>
+				<posy>128</posy>
+				<width>113</width>
+				<height>36</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT252]</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>251</onup>
+				<ondown>253</ondown>
+			</control>
+			<control type="button" id="253">
+				<description>Credits button</description>
+				<posx>454</posx>
+				<posy>168</posy>
+				<width>113</width>
+				<height>36</height>
+				<align>center</align>
+				<label>$LOCALIZE[SCRIPT253]</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>252</onup>
+				<ondown>255</ondown>
+			</control>
+			<control type="button" id="255">
+				<description>Defaults button</description>
+				<posx>454</posx>
+				<posy>208</posy>
+				<width>113</width>
+				<height>36</height>
+				<align>center</align>
+				<font>font12</font>
+				<label>$LOCALIZE[SCRIPT255]</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>253</onup>
+				<ondown>254</ondown>
+			</control>
+			<control type="button" id="254">
+				<description>Plugins button</description>
+				<posx>454</posx>
+				<posy>248</posy>
+				<width>113</width>
+				<height>36</height>
+				<align>center</align>
+				<font>font12</font>
+				<label>$LOCALIZE[SCRIPT254]</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>255</onup>
+				<ondown>250</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

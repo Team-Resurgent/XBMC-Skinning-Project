@@ -1,0 +1,60 @@
+<window id="107">
+	<defaultcontrol>402</defaultcontrol>
+	<include>dialog-effect</include>
+	<coordinates>
+	<system>1</system>
+	<posx>430</posx>
+	<posy>40</posy>
+	</coordinates>
+	<controls>
+
+	<control type="image" id="1">
+		<description>Popup Kai Toast Dialog Background</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>245</width>
+		<height>75</height>
+		<texture>voulume-panel-bg.png</texture>
+	</control>
+
+	<control type="image" id="400">
+		<description>avatar</description>
+		<posx>29</posx>
+		<posy>15</posy>
+		<width>30</width>
+		<height>40</height>
+		<texture>buddyitem-default-avatar.png</texture>
+	</control>
+
+	<control type="button" id="401">
+		<description>Caption Label</description>
+		<posx>66</posx>
+		<posy>17</posy>
+		<font>font12</font>
+		<align>center</align>
+		<label>-</label>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<width>160</width>
+		<height>20</height>
+	</control>
+
+	<control type="button" id="402">
+		<description>Description Button</description>
+		<posx>66</posx>
+		<posy>29</posy>
+		<width>160</width>
+		<height>32</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<label>-</label>
+		<font>font10</font>
+		<onleft>402</onleft>
+		<align>center</align>
+		<onright>402</onright>
+		<onup>402</onup>
+		<ondown>402</ondown>
+	</control>
+
+	</controls>
+</window>

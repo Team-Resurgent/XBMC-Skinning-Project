@@ -1,0 +1,365 @@
+<window type="dialog" id="126">
+	<defaultcontrol>450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>115</posy>
+		<width>595</width>
+		<height>372</height>
+		<texture>Black.png</texture>
+	</control>
+	<control type="list" id="450">
+		<posx>70</posx>
+		<posy>120</posy>
+		<width>570</width>
+		<height>315</height>
+		<onleft>413</onleft>
+		<onright>90</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<pagecontrol>90</pagecontrol>
+		<include>common-fade</include>
+		<itemlayout height="27">
+			<control type="image">
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>16</width>
+				<height>16</height>
+				<info>ListItem.Icon</info>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="40">
+			<control type="image">
+				<width>569</width>
+				<height>40</height>
+				<posx>0</posx>
+				<posy>0</posy>
+				<texture border="50,0,50,0">Button-List-Fade-Focus.png</texture>
+				<visible>Control.HasFocus(450)</visible>
+			</control>
+			<control type="image">
+				<width>569</width>
+				<height>40</height>
+				<posx>0</posx>
+				<posy>0</posy>
+				<texture border="50,0,50,0">Button-List-Fade-NoFocus.png</texture>
+				<visible>!Control.HasFocus(450)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>3</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="label">
+				<posx>45</posx>
+				<posy>8</posy>
+				<width>370</width>
+				<height>16</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+	<control type="panel" id="451">
+		<posx>70</posx>
+		<posy>122</posy>
+		<width>570</width>
+		<height>320</height>
+		<onleft>413</onleft>
+		<onright>90</onright>
+		<onup>451</onup>
+		<ondown>451</ondown>
+		<pagecontrol>90</pagecontrol>
+		<include>common-fade</include>
+		<itemlayout height="79" width="56">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>50</width>
+				<height>70</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>90ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>27</posx>
+				<posy>65</posy>
+				<width>50</width>
+				<height>16</height>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+				<shadowcolor>black2</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="79" width="56">
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>50</width>
+				<height>70</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>3</posx>
+				<posy>0</posy>
+				<width>50</width>
+				<height>70</height>
+				<texture>Folder-Focus.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<posx>27</posx>
+				<posy>65</posy>
+				<width>50</width>
+				<height>16</height>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+	<control type="scrollbar" id="90">
+		<posx>638</posx>
+		<posy>115</posy>
+		<width>20</width>
+		<height>372</height>
+		<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+		<texturesliderbar border="3">scrollbar_bar.png</texturesliderbar>
+		<texturesliderbarfocus border="3">scrollbar_bar_focus.png</texturesliderbarfocus>
+		<textureslidernib>scrollbar_nib.png</textureslidernib>
+		<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+		<onleft>450</onleft>
+		<onright>450</onright>
+		<onup>450</onup>
+		<ondown>413</ondown>
+		<orientation>vertical</orientation>
+		<visible>!Skin.HasSetting(UseScrollBars)</visible>
+	</control>
+	<control type="label" id="412">
+		<description>Path Label</description>
+		<posx>80</posx>
+		<posy>450</posy>
+		<width>510</width>
+		<align>left</align>
+		<font>special18</font>
+		<shadowcolor>black</shadowcolor>
+		<haspath>false</haspath>
+	</control>
+	<control type="button" id="415">
+		<description>Create folder button</description>
+		<posx>390</posx>
+		<posy>500</posy>
+		<width>80</width>
+		<label>119</label>
+		<shadowcolor>black</shadowcolor>
+		<texturefocus>Button-Home2.png</texturefocus>
+		<texturenofocus>Button-List.png</texturenofocus>
+		<align>center</align>
+		<onleft>414</onleft>
+		<onright>413</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(128)</visible>
+		<include>common-effect</include>
+	</control>
+	<control type="button" id="413">
+		<description>OK button</description>
+		<posx>480</posx>
+		<posy>500</posy>
+		<width>80</width>
+		<label>186</label>
+		<shadowcolor>black</shadowcolor>
+		<texturefocus>Button-Home2.png</texturefocus>
+		<texturenofocus>Button-List.png</texturenofocus>
+		<align>center</align>
+		<onleft>415</onleft>
+		<onright>414</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(128)</visible>
+		<include>common-effect</include>
+	</control>
+	<control type="button" id="414">
+		<description>Cancel button</description>
+		<posx>570</posx>
+		<posy>500</posy>
+		<width>80</width>
+		<label>222</label>
+		<shadowcolor>black</shadowcolor>
+		<texturefocus>Button-Home2.png</texturefocus>
+		<texturenofocus>Button-List.png</texturenofocus>
+		<align>center</align>
+		<onleft>413</onleft>
+		<onright>415</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(128)</visible>
+		<include>common-effect</include>
+	</control>
+	<include>Black-Overlay</include>
+
+	<!-- Lines normal -->
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-zoom-1</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-zoom-1</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-zoom-2</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-zoom-2</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+		<include>common-zoom-3</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>60ffffff</colordiffuse>
+		<include>common-zoom-3</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+
+	<!-- Lines Reverse -->
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-zoom-4</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>40ffffff</colordiffuse>
+		<include>common-zoom-4</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-zoom-5</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-zoom-5</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-BottomLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-zoom-6</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>Background-Overlay-TopLine.png</texture>
+		<colordiffuse>50ffffff</colordiffuse>
+		<include>common-zoom-6</include>
+		<visible>Window.IsActive(home)</visible>
+	</control>
+
+	</controls>
+</window>

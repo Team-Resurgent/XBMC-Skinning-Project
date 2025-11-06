@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- !!!!!!!!!!  DONT TRANSLATE THE TEXT $INFO[System.FreeSpace(E)] IN INCLUDE 1006 !!!!!!!! -->
+<strings>
+	<string id="31001">-</string>
+	<string id="31002">Inaktivera skalanimation</string>
+	<string id="31003">Använd visualisering för bakgrunden</string>
+	<string id="31004">Visa stor ikon i listvisningsläge</string>
+	<string id="31005">Visa ljud nu spelas på hemfönstret</string>
+	<string id="31006">XBOX SPARADE SPEL</string>
+	<string id="31007">Totalt ledigt utrymme $INFO[System.FreeSpace(E)]</string>
+	<string id="31008">Dubbla RSS flöden på hemfönstret - (Omstart krävs)</string>
+	<string id="31009">Visa omslagsbild i helskärmsmusikinfo</string>
+	<string id="31010">Visa omslagsbild i helskärmsvideoinfo</string>
+	<string id="31011">Sedd överlägg på videobilioteksminiatyrer</string>
+	<string id="31012">Undermenyknappen länkar till skriptfönstret</string>
+	<string id="31013">Ändra skalskripts lägen</string>
+
+	<string id="31014">Skalskriptsinställningar</string>
+	<string id="31015">Aktivera knapp i väder</string>
+	<string id="31016">Aktivera knapp i videofiler</string>
+	<string id="31017">Visa sångtextsknapp i musikdisplayen</string>
+	<string id="31018">Knappetikett :</string>
+	<string id="31019">Skript sökväg :</string>
+
+	<string id="31020">Inställningar</string>
+	<string id="31021">Ändra skalet</string>
+	<string id="31022">Justera ljudinställningar</string>
+	<string id="31023">Kalibrera skärmstorlek</string>
+	<string id="31024">Välj en skärmsläckare</string>
+	<string id="31025">Regigera nätverksinställningar</string>
+	<string id="31026">Kontrollera hårddisksutrymme</string>
+</strings>

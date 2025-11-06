@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+<!-- Start Home Labels -->
+	<string id="31001">Music</string>
+	<string id="31002">Programs</string>
+	<string id="31003">Video</string>
+	<string id="31004">Photos</string>
+	<string id="31005">Settings</string>
+<!-- End Home Labels -->
+
+<!-- Start Music Labels -->
+	<string id="31006">All Music</string>
+	<string id="31007">Rating</string>
+<!-- End Music Labels -->
+
+<!-- Start Shutdown Labels -->
+	<string id="31008">Master Mode</string>
+	<string id="31009">Texture Color</string>
+	<string id="31010">Font Color</string>
+	<string id="31011">Restart XBOX</string>
+	<string id="31012">Restart XBMC</string>
+	<string id="31013">Favorites</string>
+<!-- End Shutdown Labels -->
+
+<!-- Start Settings Labels -->
+	<string id="31014">Background Options</string>
+	<string id="31015">Use Background</string>
+	<string id="31016">Choose Custom Background</string>
+	<string id="31017">Reset Custom Background</string>
+	<string id="31018">Choose Background Animation Folder</string>
+	<string id="31019">Reset Background Animation</string>
+	<string id="31020">Use RSS Feed in Home Window</string>
+	<string id="31021">Information</string>
+	<string id="31022">Media</string>
+	<string id="31023">System</string>
+	<string id="31024">Skin</string>
+	<string id="31025">Background</string>
+	<string id="31026">Shutdown</string>
+	<string id="31027">File Manager</string>
+	<string id="31028">Scripts</string>
+	<string id="31029">Weather</string>
+	<string id="31030">Game Saves</string>
+	<string id="31031">Use Watched\Unwatched Overlays</string>
+	<string id="31032">Disable Media Overlays</string>
+	<string id="31033">Disable Home Icon Animation</string>
+	<string id="31034">Use Startup Playlist</string>
+	<string id="31035">Enable Home Button Media Timeout</string>
+	<string id="31036">Enable Wide Icon Labels</string>
+	<string id="31037">Choose Playlist</string>
+	<string id="31038">Home Window</string>
+	<string id="31039">Disable Home Button Labels</string>
+	<string id="31040">Enable Wrap View Labels</string>
+	<string id="31041">Use Containment Spalsh Screen</string>
+	<string id="31042">Download Containment Themes</string>
+<!-- End Settings Labels -->
+
+<!-- Start Misc. Labels -->
+	<string id="31043">Enter Library</string>
+	<string id="31044">Exit Library</string>
+	<string id="31045">Muted</string>
+<!-- End Misc. Labels-->
+
+<!-- Start Script Labels -->
+	<string id="31046">Movie Trailers</string>
+	<string id="31047">Containment Themes</string>
+	<string id="31048">Theme Installed</string>
+	<string id="31049">Theme already exists.</string>
+	<string id="31050">No themes found.</string>
+	<string id="31051">Downloading Theme:</string>
+	<string id="31052">Download Completed</string>
+	<string id="31053">Download Cancelled</string>
+	<string id="31054">Download Aborted</string>
+	<string id="31055">Go to Appearance settings to apply theme.</string>
+	<string id="31056">Failed to download theme from server.</string>
+	<string id="31057">Could not connect to server.</string>
+	<string id="31058">Check your connection or try again later.</string>
+<!-- End Script Labels -->
+</strings>

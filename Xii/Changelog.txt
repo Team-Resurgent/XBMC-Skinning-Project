@@ -1,0 +1,26 @@
+To Do:
+
+Add wrap views for music and programs and scripts
+Create buttons for library mode and mypictures
+Update code once buttons ready
+Library mode text is white and can't be seen
+
+Changelog:
+2007-03-21 Added:	Libary modes with placer buttons
+2007-03-21 Fixed:	Arrow sizes in settings to reflect new images
+2007-03-21 Changed:	View labels to white when focused by removing buttons labels and adding individual labels
+2007-03-21 Changed:	Old images with new ones
+2007-03-15 Changed:	Coding and formatting of MyScripts.xml
+2007-03-15 Fixed:	Sizing of left and right arrows in Settings
+2007-03-11 Added:	Xii coding for Programs and Music
+2007-03-10 Added:	New Viewtypes to video views
+2007-03-10 Changed:	Viewtypes for Videos and finalized their views
+2007-03-05 Added:	Ability to define custom channel icons for final four buttons
+2007-03-05 Added:	Ability to set final four buttons to launch custom scripts and xbe
+2007-03-05 Added:	Channels to Settings menu
+2007-03-05 Changed:	Order of Settings choices
+2007-03-05 Removed:	Reload Skin from Settings menu
+2007-03-04 Changed:	Coding of Home.xml to reflect multiimage channels
+2007-03-04 Changed:	Some channel images
+2007-02-22 Changed:	Order and location of home buttons
+2007-02-22 Added:	Changelog.txt

@@ -1,0 +1,301 @@
+<window id="0">
+	<defaultcontrol>1</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Home-Background</include>
+<!-- Start Buttons -->
+		<control type="image">
+			<description>dial outer ring</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>object-color</colordiffuse>
+			<colordiffuse>object-color</colordiffuse>
+			<texture>dial-glow.png</texture>
+			<include>home-media-timeout</include>
+			<include>home-pulse</include>
+			<include>home-fade</include>
+		</control>
+		<control type="image">
+			<description>dial</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<texture>dial.png</texture>
+			<include>home-media-timeout</include>
+			<include>home-zoom</include>
+		</control>
+		<control type="image">
+			<description>dial center</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<texture>dial-center.png</texture>
+			<include>home-media-timeout</include>
+		</control>
+	<!-- Music Button -->
+		<control type="button" id="1">
+			<description>music button</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<onup>3</onup>
+			<ondown>5</ondown>
+			<onleft>4</onleft>
+			<onright>2</onright>
+			<texturefocus>icon-music.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>object-color</colordiffuse>
+			<onclick>ActivateWindow(MyMusic)</onclick>
+			<include>home-media-timeout</include>
+			<include>home-fade</include>
+		</control>
+		<control type="image">
+			<description>music no focus image</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-music.png</texture>
+			<include>home-media-timeout</include>
+			<visible>!Control.HasFocus(1)</visible>
+			<include>home-fade</include>
+		</control>
+	<!-- Programs Button -->
+		<control type="button" id="2">
+			<description>programs button</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<onleft>5</onleft>
+			<onright>4</onright>
+			<texturefocus>icon-program.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>object-color</colordiffuse>
+			<onclick>ActivateWindow(MyPrograms)</onclick>
+			<include>home-media-timeout</include>
+			<include>home-fade</include>
+		</control>
+		<control type="image">
+			<description>programs no focus image</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<height>60</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-program.png</texture>
+			<include>home-media-timeout</include>
+			<visible>!Control.HasFocus(2)</visible>
+			<include>home-fade</include>
+		</control>
+	<!-- Video Button -->
+		<control type="button" id="3">
+			<description>video button</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<onup>5</onup>
+			<ondown>1</ondown>
+			<onleft>4</onleft>
+			<onright>2</onright>
+			<texturefocus>icon-video.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>object-color</colordiffuse>
+			<onclick>ActivateWindow(MyVideos)</onclick>
+			<include>home-media-timeout</include>
+			<include>home-fade</include>
+		</control>
+		<control type="image">
+			<description>video no focus image</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-video.png</texture>
+			<include>home-media-timeout</include>
+			<visible>!Control.HasFocus(3)</visible>
+			<include>home-fade</include>
+		</control>
+	<!-- Photos Button -->
+		<control type="button" id="4">
+			<description>photos button</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<onleft>2</onleft>
+			<onright>5</onright>
+			<texturefocus>icon-photo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>object-color</colordiffuse>
+			<onclick>ActivateWindow(MyPictures)</onclick>
+			<include>home-media-timeout</include>
+			<include>home-fade</include>
+		</control>
+		<control type="image">
+			<description>photos no focus image</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-photo.png</texture>
+			<include>home-media-timeout</include>
+			<visible>!Control.HasFocus(4)</visible>
+			<include>home-fade</include>
+		</control>
+	<!-- Settings Button -->
+		<control type="image">
+			<description>settings button</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>icon-nf-color</colordiffuse>
+			<texture>icon-settings.png</texture>
+			<include>home-media-timeout</include>
+			<include>home-fade</include>
+		</control>
+		<control type="button" id="5">
+			<description>settings button</description>
+			<posx>260</posx>
+			<posy>163</posy>
+			<width>200</width>
+			<height>250</height>
+			<colordiffuse>object-color</colordiffuse>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<onleft>4</onleft>
+			<onright>2</onright>
+			<texturefocus>icon-settings.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<include>home-media-timeout</include>
+			<include>home-fade</include>
+		</control>
+
+<!-- End Buttons -->
+
+<!-- Start Button Labels -->
+
+		<control type="label">
+			<description>Music Label</description>
+			<posx>235</posx>
+			<posy>398</posy>
+			<width>250</width>
+			<height>30</height>
+			<textcolor>main-text</textcolor>
+			<label>31001</label>
+			<font>home</font>
+			<align>center</align>
+			<visible>Control.HasFocus(1)</visible>
+			<include>home-media-timeout</include>
+			<visible>!Skin.HasSetting(home-label)</visible>
+		</control>
+		<control type="label">
+			<description>Programs Label</description>
+			<posx>235</posx>
+			<posy>398</posy>
+			<width>250</width>
+			<height>30</height>
+			<textcolor>main-text</textcolor>
+			<label>31002</label>
+			<font>home</font>
+			<align>center</align>
+			<visible>Control.HasFocus(2)</visible>
+			<include>home-media-timeout</include>
+			<visible>!Skin.HasSetting(home-label)</visible>
+		</control>
+		<control type="label">
+			<description>Video Label</description>
+			<posx>235</posx>
+			<posy>398</posy>
+			<width>250</width>
+			<height>30</height>
+			<textcolor>main-text</textcolor>
+			<label>31003</label>
+			<font>home</font>
+			<align>center</align>
+			<visible>Control.HasFocus(3)</visible>
+			<include>home-media-timeout</include>
+			<visible>!Skin.HasSetting(home-label)</visible>
+		</control>
+		<control type="label">
+			<description>Photos Label</description>
+			<posx>235</posx>
+			<posy>398</posy>
+			<width>250</width>
+			<height>30</height>
+			<textcolor>main-text</textcolor>
+			<label>31004</label>
+			<font>home</font>
+			<align>center</align>
+			<visible>Control.HasFocus(4)</visible>
+			<include>home-media-timeout</include>
+			<visible>!Skin.HasSetting(home-label)</visible>
+		</control>
+		<control type="label">
+			<description>Settings Label</description>
+			<posx>235</posx>
+			<posy>398</posy>
+			<width>250</width>
+			<height>30</height>
+			<textcolor>main-text</textcolor>
+			<label>31005</label>
+			<font>home</font>
+			<align>center</align>
+			<visible>Control.HasFocus(5)</visible>
+			<include>home-media-timeout</include>
+			<visible>!Skin.HasSetting(home-label)</visible>
+		</control>
+
+<!-- End Button Labels -->
+
+<!-- Start Time and RSS -->
+
+		<control type="label">
+			<description>time</description>
+			<posx>683</posx>
+			<posy>111</posy>
+			<width>300</width>
+			<height>30</height>
+			<textcolor>main-text</textcolor>
+			<label>$INFO[System.Time, -]</label>
+			<font>font13</font>
+			<align>right</align>
+			<include>home-media-timeout</include>
+			<visible>!Skin.HasSetting(rss)</visible>
+			<include>home-fade</include>
+		</control>
+		<control type="rss">
+			<description>rss feed</description>
+			<posx>32</posx>
+			<posy>111</posy>
+			<width>572</width>
+			<font>font13</font>
+			<urlset>1</urlset>
+			<titlecolor>rss-title-color</titlecolor>
+			<headlinecolor>rss-headline-color</headlinecolor>
+			<textcolor>rss-text-color</textcolor>
+			<include>home-media-timeout</include>
+			<visible>!Skin.HasSetting(rss)</visible>
+			<include>home-fade</include>
+		</control>
+
+<!-- End Time and RSS -->
+		<include>Shutters</include>
+	</controls>
+</window>

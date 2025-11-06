@@ -1,0 +1,229 @@
+<window id="25">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+	<control type="group" id="7000">
+		<description>UI Controls for TV TITLE Listings</description>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture>tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>656</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture flipx="true">tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>0</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture>tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>464</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture flipy="true">tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>8</posy>
+			<width>704</width>
+			<height>464</height>
+			<texture>tv_back.png</texture>
+		</control>
+		<visible>Control.IsVisible(58)</visible>
+	</control>
+	<control type="group" id="7001">
+		<description>UI Controls for TV SEASON Listings</description>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture>tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>656</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture flipx="true">tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>0</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture>tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>464</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture flipy="true">tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>8</posy>
+			<width>704</width>
+			<height>464</height>
+			<texture>tv_back2.png</texture>
+		</control>
+		<control type="image">
+			<description>TV Show Banner</description>
+			<posx>12</posx>
+			<posy>12</posy>
+			<width>365</width>
+			<height>133</height>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+			<info>Container.TVShowThumb</info>
+		</control>
+		<visible>Control.IsVisible(54)</visible>
+	</control>
+	<control type="group" id="7002">
+		<description>UI Controls for TV EPISODE Listings</description>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture>tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>656</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture flipx="true">tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>0</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture>tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>464</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture flipy="true">tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>8</posy>
+			<width>704</width>
+			<height>464</height>
+			<texture>tv_back2.png</texture>
+		</control>
+		<control type="image">
+			<description>TV Show Banner</description>
+			<posx>12</posx>
+			<posy>12</posy>
+			<width>365</width>
+			<height>133</height>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+			<info>Container.TVShowThumb</info>
+		</control>
+		<visible>Control.IsVisible(56)</visible>
+	</control>
+	<control type="group" id="7003">
+		<description>UI Controls for MOVIE Listings </description>
+		<visible>Control.IsVisible(57)</visible>
+	</control>
+	<control type="group" id="7004">
+		<description>UI Controls for MOVIE DETAIL Listings </description>
+		<control type="image">
+			<description>List background</description>
+			<posx>0</posx>
+			<posy>25</posy>
+			<width>720</width>
+			<height>128</height>
+			<texture>list_bg_128.png</texture>
+		</control>
+		<control type="image">
+			<description>List dropdown</description>
+			<posx>0</posx>
+			<posy>153</posy>
+			<width>720</width>
+			<height>301</height>
+			<texture>list_bg_dropdown_large.png</texture>
+		</control>
+		<visible>Control.IsVisible(59)</visible>
+	</control>
+	<control type="group" id="7005">
+		<description>UI Controls for MOVIE (MANY) Listings </description>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture>tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>656</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>480</height>
+			<texture flipx="true">tv_border_lr.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>0</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture>tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>464</posy>
+			<width>704</width>
+			<height>16</height>
+			<texture flipy="true">tv_border_tb.png</texture>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>8</posy>
+			<width>704</width>
+			<height>464</height>
+			<texture>tv_back2.png</texture>
+		</control>
+		<visible>Control.IsVisible(53)</visible>
+	</control>
+
+	<include>OldListViewCommons</include>
+	<include>VideoLibrary_WideTitleView</include>
+	<include>VideoLibrary_SeasonView1</include>
+	<include>VideoLibrary_EpisodeView</include>
+	<include>VideoLibrary_MovieView</include>
+	<include>VideoLibrary_MovieView2</include>
+	<include>VideoLibrary_MovieView3</include>
+
+	<include>AllViewCommonPageControls</include>
+	
+	<control type="image">
+		<description>Makes a "dimming" effect for the menus</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>480</height>
+		<texture>black.png</texture>
+		<visible>ControlGroup(9000).HasFocus(0) | ControlGroup(1001).HasFocus(0) | ControlGroup(1002).HasFocus(0)</visible>
+	</control>
+	
+	<include>menu_videolibrary_view</include>
+	<include>menu_videolibrary_font</include>
+	<include>menu_videolibrary_main</include>
+	
+</controls>
+</window>

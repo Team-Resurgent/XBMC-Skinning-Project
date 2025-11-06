@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+  <!-- 31000 to 31009 reseved for home buttons -->
+  <string id="31000">MENY</string>
+  <string id="31001"></string>
+  <string id="31002"></string>
+  <string id="31003"></string>
+  <string id="31004"></string>
+  <string id="31005"></string>
+  <string id="31006"></string>
+  <string id="31007"></string>
+  <string id="31008"></string>
+  <string id="31009"></string>
+  <!-- 31010 to 31019 reseved for home buttons Label 2-->
+  <string id="31010">[B]Spela[/B] spel &amp; emulatorer</string>
+  <string id="31011">[B]Spela upp[/B] filmer,serier &amp; klipp</string>
+  <string id="31012">[B]Lyssna[/B] på musik &amp; cd-skivor</string>
+  <string id="31013">[B]Titta[/B] på bilder &amp; foton</string>
+  <string id="31014">[B]Ändra[/B] inställningar &amp; alternativ</string>
+  <string id="31015">[B]Väder[/B] Väderprognos</string>
+  <string id="31016">[B]Avsluta[/B] stäng av &amp; starta om</string>
+  <string id="31017">[B]Kör[/B] skripts &amp; plugins</string>
+  <string id="31018"></string>
+  <string id="31019"></string>
+
+  <string id="31020">Emulatorer</string>
+  <string id="31021">Videofiler</string>
+  <string id="31022">Musikfiler</string>
+  <string id="31023">Bildfiler</string>
+  <string id="31024">Sida</string>
+  <string id="31025">Objekt</string>
+
+  <string id="31026">Filmsnutt</string>
+  <string id="31027">Episodminiatyr</string>
+  <string id="31028">DVD-miniatyr</string>
+  <string id="31029">DVD-lista</string>
+  <string id="31030">Episodlista</string>
+  <string id="31031">Rotlista</string>
+  <string id="31032">Hela Listan</string>
+  <string id="31033">Bildminiatyr</string>
+  <string id="31034">Breda Ikoner</string>
+
+  <string id="31041">Nuvarande TV-Serie[CR]Fanartbild[CR][CR]Klicka för att ändra</string>
+  <string id="31042">SPELAR UPP</string>
+  <string id="31043">PAUSAD</string>
+  <string id="31044">FRAMÅTSPOLNING</string>
+  <string id="31045">BAKÅTSPOLNING</string>
+  <string id="31046">Välkommen till XBMC - Logga in</string>
+
+  <string id="31050">Bilder</string>
+  <string id="31051">Skript</string>
+  <string id="31052">Program</string>
+
+  <!-- Lyrics Script Extra labels -->
+  <string id="31053">XBMC SÅNGTEXT</string>
+  <string id="31054">Välj låt från listan</string>
+
+  <!-- Playlist Editor labels -->
+  <string id="31055">Öppna Spellista</string>
+  <string id="31056">Spara Spellista</string>
+  <string id="31057">Stäng Spellista</string>
+  <string id="31058">SYSTEM-MUSIKFILER</string>
+  <string id="31059">NUVARANDE SPELLISTA</string>
+  <string id="31060">Filen är Staplad, välj den Del du vill spela upp från.</string>
+  
+  <!-- Skin Settings labels -->
+  <string id="31100">Bakgrundsalternativ</string>
+  <string id="31101">Visa Bakgrundsvideo</string>
+  <string id="31102">Visa Bakgrundsvisualisering</string>
+  <string id="31103">Visa "Pausad" i Bild-slideshow</string>
+  <string id="31104">Radera beskrivningstext Från Hem-menyn</string>
+  <string id="31105">Visa Mediatitel i Bakgrundsscanner</string>
+  <string id="31106">Diverse alternativ</string>
+  <string id="31107">Mediavy-alternativ</string>
+  <string id="31108">Centrera inte texten i vyn "$LOCALIZE[31031]"</string>
+  <string id="31109">Centrera inte texten i vyn "$LOCALIZE[535]"</string>
+
+  <!-- Script Settings labels -->
+  <string id="31200">SKRIPT-INSTÄLLNINGAR</string>
+  <string id="31201">Hem-undermeny alternativ</string>
+  <string id="31202">Aktivera egen menyobjekt</string>
+  <string id="31203">Skriv knappetikett</string>
+  <string id="31204">Skript-sökväg</string>
+  <string id="31205">Visa videoplugin-knappen</string>
+  <string id="31206">Visa musikplugin-knappen</string>
+  <string id="31207">Musik på skärminformationsalternativ</string>
+  <string id="31208">Visa sångtext-knappen i skärminformationen</string>
+
+  <!-- AMT Script Extra labels -->
+  <string id="31300">Visa rollista</string>
+  <string id="31301">Filmlista</string>
+</strings>

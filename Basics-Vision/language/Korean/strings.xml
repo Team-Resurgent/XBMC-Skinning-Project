@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="31001">비쥬얼 옵션</string>
+  <string id="31002">비쥬얼 선택</string>
+  <string id="31003">메뉴</string>
+  <string id="31004">북마크</string>
+  <string id="31005">오디오 옵션</string>
+  <string id="31006">비디오 옵션</string>
+  <string id="31007">음소거</string>
+  <string id="31008">...작업중...</string>
+  <string id="31009">확장 마우스 콘트롤 사용</string>
+  <string id="31010">추가 스킨 테마 다운로드</string>
+  <string id="31011">백그라운드 비쥬얼효과 보기</string>
+  <string id="31012">비디오 백그라운드화면 보기</string>
+  <string id="31013">스킨 버전:</string>
+  <string id="31014">큰 DVD 아이콘 보기 사용</string>
+  <string id="31015">보기:</string>
+  <string id="31016">디스크 재생</string>
+  <string id="31017">완료</string>
+  <string id="31018">재생중</string>
+  <string id="31019">일시정지</string>
+  <string id="31020">빨리 감기</string>
+  <string id="31021">되감기</string>
+  <string id="31022">커버 사용</string>
+  <string id="31023">홈화면에 시간표시</string>
+  <string id="31024">사용자 배경화면 선택</string>
+  <string id="31025">사용자 배경화면 리셋</string>
+  <string id="31026">뮤직 OSD에 가사 스크립트 켜기</string>
+  <string id="31027">가사</string>
+
+<!-- These ones below are not used yet and are for the theme downloader -->
+  <string id="31900">Basics-Vision 테마</string>
+  <string id="31901">Basics-Vision 테마 다운로드</string>
+  <string id="31902">다운로드중인 테마:</string>
+  <string id="31903">테마 설치완료</string>
+  <string id="31904">테마적용위해 설정화면으로 이동</string>
+  <string id="31905">다운로드 취소</string>
+  <string id="31906">설치되어있는 테마입니다</string>
+  <string id="31907">파일교체를 위해 다시 다운로드 하시겠습니까?</string>
+  <string id="31908">새로운 파일을 다운로드 하시겠습니까 ?</string>
+</strings>

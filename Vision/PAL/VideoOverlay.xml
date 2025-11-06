@@ -1,0 +1,6 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<include>Fade_Window_OpenClose_Animation</include>
+	<controls>
+	</controls>
+</window>

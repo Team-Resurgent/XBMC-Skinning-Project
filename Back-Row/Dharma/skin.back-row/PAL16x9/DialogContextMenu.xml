@@ -1,0 +1,69 @@
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>dialog-effect</include>
+	<coordinates>
+		<system>1</system>
+		<origin x="235" y="120">true</origin>
+	</coordinates>
+
+	<controls>
+
+		<control type="image">
+			<description>Profile Background</description>
+			<posx>-235</posx>
+			<posy>-120</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>black.png</texture>
+		</control>
+
+		<control type="image">
+			<description>Profile Background</description>
+			<posx>0</posx>
+			<posy>-53</posy>
+			<width>250</width>
+			<height>450</height>
+			<texture diffuse="mask3.png">background2.png</texture>
+			<colordiffuse>DDFFFFFF</colordiffuse>
+		</control>
+
+		<control type="label">
+			<description>Heading Label</description>
+			<posx>0</posx>
+			<posy>-35</posy>
+			<width>250</width>
+			<align>center</align>
+			<font>special14</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>33061</label>
+		</control>
+
+		<control type="button" id="1000">
+			<description>Button Template</description>
+			<posx>7</posx>
+			<posy>0</posy>
+			<width>236</width>
+			<height>26</height>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<texturefocus>button3.png</texturefocus>
+			<colordiffuse>99ffffff</colordiffuse>
+			<texturenofocus/>
+		</control>
+
+		<control type="image" id="1">
+			<description>Profile Background</description>
+			<posx>0</posx>
+			<posy>-53</posy>
+			<width>250</width>
+			<height>450</height>
+			<texture>mask4.png</texture>
+			<colordiffuse>99FFFFFF</colordiffuse>
+		</control>
+
+	</controls>
+</window>

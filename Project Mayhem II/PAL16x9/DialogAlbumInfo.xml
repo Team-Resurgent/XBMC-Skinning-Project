@@ -1,0 +1,192 @@
+<window id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>dialog-info</include>
+	<type>dialog</type>
+	<controls>
+	<include>background-dialog</include>
+
+	<control type="image" id="1">
+		<description>background image</description>
+		<posx>453</posx>
+		<posy>250</posy>
+		<width>218</width>
+		<height>308</height>
+		<texture>16x9bg-mymusic.png</texture>
+		<include>common-icons</include>
+	</control>
+
+	<control type="label" id="20">
+		<description>Album value</description>
+		<posx>180</posx>
+		<posy>45</posy>
+		<label>-</label>
+		<font>font14</font>
+	</control>
+
+	<control type="label" id="1">
+		<description>Artist</description>
+		<posx>100</posx>
+		<posy>100</posy>
+		<label>$LOCALIZE[557]:</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="1">
+		<description>Date of Release</description>
+		<posx>100</posx>
+		<posy>120</posy>
+		<label>$LOCALIZE[562]:</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="1">
+		<description>Rating</description>
+		<posx>100</posx>
+		<posy>140</posy>
+		<label>$LOCALIZE[563]:</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="1">
+		<description>Genre</description>
+		<posx>100</posx>
+		<posy>160</posy>
+		<label>$LOCALIZE[515]:</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="1">
+		<description>Tones</description>
+		<posx>100</posx>
+		<posy>180</posy>
+		<label>$LOCALIZE[175]:</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="1">
+		<description>Styles</description>
+		<posx>100</posx>
+		<posy>200</posy>
+		<label>$LOCALIZE[176]:</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="21">
+		<description>Artist value</description>
+		<posx>220</posx>
+		<posy>100</posy>
+		<label>-</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="22">
+		<description>Date of Release value</description>
+		<posx>220</posx>
+		<posy>120</posy>
+		<label>-</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="23">
+		<description>Rating value</description>
+		<posx>220</posx>
+		<posy>140</posy>
+		<label>-</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="24">
+		<description>Genre value</description>
+		<posx>220</posx>
+		<posy>160</posy>
+		<label>-</label>
+		<font>font13</font>
+	</control>
+
+	<control type="fadelabel" id="25">
+		<description>Tones value</description>
+		<posx>220</posx>
+		<posy>180</posy>
+		<width>410</width>
+		<label>-</label>
+		<font>font13</font>
+	</control>
+
+	<control type="label" id="26">
+		<description>Styles value</description>
+		<posx>220</posx>
+		<posy>200</posy>
+		<label>-</label>
+		<font>font13</font>
+	</control>
+
+	<control type="image" id="3">
+		<description>start logo</description>
+		<posx>100</posx>
+		<posy>245</posy>
+		<width>107</width>
+		<height>140</height>
+		<texture>-</texture>
+	</control>
+
+	<control type="textbox" id="4">
+		<description>textarea</description>
+		<posx>220</posx>
+		<posy>230</posy>
+		<width>410</width>
+		<height>300</height>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<onup>5</onup>
+		<ondown>5</ondown>
+	</control>
+
+	<control type="group">
+		<control type="button" id="5">
+			<description>Tracks/Review</description>
+			<posx>100</posx>
+			<posy>400</posy>
+			<width>107</width>
+			<label>182</label>
+			<font>font12</font>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>10</onup>
+			<ondown>6</ondown>
+			<align>center</align>
+		</control>
+
+		<control type="button" id="6">
+			<description>Refresh</description>
+			<posx>100</posx>
+			<posy>436</posy>
+			<width>107</width>
+			<label>184</label>
+			<font>font12</font>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>5</onup>
+			<ondown>10</ondown>
+			<align>center</align>
+		</control>
+
+		<control type="button" id="10">
+			<description>Get Thumb</description>
+			<posx>100</posx>
+			<posy>453</posy>
+			<width>107</width>
+			<height>32</height>
+			<label>13405</label>
+			<font>font12</font>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>6</onup>
+			<ondown>5</ondown>
+			<font>font12</font>
+			<align>center</align>
+		</control>
+	</control>
+
+	</controls>
+</window>

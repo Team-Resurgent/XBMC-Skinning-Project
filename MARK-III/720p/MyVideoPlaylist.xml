@@ -1,0 +1,110 @@
+<window id="28">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonVideoBackground</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>NowPlayingView</include>
+			<control type="button" id="9000">
+				<description>Mouse Focus</description>
+				<posx>540</posx>
+				<posy>-2</posy>
+				<height>25</height>
+				<width>200</width>
+				<font>font11</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>grey</textcolor>
+				<texturefocus border="20,0,20,0">top-menu-back.png</texturefocus>
+				<texturenofocus border="20,0,20,0">top-menu-back.png</texturenofocus>
+				<label>31000</label>
+				<onfocus>Setfocus(9001)</onfocus>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<visible allowhiddenfocus="true">system.getbool(lookandfeel.enablemouse)</visible>
+				<animation effect="slide" end="0,36" start="0,0" time="200" condition="Control.IsVisible(58)">Conditional</animation>
+			</control>
+			<control type="group" id="9001">
+				<include>VisibleFadeEffect</include>
+				<animation effect="slide" end="0,-150" start="0,0" time="0" condition="system.getbool(lookandfeel.enablemouse)">Conditional</animation>
+				<visible allowhiddenfocus="!system.getbool(lookandfeel.enablemouse)">Control.HasFocus(9000) | ControlGroup(9001).HasFocus</visible>
+				<posx>465</posx>
+				<posy>152</posy>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>415</height>
+					<texturefocus border="40">MenuBack.png</texturefocus>
+					<texturenofocus border="40">MenuBack.png</texturenofocus>
+					<onfocus>Setfocus(20)</onfocus>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>415</height>
+					<texture border="40">MenuFront.png</texture>
+				</control>
+				<control type="radiobutton" id="20">
+					<description>Shuffle button</description>
+					<posx>40</posx>
+					<posy>50</posy>
+					<include>ButtonCommonValues</include>
+					<label>191</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>22</onup>
+					<ondown>26</ondown>
+				</control>
+				<control type="button" id="26">
+					<description>Repeat button</description>
+					<posx>40</posx>
+					<posy>80</posy>
+					<include>ButtonCommonValues</include>
+					<label>-</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>20</onup>
+					<ondown>21</ondown>
+				</control>
+				<control type="button" id="21">
+					<description>Save button</description>
+					<posx>40</posx>
+					<posy>110</posy>
+					<label>190</label>
+					<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+					<selected>Window.IsVisible(mymusiclibrary)</selected>
+					<include>ButtonCommonValues</include>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>26</onup>
+					<ondown>22</ondown>
+				</control>
+				<control type="button" id="22">
+					<description>Clear button</description>
+					<posx>40</posx>
+					<posy>140</posy>
+					<label>192</label>
+					<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+					<selected>Window.IsVisible(mymusiclibrary)</selected>
+					<include>ButtonCommonValues</include>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>21</onup>
+					<ondown>20</ondown>
+				</control>
+				<control type="image">
+					<posx>35</posx>
+					<posy>315</posy>
+					<width>278</width>
+					<height>65</height>
+					<texture>PM4_Small.png</texture>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

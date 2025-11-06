@@ -1,0 +1,126 @@
+<includes>
+<include name="Common_List">
+	<control type="list" id="50">
+		<viewtype label="535">list</viewtype>
+		<posx>211</posx>
+		<posy>121</posy>
+		<width>450</width>
+		<height>405</height>
+		<onleft>2</onleft>
+		<onright>60</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<pagecontrol>60</pagecontrol>
+		<include>slide-right</include>
+		<itemlayout height="29">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>26</height>
+				<texture>list-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>1</posy>
+				<width>22</width>
+				<height>22</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+			</control>
+			<control type="label">
+				<posx>28</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>FFcbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>440</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="29">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>26</height>
+				<texture>list-focus.png</texture>
+				<visible>Control.HasFocus(50)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>26</height>
+				<texture>list-nofocus.png</texture>
+				<visible>!Control.HasFocus(50)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>1</posy>
+				<width>22</width>
+				<height>22</height>
+				<info>ListItem.Icon</info>
+				<image>DefaultFolderBig.png</image>
+			</control>
+			<control type="label">
+				<posx>28</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>FFffffff</textcolor>
+				<include>selectedcolor</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>440</posx>
+				<posy>2</posy>
+				<width>110</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>90cbcbcb</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+
+	<control type="thumbnailpanel" id="51">
+		<description>thumbnailpanel</description>
+		<onleft>2</onleft>
+		<onright>51</onright>
+		<onup>51</onup>
+		<ondown>51</ondown>
+		<include>slide-right</include>
+	</control>
+	<control type="spincontrol" id="60">
+		<posx>630</posx>
+		<posy>525</posy>
+		<font>font13</font>
+		<subtype>page</subtype>
+		<showonepage>false</showonepage>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<include>slide-right</include>
+	</control>
+</include>
+
+</includes>

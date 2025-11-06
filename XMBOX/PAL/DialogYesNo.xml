@@ -1,0 +1,184 @@
+﻿<window id="100">
+	<defaultcontrol always="true">10</defaultcontrol>
+
+
+
+
+
+	<controls>
+
+
+
+
+		<!-- background 16x9 -->
+		<include>background2</include>
+        <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>720</width>
+            <height>576</height>
+	    <aspectratio>stretch</aspectratio>
+            <texture>popup.png</texture>
+	    <colordiffuse>grey2</colordiffuse>
+	    <include>labelfade</include>
+        </control>
+		<!-- Upper images -->
+
+
+        <control type="image">
+        <posx>0</posx>
+        <posy>90</posy>
+        <width>1000</width>
+	<height>2</height>
+        <texture>bmx-line.png</texture>
+	<include>panelslideup</include>
+        </control>
+
+
+		<!-- Bottom images -->
+        <control type="image">
+			<posx>0</posx>
+			<posy>480</posy>
+			<width>1000</width>
+			<height>2</height>
+			<texture>bmx-line.png</texture>
+	<include>panelslidedown</include>
+        </control>
+
+        <control type="label">
+			<posx>140</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special13</font>
+			<align>left</align>
+			<label>A</label>
+	<include>panelslidedown</include>
+        </control>
+
+
+
+        <control type="label">
+			<posx>160</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special12</font>
+			<align>left</align>
+			<label>Select</label>
+	<include>panelslidedown</include>
+        </control>
+
+        <control type="label">
+			<posx>510</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special13</font>
+			<align>left</align>
+			<label>B</label>
+	<include>panelslidedown</include>
+        </control>
+        <control type="label">
+			<posx>530</posx>
+			<posy>503</posy>
+			<width>240</width>
+			<height>40</height>
+			<font>special12</font>
+			<align>left</align>
+			<label>Cancel</label>
+	<include>panelslidedown</include>
+        </control>
+
+
+
+
+
+
+
+
+
+
+
+		<control type="image" id="0">
+			<posx>20</posx>
+			<posy>45</posy>
+			<width>35</width>
+			<height>50</height>
+			<texture>bmx-settings-sub-glow.png</texture> 
+	<include>panelslideup</include> 
+		</control>
+		<control type="label" id="1">
+			<description>dialog Heading</description>
+			<posx>50</posx>
+			<posy>60</posy>
+			<label>-</label>
+			<font>special13</font>
+	<include>panelslideup</include>
+		</control>
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<posx>190</posx>
+			<posy>210</posy>
+			<width>360</width>
+			<align>center</align>
+			<label>-</label>
+			<font>font13</font>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posx>190</posx>
+			<posy>230</posy>
+			<width>360</width>
+			<align>center</align>
+			<label>-</label>
+			<font>font13</font>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posx>190</posx>
+			<posy>250</posy>
+			<width>360</width>
+			<align>center</align>
+			<label>-</label>
+			<font>font13</font>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="button" id="10">
+			<description>No button</description>
+			<posx>372</posx>
+			<posy>330</posy>
+			<width>90</width>
+			<height>32</height>
+			<label>106</label>
+			<font>special13</font>
+			<align>center</align>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>bmx-keyboard-btn-focus.png</texturefocus>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<include>settingpanelslide</include>
+		</control>
+		<control type="button" id="11">
+			<description>Yes button</description>
+			<posx>278</posx>
+			<posy>330</posy>
+			<width>90</width>
+			<height>32</height>
+			<label>107</label>
+			<font>special13</font>
+			<align>center</align>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>bmx-keyboard-btn-focus.png</texturefocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<include>settingpanelslide</include>
+		</control>
+	</controls>
+</window>

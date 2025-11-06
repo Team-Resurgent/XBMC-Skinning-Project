@@ -1,0 +1,86 @@
+1171
+added: initial 720p build and files
+
+1168
+added: XBMCTex.exe file added to make it easier on those doing SVN builds
+
+1167
+added: MOVIES 3 view mode into smart list on menu (Movies - Combined)
+fixed: couple menu bugs fixed
+
+1166
+Minor tweaks and fixes to layout positioning in PAL TV views
+
+1165
+fixed: Hopefully fixed nasty bug with pop up menu and default PM3 views
+changed: streamlined menu includes
+
+1164
+added: MOVIES 3 view added for PAL
+changed: minor fixes and tweaks
+changed: moved cascading menu out to include
+
+1163
+changed: minor graphics tweaks
+added: new menu graphics
+
+1162
+started moving cascading menu over to includes
+
+1160
+added: new movies view for NTSC
+changed: started moving code around to pull cascading menu system into its own file
+
+1159
+changed: scrollbar update
+
+1154
+ALPHA 4 Release
+
+1153
+All native PAL windows now use the new graphics
+fixed: screwed up watched overlay in NTSC and PAL
+fixed: navigation bug with cascading menu when in view menu, auto select, with episodes present
+changed: changed most text to be standard case rather than upper case
+
+1145
+fixed: movie plot boxes now work with dynamic font changer
+
+1144
+more work on NTSC native windows -- all windows should be in NTSC now with new graphics layout
+added: new cascading menu system
+added: dynamic font changin for plot boxes
+added: smart view mode system
+
+1143
+first pass at NTSC native windows
+new graphics upgrade -- curreently NTSC only
+
+1139
+added: changelog.txt
+fixed: PAL fonts are now correct
+changed: fonts to only include the used font types
+changed: tightened up the menu wraplist on HOME screen
+
+1138
+changed: modified home wraplist to be more smooth with backgrounds
+
+1137
+cleaned up Home.xml's wraplist code a bit
+
+1135
+added: weather overview added to home screen
+fixed: some errors in build.bat
+tweaked: README to be a bit more clear in areas
+
+1134
+tweaked: MOVIES view to feel less crowded
+fixed: MOVIES and MOVIES 2 views to scroll longer titles until wrapping is fixed in xbmc
+added: weather overview added to home screen
+
+1133
+fixed: added missing gfx for home screen
+
+1127
+fixed skin.xml to actually be my skin
+

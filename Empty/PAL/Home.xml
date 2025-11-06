@@ -1,0 +1,114 @@
+<window id="0">
+<defaultcontrol always="true">300</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+  
+	<control type="label">
+		<include>WindowID</include>
+    <label>Home.xml</label>
+	</control>
+  
+	<control type="wraplist" id="300">
+		<description>Home Wraplist</description>
+		<posx>0</posx>
+		<posy>50</posy>
+		<width>720</width>
+		<height>500</height>
+		<visible>-</visible>
+    <onup>300</onup>
+    <ondown>300</ondown>
+		<onleft>300</onleft>
+		<onright>300</onright>
+    <focusposition>5</focusposition>
+		<scrolltime>200</scrolltime>
+		<itemlayout height="50">
+			<control type="label">
+				<posx>360</posx>
+				<width>250</width>
+				<info>ListItem.Label</info>
+				<textcolor>White</textcolor>
+        <scroll>false</scroll>
+        <align>center</align>
+			</control>
+		</itemlayout>
+		<focusedlayout height="50">
+			<control type="label">
+				<posx>360</posx>
+				<width>250</width>
+				<info>ListItem.Label</info>
+				<font>Large</font>
+				<textcolor>White</textcolor>
+        <align>center</align>
+			</control>
+		</focusedlayout>
+      <content>
+		    <item id="1">
+			    <description>Videos</description>
+			    <label>$LOCALIZE[3]</label>
+			    <onclick>xbmc.activatewindow(6)</onclick>
+		    </item>
+		    <item id="2">
+			    <description>Music</description>
+          <label>$LOCALIZE[2]</label>
+			    <onclick>xbmc.activatewindow(5)</onclick>
+		    </item>
+		    <item id="3">
+			    <description>Pictures</description>
+          <label>$LOCALIZE[1]</label>
+			    <onclick>xbmc.activatewindow(2)</onclick>
+		    </item>
+		    <item id="4">
+			    <description>Programs</description>
+          <label>$LOCALIZE[0]</label>
+			    <onclick>xbmc.activatewindow(1)</onclick>
+		    </item>
+		    <item id="5">
+			    <description>Favourites</description>
+          <label>$LOCALIZE[1036]</label>
+			    <onclick>xbmc.activatewindow(favourites)</onclick>
+		    </item>
+		    <item id="8">
+			    <description>Scripts</description>
+          <label>$LOCALIZE[247]</label>
+			    <onclick>xbmc.activatewindow(Scripts)</onclick>
+		    </item>
+		    <item id="6">
+			    <description>Weather</description>
+          <label>$LOCALIZE[8]</label>
+			    <onclick>xbmc.activatewindow(2600)</onclick>
+			    <visible>System.HasNetwork</visible>
+		    </item>
+		    <item id="7">
+			    <description>Files</description>
+          <label>$LOCALIZE[7]</label>
+			    <onclick>xbmc.activatewindow(3)</onclick>
+		    </item>
+		    <item id="9">
+			    <description>Settings</description>
+          <label>$LOCALIZE[5]</label>
+			    <onclick>xbmc.activatewindow(settings)</onclick>
+		    </item>
+		    <item id="10">
+			    <description>Refresh</description>
+          <label>$LOCALIZE[184]</label>
+			    <onclick>XBMC.ReloadSkin()</onclick>
+		    </item>
+		  </content>
+	</control>
+  
+	<control type="rss">
+		<description>RSS Feed</description>
+		<posx>0</posx>
+		<posy>545</posy>
+		<width>720</width>
+		<font>Small</font>
+		<urlset>1</urlset>
+		<titlecolor>Red</titlecolor>
+		<headlinecolor>White</headlinecolor>
+		<textcolor>White</textcolor>
+	</control>
+  
+</controls>
+  
+</window>

@@ -1,0 +1,188 @@
+<window id="29">
+
+  <defaultcontrol always="true">52</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <coordinates>
+   <system>1</system>
+   <posx>0</posx>
+   <posy>0</posy>
+ </coordinates>
+ <visible>!Window.IsActive(130)</visible>
+ <controls>
+
+  <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <animation effect="fade" time="200">WindowOpen</animation>
+      <animation effect="fade" time="200">WindowClose</animation>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <animation effect="fade" time="200">WindowOpen</animation>
+      <animation effect="fade" time="200">WindowClose</animation>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+
+ <control type="label" id="0">
+	<description>Date label</description>
+	<posx>582</posx>
+	<posy>75</posy>
+	<label>date</label>
+	<info>System.Date</info>
+	<align>right</align>
+	<font>font12</font>
+	<visible>![Player.HasAudio + System.IdleTime(60)]</visible>
+ </control>
+
+ <control type="label" id="1">
+	<description>Suffix label</description>
+	<posx>592</posx>
+	<posy>73</posy>
+	<label>|</label>
+	<align>left</align>
+	<font>font12</font>
+	<visible>![Player.HasAudio + System.IdleTime(60)]</visible>
+ </control>
+
+ <control type="label" id="0">
+	<description>Time label</description>
+	<posx>602</posx>
+	<posy>75</posy>
+	<label>time</label>
+	<info>System.Time</info>
+	<align>left</align>
+	<font>font12</font>
+	<visible>![Player.HasAudio + System.IdleTime(60)]</visible>
+ </control>
+
+
+
+
+  <control type="label" id="1">
+   <description>Login label</description>
+   <posx>207</posx>
+   <posy>63</posy>
+   <align>left</align>
+   <include>19012</include>
+   <font>font14</font>
+      <animation effect="fade" time="200">WindowOpen</animation>
+      <animation effect="fade" time="200">WindowClose</animation>
+  </control>
+
+    <control type="label" id="2">
+      <description>Heading Label</description>
+      <posx>165</posx>
+      <posy>148</posy>
+      <width>420</width>
+      <align>left</align>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>DDced8da</textcolor>
+      <animation effect="fade" time="200">WindowOpen</animation>
+      <animation effect="fade" time="200">WindowClose</animation>
+    </control>
+
+    <control type="label" id="3">
+      <description>Profile Amount Label</description>
+      <posx>565</posx>
+      <posy>148</posy>
+      <width>420</width>
+      <align>right</align>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>DDced8da</textcolor>
+      <animation effect="fade" time="200">WindowOpen</animation>
+      <animation effect="fade" time="200">WindowClose</animation>
+    </control>
+
+    <control type="listcontrol" id="52">
+      <description>big listcontrol</description>
+      <posx>165</posx>
+      <posy>180</posy>
+      <width>400</width>
+      <height>300</height>
+      <spinwidth>16</spinwidth>
+      <spinheight>16</spinheight>
+      <spincolor>ffffffff</spincolor>
+      <spinfont>font10</spinfont>
+      <spinposx>365</spinposx>
+      <spinposy>265</spinposy>
+      <textureup>scroll-up.png</textureup>
+      <texturedown>scroll-down.png</texturedown>
+      <textureupfocus>scroll-up-focus.png</textureupfocus>
+      <texturedownfocus>scroll-down-focus.png</texturedownfocus>
+      <texturefocus>list-focus.png</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <font>font13</font>
+      <font2>font13</font2>
+      <include>textcolorlightgrey</include>
+      <selectedcolor2>FFFFffff</selectedcolor2>
+      <textcolor2>d0ffffff</textcolor2>
+      <suffix>|</suffix>
+      <textxoff>10</textxoff>
+      <textyoff>5</textyoff>
+      <textxoff2>390</textxoff2>
+      <textyoff2>50</textyoff2>
+      <aligny>top</aligny>
+      <itemwidth>70</itemwidth>
+      <itemheight>70</itemheight>
+      <spacebetweenitems>10</spacebetweenitems>
+      <textureheight>80</textureheight>
+      <onleft>98</onleft>
+      <onright>98</onright>
+      <onup>52</onup>
+      <ondown>52</ondown>
+      <animation effect="fade" time="200">WindowOpen</animation>
+      <animation effect="fade" time="200">WindowClose</animation>
+    </control>
+
+    <control type="button" id="98">
+     <description>submenu button</description>
+     <posx>610</posx>
+     <posy>503</posy>
+     <width>35</width>
+     <height>35</height>
+     <onclick>ActivateWindow(ShutdownMenu)</onclick>
+     <texturefocus>shutdown-focus.png</texturefocus>
+     <texturenofocus>shutdown-nofocus.png</texturenofocus>
+     <label>-</label>
+     <onleft>52</onleft>
+     <onright>52</onright>
+     <onup>52</onup>
+     <ondown>52</ondown>
+  </control>
+
+   <control type="image" id="0">
+     <description>bg preview</description> 
+     <posx>0</posx> 
+     <posy>0</posy> 
+     <width>720</width> 
+     <height>576</height> 
+     <texture>background.png</texture>
+     <visible>!Skin.HasSetting(animated) + !Window.Previous(9999)</visible>
+     <animation effect="fade" start="0" end="0" time="1">VisibleChange</animation>
+     <animation effect="fade" start="100" end="0" time="500" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+     <animation effect="fade" start="0" end="100" time="300" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+   </control> 
+
+  </controls>
+</window>

@@ -1,0 +1,243 @@
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>23</posx>
+		<posy>64</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>-5</posy>
+			<width>675</width>
+			<height>469</height>
+			<texture border="0,45,0,10">Dialog.png</texture>
+		</control>
+		<control type="label" id="411">
+			<description>Heading label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<font>font16</font>
+			<label>1023</label>
+			<textcolor>red</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label" id="412">
+			<description>path label control</description>
+			<posx>0</posx>
+			<posy>44</posy>
+			<width>675</width>
+			<height>32</height>
+			<align>center</align>
+			<font>font13</font>
+			<haspath>true</haspath>
+		</control>
+		<control type="list" id="450">
+			<posx>107</posx>
+			<posy>80</posy>
+			<width>321</width>
+			<height>360</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="40">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>321</width>
+					<height>36</height>
+					<texture>dialog-button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>8</posx>
+					<posy>4</posy>
+					<width>20</width>
+					<height>28</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>37</posx>
+					<posy>4</posy>
+					<width>281</width>
+					<height>28</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>321</width>
+					<height>36</height>
+					<visible>!Control.HasFocus(450)</visible>
+					<texture>dialog-button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>321</width>
+					<height>36</height>
+					<visible>Control.HasFocus(450)</visible>
+					<texture border="10,0,10,0">folder-focus2.png</texture>
+				</control>
+				<control type="image">
+					<posx>8</posx>
+					<posy>4</posy>
+					<width>20</width>
+					<height>28</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>37</posx>
+					<posy>4</posy>
+					<width>281</width>
+					<height>28</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>red</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="panel" id="451">
+			<posx>107</posx>
+			<posy>80</posy>
+			<width>321</width>
+			<height>360</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>451</onup>
+			<ondown>451</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">icon</viewtype>
+			<pagecontrol>-</pagecontrol>
+			<orientation>vertical</orientation>
+			<itemlayout height="120" width="107">
+				<control type="image">
+					<posx>3</posx>
+					<posy>3</posy>
+					<width>101</width>
+					<height>82</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>53</posx>
+					<posy>92</posy>
+					<width>97</width>
+					<height>18</height>
+					<font>font12</font>
+					<selectedcolor>red</selectedcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="120" width="107">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>107</width>
+					<height>88</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="4">folder-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<posx>-6</posx>
+					<posy>92</posy>
+					<width>119</width>
+					<height>24</height>
+					<visible>Control.HasFocus(451)</visible>
+					<texture>folder-focus2.png</texture>
+				</control>
+				<control type="label">
+					<posx>53</posx>
+					<posy>92</posy>
+					<width>97</width>
+					<height>18</height>
+					<font>font12</font>
+					<selectedcolor>red</selectedcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group" id="9000">
+			<control type="button" id="413">
+				<description>OK button</description>
+				<posx>428</posx>
+				<posy>80</posy>
+				<width>141</width>
+				<height>36</height>
+				<align>center</align>
+				<label>186</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>450</onleft>
+				<onright>414</onright>
+				<onup>415</onup>
+				<ondown>414</ondown>
+			</control>
+			<control type="button" id="414">
+				<description>Cancel button</description>
+				<posx>428</posx>
+				<posy>120</posy>
+				<width>141</width>
+				<height>36</height>
+				<align>center</align>
+				<label>222</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>450</onleft>
+				<onright>415</onright>
+				<onup>413</onup>
+				<ondown>415</ondown>
+			</control>
+			<control type="button" id="415">
+				<description>Create folder button</description>
+				<posx>428</posx>
+				<posy>160</posy>
+				<width>141</width>
+				<height>36</height>
+				<align>center</align>
+				<label>119</label>
+				<texturefocus>folder-focus2.png</texturefocus>
+				<texturenofocus>dialog-button-nofocus.png</texturenofocus>
+				<onleft>450</onleft>
+				<onright>413</onright>
+				<onup>414</onup>
+				<ondown>413</ondown>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>428</posx>
+				<posy>200</posy>
+				<width>141</width>
+				<height>240</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture border="0,10,0,10">dialog-button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<description>Current Icon image</description>
+				<posx>430</posx>
+				<posy>204</posy>
+				<width>135</width>
+				<height>232</height>
+				<aspectratio>keep</aspectratio>
+				<info>ListItem.Icon</info>
+			</control>
+		</control>
+	</controls>
+</window>

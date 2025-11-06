@@ -1,0 +1,87 @@
+<window id="101">
+	<defaultcontrol>10</defaultcontrol>
+	<include>dialog-effect</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Background</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>black.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+	</control>
+
+	<control type="image" id="0">
+		<posx>147</posx>
+		<posy>225</posy>
+		<width>436</width>
+		<height>190</height>
+		<texture>dialog-popup-progress.png</texture>
+	</control>
+
+	<control type="label" id="1">
+		<description>dialog Heading</description>
+		<posx>190</posx>
+		<posy>226</posy>
+		<label>0</label>
+		<font>font13</font>
+		<textcolor>FFB2D4F5</textcolor>
+	</control>
+
+	<control type="label" id="2">
+		<description>dialog line 1</description>
+		<posx>190</posx>
+		<posy>260</posy>
+		<haspath>yes</haspath>
+		<label>0</label>
+		<font>font10</font>
+		<textcolor>FF000000</textcolor>
+	</control>
+
+	<control type="label" id="3">
+		<description>dialog line 2</description>
+		<posx>190</posx>
+		<posy>280</posy>
+		<haspath>yes</haspath>
+		<label>0</label>
+		<font>font10</font>
+		<textcolor>FF000000</textcolor>
+	</control>
+
+	<control type="label" id="4">
+		<description>dialog line 3</description>
+		<posx>190</posx>
+		<posy>300</posy>
+		<haspath>yes</haspath>
+		<label>0</label>
+		<font>font10</font>
+		<textcolor>FF000000</textcolor>
+	</control>
+
+	<control type="progress" id="20">
+		<description>progress control</description>
+		<posx>190</posx>
+		<posy>333</posy>
+		<visible>no</visible>
+	</control>
+
+	<control type="button" id="10">
+		<description>Cancel button</description>
+		<posx>493</posx>
+		<posy>335</posy>
+		<width>77</width>
+		<height>32</height>
+		<texturefocus>list-focus.png</texturefocus>
+		<label>222</label>
+		<font>font10</font>
+		<onleft>10</onleft>
+		<align>center</align>
+		<onright>10</onright>
+		<onup>10</onup>
+		<ondown>10</ondown>
+	</control>
+
+	</controls>
+</window>

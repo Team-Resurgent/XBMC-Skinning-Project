@@ -1,0 +1,45 @@
+﻿<window id="120">
+  <defaultcontrol>2</defaultcontrol>
+
+  <controls>
+
+    <control type="group">
+      <control type="button" id="90">
+        <description>Click for Lyrics</description>
+        <include condition="!Skin.HasSetting(ShowHorizMusicVis)">MusicVisLyricsButton</include>
+        <include condition="Skin.HasSetting(ShowHorizMusicVis)">MusicVisBottomLyricsButton</include>
+      </control>
+
+      <control type="group">
+        <visible>!Window.IsActive(400)</visible>
+        <include>MusicVisControls</include>
+      </control>
+
+      <control type="image" id="1">
+        <posx>935</posx>
+        <posy>578</posy>
+        <width>16</width>
+        <height>16</height>
+        <animation effect="rotate" center="935,578" start="-90" end="-90" time="0" condition="true">Conditional</animation>
+        <texture>ArrowDownFO.png</texture>
+        <visible>Skin.HasSetting(ShowHorizMusicVis) + Control.HasFocus(503)</visible>
+      </control>
+      <control type="image" id="1">
+        <posx>1250</posx>
+        <posy>578</posy>
+        <width>16</width>
+        <height>16</height>
+        <animation effect="rotate" center="1250,578" start="-90" end="-90" time="0" condition="true">Conditional</animation>
+        <texture>ArrowUpFO.png</texture>
+        <visible>Skin.HasSetting(ShowHorizMusicVis) + Control.HasFocus(503)</visible>
+      </control>
+
+      <control type="selectbutton" id="503">
+        <description>Visualisation Select Button</description>
+        <include condition="!Skin.HasSetting(ShowHorizMusicVis)">MusicVisSelectBtn</include>
+        <include condition="Skin.HasSetting(ShowHorizMusicVis)">MusicBottomVisSelectBtn</include>
+      </control>
+    </control>
+
+  </controls>
+</window>

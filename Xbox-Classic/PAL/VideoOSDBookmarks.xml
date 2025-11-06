@@ -1,0 +1,134 @@
+<window id="125">
+	<defaultcontrol>2</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>20</posx>
+		<posy>60</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>Dialog Header</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>315</width>
+			<height>180</height>
+			<texture>dialog_top.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>Dialog Text Area</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>450</width>
+			<height>390</height>
+			<texture>dialog_middle.png</texture>
+			<colordiffuse>BBFFFFFF</colordiffuse>
+		</control>
+		<control type="label" id="0">
+			<description>Settings Label</description>
+			<posx>70</posx>
+			<posy>45</posy>
+			<width>420</width>
+			<label>13398</label>
+			<font>font14</font>
+			<textcolor>yellow</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="button" id="2">
+			<description>Create Bookmark button</description>
+			<posx>60</posx>
+			<posy>385</posy>
+			<width>197</width>
+			<height>31</height>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<align>center</align>
+			<label>294</label>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<ondown>11</ondown>
+			<onup>11</onup>
+		</control>
+		<control type="button" id="3">
+			<description>Clear Bookmarks button</description>
+			<posx>275</posx>
+			<posy>385</posy>
+			<width>197</width>
+			<height>31</height>
+			<font>font12</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<label>296</label>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<ondown>11</ondown>
+			<onup>11</onup>
+		</control>
+		<control type="panel" id="11">
+			<posx>55</posx>
+			<posy>70</posy>
+			<width>430</width>
+			<height>310</height>
+			<onleft>2</onleft>
+			<onright>3</onright>
+			<ondown>2</ondown>
+			<onup>2</onup>
+			<viewtype label="536">icon</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<itemlayout height="150" width="140">
+				<control type="image">
+					<width>140</width>
+					<height>120</height>
+					<posx>5</posx>
+					<posy>5</posy>
+					<texture>folder-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>130</width>
+					<height>110</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>125</posy>
+					<width>140</width>
+					<height>22</height>
+					<font>font13</font>
+					<selectedcolor>green</selectedcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout  height="150" width="140">
+				<control type="image">
+					<width>140</width>
+					<height>120</height>
+					<posx>5</posx>
+					<posy>5</posy>
+					<texture>folder-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>130</width>
+					<height>110</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>125</posy>
+					<width>140</width>
+					<height>22</height>
+					<font>font13</font>
+					<selectedcolor>green</selectedcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

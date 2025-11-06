@@ -1,0 +1,11 @@
+[B]Version 8.0.2[/B]
+- Added set my rating functionality to video info dialog
+
+[B]Version 8.0.1[/B]
+- Removed more windows required by Jarvis
+- Added a HEVC video flagging icon borrowed from the Kodi forum's neurosis13 - thanks and I hope you don't mind! 
+- Fixed the time label in menu screens
+- Fixed the auto update button in addon settings
+
+[B]Version 8.0.0[/B]
+- First Jarvis Build

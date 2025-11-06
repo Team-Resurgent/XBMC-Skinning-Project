@@ -1,0 +1,58 @@
+<window>
+	<defaultcontrol always="true">1</defaultcontrol>
+	<controls>
+
+	<control type="button" id="1">
+		<description>ReplaceWindow Trigger</description>
+		<posx>35</posx>
+		<posy>235</posy>
+		<font>special15</font>
+		<onfocus>ReplaceWindow(Home)</onfocus>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<animation effect="fade" time="1000">Focus</animation>
+	</control>
+	<control type="multiimage">
+		<description>Background Animation</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>Animation</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+		<include>common-effect</include>
+		<visible>Skin.HasSetting(Animation)</visible>
+	</control>
+	<control type="multiimage">
+		<description>Default Background</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(Custom-Background)</info>
+		<colordiffuse>90ffffff</colordiffuse>
+		<visible>!Skin.HasSetting(Custom-Background)</visible> 
+	</control>
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<imagepath>-</imagepath>
+		<info>Skin.String(Custom-Background-Folder)</info>
+		<colordiffuse>90ffffff</colordiffuse>
+		<visible>!Skin.HasSetting(Custom-Background-Folder)</visible> 
+	</control>
+
+	</controls>
+</window>

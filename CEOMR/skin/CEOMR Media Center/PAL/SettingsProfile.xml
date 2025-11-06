@@ -1,0 +1,224 @@
+<window id="34">
+
+  <defaultcontrol always="true">2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+  <controls>
+
+     <control type="image" id="1">
+      <description>background image</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+      <visible>!Skin.HasSetting(hintergrund)</visible>
+    </control>
+
+     <control type="image" id="1">
+      <description>background self</description>
+        <posx>0</posx>
+        <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(hintergrund)</visible>
+      <info>Skin.String(hintergrund)</info>
+    </control>
+
+    <control type="image" id="1">
+      <description>applications logo</description>
+      <include>xbmcinfo</include>
+      <posx>585</posx>
+      <posy>33</posy>
+      <height>90</height>
+      <width>90</width>
+      <texture>gearssmall.png</texture>
+      
+    </control>
+
+    <control type="image" id="1">
+      <description>start logo</description>
+      <include>xbmclogo</include>
+    </control>
+
+    <control type="label" id="1">
+      <description>Settings text label</description>
+      <include>logo</include>
+      <align>right</align> <posx>660</posx> <posy>85</posy>
+      <label>13200</label>
+      <font>font14</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="fadelabel" id="3">
+      <description>Last loaded</description>
+      <include>logo</include>
+      <posx>210</posx>
+      <posy>525</posy>
+      <width>656</width>
+      <label>$LOCALIZE[13204] $INFO[system.profilename]</label>
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+<control type="group" id="9000">
+
+      <control type="button" id="6">
+        <description>profil</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>120</posy>
+		<width>140</width>
+		<height>33</height>
+        <label>13200</label>
+      <texturenofocus>button-nofocus_green.png</texturenofocus>
+        <onleft>2</onleft>
+        <onright>2</onright>
+        <onup>4</onup>
+        <ondown>5</ondown>
+      </control>
+
+      <control type="button" id="5">
+        <description>profil settings</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>157</posy>
+		<width>140</width>
+		<height>33</height>
+        <label>5</label>
+        <onclick>XBMC.ActivateWindow(1057)</onclick>
+        <onleft>2</onleft>
+        <onright>2</onright>
+        <onup>6</onup>
+        <ondown>4</ondown>
+      </control>
+
+      <control type="radiobutton" id="4">
+        <description>enable login screen</description>
+      <include>button</include>
+        <posx>60</posx>
+        <posy>194</posy>
+		<width>140</width>
+		<height>33</height>
+        <label>20096</label>
+        <onleft>2</onleft>
+        <onright>2</onright>
+        <onup>5</onup>
+        <ondown>6</ondown>
+      </control>
+
+</control>
+
+
+    <control type="listcontrol" id="2">
+      <description>listcontrol</description>
+      <onleft>6</onleft>
+      <onright>6</onright>
+			<posx>215</posx>
+			<posy>120</posy>
+			<width>455</width>
+			<height>375</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="$LOCALIZE[535] 2">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="27">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>unknown-user.png</texture>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>440</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>475</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>FFB2D4F5</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="75">
+				<control type="image">
+					<width>485</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(2)</visible>
+					<texture border="0,0,0,5">list-focus.png</texture>
+				</control>
+				<control type="image">
+					<width>485</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>!Control.HasFocus(2)</visible>
+					<texture border="0,0,0,5">list-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>4</posx>
+					<posy>5</posy>
+					<width>66</width>
+					<height>65</height>
+					<texture>unknown-user.png</texture>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>70</posx>
+					<posy>40</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>7</posy>
+					<width>400</width>
+					<height>16</height>
+					<font>special13</font>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>ffffffff</textcolor>
+					<scroll>true</scroll>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>475</posx>
+					<posy>56</posy>
+					<width>350</width>
+					<height>16</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<selectedcolor>FFD2FF00</selectedcolor>
+					<textcolor>FFB2D4F5</textcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<include>AllViewCommonPageControls</include>
+  </controls>
+
+</window>

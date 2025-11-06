@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+<!-- Start Home Labels -->
+	<string id="31001">음악</string>
+	<string id="31002">프로그램</string>
+	<string id="31003">비디오</string>
+	<string id="31004">사진</string>
+	<string id="31005">설정</string>
+<!-- End Home Labels -->
+
+<!-- Start Music Labels -->
+	<string id="31006">모든 음악</string>
+	<string id="31007">선호순</string>
+<!-- End Music Labels -->
+
+<!-- Start Shutdown Labels -->
+	<string id="31008">잠금 모드</string>
+	<string id="31009">텍스쳐 칼라</string>
+	<string id="31010">폰트 칼라</string>
+	<string id="31011">XBOX 재시작</string>
+	<string id="31012">XBMC 재시작</string>
+	<string id="31013">즐겨찾기</string>
+<!-- End Shutdown Labels -->
+
+<!-- Start Settings Labels -->
+	<string id="31014">바탕화면 옵션</string>
+	<string id="31015">바탕화면 사용</string>
+	<string id="31016">사용자 바탕화면 선택</string>
+	<string id="31017">사용자 바탕화면 리셋</string>
+	<string id="31018">배경시각효과 폴더 선택</string>
+	<string id="31019">배경시각효과 리셋</string>
+	<string id="31020">홈화면에 RSS 피딩 사용</string>
+	<string id="31021">정보</string>
+	<string id="31022">미디어</string>
+	<string id="31023">시스템</string>
+	<string id="31024">스킨</string>
+	<string id="31025">바탕화면</string>
+	<string id="31026">전원</string>
+	<string id="31027">파일 탐색기</string>
+	<string id="31028">스크립트</string>
+	<string id="31029">기상정보</string>
+	<string id="31030">게임 세이브</string>
+	<string id="31031">재생유무 오버레이 표시</string>
+	<string id="31032">미디어 오버레이 끄기</string>
+	<string id="31033">홈아이콘 시각효과 끄기</string>
+	<string id="31034">시작과 동시에 재생목록 사용</string>
+	<string id="31035">시간초과시 홈버튼으로 복귀</string>
+	<string id="31036">와이드 아이콘 레이블 사용</string>
+	<string id="31037">재생목록 선택</string>
+	<string id="31038">홈 윈도우</string>
+	<string id="31039">홈버튼의 레이블 끄기</string>
+	<string id="31040">랩뷰 레이블 켜기</string>
+	<string id="31041">Containment 시작로고 사용</string>
+	<string id="31042">Containment 테마 다운로드</string>
+<!-- End Settings Labels -->
+
+<!-- Misc. Labels -->
+	<string id="31043">라이브러리 입력</string>
+	<string id="31044">라이브러리 나가기</string>
+	<string id="31045">음소거</string>
+<!-- End Misc. Labels-->
+
+<!-- Start Script Labels -->
+	<string id="31046">영화 예고편</string>
+	<string id="31047">Containment 테마</string>
+	<string id="31048">테마 설치됨</string>
+	<string id="31049">테마가 이미 있음</string>
+	<string id="31050">테마가 없음</string>
+	<string id="31051">테마 다운로드중:</string>
+	<string id="31052">다운로드 완료</string>
+	<string id="31053">다운로드 취소됨</string>
+	<string id="31054">다운로드 중지됨</string>
+	<string id="31055">모양새 설정으로 가서 테마를 설정하세요</string>
+	<string id="31056">서버로부터 테마 다운로드를 실패함</string>
+	<string id="31057">서버에 연결할 수 없음</string>
+	<string id="31058">네트웍 연결을 확인하고 재시도 하세요</string>
+<!-- End Script Labels -->
+
+</strings>

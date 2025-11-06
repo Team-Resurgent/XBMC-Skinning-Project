@@ -1,0 +1,289 @@
+<window>
+  <id>0</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>576</height>
+      <texture>background.png</texture>
+    </control>  
+   
+<control>
+      <description>xbmc logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>110</posY>
+      <width>720</width>
+      <height>32</height>
+
+      <texture>button-nofocus.png</texture>
+      
+    </control>
+
+
+<control>
+      <description>xbmc logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>45</posX>
+      <posY>30</posY>
+      <width>225</width>
+      <height>150</height>
+
+      <texture>xbmclogo.png</texture>
+      
+    </control>
+
+    
+    <control>
+      <type>image</type>
+      <id>108</id>
+      <posX>350</posX>
+      <posY>130</posY>
+      <width>294</width>
+      <height>372</height>      
+      <texture>home-myprograms.png</texture>
+    </control>
+    <control>
+      <type>image</type>
+      <id>103</id>
+      <posX>350</posX>
+      <posY>130</posY>
+      <width>294</width>
+      <height>372</height>      
+      <texture>home-mymusic.png</texture>
+    </control>
+    <control>
+      <type>image</type>
+      <id>104</id>
+      <posX>350</posX>
+      <posY>130</posY>
+      <width>294</width>
+      <height>372</height>      
+      <texture>home-mypictures.png</texture>
+    </control>
+    <control>
+      <type>image</type>
+      <id>102</id>
+      <posX>350</posX>
+      <posY>130</posY>
+      <width>294</width>
+      <height>372</height>      
+      <texture>home-videos.png</texture>
+    </control>
+    <control>
+      <type>image</type>
+      <id>106</id>
+      <posX>350</posX>
+      <posY>130</posY>
+      <width>294</width>
+      <height>415</height>      
+      <texture>home-myfiles.png</texture>
+    </control>
+  
+    <control>
+      <type>image</type>
+      <id>105</id>
+      <posX>350</posX>
+      <posY>130</posY>
+      <width>294</width>
+      <height>372</height>      
+      <texture>home-myweather.png</texture>
+    </control>
+ <control>
+      <type>image</type>
+      <id>109</id>
+      <posX>350</posX>
+      <posY>130</posY>
+      <width>294</width>
+      <height>372</height>      
+      <texture>home-settings.png</texture>
+    </control>
+
+    <control>
+      <description>date</description>
+      <type>label</type>
+      <id>200</id>
+      <posX>660</posX>
+      <posY>115</posY>
+      <label>date</label>
+      <align>right</align>
+      <font>font13</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>time</description>
+      <type>label</type>
+      <id>201</id>
+      <posX>660</posX>
+      <posY>85</posY>
+      <label>time</label>
+      <align>right</align>
+      <font>font16</font>
+      <textcolor>FF206880</textcolor>
+    </control> 
+    <control>
+      <description>My Videos normal push button</description>
+      <type>button</type>
+      <id>2</id>
+      <posX>100</posX>
+      <posY>220</posY>
+      <width>216</width>
+      <height>32</height>
+      <label>3</label>   
+      <font>font16</font>
+      <hyperlink>6</hyperlink>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>9</onup>
+      <ondown>3</ondown>
+    </control>
+    <control>
+      <description>My Music normal push button</description>
+      <type>button</type>
+      <id>3</id>
+      <posX>100</posX>
+      <posY>255</posY>
+      <width>206</width>
+      <height>32</height>
+      <label>2</label>
+      <hyperlink>501</hyperlink>
+      <font>font16</font>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>2</onup>
+      <ondown>4</ondown>
+    </control>
+    <control>
+      <description>My Pictures normal push button</description>
+      <type>button</type>
+      <id>4</id>
+      <posX>100</posX>
+      <posY>290</posY>
+      <width>196</width>
+      <height>32</height>
+      <label>1</label>
+      <hyperlink>2</hyperlink>
+      <font>font16</font>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>3</onup>
+      <ondown>5</ondown>
+    </control>
+    <control>
+      <description>weather push button</description>
+      <type>button</type>
+      <id>5</id>
+      <posX>100</posX>
+      <posY>325</posY>
+      <width>186</width>
+      <height>32</height>
+      <label>8</label>
+      <font>font16</font>
+      <hyperlink>2600</hyperlink>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>4</onup>
+      <ondown>8</ondown>
+    </control>
+   
+ <control>
+      <description>programs push button</description>
+      <type>button</type>
+      <id>8</id>
+      <posX>100</posX>
+      <posY>360</posY>
+      <width>176</width>
+      <height>32</height>
+      <label>0</label>
+      <font>font16</font>
+      <hyperlink>1</hyperlink>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>5</onup>
+      <ondown>9</ondown>
+    </control>     
+
+
+    <control>
+      <description>settings</description>
+      <type>button</type>
+      <id>9</id>
+      <posX>100</posX>
+      <posY>395</posY>
+      <width>166</width>
+      <height>32</height>
+      <label>5</label>
+      <font>font16</font>
+      <hyperlink>105</hyperlink> 
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>8</onup>
+      <ondown>2</ondown>
+    </control>     
+    <control>
+      <description>powerdown button</description>
+      <type>buttonM</type>
+      <id>10</id>
+      <posX>390</posX>
+      <posY>460</posY>
+      <textureFocus>button-powerdown.png</textureFocus>
+      <textureNoFocus>button-powerdownNF.png</textureNoFocus>
+      <label>-</label>
+      <onleft>12</onleft>
+      <onright>11</onright>
+      <onup>9</onup>
+      <ondown>2</ondown>
+    </control>   
+    <control>
+      <description>dashboard button</description>
+      <type>buttonM</type>
+      <id>11</id>
+      <posX>410</posX>
+      <posY>460</posY>
+      <textureFocus>button-dashboard.png</textureFocus>
+      <textureNoFocus>button-dashboardNF.png</textureNoFocus>
+      <label>-</label>
+      <onleft>10</onleft>
+      <onright>12</onright>
+      <onup>9</onup>
+      <ondown>2</ondown>
+    </control>         
+    <control>
+      <description>dashboard button</description>
+      <type>buttonM</type>
+      <id>12</id>
+      <posX>430</posX>
+      <posY>460</posY>
+      <textureFocus>button-reboot.png</textureFocus>
+      <textureNoFocus>button-rebootNF.png</textureNoFocus>
+      <label>-</label>
+      <onleft>11</onleft>
+      <onright>10</onright>
+      <onup>9</onup>
+      <ondown>2</ondown>
+    </control>
+<control>
+<description>rss feed</description>
+<type>rss</type>
+<id>1</id>
+<posX>100</posX>
+<posY>515</posY>
+<width>520</width>
+<font>font14</font>
+<feed>http://www.xbox-scene.com/xbox1data/xbox-scene.xml</feed>
+<textcolor>FF32C522</textcolor>
+<titlecolor>FF32C522</titlecolor> 
+<headlinecolor>FF32C522</headlinecolor>
+</control>
+
+
+
+  </controls>
+</window>

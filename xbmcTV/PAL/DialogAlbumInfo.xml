@@ -1,0 +1,151 @@
+<window id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="fade" time="1000">WindowOpen</animation>
+	<animation effect="fade" time="1000">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<description>background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-solid.png</texture>
+			<visible>!Skin.String(custom-background)</visible>
+		</control>
+		<control type="image">
+			<description>custom background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+		</control>
+
+		<control type="image">
+			<description>Cover image</description>
+			<posx>10</posx>
+			<posy>20</posy>
+			<width>160</width>
+			<height>280</height>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotatey" start="-20" end="-20" time="0" condition="Skin.HasSetting(tilted-icons)">Conditional</animation>
+			<info>ListItem.Icon</info>
+		</control>
+		<control type="image">
+			<description>Cover image reflection</description>
+			<posx>10</posx>
+			<posy>300</posy>
+			<width>160</width>
+			<height>280</height>
+			<info>ListItem.Icon</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotatey" start="-20" end="-20" time="0" condition="Skin.HasSetting(tilted-icons)">Conditional</animation>
+		</control>
+
+		<control type="label" id="20">
+			<description>Movie Title</description>
+			<posx>220</posx>
+			<posy>18</posy>
+			<width>480</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+
+		<control type="label">
+			<description>Studio</description>
+			<posx>220</posx>
+			<posy>36</posy>
+			<width>220</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<info>LIstItem.Studio</info>
+			<textcolor>grey-text</textcolor>
+			<font>font10</font>
+		</control>
+		<control type="textbox" id="4">
+			<description>Plot</description>
+			<posx>230</posx>
+			<posy>62</posy>
+			<width>470</width>
+			<height>165</height>
+			<onleft>5</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<font>font11</font>
+			<spinposx>430</spinposx>
+			<spinposy>170</spinposy>
+			<textcolor>button-text</textcolor>
+			<include>AutoScroll2x</include>
+		</control>
+
+	<!-- Start Album Details -->
+		<control type="label">
+			<description>Movie Details Label</description>
+			<posx>220</posx>
+			<posy>242</posy>
+			<width>140</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>31013</label>
+			<textcolor>grey-text</textcolor>
+			<font>font11</font>
+		</control>
+		<control type="label">
+			<description>Genre value</description>
+			<posx>230</posx>
+			<posy>260</posy>
+			<width>140</width>
+			<label>$INFO[ListItem.Genre]</label>
+			<font>font11</font>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>Release year</description>
+			<posx>230</posx>
+			<posy>278</posy>
+			<width>140</width>
+			<label>$LOCALIZE[31092] $INFO[ListItem.Year]</label>
+			<font>font11</font>
+			<scroll>true</scroll>
+		</control>
+		<control type="image">
+			<description>Rating</description>
+			<posx>230</posx>
+			<posy>296</posy>
+			<height>15</height>
+			<width>80</width>
+			<info>ListItem.StarRating</info>		
+		</control>
+	<!-- End Album Details -->
+
+	<!-- Start Instruments -->
+		<control type="label">
+			<description>Instruments Label</description>
+			<posx>380</posx>
+			<posy>242</posy>
+			<width>140</width>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>21892</label>
+			<textcolor>grey-text</textcolor>
+			<font>font11</font>
+		</control>
+		<control type="textbox">
+			<description>Instruments text box</description>
+			<posx>390</posx>
+			<posy>260</posy>
+			<width>140</width>
+			<height>180</height>
+			<font>font11</font>
+			<info>ListItem.Property(Instruments)</info>
+			<textcolor>button-text</textcolor>
+			<include>AutoScroll1x</include>
+		</control>
+	<!-- End Instruments -->
+	</controls>
+</window>

@@ -1,0 +1,232 @@
+<!-- source browser -->
+<window id="126">
+
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+	
+		<!-- dimmed background -->
+		<include>bg-dimmed</include>
+
+		<control type="group">
+		
+			<visible>!Window.IsActive(numericinput)</visible>
+			<posx>320</posx>
+			<posy>80</posy>
+			
+			<!-- background -->
+			<control type="image">
+				<texture border="12">bg-dialog.png</texture>
+				<width>640</width>
+				<height>540</height>
+				<colordiffuse>dialog</colordiffuse>
+			</control>
+			<!-- heading -->
+			<control type="label">
+				<label>Browse:</label>
+				<width>150</width>
+				<height>40</height>
+				<posx>20</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-header</textcolor>
+			</control>
+			<!-- path -->
+			<control type="label" id="412">
+				<width>510</width>
+				<height>40</height>
+				<posx>110</posx>
+				<posy>10</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog-dark</textcolor>
+				<haspath>true</haspath>
+			</control>
+			
+			<!-- sources list -->
+			<control type="image">
+				<texture border="4">dialog-back-nf.png</texture>
+				<width>600</width>
+				<height>400</height>
+				<posx>20</posx>
+				<posy>60</posy>
+			</control>
+			<control type="list" id="450">
+			
+				<width>540</width>
+				<height>385</height>
+				<posx>30</posx>
+				<posy>70</posy>
+				<onleft>413</onleft>
+				<onright>60</onright>
+				<onup>414</onup>
+				<ondown>414</ondown>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="43">
+					<control type="image">
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>540</width>
+						<height>38</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>10</posx>
+						<posy>4</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>458</width>
+						<height>38</height>
+						<posx>62</posx>
+						<font>dialog</font>
+						<textcolor>type-dialog-dark</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="43">
+					<control type="image">
+						<visible>!Control.HasFocus(450)</visible>
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>540</width>
+						<height>38</height>
+					</control>
+					<control type="image">
+						<visible>Control.HasFocus(450)</visible>
+						<texture border="4">dialog-back.png</texture>
+						<width>540</width>
+						<height>38</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>32</width>
+						<height>32</height>
+						<posx>10</posx>
+						<posy>4</posy>
+					</control>
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>458</width>
+						<height>38</height>
+						<posx>62</posx>
+						<font>dialog</font>
+						<textcolor>type-dialog</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="panel" id="451">
+			
+				<width>550</width>
+				<height>350</height>
+				<posx>30</posx>
+				<posy>70</posy>
+				<onleft>413</onleft>
+				<onright>60</onright>
+				<onup>414</onup>
+				<ondown>414</ondown>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="175" width="183">
+					<control type="image">
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>173</width>
+						<height>165</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>153</width>
+						<height>145</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout height="175" width="183">
+					<control type="image">
+						<visible>!Control.HasFocus(451)</visible>
+						<texture border="4">dialog-back-nf.png</texture>
+						<width>173</width>
+						<height>165</height>
+					</control>
+					<control type="image">
+						<visible>Control.HasFocus(451)</visible>
+						<texture border="4">dialog-back.png</texture>
+						<width>173</width>
+						<height>165</height>
+					</control>
+					<control type="image">
+						<texture>$INFO[ListItem.Icon]</texture>
+						<width>153</width>
+						<height>145</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label">
+				<visible>Control.IsVisible(451)</visible>
+				<label>$INFO[ListItem.Label]</label>
+				<width>520</width>
+				<height>40</height>
+				<posx>30</posx>
+				<posy>410</posy>
+				<font>dialog</font>
+				<textcolor>type-dialog</textcolor>
+				<align>center</align>
+			</control>
+			<control type="group">
+				<posx>580</posx>
+				<posy>70</posy>
+				<control type="image">
+					<texture>dialog-back-nf.png</texture>
+					<width>30</width>
+					<height>380</height>
+				</control>
+				<control type="scrollbar" id="60">
+					<width>30</width>
+					<height>380</height>
+					<onleft>450</onleft>
+					<onright>413</onright>
+					<showonepage>false</showonepage>
+				</control>		
+			</control>
+
+			<control type="group">
+				
+				<posx>20</posx>
+				<posy>480</posy>
+				
+				<!-- new folder button -->
+				<control type="button" id="415">
+					<label>New Folder</label>
+					<onup>450</onup>
+					<ondown>450</ondown>
+					<onleft>414</onleft>
+					<onright>413</onright>
+				</control>
+				<!-- cancel button -->
+				<control type="button" id="414">
+					<label>Cancel</label>
+					<posx>290</posx>
+					<onleft>415</onleft>
+					<onright>413</onright>
+					<onup>450</onup>
+					<ondown>450</ondown>
+				</control>
+				<!-- ok button -->
+				<control type="button" id="413">
+					<label>Ok</label>
+					<posx>450</posx>
+					<onleft>414</onleft>
+					<onright>415</onright>
+					<onup>450</onup>
+					<ondown>450</ondown>
+				</control>
+			</control>
+			
+		</control>
+		
+	</controls>	
+</window>

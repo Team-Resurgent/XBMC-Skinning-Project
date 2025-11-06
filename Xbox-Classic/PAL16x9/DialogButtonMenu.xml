@@ -1,0 +1,151 @@
+<window type="buttonmenu" id="111">
+	<defaultcontrol>3112</defaultcontrol>
+	<include>Fade_Dialog_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>105</posx>
+		<posy>230</posy>
+	</coordinates>
+	<controls>
+		<!-- With master lock -->
+		<control type="group">
+			<control type="image" id="0">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>500</width>
+				<height>86</height>
+				<texture>Button_Bar.png</texture>
+			</control>
+			<control type="button" id="3110">
+				<description>dashboard button</description>
+				<posx>60</posx>
+				<posy>25</posy>
+				<width>32</width>
+				<height>38</height>
+				<texturefocus>button_bar_dashFO.png</texturefocus>
+				<texturenofocus>button_bar_dashNF.png</texturenofocus>
+				<onclick>xbmc.dashboard()</onclick>
+				<onleft>3116</onleft>
+				<onright>3111</onright>
+				<onup>3110</onup>
+				<ondown>3110</ondown>
+				<font>-</font>
+				<label>13006</label>
+			</control>
+			<control type="button" id="3111">
+				<description>reboot button</description>
+				<posx>97</posx>
+				<posy>25</posy>
+				<width>32</width>
+				<height>38</height>
+				<texturefocus>button_bar_restartFO.png</texturefocus>
+				<texturenofocus>button_bar_restartNF.png</texturenofocus>
+				<onclick>XBMC.Reset()</onclick>
+				<onleft>3110</onleft>
+				<onright>3112</onright>
+				<onup>3111</onup>
+				<ondown>3111</ondown>
+				<font>-</font>
+				<label>13313</label>
+			</control>
+			<control type="button" id="3112">
+				<description>shutdown button</description>
+				<posx>134</posx>
+				<posy>25</posy>
+				<width>32</width>
+				<height>38</height>
+				<texturefocus>button_bar_shutdownFO.png</texturefocus>
+				<texturenofocus>button_bar_shutdownNF.png</texturenofocus>
+				<onclick>xbmc.shutdown()</onclick>
+				<onleft>3111</onleft>
+				<onright>3113</onright>
+				<onup>3115</onup>
+				<ondown>3115</ondown>
+				<font>-</font>
+				<label>13005</label>
+			</control>
+			<control type="button" id="3115">
+				<description>Restart XBMC button</description>
+				<posx>134</posx>
+				<posy>25</posy>
+				<width>32</width>
+				<height>38</height>
+				<texturefocus>button_bar_shutdownFO.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>xbmc.RestartApp()</onclick>
+				<onleft>3111</onleft>
+				<onright>3113</onright>
+				<onup>3112</onup>
+				<ondown>3112</ondown>
+				<font>-</font>
+				<label>$LOCALIZE[13313] XBMC</label>
+			</control>
+			<control type="button" id="3113">
+				<description>system info button</description>
+				<posx>171</posx>
+				<posy>25</posy>
+				<width>32</width>
+				<height>38</height>
+				<texturefocus>button_bar_infoFO.png</texturefocus>
+				<texturenofocus>button_bar_infoNF.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(7)</onclick>
+				<onleft>3112</onleft>
+				<onright>3114</onright>
+				<onup>3113</onup>
+				<ondown>3113</ondown>
+				<font>-</font>
+				<label>130</label>
+			</control>
+			<control type="togglebutton" id="3114">
+				<description>Enter master mode / Leave master mode</description>
+				<posx>208</posx>
+				<posy>25</posy>
+				<width>32</width>
+				<height>38</height>
+				<label>20045</label>
+				<altlabel>20046</altlabel>
+				<texturefocus>button_bar_lockedFO.png</texturefocus>
+				<texturenofocus>button_bar_lockedNF.png</texturenofocus>
+				<usealttexture>System.IsMaster</usealttexture>
+				<alttexturefocus>button_bar_unlockedFO.png</alttexturefocus>
+				<alttexturenofocus>button_bar_unlockedNF.png</alttexturenofocus>
+				<onclick>xbmc.mastermode</onclick>
+				<pulseonselect>no</pulseonselect>
+				<onleft>3113</onleft>
+				<onright>3116</onright>
+				<onup>3114</onup>
+				<ondown>3114</ondown>
+				<font>-</font>
+				<visible>System.LoggedOn + System.HasLocks</visible>
+			</control>
+			<control type="button" id="3116">
+				<description> Log off button</description>
+				<posx>245</posx>
+				<posy>25</posy>
+				<width>32</width>
+				<height>38</height>
+				<texturefocus>button_bar_logoffFO.png</texturefocus>
+				<texturenofocus>button_bar_logoffNF.png</texturenofocus>
+				<onclick>system.logoff</onclick>
+				<onleft>3114</onleft>
+				<onright>3110</onright>
+				<onup>3116</onup>
+				<ondown>3116</ondown>
+				<font>-</font>
+				<label>20126</label>
+				<visible>System.LoggedOn + System.HasLoginScreen</visible>
+				<animation effect="slide" time="0" end="-37,0" condition="!System.HasLocks">Conditional</animation>
+			</control>
+		</control>
+		<control type="label" id="3100">
+			<description>label control</description>
+			<posx>300</posx>
+			<posy>30</posy>
+			<width>165</width>
+			<height>20</height>
+			<scroll>true</scroll>
+			<font>font14</font>
+			<textcolor>green2</textcolor>
+		</control>
+	</controls>
+</window>

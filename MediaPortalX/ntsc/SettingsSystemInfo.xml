@@ -1,0 +1,246 @@
+<window>
+  <id>7</id>
+  <defaultcontrol>2</defaultcontrol>
+  <controls>
+    <control>
+      <description>Background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>720</width>
+      <height>480</height>
+      <texture>background.png</texture>
+    </control>
+    <control>
+      <description>Settings Logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>60</posX>
+      <posY>30</posY>
+      <width>328</width>
+      <height>89</height>
+      <texture>settings_logo.png</texture>
+    </control>
+    <control>
+      <description>System Info label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>350</posX>
+      <posY>65</posY>
+      <label>130</label>
+      <font>font16</font>
+      <align>right</align>
+      <textcolor>ffffffff</textcolor>
+    </control>
+    <control>
+      <description>Storage text label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>93</posX>
+      <posY>120</posY>
+      <label>154</label>
+      <font>font14</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>Drive C text label</description>
+      <type>label</type>
+      <id>10</id>
+      <posX>100</posX>
+      <posY>145</posY>
+      <label>155</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Drive D: text label</description>
+      <type>label</type>
+      <id>11</id>
+      <posX>100</posX>
+      <posY>165</posY>
+      <label>155</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Drive E: text label</description>
+      <type>label</type>
+      <id>12</id>
+      <posX>100</posX>
+      <posY>186</posY>
+      <label>155</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Drive F: text label</description>
+      <type>label</type>
+      <id>13</id>
+      <posX>100</posX>
+      <posY>207</posY>
+      <label>155</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Drive G: text label</description>
+      <type>label</type>
+      <id>17</id>
+      <posX>100</posX>
+      <posY>228</posY>
+      <label>155</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Temperatures text label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>93</posX>
+      <posY>270</posY>
+      <label>139</label>
+      <font>font14</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>CPU: text label</description>
+      <type>label</type>
+      <id>2</id>
+      <posX>100</posX>
+      <posY>295</posY>
+      <label>140</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>GPU: text label</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>100</posX>
+      <posY>320</posY>
+      <label>141</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>fanspeed text label</description>
+      <type>label</type>
+      <id>16</id>
+      <posX>100</posX>
+      <posY>345</posY>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>time text label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>288</posX>
+      <posY>120</posY>
+      <label>142</label>
+      <font>font14</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>current: text label</description>
+      <type>label</type>
+      <id>4</id>
+      <posX>295</posX>
+      <posY>145</posY>
+      <label>143</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>build: text label</description>
+      <type>label</type>
+      <id>5</id>
+      <posX>295</posX>
+      <posY>170</posY>
+      <label>144</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Network text label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>288</posX>
+      <posY>215</posY>
+      <label>145</label>
+      <font>font14</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>Type text label</description>
+      <type>label</type>
+      <id>6</id>
+      <posX>295</posX>
+      <posY>240</posY>
+      <label>146</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>MAC: text label</description>
+      <type>label</type>
+      <id>7</id>
+      <posX>295</posX>
+      <posY>265</posY>
+      <label>147</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>IP: text label</description>
+      <type>label</type>
+      <id>8</id>
+      <posX>295</posX>
+      <posY>290</posY>
+      <label>148</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Link: text label</description>
+      <type>label</type>
+      <id>9</id>
+      <posX>295</posX>
+      <posY>315</posY>
+      <label>151</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>Video text label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>288</posX>
+      <posY>340</posY>
+      <label>157</label>
+      <font>font14</font>
+      <textcolor>FFFFFFFF</textcolor>
+    </control>
+    <control>
+      <description>resolution text label</description>
+      <type>label</type>
+      <id>14</id>
+      <posX>295</posX>
+      <posY>365</posY>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+    <control>
+      <description>free mem text label</description>
+      <type>label</type>
+      <id>15</id>
+      <posX>295</posX>
+      <posY>390</posY>
+      <label>158</label>
+      <font>font13</font>
+      <textcolor>FFB2D4F5</textcolor>
+    </control>
+  </controls>
+</window>

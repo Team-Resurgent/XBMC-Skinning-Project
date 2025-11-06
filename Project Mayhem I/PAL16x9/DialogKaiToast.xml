@@ -1,0 +1,55 @@
+﻿<window id="107">
+	<defaultcontrol>402</defaultcontrol>
+	<include>Fade_Window_OpenClose_Animation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>420</posx>
+		<posy>490</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>popup kai toast dialog background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>245</width>
+			<height>75</height>
+			<texture>toast-panel-bg.png</texture>
+		</control>
+		<control type="image" id="400">
+			<description>avatar</description>
+			<posx>30</posx>
+			<posy>15</posy>
+			<width>30</width>
+			<height>40</height>
+			<texture>buddyitem-default-avatar.png</texture>
+		</control>
+		<control type="button" id="401">
+			<description>caption label</description>
+			<posx>66</posx>
+			<posy>17</posy>
+			<font>font12</font>
+			<align>center</align>
+			<label>-</label>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<width>160</width>
+			<height>20</height>
+		</control>
+		<control type="button" id="402">
+			<description>description button</description>
+			<posx>66</posx>
+			<posy>29</posy>
+			<width>160</width>
+			<height>32</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>has just signed in</label>
+			<font>font10</font>
+			<onleft>402</onleft>
+			<align>center</align>
+			<onright>402</onright>
+			<onup>402</onup>
+			<ondown>402</ondown>
+		</control>
+	</controls>
+</window>

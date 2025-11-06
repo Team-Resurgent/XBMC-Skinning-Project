@@ -1,0 +1,97 @@
+<window id="2005">
+	<defaultcontrol>13</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>top shutter</description>
+			<posx>0</posx>
+			<posy>-200</posy>
+			<width>720</width>
+			<height>300</height>
+			<texture>shutter-top.png</texture>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+		<control type="label" id="10">
+			<description>row 1 label</description>
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>720</width>
+			<label>-</label>
+			<align>center</align>
+			<font>font13</font>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+		<control type="label" id="11">
+			<description>row 2 label</description>
+			<posx>0</posx>
+			<posy>30</posy>
+			<width>720</width>
+			<label>-</label>
+			<align>center</align>
+			<font>font13</font>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+		<control type="label" id="12">
+			<description>row 3 label</description>
+			<posx>0</posx>
+			<posy>50</posy>
+			<width>720</width>
+			<label>-</label>
+			<align>center</align>
+			<font>font13</font>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+		</control>
+		<control type="group" id="1">
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" start="0" time="200">Visible</animation>
+			<animation effect="fade" end="0" time="200">VisibleChange</animation>
+			<control type="image">
+				<description>bottom shutter</description>
+				<posx>0</posx>
+				<posy>476</posy>
+				<width>720</width>
+				<height>300</height>
+				<texture>shutter-bottom.png</texture>
+			</control>
+			<control type="image">
+				<description>Video Thumb</description>
+				<posx>10</posx>
+				<posy>476</posy>
+				<width>100</width>
+				<height>100</height>
+				<info>VideoPlayer.Cover</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="fadelabel">
+				<description>Title label</description>
+				<posx>115</posx>
+				<posy>550</posy>
+				<width>605</width>
+				<info>VideoPlayer.Title</info>
+				<align>left</align>
+				<font>font14</font>
+			</control>
+			<control type="fadelabel">
+				<description>Director label</description>
+				<posx>115</posx>
+				<posy>530</posy>
+				<width>400</width>
+				<label>$INFO[VideoPlayer.Director,$LOCALIZE[20339]: ]</label>
+				<align>left</align>
+				<font>font13</font>
+			</control>
+			<control type="fadelabel">
+				<description>Genre</description>
+				<posx>115</posx>
+				<posy>510</posy>
+				<width>420</width>
+				<label>$INFO[VideoPlayer.Genre,$LOCALIZE[515]: ]</label>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+		</control>
+	</controls>
+</window>

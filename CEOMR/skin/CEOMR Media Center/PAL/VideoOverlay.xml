@@ -1,0 +1,181 @@
+<window id="2004">
+
+  <defaultcontrol>2</defaultcontrol>
+
+   <animation effect="fade" time="400">WindowOpen</animation> 
+   <animation effect="fade" time="100">WindowClose</animation>
+   <animation effect="fade" time="100">VisibleChange</animation>
+   <animation effect="slide" time="400" start="-200,0" end="0,0" acceleration="-1.1" delay="0">WindowOpen</animation>
+   <animation effect="slide" time="100" start="0,0" end="-200,0" acceleration="-1.3" delay="0">WindowClose</animation>
+
+  <controls>
+
+    <control type="image" id="1">
+      <description>image</description>
+
+      <visible>Window.IsActive(2800)</visible>
+
+      <posx>35</posx>
+      <posy>410</posy>
+      <width>250</width>
+      <height>185</height>
+      <texture>bar.png</texture>
+    </control>
+
+    <control type="videowindow" id="1">
+      <description>video preview window</description>
+      <aspectratio>keep</aspectratio>
+      <posx>70</posx>
+      <posy>454</posy>
+      <width>60</width>
+      <height>66</height>
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>video info label</description>
+      <width>130</width>
+      <posx>70</posx>
+      <posy>522</posy>
+      <info>VideoPlayer.Title</info> 
+      <font>font13</font>
+      <include>textcolorlightblue</include>
+    </control>
+
+    <control type="fadelabel" id="1">
+      <description>video info label</description>
+      <width>100</width>
+      <posx>137</posx>
+      <posy>505</posy>
+      <info>VideoPlayer.Time</info>
+      <font>font13</font>
+      <include>textcolorlightgrey</include>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Playing</visible>
+      <description>play logo</description>
+      <posx>140</posx>
+      <posy>466</posy>
+      <width>35</width>
+      <height>30</height>
+      <texture>music-play.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Paused</visible>
+      <description>Pause logo</description>
+      <posx>130</posx>
+      <posy>466</posy>
+      <height>30</height>
+      <texture>music-pause.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding2x</visible>
+      <description>FF logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-forward-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding4x</visible>
+      <description>FF logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-forward-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding8x</visible>
+      <description>FF logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-forward-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding16x</visible>
+      <description>FF logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-forward-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Forwarding32x</visible>
+      <description>FF logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-forward-32.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding2x</visible>
+      <description>RW logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-rewind-2.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding4x</visible>
+      <description>RW logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-rewind-4.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding8x</visible>
+      <description>RW logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-rewind-8.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding16x</visible>
+      <description>RW logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-rewind-16.png</texture>
+    </control>
+
+    <control type="image" id="1">
+      <visible>Player.Rewinding32x</visible>
+      <description>RW logo</description>
+      <posx>127</posx>
+      <posy>466</posy>
+      <height>35</height>
+      <texture>music-rewind-32.png</texture>
+    </control>
+
+       <control type="progress" id="23">
+         <description>progressbar</description>
+	 <visible>Player.HasMedia</visible>
+         <animation effect="fade" time="400">VisibleChange</animation> 
+         <posx>70</posx> 
+         <posy>547</posy> 
+         <width>130</width> 
+         <height>7</height> 
+         <info>Player.Progress</info> 
+         <texturebg>progress_mid.png</texturebg> 
+         <midtexture>progress_mid_over.png</midtexture>
+         <lefttexture>-</lefttexture>
+         <righttexture>-</righttexture>
+         <overlaytexture>-</overlaytexture>
+       </control>
+
+  </controls>
+
+</window>
